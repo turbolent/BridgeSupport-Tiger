@@ -1037,19 +1037,7 @@ BridgeSupportParser::parse(VALUE rubyheaders, const char *content, const std::st
 	std::string cc;
 	char buf[PATH_MAX + 16];
 	char *nl;
-	cc = "xcrun -find cc -sdk ";
-	cc += sysroot;
-	*buf = 0;
-	if((p = popen(cc.c_str(), "r")) != NULL) {
-	    if(fgets(buf, sizeof(buf), p)) {
-		nl = strchr(buf, '\n');
-		if(nl) *nl = 0;
-	    }
-	    pclose(p);
-	}
-	cc = (*buf ? buf : "cc");
-	if(verbose) llvm::errs() << "cc=" << cc << "\n";
-	cc += " -print-search-dirs";
+	cc = "cc -print-search-dirs";
 	defaultIncludePath = new std::string();
 	if((p = popen(cc.c_str(), "r")) != NULL) {
 	    while(fgets(buf, sizeof(buf), p)) {
@@ -1064,7 +1052,7 @@ BridgeSupportParser::parse(VALUE rubyheaders, const char *content, const std::st
 	    }
 	    pclose(p);
 	}
-	if(defaultIncludePath->empty()) defaultIncludePath->append("/usr/lib/gcc/i686-apple-darwin11/4.2.1/include");
+	if(defaultIncludePath->empty()) defaultIncludePath->append("/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include");
 	if(verbose) llvm::errs() << "defaultIncludePath=" << *defaultIncludePath << "\n";
     }
 
