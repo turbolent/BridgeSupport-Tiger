@@ -166,8 +166,8 @@ def run
 	end
       end
       #check exit status
-      raise "exit status=#{$?.exitstatus}" unless $?.success?
       $stdoutmutex.synchronize { STDOUT.write(sio.string) }
+      raise "exit status=#{$?.exitstatus}" unless $?.success?
     end
   end
 end
