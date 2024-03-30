@@ -19,7 +19,7 @@ SRCROOT = $(PWD)
 DEF_SYMROOT = $(PWD)/SYMROOT
 SYMROOT = $(DEF_SYMROOT)
 DESTDIR = /
-RC_ARCHS = x86_64
+RC_ARCHS = ppc
 ORDERED_ARCHS = $(filter %64,$(RC_ARCHS)) $(filter-out %64,$(RC_ARCHS))
 RC_CFLAGS = $(foreach arch,$(RC_ARCHS),-arch $(arch)) -pipe
 
