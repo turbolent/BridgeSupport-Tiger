@@ -45,7 +45,7 @@ BS_INCLUDE = $(BS_LIBS)/include
 BS_RUBY := $(BS_LIBS)/ruby-$(shell $(RUBY) -e 'puts RUBY_VERSION.sub(/^(\d+\.\d+)(\..*)?$$/, "\\1")')
 RUBYLIB = $(BS_RUBY)
 
-LIBSYSTEM_HEADERS = /usr/include/asl.h /usr/include/notify*.h /usr/include/copyfile.h /usr/include/sandbox.h /usr/include/launch.h /usr/include/CommonCrypto/*.h
+LIBSYSTEM_HEADERS = /usr/include/asl.h /usr/include/notify*.h /usr/include/launch.h /usr/include/CommonCrypto/*.h
 
 # For the Apple build system, we split into two separate projects:
 #     BridgeSupport_ext - build extension and save in /usr/local/BridgeSupport
