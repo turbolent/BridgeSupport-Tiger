@@ -10,15 +10,6 @@
       <arg index="1" type_modifier="n"/>
       <arg index="2" type_modifier="n"/>
     </method>
-    <method selector="obtainWithRight:flags:error:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="obtainWithRights:flags:environment:authorizedRights:error:">
-      <arg index="0" type_modifier="n"/>
-      <arg index="2" type_modifier="n"/>
-      <arg index="3" type_modifier="o"/>
-      <arg index="4" type_modifier="o"/>
-    </method>
     <method selector="permitWithRights:flags:environment:authorizedRights:">
       <arg index="0" type_modifier="n"/>
       <arg index="2" type_modifier="n"/>

@@ -53,24 +53,4 @@
   </ignored_headers>
   <opaque name='ConstFSEventStreamRef'/>
   <opaque name='FSEventStreamRef'/>
-  <struct name='FSEventStreamContext'/>
-  <function name='FSEventStreamCreate'>
-    <arg index='0' type_modifier='n'/>
-    <arg index='1' type_modifier='n'/>
-    <arg index='2' type_modifier='n'/>
-  </function>
-  <function name='FSEventStreamCreateRelativeToDevice'>
-    <arg index='0' type_modifier='n'/>
-    <arg index='1' type_modifier='n'/>
-    <arg index='2' type_modifier='n'/>
-    <arg index='4' type_modifier='n'/>
-  </function>
-  <function name='FSEventStreamScheduleWithRunLoop'>
-    <arg index='1' type_modifier='n'/>
-    <arg index='2' type_modifier='n'/>
-  </function>
-  <function name='FSEventStreamUnscheduleFromRunLoop'>
-    <arg index='1' type_modifier='n'/>
-    <arg index='2' type_modifier='n'/>
-  </function>
 </signatures>

@@ -6,9 +6,6 @@
   <cftype name="CVOpenGLTextureCacheRef" gettypeid_func="CVOpenGLTextureCacheGetTypeID"/>
   <cftype name="CVPixelBufferPoolRef" gettypeid_func="CVPixelBufferPoolGetTypeID"/>
   <struct name="CVFillExtendedPixelsCallBackData"/>
-  <struct name="CVPlanarComponentInfo"/>
-  <struct name="CVPlanarPixelBufferInfo"/>
-  <struct name="CVPlanarPixelBufferInfo_YCbCrPlanar"/>
   <struct name="CVSMPTETime"/>
   <struct name="CVTime"/>
   <struct name="CVTimeStamp"/>

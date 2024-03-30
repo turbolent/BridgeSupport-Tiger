@@ -15,12 +15,6 @@
     <arg index="1" type_modifier="o"/>
     <arg index="2" type_modifier="o"/>
   </function>
-  <function name="DVDGetAudioOutputMode">
-    <arg index="0" type_modifier="o"/>
-  </function>
-  <function name="DVDGetAudioOutputModeCapabilities">
-    <arg index="0" type_modifier="o"/>
-  </function>
   <function name="DVDGetAudioStream">
     <arg index="0" type_modifier="o"/>
   </function>
@@ -102,15 +96,6 @@
     <arg index="0" c_array_of_variable_length="true" type_modifier="o"/>
   </function>
   <function name="DVDGetNumTitles">
-    <arg index="0" type_modifier="o"/>
-  </function>
-  <function name="DVDGetSPDIFDataOutDevice">
-    <arg index="0" type_modifier="o"/>
-  </function>
-  <function name="DVDGetSPDIFDataOutDeviceCFName">
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="DVDGetSPDIFDataOutDeviceCount">
     <arg index="0" type_modifier="o"/>
   </function>
   <function name="DVDGetScanRate">
@@ -207,30 +192,10 @@
   <function name="DVDSwitchToDisplay">
     <arg index="1" type_modifier="o"/>
   </function>
-  <function name="DVDDoMenuCGClick">
-    <arg index="0" type_modifier="n"/>
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="DVDDoMenuCGMouseOver">
-    <arg index="0" type_modifier="n"/>
-    <arg index="1" type_modifier="o"/>
-  </function>
   <function name="DVDGetMediaVolumeName">
     <arg index="0" type_modifier="o"/>
   </function>
-  <function name="DVDGetVideoCGBounds">
-    <arg index="0" type_modifier="o"/>
-  </function>
-  <function name="DVDGetVideoWindowRef">
-    <arg index="0" type_modifier="o"/>
-  </function>
   <function name="DVDIsRegisteredEventCallBack">
-    <arg index="0" type_modifier="n"/>
-  </function>
-  <function name="DVDSetVideoCGBounds">
-    <arg index="0" type_modifier="n"/>
-  </function>
-  <function name="DVDSetVideoWindowRef">
     <arg index="0" type_modifier="n"/>
   </function>
   <function name="DVDUnregisterEventCallBack">

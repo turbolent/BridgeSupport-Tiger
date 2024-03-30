@@ -28,9 +28,6 @@
     <arg index="1" type_modifier="n"/>
   </function>
   <class name="ABAddressBook">
-    <method selector="saveAndReturnError:">
-      <arg index="0" type_modifier="o"/>
-    </method>
   </class>
   <class name='ABPeoplePickerView'>
     <method selector='setGroupDoubleAction:'>

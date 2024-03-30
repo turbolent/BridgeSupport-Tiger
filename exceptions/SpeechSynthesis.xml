@@ -12,14 +12,6 @@
   <struct name="VoiceDescription"/>
   <struct name="VoiceFileInfo"/>
   <struct name="VoiceSpec"/>
-  <function name="CopyPhonemesFromText">
-    <arg index="0" type_modifier="n"/>
-    <arg index="2" type_modifier="o"/>
-  </function>
-  <function name="CopySpeechProperty">
-    <arg index="0" type_modifier="n"/>
-    <arg index="2" type_modifier="o"/>
-  </function>
   <function name="CountVoices">
     <arg index="0" type_modifier="o"/>
   </function>
@@ -146,13 +138,7 @@
   <function name="SetSpeechPitch">
     <arg index="0" type_modifier="n"/>
   </function>
-  <function name="SetSpeechProperty">
-    <arg index="0" type_modifier="n"/>
-  </function>
   <function name="SetSpeechRate">
-    <arg index="0" type_modifier="n"/>
-  </function>
-  <function name="SpeakCFString">
     <arg index="0" type_modifier="n"/>
   </function>
   <function name="StopSpeech">
@@ -162,9 +148,6 @@
     <arg index="0" type_modifier="n"/>
   </function>
   <function name="UseDictionary">
-    <arg index="0" type_modifier="n"/>
-  </function>
-  <function name="UseSpeechDictionary">
     <arg index="0" type_modifier="n"/>
   </function>
 </signatures>

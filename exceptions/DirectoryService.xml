@@ -188,19 +188,6 @@
     <arg index="1" type_modifier="n"/>
     <arg index="2" type_modifier="n"/>
   </function>
-  <function name="dsAppendAuthBuffer">
-    <arg index="0" type_modifier="N"/>
-    <arg index="3" type_modifier="n"/>
-  </function>
-  <function name="dsAppendAuthBufferWithAuthorityAttribute">
-    <arg index="1" type_modifier="n"/>
-    <arg index="2" type_modifier="n"/>
-    <arg index="5" type_modifier="N"/>
-  </function>
-  <function name="dsAppendAuthBufferWithAuthorityStrings">
-    <arg index="1" type_modifier="n" c_array_delimited_by_null='true'/>
-    <arg index="2" type_modifier="N"/>
-  </function>
   <function name="dsAppendStringToListAlloc">
     <arg index="1" type_modifier="n"/>
   </function>
@@ -266,21 +253,6 @@
     <arg index="2" type_modifier="n"/>
     <arg index="3" type_modifier="o"/>
   </function>
-  <function name="dsFillAuthBuffer">
-    <arg index="0" type_modifier="N"/>
-    <arg index="3" type_modifier="n"/>
-  </function>
-  <function name="dsGetNextAttributeEntry">
-    <arg index="1" type_modifier="N"/>
-    <arg index="4" type_modifier="N"/>
-    <arg index="5" type_modifier="o"/>
-    <arg index="6" type_modifier="o"/>
-  </function>
-  <function name="dsGetNextAttributeValue">
-    <arg index="1" type_modifier="N"/>
-    <arg index="3" type_modifier="N"/>
-    <arg index="5" type_modifier="o"/>
-  </function>
   <function name="dsGetRecordNameFromEntry">
     <arg index="0" type_modifier="n"/>
     <arg index="1" type_modifier="o"/>
@@ -288,9 +260,6 @@
   <function name="dsGetRecordTypeFromEntry">
     <arg index="0" type_modifier="n"/>
     <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="dsOpenDirServiceLocal">
-    <arg index="0" type_modifier="o"/>
   </function>
   <function name="dsReleaseContinueData">
     <arg index="1" type_modifier="n"/>
@@ -300,9 +269,6 @@
   </function>
   <function name="dsRemoveAttributeValue">
     <arg index="1" type_modifier="n"/>
-  </function>
-  <function name="dsServiceInformationAllocate">
-    <arg index="2" type_modifier="o"/>
   </function>
   <function name="dsSetAttributeValue">
     <arg index="1" type_modifier="n"/>

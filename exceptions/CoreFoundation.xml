@@ -15,8 +15,6 @@
   <cftype name="CFDateFormatterRef" gettypeid_func="CFDateFormatterGetTypeID"/>
   <cftype name="CFDateRef" gettypeid_func="CFDateGetTypeID"/>
   <cftype name="CFDictionaryRef" gettypeid_func="CFDictionaryGetTypeID"/>
-  <cftype name="CFErrorRef" gettypeid_func="CFErrorGetTypeID"/>
-  <cftype name="CFFileDescriptorRef" gettypeid_func="CFFileDescriptorGetTypeID"/>
   <cftype name="CFLocaleRef" gettypeid_func="CFLocaleGetTypeID"/>
   <cftype name="CFMachPortRef" gettypeid_func="CFMachPortGetTypeID"/>
   <cftype name="CFMessagePortRef" gettypeid_func="CFMessagePortGetTypeID"/>
@@ -34,7 +32,6 @@
   <cftype name="CFSetRef" gettypeid_func="CFSetGetTypeID"/>
   <cftype name="CFSocketRef" gettypeid_func="CFSocketGetTypeID"/>
   <cftype name="CFStringRef" gettypeid_func="CFStringGetTypeID"/>
-  <cftype name="CFStringTokenizerRef" gettypeid_func="CFStringTokenizerGetTypeID"/>
   <cftype name="CFTimeZoneRef" gettypeid_func="CFTimeZoneGetTypeID"/>
   <cftype name="CFTreeRef" gettypeid_func="CFTreeGetTypeID"/>
   <cftype name="CFURLRef" gettypeid_func="CFURLGetTypeID"/>
@@ -50,7 +47,6 @@
   <struct name="CFBinaryHeapCompareContext"/>
   <struct name="CFDictionaryKeyCallBacks"/>
   <struct name="CFDictionaryValueCallBacks"/>
-  <struct name="CFFileDescriptorContext"/>
   <struct name="CFGregorianDate"/>
   <struct name="CFGregorianUnits"/>
   <struct name="CFMachPortContext"/>
@@ -300,13 +296,6 @@
     <arg index="1" type_modifier="n"/>
     <arg index="2" type_modifier="n"/>
   </function>
-  <function name="CFFileDescriptorCreate">
-    <arg index="3" type_modifier="n"/>
-    <arg index="4" type_modifier="n"/>
-  </function>
-  <function name="CFFileDescriptorGetContext">
-    <arg index="1" type_modifier="o"/>
-  </function>
   <function name="CFMachPortCreate">
     <arg index="1" type_modifier="n"/>
     <arg index="2" type_modifier="n"/>
@@ -499,10 +488,6 @@
   <function name="CFSocketUnregister">
     <arg index="0" type_modifier="n"/>
   </function>
-  <function name="CFStreamCreateBoundPair">
-    <arg index="1" type_modifier="o"/>
-    <arg index="2" type_modifier="o"/>
-  </function>
   <function name="CFStreamCreatePairWithPeerSocketSignature">
     <arg index="1" type_modifier="n"/>
     <arg index="2" type_modifier="o"/>
@@ -526,9 +511,6 @@
     <arg c_array_length_in_arg="2" index="1" type_modifier="n"/>
   </function>
   <function name="CFStringCreateWithBytes">
-    <arg c_array_length_in_arg="2" index="1" type_modifier="n"/>
-  </function>
-  <function name="CFStringCreateWithBytesNoCopy">
     <arg c_array_length_in_arg="2" index="1" type_modifier="n"/>
   </function>
   <function name="CFStringCreateWithCharacters">
@@ -700,23 +682,9 @@
   <function name="CFBundleGetFunctionPointersForNames">
     <arg index="2" type_modifier="o" c_array_of_variable_length='true'/>
   </function>
-  <function name="CFBundleLoadExecutableAndReturnError">
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="CFBundlePreflightExecutable">
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="CFCalendarGetTimeRangeOfUnit">
-    <arg index="3" type_modifier="o"/>
-    <arg index="4" type_modifier="o"/>
-  </function>
   <function name="CFDictionaryGetKeysAndValues">
     <arg index="1" type_modifier="o" c_array_of_variable_length='true'/>
     <arg index="2" type_modifier="o" c_array_of_variable_length='true'/>
-  </function>
-  <function name="CFErrorCreateWithUserInfoKeysAndValues">
-    <arg index="3" type_modifier="n" c_array_length_in_arg='5'/>
-    <arg index="4" type_modifier="n" c_array_length_in_arg='5'/>
   </function>
   <function name="CFMachPortSetInvalidationCallBack">
     <arg index="1" type_modifier="n"/>
@@ -736,14 +704,6 @@
   </function>
   <function name="CFSetGetValues">
     <arg index="1" type_modifier="o" c_array_of_variable_length='true'/>
-  </function>
-  <function name="CFStringFindWithOptionsAndLocale">
-    <arg index="5" type_modifier="o"/>
-  </function>
-  <function name="CFStringGetParagraphBounds">
-    <arg index="2" type_modifier="o"/>
-    <arg index="3" type_modifier="o"/>
-    <arg index="4" type_modifier="o"/>
   </function>
   <function name="CFUserNotificationCreateRunLoopSource">
     <arg index="2" type_modifier="n"/>

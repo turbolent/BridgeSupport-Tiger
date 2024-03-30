@@ -51,16 +51,6 @@
     <arg index='2' type_modifier='n'/>
     <arg index='3' type_modifier='n'/>
   </function>
-  <function name='SCNetworkInterfaceCopyMediaOptions'>
-    <arg index='1' type_modifier='o'/>
-    <arg index='2' type_modifier='o'/>
-    <arg index='3' type_modifier='o'/>
-  </function>
-  <function name='SCNetworkInterfaceCopyMTU'>
-    <arg index='1' type_modifier='o'/>
-    <arg index='2' type_modifier='o'/>
-    <arg index='3' type_modifier='o'/>
-  </function>
   <function name='SCNetworkReachabilityCreateWithAddress'>
     <arg index='1' type_modifier='n'/>
   </function>

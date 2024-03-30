@@ -419,9 +419,6 @@
     <method class_method="true" selector="enterExitEventWithType:location:modifierFlags:timestamp:windowNumber:context:eventNumber:trackingNumber:userData:">
       <arg index="8" type_modifier="n"/>
     </method>
-    <method class_method="true" selector="eventWithEventRef:">
-      <arg type="EventRef" index="0"/>
-    </method>
   </class>
   <class name="NSFont">
     <method class_method="true" selector="fontWithName:matrix:">
@@ -436,19 +433,6 @@
       <arg index="0" type_modifier="o" c_array_length_in_arg="2"/>
       <arg c_array_length_in_arg="2" index="1" type_modifier="o"/>
     </method>
-    <method selector="positionOfGlyph:precededByGlyph:isNominal:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="positionOfGlyph:struckOverGlyph:metricsExist:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="positionOfGlyph:struckOverRect:metricsExist:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="positionOfGlyph:withRelation:toBaseGlyph:totalAdvancement:metricsExist:">
-      <arg index="3" type_modifier="o"/>
-      <arg index="4" type_modifier="o"/>
-    </method>
   </class>
   <class name='NSFontManager'>
     <method selector='setAction:'>
@@ -460,14 +444,6 @@
       <arg index="2" type_modifier="o"/>
       <arg index="3" type_modifier="o"/>
     </method>
-  </class>
-  <class name="NSGradient">
-    <method selector="getColor:location:atIndex:">
-      <arg index="0" type_modifier="o"/>
-      <arg index="1" type_modifier="o"/>
-    </method>
-    <method ignore="true" suggestion="Use other initializers." selector="initWithColors:atLocations:colorSpace:"/>
-    <method ignore="true" suggestion="Use other initializers." selector="initWithColorsAndLocations:"/>
   </class>
   <class name="NSGraphicsContext">
     <method class_method="true" selector="graphicsContextWithGraphicsPort:flipped:">
@@ -492,9 +468,6 @@
     </method>
     <method selector="glyphIndexForPoint:inTextContainer:fractionOfDistanceThroughGlyph:">
       <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="insertGlyphs:length:forStartingGlyphAtIndex:characterIndex:">
-      <arg c_array_length_in_arg="1" index="0" type_modifier="n"/>
     </method>
     <method selector="rectArrayForCharacterRange:withinSelectedCharacterRange:inTextContainer:rectCount:">
       <arg index="3" type_modifier="o"/>
@@ -555,11 +528,6 @@
     </method>
   </class>
   <class name="NSObject">
-    <method selector="browser:validateDrop:proposedRow:column:dropOperation:">
-      <arg index="2" type_modifier="o"/>
-      <arg index="3" type_modifier="o"/>
-      <arg index="4" type_modifier="o"/>
-    </method>
     <method selector="commitEditingWithDelegate:didCommitSelector:contextInfo:">
       <arg sel_of_type="(void)editor:(id)editor didCommit:(BOOL)didCommit contextInfo:(void *)contextInfo" index="1"/>
       <arg index="2" type_modifier="n"/>
@@ -633,9 +601,6 @@
     <method selector="configurePersistentStoreCoordinatorForURL:ofType:error:">
       <arg index="2" type_modifier="o"/>
     </method>
-    <method selector="configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error:">
-      <arg index="4" type_modifier="o"/>
-    </method>
     <method selector="readFromURL:ofType:error:">
       <arg index="2" type_modifier="o"/>
     </method>
@@ -671,12 +636,6 @@
     </method>
   </class>
   <class name="NSSpeechSynthesizer">
-    <method selector="objectForProperty:error:">
-      <arg index="1" type_modifier="o"/>
-    </method>
-    <method selector="setObject:forProperty:error:">
-      <arg index="2" type_modifier="o"/>
-    </method>
   </class>
   <class name='NSStatusItem'>
     <method selector='setAction:'>
@@ -697,9 +656,6 @@
     </method>
   </class>
   <class name="NSSpellChecker">
-    <method selector="checkGrammarOfString:startingAt:language:wrap:inSpellDocumentWithTag:details:">
-      <arg index="5" type_modifier="o"/>
-    </method>
     <method selector="checkSpellingOfString:startingAt:language:wrap:inSpellDocumentWithTag:wordCount:">
       <arg index="5" type_modifier="o"/>
     </method>
@@ -785,14 +741,8 @@
     <method selector="performFileOperation:source:destination:files:tag:">
       <arg index="4" type_modifier="o"/>
     </method>
-    <method selector="typeOfFile:error:">
-      <arg index="1" type_modifier="o"/>
-    </method>
   </class>
   <class name="NSBrowser">
-    <method selector="draggingImageForRowsWithIndexes:inColumn:withEvent:offset:">
-      <arg index="3" type_modifier="o"/>
-    </method>
     <method selector='setDoubleAction:'>
       <arg index='0' sel_of_type="(void)action:(id)sender"/>
     </method>
@@ -817,9 +767,6 @@
     </method>
   </class>
   <class name="NSImage">
-    <method selector="initWithIconRef:">
-      <arg index="0" type_modifier="n"/>
-    </method>
   </class>
   <class name="NSMenu">
     <method selector='addItemWithTitle:action:keyEquivalent:'>
@@ -840,16 +787,6 @@
       <arg index='1' sel_of_type="(void)action:(id)sender"/>
     </method>
     <method selector='setAction:'>
-      <arg index='0' sel_of_type="(void)action:(id)sender"/>
-    </method>
-  </class>
-  <class name="NSPathCell">
-    <method selector='setDoubleAction:'>
-      <arg index='0' sel_of_type="(void)action:(id)sender"/>
-    </method>
-  </class>
-  <class name="NSPathControl">
-    <method selector='setDoubleAction:'>
       <arg index='0' sel_of_type="(void)action:(id)sender"/>
     </method>
   </class>
@@ -874,12 +811,6 @@
   <class name="NSTextContainer">
     <method selector="lineFragmentRectForProposedRect:sweepDirection:movementDirection:remainingRect:">
       <arg index="3" type_modifier="o"/>
-    </method>
-  </class>
-  <class name="NSViewController">
-    <method selector="commitEditingWithDelegate:didCommitSelector:contextInfo:">
-      <arg sel_of_type="(void)editor:(id)editor didCommit:(BOOL)didCommit contextInfo:(void *)contextInfo" index="1"/>
-      <arg index="2" type_modifier="n"/>
     </method>
   </class>
 </signatures>

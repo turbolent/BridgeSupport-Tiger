@@ -7,7 +7,6 @@
   </ignored_headers>
   <struct name="NSAffineTransformStruct"/>
   <struct name="NSDecimal" opaque="true"/>
-  <struct name="NSFastEnumerationState"/>
   <struct name="NSHashEnumerator"/>
   <struct name="NSHashTableCallBacks"/>
   <struct name="NSMapEnumerator"/>
@@ -273,18 +272,8 @@
     </method>
   </class>
   <class name="NSBundle">
-    <method selector="loadAndReturnError:">
-      <arg index="0" type_modifier="o"/>
-    </method>
-    <method selector="preflightAndReturnError:">
-      <arg index="0" type_modifier="o"/>
-    </method>
   </class>
   <class name="NSCalendar">
-    <method selector="rangeOfUnit:startDate:interval:forDate:">
-      <arg index="1" type_modifier="o"/>
-      <arg index="2" type_modifier="o"/>
-    </method>
   </class>
   <class name="NSCalendarDate">
     <method selector="years:months:days:hours:minutes:seconds:sinceDate:">
@@ -381,10 +370,6 @@
       <arg c_array_length_in_arg="2" index="0" type_modifier="n"/>
       <arg c_array_length_in_arg="2" index="1" type_modifier="n"/>
     </method>
-    <method selector="getObjects:andKeys:">
-      <arg index="0" type_modifier="o"/>
-      <arg index="1" type_modifier="o"/>
-    </method>
     <method selector="initWithObjects:forKeys:count:">
       <arg c_array_length_in_arg="2" index="0" type_modifier="n"/>
       <arg c_array_length_in_arg="2" index="1" type_modifier="n"/>
@@ -412,47 +397,11 @@
     </method>
   </class>
   <class name="NSFileManager">
-    <method selector="attributesOfFileSystemForPath:error:">
-      <arg index="1" type_modifier="o"/>
-    </method>
-    <method selector="attributesOfItemAtPath:error:">
-      <arg index="1" type_modifier="o"/>
-    </method>
-    <method selector="contentsOfDirectoryAtPath:error:">
-      <arg index="1" type_modifier="o"/>
-    </method>
-    <method selector="copyItemAtPath:toPath:error:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="createDirectoryAtPath:withIntermediateDirectories:attributes:error:">
-      <arg index="3" type_modifier="o"/>
-    </method>
-    <method selector="createSymbolicLinkAtPath:withDestinationPath:error:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="destinationOfSymbolicLinkAtPath:error:">
-      <arg index="1" type_modifier="o"/>
-    </method>
     <method selector="fileExistsAtPath:isDirectory:">
       <arg index="1" type_modifier="o"/>
     </method>
-    <method selector="linkItemAtPath:toPath:error:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="moveItemAtPath:toPath:error:">
-      <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="removeItemAtPath:error:">
-      <arg index="1" type_modifier="o"/>
-    </method>
-    <method selector="setAttributes:ofItemAtPath:error:">
-      <arg index="2" type_modifier="o"/>
-    </method>
     <method selector="stringWithFileSystemRepresentation:length:">
       <arg c_array_of_fixed_length="1" index="0" type_modifier="n"/>
-    </method>
-    <method selector="subpathsOfDirectoryAtPath:error:">
-      <arg index="1" type_modifier="o"/>
     </method>
   </class>
   <class name="NSFormatter">
@@ -468,14 +417,6 @@
       <arg index="0" type_modifier="o"/>
       <arg index="1" type_modifier="o"/>
       <arg index="4" type_modifier="o"/>
-    </method>
-  </class>
-  <class name="NSGarbageCollector">
-    <method selector="disableCollectorForPointer:">
-      <arg index="0" type_modifier="n"/>
-    </method>
-    <method selector="enableCollectorForPointer:">
-      <arg index="0" type_modifier="n"/>
     </method>
   </class>
   <class name="NSIndexPath">
@@ -507,11 +448,6 @@
     </method>
     <method selector="setReturnValue:">
       <arg index="0" type_modifier="n"/>
-    </method>
-  </class>
-  <class name='NSInvocationOperation'>
-    <method selector='initWithTarget:selector:object:'>
-      <arg index='1' sel_of_type="(void)action:(id)sender"/>
     </method>
   </class>
   <class name="NSKeyedArchiver">
@@ -579,10 +515,6 @@
     <method selector="conformsToProtocol:">
       <arg index="0" type_modifier="n"/>
     </method>
-    <method selector="countByEnumeratingWithState:objects:count:">
-      <arg index="0" type_modifier="n"/>
-      <arg c_array_length_in_arg="2" index="1" type_modifier="n"/>
-    </method>
     <method selector="handleMachMessage:">
       <arg index="0" type_modifier="n"/>
     </method>
@@ -591,9 +523,6 @@
     </method>
     <method selector="setObservationInfo:">
       <arg index="0" type_modifier="n"/>
-    </method>
-    <method selector="spellServer:checkGrammarInString:language:details:">
-      <arg index="3" type_modifier="o"/>
     </method>
     <method selector="spellServer:findMisspelledWordInString:language:wordCount:countOnly:">
       <arg index="3" type_modifier="o"/>
@@ -625,17 +554,6 @@
     </method>
     <method selector="write:maxLength:">
       <arg c_array_length_in_arg="1" index="0" type_modifier="n"/>
-    </method>
-  </class>
-  <class name="NSPointerArray">
-    <method selector="addPointer:">
-      <arg index="0" type_modifier="n"/>
-    </method>
-    <method selector="insertPointer:atIndex:">
-      <arg index="0" type_modifier="n"/>
-    </method>
-    <method selector="replacePointerAtIndex:withPointer:">
-      <arg index="1" type_modifier="n"/>
     </method>
   </class>
   <class name="NSPredicate">
@@ -682,9 +600,6 @@
       <arg index="0" type_modifier="o"/>
     </method>
     <method selector="scanInt:">
-      <arg index="0" type_modifier="o"/>
-    </method>
-    <method selector="scanInteger:">
       <arg index="0" type_modifier="o"/>
     </method>
     <method selector="scanLongLong:">
@@ -742,11 +657,6 @@
     <method selector="completePathIntoString:caseSensitive:matchesIntoArray:filterTypes:">
       <arg index="0" type_modifier="o"/>
       <arg index="2" type_modifier="o"/>
-    </method>
-    <method selector="getBytes:maxLength:usedLength:encoding:options:range:remainingRange:">
-      <arg index="0" type_modifier="o"/>
-      <arg index="2" type_modifier="o"/>
-      <arg index="6" type_modifier="o"/>
     </method>
     <method selector="getCString:maxLength:encoding:">
       <arg c_array_length_in_arg="1" index="0" type_modifier="o"/>
@@ -836,9 +746,6 @@
   <class name='NSThread'>
     <method class_method='true' selector='detachNewThreadSelector:toTarget:withObject:'>
       <arg index='0' sel_of_type="(void)action:(id)sender"/>
-    </method>
-    <method selector='initWithTarget:selector:object:'>
-      <arg index='1' sel_of_type="(void)action:(id)sender"/>
     </method>
   </class>
   <class name='NSTimer'>

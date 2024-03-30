@@ -14,9 +14,6 @@
   <struct name="ICD_scanner_callback_functions"/>
   <struct name="ObjectInfo"/>
   <struct name="ScannerObjectInfo"/>
-  <function name="ICDAddImageInfoToNotificationDictionary">
-    <arg c_array_length_in_arg="6" index="7" type_modifier="n"/>
-  </function>
   <function name="ICDCopyDeviceInfoDictionary">
     <arg index="1" type_modifier="o"/>
   </function>
@@ -24,10 +21,6 @@
     <arg index="1" type_modifier="o"/>
   </function>
   <function name="ICDCreateICAThumbnailFromICNS">
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="ICDCreateICAThumbnailFromIconRef">
-    <arg index="0" type_modifier="n"/>
     <arg index="1" type_modifier="o"/>
   </function>
   <function name="ICDGetStandardPropertyData">
@@ -65,12 +58,6 @@
   <function name="ICDScannerNewObjectInfoCreated">
     <arg index="0" type_modifier="n"/>
     <arg index="2" type_modifier="o"/>
-  </function>
-  <function name="ICDSendNotification">
-    <arg index="0" type_modifier="n"/>
-  </function>
-  <function name="ICDSendNotificationAndWaitForReply">
-    <arg index="0" type_modifier="n"/>
   </function>
   <function name="ICD_ScannerMain">
     <arg index="1" type_modifier="n" c_array_length_in_arg='0'/>

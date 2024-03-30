@@ -24,8 +24,6 @@
   <struct name="CGDataConsumerCallbacks"/>
   <struct name="CGDataProviderCallbacks"/>
   <struct name="CGDataProviderDirectAccessCallbacks"/>
-  <struct name="CGDataProviderDirectCallbacks"/>
-  <struct name="CGDataProviderSequentialCallbacks"/>
   <struct name="CGDeviceByteColor"/>
   <struct name="CGDeviceColor"/>
   <struct name="CGEventTapInformation"/>
@@ -193,10 +191,6 @@
   </function>
   <function name="CGFontCreateWithPlatformFont">
     <arg type="ATSFontRef" index="0"/>
-  </function>
-  <function name="CGFontGetGlyphAdvances">
-    <arg c_array_length_in_arg="2" index="1" type_modifier="n"/>
-    <arg c_array_length_in_arg="2" index="3" type_modifier="o"/>
   </function>
   <function name="CGFunctionCreate">
     <arg index="0" type_modifier="n"/>
@@ -476,28 +470,9 @@
     <arg index="3" type_modifier="o"/>
     <arg index="4" type_modifier="o"/>
   </function>
-  <function name="CGContextShowGlyphsAtPositions">
-    <arg index="1" type_modifier="n" c_array_length_in_arg='3'/>
-    <arg index="2" type_modifier="n" c_array_length_in_arg='3'/>
-  </function>
   <function name="CGDataProviderCreate">
     <arg index="0" type_modifier="n"/>
     <arg index="1" type_modifier="n"/>
-  </function>
-  <function name="CGDataProviderCreateDirect">
-    <arg index="0" type_modifier="n" c_array_length_in_arg='1'/>
-    <arg index="2" type_modifier="n"/>
-  </function>
-  <function name="CGFontGetGlyphBBoxes">
-    <arg index="1" type_modifier="n" c_array_length_in_arg='2'/>
-    <arg index="3" type_modifier="o" c_array_length_in_arg='2'/>
-  </function>
-  <function name="CGGradientCreateWithColorComponents">
-    <arg index="1" type_modifier="n" c_array_length_in_arg='3'/>
-    <arg index="2" type_modifier="n" c_array_length_in_arg='3'/>
-  </function>
-  <function name="CGGradientCreateWithColors">
-    <arg index="2" type_modifier="n" c_array_of_variable_length='true'/>
   </function>
   <function name="CGPDFArrayGetName">
     <arg index="2" type_modifier="o"/>
@@ -506,15 +481,6 @@
     <arg index="2" type_modifier="n"/>
   </function>
   <function name="CGPDFScannerPopName">
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="CGPointMakeWithDictionaryRepresentation">
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="CGRectMakeWithDictionaryRepresentation">
-    <arg index="1" type_modifier="o"/>
-  </function>
-  <function name="CGSizeMakeWithDictionaryRepresentation">
     <arg index="1" type_modifier="o"/>
   </function>
 </signatures>
