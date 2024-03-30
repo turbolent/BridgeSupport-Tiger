@@ -92,8 +92,10 @@ end
 # MacRuby - requires -fobjc-gc-only and -lauto
 # QuickTime - deprecated and 32-bit only
 # vecLib - clang-110 abort when objc type encoding of vector types
+# SearchKit - Undefined symbols: _SKDocumentGetTypeID, etc.
+# Python - result does not validate
 
-ignore_list = %w{IOKit MacRuby QuickTime vecLib}
+ignore_list = %w{IOKit MacRuby QuickTime vecLib SearchKit Python}
 ignore_list.each { |x| frameworks.delete(x) }
 
 also_gen_private_metadata = []
