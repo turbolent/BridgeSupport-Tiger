@@ -7,6 +7,7 @@ else # !RC_ProjectName
 Project = BridgeSupport
 endif
 
+MAKEFILEPATH = /Developer/Makefiles
 include $(MAKEFILEPATH)/CoreOS/ReleaseControl/Common.make
 
 # Override defaults
