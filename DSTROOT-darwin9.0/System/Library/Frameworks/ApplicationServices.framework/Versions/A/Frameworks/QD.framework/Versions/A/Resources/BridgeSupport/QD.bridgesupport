@@ -1,0 +1,2621 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<struct name='ATSFlatDataFontNameDataHeader' type='{ATSFlatDataFontNameDataHeader=&quot;nameSpecifierType&quot;I&quot;nameSpecifierSize&quot;I}' type64='{ATSFlatDataFontNameDataHeader=&quot;nameSpecifierType&quot;I&quot;nameSpecifierSize&quot;Q}'/>
+<struct name='ATSFlatDataFontSpecRawNameData' type='{ATSFlatDataFontSpecRawNameData=&quot;fontNameType&quot;I&quot;fontNamePlatform&quot;I&quot;fontNameScript&quot;I&quot;fontNameLanguage&quot;I&quot;fontNameLength&quot;I}' type64='{ATSFlatDataFontSpecRawNameData=&quot;fontNameType&quot;I&quot;fontNamePlatform&quot;I&quot;fontNameScript&quot;I&quot;fontNameLanguage&quot;I&quot;fontNameLength&quot;Q}'/>
+<struct name='ATSFlatDataFontSpecRawNameDataHeader' type='{ATSFlatDataFontSpecRawNameDataHeader=&quot;numberOfFlattenedNames&quot;I&quot;nameDataArray&quot;[1{ATSFlatDataFontSpecRawNameData=&quot;fontNameType&quot;I&quot;fontNamePlatform&quot;I&quot;fontNameScript&quot;I&quot;fontNameLanguage&quot;I&quot;fontNameLength&quot;I}]}' type64='{ATSFlatDataFontSpecRawNameDataHeader=&quot;numberOfFlattenedNames&quot;Q&quot;nameDataArray&quot;[1{ATSFlatDataFontSpecRawNameData=&quot;fontNameType&quot;I&quot;fontNamePlatform&quot;I&quot;fontNameScript&quot;I&quot;fontNameLanguage&quot;I&quot;fontNameLength&quot;Q}]}'/>
+<struct name='ATSFlatDataLayoutControlsDataHeader' type='{ATSFlatDataLayoutControlsDataHeader=&quot;numberOfLayoutControls&quot;I&quot;controlArray&quot;[1{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;I}]}' type64='{ATSFlatDataLayoutControlsDataHeader=&quot;numberOfLayoutControls&quot;Q&quot;controlArray&quot;[1{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;Q}]}'/>
+<struct name='ATSFlatDataLineInfoData' type='{ATSFlatDataLineInfoData=&quot;lineLength&quot;I&quot;numberOfLineControls&quot;I}' type64='{ATSFlatDataLineInfoData=&quot;lineLength&quot;Q&quot;numberOfLineControls&quot;Q}'/>
+<struct name='ATSFlatDataLineInfoHeader' type='{ATSFlatDataLineInfoHeader=&quot;numberOfLines&quot;I&quot;lineInfoArray&quot;[1{ATSFlatDataLineInfoData=&quot;lineLength&quot;I&quot;numberOfLineControls&quot;I}]}' type64='{ATSFlatDataLineInfoHeader=&quot;numberOfLines&quot;Q&quot;lineInfoArray&quot;[1{ATSFlatDataLineInfoData=&quot;lineLength&quot;Q&quot;numberOfLineControls&quot;Q}]}'/>
+<struct name='ATSFlatDataMainHeaderBlock' type='{ATSFlatDataMainHeaderBlock=&quot;version&quot;I&quot;sizeOfDataBlock&quot;I&quot;offsetToTextLayouts&quot;I&quot;offsetToStyleRuns&quot;I&quot;offsetToStyleList&quot;I}' type64='{ATSFlatDataMainHeaderBlock=&quot;version&quot;I&quot;sizeOfDataBlock&quot;Q&quot;offsetToTextLayouts&quot;Q&quot;offsetToStyleRuns&quot;Q&quot;offsetToStyleList&quot;Q}'/>
+<struct name='ATSFlatDataStyleListFeatureData' type='{ATSFlatDataStyleListFeatureData=&quot;theFeatureType&quot;S&quot;theFeatureSelector&quot;S}'/>
+<struct name='ATSFlatDataStyleListHeader' type='{ATSFlatDataStyleListHeader=&quot;numberOfStyles&quot;I&quot;styleDataArray&quot;[1{ATSFlatDataStyleListStyleDataHeader=&quot;sizeOfStyleInfo&quot;I&quot;numberOfSetAttributes&quot;I&quot;numberOfSetFeatures&quot;I&quot;numberOfSetVariations&quot;I}]}' type64='{ATSFlatDataStyleListHeader=&quot;numberOfStyles&quot;Q&quot;styleDataArray&quot;[1{ATSFlatDataStyleListStyleDataHeader=&quot;sizeOfStyleInfo&quot;Q&quot;numberOfSetAttributes&quot;Q&quot;numberOfSetFeatures&quot;Q&quot;numberOfSetVariations&quot;Q}]}'/>
+<struct name='ATSFlatDataStyleListStyleDataHeader' type='{ATSFlatDataStyleListStyleDataHeader=&quot;sizeOfStyleInfo&quot;I&quot;numberOfSetAttributes&quot;I&quot;numberOfSetFeatures&quot;I&quot;numberOfSetVariations&quot;I}' type64='{ATSFlatDataStyleListStyleDataHeader=&quot;sizeOfStyleInfo&quot;Q&quot;numberOfSetAttributes&quot;Q&quot;numberOfSetFeatures&quot;Q&quot;numberOfSetVariations&quot;Q}'/>
+<struct name='ATSFlatDataStyleListVariationData' type='{ATSFlatDataStyleListVariationData=&quot;theVariationAxis&quot;I&quot;theVariationValue&quot;i}'/>
+<struct name='ATSFlatDataStyleRunDataHeader' type='{ATSFlatDataStyleRunDataHeader=&quot;numberOfStyleRuns&quot;I&quot;styleRunArray&quot;[1{ATSUStyleRunInfo=&quot;runLength&quot;I&quot;styleObjectIndex&quot;I}]}' type64='{ATSFlatDataStyleRunDataHeader=&quot;numberOfStyleRuns&quot;Q&quot;styleRunArray&quot;[1{ATSUStyleRunInfo=&quot;runLength&quot;Q&quot;styleObjectIndex&quot;Q}]}'/>
+<struct name='ATSFlatDataTextLayoutDataHeader' type='{ATSFlatDataTextLayoutDataHeader=&quot;sizeOfLayoutData&quot;I&quot;textLayoutLength&quot;I&quot;offsetToLayoutControls&quot;I&quot;offsetToLineInfo&quot;I}' type64='{ATSFlatDataTextLayoutDataHeader=&quot;sizeOfLayoutData&quot;Q&quot;textLayoutLength&quot;Q&quot;offsetToLayoutControls&quot;Q&quot;offsetToLineInfo&quot;Q}'/>
+<struct name='ATSFlatDataTextLayoutHeader' type='{ATSFlatDataTextLayoutHeader=&quot;numFlattenedTextLayouts&quot;I&quot;flattenedTextLayouts&quot;[1{ATSFlatDataTextLayoutDataHeader=&quot;sizeOfLayoutData&quot;I&quot;textLayoutLength&quot;I&quot;offsetToLayoutControls&quot;I&quot;offsetToLineInfo&quot;I}]}' type64='{ATSFlatDataTextLayoutHeader=&quot;numFlattenedTextLayouts&quot;Q&quot;flattenedTextLayouts&quot;[1{ATSFlatDataTextLayoutDataHeader=&quot;sizeOfLayoutData&quot;Q&quot;textLayoutLength&quot;Q&quot;offsetToLayoutControls&quot;Q&quot;offsetToLineInfo&quot;Q}]}'/>
+<struct name='ATSUAttributeInfo' type='{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;I}' type64='{ATSUAttributeInfo=&quot;fTag&quot;I&quot;fValueSize&quot;Q}'/>
+<struct name='ATSUBackgroundColor' type='{ATSURGBAlphaColor=&quot;red&quot;f&quot;green&quot;f&quot;blue&quot;f&quot;alpha&quot;f}'/>
+<struct name='ATSUCaret' type='{ATSUCaret=&quot;fX&quot;i&quot;fY&quot;i&quot;fDeltaX&quot;i&quot;fDeltaY&quot;i}'/>
+<struct name='ATSUGlyphInfo' type='{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;I&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}' type64='{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;Q&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}'/>
+<struct name='ATSUGlyphInfoArray' type='{ATSUGlyphInfoArray=&quot;layout&quot;^{OpaqueATSUTextLayout}&quot;numGlyphs&quot;I&quot;glyphs&quot;[1{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;I&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}]}' type64='{ATSUGlyphInfoArray=&quot;layout&quot;^{OpaqueATSUTextLayout}&quot;numGlyphs&quot;Q&quot;glyphs&quot;[1{ATSUGlyphInfo=&quot;glyphID&quot;S&quot;reserved&quot;S&quot;layoutFlags&quot;I&quot;charIndex&quot;Q&quot;style&quot;^{OpaqueATSUStyle}&quot;deltaY&quot;f&quot;idealX&quot;f&quot;screenX&quot;s&quot;caretX&quot;s}]}'/>
+<struct name='ATSUGlyphSelector' type='{ATSUGlyphSelector=&quot;collection&quot;S&quot;glyphID&quot;S}'/>
+<struct name='ATSURGBAlphaColor' type='{ATSURGBAlphaColor=&quot;red&quot;f&quot;green&quot;f&quot;blue&quot;f&quot;alpha&quot;f}'/>
+<struct name='ATSUStyleRunInfo' type='{ATSUStyleRunInfo=&quot;runLength&quot;I&quot;styleObjectIndex&quot;I}' type64='{ATSUStyleRunInfo=&quot;runLength&quot;Q&quot;styleObjectIndex&quot;Q}'/>
+<struct name='ATSUTab' type='{ATSUTab=&quot;tabPosition&quot;i&quot;tabType&quot;S}'/>
+<struct name='ATSUUnhighlightData' type='{ATSUUnhighlightData=&quot;dataType&quot;I&quot;unhighlightData&quot;(ATSUBackgroundData=&quot;backgroundColor&quot;{ATSURGBAlphaColor=&quot;red&quot;f&quot;green&quot;f&quot;blue&quot;f&quot;alpha&quot;f}&quot;backgroundUPP&quot;^?)}'/>
+<struct name='AVLocationRec' type='{AVLocationRec=&quot;locationConstant&quot;I}'/>
+<struct name='AVPowerStateRec' type='{VDPowerStateRec=&quot;powerState&quot;L&quot;powerFlags&quot;L&quot;powerReserved1&quot;L&quot;powerReserved2&quot;L}' type64='{VDPowerStateRec=&quot;powerState&quot;Q&quot;powerFlags&quot;Q&quot;powerReserved1&quot;Q&quot;powerReserved2&quot;Q}'/>
+<struct name='AsscEntry' type='{AsscEntry=&quot;fontSize&quot;s&quot;fontStyle&quot;s&quot;fontID&quot;s}'/>
+<struct name='BitMap' type='{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}'/>
+<struct name='CCrsr' type='{CCrsr=&quot;crsrType&quot;s&quot;crsrMap&quot;^^{PixMap}&quot;crsrData&quot;^*&quot;crsrXData&quot;^*&quot;crsrXValid&quot;s&quot;crsrXHandle&quot;^*&quot;crsr1Data&quot;[16s]&quot;crsrMask&quot;[16s]&quot;crsrHotSpot&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;crsrXTable&quot;i&quot;crsrID&quot;i}'/>
+<struct name='CProcRec' type='{CProcRec=&quot;nxtComp&quot;^*&quot;compProc&quot;^?}'/>
+<struct name='CQDProcs' type='{CQDProcs=&quot;textProc&quot;^?&quot;lineProc&quot;^?&quot;rectProc&quot;^?&quot;rRectProc&quot;^?&quot;ovalProc&quot;^?&quot;arcProc&quot;^?&quot;polyProc&quot;^?&quot;rgnProc&quot;^?&quot;bitsProc&quot;^?&quot;commentProc&quot;^?&quot;txMeasProc&quot;^?&quot;getPicProc&quot;^?&quot;putPicProc&quot;^?&quot;opcodeProc&quot;^?&quot;newProc1&quot;^?&quot;glyphsProc&quot;^?&quot;printerStatusProc&quot;^?&quot;newProc4&quot;^?&quot;newProc5&quot;^?&quot;newProc6&quot;^?}'/>
+<struct name='ColorInfo' type='{ColorInfo=&quot;ciRGB&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;ciUsage&quot;s&quot;ciTolerance&quot;s&quot;ciDataFields&quot;[3s]}'/>
+<struct name='ColorSpec' type='{ColorSpec=&quot;value&quot;s&quot;rgb&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}}'/>
+<struct name='ColorTable' type='{ColorTable=&quot;ctSeed&quot;i&quot;ctFlags&quot;s&quot;ctSize&quot;s&quot;ctTable&quot;[1{ColorSpec=&quot;value&quot;s&quot;rgb&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}}]}'/>
+<struct name='CommentSpec' type='{CommentSpec=&quot;count&quot;s&quot;ID&quot;s}'/>
+<struct name='Cursor' type='{Cursor=&quot;data&quot;[16s]&quot;mask&quot;[16s]&quot;hotSpot&quot;{Point=&quot;v&quot;s&quot;h&quot;s}}'/>
+<struct name='CursorInfo' type='{CursorInfo=&quot;version&quot;l&quot;capabilities&quot;l&quot;animateDuration&quot;l&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;hotspot&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;reserved&quot;l}' type64='{CursorInfo=&quot;version&quot;q&quot;capabilities&quot;q&quot;animateDuration&quot;q&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;hotspot&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;reserved&quot;q}'/>
+<struct name='CustomXFerRec' type='{CustomXFerRec=&quot;version&quot;I&quot;srcPixels&quot;^v&quot;destPixels&quot;^v&quot;resultPixels&quot;^v&quot;refCon&quot;I&quot;pixelSize&quot;I&quot;pixelCount&quot;I&quot;firstPixelHV&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;destBounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}'/>
+<struct name='DMComponentListEntryRec' type='{DMComponentListEntryRec=&quot;itemID&quot;I&quot;itemComponent&quot;^{ComponentRecord}&quot;itemDescription&quot;{ComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;I&quot;componentFlagsMask&quot;I}&quot;itemClass&quot;I&quot;itemFidelity&quot;I&quot;itemSubClass&quot;I&quot;itemSort&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;itemFlags&quot;I&quot;itemReserved&quot;I&quot;itemFuture1&quot;I&quot;itemFuture2&quot;I&quot;itemFuture3&quot;I&quot;itemFuture4&quot;I}'/>
+<struct name='DMDepthInfoBlockRec' type='{DMDepthInfoBlockRec=&quot;depthBlockCount&quot;I&quot;depthVPBlock&quot;^{DMDepthInfoRec}&quot;depthBlockFlags&quot;I&quot;depthBlockReserved1&quot;I&quot;depthBlockReserved2&quot;I}'/>
+<struct name='DMDepthInfoRec' type='{DMDepthInfoRec=&quot;depthSwitchInfo&quot;^{VDSwitchInfoRec}&quot;depthVPBlock&quot;^{VPBlock}&quot;depthFlags&quot;I&quot;depthReserved1&quot;I&quot;depthReserved2&quot;I}'/>
+<struct name='DMDisplayModeListEntryRec' type='{DMDisplayModeListEntryRec=&quot;displayModeFlags&quot;I&quot;displayModeSwitchInfo&quot;^{VDSwitchInfoRec}&quot;displayModeResolutionInfo&quot;^{VDResolutionInfoRec}&quot;displayModeTimingInfo&quot;^{VDTimingInfoRec}&quot;displayModeDepthBlockInfo&quot;^{DMDepthInfoBlockRec}&quot;displayModeVersion&quot;I&quot;displayModeName&quot;*&quot;displayModeDisplayInfo&quot;^{DMDisplayTimingInfoRec}}'/>
+<struct name='DMDisplayTimingInfoRec' type='{DMDisplayTimingInfoRec=&quot;timingInfoVersion&quot;I&quot;timingInfoAttributes&quot;I&quot;timingInfoRelativeQuality&quot;i&quot;timingInfoRelativeDefault&quot;i&quot;timingInfoReserved&quot;[16L]}' type64='{DMDisplayTimingInfoRec=&quot;timingInfoVersion&quot;I&quot;timingInfoAttributes&quot;I&quot;timingInfoRelativeQuality&quot;i&quot;timingInfoRelativeDefault&quot;i&quot;timingInfoReserved&quot;[16I]}'/>
+<struct name='DMMakeAndModelRec' type='{DMMakeAndModelRec=&quot;manufacturer&quot;I&quot;model&quot;I&quot;serialNumber&quot;I&quot;manufactureDate&quot;I&quot;makeReserved&quot;[4L]}' type64='{DMMakeAndModelRec=&quot;manufacturer&quot;I&quot;model&quot;I&quot;serialNumber&quot;I&quot;manufactureDate&quot;I&quot;makeReserved&quot;[4I]}'/>
+<struct name='DMProfileListEntryRec' type='{DMProfileListEntryRec=&quot;profileRef&quot;^{OpaqueCMProfileRef}&quot;profileReserved1&quot;*&quot;profileReserved2&quot;*&quot;profileReserved3&quot;*}'/>
+<struct name='DependentNotifyRec' type='{DependentNotifyRec=&quot;notifyType&quot;I&quot;notifyClass&quot;I&quot;notifyPortID&quot;I&quot;notifyComponent&quot;^{ComponentInstanceRecord}&quot;notifyVersion&quot;I&quot;notifyFlags&quot;I&quot;notifyReserved&quot;I&quot;notifyFuture&quot;I}'/>
+<struct name='DisplayListEntryRec' type='{DisplayListEntryRec=&quot;displayListEntryGDevice&quot;^^{GDevice}&quot;displayListEntryDisplayID&quot;I&quot;displayListEntryIncludeFlags&quot;I&quot;displayListEntryReserved1&quot;I&quot;displayListEntryReserved2&quot;I&quot;displayListEntryReserved3&quot;I&quot;displayListEntryReserved4&quot;I&quot;displayListEntryReserved5&quot;I}'/>
+<struct name='FMInput' type='{FMInput=&quot;family&quot;s&quot;size&quot;s&quot;face&quot;C&quot;needBits&quot;B&quot;device&quot;s&quot;numer&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;denom&quot;{Point=&quot;v&quot;s&quot;h&quot;s}}'/>
+<struct name='FMOutput' type='{FMOutput=&quot;errNum&quot;s&quot;fontHandle&quot;^*&quot;boldPixels&quot;C&quot;italicPixels&quot;C&quot;ulOffset&quot;C&quot;ulShadow&quot;C&quot;ulThick&quot;C&quot;shadowPixels&quot;C&quot;extra&quot;c&quot;ascent&quot;C&quot;descent&quot;C&quot;widMax&quot;C&quot;leading&quot;c&quot;curStyle&quot;c&quot;numer&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;denom&quot;{Point=&quot;v&quot;s&quot;h&quot;s}}'/>
+<struct name='FMetricRec' type='{FMetricRec=&quot;ascent&quot;i&quot;descent&quot;i&quot;leading&quot;i&quot;widMax&quot;i&quot;wTabHandle&quot;^*}'/>
+<struct name='FNSSysInfo' type='{FNSSysInfo=&quot;iSysInfoVersion&quot;I&quot;oFeatures&quot;I&quot;oCurRefVersion&quot;I&quot;oMinRefVersion&quot;I&quot;oCurProfileVersion&quot;I&quot;oMinProfileVersion&quot;I&quot;oFontSyncVersion&quot;S}'/>
+<struct name='FamRec' type='{FamRec=&quot;ffFlags&quot;s&quot;ffFamID&quot;s&quot;ffFirstChar&quot;s&quot;ffLastChar&quot;s&quot;ffAscent&quot;s&quot;ffDescent&quot;s&quot;ffLeading&quot;s&quot;ffWidMax&quot;s&quot;ffWTabOff&quot;i&quot;ffKernOff&quot;i&quot;ffStylOff&quot;i&quot;ffProperty&quot;[9s]&quot;ffIntl&quot;[2s]&quot;ffVersion&quot;s}'/>
+<struct name='FontAssoc' type='{FontAssoc=&quot;numAssoc&quot;s}'/>
+<struct name='FontInfo' type='{FontInfo=&quot;ascent&quot;s&quot;descent&quot;s&quot;widMax&quot;s&quot;leading&quot;s}'/>
+<struct name='FontRec' type='{FontRec=&quot;fontType&quot;s&quot;firstChar&quot;s&quot;lastChar&quot;s&quot;widMax&quot;s&quot;kernMax&quot;s&quot;nDescent&quot;s&quot;fRectWidth&quot;s&quot;fRectHeight&quot;s&quot;owTLoc&quot;S&quot;ascent&quot;s&quot;descent&quot;s&quot;leading&quot;s&quot;rowWords&quot;s}'/>
+<struct name='FontSpec' type='{FontSpec=&quot;pictFontID&quot;s&quot;sysFontID&quot;s&quot;size&quot;[4l]&quot;style&quot;s&quot;nameOffset&quot;l}' type64='{FontSpec=&quot;pictFontID&quot;s&quot;sysFontID&quot;s&quot;size&quot;[4q]&quot;style&quot;s&quot;nameOffset&quot;q}'/>
+<struct name='GDevice' type='{GDevice=&quot;gdRefNum&quot;s&quot;gdID&quot;s&quot;gdType&quot;s&quot;gdITable&quot;^^{ITab}&quot;gdResPref&quot;s&quot;gdSearchProc&quot;^^{SProcRec}&quot;gdCompProc&quot;^^{CProcRec}&quot;gdFlags&quot;s&quot;gdPMap&quot;^^{PixMap}&quot;gdRefCon&quot;i&quot;gdNextGD&quot;^^{GDevice}&quot;gdRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;gdMode&quot;i&quot;gdCCBytes&quot;s&quot;gdCCDepth&quot;s&quot;gdCCXData&quot;^*&quot;gdCCXMask&quot;^*&quot;gdExt&quot;^*}'/>
+<struct name='GammaTbl' type='{GammaTbl=&quot;gVersion&quot;s&quot;gType&quot;s&quot;gFormulaSize&quot;s&quot;gChanCnt&quot;s&quot;gDataCnt&quot;s&quot;gDataWidth&quot;s&quot;gFormulaData&quot;[1s]}'/>
+<struct name='GrafVars' type='{GrafVars=&quot;rgbOpColor&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;rgbHiliteColor&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;pmFgColor&quot;^*&quot;pmFgIndex&quot;s&quot;pmBkColor&quot;^*&quot;pmBkIndex&quot;s&quot;pmFlags&quot;s}'/>
+<struct name='ITab' type='{ITab=&quot;iTabSeed&quot;i&quot;iTabRes&quot;s&quot;iTTable&quot;[1C]}'/>
+<struct name='KernEntry' type='{KernEntry=&quot;kernStyle&quot;s&quot;kernLength&quot;s}'/>
+<struct name='KernPair' type='{KernPair=&quot;kernFirst&quot;c&quot;kernSecond&quot;c&quot;kernWidth&quot;s}'/>
+<struct name='KernTable' type='{KernTable=&quot;numKerns&quot;s}'/>
+<struct name='MacPolygon' type='{MacPolygon=&quot;polySize&quot;s&quot;polyBBox&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;polyPoints&quot;[1{Point=&quot;v&quot;s&quot;h&quot;s}]}'/>
+<struct name='MatchRec' type='{MatchRec=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S&quot;matchData&quot;l}' type64='{MatchRec=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S&quot;matchData&quot;q}'/>
+<struct name='NameTable' type='{NameTable=&quot;stringCount&quot;s&quot;baseFontName&quot;[256C]}'/>
+<struct name='OpenCPicParams' type='{OpenCPicParams=&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;hRes&quot;i&quot;vRes&quot;i&quot;version&quot;s&quot;reserved1&quot;s&quot;reserved2&quot;i}'/>
+<struct name='Palette' type='{Palette=&quot;pmEntries&quot;s&quot;pmDataFields&quot;[7s]&quot;pmInfo&quot;[1{ColorInfo=&quot;ciRGB&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;ciUsage&quot;s&quot;ciTolerance&quot;s&quot;ciDataFields&quot;[3s]}]}'/>
+<struct name='Pattern' type='{Pattern=&quot;pat&quot;[8C]}'/>
+<struct name='PenState' type='{PenState=&quot;pnLoc&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;pnSize&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;pnMode&quot;s&quot;pnPat&quot;{Pattern=&quot;pat&quot;[8C]}}'/>
+<struct name='PictInfo' type='{PictInfo=&quot;version&quot;s&quot;uniqueColors&quot;l&quot;thePalette&quot;^^{Palette}&quot;theColorTable&quot;^^{ColorTable}&quot;hRes&quot;i&quot;vRes&quot;i&quot;depth&quot;s&quot;sourceRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;textCount&quot;l&quot;lineCount&quot;l&quot;rectCount&quot;l&quot;rRectCount&quot;l&quot;ovalCount&quot;l&quot;arcCount&quot;l&quot;polyCount&quot;l&quot;regionCount&quot;l&quot;bitMapCount&quot;l&quot;pixMapCount&quot;l&quot;commentCount&quot;l&quot;uniqueComments&quot;l&quot;commentHandle&quot;^^{CommentSpec}&quot;uniqueFonts&quot;l&quot;fontHandle&quot;^^{FontSpec}&quot;fontNamesHandle&quot;^*&quot;reserved1&quot;l&quot;reserved2&quot;l}' type64='{PictInfo=&quot;version&quot;s&quot;uniqueColors&quot;q&quot;thePalette&quot;^^{Palette}&quot;theColorTable&quot;^^{ColorTable}&quot;hRes&quot;i&quot;vRes&quot;i&quot;depth&quot;s&quot;sourceRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;textCount&quot;q&quot;lineCount&quot;q&quot;rectCount&quot;q&quot;rRectCount&quot;q&quot;ovalCount&quot;q&quot;arcCount&quot;q&quot;polyCount&quot;q&quot;regionCount&quot;q&quot;bitMapCount&quot;q&quot;pixMapCount&quot;q&quot;commentCount&quot;q&quot;uniqueComments&quot;q&quot;commentHandle&quot;^^{CommentSpec}&quot;uniqueFonts&quot;q&quot;fontHandle&quot;^^{FontSpec}&quot;fontNamesHandle&quot;^*&quot;reserved1&quot;q&quot;reserved2&quot;q}'/>
+<struct name='Picture' type='{Picture=&quot;picSize&quot;s&quot;picFrame&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}'/>
+<struct name='PixMap' type='{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;i&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}'/>
+<struct name='PixPat' type='{PixPat=&quot;patType&quot;s&quot;patMap&quot;^^{PixMap}&quot;patData&quot;^*&quot;patXData&quot;^*&quot;patXValid&quot;s&quot;patXMap&quot;^*&quot;pat1Data&quot;{Pattern=&quot;pat&quot;[8C]}}'/>
+<struct name='Polygon' type='{MacPolygon=&quot;polySize&quot;s&quot;polyBBox&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;polyPoints&quot;[1{Point=&quot;v&quot;s&quot;h&quot;s}]}'/>
+<struct name='PrinterFontStatus' type='{PrinterFontStatus=&quot;oResult&quot;i&quot;iFondID&quot;s&quot;iStyle&quot;C}'/>
+<struct name='PrinterScalingStatus' type='{PrinterScalingStatus=&quot;oScalingFactors&quot;{Point=&quot;v&quot;s&quot;h&quot;s}}'/>
+<struct name='QDProcs' type='{QDProcs=&quot;textProc&quot;^?&quot;lineProc&quot;^?&quot;rectProc&quot;^?&quot;rRectProc&quot;^?&quot;ovalProc&quot;^?&quot;arcProc&quot;^?&quot;polyProc&quot;^?&quot;rgnProc&quot;^?&quot;bitsProc&quot;^?&quot;commentProc&quot;^?&quot;txMeasProc&quot;^?&quot;getPicProc&quot;^?&quot;putPicProc&quot;^?}'/>
+<struct name='RGBColor' type='{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}'/>
+<struct name='ReqListRec' type='{ReqListRec=&quot;reqLSize&quot;s&quot;reqLData&quot;[1s]}'/>
+<struct name='SProcRec' type='{SProcRec=&quot;nxtSrch&quot;^*&quot;srchProc&quot;^?}'/>
+<struct name='StyleTable' type='{StyleTable=&quot;fontClass&quot;s&quot;offset&quot;i&quot;reserved&quot;i&quot;indexes&quot;[48c]}'/>
+<struct name='VDBaseAddressInfoRec' type='{VDBaseAddressInfoRec=&quot;csDevData&quot;l&quot;csDevBase&quot;l&quot;csModeReserved&quot;s&quot;csModeBase&quot;l}' type64='{VDBaseAddressInfoRec=&quot;csDevData&quot;q&quot;csDevBase&quot;q&quot;csModeReserved&quot;s&quot;csModeBase&quot;q}'/>
+<struct name='VDCommunicationInfoRec' type='{VDCommunicationInfoRec=&quot;csBusID&quot;i&quot;csBusType&quot;I&quot;csMinBus&quot;i&quot;csMaxBus&quot;i&quot;csSupportedTypes&quot;I&quot;csSupportedCommFlags&quot;I&quot;csReserved2&quot;I&quot;csReserved3&quot;I&quot;csReserved4&quot;I&quot;csReserved5&quot;I&quot;csReserved6&quot;I&quot;csReserved7&quot;I}'/>
+<struct name='VDCommunicationRec' type='{VDCommunicationRec=&quot;csBusID&quot;i&quot;csCommFlags&quot;I&quot;csMinReplyDelay&quot;I&quot;csReserved2&quot;I&quot;csSendAddress&quot;I&quot;csSendType&quot;I&quot;csSendBuffer&quot;^v&quot;csSendSize&quot;I&quot;csReplyAddress&quot;I&quot;csReplyType&quot;I&quot;csReplyBuffer&quot;^v&quot;csReplySize&quot;I&quot;csReserved3&quot;I&quot;csReserved4&quot;I&quot;csReserved5&quot;I&quot;csReserved6&quot;I}' type64='{VDCommunicationRec=&quot;csBusID&quot;i&quot;csCommFlags&quot;I&quot;csMinReplyDelay&quot;I&quot;csReserved2&quot;I&quot;csSendAddress&quot;I&quot;csSendType&quot;I&quot;csSendBuffer&quot;^v&quot;csSendSize&quot;Q&quot;csReplyAddress&quot;I&quot;csReplyType&quot;I&quot;csReplyBuffer&quot;^v&quot;csReplySize&quot;Q&quot;csReserved3&quot;I&quot;csReserved4&quot;I&quot;csReserved5&quot;I&quot;csReserved6&quot;I}'/>
+<struct name='VDConvolutionInfoRec' type='{VDConvolutionInfoRec=&quot;csDisplayModeID&quot;I&quot;csDepthMode&quot;S&quot;csPage&quot;L&quot;csFlags&quot;I&quot;csReserved&quot;I}' type64='{VDConvolutionInfoRec=&quot;csDisplayModeID&quot;I&quot;csDepthMode&quot;S&quot;csPage&quot;Q&quot;csFlags&quot;I&quot;csReserved&quot;I}'/>
+<struct name='VDDDCBlockRec' type='{VDDDCBlockRec=&quot;ddcBlockNumber&quot;I&quot;ddcBlockType&quot;I&quot;ddcFlags&quot;I&quot;ddcReserved&quot;I&quot;ddcBlockData&quot;[128C]}'/>
+<struct name='VDDefMode' type='{VDDefMode=&quot;csID&quot;C&quot;filler&quot;c}'/>
+<struct name='VDDetailedTimingRec' type='{VDDetailedTimingRec=&quot;csTimingSize&quot;I&quot;csTimingType&quot;I&quot;csTimingVersion&quot;I&quot;csTimingReserved&quot;I&quot;csDisplayModeID&quot;I&quot;csDisplayModeSeed&quot;I&quot;csDisplayModeState&quot;I&quot;csDisplayModeAlias&quot;I&quot;csSignalConfig&quot;I&quot;csSignalLevels&quot;I&quot;csPixelClock&quot;Q&quot;csMinPixelClock&quot;Q&quot;csMaxPixelClock&quot;Q&quot;csHorizontalActive&quot;I&quot;csHorizontalBlanking&quot;I&quot;csHorizontalSyncOffset&quot;I&quot;csHorizontalSyncPulseWidth&quot;I&quot;csVerticalActive&quot;I&quot;csVerticalBlanking&quot;I&quot;csVerticalSyncOffset&quot;I&quot;csVerticalSyncPulseWidth&quot;I&quot;csHorizontalBorderLeft&quot;I&quot;csHorizontalBorderRight&quot;I&quot;csVerticalBorderTop&quot;I&quot;csVerticalBorderBottom&quot;I&quot;csHorizontalSyncConfig&quot;I&quot;csHorizontalSyncLevel&quot;I&quot;csVerticalSyncConfig&quot;I&quot;csVerticalSyncLevel&quot;I&quot;csReserved1&quot;I&quot;csReserved2&quot;I&quot;csReserved3&quot;I&quot;csReserved4&quot;I&quot;csReserved5&quot;I&quot;csReserved6&quot;I&quot;csReserved7&quot;I&quot;csReserved8&quot;I}'/>
+<struct name='VDDisplayConnectInfoRec' type='{VDDisplayConnectInfoRec=&quot;csDisplayType&quot;S&quot;csConnectTaggedType&quot;C&quot;csConnectTaggedData&quot;C&quot;csConnectFlags&quot;L&quot;csDisplayComponent&quot;L&quot;csConnectReserved&quot;L}' type64='{VDDisplayConnectInfoRec=&quot;csDisplayType&quot;S&quot;csConnectTaggedType&quot;C&quot;csConnectTaggedData&quot;C&quot;csConnectFlags&quot;Q&quot;csDisplayComponent&quot;Q&quot;csConnectReserved&quot;Q}'/>
+<struct name='VDDisplayTimingRangeRec' type='{VDDisplayTimingRangeRec=&quot;csRangeSize&quot;I&quot;csRangeType&quot;I&quot;csRangeVersion&quot;I&quot;csRangeReserved&quot;I&quot;csRangeBlockIndex&quot;I&quot;csRangeGroup&quot;I&quot;csRangeBlockCount&quot;I&quot;csRangeFlags&quot;I&quot;csMinPixelClock&quot;Q&quot;csMaxPixelClock&quot;Q&quot;csMaxPixelError&quot;I&quot;csTimingRangeSyncFlags&quot;I&quot;csTimingRangeSignalLevels&quot;I&quot;csReserved0&quot;I&quot;csMinFrameRate&quot;I&quot;csMaxFrameRate&quot;I&quot;csMinLineRate&quot;I&quot;csMaxLineRate&quot;I&quot;csMaxHorizontalTotal&quot;I&quot;csMaxVerticalTotal&quot;I&quot;csMaxTotalReserved1&quot;I&quot;csMaxTotalReserved2&quot;I&quot;csCharSizeHorizontalActive&quot;C&quot;csCharSizeHorizontalBlanking&quot;C&quot;csCharSizeHorizontalSyncOffset&quot;C&quot;csCharSizeHorizontalSyncPulse&quot;C&quot;csCharSizeVerticalActive&quot;C&quot;csCharSizeVerticalBlanking&quot;C&quot;csCharSizeVerticalSyncOffset&quot;C&quot;csCharSizeVerticalSyncPulse&quot;C&quot;csCharSizeHorizontalBorderLeft&quot;C&quot;csCharSizeHorizontalBorderRight&quot;C&quot;csCharSizeVerticalBorderTop&quot;C&quot;csCharSizeVerticalBorderBottom&quot;C&quot;csCharSizeHorizontalTotal&quot;C&quot;csCharSizeVerticalTotal&quot;C&quot;csCharSizeReserved1&quot;S&quot;csMinHorizontalActiveClocks&quot;I&quot;csMaxHorizontalActiveClocks&quot;I&quot;csMinHorizontalBlankingClocks&quot;I&quot;csMaxHorizontalBlankingClocks&quot;I&quot;csMinHorizontalSyncOffsetClocks&quot;I&quot;csMaxHorizontalSyncOffsetClocks&quot;I&quot;csMinHorizontalPulseWidthClocks&quot;I&quot;csMaxHorizontalPulseWidthClocks&quot;I&quot;csMinVerticalActiveClocks&quot;I&quot;csMaxVerticalActiveClocks&quot;I&quot;csMinVerticalBlankingClocks&quot;I&quot;csMaxVerticalBlankingClocks&quot;I&quot;csMinVerticalSyncOffsetClocks&quot;I&quot;csMaxVerticalSyncOffsetClocks&quot;I&quot;csMinVerticalPulseWidthClocks&quot;I&quot;csMaxVerticalPulseWidthClocks&quot;I&quot;csMinHorizontalBorderLeft&quot;I&quot;csMaxHorizontalBorderLeft&quot;I&quot;csMinHorizontalBorderRight&quot;I&quot;csMaxHorizontalBorderRight&quot;I&quot;csMinVerticalBorderTop&quot;I&quot;csMaxVerticalBorderTop&quot;I&quot;csMinVerticalBorderBottom&quot;I&quot;csMaxVerticalBorderBottom&quot;I&quot;csReserved1&quot;I&quot;csReserved2&quot;I&quot;csReserved3&quot;I&quot;csReserved4&quot;I&quot;csReserved5&quot;I&quot;csReserved6&quot;I&quot;csReserved7&quot;I&quot;csReserved8&quot;I}'/>
+<struct name='VDDrawHardwareCursorRec' type='{VDDrawHardwareCursorRec=&quot;csCursorX&quot;i&quot;csCursorY&quot;i&quot;csCursorVisible&quot;I&quot;csReserved1&quot;I&quot;csReserved2&quot;I}'/>
+<struct name='VDEntryRecord' type='{VDEntryRecord=&quot;csTable&quot;*}'/>
+<struct name='VDFlagRecord' type='{VDFlagRecord=&quot;csMode&quot;c&quot;filler&quot;c}'/>
+<struct name='VDGammaInfoRec' type='{VDGammaInfoRec=&quot;csLastGammaID&quot;I&quot;csNextGammaID&quot;I&quot;csGammaPtr&quot;*&quot;csReserved&quot;L}' type64='{VDGammaInfoRec=&quot;csLastGammaID&quot;I&quot;csNextGammaID&quot;I&quot;csGammaPtr&quot;*&quot;csReserved&quot;Q}'/>
+<struct name='VDGammaRecord' type='{VDGammaRecord=&quot;csGTable&quot;*}'/>
+<struct name='VDGetGammaListRec' type='{VDGetGammaListRec=&quot;csPreviousGammaTableID&quot;I&quot;csGammaTableID&quot;I&quot;csGammaTableSize&quot;L&quot;csGammaTableName&quot;*}' type64='{VDGetGammaListRec=&quot;csPreviousGammaTableID&quot;I&quot;csGammaTableID&quot;I&quot;csGammaTableSize&quot;Q&quot;csGammaTableName&quot;*}'/>
+<struct name='VDGrayRecord' type='{VDGrayRecord=&quot;csMode&quot;B&quot;filler&quot;c}'/>
+<struct name='VDHardwareCursorDrawStateRec' type='{VDHardwareCursorDrawStateRec=&quot;csCursorX&quot;i&quot;csCursorY&quot;i&quot;csCursorVisible&quot;I&quot;csCursorSet&quot;I&quot;csReserved1&quot;I&quot;csReserved2&quot;I}'/>
+<struct name='VDMultiConnectInfoRec' type='{VDMultiConnectInfoRec=&quot;csDisplayCountOrNumber&quot;L&quot;csConnectInfo&quot;{VDDisplayConnectInfoRec=&quot;csDisplayType&quot;S&quot;csConnectTaggedType&quot;C&quot;csConnectTaggedData&quot;C&quot;csConnectFlags&quot;L&quot;csDisplayComponent&quot;L&quot;csConnectReserved&quot;L}}' type64='{VDMultiConnectInfoRec=&quot;csDisplayCountOrNumber&quot;Q&quot;csConnectInfo&quot;{VDDisplayConnectInfoRec=&quot;csDisplayType&quot;S&quot;csConnectTaggedType&quot;C&quot;csConnectTaggedData&quot;C&quot;csConnectFlags&quot;Q&quot;csDisplayComponent&quot;Q&quot;csConnectReserved&quot;Q}}'/>
+<struct name='VDPageInfo' type='{VDPageInfo=&quot;csMode&quot;s&quot;csData&quot;l&quot;csPage&quot;s&quot;csBaseAddr&quot;*}' type64='{VDPageInfo=&quot;csMode&quot;s&quot;csData&quot;q&quot;csPage&quot;s&quot;csBaseAddr&quot;*}'/>
+<struct name='VDPowerStateRec' type='{VDPowerStateRec=&quot;powerState&quot;L&quot;powerFlags&quot;L&quot;powerReserved1&quot;L&quot;powerReserved2&quot;L}' type64='{VDPowerStateRec=&quot;powerState&quot;Q&quot;powerFlags&quot;Q&quot;powerReserved1&quot;Q&quot;powerReserved2&quot;Q}'/>
+<struct name='VDPrivateSelectorDataRec' type='{VDPrivateSelectorDataRec=&quot;privateParameters&quot;^v&quot;privateParametersSize&quot;I&quot;privateResults&quot;^v&quot;privateResultsSize&quot;I}' type64='{VDPrivateSelectorDataRec=&quot;privateParameters&quot;^v&quot;privateParametersSize&quot;Q&quot;privateResults&quot;^v&quot;privateResultsSize&quot;Q}'/>
+<struct name='VDPrivateSelectorRec' type='{VDPrivateSelectorRec=&quot;reserved&quot;I&quot;data&quot;[1{VDPrivateSelectorDataRec=&quot;privateParameters&quot;^v&quot;privateParametersSize&quot;I&quot;privateResults&quot;^v&quot;privateResultsSize&quot;I}]}' type64='{VDPrivateSelectorRec=&quot;reserved&quot;I&quot;data&quot;[1{VDPrivateSelectorDataRec=&quot;privateParameters&quot;^v&quot;privateParametersSize&quot;Q&quot;privateResults&quot;^v&quot;privateResultsSize&quot;Q}]}'/>
+<struct name='VDResolutionInfoRec' type='{VDResolutionInfoRec=&quot;csPreviousDisplayModeID&quot;I&quot;csDisplayModeID&quot;I&quot;csHorizontalPixels&quot;L&quot;csVerticalLines&quot;L&quot;csRefreshRate&quot;i&quot;csMaxDepthMode&quot;S&quot;csResolutionFlags&quot;L&quot;csReserved&quot;L}' type64='{VDResolutionInfoRec=&quot;csPreviousDisplayModeID&quot;I&quot;csDisplayModeID&quot;I&quot;csHorizontalPixels&quot;Q&quot;csVerticalLines&quot;Q&quot;csRefreshRate&quot;i&quot;csMaxDepthMode&quot;S&quot;csResolutionFlags&quot;Q&quot;csReserved&quot;Q}'/>
+<struct name='VDRetrieveGammaRec' type='{VDRetrieveGammaRec=&quot;csGammaTableID&quot;I&quot;csGammaTablePtr&quot;^{GammaTbl}}'/>
+<struct name='VDSetEntryRecord' type='{VDSetEntryRecord=&quot;csTable&quot;^{ColorSpec}&quot;csStart&quot;s&quot;csCount&quot;s}'/>
+<struct name='VDSetHardwareCursorRec' type='{VDSetHardwareCursorRec=&quot;csCursorRef&quot;^v&quot;csReserved1&quot;I&quot;csReserved2&quot;I}'/>
+<struct name='VDSettings' type='{VDSettings=&quot;csParamCnt&quot;s&quot;csBrightMax&quot;s&quot;csBrightDef&quot;s&quot;csBrightVal&quot;s&quot;csCntrstMax&quot;s&quot;csCntrstDef&quot;s&quot;csCntrstVal&quot;s&quot;csTintMax&quot;s&quot;csTintDef&quot;s&quot;csTintVal&quot;s&quot;csHueMax&quot;s&quot;csHueDef&quot;s&quot;csHueVal&quot;s&quot;csHorizDef&quot;s&quot;csHorizVal&quot;s&quot;csHorizMax&quot;s&quot;csVertDef&quot;s&quot;csVertVal&quot;s&quot;csVertMax&quot;s}'/>
+<struct name='VDSizeInfo' type='{VDSizeInfo=&quot;csHSize&quot;s&quot;csHPos&quot;s&quot;csVSize&quot;s&quot;csVPos&quot;s}'/>
+<struct name='VDSupportsHardwareCursorRec' type='{VDSupportsHardwareCursorRec=&quot;csSupportsHardwareCursor&quot;I&quot;csReserved1&quot;I&quot;csReserved2&quot;I}'/>
+<struct name='VDSwitchInfoRec' type='{VDSwitchInfoRec=&quot;csMode&quot;S&quot;csData&quot;L&quot;csPage&quot;S&quot;csBaseAddr&quot;*&quot;csReserved&quot;L}' type64='{VDSwitchInfoRec=&quot;csMode&quot;S&quot;csData&quot;Q&quot;csPage&quot;S&quot;csBaseAddr&quot;*&quot;csReserved&quot;Q}'/>
+<struct name='VDSyncInfoRec' type='{VDSyncInfoRec=&quot;csMode&quot;C&quot;csFlags&quot;C}'/>
+<struct name='VDTimingInfoRec' type='{VDTimingInfoRec=&quot;csTimingMode&quot;L&quot;csTimingReserved&quot;L&quot;csTimingFormat&quot;L&quot;csTimingData&quot;L&quot;csTimingFlags&quot;L}' type64='{VDTimingInfoRec=&quot;csTimingMode&quot;Q&quot;csTimingReserved&quot;Q&quot;csTimingFormat&quot;Q&quot;csTimingData&quot;Q&quot;csTimingFlags&quot;Q}'/>
+<struct name='VDVideoParametersInfoRec' type='{VDVideoParametersInfoRec=&quot;csDisplayModeID&quot;I&quot;csDepthMode&quot;S&quot;csVPBlockPtr&quot;^{VPBlock}&quot;csPageCount&quot;L&quot;csDeviceType&quot;I&quot;csDepthFlags&quot;I}' type64='{VDVideoParametersInfoRec=&quot;csDisplayModeID&quot;I&quot;csDepthMode&quot;S&quot;csVPBlockPtr&quot;^{VPBlock}&quot;csPageCount&quot;Q&quot;csDeviceType&quot;I&quot;csDepthFlags&quot;I}'/>
+<struct name='VPBlock' type='{VPBlock=&quot;vpBaseOffset&quot;l&quot;vpRowBytes&quot;s&quot;vpBounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;vpVersion&quot;s&quot;vpPackType&quot;s&quot;vpPackSize&quot;l&quot;vpHRes&quot;l&quot;vpVRes&quot;l&quot;vpPixelType&quot;s&quot;vpPixelSize&quot;s&quot;vpCmpCount&quot;s&quot;vpCmpSize&quot;s&quot;vpPlaneBytes&quot;l}' type64='{VPBlock=&quot;vpBaseOffset&quot;q&quot;vpRowBytes&quot;s&quot;vpBounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;vpVersion&quot;s&quot;vpPackType&quot;s&quot;vpPackSize&quot;q&quot;vpHRes&quot;q&quot;vpVRes&quot;q&quot;vpPixelType&quot;s&quot;vpPixelSize&quot;s&quot;vpCmpCount&quot;s&quot;vpCmpSize&quot;s&quot;vpPlaneBytes&quot;q}'/>
+<struct name='WidEntry' type='{WidEntry=&quot;widStyle&quot;s}'/>
+<struct name='WidTable' type='{WidTable=&quot;numWidths&quot;s}'/>
+<struct name='WidthTable' type='{WidthTable=&quot;tabData&quot;[256l]&quot;tabFont&quot;^*&quot;sExtra&quot;l&quot;style&quot;l&quot;fID&quot;s&quot;fSize&quot;s&quot;face&quot;s&quot;device&quot;s&quot;inNumer&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;inDenom&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;aFID&quot;s&quot;fHand&quot;^*&quot;usedFam&quot;B&quot;aFace&quot;C&quot;vOutput&quot;s&quot;hOutput&quot;s&quot;vFactor&quot;s&quot;hFactor&quot;s&quot;aSize&quot;s&quot;tabSize&quot;s}' type64='{WidthTable=&quot;tabData&quot;[256i]&quot;tabFont&quot;^*&quot;sExtra&quot;q&quot;style&quot;q&quot;fID&quot;s&quot;fSize&quot;s&quot;face&quot;s&quot;device&quot;s&quot;inNumer&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;inDenom&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;aFID&quot;s&quot;fHand&quot;^*&quot;usedFam&quot;B&quot;aFace&quot;C&quot;vOutput&quot;s&quot;hOutput&quot;s&quot;vFactor&quot;s&quot;hFactor&quot;s&quot;aSize&quot;s&quot;tabSize&quot;s}'/>
+<struct name='xColorSpec' type='{xColorSpec=&quot;value&quot;s&quot;rgb&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;xalpha&quot;s}'/>
+<cftype name='ATSUStyleSettingRef' type='^{LLCStyleInfo=}'/>
+<cftype name='QDPictRef' type='^{QDPict=}'/>
+<cftype name='QDRegionBitsRef' type='^{OpaqueQDRegionBitsRef=}'/>
+<opaque name='ATSUFontFallbacks' type='^{OpaqueATSUFontFallbacks=}'/>
+<opaque name='ATSUStyle' type='^{OpaqueATSUStyle=}'/>
+<opaque name='ATSUTextLayout' type='^{OpaqueATSUTextLayout=}'/>
+<opaque name='DialogPtr' type='^{OpaqueDialogPtr=}'/>
+<opaque name='FNSFontProfile' type='^{OpaqueFNSFontProfile=}'/>
+<opaque name='FNSFontReference' type='^{OpaqueFNSFontReference=}'/>
+<opaque name='GrafPtr' type='^{OpaqueGrafPtr=}'/>
+<opaque name='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+<opaque name='WindowPtr' type='^{OpaqueWindowPtr=}'/>
+<enum name='ColorBankIs555' value='1'/>
+<enum name='ColorBankIsCustom' value='-1'/>
+<enum name='ColorBankIsExactAnd555' value='0'/>
+<enum name='NON_MAC_PIXEL_FORMATS' value='1'/>
+<enum name='OLDGDEVICESTRUCT' value='0'/>
+<enum name='OLDPIXMAPSTRUCT' value='0'/>
+<enum name='RGBDirect' value='16'/>
+<enum name='adMax' value='37'/>
+<enum name='adMin' value='39'/>
+<enum name='addMax' value='37'/>
+<enum name='addOver' value='34'/>
+<enum name='addPin' value='33'/>
+<enum name='alignPix' value='262144'/>
+<enum name='alignPixBit' value='18'/>
+<enum name='allDevices' value='4'/>
+<enum name='allDevicesBit' value='2'/>
+<enum name='allInit' value='12'/>
+<enum name='applFont' value='1'/>
+<enum name='appleMark' value='20'/>
+<enum name='baseAddr32' value='4'/>
+<enum name='blackBit' value='5'/>
+<enum name='blackColor' value='33'/>
+<enum name='blend' value='32'/>
+<enum name='blueBit' value='2'/>
+<enum name='blueColor' value='409'/>
+<enum name='burstDevice' value='7'/>
+<enum name='checkMark' value='18'/>
+<enum name='chunky' value='0'/>
+<enum name='chunkyPlanar' value='1'/>
+<enum name='clipPix' value='268435456'/>
+<enum name='clipPixBit' value='28'/>
+<enum name='clutType' value='0'/>
+<enum name='colorXorXFer' value='52'/>
+<enum name='commandMark' value='17'/>
+<enum name='condenseBit' value='5'/>
+<enum name='crossCursor' value='2'/>
+<enum name='cscDirectSetEntries' value='8'/>
+<enum name='cscDoCommunication' value='33'/>
+<enum name='cscDrawHardwareCursor' value='23'/>
+<enum name='cscGetBaseAddr' value='5'/>
+<enum name='cscGetClutBehavior' value='29'/>
+<enum name='cscGetCommunicationInfo' value='32'/>
+<enum name='cscGetConnection' value='12'/>
+<enum name='cscGetConvolution' value='24'/>
+<enum name='cscGetCurMode' value='10'/>
+<enum name='cscGetDDCBlock' value='27'/>
+<enum name='cscGetDefaultMode' value='9'/>
+<enum name='cscGetDetailedTiming' value='31'/>
+<enum name='cscGetEntries' value='3'/>
+<enum name='cscGetGamma' value='8'/>
+<enum name='cscGetGammaInfoList' value='20'/>
+<enum name='cscGetGray' value='6'/>
+<enum name='cscGetHardwareCursorDrawState' value='23'/>
+<enum name='cscGetInterrupt' value='7'/>
+<enum name='cscGetMode' value='2'/>
+<enum name='cscGetModeBaseAddress' value='14'/>
+<enum name='cscGetModeTiming' value='13'/>
+<enum name='cscGetMultiConnect' value='28'/>
+<enum name='cscGetNextResolution' value='17'/>
+<enum name='cscGetPageBase' value='5'/>
+<enum name='cscGetPageCnt' value='4'/>
+<enum name='cscGetPages' value='4'/>
+<enum name='cscGetPowerState' value='25'/>
+<enum name='cscGetPreferredConfiguration' value='16'/>
+<enum name='cscGetScanProc' value='15'/>
+<enum name='cscGetSync' value='11'/>
+<enum name='cscGetTimingRanges' value='30'/>
+<enum name='cscGetVideoParameters' value='18'/>
+<enum name='cscGrayPage' value='5'/>
+<enum name='cscGrayScreen' value='5'/>
+<enum name='cscKillIO' value='1'/>
+<enum name='cscPrivateControlCall' value='26'/>
+<enum name='cscPrivateStatusCall' value='26'/>
+<enum name='cscProbeConnection' value='34'/>
+<enum name='cscReset' value='0'/>
+<enum name='cscRetrieveGammaTable' value='21'/>
+<enum name='cscSavePreferredConfiguration' value='16'/>
+<enum name='cscSetClutBehavior' value='29'/>
+<enum name='cscSetConvolution' value='24'/>
+<enum name='cscSetDefaultMode' value='9'/>
+<enum name='cscSetDetailedTiming' value='31'/>
+<enum name='cscSetEntries' value='3'/>
+<enum name='cscSetGamma' value='4'/>
+<enum name='cscSetGray' value='6'/>
+<enum name='cscSetHardwareCursor' value='22'/>
+<enum name='cscSetInterrupt' value='7'/>
+<enum name='cscSetMode' value='2'/>
+<enum name='cscSetMultiConnect' value='28'/>
+<enum name='cscSetPowerState' value='25'/>
+<enum name='cscSetSync' value='11'/>
+<enum name='cscSupportsHardwareCursor' value='22'/>
+<enum name='cscSwitchMode' value='10'/>
+<enum name='cscUnusedCall' value='127'/>
+<enum name='cursorDoesAnimate' value='1'/>
+<enum name='cursorDoesHardware' value='2'/>
+<enum name='cursorDoesUnreadableScreenBits' value='4'/>
+<enum name='customXFer' value='54'/>
+<enum name='cyanBit' value='8'/>
+<enum name='cyanColor' value='273'/>
+<enum name='defQDColors' value='127'/>
+<enum name='deviceIsAScreen' value='128'/>
+<enum name='deviceIsDCISurface' value='32'/>
+<enum name='deviceIsDDSurface' value='16'/>
+<enum name='deviceIsExternalBuffer' value='8'/>
+<enum name='deviceIsGDISurface' value='64'/>
+<enum name='deviceIsIndirect' value='1'/>
+<enum name='deviceIsOverlaySurface' value='256'/>
+<enum name='deviceIsStatic' value='4'/>
+<enum name='deviceNeedsLock' value='2'/>
+<enum name='diamondMark' value='19'/>
+<enum name='directType' value='2'/>
+<enum name='ditherCopy' value='64'/>
+<enum name='ditherPix' value='1073741824'/>
+<enum name='ditherPixBit' value='30'/>
+<enum name='dmAllDisplays' value='0'/>
+<enum name='dmOnlyActiveDisplays' value='1'/>
+<enum name='dontMatchSeeds' value='2'/>
+<enum name='dontMatchSeedsBit' value='1'/>
+<enum name='eightBitMode' value='131'/>
+<enum name='ext32Device' value='8'/>
+<enum name='extendBit' value='6'/>
+<enum name='fifthVidMode' value='132'/>
+<enum name='firstVidMode' value='128'/>
+<enum name='fixedFont' value='45056'/>
+<enum name='fixedType' value='1'/>
+<enum name='fontWid' value='44208'/>
+<enum name='fourBitMode' value='130'/>
+<enum name='fourthVidMode' value='131'/>
+<enum name='fxdFntH' value='45057'/>
+<enum name='fxdFntHW' value='45059'/>
+<enum name='fxdFntW' value='45058'/>
+<enum name='gdDevType' value='0'/>
+<enum name='grayishTextOr' value='49'/>
+<enum name='greenBit' value='3'/>
+<enum name='greenColor' value='341'/>
+<enum name='gwFlagErr' value64='2147483648' value='-2147483648'/>
+<enum name='gwFlagErrBit' value='31'/>
+<enum name='hasAuxMenuBar' value='6'/>
+<enum name='hilite' value='50'/>
+<enum name='hiliteBit' value='7'/>
+<enum name='hilitetransfermode' value='50'/>
+<enum name='hwMirroredDevice' value='4'/>
+<enum name='iBeamCursor' value='1'/>
+<enum name='interlacedDevice' value='2'/>
+<enum name='invalColReq' value='-1'/>
+<enum name='inverseBit' value='1'/>
+<enum name='italicBit' value='1'/>
+<enum name='k16BE555PixelFormat' value='16'/>
+<enum name='k16BE565PixelFormat' value='1110783541'/>
+<enum name='k16LE5551PixelFormat' value='892679473'/>
+<enum name='k16LE555PixelFormat' value='1278555445'/>
+<enum name='k16LE565PixelFormat' value='1278555701'/>
+<enum name='k1IndexedGrayPixelFormat' value='33'/>
+<enum name='k1MonochromePixelFormat' value='1'/>
+<enum name='k24BGRPixelFormat' value='842285639'/>
+<enum name='k24RGBPixelFormat' value='24'/>
+<enum name='k2IndexedGrayPixelFormat' value='34'/>
+<enum name='k2IndexedPixelFormat' value='2'/>
+<enum name='k2vuyPixelFormat' value='846624121'/>
+<enum name='k32ABGRPixelFormat' value='1094862674'/>
+<enum name='k32ARGBPixelFormat' value='32'/>
+<enum name='k32BGRAPixelFormat' value='1111970369'/>
+<enum name='k32RGBAPixelFormat' value='1380401729'/>
+<enum name='k4IndexedGrayPixelFormat' value='36'/>
+<enum name='k4IndexedPixelFormat' value='4'/>
+<enum name='k8IndexedGrayPixelFormat' value='40'/>
+<enum name='k8IndexedPixelFormat' value='8'/>
+<enum name='kAEDisplayNotice' value='1685287020'/>
+<enum name='kAEDisplaySummary' value='1685288301'/>
+<enum name='kAESystemConfigNotice' value='1668179559'/>
+<enum name='kATSFlatDataUstlCurrentVersion' value='2'/>
+<enum name='kATSFlatDataUstlVersion0' value='0'/>
+<enum name='kATSFlatDataUstlVersion1' value='1'/>
+<enum name='kATSFlatDataUstlVersion2' value='2'/>
+<enum name='kATSFlattenedFontSpecifierRawNameData' value='1851878756'/>
+<enum name='kATSUAfterWithStreamShiftTag' value='268'/>
+<enum name='kATSUAscentTag' value='284'/>
+<enum name='kATSUBackgroundCallback' value='1'/>
+<enum name='kATSUBackgroundColor' value='0'/>
+<enum name='kATSUBaselineClassTag' value='274'/>
+<enum name='kATSUBeforeWithStreamShiftTag' value='267'/>
+<enum name='kATSUByCharacter' value='0'/>
+<enum name='kATSUByCharacterCluster' value='3'/>
+<enum name='kATSUByCluster' value='1'/>
+<enum name='kATSUByTypographicCluster' value='1'/>
+<enum name='kATSUByWord' value='2'/>
+<enum name='kATSUCGContextTag' value='32767'/>
+<enum name='kATSUCenterAlignment' value='536870912'/>
+<enum name='kATSUCenterTab' value='1'/>
+<enum name='kATSUClearAll' value='4294967295'/>
+<enum name='kATSUColorTag' value='263'/>
+<enum name='kATSUCrossStreamShiftTag' value='269'/>
+<enum name='kATSUDataStreamUnicodeStyledText' value='1970500716'/>
+<enum name='kATSUDecimalTab' value='3'/>
+<enum name='kATSUDecompositionFactorTag' value='273'/>
+<enum name='kATSUDefaultFontFallbacks' value='0'/>
+<enum name='kATSUDescentTag' value='285'/>
+<enum name='kATSUDirectDataAdvanceDeltaFixedArray' value='0'/>
+<enum name='kATSUDirectDataBaselineDeltaFixedArray' value='1'/>
+<enum name='kATSUDirectDataDeviceDeltaSInt16Array' value='2'/>
+<enum name='kATSUDirectDataLayoutRecordATSLayoutRecordCurrent' value='100'/>
+<enum name='kATSUDirectDataLayoutRecordATSLayoutRecordVersion1' value='100'/>
+<enum name='kATSUDirectDataStyleIndexUInt16Array' value='3'/>
+<enum name='kATSUDirectDataStyleSettingATSUStyleSettingRefArray' value='4'/>
+<enum name='kATSUEndAlignment' value='1073741824'/>
+<enum name='kATSUFlattenOptionNoOptionsMask' value='0'/>
+<enum name='kATSUFontMatrixTag' value='289'/>
+<enum name='kATSUFontTag' value='261'/>
+<enum name='kATSUForceHangingTag' value='280'/>
+<enum name='kATSUFromFollowingLayout' value='4294967293'/>
+<enum name='kATSUFromPreviousLayout' value='4294967294'/>
+<enum name='kATSUFromTextBeginning' value='4294967295'/>
+<enum name='kATSUFullJustification' value='1073741824'/>
+<enum name='kATSUGlyphSelectorTag' value='287'/>
+<enum name='kATSUHangingInhibitFactorTag' value='271'/>
+<enum name='kATSUImposeWidthTag' value='266'/>
+<enum name='kATSUInvalidFontID' value='0'/>
+<enum name='kATSUKerningInhibitFactorTag' value='272'/>
+<enum name='kATSULangRegionTag' value='264'/>
+<enum name='kATSULanguageTag' value='264'/>
+<enum name='kATSULastResortOnlyFallback' value='1'/>
+<enum name='kATSULayoutOperationOverrideTag' value='15'/>
+<enum name='kATSULeadingTag' value='286'/>
+<enum name='kATSULeftTab' value='0'/>
+<enum name='kATSULeftToRightBaseDirection' value='0'/>
+<enum name='kATSULineAscentTag' value='8'/>
+<enum name='kATSULineBaselineValuesTag' value='6'/>
+<enum name='kATSULineDecimalTabCharacterTag' value='14'/>
+<enum name='kATSULineDescentTag' value='9'/>
+<enum name='kATSULineDirectionTag' value='3'/>
+<enum name='kATSULineFlushFactorTag' value='5'/>
+<enum name='kATSULineFontFallbacksTag' value='13'/>
+<enum name='kATSULineHighlightCGColorTag' value='17'/>
+<enum name='kATSULineJustificationFactorTag' value='4'/>
+<enum name='kATSULineLangRegionTag' value='10'/>
+<enum name='kATSULineLanguageTag' value='10'/>
+<enum name='kATSULineLayoutOptionsTag' value='7'/>
+<enum name='kATSULineRotationTag' value='2'/>
+<enum name='kATSULineTextLocatorTag' value='11'/>
+<enum name='kATSULineTruncationTag' value='12'/>
+<enum name='kATSULineWidthTag' value='1'/>
+<enum name='kATSUMaxATSUITagValue' value='65535'/>
+<enum name='kATSUMaxLineTag' value='18'/>
+<enum name='kATSUMaxStyleTag' value='299'/>
+<enum name='kATSUNoCaretAngleTag' value='277'/>
+<enum name='kATSUNoJustification' value='0'/>
+<enum name='kATSUNoLigatureSplitTag' value='276'/>
+<enum name='kATSUNoOpticalAlignmentTag' value='279'/>
+<enum name='kATSUNoSelector' value='65535'/>
+<enum name='kATSUNoSpecialJustificationTag' value='281'/>
+<enum name='kATSUNumberTabTypes' value='4'/>
+<enum name='kATSUPriorityJustOverrideTag' value='275'/>
+<enum name='kATSUQDBoldfaceTag' value='256'/>
+<enum name='kATSUQDCondensedTag' value='259'/>
+<enum name='kATSUQDExtendedTag' value='260'/>
+<enum name='kATSUQDItalicTag' value='257'/>
+<enum name='kATSUQDUnderlineTag' value='258'/>
+<enum name='kATSURGBAlphaColorTag' value='288'/>
+<enum name='kATSURightTab' value='2'/>
+<enum name='kATSURightToLeftBaseDirection' value='1'/>
+<enum name='kATSUSequentialFallbacksExclusive' value='3'/>
+<enum name='kATSUSequentialFallbacksPreferred' value='2'/>
+<enum name='kATSUSizeTag' value='262'/>
+<enum name='kATSUStartAlignment' value='0'/>
+<enum name='kATSUStronglyHorizontal' value='0'/>
+<enum name='kATSUStronglyVertical' value='1'/>
+<enum name='kATSUStyleContainedBy' value='3'/>
+<enum name='kATSUStyleContains' value='1'/>
+<enum name='kATSUStyleDoubleLineCount' value='2'/>
+<enum name='kATSUStyleDropShadowBlurOptionTag' value='296'/>
+<enum name='kATSUStyleDropShadowColorOptionTag' value='298'/>
+<enum name='kATSUStyleDropShadowOffsetOptionTag' value='297'/>
+<enum name='kATSUStyleDropShadowTag' value='295'/>
+<enum name='kATSUStyleEquals' value='2'/>
+<enum name='kATSUStyleRenderingOptionsTag' value='283'/>
+<enum name='kATSUStyleSingleLineCount' value='1'/>
+<enum name='kATSUStyleStrikeThroughColorOptionTag' value='294'/>
+<enum name='kATSUStyleStrikeThroughCountOptionTag' value='293'/>
+<enum name='kATSUStyleStrikeThroughTag' value='292'/>
+<enum name='kATSUStyleTextLocatorTag' value='282'/>
+<enum name='kATSUStyleUnderlineColorOptionTag' value='291'/>
+<enum name='kATSUStyleUnderlineCountOptionTag' value='290'/>
+<enum name='kATSUStyleUnequal' value='0'/>
+<enum name='kATSUSuppressCrossKerningTag' value='278'/>
+<enum name='kATSUToTextEnd' value='4294967295'/>
+<enum name='kATSUTrackingTag' value='270'/>
+<enum name='kATSUTruncFeatNoSquishing' value='8'/>
+<enum name='kATSUTruncateEnd' value='2'/>
+<enum name='kATSUTruncateMiddle' value='3'/>
+<enum name='kATSUTruncateNone' value='0'/>
+<enum name='kATSUTruncateSpecificationMask' value='7'/>
+<enum name='kATSUTruncateStart' value='1'/>
+<enum name='kATSUUnFlattenOptionNoOptionsMask' value='0'/>
+<enum name='kATSUUseGrafPortPenLoc' value='4294967295'/>
+<enum name='kATSUUseLineControlWidth' value='2147483647'/>
+<enum name='kATSUVerticalCharacterTag' value='265'/>
+<enum name='kAVPowerOff' value='0'/>
+<enum name='kAVPowerOn' value='3'/>
+<enum name='kAVPowerStandby' value='1'/>
+<enum name='kAVPowerSuspend' value='2'/>
+<enum name='kActivateConnection' value='0'/>
+<enum name='kAddDisplayBit' value='4'/>
+<enum name='kAllModesSafe' value='1'/>
+<enum name='kAllModesValid' value='0'/>
+<enum name='kAllocDirectDrawSurface' value='16384'/>
+<enum name='kAllowDuplicatesBit' value='0'/>
+<enum name='kAnalogSetupExpectedBit' value='1'/>
+<enum name='kAnalogSetupExpectedMask' value='2'/>
+<enum name='kAnalogSignalLevel_0700_0000' value='3'/>
+<enum name='kAnalogSignalLevel_0700_0300' value='0'/>
+<enum name='kAnalogSignalLevel_0714_0286' value='1'/>
+<enum name='kAnalogSignalLevel_1000_0400' value='2'/>
+<enum name='kAnyDeviceType' value='0'/>
+<enum name='kAnyEngineType' value='0'/>
+<enum name='kAnyPanelType' value='0'/>
+<enum name='kAnyPortType' value='0'/>
+<enum name='kBeginEndConfigureBit' value='0'/>
+<enum name='kBuiltInConnection' value='11'/>
+<enum name='kColor16Connect' value='17'/>
+<enum name='kColor19Connect' value='18'/>
+<enum name='kColorTwoPageConnect' value='16'/>
+<enum name='kComponentListNotPreferredBit' value='0'/>
+<enum name='kComponentListNotPreferredMask' value='1'/>
+<enum name='kCompositeSyncMask' value='4'/>
+<enum name='kConnectionInactive' value='9'/>
+<enum name='kConvolved' value='0'/>
+<enum name='kConvolvedMask' value='1'/>
+<enum name='kCursorComponentAnimate' value='9'/>
+<enum name='kCursorComponentDraw' value='6'/>
+<enum name='kCursorComponentErase' value='7'/>
+<enum name='kCursorComponentGetInfo' value='2'/>
+<enum name='kCursorComponentInit' value='1'/>
+<enum name='kCursorComponentLastReserved' value='80'/>
+<enum name='kCursorComponentMove' value='8'/>
+<enum name='kCursorComponentReconfigure' value='5'/>
+<enum name='kCursorComponentSetData' value='4'/>
+<enum name='kCursorComponentSetOutputMode' value='3'/>
+<enum name='kCursorComponentType' value='1668641395'/>
+<enum name='kCursorComponentsVersion' value='65537'/>
+<enum name='kDDCBlockSize' value='128'/>
+<enum name='kDDCBlockTypeEDID' value='0'/>
+<enum name='kDDCConnect' value='21'/>
+<enum name='kDDCForceReadBit' value='0'/>
+<enum name='kDDCForceReadMask' value='1'/>
+<enum name='kDMForceNumbersMask' value='2'/>
+<enum name='kDMModeListExcludeCustomModesMask' value='16'/>
+<enum name='kDMModeListExcludeDisplayModesMask' value='8'/>
+<enum name='kDMModeListExcludeDriverModesMask' value='4'/>
+<enum name='kDMModeListIncludeAllModesMask' value='1'/>
+<enum name='kDMModeListIncludeOfflineModesMask' value='2'/>
+<enum name='kDMModeListPreferSafeModesMask' value='64'/>
+<enum name='kDMModeListPreferStretchedModesMask' value='32'/>
+<enum name='kDMNotifyDependents' value='6'/>
+<enum name='kDMNotifyDisplayDidWake' value='11'/>
+<enum name='kDMNotifyDisplayWillSleep' value='10'/>
+<enum name='kDMNotifyEvent' value='2'/>
+<enum name='kDMNotifyExtendEvent' value='5'/>
+<enum name='kDMNotifyInstalled' value='1'/>
+<enum name='kDMNotifyPrep' value='4'/>
+<enum name='kDMNotifyRemoved' value='3'/>
+<enum name='kDMNotifyRequestConnectionProbe' value='0'/>
+<enum name='kDMNotifyRequestDisplayProbe' value='9'/>
+<enum name='kDMNotifyResumeConfigure' value='8'/>
+<enum name='kDMNotifySuspendConfigure' value='7'/>
+<enum name='kDMSModeFree' value='2'/>
+<enum name='kDMSModeNotReady' value='1'/>
+<enum name='kDMSModeReady' value='0'/>
+<enum name='kDMSupressNameMask' value='4'/>
+<enum name='kDMSupressNumbersMask' value='1'/>
+<enum name='kDPMSSyncMask' value='7'/>
+<enum name='kDPMSSyncOff' value='7'/>
+<enum name='kDPMSSyncOn' value='0'/>
+<enum name='kDPMSSyncStandby' value='1'/>
+<enum name='kDPMSSyncSuspend' value='2'/>
+<enum name='kDeactivateConnection' value='512'/>
+<enum name='kDeclROMtables' value='1684366188'/>
+<enum name='kDefaultFidelity' value='500'/>
+<enum name='kDefaultManufacturerFidelity' value='1000'/>
+<enum name='kDependentConnection' value='10'/>
+<enum name='kDependentNotifyClassDisplayMgrOverride' value='1684891506'/>
+<enum name='kDependentNotifyClassDriverOverride' value='1852076662'/>
+<enum name='kDependentNotifyClassProfileChanged' value='1886547814'/>
+<enum name='kDependentNotifyClassShowCursor' value='1936221042'/>
+<enum name='kDepthDependent' value='0'/>
+<enum name='kDepthMode1' value='128'/>
+<enum name='kDepthMode2' value='129'/>
+<enum name='kDepthMode3' value='130'/>
+<enum name='kDepthMode4' value='131'/>
+<enum name='kDepthMode5' value='132'/>
+<enum name='kDepthMode6' value='133'/>
+<enum name='kDepthNotAvailableBit' value='1'/>
+<enum name='kDetailedTimingFormat' value='1634886241'/>
+<enum name='kDigitalSignalBit' value='0'/>
+<enum name='kDigitalSignalMask' value='1'/>
+<enum name='kDisableCompositeSyncBit' value='2'/>
+<enum name='kDisableHorizontalSyncBit' value='0'/>
+<enum name='kDisableVerticalSyncBit' value='1'/>
+<enum name='kDisabledDisplayBit' value='9'/>
+<enum name='kDisplayGestaltBrightnessAffectsGammaMask' value='1'/>
+<enum name='kDisplayGestaltCalibratorAttr' value='1667329129'/>
+<enum name='kDisplayGestaltDisplayCommunicationAttr' value='1668246893'/>
+<enum name='kDisplayGestaltForbidI2CMask' value='1'/>
+<enum name='kDisplayGestaltUseI2CPowerMask' value='2'/>
+<enum name='kDisplayGestaltViewAngleAffectsGammaMask' value='2'/>
+<enum name='kDisplayModeEntryVersionOne' value='1'/>
+<enum name='kDisplayModeEntryVersionZero' value='0'/>
+<enum name='kDisplayModeIDBootProgrammable' value64='4294967291' value='-5'/>
+<enum name='kDisplayModeIDCurrent' value='0'/>
+<enum name='kDisplayModeIDFindFirstProgrammable' value64='4294967292' value='-4'/>
+<enum name='kDisplayModeIDFindFirstResolution' value64='4294967294' value='-2'/>
+<enum name='kDisplayModeIDInvalid' value64='4294967295' value='-1'/>
+<enum name='kDisplayModeIDNoMoreResolutions' value64='4294967293' value='-3'/>
+<enum name='kDisplayModeIDReservedBase' value64='2147483648' value='-2147483648'/>
+<enum name='kDisplayModeListNotPreferredBit' value='0'/>
+<enum name='kDisplayModeListNotPreferredMask' value='1'/>
+<enum name='kDisplayTimingInfoReservedCountVersionZero' value='16'/>
+<enum name='kDisplayTimingInfoVersionZero' value='1'/>
+<enum name='kDisposeDisplayBit' value='7'/>
+<enum name='kDummyDeviceID' value='255'/>
+<enum name='kESCFivePortrait' value='30'/>
+<enum name='kESCFourNTSC' value='10'/>
+<enum name='kESCOnePortraitMono' value='20'/>
+<enum name='kESCSeven16Inch' value='45'/>
+<enum name='kESCSeven19Inch' value='58'/>
+<enum name='kESCSevenDDC' value='62'/>
+<enum name='kESCSevenNTSC' value='20'/>
+<enum name='kESCSevenNoDisplay' value='63'/>
+<enum name='kESCSevenPAL' value='0'/>
+<enum name='kESCSevenPALAlternate' value='48'/>
+<enum name='kESCSevenVGA' value='23'/>
+<enum name='kESCSixMSB1' value='3'/>
+<enum name='kESCSixMSB2' value='11'/>
+<enum name='kESCSixMSB3' value='35'/>
+<enum name='kESCSixStandard' value='43'/>
+<enum name='kESCThree21InchMono' value='53'/>
+<enum name='kESCThree21InchMonoRadius' value='52'/>
+<enum name='kESCThree21InchRadius' value='49'/>
+<enum name='kESCTwo12Inch' value='33'/>
+<enum name='kESCZero21Inch' value='0'/>
+<enum name='kEnableSyncOnBlue' value='3'/>
+<enum name='kEnableSyncOnGreen' value='4'/>
+<enum name='kEnableSyncOnRed' value='5'/>
+<enum name='kEnabledDisplayBit' value='8'/>
+<enum name='kExtendedNotificationProc' value='65536'/>
+<enum name='kFMDefaultActivationContext' value='0'/>
+<enum name='kFMDefaultIterationScope' value='0'/>
+<enum name='kFMDefaultOptions' value='0'/>
+<enum name='kFMGlobalActivationContext' value='1'/>
+<enum name='kFMGlobalIterationScope' value='1'/>
+<enum name='kFMLocalActivationContext' value='0'/>
+<enum name='kFMLocalIterationScope' value='0'/>
+<enum name='kFMUseGlobalScopeOption' value='1'/>
+<enum name='kFNSCreatorDefault' value='0'/>
+<enum name='kFNSCurSysInfoVersion' value='1'/>
+<enum name='kFNSMatchAATLayout' value='256'/>
+<enum name='kFNSMatchATSUMetrics' value='32'/>
+<enum name='kFNSMatchAll' value='4294967295'/>
+<enum name='kFNSMatchDefaults' value='0'/>
+<enum name='kFNSMatchEncodings' value='8'/>
+<enum name='kFNSMatchGlyphs' value='4'/>
+<enum name='kFNSMatchKerning' value='64'/>
+<enum name='kFNSMatchNames' value='1'/>
+<enum name='kFNSMatchPrintEncoding' value='512'/>
+<enum name='kFNSMatchQDMetrics' value='16'/>
+<enum name='kFNSMatchTechnology' value='2'/>
+<enum name='kFNSMatchWSLayout' value='128'/>
+<enum name='kFNSMissingDataNoMatch' value='2147483648'/>
+<enum name='kFNSProfileFileType' value='1718514544'/>
+<enum name='kFNSVersionDontCare' value='0'/>
+<enum name='kFastCheckForDDC' value='13'/>
+<enum name='kFifthDepthMode' value='132'/>
+<enum name='kFirstDepthMode' value='128'/>
+<enum name='kFirstDisplayID' value='256'/>
+<enum name='kFixedModeCRTConnect' value='3'/>
+<enum name='kFontIDAthens' value='7'/>
+<enum name='kFontIDCairo' value='11'/>
+<enum name='kFontIDCourier' value='22'/>
+<enum name='kFontIDGeneva' value='3'/>
+<enum name='kFontIDHelvetica' value='21'/>
+<enum name='kFontIDLondon' value='6'/>
+<enum name='kFontIDLosAngeles' value='12'/>
+<enum name='kFontIDMobile' value='24'/>
+<enum name='kFontIDMonaco' value='4'/>
+<enum name='kFontIDNewYork' value='2'/>
+<enum name='kFontIDSanFrancisco' value='8'/>
+<enum name='kFontIDSymbol' value='23'/>
+<enum name='kFontIDTimes' value='20'/>
+<enum name='kFontIDToronto' value='9'/>
+<enum name='kFontIDVenice' value='5'/>
+<enum name='kForceConfirmBit' value='0'/>
+<enum name='kForceConfirmMask' value='1'/>
+<enum name='kForceNumberBit' value='1'/>
+<enum name='kForceNumberMask' value='2'/>
+<enum name='kFourthDepthMode' value='131'/>
+<enum name='kFullDependencyNotify' value='1'/>
+<enum name='kFullNotify' value='0'/>
+<enum name='kFullPageConnect' value='9'/>
+<enum name='kGammaTableIDFindFirst' value64='4294967294' value='-2'/>
+<enum name='kGammaTableIDNoMoreTables' value64='4294967293' value='-3'/>
+<enum name='kGammaTableIDSpecific' value='0'/>
+<enum name='kGenericCRT' value='19'/>
+<enum name='kGenericLCD' value='20'/>
+<enum name='kGetConnectionCount' value64='4294967295' value='-1'/>
+<enum name='kGlyphCollectionAdobeCNS1' value='1'/>
+<enum name='kGlyphCollectionAdobeGB1' value='2'/>
+<enum name='kGlyphCollectionAdobeJapan1' value='3'/>
+<enum name='kGlyphCollectionAdobeJapan2' value='4'/>
+<enum name='kGlyphCollectionAdobeKorea1' value='5'/>
+<enum name='kGlyphCollectionGID' value='0'/>
+<enum name='kGlyphCollectionUnspecified' value='255'/>
+<enum name='kHRConnect' value='13'/>
+<enum name='kHardwareSleep' value='128'/>
+<enum name='kHardwareWake' value='129'/>
+<enum name='kHardwareWakeFromSuspend' value='130'/>
+<enum name='kHardwareWakeToDoze' value='131'/>
+<enum name='kHardwareWakeToDozeFromSuspend' value='132'/>
+<enum name='kHasDDCConnection' value='8'/>
+<enum name='kHasDirectConnection' value='3'/>
+<enum name='kHilite' value='1'/>
+<enum name='kHorizontalConstraint' value='2'/>
+<enum name='kHorizontalSyncMask' value='1'/>
+<enum name='kIncludeHardwareMirroredDisplaysMask' value='16'/>
+<enum name='kIncludeOfflineDisplaysMask' value='4'/>
+<enum name='kIncludeOfflineDummyDisplaysMask' value='8'/>
+<enum name='kIncludeOnlineActiveDisplaysMask' value='1'/>
+<enum name='kIncludeOnlineDisabledDisplaysMask' value='2'/>
+<enum name='kInvalidDisplayID' value='0'/>
+<enum name='kInvertHighlighting' value='0'/>
+<enum name='kIsMonoDev' value='4'/>
+<enum name='kLiveVideoPassThru' value='1'/>
+<enum name='kLiveVideoPassThruMask' value='2'/>
+<enum name='kMakeAndModelReservedCount' value='4'/>
+<enum name='kMinimumFidelity' value='1'/>
+<enum name='kMirrorDisplayBit' value='10'/>
+<enum name='kModeBuiltIn' value='10'/>
+<enum name='kModeDefault' value='2'/>
+<enum name='kModeInterlaced' value='6'/>
+<enum name='kModeNotPreset' value='9'/>
+<enum name='kModeNotResize' value='4'/>
+<enum name='kModeNotResizeBit' value='4'/>
+<enum name='kModeRequiresPan' value='5'/>
+<enum name='kModeSafe' value='1'/>
+<enum name='kModeShowNever' value='7'/>
+<enum name='kModeShowNow' value='3'/>
+<enum name='kModeSimulscan' value='8'/>
+<enum name='kModeStretched' value='11'/>
+<enum name='kModeValid' value='0'/>
+<enum name='kModelessConnect' value='8'/>
+<enum name='kMonoTwoPageConnect' value='15'/>
+<enum name='kMovedDisplayBit' value='1'/>
+<enum name='kMultiModeCRT1Connect' value='4'/>
+<enum name='kMultiModeCRT2Connect' value='5'/>
+<enum name='kMultiModeCRT3Connect' value='6'/>
+<enum name='kMultiModeCRT4Connect' value='7'/>
+<enum name='kNTSCConnect' value='11'/>
+<enum name='kNativeEndianPixMap' value='256'/>
+<enum name='kNeverShowModeBit' value='5'/>
+<enum name='kNewDisplayBit' value='6'/>
+<enum name='kNoConnect' value='22'/>
+<enum name='kNoConstraint' value='0'/>
+<enum name='kNoFidelity' value='0'/>
+<enum name='kNoSeparateSyncControlBit' value='6'/>
+<enum name='kNoSwitchConfirmBit' value='0'/>
+<enum name='kOverrideConnection' value='12'/>
+<enum name='kPALConnect' value='12'/>
+<enum name='kPLIncludeOfflineDevicesBit' value='0'/>
+<enum name='kPanelConnect' value='2'/>
+<enum name='kPanelFSTNConnect' value='14'/>
+<enum name='kPanelTFTConnect' value='2'/>
+<enum name='kPlatformDefaultGuiFontID' value='1'/>
+<enum name='kPowerStateNeedsRefresh' value='0'/>
+<enum name='kPowerStateNeedsRefreshMask' value='1'/>
+<enum name='kPowerStateSleepAwareBit' value='1'/>
+<enum name='kPowerStateSleepAwareMask' value='2'/>
+<enum name='kPowerStateSleepCanPowerOffBit' value='3'/>
+<enum name='kPowerStateSleepCanPowerOffMask' value='8'/>
+<enum name='kPowerStateSleepForbiddenBit' value='2'/>
+<enum name='kPowerStateSleepForbiddenMask' value='4'/>
+<enum name='kPowerStateSleepNoDPMSBit' value='4'/>
+<enum name='kPowerStateSleepNoDPMSMask' value='16'/>
+<enum name='kPowerStateSleepWaketoDozeBit' value='5'/>
+<enum name='kPowerStateSleepWaketoDozeMask' value='32'/>
+<enum name='kPrinterFontStatus' value='0'/>
+<enum name='kPrinterScalingStatus' value='1'/>
+<enum name='kQDDontChangeFlags' value64='4294967295' value='-1'/>
+<enum name='kQDGrafVerbErase' value='2'/>
+<enum name='kQDGrafVerbFill' value='4'/>
+<enum name='kQDGrafVerbFrame' value='0'/>
+<enum name='kQDGrafVerbInvert' value='3'/>
+<enum name='kQDGrafVerbPaint' value='1'/>
+<enum name='kQDParseRegionFromBottom' value='2'/>
+<enum name='kQDParseRegionFromBottomRight' value='10'/>
+<enum name='kQDParseRegionFromLeft' value='4'/>
+<enum name='kQDParseRegionFromRight' value='8'/>
+<enum name='kQDParseRegionFromTop' value='1'/>
+<enum name='kQDParseRegionFromTopLeft' value='5'/>
+<enum name='kQDRegionToRectsMsgInit' value='1'/>
+<enum name='kQDRegionToRectsMsgParse' value='2'/>
+<enum name='kQDRegionToRectsMsgTerminate' value='3'/>
+<enum name='kQDSupportedFlags' value='7'/>
+<enum name='kQDUseCGTextMetrics' value='4'/>
+<enum name='kQDUseCGTextRendering' value='2'/>
+<enum name='kQDUseDefaultTextRendering' value='0'/>
+<enum name='kQDUseTrueTypeScalerGlyphs' value='1'/>
+<enum name='kQDXAliasCursor' value='3'/>
+<enum name='kQDXArrowCursor' value='0'/>
+<enum name='kQDXCopyCursor' value='4'/>
+<enum name='kQDXIBeamCursor' value='1'/>
+<enum name='kQDXIBeamXORCursor' value='2'/>
+<enum name='kQDXMoveCursor' value='5'/>
+<enum name='kQDXNumberOfSystemCursors' value='6'/>
+<enum name='kRSCFive' value='5'/>
+<enum name='kRSCFour' value='4'/>
+<enum name='kRSCOne' value='1'/>
+<enum name='kRSCSeven' value='7'/>
+<enum name='kRSCSix' value='6'/>
+<enum name='kRSCThree' value='3'/>
+<enum name='kRSCTwo' value='2'/>
+<enum name='kRSCZero' value='0'/>
+<enum name='kRangeSupportsCompositeSyncBit' value='2'/>
+<enum name='kRangeSupportsCompositeSyncMask' value='4'/>
+<enum name='kRangeSupportsSeperateSyncsBit' value='0'/>
+<enum name='kRangeSupportsSeperateSyncsMask' value='1'/>
+<enum name='kRangeSupportsSignal_0700_0000_Bit' value='3'/>
+<enum name='kRangeSupportsSignal_0700_0000_Mask' value='8'/>
+<enum name='kRangeSupportsSignal_0700_0300_Bit' value='0'/>
+<enum name='kRangeSupportsSignal_0700_0300_Mask' value='1'/>
+<enum name='kRangeSupportsSignal_0714_0286_Bit' value='1'/>
+<enum name='kRangeSupportsSignal_0714_0286_Mask' value='2'/>
+<enum name='kRangeSupportsSignal_1000_0400_Bit' value='2'/>
+<enum name='kRangeSupportsSignal_1000_0400_Mask' value='4'/>
+<enum name='kRangeSupportsSyncOnGreenBit' value='1'/>
+<enum name='kRangeSupportsSyncOnGreenMask' value='2'/>
+<enum name='kRangeSupportsVSyncSerrationBit' value='3'/>
+<enum name='kRangeSupportsVSyncSerrationMask' value='8'/>
+<enum name='kRedrawHighlighting' value='1'/>
+<enum name='kRemoveDisplayBit' value='5'/>
+<enum name='kRenderCursorInHardware' value='1'/>
+<enum name='kRenderCursorInSoftware' value='2'/>
+<enum name='kReportsDDCConnection' value='7'/>
+<enum name='kReportsHotPlugging' value='14'/>
+<enum name='kReportsTagging' value='2'/>
+<enum name='kResolutionHasMultipleDepthSizes' value='0'/>
+<enum name='kSecondDepthMode' value='129'/>
+<enum name='kSetClutAtSetEntries' value='0'/>
+<enum name='kSetClutAtVBL' value='1'/>
+<enum name='kSetDisplayModeBit' value='3'/>
+<enum name='kSetMainDisplayBit' value='2'/>
+<enum name='kShowModeBit' value='3'/>
+<enum name='kSixthDepthMode' value='133'/>
+<enum name='kSuppressNameBit' value='2'/>
+<enum name='kSuppressNameMask' value='4'/>
+<enum name='kSuppressNumberBit' value='0'/>
+<enum name='kSuppressNumberMask' value='1'/>
+<enum name='kSyncAnalogBipolarMask' value='8'/>
+<enum name='kSyncAnalogBipolarSRGBSyncMask' value='2'/>
+<enum name='kSyncAnalogBipolarSerrateMask' value='4'/>
+<enum name='kSyncAnalogCompositeMask' value='0'/>
+<enum name='kSyncAnalogCompositeRGBSyncMask' value='2'/>
+<enum name='kSyncAnalogCompositeSerrateMask' value='4'/>
+<enum name='kSyncDigitalCompositeMask' value='16'/>
+<enum name='kSyncDigitalCompositeMatchHSyncMask' value='4'/>
+<enum name='kSyncDigitalCompositeSerrateMask' value='4'/>
+<enum name='kSyncDigitalHSyncPositiveMask' value='2'/>
+<enum name='kSyncDigitalSeperateMask' value='24'/>
+<enum name='kSyncDigitalVSyncPositiveMask' value='4'/>
+<enum name='kSyncInterlaceMask' value='128'/>
+<enum name='kSyncOnBlueMask' value='8'/>
+<enum name='kSyncOnGreenMask' value='16'/>
+<enum name='kSyncOnMask' value='56'/>
+<enum name='kSyncOnRedMask' value='32'/>
+<enum name='kSyncPositivePolarityBit' value='0'/>
+<enum name='kSyncPositivePolarityMask' value='1'/>
+<enum name='kTaggingInfoNonStandard' value='6'/>
+<enum name='kThirdDepthMode' value='130'/>
+<enum name='kTimingChangeRestrictedErr' value='-10930'/>
+<enum name='kTriStateSyncBit' value='7'/>
+<enum name='kTriStateSyncMask' value='128'/>
+<enum name='kUYVY422PixelFormat' value='1431918169'/>
+<enum name='kUnMirrorDisplayBit' value='11'/>
+<enum name='kUncertainConnection' value='5'/>
+<enum name='kUnknownConnect' value='1'/>
+<enum name='kVGAConnect' value='10'/>
+<enum name='kVerticalConstraint' value='1'/>
+<enum name='kVerticalSyncMask' value='2'/>
+<enum name='kVideoBufferSizeErr' value='-10935'/>
+<enum name='kVideoBusTypeI2C' value='1'/>
+<enum name='kVideoBusTypeInvalid' value='0'/>
+<enum name='kVideoDDCciReplyType' value='2'/>
+<enum name='kVideoDefaultBus' value='0'/>
+<enum name='kVideoI2CBusyErr' value='-10933'/>
+<enum name='kVideoI2CReplyPendingErr' value='-10931'/>
+<enum name='kVideoI2CTransactionErr' value='-10932'/>
+<enum name='kVideoI2CTransactionTypeErr' value='-10934'/>
+<enum name='kVideoNoTransactionType' value='0'/>
+<enum name='kVideoReplyMicroSecDelayMask' value='1'/>
+<enum name='kVideoSimpleI2CType' value='1'/>
+<enum name='kXFer1PixelAtATime' value='1'/>
+<enum name='kXFerConvertPixelToRGB32' value='2'/>
+<enum name='kYUV211PixelFormat' value='1496461617'/>
+<enum name='kYUV411PixelFormat' value='1496592689'/>
+<enum name='kYUVSPixelFormat' value='2037741171'/>
+<enum name='kYUVUPixelFormat' value='2037741173'/>
+<enum name='kYVU9PixelFormat' value='1498830137'/>
+<enum name='kYVYU422PixelFormat' value='1498831189'/>
+<enum name='keepLocal' value='8'/>
+<enum name='keepLocalBit' value='3'/>
+<enum name='keyDMConfigFlags' value='1684890470'/>
+<enum name='keyDMConfigReserved' value='1684890482'/>
+<enum name='keyDMConfigVersion' value='1684890486'/>
+<enum name='keyDeviceDepthMode' value='1684300909'/>
+<enum name='keyDeviceFlags' value='1684300902'/>
+<enum name='keyDeviceRect' value='1684300914'/>
+<enum name='keyDisplayComponent' value='1684890723'/>
+<enum name='keyDisplayDevice' value='1684890724'/>
+<enum name='keyDisplayFlags' value='1684890726'/>
+<enum name='keyDisplayID' value='1684892004'/>
+<enum name='keyDisplayMirroredId' value='1684893033'/>
+<enum name='keyDisplayMode' value='1684890733'/>
+<enum name='keyDisplayModeReserved' value='1684893042'/>
+<enum name='keyDisplayNewConfig' value='1684956535'/>
+<enum name='keyDisplayOldConfig' value='1685023844'/>
+<enum name='keyDisplayReserved' value='1684890738'/>
+<enum name='keyPixMapAlignment' value='1685090401'/>
+<enum name='keyPixMapCmpCount' value='1685087075'/>
+<enum name='keyPixMapCmpSize' value='1685087091'/>
+<enum name='keyPixMapColorTableSeed' value='1685087092'/>
+<enum name='keyPixMapHResolution' value='1685088370'/>
+<enum name='keyPixMapPixelSize' value='1685090419'/>
+<enum name='keyPixMapPixelType' value='1685090420'/>
+<enum name='keyPixMapRect' value='1685087346'/>
+<enum name='keyPixMapResReserved' value='1685090930'/>
+<enum name='keyPixMapReserved' value='1685090418'/>
+<enum name='keyPixMapVResolution' value='1685091954'/>
+<enum name='keySummaryChanges' value='1685283688'/>
+<enum name='keySummaryMenubar' value='1685286242'/>
+<enum name='leftCaret' value='0'/>
+<enum name='leftStyleRun' value='1'/>
+<enum name='mBaseOffset' value='1'/>
+<enum name='mBounds' value='3'/>
+<enum name='mCmpCount' value='9'/>
+<enum name='mCmpSize' value='10'/>
+<enum name='mDevType' value='4'/>
+<enum name='mHRes' value='5'/>
+<enum name='mPageCnt' value='3'/>
+<enum name='mPixelSize' value='8'/>
+<enum name='mPixelType' value='7'/>
+<enum name='mPlaneBytes' value='11'/>
+<enum name='mRowBytes' value='2'/>
+<enum name='mTable' value='2'/>
+<enum name='mVRes' value='6'/>
+<enum name='mVersion' value='4'/>
+<enum name='mVertRefRate' value='14'/>
+<enum name='mVidParams' value='1'/>
+<enum name='magentaBit' value='7'/>
+<enum name='magentaColor' value='137'/>
+<enum name='mainScreen' value='11'/>
+<enum name='mapPix' value='65536'/>
+<enum name='mapPixBit' value='16'/>
+<enum name='medianMethod' value='2'/>
+<enum name='middleStyleRun' value='3'/>
+<enum name='nativeEndianPixMapBit' value='8'/>
+<enum name='newDepth' value='131072'/>
+<enum name='newDepthBit' value='17'/>
+<enum name='newRowBytes' value='524288'/>
+<enum name='newRowBytesBit' value='19'/>
+<enum name='noDriver' value='14'/>
+<enum name='noNewDevice' value='2'/>
+<enum name='noNewDeviceBit' value='1'/>
+<enum name='noiseXFer' value='53'/>
+<enum name='normalBit' value='0'/>
+<enum name='notPatBic' value='15'/>
+<enum name='notPatCopy' value='12'/>
+<enum name='notPatOr' value='13'/>
+<enum name='notPatXor' value='14'/>
+<enum name='notSrcBic' value='7'/>
+<enum name='notSrcCopy' value='4'/>
+<enum name='notSrcOr' value='5'/>
+<enum name='notSrcXor' value='6'/>
+<enum name='notTruncated' value='0'/>
+<enum name='oneBitMode' value='128'/>
+<enum name='onlyStyleRun' value='0'/>
+<enum name='outlineBit' value='3'/>
+<enum name='pHiliteBit' value='0'/>
+<enum name='patBic' value='11'/>
+<enum name='patCopy' value='8'/>
+<enum name='patOr' value='9'/>
+<enum name='patXor' value='10'/>
+<enum name='picLParen' value='0'/>
+<enum name='picRParen' value='1'/>
+<enum name='pixPurge' value='1'/>
+<enum name='pixPurgeBit' value='0'/>
+<enum name='pixelsLocked' value='128'/>
+<enum name='pixelsLockedBit' value='7'/>
+<enum name='pixelsPurgeable' value='64'/>
+<enum name='pixelsPurgeableBit' value='6'/>
+<enum name='planar' value='2'/>
+<enum name='plusCursor' value='3'/>
+<enum name='pmAllUpdates' value='57344'/>
+<enum name='pmAnimated' value='4'/>
+<enum name='pmBkUpdates' value='40960'/>
+<enum name='pmBlack' value='32'/>
+<enum name='pmCourteous' value='0'/>
+<enum name='pmDithered' value='1'/>
+<enum name='pmExplicit' value='8'/>
+<enum name='pmFgUpdates' value='49152'/>
+<enum name='pmInhibitC2' value='512'/>
+<enum name='pmInhibitC4' value='2048'/>
+<enum name='pmInhibitC8' value='8192'/>
+<enum name='pmInhibitG2' value='256'/>
+<enum name='pmInhibitG4' value='1024'/>
+<enum name='pmInhibitG8' value='4096'/>
+<enum name='pmNoUpdates' value='32768'/>
+<enum name='pmTolerant' value='2'/>
+<enum name='pmWhite' value='16'/>
+<enum name='popularMethod' value='1'/>
+<enum name='propFont' value='36864'/>
+<enum name='prpFntH' value='36865'/>
+<enum name='prpFntHW' value='36867'/>
+<enum name='prpFntW' value='36866'/>
+<enum name='ramInit' value='10'/>
+<enum name='reallocPix' value='1048576'/>
+<enum name='reallocPixBit' value='20'/>
+<enum name='recordComments' value='4'/>
+<enum name='recordFontInfo' value='8'/>
+<enum name='redBit' value='4'/>
+<enum name='redColor' value='205'/>
+<enum name='returnColorTable' value='1'/>
+<enum name='returnPalette' value='2'/>
+<enum name='rightCaret' value='-1'/>
+<enum name='rightStyleRun' value='2'/>
+<enum name='roundedDevice' value='5'/>
+<enum name='screenActive' value='15'/>
+<enum name='screenDevice' value='13'/>
+<enum name='secondVidMode' value='129'/>
+<enum name='shadowBit' value='4'/>
+<enum name='singleDevices' value='1'/>
+<enum name='singleDevicesBit' value='0'/>
+<enum name='sixteenBitMode' value='132'/>
+<enum name='sixthVidMode' value='133'/>
+<enum name='smBreakChar' value='1'/>
+<enum name='smBreakOverflow' value='2'/>
+<enum name='smBreakWord' value='0'/>
+<enum name='smHilite' value='1'/>
+<enum name='smLeftCaret' value='0'/>
+<enum name='smLeftStyleRun' value='1'/>
+<enum name='smMiddleStyleRun' value='3'/>
+<enum name='smNotTruncated' value='0'/>
+<enum name='smOnlyStyleRun' value='0'/>
+<enum name='smRightCaret' value='-1'/>
+<enum name='smRightStyleRun' value='2'/>
+<enum name='smTruncEnd' value='0'/>
+<enum name='smTruncErr' value='-1'/>
+<enum name='smTruncMiddle' value='16384'/>
+<enum name='smTruncated' value='1'/>
+<enum name='spGammaDir' value='64'/>
+<enum name='spVidNamesDir' value='65'/>
+<enum name='srcBic' value='3'/>
+<enum name='srcCopy' value='0'/>
+<enum name='srcOr' value='1'/>
+<enum name='srcXor' value='2'/>
+<enum name='stretchPix' value='536870912'/>
+<enum name='stretchPixBit' value='29'/>
+<enum name='subOver' value='38'/>
+<enum name='subPin' value='35'/>
+<enum name='suppressBlackAndWhite' value='16'/>
+<enum name='sysPatListID' value='0'/>
+<enum name='systemFont' value='0'/>
+<enum name='systemMethod' value='0'/>
+<enum name='tfAntiAlias' value='1'/>
+<enum name='tfUnicode' value='2'/>
+<enum name='thirdVidMode' value='130'/>
+<enum name='thirtyTwoBitMode' value='133'/>
+<enum name='timingApple12' value='130'/>
+<enum name='timingApple12x' value='135'/>
+<enum name='timingApple13' value='140'/>
+<enum name='timingApple13x' value='145'/>
+<enum name='timingApple15' value='160'/>
+<enum name='timingApple15x' value='165'/>
+<enum name='timingApple16' value='170'/>
+<enum name='timingApple19' value='210'/>
+<enum name='timingApple1Ka' value='190'/>
+<enum name='timingApple1Kb' value='200'/>
+<enum name='timingApple21' value='220'/>
+<enum name='timingAppleNTSC_FF' value='232'/>
+<enum name='timingAppleNTSC_FFconv' value='236'/>
+<enum name='timingAppleNTSC_ST' value='230'/>
+<enum name='timingAppleNTSC_STconv' value='234'/>
+<enum name='timingApplePAL_FF' value='240'/>
+<enum name='timingApplePAL_FFconv' value='244'/>
+<enum name='timingApplePAL_ST' value='238'/>
+<enum name='timingApplePAL_STconv' value='242'/>
+<enum name='timingAppleSVGA' value='180'/>
+<enum name='timingAppleVGA' value='150'/>
+<enum name='timingApple_0x0_0hz_Offline' value='550'/>
+<enum name='timingApple_1024x768_75hz' value='210'/>
+<enum name='timingApple_1152x870_75hz' value='220'/>
+<enum name='timingApple_512x384_60hz' value='130'/>
+<enum name='timingApple_560x384_60hz' value='135'/>
+<enum name='timingApple_640x400_67hz' value='145'/>
+<enum name='timingApple_640x480_67hz' value='140'/>
+<enum name='timingApple_640x818_75hz' value='165'/>
+<enum name='timingApple_640x870_75hz' value='160'/>
+<enum name='timingApple_832x624_75hz' value='170'/>
+<enum name='timingApple_FixedRateLCD' value='42'/>
+<enum name='timingFilmRate_48hz' value='410'/>
+<enum name='timingGTF_640x480_120hz' value='159'/>
+<enum name='timingInvalid' value='0'/>
+<enum name='timingInvalid_SM_T24' value='8'/>
+<enum name='timingSMPTE240M_60hz' value='400'/>
+<enum name='timingSony_1600x1024_76hz' value='500'/>
+<enum name='timingSony_1900x1200_74hz' value='530'/>
+<enum name='timingSony_1900x1200_76hz' value='540'/>
+<enum name='timingSony_1920x1080_60hz' value='510'/>
+<enum name='timingSony_1920x1080_72hz' value='520'/>
+<enum name='timingSony_1920x1200_76hz' value='540'/>
+<enum name='timingVESA_1024x768_60hz' value='190'/>
+<enum name='timingVESA_1024x768_70hz' value='200'/>
+<enum name='timingVESA_1024x768_75hz' value='204'/>
+<enum name='timingVESA_1024x768_85hz' value='208'/>
+<enum name='timingVESA_1280x1024_60hz' value='260'/>
+<enum name='timingVESA_1280x1024_75hz' value='262'/>
+<enum name='timingVESA_1280x1024_85hz' value='268'/>
+<enum name='timingVESA_1280x960_60hz' value='252'/>
+<enum name='timingVESA_1280x960_75hz' value='250'/>
+<enum name='timingVESA_1280x960_85hz' value='254'/>
+<enum name='timingVESA_1600x1200_60hz' value='280'/>
+<enum name='timingVESA_1600x1200_65hz' value='282'/>
+<enum name='timingVESA_1600x1200_70hz' value='284'/>
+<enum name='timingVESA_1600x1200_75hz' value='286'/>
+<enum name='timingVESA_1600x1200_80hz' value='288'/>
+<enum name='timingVESA_1600x1200_85hz' value='289'/>
+<enum name='timingVESA_1792x1344_60hz' value='296'/>
+<enum name='timingVESA_1792x1344_75hz' value='298'/>
+<enum name='timingVESA_1856x1392_60hz' value='300'/>
+<enum name='timingVESA_1856x1392_75hz' value='302'/>
+<enum name='timingVESA_1920x1440_60hz' value='304'/>
+<enum name='timingVESA_1920x1440_75hz' value='306'/>
+<enum name='timingVESA_640x480_60hz' value='150'/>
+<enum name='timingVESA_640x480_72hz' value='152'/>
+<enum name='timingVESA_640x480_75hz' value='154'/>
+<enum name='timingVESA_640x480_85hz' value='158'/>
+<enum name='timingVESA_800x600_56hz' value='180'/>
+<enum name='timingVESA_800x600_60hz' value='182'/>
+<enum name='timingVESA_800x600_72hz' value='184'/>
+<enum name='timingVESA_800x600_75hz' value='186'/>
+<enum name='timingVESA_800x600_85hz' value='188'/>
+<enum name='transparent' value='36'/>
+<enum name='truncEnd' value='0'/>
+<enum name='truncErr' value='-1'/>
+<enum name='truncMiddle' value='16384'/>
+<enum name='truncated' value='1'/>
+<enum name='twoBitMode' value='129'/>
+<enum name='ulineBit' value='2'/>
+<enum name='useDistantHdwrMem' value='16'/>
+<enum name='useDistantHdwrMemBit' value='4'/>
+<enum name='useLocalHdwrMem' value='32'/>
+<enum name='useLocalHdwrMemBit' value='5'/>
+<enum name='useTempMem' value='4'/>
+<enum name='useTempMemBit' value='2'/>
+<enum name='watchCursor' value='4'/>
+<enum name='whiteColor' value='30'/>
+<enum name='yellowBit' value='6'/>
+<enum name='yellowColor' value='69'/>
+<function name='ATSUClearLayoutCache'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUCreateStyle'>
+<arg type='^^{OpaqueATSUStyle}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUCreateTextLayoutWithTextPtr'>
+<arg type='^S'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='^I' type64='^Q'/>
+<arg type='^^{OpaqueATSUStyle}'/>
+<arg type='^^{OpaqueATSUTextLayout}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUDirectGetLayoutDataArrayPtrFromLineRef'>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type='L' type64='I'/>
+<arg type='B'/>
+<arg type='^^v'/>
+<arg type='^I' type64='^Q'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUDirectReleaseLayoutDataArrayPtr'>
+<arg type='^{ATSGlyphVector=}'/>
+<arg type='L' type64='I'/>
+<arg type='^^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUDisposeStyle'>
+<arg type='^{OpaqueATSUStyle=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUDisposeTextLayout'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUDrawText'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='l' type64='i'/>
+<arg type='l' type64='i'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUGetGlyphBounds'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='l' type64='i'/>
+<arg type='l' type64='i'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='S'/>
+<arg type='L' type64='Q'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type='^I' type64='^Q'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUMatchFontsToText'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='^I'/>
+<arg type='^I' type64='^Q'/>
+<arg type='^I' type64='^Q'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUPositionToOffset'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='l' type64='i'/>
+<arg type='l' type64='i'/>
+<arg type='^I' type64='^Q'/>
+<arg type='^B'/>
+<arg type='^I' type64='^Q'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUSetAttributes'>
+<arg type='^{OpaqueATSUStyle=}'/>
+<arg type='L' type64='Q'/>
+<arg type='^I'/>
+<arg type='^I' type64='^Q'/>
+<arg type='^^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUSetFontFeatures'>
+<arg type='^{OpaqueATSUStyle=}'/>
+<arg type='L' type64='Q'/>
+<arg type='^S'/>
+<arg type='^S'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUSetLayoutControls'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='^I'/>
+<arg type='^I' type64='^Q'/>
+<arg type='^^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUSetRunStyle'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='^{OpaqueATSUStyle=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUSetTextLayoutRefCon'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUSetTransientFontMatching'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='B'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ATSUTextMoved'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='^S'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='AddPt'>
+<arg type='{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+</function>
+<function name='DisposeATSCubicClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeATSCubicCurveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeATSCubicLineToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeATSCubicMoveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticCurveUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeATSQuadraticNewPathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeCalcColorTableUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<retval type='s'/>
+</arg>
+</function>
+<function name='DisposeColorComplementUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</arg>
+</function>
+<function name='DisposeColorSearchUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='^l' type64='^q'/>
+<retval type='B'/>
+</arg>
+</function>
+<function name='DisposeDMComponentListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMComponentListEntryRec=I^{ComponentRecord}{ComponentDescription=IIIII}III{Point=ss}IIIIII}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeDMDisplayListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DisplayListEntryRec=^^{GDevice}IIIIIII}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeDMDisplayModeListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMDisplayModeListEntryRec=I^{VDSwitchInfoRec}^{VDResolutionInfoRec}^{VDTimingInfoRec}^{DMDepthInfoBlockRec}I*^{DMDisplayTimingInfoRec}}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeDMExtendedNotificationUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeDMNotificationUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeDMProfileListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMProfileListEntryRec=^{OpaqueCMProfileRef}***}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeDeviceLoopDrawingUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^^{GDevice}'/>
+<arg type='l' type64='^v'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeDisposeColorPickMethodUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<retval type='s'/>
+</arg>
+</function>
+<function name='DisposeDragGrayRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeInitPickMethodUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^I'/>
+<arg type='^s'/>
+<retval type='s'/>
+</arg>
+</function>
+<function name='DisposeQDArcUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDBitsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDCommentUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDGetPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDJShieldCursorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDOpcodeUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDOvalUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDPolyUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDPutPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDRRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDStdGlyphsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='Q'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeQDTextUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='DisposeQDTxMeasUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</arg>
+</function>
+<function name='DisposeRecordColorsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='l' type64='i'/>
+<arg type='^i'/>
+<retval type='s'/>
+</arg>
+</function>
+<function name='DisposeRedrawBackgroundUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type='L' type64='Q'/>
+<retval type='B'/>
+</arg>
+</function>
+<function name='DisposeRegionToRectsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+</function>
+<function name='DisposeStyleRunDirectionUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='B'/>
+</arg>
+</function>
+<function name='EmptyRect'>
+<arg type='^{Rect=ssss}'/>
+<retval type='B'/>
+</function>
+<function name='EqualPt'>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='B'/>
+</function>
+<function name='InvokeATSCubicClosePathUPP'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeATSCubicCurveToUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeATSCubicLineToUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeATSCubicMoveToUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeATSQuadraticClosePathUPP'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeATSQuadraticCurveUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeATSQuadraticLineUPP'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeATSQuadraticNewPathUPP'>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeCalcColorTableUPP'>
+<arg type='L' type64='I'/>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<retval type='s'/>
+</arg>
+<retval type='s'/>
+</function>
+<function name='InvokeColorComplementUPP'>
+<arg type='^{RGBColor=SSS}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</arg>
+<retval type='B'/>
+</function>
+<function name='InvokeColorSearchUPP'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='^l' type64='^q'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='^l' type64='^q'/>
+<retval type='B'/>
+</arg>
+<retval type='B'/>
+</function>
+<function name='InvokeDMComponentListIteratorUPP'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMComponentListEntryRec=I^{ComponentRecord}{ComponentDescription=IIIII}III{Point=ss}IIIIII}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMComponentListEntryRec=I^{ComponentRecord}{ComponentDescription=IIIII}III{Point=ss}IIIIII}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeDMDisplayListIteratorUPP'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DisplayListEntryRec=^^{GDevice}IIIIIII}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DisplayListEntryRec=^^{GDevice}IIIIIII}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeDMDisplayModeListIteratorUPP'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMDisplayModeListEntryRec=I^{VDSwitchInfoRec}^{VDResolutionInfoRec}^{VDTimingInfoRec}^{DMDepthInfoBlockRec}I*^{DMDisplayTimingInfoRec}}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMDisplayModeListEntryRec=I^{VDSwitchInfoRec}^{VDResolutionInfoRec}^{VDTimingInfoRec}^{DMDepthInfoBlockRec}I*^{DMDisplayTimingInfoRec}}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeDMExtendedNotificationUPP'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeDMNotificationUPP'>
+<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeDMProfileListIteratorUPP'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMProfileListEntryRec=^{OpaqueCMProfileRef}***}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMProfileListEntryRec=^{OpaqueCMProfileRef}***}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeDeviceLoopDrawingUPP'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^^{GDevice}'/>
+<arg type='l' type64='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^^{GDevice}'/>
+<arg type='l' type64='^v'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeDisposeColorPickMethodUPP'>
+<arg type='L' type64='I'/>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<retval type='s'/>
+</arg>
+<retval type='s'/>
+</function>
+<function name='InvokeDragGrayRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeInitPickMethodUPP'>
+<arg type='s'/>
+<arg type='^I'/>
+<arg type='^s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^I'/>
+<arg type='^s'/>
+<retval type='s'/>
+</arg>
+<retval type='s'/>
+</function>
+<function name='InvokeQDArcUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDBitsUPP'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDCommentUPP'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDGetPicUPP'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDJShieldCursorUPP'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDLineUPP'>
+<arg type='{Point=ss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDOpcodeUPP'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDOvalUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDPolyUPP'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDPutPicUPP'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDRRectUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDRectUPP'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDRgnUPP'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDStdGlyphsUPP'>
+<arg type='^v'/>
+<arg type='L' type64='Q'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='Q'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeQDTextUPP'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='InvokeQDTxMeasUPP'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</arg>
+<retval type='s'/>
+</function>
+<function name='InvokeRecordColorsUPP'>
+<arg type='L' type64='I'/>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='l' type64='i'/>
+<arg type='^i'/>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='l' type64='i'/>
+<arg type='^i'/>
+<retval type='s'/>
+</arg>
+<retval type='s'/>
+</function>
+<function name='InvokeRedrawBackgroundUPP'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type='L' type64='Q'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type='L' type64='Q'/>
+<retval type='B'/>
+</arg>
+<retval type='B'/>
+</function>
+<function name='InvokeRegionToRectsUPP'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval type='l' type64='i'/>
+</function>
+<function name='InvokeStyleRunDirectionUPP'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='B'/>
+</arg>
+<retval type='B'/>
+</function>
+<function name='MapPt'>
+<arg type='^{Point=ss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+</function>
+<function name='MapRect'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+</function>
+<function name='NewATSCubicClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewATSCubicCurveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewATSCubicLineToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewATSCubicMoveToUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewATSQuadraticClosePathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewATSQuadraticCurveUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewATSQuadraticLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^{Float32Point=ff}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewATSQuadraticNewPathUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewCalcColorTableUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<retval type='s'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<retval type='s'/>
+</retval>
+</function>
+<function name='NewColorComplementUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<retval type='B'/>
+</retval>
+</function>
+<function name='NewColorSearchUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='^l' type64='^q'/>
+<retval type='B'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='^l' type64='^q'/>
+<retval type='B'/>
+</retval>
+</function>
+<function name='NewDMComponentListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMComponentListEntryRec=I^{ComponentRecord}{ComponentDescription=IIIII}III{Point=ss}IIIIII}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMComponentListEntryRec=I^{ComponentRecord}{ComponentDescription=IIIII}III{Point=ss}IIIIII}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewDMDisplayListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DisplayListEntryRec=^^{GDevice}IIIIIII}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DisplayListEntryRec=^^{GDevice}IIIIIII}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewDMDisplayModeListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMDisplayModeListEntryRec=I^{VDSwitchInfoRec}^{VDResolutionInfoRec}^{VDTimingInfoRec}^{DMDepthInfoBlockRec}I*^{DMDisplayTimingInfoRec}}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMDisplayModeListEntryRec=I^{VDSwitchInfoRec}^{VDResolutionInfoRec}^{VDTimingInfoRec}^{DMDepthInfoBlockRec}I*^{DMDisplayTimingInfoRec}}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewDMExtendedNotificationUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewDMNotificationUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewDMProfileListIteratorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMProfileListEntryRec=^{OpaqueCMProfileRef}***}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='I'/>
+<arg type='^{DMProfileListEntryRec=^{OpaqueCMProfileRef}***}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewDeviceLoopDrawingUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^^{GDevice}'/>
+<arg type='l' type64='^v'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^^{GDevice}'/>
+<arg type='l' type64='^v'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewDisposeColorPickMethodUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<retval type='s'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<retval type='s'/>
+</retval>
+</function>
+<function name='NewDragGrayRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewInitPickMethodUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^I'/>
+<arg type='^s'/>
+<retval type='s'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^I'/>
+<arg type='^s'/>
+<retval type='s'/>
+</retval>
+</function>
+<function name='NewQDArcUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDBitsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{BitMap=*s{Rect=ssss}}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDCommentUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='^*'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDGetPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDJShieldCursorUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDLineUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDOpcodeUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='S'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDOvalUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDPolyUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^^{MacPolygon}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDPutPicUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDRRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='s'/>
+<arg type='s'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDRectUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDRgnUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='c'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDStdGlyphsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='Q'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^v'/>
+<arg type='L' type64='Q'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewQDTextUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<retval type='v'/>
+</retval>
+</function>
+<function name='NewQDTxMeasUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+<arg type='^{FontInfo=ssss}'/>
+<retval type='s'/>
+</retval>
+</function>
+<function name='NewRecordColorsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='l' type64='i'/>
+<arg type='^i'/>
+<retval type='s'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='L' type64='I'/>
+<arg type='^{RGBColor=SSS}'/>
+<arg type='l' type64='i'/>
+<arg type='^i'/>
+<retval type='s'/>
+</retval>
+</function>
+<function name='NewRedrawBackgroundUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type='L' type64='Q'/>
+<retval type='B'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='^{OpaqueATSUTextLayout=}'/>
+<arg type='L' type64='Q'/>
+<arg type='L' type64='Q'/>
+<arg type='^{ATSTrapezoid={FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}{FixedPoint=ii}}'/>
+<arg type='L' type64='Q'/>
+<retval type='B'/>
+</retval>
+</function>
+<function name='NewRegionToRectsUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewStyleRunDirectionUPP'>
+<arg function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='B'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='s'/>
+<arg type='^v'/>
+<retval type='B'/>
+</retval>
+</function>
+<function name='Pt2Rect'>
+<arg type='{Point=ss}'/>
+<arg type='{Point=ss}'/>
+<arg type='^{Rect=ssss}'/>
+</function>
+<function name='PtToAngle'>
+<arg type='^{Rect=ssss}'/>
+<arg type='{Point=ss}'/>
+<arg type='^s'/>
+</function>
+<function name='QDRegionToRects'>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='l' type64='i'/>
+<arg function_pointer='true' type='^?'>
+<arg type='S'/>
+<arg type='^{OpaqueRgnHandle=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</arg>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ScalePt'>
+<arg type='^{Point=ss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+</function>
+<function name='SectRect'>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{Rect=ssss}'/>
+<retval type='B'/>
+</function>
+<function name='SetPt'>
+<arg type='^{Point=ss}'/>
+<arg type='s'/>
+<arg type='s'/>
+</function>
+<function name='SubPt'>
+<arg type='{Point=ss}'/>
+<arg type='^{Point=ss}'/>
+</function>
+<function_alias name='MacEqualRect' original='EqualRect'/>
+<function_alias name='MacInsetRect' original='InsetRect'/>
+<function_alias name='MacOffsetRect' original='OffsetRect'/>
+<function_alias name='MacPtInRect' original='PtInRect'/>
+<function_alias name='MacSetRect' original='SetRect'/>
+<function_alias name='MacUnionRect' original='UnionRect'/>
+</signatures>

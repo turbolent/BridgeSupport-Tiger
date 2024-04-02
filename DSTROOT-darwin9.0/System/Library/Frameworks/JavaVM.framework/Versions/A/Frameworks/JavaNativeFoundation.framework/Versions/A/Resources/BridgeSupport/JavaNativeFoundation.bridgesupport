@@ -1,0 +1,532 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaVM.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='JNFClassInfo' type='{_JNFClassInfo=&quot;name&quot;*&quot;cls&quot;^{_jobject}}'/>
+<struct name='JNFMemberInfo' type='{_JNFMemberInfo=&quot;name&quot;*&quot;sig&quot;*&quot;isStatic&quot;B&quot;classInfo&quot;^{_JNFClassInfo}&quot;j&quot;(_j=&quot;fieldID&quot;^{_jfieldID}&quot;methodID&quot;^{_jmethodID})}'/>
+<constant name='JNFRunLoopDidStartNotification' type='@'/>
+<constant name='kClassNotFoundException' type='*'/>
+<constant name='kIllegalAccessException' type='*'/>
+<constant name='kIllegalArgumentException' type='*'/>
+<constant name='kNoSuchFieldException' type='*'/>
+<constant name='kNoSuchMethodException' type='*'/>
+<constant name='kNullPointerException' type='*'/>
+<constant name='kOutOfMemoryError' type='*'/>
+<constant name='kRuntimeException' type='*'/>
+<enum name='JNFThreadAttachAsDaemon' value='16'/>
+<enum name='JNFThreadDetachImmediately' value='2'/>
+<enum name='JNFThreadDetachOnThreadDeath' value='4'/>
+<enum name='JNFThreadSetSystemClassLoaderOnAttach' value='8'/>
+<function name='JNFCallBooleanMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='C'/>
+</function>
+<function name='JNFCallByteMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='c'/>
+</function>
+<function name='JNFCallCharMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='S'/>
+</function>
+<function name='JNFCallDoubleMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='d'/>
+</function>
+<function name='JNFCallFloatMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='f'/>
+</function>
+<function name='JNFCallIntMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='JNFCallLongMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='q'/>
+</function>
+<function name='JNFCallObjectMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFCallShortMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='s'/>
+</function>
+<function name='JNFCallStaticBooleanMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='C'/>
+</function>
+<function name='JNFCallStaticByteMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='c'/>
+</function>
+<function name='JNFCallStaticCharMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='S'/>
+</function>
+<function name='JNFCallStaticDoubleMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='d'/>
+</function>
+<function name='JNFCallStaticFloatMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='f'/>
+</function>
+<function name='JNFCallStaticIntMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='JNFCallStaticLongMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='q'/>
+</function>
+<function name='JNFCallStaticObjectMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFCallStaticShortMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='s'/>
+</function>
+<function name='JNFCallStaticVoidMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+</function>
+<function name='JNFCallVoidMethod' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+</function>
+<function name='JNFDebugWarning' variadic='true'>
+<arg type='*'/>
+</function>
+<function name='JNFDeleteGlobalRef'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+</function>
+<function name='JNFDeleteWeakGlobalRef'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+</function>
+<function name='JNFDumpJavaStack'>
+<arg type='^^{JNINativeInterface_}'/>
+</function>
+<function name='JNFGetBooleanField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='C'/>
+</function>
+<function name='JNFGetByteField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='c'/>
+</function>
+<function name='JNFGetCharField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='S'/>
+</function>
+<function name='JNFGetDoubleField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='d'/>
+</function>
+<function name='JNFGetFloatField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='f'/>
+</function>
+<function name='JNFGetIntField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='JNFGetLongField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='q'/>
+</function>
+<function name='JNFGetObjectField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFGetShortField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='s'/>
+</function>
+<function name='JNFGetStaticBooleanField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='C'/>
+</function>
+<function name='JNFGetStaticByteField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='c'/>
+</function>
+<function name='JNFGetStaticCharField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='S'/>
+</function>
+<function name='JNFGetStaticDoubleField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='d'/>
+</function>
+<function name='JNFGetStaticFloatField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='f'/>
+</function>
+<function name='JNFGetStaticIntField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='JNFGetStaticLongField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='q'/>
+</function>
+<function name='JNFGetStaticObjectField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFGetStaticShortField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='s'/>
+</function>
+<function name='JNFGetStringUTF16UniChars'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='^S'/>
+</function>
+<function name='JNFGetStringUTF8Chars'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='*'/>
+</function>
+<function name='JNFIsInstanceOf'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFClassInfo=*^{_jobject}}'/>
+<retval type='B'/>
+</function>
+<function name='JNFJavaMillisToNSTimeInterval'>
+<arg type='q'/>
+<retval type='d'/>
+</function>
+<function name='JNFJavaToNSDate'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='@'/>
+</function>
+<function name='JNFJavaToNSNumber'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='@'/>
+</function>
+<function name='JNFJavaToNSString'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='@'/>
+</function>
+<function name='JNFNSTimeIntervalToJavaMillis'>
+<arg type='d'/>
+<retval type='q'/>
+</function>
+<function name='JNFNSToJavaCalendar'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='@'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNSToJavaNumber'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='@'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNSToJavaString'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='@'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNativeMethodEnter'>
+<retval type='@'/>
+</function>
+<function name='JNFNativeMethodExit'>
+<arg type='@'/>
+</function>
+<function name='JNFNewBooleanArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewByteArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewCharArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewDoubleArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewFloatArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewGlobalRef'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewIntArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewLongArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewObject' variadic='true'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewObjectArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFClassInfo=*^{_jobject}}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewShortArray'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='l' type64='i'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNewWeakGlobalRef'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNormalizedJavaStringForPath'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='@'/>
+<retval type='^{_jobject=}'/>
+</function>
+<function name='JNFNormalizedNSStringForPath'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='@'/>
+</function>
+<function name='JNFObjectClassName'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='@'/>
+</function>
+<function name='JNFObjectEquals'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_jobject=}'/>
+<retval type='B'/>
+</function>
+<function name='JNFObjectToString'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<retval type='@'/>
+</function>
+<function name='JNFObtainEnv'>
+<arg type='^q'/>
+<retval type='^^{JNINativeInterface_}'/>
+</function>
+<function name='JNFPerformEnvBlock'>
+<arg type='q'/>
+<arg function_pointer='true' type='@?'>
+<arg type='^^{JNINativeInterface_}'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='JNFReleaseEnv'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^q'/>
+</function>
+<function name='JNFReleaseStringUTF16UniChars'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^S'/>
+</function>
+<function name='JNFReleaseStringUTF8Chars'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='*'/>
+</function>
+<function name='JNFSetBooleanField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='C'/>
+</function>
+<function name='JNFSetByteField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='c'/>
+</function>
+<function name='JNFSetCharField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='S'/>
+</function>
+<function name='JNFSetDoubleField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='d'/>
+</function>
+<function name='JNFSetFloatField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='f'/>
+</function>
+<function name='JNFSetIntField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='l' type64='i'/>
+</function>
+<function name='JNFSetLongField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='q'/>
+</function>
+<function name='JNFSetObjectField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='^{_jobject=}'/>
+</function>
+<function name='JNFSetShortField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='s'/>
+</function>
+<function name='JNFSetStaticBooleanField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='C'/>
+</function>
+<function name='JNFSetStaticByteField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='c'/>
+</function>
+<function name='JNFSetStaticCharField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='S'/>
+</function>
+<function name='JNFSetStaticDoubleField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='d'/>
+</function>
+<function name='JNFSetStaticFloatField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='f'/>
+</function>
+<function name='JNFSetStaticIntField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='l' type64='i'/>
+</function>
+<function name='JNFSetStaticLongField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='q'/>
+</function>
+<function name='JNFSetStaticObjectField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='^{_jobject=}'/>
+</function>
+<function name='JNFSetStaticShortField'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg type='s'/>
+</function>
+<function_alias name='JNF_WARN' original='JNFDebugWarning'/>
+<class name='JNFRunLoop'>
+<method class_method='true' selector='performOnMainThread:on:withObject:waitUntilDone:'>
+<arg type='B' index='3'/>
+</method>
+<method class_method='true' selector='performOnMainThreadWaiting:withBlock:'>
+<arg type='B' index='0'/>
+<arg function_pointer='true' type='@?' index='1'>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<informal_protocol name='JNFTypeCoercion'>
+<method type='@20@0:4^{_jobject=}8r^^{JNINativeInterface_}12@16' type64='@40@0:8^{_jobject=}16r^^{JNINativeInterface_}24@32' selector='coerceJavaObject:withEnv:usingCoercer:'/>
+<method type='^{_jobject=}20@0:4@8r^^{JNINativeInterface_}12@16' type64='^{_jobject=}40@0:8@16r^^{JNINativeInterface_}24@32' selector='coerceNSObject:withEnv:usingCoercer:'/>
+</informal_protocol>
+</signatures>

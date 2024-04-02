@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<string_constant name='SUMMARY_DISPLAY_ORDER' nsstring='true' value='Summary Display Order'/>
+<string_constant name='kAppPageSetupDialogTypeIDStr' nsstring='true' value='B9A0DA98-E57F-11D3-9E83-0050E4603277'/>
+<string_constant name='kAppPrintDialogTypeIDStr' nsstring='true' value='BCB07250-E57F-11D3-8CA6-0050E4603277'/>
+<string_constant name='kAppPrintThumbnailTypeIDStr' nsstring='true' value='9320FE03-B5D5-11D5-84D1-003065D6135E'/>
+<string_constant name='kDialogExtensionIntfIDStr' nsstring='true' value='A996FD7E-B738-11D3-8519-0050E4603277'/>
+<string_constant name='kGeneralPageSetupDialogTypeIDStr' nsstring='true' value='6E6ED964-B738-11D3-952F-0050E4603277'/>
+<string_constant name='kGeneralPrintDialogTypeIDStr' nsstring='true' value='C1BF838E-B72A-11D3-9644-0050E4603277'/>
+<string_constant name='kPMColorMatchingPDEKindID' nsstring='true' value='com.apple.print.pde.ColorMatchingKind'/>
+<string_constant name='kPMColorPDEKindID' nsstring='true' value='com.apple.print.pde.ColorKind'/>
+<string_constant name='kPMCopiesAndPagesPDEKindID' nsstring='true' value='com.apple.print.pde.CopiesAndPagesKind'/>
+<string_constant name='kPMCoverPagePDEKindID' nsstring='true' value='com.apple.print.pde.CoverPageKind'/>
+<string_constant name='kPMCustomPaperSizePDEKindID' nsstring='true' value='com.apple.print.pde.CustomPaperSizeKind'/>
+<string_constant name='kPMDuplexPDEKindID' nsstring='true' value='com.apple.print.pde.DuplexKind'/>
+<string_constant name='kPMErrorHandlingPDEKindID' nsstring='true' value='com.apple.print.pde.ErrorHandlingKind'/>
+<string_constant name='kPMFaxCoverPagePDEKindID' nsstring='true' value='com.apple.print.pde.FaxCoverPageKind'/>
+<string_constant name='kPMFaxModemPDEKindID' nsstring='true' value='com.apple.print.pde.FaxModemKind'/>
+<string_constant name='kPMImagingOptionsPDEKindID' nsstring='true' value='com.apple.print.pde.ImagingOptionsKind'/>
+<string_constant name='kPMInkPDEKindID' nsstring='true' value='com.apple.print.pde.InkKind'/>
+<string_constant name='kPMLayoutPDEKindID' nsstring='true' value='com.apple.print.pde.LayoutUserOptionKind'/>
+<string_constant name='kPMOutputOptionsPDEKindID' nsstring='true' value='com.apple.print.pde.OutputOptionsKind'/>
+<string_constant name='kPMPageAttributesKindID' nsstring='true' value='com.apple.print.pde.PageAttributesKind'/>
+<string_constant name='kPMPaperFeedPDEKindID' nsstring='true' value='com.apple.print.pde.PaperFeedKind'/>
+<string_constant name='kPMPaperHandlingPDEKindID' nsstring='true' value='com.apple.print.pde.PaperHandlingKind'/>
+<string_constant name='kPMPaperSourcePDEKindID' nsstring='true' value='com.apple.print.pde.PaperSourceKind'/>
+<string_constant name='kPMPrinterFeaturesPDEKindID' nsstring='true' value='com.apple.print.pde.PrinterFeaturesKind'/>
+<string_constant name='kPMPriorityPDEKindID' nsstring='true' value='com.apple.print.pde.PriorityKind'/>
+<string_constant name='kPMQualityMediaPDEKindID' nsstring='true' value='com.apple.print.pde.QualityMediaPDEKind'/>
+<string_constant name='kPMRotationScalingPDEKindID' nsstring='true' value='com.apple.print.pde.RotationScalingKind'/>
+<string_constant name='kPMSchedulerPDEKindID' nsstring='true' value='com.apple.print.pde.SchedulerKind'/>
+<string_constant name='kPMSummaryPanelKindID' nsstring='true' value='com.apple.print.pde.SummaryKind'/>
+<string_constant name='kPrinterModuleTypeIDStr' nsstring='true' value='BDB091F4-E57F-11D3-B5CC-0050E4603277'/>
+<class name='NSObject'>
+<method selector='initWithBundle:'>
+<retval type='B'/>
+</method>
+<method selector='restoreValuesAndReturnError:'>
+<retval type='B'/>
+</method>
+<method selector='saveValuesAndReturnError:'>
+<retval type='B'/>
+</method>
+<method selector='shouldHide'>
+<retval type='B'/>
+</method>
+<method selector='willChangePPDOptionKeyValue:ppdChoice:'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='PDEPanel'>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='PPDOptionKeyValueDidChange:ppdChoice:'/>
+<method type='@8@0:4' type64='@16@0:8' selector='panelKind'/>
+<method type='@8@0:4' type64='@16@0:8' selector='panelName'/>
+<method type='@8@0:4' type64='@16@0:8' selector='panelView'/>
+<method type='B12@0:4^@8' type64='B24@0:8^@16' selector='restoreValuesAndReturnError:'/>
+<method type='B12@0:4^@8' type64='B24@0:8^@16' selector='saveValuesAndReturnError:'/>
+<method type='B8@0:4' type64='B16@0:8' selector='shouldHide'/>
+<method type='@8@0:4' type64='@16@0:8' selector='summaryInfo'/>
+<method type='@8@0:4' type64='@16@0:8' selector='supportedPPDOptionKeys'/>
+<method type='v8@0:4' type64='v16@0:8' selector='willShow'/>
+</informal_protocol>
+<informal_protocol name='PDEPlugIn'>
+<method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='PDEPanelsForType:withHostInfo:'/>
+<method type='B12@0:4@8' type64='B24@0:8@16' selector='initWithBundle:'/>
+</informal_protocol>
+<informal_protocol name='PDEPlugInCallbackProtocol'>
+<method type='^{OpaquePMPrinter=}8@0:4' type64='^{OpaquePMPrinter=}16@0:8' selector='PMPrinter'/>
+<method type='@8@0:4' type64='@16@0:8' selector='jobTemplate'/>
+<method type='^{OpaquePMPageFormat=}8@0:4' type64='^{OpaquePMPageFormat=}16@0:8' selector='pageFormat'/>
+<method type='v8@0:4' type64='v16@0:8' selector='panelViewDidResize'/>
+<method type='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}8@0:4' type64='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}16@0:8' selector='ppdFile'/>
+<method type='^{OpaquePMPrintSession=}8@0:4' type64='^{OpaquePMPrintSession=}16@0:8' selector='printSession'/>
+<method type='^{OpaquePMPrintSettings=}8@0:4' type64='^{OpaquePMPrintSettings=}16@0:8' selector='printSettings'/>
+<method type='@8@0:4' type64='@16@0:8' selector='printerInfoTicket'/>
+<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='willChangePPDOptionKeyValue:ppdChoice:'/>
+</informal_protocol>
+</signatures>

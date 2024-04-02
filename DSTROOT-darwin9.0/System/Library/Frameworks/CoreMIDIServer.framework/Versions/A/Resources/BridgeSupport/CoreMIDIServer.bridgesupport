@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<struct name='MIDIDriverInterface' type='{MIDIDriverInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;FindDevices&quot;^?&quot;Start&quot;^?&quot;Stop&quot;^?&quot;Configure&quot;^?&quot;Send&quot;^?&quot;EnableSource&quot;^?&quot;Flush&quot;^?&quot;Monitor&quot;^?}'/>
+<constant name='kMIDIDriverPropertyUsesSerial' type='^{__CFString=}'/>
+<function name='MIDIDeviceCreate'>
+<arg type='^^{MIDIDriverInterface}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^^{OpaqueMIDIDevice}' type64='^I'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MIDIDeviceDispose'>
+<arg type='^{OpaqueMIDIDevice=}' type64='I'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MIDIDeviceListAddDevice'>
+<arg type='^{OpaqueMIDIDeviceList=}' type64='I'/>
+<arg type='^{OpaqueMIDIDevice=}' type64='I'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MIDIDeviceListDispose'>
+<arg type='^{OpaqueMIDIDeviceList=}' type64='I'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MIDIDeviceListGetDevice'>
+<arg type='^{OpaqueMIDIDeviceList=}' type64='I'/>
+<arg type='L' type64='Q'/>
+<retval type='^{OpaqueMIDIDevice=}' type64='I'/>
+</function>
+<function name='MIDIDeviceListGetNumberOfDevices'>
+<arg type='^{OpaqueMIDIDeviceList=}' type64='I'/>
+<retval type='L' type64='Q'/>
+</function>
+<function name='MIDIDriverEnableMonitoring'>
+<arg type='^^{MIDIDriverInterface}'/>
+<arg type='B'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MIDIEndpointGetRefCons'>
+<arg type='^{OpaqueMIDIEndpoint=}' type64='I'/>
+<arg type='^^v'/>
+<arg type='^^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MIDIEndpointSetRefCons'>
+<arg type='^{OpaqueMIDIEndpoint=}' type64='I'/>
+<arg type='^v'/>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MIDIGetDriverDeviceList'>
+<arg type='^^{MIDIDriverInterface}'/>
+<retval type='^{OpaqueMIDIDeviceList=}' type64='I'/>
+</function>
+<function name='MIDIGetDriverIORunLoop'>
+<retval type='^{__CFRunLoop=}'/>
+</function>
+</signatures>

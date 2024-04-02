@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/CalendarStore.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/ExceptionHandling.framework'/>
+<depends_on path='/System/Library/Frameworks/Kerberos.framework'/>
+<depends_on path='/System/Library/Frameworks/LatentSemanticMapping.framework'/>
+<depends_on path='/System/Library/Frameworks/PubSub.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/WebKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<constant name='NSASCIIMailFormat' type='@'/>
+<constant name='NSMIMEMailFormat' type='@'/>
+<constant name='NSSMTPDeliveryProtocol' type='@'/>
+<constant name='NSSendmailDeliveryProtocol' type='@'/>
+<class name='NSMailDelivery'>
+<method class_method='true' selector='deliverMessage:headers:format:protocol:'>
+<retval type='B'/>
+</method>
+<method class_method='true' selector='deliverMessage:subject:to:'>
+<retval type='B'/>
+</method>
+<method class_method='true' selector='hasDeliveryClassBeenConfigured'>
+<retval type='B'/>
+</method>
+</class>
+</signatures>

@@ -1,0 +1,160 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaVM.framework'/>
+<struct name='AppletDescriptor' type='{AppletDescriptor=&quot;docBase&quot;^{__CFURL}&quot;codeBase&quot;^{__CFURL}&quot;htmlAttrs&quot;^{__CFDictionary}&quot;appletParams&quot;^{__CFDictionary}}'/>
+<struct name='JAWT' type='{jawt=&quot;version&quot;i&quot;GetDrawingSurface&quot;^?&quot;FreeDrawingSurface&quot;^?}'/>
+<struct name='JAWT_DrawingSurface' type='{jawt_DrawingSurface=&quot;env&quot;^^{JNINativeInterface_}&quot;target&quot;^{_jobject}&quot;Lock&quot;^?&quot;GetDrawingSurfaceInfo&quot;^?&quot;FreeDrawingSurfaceInfo&quot;^?&quot;Unlock&quot;^?}'/>
+<struct name='JAWT_DrawingSurfaceInfo' type='{jawt_DrawingSurfaceInfo=&quot;platformInfo&quot;^v&quot;ds&quot;^{jawt_DrawingSurface}&quot;bounds&quot;{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;clipSize&quot;i&quot;clip&quot;^{jawt_Rectangle}}'/>
+<struct name='JAWT_MacDrawingSurfaceInfo' type='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}' type64='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}'/>
+<struct name='JAWT_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
+<struct name='jawt' type='{jawt=&quot;version&quot;i&quot;GetDrawingSurface&quot;^?&quot;FreeDrawingSurface&quot;^?}'/>
+<struct name='jawt_DrawingSurface' type='{jawt_DrawingSurface=&quot;env&quot;^^{JNINativeInterface_}&quot;target&quot;^{_jobject}&quot;Lock&quot;^?&quot;GetDrawingSurfaceInfo&quot;^?&quot;FreeDrawingSurfaceInfo&quot;^?&quot;Unlock&quot;^?}'/>
+<struct name='jawt_DrawingSurfaceInfo' type='{jawt_DrawingSurfaceInfo=&quot;platformInfo&quot;^v&quot;ds&quot;^{jawt_DrawingSurface}&quot;bounds&quot;{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;clipSize&quot;i&quot;clip&quot;^{jawt_Rectangle}}'/>
+<struct name='jawt_MacDrawingSurfaceInfo' type='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}' type64='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}'/>
+<struct name='jawt_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
+<opaque name='AppletArena' type='^{OpaqueAppletArena=}'/>
+<enum name='JAWT_LOCK_BOUNDS_CHANGED' value='4'/>
+<enum name='JAWT_LOCK_CLIP_CHANGED' value='2'/>
+<enum name='JAWT_LOCK_ERROR' value='1'/>
+<enum name='JAWT_LOCK_SURFACE_CHANGED' value='8'/>
+<enum name='JAWT_VERSION_1_3' value='65539'/>
+<enum name='errJavaEmbeddingControlNotEmbedded' value='-9960'/>
+<enum name='errJavaEmbeddingCouldNotConvertURL' value='-9958'/>
+<enum name='errJavaEmbeddingCouldNotCreateApplet' value='-9956'/>
+<enum name='errJavaEmbeddingCouldNotEmbedFrame' value='-9957'/>
+<enum name='errJavaEmbeddingExceptionThrown' value='-9961'/>
+<enum name='errJavaEmbeddingIntializationFailed' value='-9962'/>
+<enum name='errJavaEmbeddingJavaDisabled' value='-9963'/>
+<enum name='errJavaEmbeddingMissingURL' value='-9955'/>
+<enum name='errJavaEmbeddingNotAFrame' value='-9959'/>
+<enum name='errJavaEmbeddingNotYetImplemented' value='-9950'/>
+<enum name='kAppletDestroy' value='4'/>
+<enum name='kAppletStart' value='1'/>
+<enum name='kAppletStop' value='2'/>
+<function name='CreateAppletArena'>
+<arg type='^^{OpaqueAppletArena}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CreateJavaApplet'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='{AppletDescriptor=^{__CFURL}^{__CFURL}^{__CFDictionary}^{__CFDictionary}}'/>
+<arg type='B'/>
+<arg type='^{OpaqueAppletArena=}'/>
+<arg type='^^{_jobject}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CreateJavaControl'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueWindowPtr=}'/>
+<arg type='^{Rect=ssss}'/>
+<arg type='^{_jobject=}'/>
+<arg type='B'/>
+<arg type='^^{OpaqueControlRef}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='DrawJavaControl'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueControlRef=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='GetControlFromJavaFrame'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^^{OpaqueControlRef}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='GetEmbeddingVMParams'>
+<arg type='^{JavaVMInitArgs=ii^{JavaVMOption}C}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='GetJavaFrameFromControl'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueControlRef=}'/>
+<arg type='^^{_jobject}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='GetJavaWindowFromWindow'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueWindowPtr=}'/>
+<arg type='^^{_jobject}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='GetWindowFromJavaWindow'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='^^{OpaqueWindowPtr}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='JAWT_GetAWT'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{jawt=i^?^?}'/>
+<retval type='C'/>
+</function>
+<function name='MoveAndClipJavaControl'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueControlRef=}'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='RegisterShowDocumentCallback'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{_jobject=}'/>
+<arg type='^{__CFURL=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='RegisterStatusCallback'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='^{_jobject=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^v'/>
+<retval type='v'/>
+</arg>
+<arg type='^v'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='RestartJavaControlAsyncDrawing'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueControlRef=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='SetJavaAppletState'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{_jobject=}'/>
+<arg type='i'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='ShowHideJavaControl'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueControlRef=}'/>
+<arg type='B'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='SizeJavaControl'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueControlRef=}'/>
+<arg type='i'/>
+<arg type='i'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='StopJavaControlAsyncDrawing'>
+<arg type='^^{JNINativeInterface_}'/>
+<arg type='^{OpaqueControlRef=}'/>
+<retval type='l' type64='i'/>
+</function>
+</signatures>
