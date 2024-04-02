@@ -46,6 +46,10 @@ BS_RUBY := $(BS_LIBS)/ruby-$(shell $(RUBY) -e 'puts RUBY_VERSION.sub(/^(\d+\.\d+
 RUBYLIB = $(BS_RUBY)
 
 LIBSYSTEM_HEADERS = /usr/include/asl.h /usr/include/notify*.h /usr/include/launch.h /usr/include/CommonCrypto/*.h
+# On Darwin >8 copyfile and sandbox are available
+ifeq ($(shell $(RUBY) -e 'puts RUBY_PLATFORM.gsub(/[^\d\.]/, "").to_i > 8'),true)
+	LIBSYSTEM_HEADERS += /usr/include/sandbox.h /usr/include/copyfile.h
+endif
 
 # For the Apple build system, we split into two separate projects:
 #     BridgeSupport_ext - build extension and save in /usr/local/BridgeSupport
