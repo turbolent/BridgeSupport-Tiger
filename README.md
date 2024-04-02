@@ -1,7 +1,7 @@
-# BridgeSupport
+# BridgeSupport-Tiger
 
 Imported from [http://code.metager.de/source/xref/apple/BridgeSupport](http://code.metager.de/source/xref/apple/BridgeSupport).
 
-## Todo
+Modern BridgeSupport (LLVM/Clang-based), adjusted for Mac OS X Tiger (10.4) and Leopard (10.5).
 
-- Generate properties of class
+Requires GNU Make 3.81.
