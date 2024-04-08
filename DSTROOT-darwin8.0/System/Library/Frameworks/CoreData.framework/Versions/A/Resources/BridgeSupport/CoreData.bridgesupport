@@ -1,38 +1,37 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-  <constant name='NSAddedPersistentStoresKey' type='@'/>
-  <constant name='NSAffectedObjectsErrorKey' type='@'/>
-  <constant name='NSAffectedStoresErrorKey' type='@'/>
-  <constant name='NSBinaryStoreType' type='@'/>
-  <constant name='NSCoreDataVersionNumber' type='d'/>
-  <constant name='NSDeletedObjectsKey' type='@'/>
-  <constant name='NSDetailedErrorsKey' type='@'/>
-  <constant name='NSErrorMergePolicy' type='@'/>
-  <constant name='NSInMemoryStoreType' type='@'/>
-  <constant name='NSInsertedObjectsKey' type='@'/>
-  <constant name='NSManagedObjectContextDidSaveNotification' type='@'/>
-  <constant name='NSManagedObjectContextObjectsDidChangeNotification' type='@'/>
-  <constant name='NSMergeByPropertyObjectTrumpMergePolicy' type='@'/>
-  <constant name='NSMergeByPropertyStoreTrumpMergePolicy' type='@'/>
-  <constant name='NSOverwriteMergePolicy' type='@'/>
-  <constant name='NSPersistentStoreCoordinatorStoresDidChangeNotification' type='@'/>
-  <constant name='NSReadOnlyPersistentStoreOption' type='@'/>
-  <constant name='NSRemovedPersistentStoresKey' type='@'/>
-  <constant name='NSRollbackMergePolicy' type='@'/>
-  <constant name='NSSQLiteStoreType' type='@'/>
-  <constant name='NSStoreTypeKey' type='@'/>
-  <constant name='NSStoreUUIDKey' type='@'/>
-  <constant name='NSUUIDChangedPersistentStoresKey' type='@'/>
-  <constant name='NSUpdatedObjectsKey' type='@'/>
-  <constant name='NSValidateXMLStoreOption' type='@'/>
-  <constant name='NSValidationKeyErrorKey' type='@'/>
-  <constant name='NSValidationObjectErrorKey' type='@'/>
-  <constant name='NSValidationPredicateErrorKey' type='@'/>
-  <constant name='NSValidationValueErrorKey' type='@'/>
-  <constant name='NSXMLStoreType' type='@'/>
+  <constant name='NSAddedPersistentStoresKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSAffectedObjectsErrorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSAffectedStoresErrorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSBinaryStoreType' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSCoreDataVersionNumber' declared_type='double' type='d'/>
+  <constant name='NSDeletedObjectsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSDetailedErrorsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSErrorMergePolicy' declared_type='id' type='@'/>
+  <constant name='NSInMemoryStoreType' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSInsertedObjectsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSManagedObjectContextDidSaveNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSManagedObjectContextObjectsDidChangeNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSMergeByPropertyObjectTrumpMergePolicy' declared_type='id' type='@'/>
+  <constant name='NSMergeByPropertyStoreTrumpMergePolicy' declared_type='id' type='@'/>
+  <constant name='NSOverwriteMergePolicy' declared_type='id' type='@'/>
+  <constant name='NSPersistentStoreCoordinatorStoresDidChangeNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSReadOnlyPersistentStoreOption' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSRemovedPersistentStoresKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSRollbackMergePolicy' declared_type='id' type='@'/>
+  <constant name='NSSQLiteStoreType' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSStoreTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSStoreUUIDKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSUUIDChangedPersistentStoresKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSUpdatedObjectsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSValidateXMLStoreOption' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSValidationKeyErrorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSValidationObjectErrorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSValidationPredicateErrorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSValidationValueErrorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='NSXMLStoreType' declared_type='NSString*' type='@' const='true'/>
   <enum name='NSBinaryDataAttributeType' value='1000'/>
   <enum name='NSBooleanAttributeType' value='800'/>
   <enum name='NSCascadeDeleteRule' value='2'/>
@@ -72,121 +71,621 @@
   <enum name='NSValidationStringPatternMatchingError' value='1680'/>
   <enum name='NSValidationStringTooLongError' value='1660'/>
   <enum name='NSValidationStringTooShortError' value='1670'/>
+  <class name='NSAttributeDescription'>
+    <method selector='attributeType'>
+      <retval declared_type='NSAttributeType' type='i'/>
+    </method>
+    <method selector='attributeValueClassName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='defaultValue'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='setAttributeType:'>
+      <arg name='type' declared_type='NSAttributeType' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDefaultValue:'>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
   <class name='NSEntityDescription'>
+    <method selector='attributesByName'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method class_method='true' selector='entityForName:inManagedObjectContext:'>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <arg name='context' declared_type='NSManagedObjectContext*' type='@' index='1'/>
+      <retval declared_type='NSEntityDescription*' type='@'/>
+    </method>
+    <method class_method='true' selector='insertNewObjectForEntityForName:inManagedObjectContext:'>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <arg name='context' declared_type='NSManagedObjectContext*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
     <method selector='isAbstract'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='managedObjectClassName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='managedObjectModel'>
+      <retval declared_type='NSManagedObjectModel*' type='@'/>
+    </method>
+    <method selector='name'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='properties'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='propertiesByName'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='relationshipsByName'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='relationshipsWithDestinationEntity:'>
+      <arg name='entity' declared_type='NSEntityDescription*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='setAbstract:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setManagedObjectClassName:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setName:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setProperties:'>
+      <arg name='properties' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setSubentities:'>
+      <arg name='array' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setUserInfo:'>
+      <arg name='dictionary' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='subentities'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='subentitiesByName'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='superentity'>
+      <retval declared_type='NSEntityDescription*' type='@'/>
+    </method>
+    <method selector='userInfo'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+  </class>
+  <class name='NSFetchRequest'>
+    <method selector='affectedStores'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='entity'>
+      <retval declared_type='NSEntityDescription*' type='@'/>
+    </method>
+    <method selector='fetchLimit'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='predicate'>
+      <retval declared_type='NSPredicate*' type='@'/>
+    </method>
+    <method selector='setAffectedStores:'>
+      <arg name='stores' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setEntity:'>
+      <arg name='entity' declared_type='NSEntityDescription*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setFetchLimit:'>
+      <arg name='limit' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setPredicate:'>
+      <arg name='predicate' declared_type='NSPredicate*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setSortDescriptors:'>
+      <arg name='sortDescriptors' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='sortDescriptors'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+  </class>
+  <class name='NSFetchedPropertyDescription'>
+    <method selector='fetchRequest'>
+      <retval declared_type='NSFetchRequest*' type='@'/>
+    </method>
+    <method selector='setFetchRequest:'>
+      <arg name='fetchRequest' declared_type='NSFetchRequest*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='NSManagedObject'>
+    <method selector='awakeFromFetch'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='awakeFromInsert'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='changedValues'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='committedValuesForKeys:'>
+      <arg name='keys' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='didAccessValueForKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='didChangeValueForKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='didChangeValueForKey:withSetMutation:usingObjects:'>
+      <arg name='inKey' declared_type='NSString*' type='@' index='0'/>
+      <arg name='inMutationKind' declared_type='NSKeyValueSetMutationKind' type='i' index='1'/>
+      <arg name='inObjects' declared_type='NSSet*' type='@' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='didSave'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='didTurnIntoFault'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='entity'>
+      <retval declared_type='NSEntityDescription*' type='@'/>
+    </method>
+    <method selector='initWithEntity:insertIntoManagedObjectContext:'>
+      <arg name='entity' declared_type='NSEntityDescription*' type='@' index='0'/>
+      <arg name='context' declared_type='NSManagedObjectContext*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
     <method selector='isDeleted'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='isFault'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='isInserted'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='isUpdated'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='managedObjectContext'>
+      <retval declared_type='NSManagedObjectContext*' type='@'/>
+    </method>
+    <method selector='objectID'>
+      <retval declared_type='NSManagedObjectID*' type='@'/>
+    </method>
+    <method selector='observationInfo'>
+      <retval declared_type='void*' type='^v'/>
+    </method>
+    <method selector='primitiveValueForKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
     </method>
     <method selector='setObservationInfo:'>
-      <arg index='0' type_modifier='n'/>
+      <arg name='inObservationInfo' declared_type='void*' type='^v' index='0' type_modifier='n'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setPrimitiveValue:forKey:'>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='key' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setValue:forKey:'>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='key' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='validateForDelete:'>
-      <arg index='0' type_modifier='o'/>
-      <retval type='B'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='0' type_modifier='o'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='validateForInsert:'>
-      <arg index='0' type_modifier='o'/>
-      <retval type='B'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='0' type_modifier='o'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='validateForUpdate:'>
-      <arg index='0' type_modifier='o'/>
-      <retval type='B'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='0' type_modifier='o'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='validateValue:forKey:error:'>
-      <arg index='0' type_modifier='o'/>
-      <arg index='2' type_modifier='o'/>
-      <retval type='B'/>
+      <arg name='value' declared_type='id*' type='^@' index='0' type_modifier='o'/>
+      <arg name='key' declared_type='NSString*' type='@' index='1'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='2' type_modifier='o'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='valueForKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='willAccessValueForKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='willChangeValueForKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='willChangeValueForKey:withSetMutation:usingObjects:'>
+      <arg name='inKey' declared_type='NSString*' type='@' index='0'/>
+      <arg name='inMutationKind' declared_type='NSKeyValueSetMutationKind' type='i' index='1'/>
+      <arg name='inObjects' declared_type='NSSet*' type='@' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='willSave'>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='NSManagedObjectContext'>
+    <method selector='assignObject:toPersistentStore:'>
+      <arg name='object' declared_type='id' type='@' index='0'/>
+      <arg name='store' declared_type='id' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='deleteObject:'>
+      <arg name='object' declared_type='NSManagedObject*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='deletedObjects'>
+      <retval declared_type='NSSet*' type='@'/>
+    </method>
+    <method selector='detectConflictsForObject:'>
+      <arg name='object' declared_type='NSManagedObject*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='executeFetchRequest:error:'>
-      <arg index='1' type_modifier='o'/>
+      <arg name='request' declared_type='NSFetchRequest*' type='@' index='0'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='hasChanges'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='insertObject:'>
+      <arg name='object' declared_type='NSManagedObject*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='insertedObjects'>
+      <retval declared_type='NSSet*' type='@'/>
+    </method>
+    <method selector='lock'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='mergePolicy'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='objectRegisteredForID:'>
+      <arg name='objectID' declared_type='NSManagedObjectID*' type='@' index='0'/>
+      <retval declared_type='NSManagedObject*' type='@'/>
+    </method>
+    <method selector='objectWithID:'>
+      <arg name='objectID' declared_type='NSManagedObjectID*' type='@' index='0'/>
+      <retval declared_type='NSManagedObject*' type='@'/>
     </method>
     <method selector='observeValueForKeyPath:ofObject:change:context:'>
-      <arg index='3' type_modifier='n'/>
+      <arg name='keyPath' declared_type='NSString*' type='@' index='0'/>
+      <arg name='object' declared_type='id' type='@' index='1'/>
+      <arg name='change' declared_type='NSDictionary*' type='@' index='2'/>
+      <arg name='context' declared_type='void*' type='^v' index='3' type_modifier='n'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='persistentStoreCoordinator'>
+      <retval declared_type='NSPersistentStoreCoordinator*' type='@'/>
+    </method>
+    <method selector='processPendingChanges'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='propagatesDeletesAtEndOfEvent'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='redo'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='refreshObject:mergeChanges:'>
-      <arg type='B' index='1'/>
+      <arg name='object' declared_type='NSManagedObject*' type='@' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='registeredObjects'>
+      <retval declared_type='NSSet*' type='@'/>
+    </method>
+    <method selector='reset'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='retainsRegisteredObjects'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='rollback'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='save:'>
-      <arg index='0' type_modifier='o'/>
-      <retval type='B'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='0' type_modifier='o'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='setMergePolicy:'>
+      <arg name='mergePolicy' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setPersistentStoreCoordinator:'>
+      <arg name='coordinator' declared_type='NSPersistentStoreCoordinator*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setPropagatesDeletesAtEndOfEvent:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setRetainsRegisteredObjects:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setStalenessInterval:'>
+      <arg name='expiration' declared_type='NSTimeInterval' type='d' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setUndoManager:'>
+      <arg name='undoManager' declared_type='NSUndoManager*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='stalenessInterval'>
+      <retval declared_type='NSTimeInterval' type='d'/>
     </method>
     <method selector='tryLock'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='undo'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='undoManager'>
+      <retval declared_type='NSUndoManager*' type='@'/>
+    </method>
+    <method selector='unlock'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='updatedObjects'>
+      <retval declared_type='NSSet*' type='@'/>
     </method>
   </class>
   <class name='NSManagedObjectID'>
+    <method selector='URIRepresentation'>
+      <retval declared_type='NSURL*' type='@'/>
+    </method>
+    <method selector='entity'>
+      <retval declared_type='NSEntityDescription*' type='@'/>
+    </method>
     <method selector='isTemporaryID'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='persistentStore'>
+      <retval declared_type='id' type='@'/>
+    </method>
+  </class>
+  <class name='NSManagedObjectModel'>
+    <method selector='configurations'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='entities'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='entitiesByName'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='entitiesForConfiguration:'>
+      <arg name='configuration' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='fetchRequestFromTemplateWithName:substitutionVariables:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <arg name='variables' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='NSFetchRequest*' type='@'/>
+    </method>
+    <method selector='fetchRequestTemplateForName:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSFetchRequest*' type='@'/>
+    </method>
+    <method selector='init'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithContentsOfURL:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='localizationDictionary'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method class_method='true' selector='mergedModelFromBundles:'>
+      <arg name='bundles' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='NSManagedObjectModel*' type='@'/>
+    </method>
+    <method class_method='true' selector='modelByMergingModels:'>
+      <arg name='models' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='NSManagedObjectModel*' type='@'/>
+    </method>
+    <method selector='setEntities:'>
+      <arg name='entities' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setEntities:forConfiguration:'>
+      <arg name='entities' declared_type='NSArray*' type='@' index='0'/>
+      <arg name='configuration' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setFetchRequestTemplate:forName:'>
+      <arg name='fetchRequestTemplate' declared_type='NSFetchRequest*' type='@' index='0'/>
+      <arg name='name' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setLocalizationDictionary:'>
+      <arg name='localizationDictionary' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='NSPersistentStoreCoordinator'>
+    <method selector='URLForPersistentStore:'>
+      <arg name='store' declared_type='id' type='@' index='0'/>
+      <retval declared_type='NSURL*' type='@'/>
+    </method>
     <method selector='addPersistentStoreWithType:configuration:URL:options:error:'>
-      <arg index='4' type_modifier='o'/>
+      <arg name='storeType' declared_type='NSString*' type='@' index='0'/>
+      <arg name='configuration' declared_type='NSString*' type='@' index='1'/>
+      <arg name='storeURL' declared_type='NSURL*' type='@' index='2'/>
+      <arg name='options' declared_type='NSDictionary*' type='@' index='3'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='4' type_modifier='o'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithManagedObjectModel:'>
+      <arg name='model' declared_type='NSManagedObjectModel*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='lock'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='managedObjectIDForURIRepresentation:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='NSManagedObjectID*' type='@'/>
+    </method>
+    <method selector='managedObjectModel'>
+      <retval declared_type='NSManagedObjectModel*' type='@'/>
+    </method>
+    <method selector='metadataForPersistentStore:'>
+      <arg name='store' declared_type='id' type='@' index='0'/>
+      <retval declared_type='NSDictionary*' type='@'/>
     </method>
     <method class_method='true' selector='metadataForPersistentStoreWithURL:error:'>
-      <arg index='1' type_modifier='o'/>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+      <retval declared_type='NSDictionary*' type='@'/>
     </method>
     <method selector='migratePersistentStore:toURL:options:withType:error:'>
-      <arg index='4' type_modifier='o'/>
+      <arg name='store' declared_type='id' type='@' index='0'/>
+      <arg name='URL' declared_type='NSURL*' type='@' index='1'/>
+      <arg name='options' declared_type='NSDictionary*' type='@' index='2'/>
+      <arg name='storeType' declared_type='NSString*' type='@' index='3'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='4' type_modifier='o'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='persistentStoreForURL:'>
+      <arg name='URL' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='persistentStores'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='removePersistentStore:error:'>
-      <arg index='1' type_modifier='o'/>
-      <retval type='B'/>
+      <arg name='store' declared_type='id' type='@' index='0'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='setMetadata:forPersistentStore:'>
+      <arg name='metadata' declared_type='NSDictionary*' type='@' index='0'/>
+      <arg name='store' declared_type='id' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='tryLock'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='unlock'>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='NSPropertyDescription'>
+    <method selector='entity'>
+      <retval declared_type='NSEntityDescription*' type='@'/>
+    </method>
     <method selector='isOptional'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='isTransient'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='name'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='setName:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setOptional:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setTransient:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setUserInfo:'>
+      <arg name='dictionary' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setValidationPredicates:withValidationWarnings:'>
+      <arg name='validationPredicates' declared_type='NSArray*' type='@' index='0'/>
+      <arg name='validationWarnings' declared_type='NSArray*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='userInfo'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='validationPredicates'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='validationWarnings'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
   </class>
   <class name='NSRelationshipDescription'>
+    <method selector='deleteRule'>
+      <retval declared_type='NSDeleteRule' type='i'/>
+    </method>
+    <method selector='destinationEntity'>
+      <retval declared_type='NSEntityDescription*' type='@'/>
+    </method>
+    <method selector='inverseRelationship'>
+      <retval declared_type='NSRelationshipDescription*' type='@'/>
+    </method>
     <method selector='isToMany'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='maxCount'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='minCount'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='setDeleteRule:'>
+      <arg name='rule' declared_type='NSDeleteRule' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDestinationEntity:'>
+      <arg name='entity' declared_type='NSEntityDescription*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setInverseRelationship:'>
+      <arg name='relationship' declared_type='NSRelationshipDescription*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setMaxCount:'>
+      <arg name='maxCount' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setMinCount:'>
+      <arg name='minCount' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
 </signatures>

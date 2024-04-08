@@ -1,41 +1,250 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
-  <struct name='AUChannelInfo' type='{AUChannelInfo=&quot;inChannels&quot;s&quot;outChannels&quot;s}'/>
-  <struct name='AUDependentParameter' type='{AUDependentParameter=&quot;mScope&quot;I&quot;mParameterID&quot;I}'/>
-  <struct name='AUParameterMIDIMapping' type='{AUParameterMIDIMapping=&quot;mScope&quot;I&quot;mElement&quot;I&quot;mParameterID&quot;I&quot;mFlags&quot;I&quot;mSubRangeMin&quot;f&quot;mSubRangeMax&quot;f&quot;mStatus&quot;C&quot;mData1&quot;C&quot;reserved1&quot;C&quot;reserved2&quot;C&quot;reserved3&quot;I}'/>
-  <struct name='AUPreset' type='{AUPreset=&quot;presetNumber&quot;i&quot;presetName&quot;^{__CFString}}'/>
-  <struct name='AURenderCallbackStruct' type='{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}'/>
-  <struct name='AudioCodecPrimeInfo' type='{AudioCodecPrimeInfo=&quot;leadingFrames&quot;I&quot;trailingFrames&quot;I}'/>
-  <struct name='AudioOutputUnitStartAtTimeParams' type='{AudioOutputUnitStartAtTimeParams=&quot;mTimestamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mFlags&quot;I}'/>
-  <struct name='AudioStreamLoudnessStatistics' type='{AudioStreamLoudnessStatistics=&quot;mAveragePerceivedPowerCoefficient&quot;d&quot;mMaximumPerceivedPowerCoefficient&quot;d&quot;mMaximumPerceivedPowerPacketOffset&quot;Q&quot;mPeakAmplitude&quot;f&quot;mReserved&quot;I&quot;mPeakAmplitudeSampleOffset&quot;Q}'/>
-  <struct name='AudioUnitCocoaViewInfo' type='{AudioUnitCocoaViewInfo=&quot;mCocoaAUViewBundleLocation&quot;^{__CFURL}&quot;mCocoaAUViewClass&quot;[1^{__CFString}]}'/>
-  <struct name='AudioUnitConnection' type='{AudioUnitConnection=&quot;sourceAudioUnit&quot;^{ComponentInstanceRecord}&quot;sourceOutputNumber&quot;I&quot;destInputNumber&quot;I}'/>
-  <struct name='AudioUnitExternalBuffer' type='{AudioUnitExternalBuffer=&quot;buffer&quot;*&quot;size&quot;I}'/>
-  <struct name='AudioUnitInputCallback' type='{AudioUnitInputCallback=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}'/>
-  <struct name='AudioUnitMIDIControlMapping' type='{AudioUnitMIDIControlMapping=&quot;midiNRPN&quot;S&quot;midiControl&quot;C&quot;scope&quot;C&quot;element&quot;I&quot;parameter&quot;I}'/>
-  <struct name='AudioUnitMeterClipping' type='{AudioUnitMeterClipping=&quot;peakValueSinceLastCall&quot;f&quot;sawInfinity&quot;B&quot;sawNotANumber&quot;B}'/>
-  <struct name='AudioUnitOtherPluginDesc' type='{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}'/>
-  <struct name='AudioUnitParameter' type='{AudioUnitParameter=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mParameterID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'/>
-  <struct name='AudioUnitParameterEvent' type='{AudioUnitParameterEvent=&quot;scope&quot;I&quot;element&quot;I&quot;parameter&quot;I&quot;eventType&quot;I&quot;eventValues&quot;(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})}'/>
-  <struct name='AudioUnitParameterIDName' type='{AudioUnitParameterNameInfo=&quot;inID&quot;I&quot;inDesiredLength&quot;i&quot;outName&quot;^{__CFString}}'/>
-  <struct name='AudioUnitParameterInfo' type='{AudioUnitParameterInfo=&quot;name&quot;[52c]&quot;unitName&quot;^{__CFString}&quot;clumpID&quot;I&quot;cfNameString&quot;^{__CFString}&quot;unit&quot;I&quot;minValue&quot;f&quot;maxValue&quot;f&quot;defaultValue&quot;f&quot;flags&quot;I}'/>
-  <struct name='AudioUnitParameterNameInfo' type='{AudioUnitParameterNameInfo=&quot;inID&quot;I&quot;inDesiredLength&quot;i&quot;outName&quot;^{__CFString}}'/>
-  <struct name='AudioUnitParameterStringFromValue' type='{AudioUnitParameterStringFromValue=&quot;inParamID&quot;I&quot;inValue&quot;^f&quot;outString&quot;^{__CFString}}'/>
-  <struct name='AudioUnitParameterValueFromString' type='{AudioUnitParameterValueFromString=&quot;inParamID&quot;I&quot;inString&quot;^{__CFString}&quot;outValue&quot;f}'/>
-  <struct name='AudioUnitParameterValueName' type='{AudioUnitParameterValueName=&quot;inParamID&quot;I&quot;inValue&quot;^f&quot;outName&quot;^{__CFString}}'/>
-  <struct name='AudioUnitParameterValueTranslation' type='{AudioUnitParameterValueTranslation=&quot;otherDesc&quot;{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}&quot;otherParamID&quot;I&quot;otherValue&quot;f&quot;auParamID&quot;I&quot;auValue&quot;f}'/>
-  <struct name='AudioUnitPresetMAS_SettingData' type='{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}'/>
-  <struct name='AudioUnitPresetMAS_Settings' type='{AudioUnitPresetMAS_Settings=&quot;manufacturerID&quot;I&quot;effectID&quot;I&quot;variantID&quot;I&quot;settingsVersion&quot;I&quot;numberOfSettings&quot;I&quot;settings&quot;[1{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}]}'/>
-  <struct name='AudioUnitProperty' type='{AudioUnitProperty=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mPropertyID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'/>
-  <struct name='HostCallbackInfo' type='{HostCallbackInfo=&quot;hostUserData&quot;^v&quot;beatAndTempoProc&quot;^?&quot;musicalTimeLocationProc&quot;^?&quot;transportStateProc&quot;^?}'/>
-  <struct name='MixerDistanceParams' type='{MixerDistanceParams=&quot;mReferenceDistance&quot;f&quot;mMaxDistance&quot;f&quot;mMaxAttenuation&quot;f}'/>
-  <struct name='MusicDeviceNoteParams' type='{MusicDeviceNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f&quot;mControls&quot;[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]}'/>
-  <struct name='MusicDeviceStdNoteParams' type='{MusicDeviceStdNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f}'/>
-  <struct name='NoteParamsControlValue' type='{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}'/>
-  <struct name='ScheduledAudioFileRegion' type='{ScheduledAudioFileRegion=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mAudioFile&quot;^{OpaqueAudioFileID}&quot;mLoopCount&quot;I&quot;mStartFrame&quot;q&quot;mFramesToPlay&quot;I}'/>
-  <struct name='ScheduledAudioSlice' type='{ScheduledAudioSlice=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mFlags&quot;I&quot;mReserved&quot;I&quot;mReserved2&quot;^v&quot;mNumberFrames&quot;I&quot;mBufferList&quot;^{AudioBufferList}}'/>
+  <struct name='AUChannelInfo' type='{AUChannelInfo=&quot;inChannels&quot;s&quot;outChannels&quot;s}'>
+    <field name='inChannels' declared_type='SInt16' type='s'/>
+    <field name='outChannels' declared_type='SInt16' type='s'/>
+  </struct>
+  <struct name='AUDependentParameter' type='{AUDependentParameter=&quot;mScope&quot;I&quot;mParameterID&quot;I}'>
+    <field name='mScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <field name='mParameterID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+  </struct>
+  <struct name='AUParameterMIDIMapping' type='{AUParameterMIDIMapping=&quot;mScope&quot;I&quot;mElement&quot;I&quot;mParameterID&quot;I&quot;mFlags&quot;I&quot;mSubRangeMin&quot;f&quot;mSubRangeMax&quot;f&quot;mStatus&quot;C&quot;mData1&quot;C&quot;reserved1&quot;C&quot;reserved2&quot;C&quot;reserved3&quot;I}'>
+    <field name='mScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <field name='mElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <field name='mParameterID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='mFlags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mSubRangeMin' declared_type='Float32' type='f'/>
+    <field name='mSubRangeMax' declared_type='Float32' type='f'/>
+    <field name='mStatus' declared_type='UInt8' type='C'/>
+    <field name='mData1' declared_type='UInt8' type='C'/>
+    <field name='reserved1' declared_type='UInt8' type='C'/>
+    <field name='reserved2' declared_type='UInt8' type='C'/>
+    <field name='reserved3' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AUPreset' type='{AUPreset=&quot;presetNumber&quot;i&quot;presetName&quot;^{__CFString}}'>
+    <field name='presetNumber' declared_type='SInt32' type='l' type64='i'/>
+    <field name='presetName' declared_type='CFStringRef' type='^{__CFString=}'/>
+  </struct>
+  <struct name='AURenderCallbackStruct' type='{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}'>
+    <field name='inputProc' function_pointer='true' declared_type='AURenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags*' type='^I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='inputProcRefCon' declared_type='void*' type='^v'/>
+  </struct>
+  <struct name='AudioCodecPrimeInfo' type='{AudioCodecPrimeInfo=&quot;leadingFrames&quot;I&quot;trailingFrames&quot;I}'>
+    <field name='leadingFrames' declared_type='UInt32' type='L' type64='I'/>
+    <field name='trailingFrames' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioOutputUnitStartAtTimeParams' type='{AudioOutputUnitStartAtTimeParams=&quot;mTimestamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mFlags&quot;I}'>
+    <field name='mTimestamp' declared_type='AudioTimeStamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+    <field name='mFlags' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioStreamLoudnessStatistics' type='{AudioStreamLoudnessStatistics=&quot;mAveragePerceivedPowerCoefficient&quot;d&quot;mMaximumPerceivedPowerCoefficient&quot;d&quot;mMaximumPerceivedPowerPacketOffset&quot;Q&quot;mPeakAmplitude&quot;f&quot;mReserved&quot;I&quot;mPeakAmplitudeSampleOffset&quot;Q}'>
+    <field name='mAveragePerceivedPowerCoefficient' declared_type='Float64' type='d'/>
+    <field name='mMaximumPerceivedPowerCoefficient' declared_type='Float64' type='d'/>
+    <field name='mMaximumPerceivedPowerPacketOffset' declared_type='UInt64' type='Q'/>
+    <field name='mPeakAmplitude' declared_type='Float32' type='f'/>
+    <field name='mReserved' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mPeakAmplitudeSampleOffset' declared_type='UInt64' type='Q'/>
+  </struct>
+  <struct name='AudioUnitCocoaViewInfo' type='{AudioUnitCocoaViewInfo=&quot;mCocoaAUViewBundleLocation&quot;^{__CFURL}&quot;mCocoaAUViewClass&quot;[1^{__CFString}]}'>
+    <field name='mCocoaAUViewBundleLocation' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <field name='mCocoaAUViewClass' declared_type='CFStringRef*' type='[1^{__CFString}]'/>
+  </struct>
+  <struct name='AudioUnitConnection' type='{AudioUnitConnection=&quot;sourceAudioUnit&quot;^{ComponentInstanceRecord}&quot;sourceOutputNumber&quot;I&quot;destInputNumber&quot;I}'>
+    <field name='sourceAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <field name='sourceOutputNumber' declared_type='UInt32' type='L' type64='I'/>
+    <field name='destInputNumber' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioUnitExternalBuffer' type='{AudioUnitExternalBuffer=&quot;buffer&quot;*&quot;size&quot;I}'>
+    <field name='buffer' declared_type='Byte*' type='*'/>
+    <field name='size' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioUnitInputCallback' type='{AudioUnitInputCallback=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}'>
+    <field name='inputProc' function_pointer='true' declared_type='AudioUnitRenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags' type='L' type64='I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBuffer*' type='^{AudioBuffer=II^v}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='inputProcRefCon' declared_type='void*' type='^v'/>
+  </struct>
+  <struct name='AudioUnitMIDIControlMapping' type='{AudioUnitMIDIControlMapping=&quot;midiNRPN&quot;S&quot;midiControl&quot;C&quot;scope&quot;C&quot;element&quot;I&quot;parameter&quot;I}'>
+    <field name='midiNRPN' declared_type='UInt16' type='S'/>
+    <field name='midiControl' declared_type='UInt8' type='C'/>
+    <field name='scope' declared_type='UInt8' type='C'/>
+    <field name='element' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <field name='parameter' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioUnitMeterClipping' type='{AudioUnitMeterClipping=&quot;peakValueSinceLastCall&quot;f&quot;sawInfinity&quot;B&quot;sawNotANumber&quot;B}'>
+    <field name='peakValueSinceLastCall' declared_type='Float32' type='f'/>
+    <field name='sawInfinity' declared_type='Boolean' type='B'/>
+    <field name='sawNotANumber' declared_type='Boolean' type='B'/>
+  </struct>
+  <struct name='AudioUnitOtherPluginDesc' type='{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}'>
+    <field name='format' declared_type='UInt32' type='L' type64='I'/>
+    <field name='plugin' declared_type='AudioClassDescription' type='{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}'/>
+  </struct>
+  <struct name='AudioUnitParameter' type='{AudioUnitParameter=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mParameterID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
+    <field name='mAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <field name='mParameterID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='mScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <field name='mElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioUnitParameterEvent' type='{AudioUnitParameterEvent=&quot;scope&quot;I&quot;element&quot;I&quot;parameter&quot;I&quot;eventType&quot;I&quot;eventValues&quot;(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})}'>
+    <field name='scope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <field name='element' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <field name='parameter' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='eventType' declared_type='AUParameterEventType' type='L' type64='I'/>
+    <field name='eventValues' declared_type='union AudioUnitParameterEvent::' type='(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})'/>
+  </struct>
+  <struct name='AudioUnitParameterIDName' type='{AudioUnitParameterNameInfo=&quot;inID&quot;I&quot;inDesiredLength&quot;i&quot;outName&quot;^{__CFString}}'>
+    <field name='inID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='inDesiredLength' declared_type='SInt32' type='l' type64='i'/>
+    <field name='outName' declared_type='CFStringRef' type='^{__CFString=}'/>
+  </struct>
+  <struct name='AudioUnitParameterInfo' type='{AudioUnitParameterInfo=&quot;name&quot;[52c]&quot;unitName&quot;^{__CFString}&quot;clumpID&quot;I&quot;cfNameString&quot;^{__CFString}&quot;unit&quot;I&quot;minValue&quot;f&quot;maxValue&quot;f&quot;defaultValue&quot;f&quot;flags&quot;I}'>
+    <field name='name' declared_type='char*' type='[52c]'/>
+    <field name='unitName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <field name='clumpID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='cfNameString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <field name='unit' declared_type='AudioUnitParameterUnit' type='L' type64='I'/>
+    <field name='minValue' declared_type='Float32' type='f'/>
+    <field name='maxValue' declared_type='Float32' type='f'/>
+    <field name='defaultValue' declared_type='Float32' type='f'/>
+    <field name='flags' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioUnitParameterNameInfo' type='{AudioUnitParameterNameInfo=&quot;inID&quot;I&quot;inDesiredLength&quot;i&quot;outName&quot;^{__CFString}}'>
+    <field name='inID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='inDesiredLength' declared_type='SInt32' type='l' type64='i'/>
+    <field name='outName' declared_type='CFStringRef' type='^{__CFString=}'/>
+  </struct>
+  <struct name='AudioUnitParameterStringFromValue' type='{AudioUnitParameterStringFromValue=&quot;inParamID&quot;I&quot;inValue&quot;^f&quot;outString&quot;^{__CFString}}'>
+    <field name='inParamID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='inValue' declared_type='Float32*' type='^f' const='true'/>
+    <field name='outString' declared_type='CFStringRef' type='^{__CFString=}'/>
+  </struct>
+  <struct name='AudioUnitParameterValueFromString' type='{AudioUnitParameterValueFromString=&quot;inParamID&quot;I&quot;inString&quot;^{__CFString}&quot;outValue&quot;f}'>
+    <field name='inParamID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='inString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <field name='outValue' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='AudioUnitParameterValueName' type='{AudioUnitParameterValueName=&quot;inParamID&quot;I&quot;inValue&quot;^f&quot;outName&quot;^{__CFString}}'>
+    <field name='inParamID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='inValue' declared_type='Float32*' type='^f' const='true'/>
+    <field name='outName' declared_type='CFStringRef' type='^{__CFString=}'/>
+  </struct>
+  <struct name='AudioUnitParameterValueTranslation' type='{AudioUnitParameterValueTranslation=&quot;otherDesc&quot;{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}&quot;otherParamID&quot;I&quot;otherValue&quot;f&quot;auParamID&quot;I&quot;auValue&quot;f}'>
+    <field name='otherDesc' declared_type='AudioUnitOtherPluginDesc' type='{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}'/>
+    <field name='otherParamID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='otherValue' declared_type='Float32' type='f'/>
+    <field name='auParamID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='auValue' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='AudioUnitPresetMAS_SettingData' type='{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}'>
+    <field name='isStockSetting' declared_type='UInt32' type='L' type64='I'/>
+    <field name='settingID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataLen' declared_type='UInt32' type='L' type64='I'/>
+    <field name='data' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='AudioUnitPresetMAS_Settings' type='{AudioUnitPresetMAS_Settings=&quot;manufacturerID&quot;I&quot;effectID&quot;I&quot;variantID&quot;I&quot;settingsVersion&quot;I&quot;numberOfSettings&quot;I&quot;settings&quot;[1{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}]}'>
+    <field name='manufacturerID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='effectID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='variantID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='settingsVersion' declared_type='UInt32' type='L' type64='I'/>
+    <field name='numberOfSettings' declared_type='UInt32' type='L' type64='I'/>
+    <field name='settings' declared_type='AudioUnitPresetMAS_SettingData*' type='[1{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}]'/>
+  </struct>
+  <struct name='AudioUnitProperty' type='{AudioUnitProperty=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mPropertyID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
+    <field name='mAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <field name='mPropertyID' declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+    <field name='mScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <field name='mElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+  </struct>
+  <struct name='HostCallbackInfo' type='{HostCallbackInfo=&quot;hostUserData&quot;^v&quot;beatAndTempoProc&quot;^?&quot;musicalTimeLocationProc&quot;^?&quot;transportStateProc&quot;^?}'>
+    <field name='hostUserData' declared_type='void*' type='^v'/>
+    <field name='beatAndTempoProc' function_pointer='true' declared_type='HostCallback_GetBeatAndTempo' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='Float64*' type='^d'/>
+      <arg declared_type='Float64*' type='^d'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='musicalTimeLocationProc' function_pointer='true' declared_type='HostCallback_GetMusicalTimeLocation' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='Float32*' type='^f'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='Float64*' type='^d'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='transportStateProc' function_pointer='true' declared_type='HostCallback_GetTransportState' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='Boolean*' type='^B'/>
+      <arg declared_type='Boolean*' type='^B'/>
+      <arg declared_type='Float64*' type='^d'/>
+      <arg declared_type='Boolean*' type='^B'/>
+      <arg declared_type='Float64*' type='^d'/>
+      <arg declared_type='Float64*' type='^d'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+  </struct>
+  <struct name='MixerDistanceParams' type='{MixerDistanceParams=&quot;mReferenceDistance&quot;f&quot;mMaxDistance&quot;f&quot;mMaxAttenuation&quot;f}'>
+    <field name='mReferenceDistance' declared_type='Float32' type='f'/>
+    <field name='mMaxDistance' declared_type='Float32' type='f'/>
+    <field name='mMaxAttenuation' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='MusicDeviceNoteParams' type='{MusicDeviceNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f&quot;mControls&quot;[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]}'>
+    <field name='argCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mPitch' declared_type='Float32' type='f'/>
+    <field name='mVelocity' declared_type='Float32' type='f'/>
+    <field name='mControls' declared_type='NoteParamsControlValue*' type='[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]'/>
+  </struct>
+  <struct name='MusicDeviceStdNoteParams' type='{MusicDeviceStdNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f}'>
+    <field name='argCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mPitch' declared_type='Float32' type='f'/>
+    <field name='mVelocity' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='NoteParamsControlValue' type='{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}'>
+    <field name='mID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mValue' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='ScheduledAudioFileRegion' type='{ScheduledAudioFileRegion=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mAudioFile&quot;^{OpaqueAudioFileID}&quot;mLoopCount&quot;I&quot;mStartFrame&quot;q&quot;mFramesToPlay&quot;I}'>
+    <field name='mTimeStamp' declared_type='AudioTimeStamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+    <field name='mCompletionProc' function_pointer='true' declared_type='ScheduledAudioFileRegionCompletionProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ScheduledAudioFileRegion*' type='^{ScheduledAudioFileRegion={AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}^?^v^{OpaqueAudioFileID}IqI}'/>
+      <arg declared_type='OSStatus' type='l' type64='i'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='mCompletionProcUserData' declared_type='void*' type='^v'/>
+    <field name='mAudioFile' declared_type='struct OpaqueAudioFileID*' type='^{OpaqueAudioFileID=}'/>
+    <field name='mLoopCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mStartFrame' declared_type='SInt64' type='q'/>
+    <field name='mFramesToPlay' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ScheduledAudioSlice' type='{ScheduledAudioSlice=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mFlags&quot;I&quot;mReserved&quot;I&quot;mReserved2&quot;^v&quot;mNumberFrames&quot;I&quot;mBufferList&quot;^{AudioBufferList}}'>
+    <field name='mTimeStamp' declared_type='AudioTimeStamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+    <field name='mCompletionProc' function_pointer='true' declared_type='ScheduledAudioSliceCompletionProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ScheduledAudioSlice*' type='^{ScheduledAudioSlice={AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}^?^vII^vI^{AudioBufferList}}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='mCompletionProcUserData' declared_type='void*' type='^v'/>
+    <field name='mFlags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mReserved' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mReserved2' declared_type='void*' type='^v'/>
+    <field name='mNumberFrames' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mBufferList' declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+  </struct>
   <string_constant name='kAUPresetCPULoadKey' value='cpu-load'/>
   <string_constant name='kAUPresetDataKey' value='data'/>
   <string_constant name='kAUPresetElementNameKey' value='element-name'/>
@@ -659,294 +868,310 @@
   <enum name='kVarispeedParam_PlaybackCents' value='1'/>
   <enum name='kVarispeedParam_PlaybackRate' value='0'/>
   <function name='AudioCodecAppendInputData'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <arg type='^{AudioStreamPacketDescription=qII}'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inInputData' declared_type='void*' type='^v' const='true'/>
+    <arg name='ioInputDataByteSize' declared_type='UInt32*' type='^I'/>
+    <arg name='ioNumberPackets' declared_type='UInt32*' type='^I'/>
+    <arg name='inPacketDescription' declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioCodecGetProperty'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioCodecPropertyID' type='L' type64='I'/>
+    <arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioCodecGetPropertyInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^B'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioCodecPropertyID' type='L' type64='I'/>
+    <arg name='outSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outWritable' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioCodecInitialize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inInputFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inOutputFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inMagicCookie' declared_type='void*' type='^v' const='true'/>
+    <arg name='inMagicCookieByteSize' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioCodecProduceOutputPackets'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <arg type='^{AudioStreamPacketDescription=qII}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='outOutputData' declared_type='void*' type='^v'/>
+    <arg name='ioOutputDataByteSize' declared_type='UInt32*' type='^I'/>
+    <arg name='ioNumberPackets' declared_type='UInt32*' type='^I'/>
+    <arg name='outPacketDescription' declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+    <arg name='outStatus' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioCodecReset'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioCodecSetProperty'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioCodecPropertyID' type='L' type64='I'/>
+    <arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPropertyData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioCodecUninitialize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='inCodec' declared_type='AudioCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioOutputUnitStart'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioOutputUnitStop'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitAddPropertyListener'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <retval type='v'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inID' declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+    <arg name='inProc' function_pointer='true' declared_type='AudioUnitPropertyListenerProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+      <arg declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+      <arg declared_type='AudioUnitScope' type='L' type64='I'/>
+      <arg declared_type='AudioUnitElement' type='L' type64='I'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inProcRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitAddRenderNotify'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-      <retval type='l' type64='i'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inProc' function_pointer='true' declared_type='AURenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags*' type='^I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inProcRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitCarbonViewCreate'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{OpaqueWindowPtr=}'/>
-    <arg type='^{OpaqueControlRef=}'/>
-    <arg type='^{Float32Point=ff}'/>
-    <arg type='^{Float32Point=ff}'/>
-    <arg type='^^{OpaqueControlRef}'/>
-    <retval type='l' type64='q'/>
+    <arg name='inView' declared_type='AudioUnitCarbonView' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+    <arg name='inParentControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+    <arg name='inLocation' declared_type='Float32Point*' type='^{Float32Point=ff}' const='true'/>
+    <arg name='inSize' declared_type='Float32Point*' type='^{Float32Point=ff}' const='true'/>
+    <arg name='outControl' declared_type='ControlRef*' type='^^{OpaqueControlRef}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitCarbonViewSetEventListener'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-      <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-      <arg type='l' type64='i'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='inView' declared_type='AudioUnitCarbonView' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inCallback' function_pointer='true' declared_type='AudioUnitCarbonViewEventListener' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitCarbonView' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+      <arg declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+      <arg declared_type='AudioUnitCarbonViewEventID' type='l' type64='i'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inUserData' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitGetParameter'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^f'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <arg name='inScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <arg name='inElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <arg name='outValue' declared_type='Float32*' type='^f'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitGetProperty'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inID' declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+    <arg name='inScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <arg name='inElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <arg name='outData' declared_type='void*' type='^v'/>
+    <arg name='ioDataSize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitGetPropertyInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^B'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inID' declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+    <arg name='inScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <arg name='inElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <arg name='outDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outWritable' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitInitialize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitRemovePropertyListener'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <retval type='v'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inID' declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+    <arg name='inProc' function_pointer='true' declared_type='AudioUnitPropertyListenerProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+      <arg declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+      <arg declared_type='AudioUnitScope' type='L' type64='I'/>
+      <arg declared_type='AudioUnitElement' type='L' type64='I'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='l' type64='q'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitRemoveRenderNotification'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBuffer=II^v}'/>
-      <retval type='l' type64='i'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inProc' function_pointer='true' declared_type='AudioUnitRenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags' type='L' type64='I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBuffer*' type='^{AudioBuffer=II^v}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inProcRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitRemoveRenderNotify'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-      <retval type='l' type64='i'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inProc' function_pointer='true' declared_type='AURenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags*' type='^I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inProcRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitRender'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^I'/>
-    <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='ioActionFlags' declared_type='AudioUnitRenderActionFlags*' type='^I'/>
+    <arg name='inTimeStamp' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+    <arg name='inOutputBusNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inNumberFrames' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='ioData' declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitRenderSlice'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioBuffer=II^v}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inActionFlags' declared_type='AudioUnitRenderActionFlags' type='L' type64='I'/>
+    <arg name='inTimeStamp' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+    <arg name='inOutputBusNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='ioData' declared_type='AudioBuffer*' type='^{AudioBuffer=II^v}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitReset'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <arg name='inElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitScheduleParameters'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{AudioUnitParameterEvent=IIII(?={?=iIff}{?=If})}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inParameterEvent' declared_type='AudioUnitParameterEvent*' type='^{AudioUnitParameterEvent=IIII(?={?=iIff}{?=If})}' const='true'/>
+    <arg name='inNumParamEvents' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitSetParameter'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='f'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <arg name='inScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <arg name='inElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <arg name='inValue' declared_type='Float32' type='f'/>
+    <arg name='inBufferOffsetInFrames' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitSetProperty'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inID' declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+    <arg name='inScope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <arg name='inElement' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <arg name='inData' declared_type='void*' type='^v' const='true'/>
+    <arg name='inDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitSetRenderNotification'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBuffer=II^v}'/>
-      <retval type='l' type64='i'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inProc' function_pointer='true' declared_type='AudioUnitRenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags' type='L' type64='I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBuffer*' type='^{AudioBuffer=II^v}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inProcRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioUnitUninitialize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='MusicDeviceMIDIEvent'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='MusicDeviceComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inStatus' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inData1' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inData2' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inOffsetSampleFrame' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='MusicDevicePrepareInstrument'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='MusicDeviceComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inInstrument' declared_type='MusicDeviceInstrumentID' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='MusicDeviceReleaseInstrument'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='MusicDeviceComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inInstrument' declared_type='MusicDeviceInstrumentID' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='MusicDeviceStartNote'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{MusicDeviceNoteParams=Iff[1{NoteParamsControlValue=If}]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='MusicDeviceComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inInstrument' declared_type='MusicDeviceInstrumentID' type='L' type64='I'/>
+    <arg name='inGroupID' declared_type='MusicDeviceGroupID' type='L' type64='I'/>
+    <arg name='outNoteInstanceID' declared_type='NoteInstanceID*' type='^I'/>
+    <arg name='inOffsetSampleFrame' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inParams' declared_type='MusicDeviceNoteParams*' type='^{MusicDeviceNoteParams=Iff[1{NoteParamsControlValue=If}]}' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='MusicDeviceStopNote'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='MusicDeviceComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inGroupID' declared_type='MusicDeviceGroupID' type='L' type64='I'/>
+    <arg name='inNoteInstanceID' declared_type='NoteInstanceID' type='L' type64='I'/>
+    <arg name='inOffsetSampleFrame' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='MusicDeviceSysEx'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='ci' declared_type='MusicDeviceComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inData' declared_type='UInt8*' type='*' const='true'/>
+    <arg name='inLength' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
+  <class name='NSObject'>
+    <method selector='interfaceVersion'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='uiViewForAudioUnit:withSize:'>
+      <arg name='inAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}' index='0'/>
+      <arg name='inPreferredSize' declared_type='NSSize' type='{_NSSize=ff}' index='1'/>
+      <retval declared_type='NSView*' type='@'/>
+    </method>
+  </class>
   <informal_protocol name='AUCocoaUIBase'>
-    <method type='I8@0:4' type64='I16@0:8' selector='interfaceVersion'/>
-    <method type='@20@0:4^{ComponentInstanceRecord=[1l]}8{_NSSize=ff}12' type64='@32@0:8^{ComponentInstanceRecord=[1q]}16{_NSSize=ff}24' selector='uiViewForAudioUnit:withSize:'/>
+    <method type='I8@0:4' type64='I16@0:8' selector='interfaceVersion'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method type='@20@0:4^{ComponentInstanceRecord=[1l]}8{_NSSize=ff}12' type64='@32@0:8^{ComponentInstanceRecord=[1q]}16{_NSSize=ff}24' selector='uiViewForAudioUnit:withSize:'>
+      <arg name='inAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}' index='0'/>
+      <arg name='inPreferredSize' declared_type='NSSize' type='{_NSSize=ff}' index='1'/>
+      <retval declared_type='NSView*' type='@'/>
+    </method>
   </informal_protocol>
 </signatures>

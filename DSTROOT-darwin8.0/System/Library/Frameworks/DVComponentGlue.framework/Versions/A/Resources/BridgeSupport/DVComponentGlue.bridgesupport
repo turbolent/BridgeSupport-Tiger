@@ -1,18 +1,73 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
-  <struct name='DVCTransactionParams' type='{DVCTransactionParams=&quot;commandBufferPtr&quot;*&quot;commandLength&quot;I&quot;responseBufferPtr&quot;*&quot;responseBufferSize&quot;I&quot;responseHandler&quot;^^?}'/>
-  <struct name='IDHDeviceConnectionEvent' type='{IDHDeviceConnectionEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}}'/>
-  <struct name='IDHDeviceFrameDroppedEvent' type='{IDHDeviceFrameDroppedEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;totalDropped&quot;I&quot;newlyDropped&quot;I}'/>
-  <struct name='IDHDeviceIOEnableEvent' type='{IDHDeviceIOEnableEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}}'/>
-  <struct name='IDHDeviceStatus' type='{IDHDeviceStatus=&quot;version&quot;I&quot;physicallyConnected&quot;B&quot;readEnabled&quot;B&quot;writeEnabled&quot;B&quot;exclusiveAccess&quot;B&quot;currentBandwidth&quot;I&quot;currentChannel&quot;I&quot;localNodeID&quot;^{OpaquePsuedoID}&quot;inputStandard&quot;s&quot;deviceActive&quot;B&quot;inputFormat&quot;C&quot;outputFormats&quot;I}'/>
-  <struct name='IDHDimension' type='{IDHDimension=&quot;x&quot;i&quot;y&quot;i}'/>
-  <struct name='IDHEventHeader' type='{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}'/>
-  <struct name='IDHGenericEvent' type='{IDHGenericEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;pad&quot;[4L]}' type64='{IDHGenericEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;pad&quot;[4I]}'/>
-  <struct name='IDHIsochInterval' type='{IDHIsochInterval=&quot;duration&quot;i&quot;scale&quot;i}'/>
-  <struct name='IDHParameterBlock' type='{IDHParameterBlock=&quot;reserved1&quot;I&quot;reserved2&quot;S&quot;buffer&quot;^v&quot;requestedCount&quot;I&quot;actualCount&quot;I&quot;completionProc&quot;^?&quot;refCon&quot;^v&quot;result&quot;s}'/>
-  <struct name='IDHResolution' type='{IDHResolution=&quot;x&quot;I&quot;y&quot;I}'/>
+  <struct name='DVCTransactionParams' type='{DVCTransactionParams=&quot;commandBufferPtr&quot;*&quot;commandLength&quot;I&quot;responseBufferPtr&quot;*&quot;responseBufferSize&quot;I&quot;responseHandler&quot;^^?}'>
+    <field name='commandBufferPtr' declared_type='Ptr' type='*'/>
+    <field name='commandLength' declared_type='UInt32' type='L' type64='I'/>
+    <field name='responseBufferPtr' declared_type='Ptr' type='*'/>
+    <field name='responseBufferSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='responseHandler' declared_type='DCResponseHandler*' type='^^?'/>
+  </struct>
+  <struct name='IDHDeviceConnectionEvent' type='{IDHDeviceConnectionEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}}'>
+    <field name='eventHeader' declared_type='IDHEventHeader' type='{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}'/>
+  </struct>
+  <struct name='IDHDeviceFrameDroppedEvent' type='{IDHDeviceFrameDroppedEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;totalDropped&quot;I&quot;newlyDropped&quot;I}'>
+    <field name='eventHeader' declared_type='IDHEventHeader' type='{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}'/>
+    <field name='totalDropped' declared_type='UInt32' type='L' type64='I'/>
+    <field name='newlyDropped' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='IDHDeviceIOEnableEvent' type='{IDHDeviceIOEnableEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}}'>
+    <field name='eventHeader' declared_type='IDHEventHeader' type='{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}'/>
+  </struct>
+  <struct name='IDHDeviceStatus' type='{IDHDeviceStatus=&quot;version&quot;I&quot;physicallyConnected&quot;B&quot;readEnabled&quot;B&quot;writeEnabled&quot;B&quot;exclusiveAccess&quot;B&quot;currentBandwidth&quot;I&quot;currentChannel&quot;I&quot;localNodeID&quot;^{OpaquePsuedoID}&quot;inputStandard&quot;s&quot;deviceActive&quot;B&quot;inputFormat&quot;C&quot;outputFormats&quot;I}'>
+    <field name='version' declared_type='UInt32' type='L' type64='I'/>
+    <field name='physicallyConnected' declared_type='Boolean' type='B'/>
+    <field name='readEnabled' declared_type='Boolean' type='B'/>
+    <field name='writeEnabled' declared_type='Boolean' type='B'/>
+    <field name='exclusiveAccess' declared_type='Boolean' type='B'/>
+    <field name='currentBandwidth' declared_type='UInt32' type='L' type64='I'/>
+    <field name='currentChannel' declared_type='UInt32' type='L' type64='I'/>
+    <field name='localNodeID' declared_type='PsuedoID' type='^{OpaquePsuedoID=}'/>
+    <field name='inputStandard' declared_type='SInt16' type='s'/>
+    <field name='deviceActive' declared_type='Boolean' type='B'/>
+    <field name='inputFormat' declared_type='UInt8' type='C'/>
+    <field name='outputFormats' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='IDHDimension' type='{IDHDimension=&quot;x&quot;i&quot;y&quot;i}'>
+    <field name='x' declared_type='Fixed' type='l' type64='i'/>
+    <field name='y' declared_type='Fixed' type='l' type64='i'/>
+  </struct>
+  <struct name='IDHEventHeader' type='{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}'>
+    <field name='deviceID' declared_type='IDHDeviceID' type='L' type64='I'/>
+    <field name='notificationID' declared_type='IDHNotificationID' type='L' type64='I'/>
+    <field name='event' declared_type='IDHEvent' type='L' type64='I'/>
+  </struct>
+  <struct name='IDHGenericEvent' type='{IDHGenericEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;pad&quot;[4L]}' type64='{IDHGenericEvent=&quot;eventHeader&quot;{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}&quot;pad&quot;[4I]}'>
+    <field name='eventHeader' declared_type='IDHEventHeader' type='{IDHEventHeader=&quot;deviceID&quot;I&quot;notificationID&quot;I&quot;event&quot;I}'/>
+    <field name='pad' declared_type='UInt32*' type='[4L]' type64='[4I]'/>
+  </struct>
+  <struct name='IDHIsochInterval' type='{IDHIsochInterval=&quot;duration&quot;i&quot;scale&quot;i}'>
+    <field name='duration' declared_type='SInt32' type='l' type64='i'/>
+    <field name='scale' declared_type='TimeScale' type='l' type64='i'/>
+  </struct>
+  <struct name='IDHParameterBlock' type='{IDHParameterBlock=&quot;reserved1&quot;I&quot;reserved2&quot;S&quot;buffer&quot;^v&quot;requestedCount&quot;I&quot;actualCount&quot;I&quot;completionProc&quot;^?&quot;refCon&quot;^v&quot;result&quot;s}'>
+    <field name='reserved1' declared_type='UInt32' type='L' type64='I'/>
+    <field name='reserved2' declared_type='UInt16' type='S'/>
+    <field name='buffer' declared_type='void*' type='^v'/>
+    <field name='requestedCount' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='actualCount' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='completionProc' function_pointer='true' declared_type='IDHNotificationUPP' type='^?'>
+      <arg declared_type='IDHGenericEvent*' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='refCon' declared_type='void*' type='^v'/>
+    <field name='result' declared_type='OSErr' type='s'/>
+  </struct>
+  <struct name='IDHResolution' type='{IDHResolution=&quot;x&quot;I&quot;y&quot;I}'>
+    <field name='x' declared_type='UInt32' type='L' type64='I'/>
+    <field name='y' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
   <opaque name='PsuedoID' type='^{OpaquePsuedoID=}'/>
   <enum name='kDeviceControlDoAVCTransactionSelect' value='1'/>
   <enum name='kIDHCancelNotificationSelect' value='12'/>
@@ -112,145 +167,146 @@
   <enum name='kIDHVideoResolutionAtomType' value='1919251308'/>
   <enum name='kIDHWriteSelect' value='9'/>
   <function name='DeviceControlDoAVCTransaction'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{DVCTransactionParams=*I*I^^?}'/>
-    <retval type='l' type64='q'/>
+    <arg name='instance' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='params' declared_type='DVCTransactionParams*' type='^{DVCTransactionParams=*I*I^^?}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='DisposeIDHNotificationUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='IDHNotificationUPP' type='^?'>
+      <arg declared_type='IDHGenericEvent*' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='IDHCancelNotification'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='notificationID' declared_type='IDHNotificationID' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHCancelPendingIO'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{IDHParameterBlock=IS^vII^?^vs}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='pb' declared_type='IDHParameterBlock*' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHCloseDevice'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHDisposeNotification'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='notificationID' declared_type='IDHNotificationID' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHGetDeviceClock'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^^{ComponentRecord}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='clock' declared_type='Component*' type='^^{ComponentRecord}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHGetDeviceConfiguration'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{QTAtomSpec=^*i}' type64='^i'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='configurationID' declared_type='QTAtomSpec*' type='^{QTAtomSpec=^*i}' type64='^i' declared_type64='int*'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHGetDeviceControl'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^^{ComponentInstanceRecord}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='deviceControl' declared_type='ComponentInstance*' type='^^{ComponentInstanceRecord}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHGetDeviceList'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^^*' type64='^i'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='deviceList' declared_type='QTAtomContainer*' type='^^*' type64='^i' declared_type64='int*'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHGetDeviceStatus'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{QTAtomSpec=^*i}' type64='^i'/>
-    <arg type='^{IDHDeviceStatus=IBBBBII^{OpaquePsuedoID}sBCI}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='configurationID' declared_type='QTAtomSpec*' type='^{QTAtomSpec=^*i}' type64='^i' declared_type64='int*' const='true'/>
+    <arg name='status' declared_type='IDHDeviceStatus*' type='^{IDHDeviceStatus=IBBBBII^{OpaquePsuedoID}sBCI}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHGetDeviceTime'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{TimeRecord={wide=Ii}i^{TimeBaseRecord}}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='deviceTime' declared_type='TimeRecord*' type='^{TimeRecord={wide=Ii}i^{TimeBaseRecord}}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHGetFormat'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='format' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHNewNotification'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='deviceID' declared_type='IDHDeviceID' type='L' type64='I'/>
+    <arg name='notificationProc' function_pointer='true' declared_type='IDHNotificationUPP' type='^?'>
+      <arg declared_type='IDHGenericEvent*' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='userData' declared_type='void*' type='^v'/>
+    <arg name='notificationID' declared_type='IDHNotificationID*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHNotifyMeWhen'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='notificationID' declared_type='IDHNotificationID' type='L' type64='I'/>
+    <arg name='events' declared_type='IDHEvent' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHOpenDevice'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='permissions' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHRead'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{IDHParameterBlock=IS^vII^?^vs}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='pb' declared_type='IDHParameterBlock*' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHReleaseBuffer'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{IDHParameterBlock=IS^vII^?^vs}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='pb' declared_type='IDHParameterBlock*' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHSetDeviceConfiguration'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{QTAtomSpec=^*i}' type64='^i'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='configurationID' declared_type='QTAtomSpec*' type='^{QTAtomSpec=^*i}' type64='^i' declared_type64='int*' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHSetFormat'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='format' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHUpdateDeviceList'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^^*' type64='^i'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='deviceList' declared_type='QTAtomContainer*' type='^^*' type64='^i' declared_type64='int*'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='IDHWrite'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{IDHParameterBlock=IS^vII^?^vs}'/>
-    <retval type='l' type64='q'/>
+    <arg name='idh' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='pb' declared_type='IDHParameterBlock*' type='^{IDHParameterBlock=IS^vII^?^vs}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='InvokeIDHNotificationUPP'>
-    <arg type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='event' declared_type='IDHGenericEvent*' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
+    <arg name='userData' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='IDHNotificationUPP' type='^?'>
+      <arg declared_type='IDHGenericEvent*' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewIDHNotificationUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='IDHNotificationProcPtr' type='^?'>
+      <arg declared_type='IDHGenericEvent*' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='IDHNotificationUPP' type='^?'>
+      <arg declared_type='IDHGenericEvent*' type='^{IDHGenericEvent={IDHEventHeader=III}[4L]}' type64='^{IDHGenericEvent={IDHEventHeader=III}[4I]}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
 </signatures>

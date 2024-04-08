@@ -1,79 +1,306 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
-  <struct name='ICACloseSessionPB' type='{ICACloseSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;I}'/>
-  <struct name='ICACopyObjectPropertyDictionaryPB' type='{ICACopyObjectPropertyDictionaryPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;theDict&quot;^^{__CFDictionary}}'/>
-  <struct name='ICACopyObjectThumbnailPB' type='{ICACopyObjectThumbnailPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;thumbnailFormat&quot;I&quot;thumbnailData&quot;^^{__CFData}}'/>
-  <struct name='ICADownloadFilePB' type='{ICADownloadFilePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;dirFSRef&quot;^{FSRef}&quot;flags&quot;I&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;rotationAngle&quot;i&quot;fileFSRef&quot;^{FSRef}}'/>
-  <struct name='ICAExtendedRegisterEventNotificationPB' type='{ICAExtendedRegisterEventNotificationPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;extd&quot;I&quot;notifyProc&quot;^?&quot;rawEventType&quot;I&quot;eventType&quot;I&quot;eventClass&quot;I&quot;eventDataSize&quot;I&quot;eventDataCookie&quot;^{OpaqueICAEventDataCookie}&quot;deviceObject&quot;^{OpaqueICAObject}}'/>
-  <struct name='ICAGetChildCountPB' type='{ICAGetChildCountPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;count&quot;I}'/>
-  <struct name='ICAGetDeviceListPB' type='{ICAGetDeviceListPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}}'/>
-  <struct name='ICAGetNthChildPB' type='{ICAGetNthChildPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;index&quot;I&quot;childObject&quot;^{OpaqueICAObject}&quot;childInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
-  <struct name='ICAGetNthPropertyPB' type='{ICAGetNthPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;index&quot;I&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'/>
-  <struct name='ICAGetObjectInfoPB' type='{ICAGetObjectInfoPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
-  <struct name='ICAGetObjectRefConPB' type='{ICAGetObjectRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectRefCon&quot;I}'/>
-  <struct name='ICAGetParentOfObjectPB' type='{ICAGetParentOfObjectPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;parentObject&quot;^{OpaqueICAObject}&quot;parentInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
-  <struct name='ICAGetParentOfPropertyPB' type='{ICAGetParentOfPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;parentObject&quot;^{OpaqueICAObject}&quot;parentInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
-  <struct name='ICAGetPropertyByTypePB' type='{ICAGetPropertyByTypePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;propertyType&quot;I&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'/>
-  <struct name='ICAGetPropertyCountPB' type='{ICAGetPropertyCountPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;count&quot;I}'/>
-  <struct name='ICAGetPropertyDataPB' type='{ICAGetPropertyDataPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}'/>
-  <struct name='ICAGetPropertyInfoPB' type='{ICAGetPropertyInfoPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'/>
-  <struct name='ICAGetPropertyRefConPB' type='{ICAGetPropertyRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyRefCon&quot;I}'/>
-  <struct name='ICAGetRootOfObjectPB' type='{ICAGetRootOfObjectPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;rootObject&quot;^{OpaqueICAObject}&quot;rootInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
-  <struct name='ICAGetRootOfPropertyPB' type='{ICAGetRootOfPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;rootObject&quot;^{OpaqueICAObject}&quot;rootInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
-  <struct name='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
-  <struct name='ICAImportImagePB' type='{ICAImportImagePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}&quot;flags&quot;I&quot;supportedFileTypes&quot;^{__CFArray}&quot;filterProc&quot;^?&quot;importedImages&quot;^^{__CFArray}}'/>
-  <struct name='ICALoadDeviceModulePB' type='{ICALoadDeviceModulePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;paramDictionary&quot;^{__CFDictionary}}'/>
-  <struct name='ICAMessage' type='{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'/>
-  <struct name='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
-  <struct name='ICAObjectSendMessagePB' type='{ICAObjectSendMessagePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;result&quot;I}'/>
-  <struct name='ICAOpenSessionPB' type='{ICAOpenSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}&quot;sessionID&quot;I}'/>
-  <struct name='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
-  <struct name='ICARegisterEventNotificationPB' type='{ICARegisterEventNotificationPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;notifyType&quot;I&quot;notifyProc&quot;^?}'/>
-  <struct name='ICAScannerCloseSessionPB' type='{ICAScannerCloseSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
-  <struct name='ICAScannerGetParametersPB' type='{ICAScannerGetParametersPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;theDict&quot;^{__CFDictionary}}'/>
-  <struct name='ICAScannerInitializePB' type='{ICAScannerInitializePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
-  <struct name='ICAScannerOpenSessionPB' type='{ICAScannerOpenSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
-  <struct name='ICAScannerSetParametersPB' type='{ICAScannerSetParametersPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;theDict&quot;^{__CFDictionary}}'/>
-  <struct name='ICAScannerStartPB' type='{ICAScannerStartPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
-  <struct name='ICAScannerStatusPB' type='{ICAScannerStatusPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;status&quot;I}'/>
-  <struct name='ICASetObjectRefConPB' type='{ICASetObjectRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectRefCon&quot;I}'/>
-  <struct name='ICASetPropertyDataPB' type='{ICASetPropertyDataPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'/>
-  <struct name='ICASetPropertyRefConPB' type='{ICASetPropertyRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyRefCon&quot;I}'/>
-  <struct name='ICAThumbnail' type='{ICAThumbnail=&quot;width&quot;I&quot;height&quot;I&quot;dataSize&quot;I&quot;data&quot;[1C]}'/>
-  <struct name='ICAUnloadDeviceModulePB' type='{ICAUnloadDeviceModulePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}}'/>
-  <struct name='ICAUploadFilePB' type='{ICAUploadFilePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;fileFSRef&quot;^{FSRef}&quot;flags&quot;I}'/>
-  <struct name='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
-  <struct name='ICD_DisposeObjectPB' type='{ICD_DisposeObjectPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}}'/>
-  <struct name='ICD_DisposePropertyPB' type='{ICD_DisposePropertyPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}}'/>
-  <struct name='ICD_NewObjectPB' type='{ICD_NewObjectPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;object&quot;^{OpaqueICAObject}}'/>
-  <struct name='ICD_NewPropertyPB' type='{ICD_NewPropertyPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;property&quot;^{OpaqueICAProperty}}'/>
+  <struct name='ICACloseSessionPB' type='{ICACloseSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='sessionID' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICACopyObjectPropertyDictionaryPB' type='{ICACopyObjectPropertyDictionaryPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;theDict&quot;^^{__CFDictionary}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='theDict' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+  </struct>
+  <struct name='ICACopyObjectThumbnailPB' type='{ICACopyObjectThumbnailPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;thumbnailFormat&quot;I&quot;thumbnailData&quot;^^{__CFData}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='thumbnailFormat' declared_type='OSType' type='L' type64='I'/>
+    <field name='thumbnailData' declared_type='CFDataRef*' type='^^{__CFData}'/>
+  </struct>
+  <struct name='ICADownloadFilePB' type='{ICADownloadFilePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;dirFSRef&quot;^{FSRef}&quot;flags&quot;I&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;rotationAngle&quot;i&quot;fileFSRef&quot;^{FSRef}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='dirFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <field name='flags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='fileType' declared_type='OSType' type='L' type64='I'/>
+    <field name='fileCreator' declared_type='OSType' type='L' type64='I'/>
+    <field name='rotationAngle' declared_type='Fixed' type='l' type64='i'/>
+    <field name='fileFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+  </struct>
+  <struct name='ICAExtendedRegisterEventNotificationPB' type='{ICAExtendedRegisterEventNotificationPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;extd&quot;I&quot;notifyProc&quot;^?&quot;rawEventType&quot;I&quot;eventType&quot;I&quot;eventClass&quot;I&quot;eventDataSize&quot;I&quot;eventDataCookie&quot;^{OpaqueICAEventDataCookie}&quot;deviceObject&quot;^{OpaqueICAObject}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='extd' declared_type='OSType' type='L' type64='I'/>
+    <field name='notifyProc' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='rawEventType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='eventType' declared_type='OSType' type='L' type64='I'/>
+    <field name='eventClass' declared_type='OSType' type='L' type64='I'/>
+    <field name='eventDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='eventDataCookie' declared_type='ICAEventDataCookie' type='^{OpaqueICAEventDataCookie=}'/>
+    <field name='deviceObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+  </struct>
+  <struct name='ICAGetChildCountPB' type='{ICAGetChildCountPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;count&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='count' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAGetDeviceListPB' type='{ICAGetDeviceListPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+  </struct>
+  <struct name='ICAGetNthChildPB' type='{ICAGetNthChildPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;index&quot;I&quot;childObject&quot;^{OpaqueICAObject}&quot;childInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='parentObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='index' declared_type='UInt32' type='L' type64='I'/>
+    <field name='childObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='childInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+  </struct>
+  <struct name='ICAGetNthPropertyPB' type='{ICAGetNthPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;index&quot;I&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='index' declared_type='UInt32' type='L' type64='I'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+  </struct>
+  <struct name='ICAGetObjectInfoPB' type='{ICAGetObjectInfoPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+  </struct>
+  <struct name='ICAGetObjectRefConPB' type='{ICAGetObjectRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectRefCon&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='objectRefCon' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAGetParentOfObjectPB' type='{ICAGetParentOfObjectPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;parentObject&quot;^{OpaqueICAObject}&quot;parentInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='parentObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='parentInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+  </struct>
+  <struct name='ICAGetParentOfPropertyPB' type='{ICAGetParentOfPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;parentObject&quot;^{OpaqueICAObject}&quot;parentInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='parentObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='parentInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+  </struct>
+  <struct name='ICAGetPropertyByTypePB' type='{ICAGetPropertyByTypePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;propertyType&quot;I&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='propertyType' declared_type='OSType' type='L' type64='I'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+  </struct>
+  <struct name='ICAGetPropertyCountPB' type='{ICAGetPropertyCountPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;count&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='count' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAGetPropertyDataPB' type='{ICAGetPropertyDataPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='startByte' declared_type='UInt32' type='L' type64='I'/>
+    <field name='requestedSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataPtr' declared_type='void*' type='^v'/>
+    <field name='actualSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataType' declared_type='OSType' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAGetPropertyInfoPB' type='{ICAGetPropertyInfoPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+  </struct>
+  <struct name='ICAGetPropertyRefConPB' type='{ICAGetPropertyRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyRefCon&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='propertyRefCon' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAGetRootOfObjectPB' type='{ICAGetRootOfObjectPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;rootObject&quot;^{OpaqueICAObject}&quot;rootInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='rootObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='rootInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+  </struct>
+  <struct name='ICAGetRootOfPropertyPB' type='{ICAGetRootOfPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;rootObject&quot;^{OpaqueICAObject}&quot;rootInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='rootObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='rootInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+  </struct>
+  <struct name='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'>
+    <field name='err' declared_type='OSErr' type='s'/>
+    <field name='refcon' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAImportImagePB' type='{ICAImportImagePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}&quot;flags&quot;I&quot;supportedFileTypes&quot;^{__CFArray}&quot;filterProc&quot;^?&quot;importedImages&quot;^^{__CFArray}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='deviceObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='flags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='supportedFileTypes' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <field name='filterProc' function_pointer='true' declared_type='ICAImportFilterProc' type='^?'>
+      <arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <retval declared_type='Boolean' type='B'/>
+    </field>
+    <field name='importedImages' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+  </struct>
+  <struct name='ICALoadDeviceModulePB' type='{ICALoadDeviceModulePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;paramDictionary&quot;^{__CFDictionary}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='paramDictionary' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+  </struct>
+  <struct name='ICAMessage' type='{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'>
+    <field name='messageType' declared_type='OSType' type='L' type64='I'/>
+    <field name='startByte' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataPtr' declared_type='void*' type='^v'/>
+    <field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataType' declared_type='OSType' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'>
+    <field name='objectType' declared_type='OSType' type='L' type64='I'/>
+    <field name='objectSubtype' declared_type='OSType' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAObjectSendMessagePB' type='{ICAObjectSendMessagePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;result&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='message' declared_type='ICAMessage' type='{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'/>
+    <field name='result' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAOpenSessionPB' type='{ICAOpenSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}&quot;sessionID&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='deviceObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='sessionID' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'>
+    <field name='propertyType' declared_type='OSType' type='L' type64='I'/>
+    <field name='dataType' declared_type='OSType' type='L' type64='I'/>
+    <field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataFlags' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICARegisterEventNotificationPB' type='{ICARegisterEventNotificationPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;notifyType&quot;I&quot;notifyProc&quot;^?}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='notifyType' declared_type='OSType' type='L' type64='I'/>
+    <field name='notifyProc' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+  </struct>
+  <struct name='ICAScannerCloseSessionPB' type='{ICAScannerCloseSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='sessionID' declared_type='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+  </struct>
+  <struct name='ICAScannerGetParametersPB' type='{ICAScannerGetParametersPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;theDict&quot;^{__CFDictionary}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='sessionID' declared_type='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+    <field name='theDict' declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+  </struct>
+  <struct name='ICAScannerInitializePB' type='{ICAScannerInitializePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='sessionID' declared_type='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+  </struct>
+  <struct name='ICAScannerOpenSessionPB' type='{ICAScannerOpenSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='sessionID' declared_type='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+  </struct>
+  <struct name='ICAScannerSetParametersPB' type='{ICAScannerSetParametersPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;theDict&quot;^{__CFDictionary}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='sessionID' declared_type='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+    <field name='theDict' declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+  </struct>
+  <struct name='ICAScannerStartPB' type='{ICAScannerStartPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='sessionID' declared_type='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+  </struct>
+  <struct name='ICAScannerStatusPB' type='{ICAScannerStatusPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;status&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='sessionID' declared_type='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+    <field name='status' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICASetObjectRefConPB' type='{ICASetObjectRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectRefCon&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='objectRefCon' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICASetPropertyDataPB' type='{ICASetPropertyDataPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='startByte' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataPtr' declared_type='void*' type='^v'/>
+    <field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataType' declared_type='OSType' type='L' type64='I'/>
+  </struct>
+  <struct name='ICASetPropertyRefConPB' type='{ICASetPropertyRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyRefCon&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+    <field name='propertyRefCon' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICAThumbnail' type='{ICAThumbnail=&quot;width&quot;I&quot;height&quot;I&quot;dataSize&quot;I&quot;data&quot;[1C]}'>
+    <field name='width' declared_type='UInt32' type='L' type64='I'/>
+    <field name='height' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='data' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='ICAUnloadDeviceModulePB' type='{ICAUnloadDeviceModulePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='deviceObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+  </struct>
+  <struct name='ICAUploadFilePB' type='{ICAUploadFilePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;fileFSRef&quot;^{FSRef}&quot;flags&quot;I}'>
+    <field name='header' declared_type='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='parentObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='fileFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <field name='flags' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}'>
+    <field name='err' declared_type='OSErr' type='s'/>
+    <field name='refcon' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ICD_DisposeObjectPB' type='{ICD_DisposeObjectPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}}'>
+    <field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+  </struct>
+  <struct name='ICD_DisposePropertyPB' type='{ICD_DisposePropertyPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}}'>
+    <field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+  </struct>
+  <struct name='ICD_NewObjectPB' type='{ICD_NewObjectPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;object&quot;^{OpaqueICAObject}}'>
+    <field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='parentObject' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+  </struct>
+  <struct name='ICD_NewPropertyPB' type='{ICD_NewPropertyPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;property&quot;^{OpaqueICAProperty}}'>
+    <field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+    <field name='object' declared_type='ICAObject' type='^{OpaqueICAObject=}'/>
+    <field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+    <field name='property' declared_type='ICAProperty' type='^{OpaqueICAProperty=}'/>
+  </struct>
   <opaque name='ICAConnectionID' type='^{OpaqueICAConnectionID=}'/>
   <opaque name='ICAEventDataCookie' type='^{OpaqueICAEventDataCookie=}'/>
   <opaque name='ICAObject' type='^{OpaqueICAObject=}'/>
   <opaque name='ICAProperty' type='^{OpaqueICAProperty=}'/>
   <opaque name='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
-  <constant name='kICABluetoothAddressKey' type='^{__CFString=}'/>
-  <constant name='kICABluetoothTransportType' type='^{__CFString=}'/>
-  <constant name='kICADeviceModulePathKey' type='^{__CFString=}'/>
-  <constant name='kICAFireWireGUIDKey' type='^{__CFString=}'/>
-  <constant name='kICAFireWireTransportType' type='^{__CFString=}'/>
-  <constant name='kICAIOServicePathKey' type='^{__CFString=}'/>
-  <constant name='kICAIPAddressKey' type='^{__CFString=}'/>
-  <constant name='kICAIPGUIDKey' type='^{__CFString=}'/>
-  <constant name='kICAIPNameKey' type='^{__CFString=}'/>
-  <constant name='kICAIPPortKey' type='^{__CFString=}'/>
-  <constant name='kICASCSITransportType' type='^{__CFString=}'/>
-  <constant name='kICATCPIPTransportType' type='^{__CFString=}'/>
-  <constant name='kICATWAINDSPathKey' type='^{__CFString=}'/>
-  <constant name='kICATWAINTransportType' type='^{__CFString=}'/>
-  <constant name='kICATransportTypeKey' type='^{__CFString=}'/>
-  <constant name='kICAUSBLocationIDKey' type='^{__CFString=}'/>
-  <constant name='kICAUSBTransportType' type='^{__CFString=}'/>
+  <constant name='kICABluetoothAddressKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICABluetoothTransportType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICADeviceModulePathKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAFireWireGUIDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAFireWireTransportType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAIOServicePathKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAIPAddressKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAIPGUIDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAIPNameKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAIPPortKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICASCSITransportType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICATCPIPTransportType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICATWAINDSPathKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICATWAINTransportType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICATransportTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAUSBLocationIDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kICAUSBTransportType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
   <enum name='kAddMetaDataToFinderComment' value='4'/>
   <enum name='kAdjustCreationDate' value='8'/>
   <enum name='kCreateCustomIcon' value='2'/>
@@ -242,323 +469,323 @@
   <enum name='kRotateImage' value='64'/>
   <enum name='kSetFileTypeAndCreator' value='16'/>
   <function name='ICACloseSession'>
-    <arg type='^{ICACloseSessionPB={ICAHeader=sI}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICACloseSessionPB*' type='^{ICACloseSessionPB={ICAHeader=sI}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICACopyObjectPropertyDictionary'>
-    <arg type='^{ICACopyObjectPropertyDictionaryPB={ICAHeader=sI}^{OpaqueICAObject}^^{__CFDictionary}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICACopyObjectPropertyDictionaryPB*' type='^{ICACopyObjectPropertyDictionaryPB={ICAHeader=sI}^{OpaqueICAObject}^^{__CFDictionary}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICACopyObjectThumbnail'>
-    <arg type='^{ICACopyObjectThumbnailPB={ICAHeader=sI}^{OpaqueICAObject}I^^{__CFData}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICACopyObjectThumbnailPB*' type='^{ICACopyObjectThumbnailPB={ICAHeader=sI}^{OpaqueICAObject}I^^{__CFData}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICADownloadFile'>
-    <arg type='^{ICADownloadFilePB={ICAHeader=sI}^{OpaqueICAObject}^{FSRef}IIIi^{FSRef}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICADownloadFilePB*' type='^{ICADownloadFilePB={ICAHeader=sI}^{OpaqueICAObject}^{FSRef}IIIi^{FSRef}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetChildCount'>
-    <arg type='^{ICAGetChildCountPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetChildCountPB*' type='^{ICAGetChildCountPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetDeviceList'>
-    <arg type='^{ICAGetDeviceListPB={ICAHeader=sI}^{OpaqueICAObject}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetDeviceListPB*' type='^{ICAGetDeviceListPB={ICAHeader=sI}^{OpaqueICAObject}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetNthChild'>
-    <arg type='^{ICAGetNthChildPB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetNthChildPB*' type='^{ICAGetNthChildPB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetNthProperty'>
-    <arg type='^{ICAGetNthPropertyPB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetNthPropertyPB*' type='^{ICAGetNthPropertyPB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetObjectInfo'>
-    <arg type='^{ICAGetObjectInfoPB={ICAHeader=sI}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetObjectInfoPB*' type='^{ICAGetObjectInfoPB={ICAHeader=sI}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetObjectRefCon'>
-    <arg type='^{ICAGetObjectRefConPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetObjectRefConPB*' type='^{ICAGetObjectRefConPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetParentOfObject'>
-    <arg type='^{ICAGetParentOfObjectPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetParentOfObjectPB*' type='^{ICAGetParentOfObjectPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetParentOfProperty'>
-    <arg type='^{ICAGetParentOfPropertyPB={ICAHeader=sI}^{OpaqueICAProperty}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetParentOfPropertyPB*' type='^{ICAGetParentOfPropertyPB={ICAHeader=sI}^{OpaqueICAProperty}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetPropertyByType'>
-    <arg type='^{ICAGetPropertyByTypePB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetPropertyByTypePB*' type='^{ICAGetPropertyByTypePB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetPropertyCount'>
-    <arg type='^{ICAGetPropertyCountPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetPropertyCountPB*' type='^{ICAGetPropertyCountPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetPropertyData'>
-    <arg type='^{ICAGetPropertyDataPB={ICAHeader=sI}^{OpaqueICAProperty}II^vII}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetPropertyDataPB*' type='^{ICAGetPropertyDataPB={ICAHeader=sI}^{OpaqueICAProperty}II^vII}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetPropertyInfo'>
-    <arg type='^{ICAGetPropertyInfoPB={ICAHeader=sI}^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetPropertyInfoPB*' type='^{ICAGetPropertyInfoPB={ICAHeader=sI}^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetPropertyRefCon'>
-    <arg type='^{ICAGetPropertyRefConPB={ICAHeader=sI}^{OpaqueICAProperty}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetPropertyRefConPB*' type='^{ICAGetPropertyRefConPB={ICAHeader=sI}^{OpaqueICAProperty}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetRootOfObject'>
-    <arg type='^{ICAGetRootOfObjectPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetRootOfObjectPB*' type='^{ICAGetRootOfObjectPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAGetRootOfProperty'>
-    <arg type='^{ICAGetRootOfPropertyPB={ICAHeader=sI}^{OpaqueICAProperty}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAGetRootOfPropertyPB*' type='^{ICAGetRootOfPropertyPB={ICAHeader=sI}^{OpaqueICAProperty}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAImportImage'>
-    <arg type='^{ICAImportImagePB={ICAHeader=sI}^{OpaqueICAObject}I^{__CFArray}^?^^{__CFArray}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAImportImagePB*' type='^{ICAImportImagePB={ICAHeader=sI}^{OpaqueICAObject}I^{__CFArray}^?^^{__CFArray}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICALoadDeviceModule'>
-    <arg type='^{ICALoadDeviceModulePB={ICAHeader=sI}^{__CFDictionary}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICALoadDeviceModulePB*' type='^{ICALoadDeviceModulePB={ICAHeader=sI}^{__CFDictionary}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAObjectSendMessage'>
-    <arg type='^{ICAObjectSendMessagePB={ICAHeader=sI}^{OpaqueICAObject}{ICAMessage=II^vII}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAObjectSendMessagePB*' type='^{ICAObjectSendMessagePB={ICAHeader=sI}^{OpaqueICAObject}{ICAMessage=II^vII}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAOpenSession'>
-    <arg type='^{ICAOpenSessionPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAOpenSessionPB*' type='^{ICAOpenSessionPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICARegisterEventNotification'>
-    <arg type='^{ICARegisterEventNotificationPB={ICAHeader=sI}^{OpaqueICAObject}I^?}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICARegisterEventNotificationPB*' type='^{ICARegisterEventNotificationPB={ICAHeader=sI}^{OpaqueICAObject}I^?}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAScannerCloseSession'>
-    <arg type='^{ICAScannerCloseSessionPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAScannerCloseSessionPB*' type='^{ICAScannerCloseSessionPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAScannerGetParameters'>
-    <arg type='^{ICAScannerGetParametersPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}^{__CFDictionary}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAScannerGetParametersPB*' type='^{ICAScannerGetParametersPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}^{__CFDictionary}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAScannerInitialize'>
-    <arg type='^{ICAScannerInitializePB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAScannerInitializePB*' type='^{ICAScannerInitializePB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAScannerOpenSession'>
-    <arg type='^{ICAScannerOpenSessionPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAScannerSessionID}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAScannerOpenSessionPB*' type='^{ICAScannerOpenSessionPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAScannerSessionID}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAScannerSetParameters'>
-    <arg type='^{ICAScannerSetParametersPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}^{__CFDictionary}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAScannerSetParametersPB*' type='^{ICAScannerSetParametersPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}^{__CFDictionary}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAScannerStart'>
-    <arg type='^{ICAScannerStartPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAScannerStartPB*' type='^{ICAScannerStartPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAScannerStatus'>
-    <arg type='^{ICAScannerStatusPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAScannerStatusPB*' type='^{ICAScannerStatusPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICASetObjectRefCon'>
-    <arg type='^{ICASetObjectRefConPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICASetObjectRefConPB*' type='^{ICASetObjectRefConPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICASetPropertyData'>
-    <arg type='^{ICASetPropertyDataPB={ICAHeader=sI}^{OpaqueICAProperty}I^vII}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICASetPropertyDataPB*' type='^{ICASetPropertyDataPB={ICAHeader=sI}^{OpaqueICAProperty}I^vII}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICASetPropertyRefCon'>
-    <arg type='^{ICASetPropertyRefConPB={ICAHeader=sI}^{OpaqueICAProperty}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICASetPropertyRefConPB*' type='^{ICASetPropertyRefConPB={ICAHeader=sI}^{OpaqueICAProperty}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAUnloadDeviceModule'>
-    <arg type='^{ICAUnloadDeviceModulePB={ICAHeader=sI}^{OpaqueICAObject}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAUnloadDeviceModulePB*' type='^{ICAUnloadDeviceModulePB={ICAHeader=sI}^{OpaqueICAObject}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICAUploadFile'>
-    <arg type='^{ICAUploadFilePB={ICAHeader=sI}^{OpaqueICAObject}^{FSRef}I}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICAHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICAUploadFilePB*' type='^{ICAUploadFilePB={ICAHeader=sI}^{OpaqueICAObject}^{FSRef}I}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICACompletion' type='^?'>
+      <arg declared_type='ICAHeader*' type='^{ICAHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICDDisposeObject'>
-    <arg type='^{ICD_DisposeObjectPB={ICDHeader=sI}^{OpaqueICAObject}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICDHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICD_DisposeObjectPB*' type='^{ICD_DisposeObjectPB={ICDHeader=sI}^{OpaqueICAObject}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICDCompletion' type='^?'>
+      <arg declared_type='ICDHeader*' type='^{ICDHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICDDisposeProperty'>
-    <arg type='^{ICD_DisposePropertyPB={ICDHeader=sI}^{OpaqueICAProperty}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICDHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICD_DisposePropertyPB*' type='^{ICD_DisposePropertyPB={ICDHeader=sI}^{OpaqueICAProperty}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICDCompletion' type='^?'>
+      <arg declared_type='ICDHeader*' type='^{ICDHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICDNewObject'>
-    <arg type='^{ICD_NewObjectPB={ICDHeader=sI}^{OpaqueICAObject}{ICAObjectInfo=II}^{OpaqueICAObject}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICDHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICD_NewObjectPB*' type='^{ICD_NewObjectPB={ICDHeader=sI}^{OpaqueICAObject}{ICAObjectInfo=II}^{OpaqueICAObject}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICDCompletion' type='^?'>
+      <arg declared_type='ICDHeader*' type='^{ICDHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ICDNewProperty'>
-    <arg type='^{ICD_NewPropertyPB={ICDHeader=sI}^{OpaqueICAObject}{ICAPropertyInfo=IIII}^{OpaqueICAProperty}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ICDHeader=sI}'/>
-      <retval type='v'/>
+    <arg name='pb' declared_type='ICD_NewPropertyPB*' type='^{ICD_NewPropertyPB={ICDHeader=sI}^{OpaqueICAObject}{ICAPropertyInfo=IIII}^{OpaqueICAProperty}}'/>
+    <arg name='completion' function_pointer='true' declared_type='ICDCompletion' type='^?'>
+      <arg declared_type='ICDHeader*' type='^{ICDHeader=sI}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
 </signatures>

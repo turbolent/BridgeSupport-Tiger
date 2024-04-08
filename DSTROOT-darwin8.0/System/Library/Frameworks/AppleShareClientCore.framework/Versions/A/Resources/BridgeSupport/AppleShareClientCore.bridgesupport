@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/AppleTalk.framework'/>
   <depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
@@ -8,40 +7,41 @@
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
   <depends_on path='/System/Library/Frameworks/Kerberos.framework'/>
   <function name='AFPMountURL'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inURL' declared_type='char*' type='*' const='true'/>
+    <arg name='inMountPoint' declared_type='char*' type='*' const='true'/>
+    <arg name='inMountFlags' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inAltFlags' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DisposeAFPURL'>
-    <arg type='*'/>
+    <arg name='url' declared_type='char*' type='*'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='IsAFPURL'>
-    <arg type='*'/>
-    <retval type='B'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='NewAFPURL'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <retval type='*'/>
+    <arg name='protocolName' declared_type='StringPtr' type='*'/>
+    <arg name='serverNameOrHost' declared_type='StringPtr' type='*'/>
+    <arg name='zoneNameOrNULL' declared_type='StringPtr' type='*'/>
+    <arg name='uamName' declared_type='StringPtr' type='*'/>
+    <arg name='userName' declared_type='StringPtr' type='*'/>
+    <arg name='password' declared_type='StringPtr' type='*'/>
+    <arg name='volume' declared_type='StringPtr' type='*'/>
+    <arg name='path' declared_type='StringPtr' type='*'/>
+    <retval declared_type='char*' type='*'/>
   </function>
   <function name='ParseAFPURL'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='protocolName' declared_type='StringPtr' type='*'/>
+    <arg name='serverNameOrHost' declared_type='StringPtr' type='*'/>
+    <arg name='zoneNameOr' declared_type='StringPtr' type='*'/>
+    <arg name='uamName' declared_type='StringPtr' type='*'/>
+    <arg name='userName' declared_type='StringPtr' type='*'/>
+    <arg name='password' declared_type='StringPtr' type='*'/>
+    <arg name='volume' declared_type='StringPtr' type='*'/>
+    <arg name='path' declared_type='StringPtr' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

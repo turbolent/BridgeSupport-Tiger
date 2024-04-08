@@ -1,29 +1,28 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
-  <constant name='IMCapabilityAudioConference' type='@'/>
-  <constant name='IMCapabilityDirectIM' type='@'/>
-  <constant name='IMCapabilityFileSharing' type='@'/>
-  <constant name='IMCapabilityFileTransfer' type='@'/>
-  <constant name='IMCapabilityText' type='@'/>
-  <constant name='IMCapabilityVideoConference' type='@'/>
-  <constant name='IMPersonAVBusyKey' type='@'/>
-  <constant name='IMPersonCapabilitiesKey' type='@'/>
-  <constant name='IMPersonEmailKey' type='@'/>
-  <constant name='IMPersonFirstNameKey' type='@'/>
-  <constant name='IMPersonIdleSinceKey' type='@'/>
-  <constant name='IMPersonInfoChangedNotification' type='@'/>
-  <constant name='IMPersonLastNameKey' type='@'/>
-  <constant name='IMPersonPictureDataKey' type='@'/>
-  <constant name='IMPersonScreenNameKey' type='@'/>
-  <constant name='IMPersonServiceNameKey' type='@'/>
-  <constant name='IMPersonStatusChangedNotification' type='@'/>
-  <constant name='IMPersonStatusKey' type='@'/>
-  <constant name='IMPersonStatusMessageKey' type='@'/>
-  <constant name='IMServiceStatusChangedNotification' type='@'/>
-  <constant name='IMStatusImagesChangedAppearanceNotification' type='@'/>
+  <constant name='IMCapabilityAudioConference' declared_type='NSString*' type='@'/>
+  <constant name='IMCapabilityDirectIM' declared_type='NSString*' type='@'/>
+  <constant name='IMCapabilityFileSharing' declared_type='NSString*' type='@'/>
+  <constant name='IMCapabilityFileTransfer' declared_type='NSString*' type='@'/>
+  <constant name='IMCapabilityText' declared_type='NSString*' type='@'/>
+  <constant name='IMCapabilityVideoConference' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonAVBusyKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonCapabilitiesKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonEmailKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonFirstNameKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonIdleSinceKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonInfoChangedNotification' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonLastNameKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonPictureDataKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonScreenNameKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonServiceNameKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonStatusChangedNotification' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonStatusKey' declared_type='NSString*' type='@'/>
+  <constant name='IMPersonStatusMessageKey' declared_type='NSString*' type='@'/>
+  <constant name='IMServiceStatusChangedNotification' declared_type='NSString*' type='@'/>
+  <constant name='IMStatusImagesChangedAppearanceNotification' declared_type='NSString*' type='@'/>
   <enum name='IMPersonStatusAvailable' value='4'/>
   <enum name='IMPersonStatusAway' value='3'/>
   <enum name='IMPersonStatusIdle' value='2'/>
@@ -34,4 +33,56 @@
   <enum name='IMServiceStatusLoggedOut' value='0'/>
   <enum name='IMServiceStatusLoggingIn' value='3'/>
   <enum name='IMServiceStatusLoggingOut' value='2'/>
+  <class name='IMService'>
+    <method class_method='true' selector='allServices'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageURLForStatus:'>
+      <arg name='status' declared_type='IMPersonStatus' type='i' index='0'/>
+      <retval declared_type='NSURL*' type='@'/>
+    </method>
+    <method selector='infoForAllScreenNames'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='infoForPreferredScreenNames'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='infoForScreenName:'>
+      <arg name='screenName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='localizedName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='localizedShortName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method class_method='true' selector='myIdleTime'>
+      <retval declared_type='NSDate*' type='@'/>
+    </method>
+    <method class_method='true' selector='myStatus'>
+      <retval declared_type='IMPersonStatus' type='i'/>
+    </method>
+    <method selector='name'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method class_method='true' selector='notificationCenter'>
+      <retval declared_type='NSNotificationCenter*' type='@'/>
+    </method>
+    <method selector='peopleWithScreenName:'>
+      <arg name='screenName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='screenNamesForPerson:'>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='serviceWithName:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='IMService*' type='@'/>
+    </method>
+    <method selector='status'>
+      <retval declared_type='IMServiceStatus' type='i'/>
+    </method>
+  </class>
 </signatures>

@@ -1,11 +1,40 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
-  <struct name='CFHostClientContext' type='{CFHostClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
-  <struct name='CFNetServiceClientContext' type='{CFNetServiceClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
+  <struct name='CFHostClientContext' type='{CFHostClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'>
+    <field name='version' declared_type='CFIndex' type='l' type64='i'/>
+    <field name='info' declared_type='void*' type='^v'/>
+    <field name='retain' function_pointer='true' declared_type='CFAllocatorRetainCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void*' type='^v' const='true'/>
+    </field>
+    <field name='release' function_pointer='true' declared_type='CFAllocatorReleaseCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='copyDescription' function_pointer='true' declared_type='CFAllocatorCopyDescriptionCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='CFStringRef' type='^{__CFString=}'/>
+    </field>
+  </struct>
+  <struct name='CFNetServiceClientContext' type='{CFNetServiceClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'>
+    <field name='version' declared_type='CFIndex' type='l' type64='i'/>
+    <field name='info' declared_type='void*' type='^v'/>
+    <field name='retain' function_pointer='true' declared_type='CFAllocatorRetainCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void*' type='^v' const='true'/>
+    </field>
+    <field name='release' function_pointer='true' declared_type='CFAllocatorReleaseCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='copyDescription' function_pointer='true' declared_type='CFAllocatorCopyDescriptionCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='CFStringRef' type='^{__CFString=}'/>
+    </field>
+  </struct>
   <cftype name='CFHTTPAuthenticationRef' gettypeid_func='CFHTTPAuthenticationGetTypeID' type='^{_CFHTTPAuthentication=}'/>
   <cftype name='CFHTTPMessageRef' gettypeid_func='CFHTTPMessageGetTypeID' type='^{__CFHTTPMessage=}'/>
   <cftype name='CFHostRef' gettypeid_func='CFHostGetTypeID' type='^{__CFHost=}'/>
@@ -13,79 +42,79 @@
   <cftype name='CFNetServiceBrowserRef' gettypeid_func='CFNetServiceBrowserGetTypeID' type='^{__CFNetServiceBrowser=}'/>
   <cftype name='CFNetServiceMonitorRef' gettypeid_func='CFNetServiceMonitorGetTypeID' type='^{__CFNetServiceMonitor=}'/>
   <cftype name='CFNetServiceRef' gettypeid_func='CFNetServiceGetTypeID' type='^{__CFNetService=}'/>
-  <constant name='kCFFTPResourceGroup' type='^{__CFString=}'/>
-  <constant name='kCFFTPResourceLink' type='^{__CFString=}'/>
-  <constant name='kCFFTPResourceModDate' type='^{__CFString=}'/>
-  <constant name='kCFFTPResourceMode' type='^{__CFString=}'/>
-  <constant name='kCFFTPResourceName' type='^{__CFString=}'/>
-  <constant name='kCFFTPResourceOwner' type='^{__CFString=}'/>
-  <constant name='kCFFTPResourceSize' type='^{__CFString=}'/>
-  <constant name='kCFFTPResourceType' type='^{__CFString=}'/>
-  <constant name='kCFHTTPAuthenticationAccountDomain' type='^{__CFString=}'/>
-  <constant name='kCFHTTPAuthenticationPassword' type='^{__CFString=}'/>
-  <constant name='kCFHTTPAuthenticationSchemeBasic' type='^{__CFString=}'/>
-  <constant name='kCFHTTPAuthenticationSchemeDigest' type='^{__CFString=}'/>
-  <constant name='kCFHTTPAuthenticationUsername' type='^{__CFString=}'/>
-  <constant name='kCFHTTPVersion1_0' type='^{__CFString=}'/>
-  <constant name='kCFHTTPVersion1_1' type='^{__CFString=}'/>
-  <constant name='kCFStreamErrorDomainFTP' type='l' type64='i'/>
-  <constant name='kCFStreamErrorDomainHTTP' type='l' type64='i'/>
-  <constant name='kCFStreamErrorDomainMach' type='l' type64='i'/>
-  <constant name='kCFStreamErrorDomainNetDB' type='l' type64='i'/>
-  <constant name='kCFStreamErrorDomainNetServices' type='l' type64='i'/>
-  <constant name='kCFStreamErrorDomainSOCKS' type='i'/>
-  <constant name='kCFStreamErrorDomainSSL' type='i'/>
-  <constant name='kCFStreamErrorDomainSystemConfiguration' type='l' type64='i'/>
-  <constant name='kCFStreamPropertyFTPAttemptPersistentConnection' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPFetchResourceInfo' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPFileTransferOffset' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPPassword' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPProxy' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPProxyHost' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPProxyPassword' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPProxyPort' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPProxyUser' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPResourceSize' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPUsePassiveMode' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyFTPUserName' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPAttemptPersistentConnection' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPFinalURL' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPProxy' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPProxyHost' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPProxyPort' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPRequestBytesWrittenCount' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPResponseHeader' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPSProxyHost' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPSProxyPort' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyHTTPShouldAutoredirect' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyProxyLocalBypass' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySOCKSPassword' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySOCKSProxy' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySOCKSProxyHost' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySOCKSProxyPort' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySOCKSUser' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySOCKSVersion' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySSLPeerCertificates' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySSLSettings' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertyShouldCloseNativeSocket' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySocketRemoteHost' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySocketRemoteNetService' type='^{__CFString=}'/>
-  <constant name='kCFStreamPropertySocketSecurityLevel' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLAllowsAnyRoot' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLAllowsExpiredCertificates' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLAllowsExpiredRoots' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLCertificates' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLIsServer' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLLevel' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLPeerName' type='^{__CFString=}'/>
-  <constant name='kCFStreamSSLValidatesCertificateChain' type='^{__CFString=}'/>
-  <constant name='kCFStreamSocketSOCKSVersion4' type='^{__CFString=}'/>
-  <constant name='kCFStreamSocketSOCKSVersion5' type='^{__CFString=}'/>
-  <constant name='kCFStreamSocketSecurityLevelNegotiatedSSL' type='^{__CFString=}'/>
-  <constant name='kCFStreamSocketSecurityLevelNone' type='^{__CFString=}'/>
-  <constant name='kCFStreamSocketSecurityLevelSSLv2' type='^{__CFString=}'/>
-  <constant name='kCFStreamSocketSecurityLevelSSLv3' type='^{__CFString=}'/>
-  <constant name='kCFStreamSocketSecurityLevelTLSv1' type='^{__CFString=}'/>
+  <constant name='kCFFTPResourceGroup' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFFTPResourceLink' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFFTPResourceModDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFFTPResourceMode' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFFTPResourceName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFFTPResourceOwner' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFFTPResourceSize' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFFTPResourceType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFHTTPAuthenticationAccountDomain' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFHTTPAuthenticationPassword' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFHTTPAuthenticationSchemeBasic' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFHTTPAuthenticationSchemeDigest' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFHTTPAuthenticationUsername' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFHTTPVersion1_0' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFHTTPVersion1_1' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamErrorDomainFTP' declared_type='SInt32' type='l' type64='i' const='true'/>
+  <constant name='kCFStreamErrorDomainHTTP' declared_type='SInt32' type='l' type64='i' const='true'/>
+  <constant name='kCFStreamErrorDomainMach' declared_type='SInt32' type='l' type64='i' const='true'/>
+  <constant name='kCFStreamErrorDomainNetDB' declared_type='SInt32' type='l' type64='i' const='true'/>
+  <constant name='kCFStreamErrorDomainNetServices' declared_type='SInt32' type='l' type64='i' const='true'/>
+  <constant name='kCFStreamErrorDomainSOCKS' declared_type='int' type='i' const='true'/>
+  <constant name='kCFStreamErrorDomainSSL' declared_type='int' type='i' const='true'/>
+  <constant name='kCFStreamErrorDomainSystemConfiguration' declared_type='SInt32' type='l' type64='i' const='true'/>
+  <constant name='kCFStreamPropertyFTPAttemptPersistentConnection' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPFetchResourceInfo' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPFileTransferOffset' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPPassword' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPProxy' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPProxyHost' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPProxyPassword' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPProxyPort' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPProxyUser' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPResourceSize' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPUsePassiveMode' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyFTPUserName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPAttemptPersistentConnection' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPFinalURL' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPProxy' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPProxyHost' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPProxyPort' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPRequestBytesWrittenCount' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPResponseHeader' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPSProxyHost' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPSProxyPort' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyHTTPShouldAutoredirect' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyProxyLocalBypass' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySOCKSPassword' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySOCKSProxy' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySOCKSProxyHost' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySOCKSProxyPort' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySOCKSUser' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySOCKSVersion' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySSLPeerCertificates' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySSLSettings' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertyShouldCloseNativeSocket' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySocketRemoteHost' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySocketRemoteNetService' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamPropertySocketSecurityLevel' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLAllowsAnyRoot' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLAllowsExpiredCertificates' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLAllowsExpiredRoots' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLCertificates' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLIsServer' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLLevel' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLPeerName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSSLValidatesCertificateChain' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSocketSOCKSVersion4' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSocketSOCKSVersion5' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSocketSecurityLevelNegotiatedSSL' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSocketSecurityLevelNone' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSocketSecurityLevelSSLv2' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSocketSecurityLevelSSLv3' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kCFStreamSocketSecurityLevelTLSv1' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
   <enum name='kCFHostAddresses' value='0'/>
   <enum name='kCFHostNames' value='1'/>
   <enum name='kCFHostReachability' value='2'/>
@@ -134,505 +163,527 @@
   <enum name='kCFStreamSocketSecurityTLSv1' value='4'/>
   <enum name='kSOCKS5NoAcceptableMethod' value='255'/>
   <function name='CFFTPCreateParsedResourceListing'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='*'/>
-    <arg type='l' type64='i'/>
-    <arg type='^^{__CFDictionary}'/>
-    <retval type='l' type64='i'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='buffer' declared_type='UInt8*' type='*' const='true'/>
+    <arg name='bufferLength' declared_type='CFIndex' type='l' type64='i'/>
+    <arg name='parsed' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+    <retval declared_type='CFIndex' type='l' type64='i'/>
   </function>
   <function name='CFHTTPAuthenticationAppliesToRequest'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval type='B'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPAuthenticationCopyDomains'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='CFHTTPAuthenticationCopyMethod'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='CFHTTPAuthenticationCopyRealm'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='CFHTTPAuthenticationCreateFromResponse'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{_CFHTTPAuthentication=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='response' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFHTTPAuthenticationRef' already_retained='true' type='^{_CFHTTPAuthentication=}'/>
   </function>
   <function name='CFHTTPAuthenticationGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='CFHTTPAuthenticationIsValid'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPAuthenticationRequiresAccountDomain'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <retval type='B'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPAuthenticationRequiresOrderedRequests'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <retval type='B'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPAuthenticationRequiresUserNameAndPassword'>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <retval type='B'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPMessageAddAuthentication'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='B'/>
-    <retval type='B'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='authenticationFailureResponse' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='username' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='password' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='authenticationScheme' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='forProxy' declared_type='Boolean' type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPMessageAppendBytes'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='*'/>
-    <arg type='l' type64='i'/>
-    <retval type='B'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='newBytes' declared_type='UInt8*' type='*' const='true'/>
+    <arg name='numBytes' declared_type='CFIndex' type='l' type64='i'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPMessageApplyCredentialDictionary'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <arg type='^{__CFDictionary=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <arg name='dict' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPMessageApplyCredentials'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{_CFHTTPAuthentication=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='auth' declared_type='CFHTTPAuthenticationRef' type='^{_CFHTTPAuthentication=}'/>
+    <arg name='username' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='password' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPMessageCopyAllHeaderFields'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFDictionary=}'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
   </function>
   <function name='CFHTTPMessageCopyBody'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFData=}'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
   </function>
   <function name='CFHTTPMessageCopyHeaderFieldValue'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='headerField' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='CFHTTPMessageCopyRequestMethod'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='CFHTTPMessageCopyRequestURL'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFURL=}'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFURLRef' already_retained='true' type='^{__CFURL=}'/>
   </function>
   <function name='CFHTTPMessageCopyResponseStatusLine'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='response' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='CFHTTPMessageCopySerializedMessage'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFData=}'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
   </function>
   <function name='CFHTTPMessageCopyVersion'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='CFHTTPMessageCreateCopy'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFHTTPMessage=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFHTTPMessageRef' already_retained='true' type='^{__CFHTTPMessage=}'/>
   </function>
   <function name='CFHTTPMessageCreateEmpty'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='B'/>
-    <retval already_retained='true' type='^{__CFHTTPMessage=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='isRequest' declared_type='Boolean' type='B'/>
+    <retval declared_type='CFHTTPMessageRef' already_retained='true' type='^{__CFHTTPMessage=}'/>
   </function>
   <function name='CFHTTPMessageCreateRequest'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFURL=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFHTTPMessage=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='requestMethod' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <arg name='httpVersion' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFHTTPMessageRef' already_retained='true' type='^{__CFHTTPMessage=}'/>
   </function>
   <function name='CFHTTPMessageCreateResponse'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='i'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFHTTPMessage=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='statusCode' declared_type='int' type='i'/>
+    <arg name='statusDescription' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='httpVersion' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFHTTPMessageRef' already_retained='true' type='^{__CFHTTPMessage=}'/>
   </function>
   <function name='CFHTTPMessageGetResponseStatusCode'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='response' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='UInt32' type='L' type64='I'/>
   </function>
   <function name='CFHTTPMessageGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='CFHTTPMessageIsHeaderComplete'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval type='B'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPMessageIsRequest'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval type='B'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHTTPMessageSetBody'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{__CFData=}'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='bodyData' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFHTTPMessageSetHeaderFieldValue'>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='message' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='headerField' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFHTTPReadStreamSetProxy'>
-    <arg type='^{__CFReadStream=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='l' type64='i'/>
+    <arg name='httpStream' declared_type='CFReadStreamRef' type='^{__CFReadStream=}'/>
+    <arg name='proxyHost' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='proxyPort' declared_type='CFIndex' type='l' type64='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFHTTPReadStreamSetRedirectsAutomatically'>
-    <arg type='^{__CFReadStream=}'/>
-    <arg type='B'/>
+    <arg name='httpStream' declared_type='CFReadStreamRef' type='^{__CFReadStream=}'/>
+    <arg name='shouldAutoRedirect' declared_type='Boolean' type='B'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFHostCancelInfoResolution'>
-    <arg type='^{__CFHost=}'/>
-    <arg type='i'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='info' declared_type='CFHostInfoType' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFHostCreateCopy'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFHost=}'/>
-    <retval already_retained='true' type='^{__CFHost=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='host' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <retval declared_type='CFHostRef' already_retained='true' type='^{__CFHost=}'/>
   </function>
   <function name='CFHostCreateWithAddress'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFData=}'/>
-    <retval already_retained='true' type='^{__CFHost=}'/>
+    <arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='addr' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='CFHostRef' already_retained='true' type='^{__CFHost=}'/>
   </function>
   <function name='CFHostCreateWithName'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFHost=}'/>
+    <arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='hostname' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFHostRef' already_retained='true' type='^{__CFHost=}'/>
   </function>
   <function name='CFHostGetAddressing'>
-    <arg type='^{__CFHost=}'/>
-    <arg type='^B'/>
-    <retval type='^{__CFArray=}'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='hasBeenResolved' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='CFArrayRef' type='^{__CFArray=}'/>
   </function>
   <function name='CFHostGetNames'>
-    <arg type='^{__CFHost=}'/>
-    <arg type='^B'/>
-    <retval type='^{__CFArray=}'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='hasBeenResolved' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='CFArrayRef' type='^{__CFArray=}'/>
   </function>
   <function name='CFHostGetReachability'>
-    <arg type='^{__CFHost=}'/>
-    <arg type='^B'/>
-    <retval type='^{__CFData=}'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='hasBeenResolved' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='CFDataRef' type='^{__CFData=}'/>
   </function>
   <function name='CFHostGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='CFHostScheduleWithRunLoop'>
-    <arg type='^{__CFHost=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFHostSetClient'>
-    <arg type='^{__CFHost=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFHost=}'/>
-      <arg type='i'/>
-      <arg type='^{_CFStreamError=ii}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='clientCB' function_pointer='true' declared_type='CFHostClientCallBack' type='^?'>
+      <arg declared_type='CFHostRef' type='^{__CFHost=}'/>
+      <arg declared_type='CFHostInfoType' type='i'/>
+      <arg declared_type='CFStreamError*' type='^{_CFStreamError=ii}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^{CFHostClientContext=i^v^?^?^?}'/>
-    <retval type='B'/>
+    <arg name='clientContext' declared_type='CFHostClientContext*' type='^{CFHostClientContext=i^v^?^?^?}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHostStartInfoResolution'>
-    <arg type='^{__CFHost=}'/>
-    <arg type='i'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='info' declared_type='CFHostInfoType' type='i'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFHostUnscheduleFromRunLoop'>
-    <arg type='^{__CFHost=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='theHost' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetDiagnosticCopyNetworkStatusPassively'>
-    <arg type='^{__CFNetDiagnostic=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='i'/>
+    <arg name='details' declared_type='CFNetDiagnosticRef' type='^{__CFNetDiagnostic=}'/>
+    <arg name='description' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='CFNetDiagnosticStatus' type='i'/>
   </function>
   <function name='CFNetDiagnosticCreateWithStreams'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFReadStream=}'/>
-    <arg type='^{__CFWriteStream=}'/>
-    <retval already_retained='true' type='^{__CFNetDiagnostic=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='readStream' declared_type='CFReadStreamRef' type='^{__CFReadStream=}'/>
+    <arg name='writeStream' declared_type='CFWriteStreamRef' type='^{__CFWriteStream=}'/>
+    <retval declared_type='CFNetDiagnosticRef' already_retained='true' type='^{__CFNetDiagnostic=}'/>
   </function>
   <function name='CFNetDiagnosticCreateWithURL'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFURL=}'/>
-    <retval already_retained='true' type='^{__CFNetDiagnostic=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <retval declared_type='CFNetDiagnosticRef' already_retained='true' type='^{__CFNetDiagnostic=}'/>
   </function>
   <function name='CFNetDiagnosticDiagnoseProblemInteractively'>
-    <arg type='^{__CFNetDiagnostic=}'/>
-    <retval type='i'/>
+    <arg name='details' declared_type='CFNetDiagnosticRef' type='^{__CFNetDiagnostic=}'/>
+    <retval declared_type='CFNetDiagnosticStatus' type='i'/>
   </function>
   <function name='CFNetDiagnosticSetName'>
-    <arg type='^{__CFNetDiagnostic=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='details' declared_type='CFNetDiagnosticRef' type='^{__CFNetDiagnostic=}'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceBrowserCreate'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFNetServiceBrowser=}'/>
-      <arg type='L' type64='I'/>
-      <arg type='@'/>
-      <arg type='^{_CFStreamError=ii}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='clientCB' function_pointer='true' declared_type='CFNetServiceBrowserClientCallBack' type='^?'>
+      <arg declared_type='CFNetServiceBrowserRef' type='^{__CFNetServiceBrowser=}'/>
+      <arg declared_type='CFOptionFlags' type='L' type64='I'/>
+      <arg declared_type='CFTypeRef' type='@'/>
+      <arg declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^{CFNetServiceClientContext=i^v^?^?^?}'/>
-    <retval already_retained='true' type='^{__CFNetServiceBrowser=}'/>
+    <arg name='clientContext' declared_type='CFNetServiceClientContext*' type='^{CFNetServiceClientContext=i^v^?^?^?}'/>
+    <retval declared_type='CFNetServiceBrowserRef' already_retained='true' type='^{__CFNetServiceBrowser=}'/>
   </function>
   <function name='CFNetServiceBrowserGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='CFNetServiceBrowserInvalidate'>
-    <arg type='^{__CFNetServiceBrowser=}'/>
+    <arg name='browser' declared_type='CFNetServiceBrowserRef' type='^{__CFNetServiceBrowser=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceBrowserScheduleWithRunLoop'>
-    <arg type='^{__CFNetServiceBrowser=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='browser' declared_type='CFNetServiceBrowserRef' type='^{__CFNetServiceBrowser=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceBrowserSearchForDomains'>
-    <arg type='^{__CFNetServiceBrowser=}'/>
-    <arg type='B'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='browser' declared_type='CFNetServiceBrowserRef' type='^{__CFNetServiceBrowser=}'/>
+    <arg name='registrationDomains' declared_type='Boolean' type='B'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceBrowserSearchForServices'>
-    <arg type='^{__CFNetServiceBrowser=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='browser' declared_type='CFNetServiceBrowserRef' type='^{__CFNetServiceBrowser=}'/>
+    <arg name='domain' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='serviceType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceBrowserStopSearch'>
-    <arg type='^{__CFNetServiceBrowser=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
+    <arg name='browser' declared_type='CFNetServiceBrowserRef' type='^{__CFNetServiceBrowser=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceBrowserUnscheduleFromRunLoop'>
-    <arg type='^{__CFNetServiceBrowser=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='browser' declared_type='CFNetServiceBrowserRef' type='^{__CFNetServiceBrowser=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceCancel'>
-    <arg type='^{__CFNetService=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceCreate'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <retval already_retained='true' type='^{__CFNetService=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='domain' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='serviceType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='port' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='CFNetServiceRef' already_retained='true' type='^{__CFNetService=}'/>
   </function>
   <function name='CFNetServiceCreateCopy'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFNetService=}'/>
-    <retval already_retained='true' type='^{__CFNetService=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='service' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFNetServiceRef' already_retained='true' type='^{__CFNetService=}'/>
   </function>
   <function name='CFNetServiceCreateDictionaryWithTXTData'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFData=}'/>
-    <retval already_retained='true' type='^{__CFDictionary=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='txtRecord' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
   </function>
   <function name='CFNetServiceCreateTXTDataWithDictionary'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFDictionary=}'/>
-    <retval already_retained='true' type='^{__CFData=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='keyValuePairs' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
   </function>
   <function name='CFNetServiceGetAddressing'>
-    <arg type='^{__CFNetService=}'/>
-    <retval type='^{__CFArray=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFArrayRef' type='^{__CFArray=}'/>
   </function>
   <function name='CFNetServiceGetDomain'>
-    <arg type='^{__CFNetService=}'/>
-    <retval type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFStringRef' type='^{__CFString=}'/>
   </function>
   <function name='CFNetServiceGetName'>
-    <arg type='^{__CFNetService=}'/>
-    <retval type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFStringRef' type='^{__CFString=}'/>
   </function>
   <function name='CFNetServiceGetProtocolSpecificInformation'>
-    <arg type='^{__CFNetService=}'/>
-    <retval type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFStringRef' type='^{__CFString=}'/>
   </function>
   <function name='CFNetServiceGetTXTData'>
-    <arg type='^{__CFNetService=}'/>
-    <retval type='^{__CFData=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFDataRef' type='^{__CFData=}'/>
   </function>
   <function name='CFNetServiceGetTargetHost'>
-    <arg type='^{__CFNetService=}'/>
-    <retval type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFStringRef' type='^{__CFString=}'/>
   </function>
   <function name='CFNetServiceGetType'>
-    <arg type='^{__CFNetService=}'/>
-    <retval type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <retval declared_type='CFStringRef' type='^{__CFString=}'/>
   </function>
   <function name='CFNetServiceGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='CFNetServiceMonitorCreate'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFNetService=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFNetServiceMonitor=}'/>
-      <arg type='^{__CFNetService=}'/>
-      <arg type='i'/>
-      <arg type='^{__CFData=}'/>
-      <arg type='^{_CFStreamError=ii}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='clientCB' function_pointer='true' declared_type='CFNetServiceMonitorClientCallBack' type='^?'>
+      <arg declared_type='CFNetServiceMonitorRef' type='^{__CFNetServiceMonitor=}'/>
+      <arg declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+      <arg declared_type='CFNetServiceMonitorType' type='i'/>
+      <arg declared_type='CFDataRef' type='^{__CFData=}'/>
+      <arg declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^{CFNetServiceClientContext=i^v^?^?^?}'/>
-    <retval already_retained='true' type='^{__CFNetServiceMonitor=}'/>
+    <arg name='clientContext' declared_type='CFNetServiceClientContext*' type='^{CFNetServiceClientContext=i^v^?^?^?}'/>
+    <retval declared_type='CFNetServiceMonitorRef' already_retained='true' type='^{__CFNetServiceMonitor=}'/>
   </function>
   <function name='CFNetServiceMonitorGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='CFNetServiceMonitorInvalidate'>
-    <arg type='^{__CFNetServiceMonitor=}'/>
+    <arg name='monitor' declared_type='CFNetServiceMonitorRef' type='^{__CFNetServiceMonitor=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceMonitorScheduleWithRunLoop'>
-    <arg type='^{__CFNetServiceMonitor=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='monitor' declared_type='CFNetServiceMonitorRef' type='^{__CFNetServiceMonitor=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceMonitorStart'>
-    <arg type='^{__CFNetServiceMonitor=}'/>
-    <arg type='i'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='monitor' declared_type='CFNetServiceMonitorRef' type='^{__CFNetServiceMonitor=}'/>
+    <arg name='recordType' declared_type='CFNetServiceMonitorType' type='i'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceMonitorStop'>
-    <arg type='^{__CFNetServiceMonitor=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
+    <arg name='monitor' declared_type='CFNetServiceMonitorRef' type='^{__CFNetServiceMonitor=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceMonitorUnscheduleFromRunLoop'>
-    <arg type='^{__CFNetServiceMonitor=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='monitor' declared_type='CFNetServiceMonitorRef' type='^{__CFNetServiceMonitor=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceRegister'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceRegisterWithOptions'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='options' declared_type='CFOptionFlags' type='L' type64='I'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceResolve'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceResolveWithTimeout'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='d'/>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='B'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='timeout' declared_type='CFTimeInterval' type='d'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceScheduleWithRunLoop'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceSetClient'>
-    <arg type='^{__CFNetService=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFNetService=}'/>
-      <arg type='^{_CFStreamError=ii}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='clientCB' function_pointer='true' declared_type='CFNetServiceClientCallBack' type='^?'>
+      <arg declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+      <arg declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^{CFNetServiceClientContext=i^v^?^?^?}'/>
-    <retval type='B'/>
+    <arg name='clientContext' declared_type='CFNetServiceClientContext*' type='^{CFNetServiceClientContext=i^v^?^?^?}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceSetProtocolSpecificInformation'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='theInfo' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFNetServiceSetTXTData'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='^{__CFData=}'/>
-    <retval type='B'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='txtRecord' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFNetServiceUnscheduleFromRunLoop'>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='theService' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFReadStreamCreateForHTTPRequest'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <retval already_retained='true' type='^{__CFReadStream=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='request' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <retval declared_type='CFReadStreamRef' already_retained='true' type='^{__CFReadStream=}'/>
   </function>
   <function name='CFReadStreamCreateForStreamedHTTPRequest'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFHTTPMessage=}'/>
-    <arg type='^{__CFReadStream=}'/>
-    <retval already_retained='true' type='^{__CFReadStream=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='requestHeaders' declared_type='CFHTTPMessageRef' type='^{__CFHTTPMessage=}'/>
+    <arg name='requestBody' declared_type='CFReadStreamRef' type='^{__CFReadStream=}'/>
+    <retval declared_type='CFReadStreamRef' already_retained='true' type='^{__CFReadStream=}'/>
   </function>
   <function name='CFReadStreamCreateWithFTPURL'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFURL=}'/>
-    <retval already_retained='true' type='^{__CFReadStream=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='ftpURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <retval declared_type='CFReadStreamRef' already_retained='true' type='^{__CFReadStream=}'/>
   </function>
   <function name='CFSocketStreamPairSetSecurityProtocol'>
-    <arg type='^{__CFReadStream=}'/>
-    <arg type='^{__CFWriteStream=}'/>
-    <arg type='i'/>
-    <retval type='B'/>
+    <arg name='socketReadStream' declared_type='CFReadStreamRef' type='^{__CFReadStream=}'/>
+    <arg name='socketWriteStream' declared_type='CFWriteStreamRef' type='^{__CFWriteStream=}'/>
+    <arg name='securityProtocol' declared_type='CFStreamSocketSecurityProtocol' type='i'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='CFSocketStreamSOCKSGetError' inline='true'>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='l' type64='i'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='SInt32' type='l' type64='i'/>
   </function>
   <function name='CFSocketStreamSOCKSGetErrorSubdomain' inline='true'>
-    <arg type='^{_CFStreamError=ii}'/>
-    <retval type='l' type64='i'/>
+    <arg name='error' declared_type='CFStreamError*' type='^{_CFStreamError=ii}'/>
+    <retval declared_type='SInt32' type='l' type64='i'/>
   </function>
   <function name='CFStreamCreatePairWithSocketToCFHost'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFHost=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{__CFReadStream}'/>
-    <arg type='^^{__CFWriteStream}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='host' declared_type='CFHostRef' type='^{__CFHost=}'/>
+    <arg name='port' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='readStream' declared_type='CFReadStreamRef*' type='^^{__CFReadStream}'/>
+    <arg name='writeStream' declared_type='CFWriteStreamRef*' type='^^{__CFWriteStream}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFStreamCreatePairWithSocketToNetService'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFNetService=}'/>
-    <arg type='^^{__CFReadStream}'/>
-    <arg type='^^{__CFWriteStream}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='service' declared_type='CFNetServiceRef' type='^{__CFNetService=}'/>
+    <arg name='readStream' declared_type='CFReadStreamRef*' type='^^{__CFReadStream}'/>
+    <arg name='writeStream' declared_type='CFWriteStreamRef*' type='^^{__CFWriteStream}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CFWriteStreamCreateWithFTPURL'>
-    <arg type='^{__CFAllocator=}'/>
-    <arg type='^{__CFURL=}'/>
-    <retval already_retained='true' type='^{__CFWriteStream=}'/>
+    <arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+    <arg name='ftpURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <retval declared_type='CFWriteStreamRef' already_retained='true' type='^{__CFWriteStream=}'/>
   </function>
 </signatures>

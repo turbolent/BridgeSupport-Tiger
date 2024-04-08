@@ -1,10 +1,9 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
-  <constant name='NSStackTraceKey' type='@'/>
-  <constant name='NSUncaughtRuntimeErrorException' type='@'/>
-  <constant name='NSUncaughtSystemExceptionException' type='@'/>
+  <constant name='NSStackTraceKey' declared_type='NSString*' type='@'/>
+  <constant name='NSUncaughtRuntimeErrorException' declared_type='NSString*' type='@'/>
+  <constant name='NSUncaughtSystemExceptionException' declared_type='NSString*' type='@'/>
   <enum name='NSHandleOtherExceptionMask' value='512'/>
   <enum name='NSHandleTopLevelExceptionMask' value='128'/>
   <enum name='NSHandleUncaughtExceptionMask' value='2'/>
@@ -22,17 +21,61 @@
   <enum name='NSLogUncaughtExceptionMask' value='1'/>
   <enum name='NSLogUncaughtRuntimeErrorMask' value='16'/>
   <enum name='NSLogUncaughtSystemExceptionMask' value='4'/>
-  <function name='NSExceptionHandlerResume'/>
+  <function name='NSExceptionHandlerResume'>
+    <retval declared_type='void' type='v'/>
+  </function>
+  <class name='NSExceptionHandler'>
+    <method class_method='true' selector='defaultExceptionHandler'>
+      <retval declared_type='NSExceptionHandler*' type='@'/>
+    </method>
+    <method selector='delegate'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='exceptionHandlingMask'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='exceptionHangingMask'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='setDelegate:'>
+      <arg name='anObject' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setExceptionHandlingMask:'>
+      <arg name='aMask' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setExceptionHangingMask:'>
+      <arg name='aMask' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
   <class name='NSObject'>
     <method selector='exceptionHandler:shouldHandleException:mask:'>
-      <retval type='B'/>
+      <arg name='sender' declared_type='NSExceptionHandler*' type='@' index='0'/>
+      <arg name='exception' declared_type='NSException*' type='@' index='1'/>
+      <arg name='aMask' declared_type='unsigned int' type='I' index='2'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='exceptionHandler:shouldLogException:mask:'>
-      <retval type='B'/>
+      <arg name='sender' declared_type='NSExceptionHandler*' type='@' index='0'/>
+      <arg name='exception' declared_type='NSException*' type='@' index='1'/>
+      <arg name='aMask' declared_type='unsigned int' type='I' index='2'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
   </class>
   <informal_protocol name='NSExceptionHandlerDelegate'>
-    <method type='B20@0:4@8@12I16' type64='B36@0:8@16@24I32' selector='exceptionHandler:shouldHandleException:mask:'/>
-    <method type='B20@0:4@8@12I16' type64='B36@0:8@16@24I32' selector='exceptionHandler:shouldLogException:mask:'/>
+    <method type='B20@0:4@8@12I16' type64='B36@0:8@16@24I32' selector='exceptionHandler:shouldHandleException:mask:'>
+      <arg name='sender' declared_type='NSExceptionHandler*' type='@' index='0'/>
+      <arg name='exception' declared_type='NSException*' type='@' index='1'/>
+      <arg name='aMask' declared_type='unsigned int' type='I' index='2'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='B20@0:4@8@12I16' type64='B36@0:8@16@24I32' selector='exceptionHandler:shouldLogException:mask:'>
+      <arg name='sender' declared_type='NSExceptionHandler*' type='@' index='0'/>
+      <arg name='exception' declared_type='NSException*' type='@' index='1'/>
+      <arg name='aMask' declared_type='unsigned int' type='I' index='2'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
   </informal_protocol>
 </signatures>

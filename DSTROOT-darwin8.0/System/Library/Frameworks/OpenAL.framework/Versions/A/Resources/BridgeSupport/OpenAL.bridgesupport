@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
@@ -138,422 +137,490 @@
   <enum name='AL_VENDOR' value='45057'/>
   <enum name='AL_VERSION' value='45058'/>
   <function name='alBuffer3f'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='f'/>
-    <arg type='f'/>
-    <arg type='f'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALfloat' type='f'/>
+    <arg name='value2' declared_type='ALfloat' type='f'/>
+    <arg name='value3' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alBuffer3i'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='i'/>
-    <arg type='i'/>
-    <arg type='i'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALint' type='i'/>
+    <arg name='value2' declared_type='ALint' type='i'/>
+    <arg name='value3' declared_type='ALint' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alBufferData'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^v'/>
-    <arg type='i'/>
-    <arg type='i'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='format' declared_type='ALenum' type='i'/>
+    <arg name='data' declared_type='ALvoid*' type='^v' const='true'/>
+    <arg name='size' declared_type='ALsizei' type='i'/>
+    <arg name='freq' declared_type='ALsizei' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alBufferf'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='f'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alBufferfv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALfloat*' type='^f' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alBufferi'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='i'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALint' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alBufferiv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALint*' type='^i' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alDeleteBuffers'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='n' declared_type='ALsizei' type='i'/>
+    <arg name='buffers' declared_type='ALuint*' type='^I' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alDeleteSources'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='n' declared_type='ALsizei' type='i'/>
+    <arg name='sources' declared_type='ALuint*' type='^I' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alDisable'>
-    <arg type='i'/>
+    <arg name='capability' declared_type='ALenum' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alDistanceModel'>
-    <arg type='i'/>
+    <arg name='distanceModel' declared_type='ALenum' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alDopplerFactor'>
-    <arg type='f'/>
+    <arg name='value' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alDopplerVelocity'>
-    <arg type='f'/>
+    <arg name='value' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alEnable'>
-    <arg type='i'/>
+    <arg name='capability' declared_type='ALenum' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGenBuffers'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='n' declared_type='ALsizei' type='i'/>
+    <arg name='buffers' declared_type='ALuint*' type='^I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGenSources'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='n' declared_type='ALsizei' type='i'/>
+    <arg name='sources' declared_type='ALuint*' type='^I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetBoolean'>
-    <arg type='i'/>
-    <retval type='c'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <retval declared_type='ALboolean' type='c'/>
   </function>
   <function name='alGetBooleanv'>
-    <arg type='i'/>
-    <arg type='*'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='data' declared_type='ALboolean*' type='*'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetBuffer3f'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
-    <arg type='^f'/>
-    <arg type='^f'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALfloat*' type='^f'/>
+    <arg name='value2' declared_type='ALfloat*' type='^f'/>
+    <arg name='value3' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetBuffer3i'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
-    <arg type='^i'/>
-    <arg type='^i'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALint*' type='^i'/>
+    <arg name='value2' declared_type='ALint*' type='^i'/>
+    <arg name='value3' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetBufferf'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetBufferfv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetBufferi'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetBufferiv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetDouble'>
-    <arg type='i'/>
-    <retval type='d'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <retval declared_type='ALdouble' type='d'/>
   </function>
   <function name='alGetDoublev'>
-    <arg type='i'/>
-    <arg type='^d'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='data' declared_type='ALdouble*' type='^d'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetEnumValue'>
-    <arg type='*'/>
-    <retval type='i'/>
+    <arg name='ename' declared_type='ALchar*' type='*' const='true'/>
+    <retval declared_type='ALenum' type='i'/>
   </function>
   <function name='alGetError'>
-    <retval type='i'/>
+    <retval declared_type='ALenum' type='i'/>
   </function>
   <function name='alGetFloat'>
-    <arg type='i'/>
-    <retval type='f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <retval declared_type='ALfloat' type='f'/>
   </function>
   <function name='alGetFloatv'>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='data' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetInteger'>
-    <arg type='i'/>
-    <retval type='i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <retval declared_type='ALint' type='i'/>
   </function>
   <function name='alGetIntegerv'>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='data' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetListener3f'>
-    <arg type='i'/>
-    <arg type='^f'/>
-    <arg type='^f'/>
-    <arg type='^f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALfloat*' type='^f'/>
+    <arg name='value2' declared_type='ALfloat*' type='^f'/>
+    <arg name='value3' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetListener3i'>
-    <arg type='i'/>
-    <arg type='^i'/>
-    <arg type='^i'/>
-    <arg type='^i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALint*' type='^i'/>
+    <arg name='value2' declared_type='ALint*' type='^i'/>
+    <arg name='value3' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetListenerf'>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetListenerfv'>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetListeneri'>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetListeneriv'>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetProcAddress'>
-    <arg type='*'/>
-    <retval type='^v'/>
+    <arg name='fname' declared_type='ALchar*' type='*' const='true'/>
+    <retval declared_type='void*' type='^v'/>
   </function>
   <function name='alGetSource3f'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
-    <arg type='^f'/>
-    <arg type='^f'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALfloat*' type='^f'/>
+    <arg name='value2' declared_type='ALfloat*' type='^f'/>
+    <arg name='value3' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetSource3i'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
-    <arg type='^i'/>
-    <arg type='^i'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALint*' type='^i'/>
+    <arg name='value2' declared_type='ALint*' type='^i'/>
+    <arg name='value3' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetSourcef'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetSourcefv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALfloat*' type='^f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetSourcei'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetSourceiv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alGetString'>
-    <arg type='i'/>
-    <retval type='*'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <retval declared_type='ALchar*' type='*' const='true'/>
   </function>
   <function name='alIsBuffer'>
-    <arg type='I'/>
-    <retval type='c'/>
+    <arg name='bid' declared_type='ALuint' type='I'/>
+    <retval declared_type='ALboolean' type='c'/>
   </function>
   <function name='alIsEnabled'>
-    <arg type='i'/>
-    <retval type='c'/>
+    <arg name='capability' declared_type='ALenum' type='i'/>
+    <retval declared_type='ALboolean' type='c'/>
   </function>
   <function name='alIsExtensionPresent'>
-    <arg type='*'/>
-    <retval type='c'/>
+    <arg name='extname' declared_type='ALchar*' type='*' const='true'/>
+    <retval declared_type='ALboolean' type='c'/>
   </function>
   <function name='alIsSource'>
-    <arg type='I'/>
-    <retval type='c'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <retval declared_type='ALboolean' type='c'/>
   </function>
   <function name='alListener3f'>
-    <arg type='i'/>
-    <arg type='f'/>
-    <arg type='f'/>
-    <arg type='f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALfloat' type='f'/>
+    <arg name='value2' declared_type='ALfloat' type='f'/>
+    <arg name='value3' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alListener3i'>
-    <arg type='i'/>
-    <arg type='i'/>
-    <arg type='i'/>
-    <arg type='i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALint' type='i'/>
+    <arg name='value2' declared_type='ALint' type='i'/>
+    <arg name='value3' declared_type='ALint' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alListenerf'>
-    <arg type='i'/>
-    <arg type='f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alListenerfv'>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALfloat*' type='^f' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alListeneri'>
-    <arg type='i'/>
-    <arg type='i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALint' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alListeneriv'>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALint*' type='^i' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSource3f'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='f'/>
-    <arg type='f'/>
-    <arg type='f'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALfloat' type='f'/>
+    <arg name='value2' declared_type='ALfloat' type='f'/>
+    <arg name='value3' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSource3i'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='i'/>
-    <arg type='i'/>
-    <arg type='i'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value1' declared_type='ALint' type='i'/>
+    <arg name='value2' declared_type='ALint' type='i'/>
+    <arg name='value3' declared_type='ALint' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourcePause'>
-    <arg type='I'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourcePausev'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='ns' declared_type='ALsizei' type='i'/>
+    <arg name='sids' declared_type='ALuint*' type='^I' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourcePlay'>
-    <arg type='I'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourcePlayv'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='ns' declared_type='ALsizei' type='i'/>
+    <arg name='sids' declared_type='ALuint*' type='^I' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourceQueueBuffers'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='numEntries' declared_type='ALsizei' type='i'/>
+    <arg name='bids' declared_type='ALuint*' type='^I' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourceRewind'>
-    <arg type='I'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourceRewindv'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='ns' declared_type='ALsizei' type='i'/>
+    <arg name='sids' declared_type='ALuint*' type='^I' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourceStop'>
-    <arg type='I'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourceStopv'>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='ns' declared_type='ALsizei' type='i'/>
+    <arg name='sids' declared_type='ALuint*' type='^I' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourceUnqueueBuffers'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^I'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='numEntries' declared_type='ALsizei' type='i'/>
+    <arg name='bids' declared_type='ALuint*' type='^I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourcef'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='f'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourcefv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^f'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALfloat*' type='^f' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourcei'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='i'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='value' declared_type='ALint' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSourceiv'>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='sid' declared_type='ALuint' type='I'/>
+    <arg name='param' declared_type='ALenum' type='i'/>
+    <arg name='values' declared_type='ALint*' type='^i' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alSpeedOfSound'>
-    <arg type='f'/>
+    <arg name='value' declared_type='ALfloat' type='f'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alcCaptureCloseDevice'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <retval type='c'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <retval declared_type='ALCboolean' type='c'/>
   </function>
   <function name='alcCaptureOpenDevice'>
-    <arg type='*'/>
-    <arg type='I'/>
-    <arg type='i'/>
-    <arg type='i'/>
-    <retval type='^{ALCdevice_struct=}'/>
+    <arg name='devicename' declared_type='ALCchar*' type='*' const='true'/>
+    <arg name='frequency' declared_type='ALCuint' type='I'/>
+    <arg name='format' declared_type='ALCenum' type='i'/>
+    <arg name='buffersize' declared_type='ALCsizei' type='i'/>
+    <retval declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
   </function>
   <function name='alcCaptureSamples'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <arg type='^v'/>
-    <arg type='i'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <arg name='buffer' declared_type='ALCvoid*' type='^v'/>
+    <arg name='samples' declared_type='ALCsizei' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alcCaptureStart'>
-    <arg type='^{ALCdevice_struct=}'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alcCaptureStop'>
-    <arg type='^{ALCdevice_struct=}'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alcCloseDevice'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <retval type='c'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <retval declared_type='ALCboolean' type='c'/>
   </function>
   <function name='alcCreateContext'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <arg type='^i'/>
-    <retval type='^{ALCcontext_struct=}'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <arg name='attrlist' declared_type='ALCint*' type='^i' const='true'/>
+    <retval declared_type='ALCcontext*' type='^{ALCcontext_struct=}'/>
   </function>
   <function name='alcDestroyContext'>
-    <arg type='^{ALCcontext_struct=}'/>
+    <arg name='context' declared_type='ALCcontext*' type='^{ALCcontext_struct=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alcGetContextsDevice'>
-    <arg type='^{ALCcontext_struct=}'/>
-    <retval type='^{ALCdevice_struct=}'/>
+    <arg name='context' declared_type='ALCcontext*' type='^{ALCcontext_struct=}'/>
+    <retval declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
   </function>
   <function name='alcGetCurrentContext'>
-    <retval type='^{ALCcontext_struct=}'/>
+    <retval declared_type='ALCcontext*' type='^{ALCcontext_struct=}'/>
   </function>
   <function name='alcGetEnumValue'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <arg type='*'/>
-    <retval type='i'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <arg name='enumname' declared_type='ALCchar*' type='*' const='true'/>
+    <retval declared_type='ALCenum' type='i'/>
   </function>
   <function name='alcGetError'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <retval type='i'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <retval declared_type='ALCenum' type='i'/>
   </function>
   <function name='alcGetIntegerv'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <arg type='i'/>
-    <arg type='i'/>
-    <arg type='^i'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <arg name='param' declared_type='ALCenum' type='i'/>
+    <arg name='size' declared_type='ALCsizei' type='i'/>
+    <arg name='data' declared_type='ALCint*' type='^i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alcGetProcAddress'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <arg type='*'/>
-    <retval type='^v'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <arg name='funcname' declared_type='ALCchar*' type='*' const='true'/>
+    <retval declared_type='void*' type='^v'/>
   </function>
   <function name='alcGetString'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <arg type='i'/>
-    <retval type='*'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <arg name='param' declared_type='ALCenum' type='i'/>
+    <retval declared_type='ALCchar*' type='*' const='true'/>
   </function>
   <function name='alcIsExtensionPresent'>
-    <arg type='^{ALCdevice_struct=}'/>
-    <arg type='*'/>
-    <retval type='c'/>
+    <arg name='device' declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
+    <arg name='extname' declared_type='ALCchar*' type='*' const='true'/>
+    <retval declared_type='ALCboolean' type='c'/>
   </function>
   <function name='alcMakeContextCurrent'>
-    <arg type='^{ALCcontext_struct=}'/>
-    <retval type='c'/>
+    <arg name='context' declared_type='ALCcontext*' type='^{ALCcontext_struct=}'/>
+    <retval declared_type='ALCboolean' type='c'/>
   </function>
   <function name='alcOpenDevice'>
-    <arg type='*'/>
-    <retval type='^{ALCdevice_struct=}'/>
+    <arg name='devicename' declared_type='ALCchar*' type='*' const='true'/>
+    <retval declared_type='ALCdevice*' type='^{ALCdevice_struct=}'/>
   </function>
   <function name='alcProcessContext'>
-    <arg type='^{ALCcontext_struct=}'/>
+    <arg name='context' declared_type='ALCcontext*' type='^{ALCcontext_struct=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='alcSuspendContext'>
-    <arg type='^{ALCcontext_struct=}'/>
+    <arg name='context' declared_type='ALCcontext*' type='^{ALCcontext_struct=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
 </signatures>

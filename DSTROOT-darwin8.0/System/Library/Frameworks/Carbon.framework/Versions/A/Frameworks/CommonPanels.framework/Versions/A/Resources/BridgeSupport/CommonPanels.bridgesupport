@@ -1,39 +1,129 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
   <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
   <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CarbonSound.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
-  <struct name='CMYColor' type='{CMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}'/>
-  <struct name='CalibratorInfo' type='{CalibratorInfo=&quot;dataSize&quot;I&quot;displayID&quot;I&quot;profileLocationSize&quot;I&quot;profileLocationPtr&quot;^{CMProfileLocation}&quot;eventProc&quot;^?&quot;isGood&quot;B}'/>
-  <struct name='ColorPickerInfo' type='{ColorPickerInfo=&quot;theColor&quot;{PMColor=&quot;profile&quot;^^{CMProfile}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}&quot;dstProfile&quot;^^{CMProfile}&quot;flags&quot;I&quot;placeWhere&quot;s&quot;dialogOrigin&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;pickerType&quot;I&quot;eventProc&quot;^?&quot;colorProc&quot;^?&quot;colorProcData&quot;I&quot;prompt&quot;[256C]&quot;mInfo&quot;{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}&quot;newColorChosen&quot;B&quot;filler&quot;c}'/>
-  <struct name='FontSelectionQDStyle' type='{FontSelectionQDStyle=&quot;version&quot;I&quot;instance&quot;{FMFontFamilyInstance=&quot;fontFamily&quot;s&quot;fontStyle&quot;s}&quot;size&quot;s&quot;hasColor&quot;B&quot;reserved&quot;C&quot;color&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}}'/>
-  <struct name='HSLColor' type='{HSLColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;lightness&quot;S}'/>
-  <struct name='HSVColor' type='{HSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}'/>
-  <struct name='NColorPickerInfo' type='{NColorPickerInfo=&quot;theColor&quot;{NPMColor=&quot;profile&quot;^{OpaqueCMProfileRef}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}&quot;dstProfile&quot;^{OpaqueCMProfileRef}&quot;flags&quot;I&quot;placeWhere&quot;s&quot;dialogOrigin&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;pickerType&quot;I&quot;eventProc&quot;^?&quot;colorProc&quot;^?&quot;colorProcData&quot;I&quot;prompt&quot;[256C]&quot;mInfo&quot;{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}&quot;newColorChosen&quot;B&quot;reserved&quot;C}'/>
-  <struct name='NPMColor' type='{NPMColor=&quot;profile&quot;^{OpaqueCMProfileRef}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}'/>
-  <struct name='NSLDialogOptions' type='{NSLDialogOptions=&quot;version&quot;S&quot;dialogOptionFlags&quot;I&quot;windowTitle&quot;[256C]&quot;actionButtonLabel&quot;[256C]&quot;cancelButtonLabel&quot;[256C]&quot;message&quot;[256C]}'/>
-  <struct name='PMColor' type='{PMColor=&quot;profile&quot;^^{CMProfile}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}'/>
-  <struct name='PickerMenuItemInfo' type='{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}'/>
+  <struct name='CMYColor' type='{CMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}'>
+    <field name='cyan' declared_type='SmallFract' type='S'/>
+    <field name='magenta' declared_type='SmallFract' type='S'/>
+    <field name='yellow' declared_type='SmallFract' type='S'/>
+  </struct>
+  <struct name='CalibratorInfo' type='{CalibratorInfo=&quot;dataSize&quot;I&quot;displayID&quot;I&quot;profileLocationSize&quot;I&quot;profileLocationPtr&quot;^{CMProfileLocation}&quot;eventProc&quot;^?&quot;isGood&quot;B}'>
+    <field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='displayID' declared_type='CMDisplayIDType' type='L' type64='I'/>
+    <field name='profileLocationSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='profileLocationPtr' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=sl[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=sq[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}'/>
+    <field name='eventProc' function_pointer='true' declared_type='CalibrateEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='isGood' declared_type='Boolean' type='B'/>
+  </struct>
+  <struct name='ColorPickerInfo' type='{ColorPickerInfo=&quot;theColor&quot;{PMColor=&quot;profile&quot;^^{CMProfile}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}&quot;dstProfile&quot;^^{CMProfile}&quot;flags&quot;I&quot;placeWhere&quot;s&quot;dialogOrigin&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;pickerType&quot;I&quot;eventProc&quot;^?&quot;colorProc&quot;^?&quot;colorProcData&quot;I&quot;prompt&quot;[256C]&quot;mInfo&quot;{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}&quot;newColorChosen&quot;B&quot;filler&quot;c}'>
+    <field name='theColor' declared_type='PMColor' type='{PMColor=&quot;profile&quot;^^{CMProfile}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}'/>
+    <field name='dstProfile' declared_type='CMProfileHandle' type='^^{CMProfile}'/>
+    <field name='flags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='placeWhere' declared_type='DialogPlacementSpec' type='s'/>
+    <field name='dialogOrigin' declared_type='Point' type='{Point=&quot;v&quot;s&quot;h&quot;s}'/>
+    <field name='pickerType' declared_type='OSType' type='L' type64='I'/>
+    <field name='eventProc' function_pointer='true' declared_type='UserEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='Boolean' type='B'/>
+    </field>
+    <field name='colorProc' function_pointer='true' declared_type='ColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='PMColor*' type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='colorProcData' declared_type='UInt32' type='L' type64='I'/>
+    <field name='prompt' declared_type='Str255' type='[256C]'/>
+    <field name='mInfo' declared_type='PickerMenuItemInfo' type='{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}'/>
+    <field name='newColorChosen' declared_type='Boolean' type='B'/>
+    <field name='filler' declared_type='SInt8' type='c'/>
+  </struct>
+  <struct name='FontSelectionQDStyle' type='{FontSelectionQDStyle=&quot;version&quot;I&quot;instance&quot;{FMFontFamilyInstance=&quot;fontFamily&quot;s&quot;fontStyle&quot;s}&quot;size&quot;s&quot;hasColor&quot;B&quot;reserved&quot;C&quot;color&quot;{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}}'>
+    <field name='version' declared_type='UInt32' type='L' type64='I'/>
+    <field name='instance' declared_type='FMFontFamilyInstance' type='{FMFontFamilyInstance=&quot;fontFamily&quot;s&quot;fontStyle&quot;s}'/>
+    <field name='size' declared_type='FMFontSize' type='s'/>
+    <field name='hasColor' declared_type='Boolean' type='B'/>
+    <field name='reserved' declared_type='UInt8' type='C'/>
+    <field name='color' declared_type='RGBColor' type='{RGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}'/>
+  </struct>
+  <struct name='HSLColor' type='{HSLColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;lightness&quot;S}'>
+    <field name='hue' declared_type='SmallFract' type='S'/>
+    <field name='saturation' declared_type='SmallFract' type='S'/>
+    <field name='lightness' declared_type='SmallFract' type='S'/>
+  </struct>
+  <struct name='HSVColor' type='{HSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}'>
+    <field name='hue' declared_type='SmallFract' type='S'/>
+    <field name='saturation' declared_type='SmallFract' type='S'/>
+    <field name='value' declared_type='SmallFract' type='S'/>
+  </struct>
+  <struct name='NColorPickerInfo' type='{NColorPickerInfo=&quot;theColor&quot;{NPMColor=&quot;profile&quot;^{OpaqueCMProfileRef}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}&quot;dstProfile&quot;^{OpaqueCMProfileRef}&quot;flags&quot;I&quot;placeWhere&quot;s&quot;dialogOrigin&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;pickerType&quot;I&quot;eventProc&quot;^?&quot;colorProc&quot;^?&quot;colorProcData&quot;I&quot;prompt&quot;[256C]&quot;mInfo&quot;{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}&quot;newColorChosen&quot;B&quot;reserved&quot;C}'>
+    <field name='theColor' declared_type='NPMColor' type='{NPMColor=&quot;profile&quot;^{OpaqueCMProfileRef}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}'/>
+    <field name='dstProfile' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+    <field name='flags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='placeWhere' declared_type='DialogPlacementSpec' type='s'/>
+    <field name='dialogOrigin' declared_type='Point' type='{Point=&quot;v&quot;s&quot;h&quot;s}'/>
+    <field name='pickerType' declared_type='OSType' type='L' type64='I'/>
+    <field name='eventProc' function_pointer='true' declared_type='UserEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='Boolean' type='B'/>
+    </field>
+    <field name='colorProc' function_pointer='true' declared_type='NColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='NPMColor*' type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='colorProcData' declared_type='UInt32' type='L' type64='I'/>
+    <field name='prompt' declared_type='Str255' type='[256C]'/>
+    <field name='mInfo' declared_type='PickerMenuItemInfo' type='{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}'/>
+    <field name='newColorChosen' declared_type='Boolean' type='B'/>
+    <field name='reserved' declared_type='UInt8' type='C'/>
+  </struct>
+  <struct name='NPMColor' type='{NPMColor=&quot;profile&quot;^{OpaqueCMProfileRef}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}'>
+    <field name='profile' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+    <field name='color' declared_type='CMColor' type='(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})'/>
+  </struct>
+  <struct name='NSLDialogOptions' type='{NSLDialogOptions=&quot;version&quot;S&quot;dialogOptionFlags&quot;I&quot;windowTitle&quot;[256C]&quot;actionButtonLabel&quot;[256C]&quot;cancelButtonLabel&quot;[256C]&quot;message&quot;[256C]}'>
+    <field name='version' declared_type='UInt16' type='S'/>
+    <field name='dialogOptionFlags' declared_type='NSLDialogOptionFlags' type='L' type64='I'/>
+    <field name='windowTitle' declared_type='Str255' type='[256C]'/>
+    <field name='actionButtonLabel' declared_type='Str255' type='[256C]'/>
+    <field name='cancelButtonLabel' declared_type='Str255' type='[256C]'/>
+    <field name='message' declared_type='Str255' type='[256C]'/>
+  </struct>
+  <struct name='PMColor' type='{PMColor=&quot;profile&quot;^^{CMProfile}&quot;color&quot;(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})}'>
+    <field name='profile' declared_type='CMProfileHandle' type='^^{CMProfile}'/>
+    <field name='color' declared_type='CMColor' type='(CMColor=&quot;rgb&quot;{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}&quot;hsv&quot;{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}&quot;hls&quot;{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}&quot;XYZ&quot;{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}&quot;Lab&quot;{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}&quot;Luv&quot;{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}&quot;Yxy&quot;{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}&quot;cmyk&quot;{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}&quot;cmy&quot;{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}&quot;gray&quot;{CMGrayColor=&quot;gray&quot;S}&quot;mc5&quot;{CMMultichannel5Color=&quot;components&quot;[5C]}&quot;mc6&quot;{CMMultichannel6Color=&quot;components&quot;[6C]}&quot;mc7&quot;{CMMultichannel7Color=&quot;components&quot;[7C]}&quot;mc8&quot;{CMMultichannel8Color=&quot;components&quot;[8C]}&quot;namedColor&quot;{CMNamedColor=&quot;namedColorIndex&quot;I})'/>
+  </struct>
+  <struct name='PickerMenuItemInfo' type='{PickerMenuItemInfo=&quot;editMenuID&quot;s&quot;cutItem&quot;s&quot;copyItem&quot;s&quot;pasteItem&quot;s&quot;clearItem&quot;s&quot;undoItem&quot;s}'>
+    <field name='editMenuID' declared_type='short' type='s'/>
+    <field name='cutItem' declared_type='short' type='s'/>
+    <field name='copyItem' declared_type='short' type='s'/>
+    <field name='pasteItem' declared_type='short' type='s'/>
+    <field name='clearItem' declared_type='short' type='s'/>
+    <field name='undoItem' declared_type='short' type='s'/>
+  </struct>
   <cftype name='FCFontDescriptorRef' type='^{OpaqueFCFontDescriptorRef=}'/>
   <opaque name='Picker' type='^{OpaquePicker=}'/>
-  <constant name='kFCFontCGColorAttribute' type='^{__CFString=}'/>
-  <constant name='kFCFontFaceAttribute' type='^{__CFString=}'/>
-  <constant name='kFCFontFamilyAttribute' type='^{__CFString=}'/>
-  <constant name='kFCFontNameAttribute' type='^{__CFString=}'/>
-  <constant name='kFCFontSizeAttribute' type='^{__CFString=}'/>
-  <constant name='kFCFontVisibleNameAttribute' type='^{__CFString=}'/>
-  <constant name='kFontPanelATSUFontIDKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelAttributeSizesKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelAttributeTagsKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelAttributeValuesKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelAttributesKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelFeatureSelectorsKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelFeatureTypesKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelVariationAxesKey' type='^{__CFString=}'/>
-  <constant name='kFontPanelVariationValuesKey' type='^{__CFString=}'/>
+  <constant name='kFCFontCGColorAttribute' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFCFontFaceAttribute' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFCFontFamilyAttribute' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFCFontNameAttribute' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFCFontSizeAttribute' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFCFontVisibleNameAttribute' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelATSUFontIDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelAttributeSizesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelAttributeTagsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelAttributeValuesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelAttributesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelFeatureSelectorsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelFeatureTypesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelVariationAxesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kFontPanelVariationValuesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
   <enum name='fontPanelFontSelectionQDStyleVersionErr' value='-8882'/>
   <enum name='fontPanelSelectionStyleErr' value='-8881'/>
   <enum name='fontPanelShowErr' value='-8880'/>
@@ -79,346 +169,364 @@
   <enum name='typeFMFontStyle' value='1936224114'/>
   <enum name='typeFontColor' value='1666336578'/>
   <function name='CMCalibrateDisplay'>
-    <arg type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
-    <retval type='s'/>
+    <arg name='theInfo' declared_type='CalibratorInfo*' type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='CMY2RGB'>
-    <arg type='^{CMYColor=SSS}'/>
-    <arg type='^{RGBColor=SSS}'/>
+    <arg name='cColor' declared_type='CMYColor*' type='^{CMYColor=SSS}' const='true'/>
+    <arg name='rColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeCalibrateEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='CalibrateEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeCalibrateUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
-      <retval type='s'/>
+    <arg name='userUPP' function_pointer='true' declared_type='CalibrateUPP' type='^?'>
+      <arg declared_type='CalibratorInfo*' type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
+      <retval declared_type='OSErr' type='s'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeCanCalibrateUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='CanCalibrateUPP' type='^?'>
+      <arg declared_type='CMDisplayIDType' type='L' type64='I'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeColorChangedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='ColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='PMColor*' type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeNColorChangedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='NColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='NPMColor*' type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeNSLEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='NSLEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeNSLURLFilterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='NSLURLFilterUPP' type='^?'>
+      <arg declared_type='char*' type='*'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeUserEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='UserEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='FCAddCollection'>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iCollection' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='iCollectionOptions' declared_type='OptionBits' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FCAddFontDescriptorToCollection'>
-    <arg type='^{OpaqueFCFontDescriptorRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iDescriptor' declared_type='FCFontDescriptorRef' type='^{OpaqueFCFontDescriptorRef=}'/>
+    <arg name='iCollection' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FCCopyCollectionNames'>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='FCCopyFontDescriptorsInCollection'>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='iCollection' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='FCFontDescriptorCreateWithFontAttributes'>
-    <arg type='^{__CFDictionary=}'/>
-    <retval already_retained='true' type='^{OpaqueFCFontDescriptorRef=}'/>
+    <arg name='iAttributes' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='FCFontDescriptorRef' already_retained='true' type='^{OpaqueFCFontDescriptorRef=}'/>
   </function>
   <function name='FCFontDescriptorCreateWithName'>
-    <arg type='^{__CFString=}'/>
-    <arg type='f'/>
-    <retval already_retained='true' type='^{OpaqueFCFontDescriptorRef=}'/>
+    <arg name='iFontName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='iSize' declared_type='float' type='f'/>
+    <retval declared_type='FCFontDescriptorRef' already_retained='true' type='^{OpaqueFCFontDescriptorRef=}'/>
   </function>
   <function name='FCRemoveCollection'>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iCollection' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FCRemoveFontDescriptorFromCollection'>
-    <arg type='^{OpaqueFCFontDescriptorRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iDescriptor' declared_type='FCFontDescriptorRef' type='^{OpaqueFCFontDescriptorRef=}'/>
+    <arg name='iCollection' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FPIsFontPanelVisible'>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='FPShowHideFontPanel'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='Fix2SmallFract'>
-    <arg type='l' type64='i'/>
-    <retval type='S'/>
+    <arg name='f' declared_type='Fixed' type='l' type64='i'/>
+    <retval declared_type='SmallFract' type='S'/>
   </function>
   <function name='GetColor'>
-    <arg type='{Point=ss}'/>
-    <arg type='*'/>
-    <arg type='^{RGBColor=SSS}'/>
-    <arg type='^{RGBColor=SSS}'/>
-    <retval type='B'/>
+    <arg name='where' declared_type='Point' type='{Point=ss}'/>
+    <arg name='prompt' declared_type='ConstStr255Param' type='*'/>
+    <arg name='inColor' declared_type='RGBColor*' type='^{RGBColor=SSS}' const='true'/>
+    <arg name='outColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='HSL2RGB'>
-    <arg type='^{HSLColor=SSS}'/>
-    <arg type='^{RGBColor=SSS}'/>
+    <arg name='hColor' declared_type='HSLColor*' type='^{HSLColor=SSS}' const='true'/>
+    <arg name='rColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HSV2RGB'>
-    <arg type='^{HSVColor=SSS}'/>
-    <arg type='^{RGBColor=SSS}'/>
+    <arg name='hColor' declared_type='HSVColor*' type='^{HSVColor=SSS}' const='true'/>
+    <arg name='rColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeCalibrateEventUPP'>
-    <arg type='^{EventRecord=SII{Point=ss}S}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='v'/>
+    <arg name='event' declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='CalibrateEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeCalibrateUPP'>
-    <arg type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
-      <retval type='s'/>
+    <arg name='theInfo' declared_type='CalibratorInfo*' type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='CalibrateUPP' type='^?'>
+      <arg declared_type='CalibratorInfo*' type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
+      <retval declared_type='OSErr' type='s'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='InvokeCanCalibrateUPP'>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <arg name='displayID' declared_type='CMDisplayIDType' type='L' type64='I'/>
+    <arg name='errMessage' declared_type='unsigned char*' type='*'/>
+    <arg name='userUPP' function_pointer='true' declared_type='CanCalibrateUPP' type='^?'>
+      <arg declared_type='CMDisplayIDType' type='L' type64='I'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='InvokeColorChangedUPP'>
-    <arg type='l' type64='q'/>
-    <arg type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <arg name='userData' declared_type='long' type='l' type64='q'/>
+    <arg name='newColor' declared_type='PMColor*' type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='ColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='PMColor*' type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeNColorChangedUPP'>
-    <arg type='l' type64='q'/>
-    <arg type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <arg name='userData' declared_type='long' type='l' type64='q'/>
+    <arg name='newColor' declared_type='NPMColor*' type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='NColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='NPMColor*' type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeNSLEventUPP'>
-    <arg type='^{EventRecord=SII{Point=ss}S}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='newEvent' declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='NSLEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeNSLURLFilterUPP'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <arg name='url' declared_type='char*' type='*'/>
+    <arg name='displayString' declared_type='unsigned char*' type='*'/>
+    <arg name='userUPP' function_pointer='true' declared_type='NSLURLFilterUPP' type='^?'>
+      <arg declared_type='char*' type='*'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='InvokeUserEventUPP'>
-    <arg type='^{EventRecord=SII{Point=ss}S}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='B'/>
+    <arg name='event' declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='UserEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='NPickColor'>
-    <arg type='^{NColorPickerInfo={NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}^{OpaqueCMProfileRef}Is{Point=ss}I^?^?I[256C]{PickerMenuItemInfo=ssssss}BC}'/>
-    <retval type='s'/>
+    <arg name='theColorInfo' declared_type='NColorPickerInfo*' type='^{NColorPickerInfo={NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}^{OpaqueCMProfileRef}Is{Point=ss}I^?^?I[256C]{PickerMenuItemInfo=ssssss}BC}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='NSLFreeURL'>
-    <arg type='*'/>
-    <retval type='*'/>
+    <arg name='url' declared_type='char*' type='*'/>
+    <retval declared_type='char*' type='*'/>
   </function>
   <function name='NSLGetDefaultDialogOptions'>
-    <arg type='^{NSLDialogOptions=SI[256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dialogOptions' declared_type='NSLDialogOptions*' type='^{NSLDialogOptions=SI[256C][256C][256C][256C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NSLSaveURLAliasToFolder'>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <retval type='s'/>
+    <arg name='folderSelectorType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='userFriendlyName' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='NSLStandardGetURL'>
-    <arg type='^{NSLDialogOptions=SI[256C][256C][256C][256C]}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='dialogOptions' declared_type='NSLDialogOptions*' type='^{NSLDialogOptions=SI[256C][256C][256C][256C]}'/>
+    <arg name='eventProc' function_pointer='true' declared_type='NSLEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <arg name='eventProcContextPtr' declared_type='void*' type='^v'/>
+    <arg name='filterProc' function_pointer='true' declared_type='NSLURLFilterUPP' type='^?'>
+      <arg declared_type='char*' type='*'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='*'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='serviceTypeList' declared_type='char*' type='*'/>
+    <arg name='userSelectedURL' declared_type='char**' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewCalibrateEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='CalibrateEventProcPtr' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='CalibrateEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewCalibrateUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
-      <retval type='s'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='CalibrateProcPtr' type='^?'>
+      <arg declared_type='CalibratorInfo*' type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
+      <retval declared_type='OSErr' type='s'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
-      <retval type='s'/>
+    <retval function_pointer='true' declared_type='CalibrateUPP' type='^?'>
+      <arg declared_type='CalibratorInfo*' type='^{CalibratorInfo=III^{CMProfileLocation}^?B}'/>
+      <retval declared_type='OSErr' type='s'/>
     </retval>
   </function>
   <function name='NewCanCalibrateUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='CanCalibrateProcPtr' type='^?'>
+      <arg declared_type='CMDisplayIDType' type='L' type64='I'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='CanCalibrateUPP' type='^?'>
+      <arg declared_type='CMDisplayIDType' type='L' type64='I'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
   <function name='NewColorChangedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='ColorChangedProcPtr' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='PMColor*' type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='ColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='PMColor*' type='^{PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewNColorChangedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='NColorChangedProcPtr' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='NPMColor*' type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='l' type64='q'/>
-      <arg type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='NColorChangedUPP' type='^?'>
+      <arg declared_type='long' type='l' type64='q'/>
+      <arg declared_type='NPMColor*' type='^{NPMColor=^{OpaqueCMProfileRef}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewNSLEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='NSLEventProcPtr' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='NSLEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewNSLURLFilterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='NSLURLFilterProcPtr' type='^?'>
+      <arg declared_type='char*' type='*'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='NSLURLFilterUPP' type='^?'>
+      <arg declared_type='char*' type='*'/>
+      <arg declared_type='unsigned char*' type='*'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
   <function name='NewUserEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='UserEventProcPtr' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='UserEventUPP' type='^?'>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
   <function name='PickColor'>
-    <arg type='^{ColorPickerInfo={PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}^^{CMProfile}Is{Point=ss}I^?^?I[256C]{PickerMenuItemInfo=ssssss}Bc}'/>
-    <retval type='s'/>
+    <arg name='theColorInfo' declared_type='ColorPickerInfo*' type='^{ColorPickerInfo={PMColor=^^{CMProfile}(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})}^^{CMProfile}Is{Point=ss}I^?^?I[256C]{PickerMenuItemInfo=ssssss}Bc}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='RGB2CMY'>
-    <arg type='^{RGBColor=SSS}'/>
-    <arg type='^{CMYColor=SSS}'/>
+    <arg name='rColor' declared_type='RGBColor*' type='^{RGBColor=SSS}' const='true'/>
+    <arg name='cColor' declared_type='CMYColor*' type='^{CMYColor=SSS}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='RGB2HSL'>
-    <arg type='^{RGBColor=SSS}'/>
-    <arg type='^{HSLColor=SSS}'/>
+    <arg name='rColor' declared_type='RGBColor*' type='^{RGBColor=SSS}' const='true'/>
+    <arg name='hColor' declared_type='HSLColor*' type='^{HSLColor=SSS}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='RGB2HSV'>
-    <arg type='^{RGBColor=SSS}'/>
-    <arg type='^{HSVColor=SSS}'/>
+    <arg name='rColor' declared_type='RGBColor*' type='^{RGBColor=SSS}' const='true'/>
+    <arg name='hColor' declared_type='HSVColor*' type='^{HSVColor=SSS}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='SetFontInfoForSelection'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^{OpaqueEventTargetRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iStyleType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iNumStyles' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='iStyles' declared_type='void*' type='^v'/>
+    <arg name='iFPEventTarget' declared_type='EventTargetRef' type='^{OpaqueEventTargetRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='SmallFract2Fix'>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='s' declared_type='SmallFract' type='S'/>
+    <retval declared_type='Fixed' type='l' type64='i'/>
   </function>
 </signatures>

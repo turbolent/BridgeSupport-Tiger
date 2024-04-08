@@ -1,64 +1,124 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
-  <struct name='MIDIDriverInterface' type='{MIDIDriverInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;FindDevices&quot;^?&quot;Start&quot;^?&quot;Stop&quot;^?&quot;Configure&quot;^?&quot;Send&quot;^?&quot;EnableSource&quot;^?&quot;Flush&quot;^?&quot;Monitor&quot;^?}'/>
+  <struct name='MIDIDriverInterface' type='{MIDIDriverInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;FindDevices&quot;^?&quot;Start&quot;^?&quot;Stop&quot;^?&quot;Configure&quot;^?&quot;Send&quot;^?&quot;EnableSource&quot;^?&quot;Flush&quot;^?&quot;Monitor&quot;^?}'>
+    <field name='_reserved' declared_type='void*' type='^v'/>
+    <field name='QueryInterface' function_pointer='true' declared_type='HRESULT (*)(void *, REFIID, LPVOID *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='REFIID' type='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+      <arg declared_type='LPVOID*' type='^^v'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='AddRef' function_pointer='true' declared_type='ULONG (*)(void *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='ULONG' type='L' type64='I'/>
+    </field>
+    <field name='Release' function_pointer='true' declared_type='ULONG (*)(void *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='ULONG' type='L' type64='I'/>
+    </field>
+    <field name='FindDevices' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef, MIDIDeviceListRef)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <arg declared_type='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='Start' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef, MIDIDeviceListRef)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <arg declared_type='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='Stop' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='Configure' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef, MIDIDeviceRef)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <arg declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='Send' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef, MIDIPacketList *, void *, void *)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <arg declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='EnableSource' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef, MIDIEndpointRef, Boolean)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <arg declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='Flush' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef, MIDIEndpointRef, void *, void *)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <arg declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='Monitor' function_pointer='true' declared_type='OSStatus (*)(MIDIDriverRef, MIDIEndpointRef, MIDIPacketList *)' type='^?'>
+      <arg declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+      <arg declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+      <arg declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}' const='true'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+  </struct>
   <cftype name='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
-  <constant name='kMIDIDriverPropertyUsesSerial' type='^{__CFString=}'/>
+  <constant name='kMIDIDriverPropertyUsesSerial' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
   <function name='MIDIDeviceCreate'>
-    <arg type='^^{MIDIDriverInterface}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{OpaqueMIDIDevice}'/>
-    <retval type='l' type64='i'/>
+    <arg name='owner' declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='manufacturer' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='model' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outDevice' declared_type='MIDIDeviceRef*' type='^^{OpaqueMIDIDevice}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIDeviceDispose'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIDeviceListAddDevice'>
-    <arg type='^{OpaqueMIDIDeviceList=}'/>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='devList' declared_type='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
+    <arg name='dev' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIDeviceListDispose'>
-    <arg type='^{OpaqueMIDIDeviceList=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='devList' declared_type='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIDeviceListGetDevice'>
-    <arg type='^{OpaqueMIDIDeviceList=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIDevice=}'/>
+    <arg name='devList' declared_type='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
+    <arg name='index0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
   </function>
   <function name='MIDIDeviceListGetNumberOfDevices'>
-    <arg type='^{OpaqueMIDIDeviceList=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='devList' declared_type='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIDriverEnableMonitoring'>
-    <arg type='^^{MIDIDriverInterface}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='driver' declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+    <arg name='enabled' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIEndpointGetRefCons'>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <arg type='^^v'/>
-    <arg type='^^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='endpt' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='ref1' declared_type='void**' type='^^v'/>
+    <arg name='ref2' declared_type='void**' type='^^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIEndpointSetRefCons'>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <arg type='^v'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='endpt' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='ref1' declared_type='void*' type='^v'/>
+    <arg name='ref2' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIGetDriverDeviceList'>
-    <arg type='^^{MIDIDriverInterface}'/>
-    <retval type='^{OpaqueMIDIDeviceList=}'/>
+    <arg name='driver' declared_type='MIDIDriverRef' type='^^{MIDIDriverInterface}'/>
+    <retval declared_type='MIDIDeviceListRef' type='^{OpaqueMIDIDeviceList=}'/>
   </function>
   <function name='MIDIGetDriverIORunLoop'>
-    <retval type='^{__CFRunLoop=}'/>
+    <retval declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
   </function>
 </signatures>

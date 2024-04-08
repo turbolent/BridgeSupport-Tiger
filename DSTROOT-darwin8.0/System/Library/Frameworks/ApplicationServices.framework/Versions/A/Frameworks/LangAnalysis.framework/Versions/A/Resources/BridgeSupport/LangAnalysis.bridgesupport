@@ -1,22 +1,65 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework'/>
   <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
-  <struct name='DCMDictionaryHeader' type='{DCMDictionaryHeader=&quot;headerSignature&quot;I&quot;headerVersion&quot;I&quot;headerSize&quot;I&quot;accessMethod&quot;[64C]}'/>
-  <struct name='DictionaryAttributeTable' type='{DictionaryAttributeTable=&quot;datSize&quot;C&quot;datTable&quot;[1c]}'/>
-  <struct name='DictionaryInformation' type='{DictionaryInformation=&quot;dictionaryFSSpec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;numberOfRecords&quot;i&quot;currentGarbageSize&quot;i&quot;script&quot;s&quot;maximumKeyLength&quot;s&quot;keyAttributes&quot;c}' type64='{DictionaryInformation=&quot;dictionaryFSSpec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;numberOfRecords&quot;i&quot;currentGarbageSize&quot;i&quot;script&quot;s&quot;maximumKeyLength&quot;s&quot;keyAttributes&quot;c}'/>
-  <struct name='HomographDicInfoRec' type='{HomographDicInfoRec=&quot;dictionaryID&quot;^{OpaqueDCMObjectID}&quot;uniqueID&quot;I}'/>
-  <struct name='LAHomograph' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-  <struct name='LAMorpheme' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-  <struct name='LAMorphemeBundle' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-  <struct name='LAMorphemePath' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-  <struct name='LAMorphemeRec' type='{LAMorphemeRec=&quot;sourceTextLength&quot;I&quot;sourceTextPtr&quot;^v&quot;morphemeTextLength&quot;I&quot;morphemeTextPtr&quot;^v&quot;partOfSpeech&quot;I}'/>
-  <struct name='LAMorphemesArray' type='{LAMorphemesArray=&quot;morphemesCount&quot;I&quot;processedTextLength&quot;I&quot;morphemesTextLength&quot;I&quot;morphemes&quot;[1{LAMorphemeRec=&quot;sourceTextLength&quot;I&quot;sourceTextPtr&quot;^v&quot;morphemeTextLength&quot;I&quot;morphemeTextPtr&quot;^v&quot;partOfSpeech&quot;I}]}'/>
-  <struct name='MorphemeTextRange' type='{MorphemeTextRange=&quot;sourceOffset&quot;I&quot;length&quot;I}'/>
+  <struct name='DCMDictionaryHeader' type='{DCMDictionaryHeader=&quot;headerSignature&quot;I&quot;headerVersion&quot;I&quot;headerSize&quot;I&quot;accessMethod&quot;[64C]}'>
+    <field name='headerSignature' declared_type='FourCharCode' type='L' type64='I'/>
+    <field name='headerVersion' declared_type='UInt32' type='L' type64='I'/>
+    <field name='headerSize' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='accessMethod' declared_type='Str63' type='[64C]'/>
+  </struct>
+  <struct name='DictionaryAttributeTable' type='{DictionaryAttributeTable=&quot;datSize&quot;C&quot;datTable&quot;[1c]}'>
+    <field name='datSize' declared_type='UInt8' type='C'/>
+    <field name='datTable' declared_type='DictionaryEntryAttribute*' type='[1c]'/>
+  </struct>
+  <struct name='DictionaryInformation' type='{DictionaryInformation=&quot;dictionaryFSSpec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;numberOfRecords&quot;i&quot;currentGarbageSize&quot;i&quot;script&quot;s&quot;maximumKeyLength&quot;s&quot;keyAttributes&quot;c}' type64='{DictionaryInformation=&quot;dictionaryFSSpec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;numberOfRecords&quot;i&quot;currentGarbageSize&quot;i&quot;script&quot;s&quot;maximumKeyLength&quot;s&quot;keyAttributes&quot;c}'>
+    <field name='dictionaryFSSpec' declared_type='FSSpec' type='{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}' type64='{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}'/>
+    <field name='numberOfRecords' declared_type='SInt32' type='l' type64='i'/>
+    <field name='currentGarbageSize' declared_type='SInt32' type='l' type64='i'/>
+    <field name='script' declared_type='ScriptCode' type='s'/>
+    <field name='maximumKeyLength' declared_type='SInt16' type='s'/>
+    <field name='keyAttributes' declared_type='SInt8' type='c'/>
+  </struct>
+  <struct name='HomographDicInfoRec' type='{HomographDicInfoRec=&quot;dictionaryID&quot;^{OpaqueDCMObjectID}&quot;uniqueID&quot;I}'>
+    <field name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <field name='uniqueID' declared_type='DCMUniqueID' type='L' type64='I'/>
+  </struct>
+  <struct name='LAHomograph' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+    <field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+    <field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+  </struct>
+  <struct name='LAMorpheme' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+    <field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+    <field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+  </struct>
+  <struct name='LAMorphemeBundle' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+    <field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+    <field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+  </struct>
+  <struct name='LAMorphemePath' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+    <field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+    <field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+  </struct>
+  <struct name='LAMorphemeRec' type='{LAMorphemeRec=&quot;sourceTextLength&quot;I&quot;sourceTextPtr&quot;^v&quot;morphemeTextLength&quot;I&quot;morphemeTextPtr&quot;^v&quot;partOfSpeech&quot;I}'>
+    <field name='sourceTextLength' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='sourceTextPtr' declared_type='LogicalAddress' type='^v'/>
+    <field name='morphemeTextLength' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='morphemeTextPtr' declared_type='LogicalAddress' type='^v'/>
+    <field name='partOfSpeech' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='LAMorphemesArray' type='{LAMorphemesArray=&quot;morphemesCount&quot;I&quot;processedTextLength&quot;I&quot;morphemesTextLength&quot;I&quot;morphemes&quot;[1{LAMorphemeRec=&quot;sourceTextLength&quot;I&quot;sourceTextPtr&quot;^v&quot;morphemeTextLength&quot;I&quot;morphemeTextPtr&quot;^v&quot;partOfSpeech&quot;I}]}'>
+    <field name='morphemesCount' declared_type='ItemCount' type='L' type64='I'/>
+    <field name='processedTextLength' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='morphemesTextLength' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='morphemes' declared_type='LAMorphemeRec*' type='[1{LAMorphemeRec=&quot;sourceTextLength&quot;I&quot;sourceTextPtr&quot;^v&quot;morphemeTextLength&quot;I&quot;morphemeTextPtr&quot;^v&quot;partOfSpeech&quot;I}]'/>
+  </struct>
+  <struct name='MorphemeTextRange' type='{MorphemeTextRange=&quot;sourceOffset&quot;I&quot;length&quot;I}'>
+    <field name='sourceOffset' declared_type='UInt32' type='L' type64='I'/>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
   <cftype name='DCMObjectRef' type='^{OpaqueDCMObjectRef=}'/>
   <cftype name='LAContextRef' type='^{OpaqueLAContextRef=}'/>
   <cftype name='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
@@ -188,421 +231,421 @@
   <enum name='typeLAMorphemeBundle' value='1919247215'/>
   <enum name='typeLAMorphemePath' value='1919247215'/>
   <function name='DCMAddRecord'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='B'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='checkOnly' declared_type='Boolean' type='B'/>
+    <arg name='dataList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <arg name='newUniqueID' declared_type='DCMUniqueID*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMCloseDictionary'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMCompactDictionary'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='B'/>
-      <arg type='S'/>
-      <arg type='L' type64='I'/>
-      <retval type='B'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='progressProc' function_pointer='true' declared_type='DCMProgressFilterUPP' type='^?'>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='userData' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMCountObjectIterator'>
-    <arg type='^{OpaqueDCMObjectIterator=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='iterator' declared_type='DCMObjectIterator' type='^{OpaqueDCMObjectIterator=}'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='DCMCountRecord'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='count' declared_type='ItemCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMCountRecordIterator'>
-    <arg type='^{OpaqueDCMFoundRecordIterator=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='recordIterator' declared_type='DCMFoundRecordIterator' type='^{OpaqueDCMFoundRecordIterator=}'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='DCMCreateAccessMethodIterator'>
-    <arg type='^^{OpaqueDCMObjectIterator}'/>
-    <retval type='l' type64='i'/>
+    <arg name='accessMethodIterator' declared_type='DCMAccessMethodIterator*' type='^^{OpaqueDCMObjectIterator}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMCreateDictionaryIterator'>
-    <arg type='^^{OpaqueDCMObjectIterator}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryIterator' declared_type='DCMDictionaryIterator*' type='^^{OpaqueDCMObjectIterator}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMCreateFieldInfoRecord'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='fieldTag' declared_type='DescType' type='L' type64='I'/>
+    <arg name='fieldType' declared_type='DescType' type='L' type64='I'/>
+    <arg name='maxRecordSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='fieldAttributes' declared_type='DCMFieldAttributes' type='L' type64='I'/>
+    <arg name='fieldDefaultData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg name='numberOfFindMethods' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='findMethods' declared_type='DCMFindMethod*' type='^I'/>
+    <arg name='fieldInfoRecord' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMDeleteDictionary'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMDeleteRecord'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMDeriveNewDictionary'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='s'/>
-    <arg type='B'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueDCMObjectID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='srcDictionary' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='newDictionaryFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='scriptTag' declared_type='ScriptCode' type='s'/>
+    <arg name='invisible' declared_type='Boolean' type='B'/>
+    <arg name='recordCapacity' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='newDictionary' declared_type='DCMDictionaryID*' type='^^{OpaqueDCMObjectID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMDisposeObjectIterator'>
-    <arg type='^{OpaqueDCMObjectIterator=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iterator' declared_type='DCMObjectIterator' type='^{OpaqueDCMObjectIterator=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMDisposeRecordIterator'>
-    <arg type='^{OpaqueDCMFoundRecordIterator=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='recordIterator' declared_type='DCMFoundRecordIterator' type='^{OpaqueDCMFoundRecordIterator=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMFindRecords'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueDCMFoundRecordIterator}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='findMethod' declared_type='DCMFindMethod' type='L' type64='I'/>
+    <arg name='preFetchedDataNum' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='preFetchedData' declared_type='DCMFieldTag*' type='^I'/>
+    <arg name='skipCount' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='maxRecordCount' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='recordIterator' declared_type='DCMFoundRecordIterator*' type='^^{OpaqueDCMFoundRecordIterator}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetAccessMethodIDFromName'>
-    <arg type='*'/>
-    <arg type='^^{OpaqueDCMObjectID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='accessMethodName' declared_type='ConstStr63Param' type='*'/>
+    <arg name='accessMethodID' declared_type='DCMAccessMethodID*' type='^^{OpaqueDCMObjectID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetDictionaryFieldInfo'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='fieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='fieldInfoRecord' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetDictionaryIDFromFile'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^^{OpaqueDCMObjectID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='fileRef' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID*' type='^^{OpaqueDCMObjectID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetDictionaryIDFromRef'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <retval type='^{OpaqueDCMObjectID=}'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <retval declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
   </function>
   <function name='DCMGetDictionaryProperty'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='propertyTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='maxPropertySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='actualSize' declared_type='ByteCount*' type='^I'/>
+    <arg name='propertyValue' declared_type='LogicalAddress' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetDictionaryPropertyList'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='maxPropertyNum' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='numProperties' declared_type='ItemCount*' type='^I'/>
+    <arg name='propertyTag' declared_type='DCMFieldTag*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetDictionaryWriteAccess'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='l' type64='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='timeOutDuration' declared_type='Duration' type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetFieldAttributes'>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='fieldInfoRecord' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <arg name='attributes' declared_type='DCMFieldAttributes*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetFieldData'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID' type='L' type64='I'/>
+    <arg name='numOfData' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='dataTag' declared_type='DCMFieldTag*' type='^I' const='true'/>
+    <arg name='dataList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetFieldDefaultData'>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='fieldInfoRecord' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+    <arg name='fieldDefaultData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetFieldFindMethods'>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='fieldInfoRecord' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <arg name='findMethodsArrayMaxSize' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='findMethods' declared_type='DCMFindMethod*' type='^I'/>
+    <arg name='actualNumberOfFindMethods' declared_type='ItemCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetFieldMaxRecordSize'>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='fieldInfoRecord' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <arg name='maxRecordSize' declared_type='ByteCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetFieldTagAndType'>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='fieldInfoRecord' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <arg name='fieldTag' declared_type='DCMFieldTag*' type='^I'/>
+    <arg name='fieldType' declared_type='DCMFieldType*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetFileFromDictionaryID'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='fileRef' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetNextRecord'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID' type='L' type64='I'/>
+    <arg name='maxKeySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='nextKeySize' declared_type='ByteCount*' type='^I'/>
+    <arg name='nextKeyData' declared_type='LogicalAddress' type='^v'/>
+    <arg name='nextUniqueID' declared_type='DCMUniqueID*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetNthRecord'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='serialNum' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='maxKeySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount*' type='^I'/>
+    <arg name='keyData' declared_type='LogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetPrevRecord'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID' type='L' type64='I'/>
+    <arg name='maxKeySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='prevKeySize' declared_type='ByteCount*' type='^I'/>
+    <arg name='prevKeyData' declared_type='LogicalAddress' type='^v'/>
+    <arg name='prevUniqueID' declared_type='DCMUniqueID*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMGetRecordSequenceNumber'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID' type='L' type64='I'/>
+    <arg name='sequenceNum' declared_type='ItemCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMIterateFoundRecord'>
-    <arg type='^{OpaqueDCMFoundRecordIterator=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='recordIterator' declared_type='DCMFoundRecordIterator' type='^{OpaqueDCMFoundRecordIterator=}'/>
+    <arg name='maxKeySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='actualKeySize' declared_type='ByteCount*' type='^I'/>
+    <arg name='keyData' declared_type='LogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID*' type='^I'/>
+    <arg name='dataList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMIterateObject'>
-    <arg type='^{OpaqueDCMObjectIterator=}'/>
-    <arg type='^^{OpaqueDCMObjectID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iterator' declared_type='DCMObjectIterator' type='^{OpaqueDCMObjectIterator=}'/>
+    <arg name='objectID' declared_type='DCMObjectID*' type='^^{OpaqueDCMObjectID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMLibraryVersion'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='UInt32' type='L' type64='I'/>
   </function>
   <function name='DCMNewDictionary'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='s'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='B'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueDCMObjectID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='accessMethodID' declared_type='DCMAccessMethodID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='newDictionaryFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='scriptTag' declared_type='ScriptCode' type='s'/>
+    <arg name='listOfFieldInfoRecords' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <arg name='invisible' declared_type='Boolean' type='B'/>
+    <arg name='recordCapacity' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='newDictionary' declared_type='DCMDictionaryID*' type='^^{OpaqueDCMObjectID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMOpenDictionary'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueDCMObjectRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='protectKeySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='protectKey' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef*' type='^^{OpaqueDCMObjectRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMRegisterDictionaryFile'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^^{OpaqueDCMObjectID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID*' type='^^{OpaqueDCMObjectID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMReleaseDictionaryWriteAccess'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='commitTransaction' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMReorganizeDictionary'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='B'/>
-      <arg type='S'/>
-      <arg type='L' type64='I'/>
-      <retval type='B'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='extraCapacity' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='progressProc' function_pointer='true' declared_type='DCMProgressFilterUPP' type='^?'>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='userData' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMResetObjectIterator'>
-    <arg type='^{OpaqueDCMObjectIterator=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iterator' declared_type='DCMObjectIterator' type='^{OpaqueDCMObjectIterator=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMSetDictionaryProperty'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <arg name='propertyTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='propertySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='propertyValue' declared_type='ConstLogicalAddress' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMSetFieldData'>
-    <arg type='^{OpaqueDCMObjectRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryRef' declared_type='DCMDictionaryRef' type='^{OpaqueDCMObjectRef=}'/>
+    <arg name='keyFieldTag' declared_type='DCMFieldTag' type='L' type64='I'/>
+    <arg name='keySize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='keyData' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='uniqueID' declared_type='DCMUniqueID' type='L' type64='I'/>
+    <arg name='dataList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DCMUnregisterDictionary'>
-    <arg type='^{OpaqueDCMObjectID=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dictionaryID' declared_type='DCMDictionaryID' type='^{OpaqueDCMObjectID=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAAddNewWord'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='environ' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg name='dictionary' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='dataList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LACloseAnalysisContext'>
-    <arg type='^{OpaqueLAContextRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='context' declared_type='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LACloseDictionary'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='environ' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg name='dictionary' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAContinuousMorphemeAnalysis'>
-    <arg type='^{OpaqueLAContextRef=}'/>
-    <arg type='^S'/>
-    <arg type='L' type64='I'/>
-    <arg type='B'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='context' declared_type='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+    <arg name='text' declared_type='ConstUniCharArrayPtr' type='^S'/>
+    <arg name='textLength' declared_type='UniCharCount' type='L' type64='I'/>
+    <arg name='incrementalText' declared_type='Boolean' type='B'/>
+    <arg name='leadingPath' declared_type='LAMorphemePath*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg name='trailingPath' declared_type='LAMorphemePath*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg name='modified' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LACreateCustomEnvironment'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <arg type='*'/>
-    <arg type='B'/>
-    <arg type='^^{OpaqueLAEnvironmentRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='baseEnvironment' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg name='newEnvironmentName' declared_type='ConstStr63Param' type='*'/>
+    <arg name='persistent' declared_type='Boolean' type='B'/>
+    <arg name='newEnvironment' declared_type='LAEnvironmentRef*' type='^^{OpaqueLAEnvironmentRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LADeleteCustomEnvironment'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='environment' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAGetEnvironmentList'>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^^{OpaqueLAEnvironmentRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='maxCount' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='actualCount' declared_type='UInt32*' type='^I'/>
+    <arg name='environmentList' declared_type='LAEnvironmentRef*' type='^^{OpaqueLAEnvironmentRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAGetEnvironmentName'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='environment' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg name='environmentName' declared_type='unsigned char*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAGetEnvironmentRef'>
-    <arg type='*'/>
-    <arg type='^^{OpaqueLAEnvironmentRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='targetEnvironmentName' declared_type='ConstStr63Param' type='*'/>
+    <arg name='environment' declared_type='LAEnvironmentRef*' type='^^{OpaqueLAEnvironmentRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAGetMorphemes'>
-    <arg type='^{OpaqueLAContextRef=}'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='context' declared_type='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+    <arg name='result' declared_type='LAMorphemePath*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LALibraryVersion'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='UInt32' type='L' type64='I'/>
   </function>
   <function name='LAListAvailableDictionaries'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='environ' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg name='maxCount' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='actualCount' declared_type='ItemCount*' type='^I'/>
+    <arg name='dictionaryList' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg name='opened' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAMorphemeAnalysis'>
-    <arg type='^{OpaqueLAContextRef=}'/>
-    <arg type='^S'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='context' declared_type='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+    <arg name='text' declared_type='ConstUniCharArrayPtr' type='^S'/>
+    <arg name='textLength' declared_type='UniCharCount' type='L' type64='I'/>
+    <arg name='leadingPath' declared_type='LAMorphemePath*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg name='trailingPath' declared_type='LAMorphemePath*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg name='pathCount' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='result' declared_type='LAMorphemeBundle*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAOpenAnalysisContext'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <arg type='^^{OpaqueLAContextRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='environ' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg name='context' declared_type='LAContextRef*' type='^^{OpaqueLAContextRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAOpenDictionary'>
-    <arg type='^{OpaqueLAEnvironmentRef=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='environ' declared_type='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg name='dictionary' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAResetAnalysis'>
-    <arg type='^{OpaqueLAContextRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='context' declared_type='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LAShiftMorphemes'>
-    <arg type='^{OpaqueLAContextRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='context' declared_type='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+    <arg name='morphemeCount' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='path' declared_type='LAMorphemePath*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg name='shiftedLength' declared_type='UniCharCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='LATextToMorphemes'>
-    <arg type='^{OpaqueLAContextRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^{LAMorphemesArray=III[1{LAMorphemeRec=I^vI^vI}]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='context' declared_type='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+    <arg name='preferedEncoding' declared_type='TextEncoding' type='L' type64='I'/>
+    <arg name='textLength' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='sourceText' declared_type='ConstLogicalAddress' type='^v'/>
+    <arg name='bufferSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='convertFlags' declared_type='OptionBits' type='L' type64='I'/>
+    <arg name='structureVersion' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='acceptedLength' declared_type='ByteCount*' type='^I'/>
+    <arg name='resultBuffer' declared_type='LAMorphemesArrayPtr' type='^{LAMorphemesArray=III[1{LAMorphemeRec=I^vI^vI}]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

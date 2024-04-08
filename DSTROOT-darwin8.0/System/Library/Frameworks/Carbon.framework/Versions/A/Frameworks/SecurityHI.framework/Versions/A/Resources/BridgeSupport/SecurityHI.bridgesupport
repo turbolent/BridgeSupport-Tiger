@@ -1,10 +1,15 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
-  <struct name='URLCallbackInfo' type='{URLCallbackInfo=&quot;version&quot;I&quot;urlRef&quot;^{OpaqueURLReference}&quot;property&quot;*&quot;currentSize&quot;I&quot;systemEvent&quot;^{EventRecord}}'/>
+  <struct name='URLCallbackInfo' type='{URLCallbackInfo=&quot;version&quot;I&quot;urlRef&quot;^{OpaqueURLReference}&quot;property&quot;*&quot;currentSize&quot;I&quot;systemEvent&quot;^{EventRecord}}'>
+    <field name='version' declared_type='UInt32' type='L' type64='I'/>
+    <field name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <field name='property' declared_type='char*' type='*' const='true'/>
+    <field name='currentSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='systemEvent' declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+  </struct>
   <opaque name='URLReference' type='^{OpaqueURLReference=}'/>
   <string_constant name='kURLAuthType' value='URLAuthType'/>
   <string_constant name='kURLCertificate' value='URLCertificate'/>
@@ -89,353 +94,355 @@
   <enum name='kUserNameAndPasswordFlag' value='1'/>
   <enum name='typeSecIdentityRef' value='1936286841'/>
   <function name='DisposeURLNotifyUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='URLNotifyUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='URLEvent' type='L' type64='I'/>
+      <arg declared_type='URLCallbackInfo*' type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeURLSystemEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='URLSystemEventUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeURLNotifyUPP'>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
-      <retval type='l' type64='i'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <arg name='event' declared_type='URLEvent' type='L' type64='I'/>
+    <arg name='callbackInfo' declared_type='URLCallbackInfo*' type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='URLNotifyUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='URLEvent' type='L' type64='I'/>
+      <arg declared_type='URLCallbackInfo*' type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeURLSystemEventUPP'>
-    <arg type='^v'/>
-    <arg type='^{EventRecord=SII{Point=ss}S}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <arg name='event' declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='URLSystemEventUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCAddAppleSharePassword'>
-    <arg type='^[16C]'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serverSignature' declared_type='AFPServerSignature*' type='^[16C]'/>
+    <arg name='serverAddress' declared_type='StringPtr' type='*'/>
+    <arg name='serverName' declared_type='StringPtr' type='*'/>
+    <arg name='volumeName' declared_type='StringPtr' type='*'/>
+    <arg name='accountName' declared_type='StringPtr' type='*'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCAddGenericPassword'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serviceName' declared_type='StringPtr' type='*'/>
+    <arg name='accountName' declared_type='StringPtr' type='*'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCAddInternetPassword'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='S'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serverName' declared_type='StringPtr' type='*'/>
+    <arg name='securityDomain' declared_type='StringPtr' type='*'/>
+    <arg name='accountName' declared_type='StringPtr' type='*'/>
+    <arg name='port' declared_type='UInt16' type='S'/>
+    <arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+    <arg name='authType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCAddInternetPasswordWithPath'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='S'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serverName' declared_type='StringPtr' type='*'/>
+    <arg name='securityDomain' declared_type='StringPtr' type='*'/>
+    <arg name='accountName' declared_type='StringPtr' type='*'/>
+    <arg name='path' declared_type='StringPtr' type='*'/>
+    <arg name='port' declared_type='UInt16' type='S'/>
+    <arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+    <arg name='authType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCAddItem'>
-    <arg type='^{OpaqueSecKeychainItemRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCChangeSettings'>
-    <arg type='^{OpaqueSecKeychainRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCCreateKeychain'>
-    <arg type='*'/>
-    <arg type='^^{OpaqueSecKeychainRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='password' declared_type='StringPtr' type='*'/>
+    <arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='KCUnlock'>
-    <arg type='^{OpaqueSecKeychainRef=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+    <arg name='password' declared_type='StringPtr' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewURLNotifyUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='URLNotifyProcPtr' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='URLEvent' type='L' type64='I'/>
+      <arg declared_type='URLCallbackInfo*' type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='URLNotifyUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='URLEvent' type='L' type64='I'/>
+      <arg declared_type='URLCallbackInfo*' type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='NewURLSystemEventUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='URLSystemEventProcPtr' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='URLSystemEventUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='SecChooseIdentity'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFArray=}'/>
-    <arg type='^^{OpaqueSecIdentityRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='displayInfo' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='identities' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <arg name='identityRef' declared_type='SecIdentityRef*' type='^^{OpaqueSecIdentityRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='SecChooseIdentityAsSheet'>
-    <arg type='^{OpaqueWindowPtr=}'/>
-    <arg type='^{OpaqueEventTargetRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFArray=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='parentWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+    <arg name='inTarget' declared_type='EventTargetRef' type='^{OpaqueEventTargetRef=}'/>
+    <arg name='displayInfo' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='identities' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='SecDisplayCertificate'>
-    <arg type='^{OpaqueSecCertificateRef=}'/>
-    <arg type='^{__CFArray=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='certificate' declared_type='SecCertificateRef' type='^{OpaqueSecCertificateRef=}'/>
+    <arg name='keychainList' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='SecDisplayCertificateGroup'>
-    <arg type='^{cssm_certgroup=III(?=^{cssm_data}^{cssm_encoded_cert}^{cssm_parsed_cert}^{cssm_cert_pair})I^v}'/>
-    <arg type='^{__CFArray=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='certificates' declared_type='CSSM_CERTGROUP*' type='^{cssm_certgroup=III(?=^{cssm_data}^{cssm_encoded_cert}^{cssm_parsed_cert}^{cssm_cert_pair})I^v}' const='true'/>
+    <arg name='keychainList' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='SecEditTrust'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{OpaqueSecTrustRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='displayInfo' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='trust' declared_type='SecTrustRef' type='^{OpaqueSecTrustRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='SecEditTrustAsSheet'>
-    <arg type='^{OpaqueWindowPtr=}'/>
-    <arg type='^{OpaqueEventTargetRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{OpaqueSecTrustRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='parentWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+    <arg name='inTarget' declared_type='EventTargetRef' type='^{OpaqueEventTargetRef=}'/>
+    <arg name='displayInfo' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='trust' declared_type='SecTrustRef' type='^{OpaqueSecTrustRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLAbort'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLDisposeReference'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLDownload'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='destination' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg name='destinationHandle' declared_type='Handle' type='^*'/>
+    <arg name='openFlags' declared_type='URLOpenFlags' type='L' type64='I'/>
+    <arg name='eventProc' function_pointer='true' declared_type='URLSystemEventUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetBuffer'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^^v'/>
-    <arg type='^i' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='buffer' declared_type='void**' type='^^v'/>
+    <arg name='bufferSize' declared_type='Size*' type='^i' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetCurrentState'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='state' declared_type='URLState*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetDataAvailable'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^i' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='dataSize' declared_type='Size*' type='^i' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetError'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='urlError' declared_type='OSStatus*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetFileInfo'>
-    <arg type='*'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='fName' declared_type='StringPtr' type='*'/>
+    <arg name='fType' declared_type='OSType*' type='^I'/>
+    <arg name='fCreator' declared_type='OSType*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetProperty'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='*'/>
-    <arg type='^v'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='property' declared_type='char*' type='*' const='true'/>
+    <arg name='propertyBuffer' declared_type='void*' type='^v'/>
+    <arg name='bufferSize' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetPropertySize'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='*'/>
-    <arg type='^i' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='property' declared_type='char*' type='*' const='true'/>
+    <arg name='propertySize' declared_type='Size*' type='^i' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLGetURLAccessVersion'>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='returnVers' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLIdle'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLNewReference'>
-    <arg type='*'/>
-    <arg type='^^{OpaqueURLReference}'/>
-    <retval type='l' type64='i'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='urlRef' declared_type='URLReference*' type='^^{OpaqueURLReference}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLOpen'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
-      <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='fileSpec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg name='openFlags' declared_type='URLOpenFlags' type='L' type64='I'/>
+    <arg name='notifyProc' function_pointer='true' declared_type='URLNotifyUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='URLEvent' type='L' type64='I'/>
+      <arg declared_type='URLCallbackInfo*' type='^{URLCallbackInfo=I^{OpaqueURLReference}*I^{EventRecord}}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='L' type64='Q'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='eventRegister' declared_type='URLEventMask' type='L' type64='Q'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLReleaseBuffer'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='buffer' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLSetProperty'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='*'/>
-    <arg type='^v'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='property' declared_type='char*' type='*' const='true'/>
+    <arg name='propertyBuffer' declared_type='void*' type='^v'/>
+    <arg name='bufferSize' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLSimpleDownload'>
-    <arg type='*'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='destination' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg name='destinationHandle' declared_type='Handle' type='^*'/>
+    <arg name='openFlags' declared_type='URLOpenFlags' type='L' type64='I'/>
+    <arg name='eventProc' function_pointer='true' declared_type='URLSystemEventUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLSimpleUpload'>
-    <arg type='*'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='source' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='openFlags' declared_type='URLOpenFlags' type='L' type64='I'/>
+    <arg name='eventProc' function_pointer='true' declared_type='URLSystemEventUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='URLUpload'>
-    <arg type='^{OpaqueURLReference=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <retval type='l' type64='i'/>
+    <arg name='urlRef' declared_type='URLReference' type='^{OpaqueURLReference=}'/>
+    <arg name='source' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='openFlags' declared_type='URLOpenFlags' type='L' type64='I'/>
+    <arg name='eventProc' function_pointer='true' declared_type='URLSystemEventUPP' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='userContext' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='kcaddapplesharepassword'>
-    <arg type='^[16C]'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serverSignature' declared_type='AFPServerSignature*' type='^[16C]'/>
+    <arg name='serverAddress' declared_type='char*' type='*' const='true'/>
+    <arg name='serverName' declared_type='char*' type='*' const='true'/>
+    <arg name='volumeName' declared_type='char*' type='*' const='true'/>
+    <arg name='accountName' declared_type='char*' type='*' const='true'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='kcaddgenericpassword'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serviceName' declared_type='char*' type='*' const='true'/>
+    <arg name='accountName' declared_type='char*' type='*' const='true'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='kcaddinternetpassword'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='S'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serverName' declared_type='char*' type='*' const='true'/>
+    <arg name='securityDomain' declared_type='char*' type='*' const='true'/>
+    <arg name='accountName' declared_type='char*' type='*' const='true'/>
+    <arg name='port' declared_type='UInt16' type='S'/>
+    <arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+    <arg name='authType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='kcaddinternetpasswordwithpath'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='S'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueSecKeychainItemRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='serverName' declared_type='char*' type='*' const='true'/>
+    <arg name='securityDomain' declared_type='char*' type='*' const='true'/>
+    <arg name='accountName' declared_type='char*' type='*' const='true'/>
+    <arg name='path' declared_type='char*' type='*' const='true'/>
+    <arg name='port' declared_type='UInt16' type='S'/>
+    <arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+    <arg name='authType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='passwordLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='passwordData' declared_type='void*' type='^v' const='true'/>
+    <arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='kccreatekeychain'>
-    <arg type='*'/>
-    <arg type='^^{OpaqueSecKeychainRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='password' declared_type='char*' type='*' const='true'/>
+    <arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='kcunlock'>
-    <arg type='^{OpaqueSecKeychainRef=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+    <arg name='password' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

@@ -11,11 +11,21 @@
 <!ATTLIST depends_on path CDATA #REQUIRED>
 
 <!-- Structures. -->
-<!ELEMENT struct EMPTY>
+<!ELEMENT struct (field*)>
 <!ATTLIST struct name CDATA #REQUIRED>
 <!ATTLIST struct type CDATA #REQUIRED>
 <!ATTLIST struct type64 CDATA #IMPLIED>
 <!ATTLIST struct opaque %boolean; #IMPLIED>
+
+<!-- Fields. -->
+<!ELEMENT field (arg*,retval?)>
+<!ATTLIST field name CDATA #IMPLIED>
+<!ATTLIST field type CDATA #REQUIRED>
+<!ATTLIST field type64 CDATA #IMPLIED>
+<!ATTLIST field declared_type CDATA #IMPLIED>
+<!ATTLIST field declared_type64 CDATA #IMPLIED>
+<!ATTLIST field const %boolean; #IMPLIED>
+<!ATTLIST field function_pointer %boolean; #IMPLIED>
 
 <!-- Opaques. -->
 <!ELEMENT opaque EMPTY>
@@ -37,6 +47,9 @@
 <!ATTLIST constant type CDATA #REQUIRED>
 <!ATTLIST constant type64 CDATA #IMPLIED>
 <!ATTLIST constant magic_cookie %boolean; #IMPLIED>
+<!ATTLIST constant declared_type CDATA #IMPLIED>
+<!ATTLIST constant declared_type64 CDATA #IMPLIED>
+<!ATTLIST constant const %boolean; #IMPLIED>
 
 <!-- String constants. -->
 <!ELEMENT string_constant EMPTY>
@@ -71,6 +84,10 @@
 <!ATTLIST arg printf_format %boolean; #IMPLIED>
 <!ATTLIST arg sel_of_type CDATA #IMPLIED>
 <!ATTLIST arg sel_of_type64 CDATA #IMPLIED>
+<!ATTLIST arg declared_type CDATA #IMPLIED>
+<!ATTLIST arg declared_type64 CDATA #IMPLIED>
+<!ATTLIST arg name CDATA #IMPLIED>
+<!ATTLIST arg const %boolean; #IMPLIED>
 
 <!-- Return values. -->
 <!ELEMENT retval (arg*, retval?)>
@@ -82,6 +99,8 @@
 <!ATTLIST retval type CDATA #IMPLIED>
 <!ATTLIST retval type64 CDATA #IMPLIED>
 <!ATTLIST retval function_pointer %boolean; #IMPLIED>
+<!ATTLIST retval declared_type CDATA #IMPLIED>
+<!ATTLIST retval const %boolean; #IMPLIED>
 
 <!-- Functions. -->
 <!ELEMENT function (arg*,retval?)>

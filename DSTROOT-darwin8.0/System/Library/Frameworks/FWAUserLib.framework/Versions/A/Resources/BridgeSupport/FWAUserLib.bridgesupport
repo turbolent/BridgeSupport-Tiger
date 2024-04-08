@@ -1,19 +1,84 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-  <struct name='FWACreateDeviceRec' type='{FWACreateDeviceRec=&quot;vendorID&quot;L&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}' type64='{FWACreateDeviceRec=&quot;vendorID&quot;Q&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}'/>
-  <struct name='FWACreateDeviceRecPtr' type='{FWACreateDeviceRec=&quot;vendorID&quot;L&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}' type64='{FWACreateDeviceRec=&quot;vendorID&quot;Q&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}'/>
-  <struct name='FWACreateMIDIPlugRec' type='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;L&quot;mpxID&quot;L&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}' type64='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;Q&quot;mpxID&quot;Q&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'/>
-  <struct name='FWACreateMIDIPlugRecPtr' type='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;L&quot;mpxID&quot;L&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}' type64='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;Q&quot;mpxID&quot;Q&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'/>
-  <struct name='FWACreateStreamRec' type='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;L&quot;channelNumber&quot;L&quot;direction&quot;L&quot;numAudioChannels&quot;L&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}' type64='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;Q&quot;channelNumber&quot;Q&quot;direction&quot;Q&quot;numAudioChannels&quot;Q&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}'/>
-  <struct name='FWACreateStreamRecPtr' type='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;L&quot;channelNumber&quot;L&quot;direction&quot;L&quot;numAudioChannels&quot;L&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}' type64='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;Q&quot;channelNumber&quot;Q&quot;direction&quot;Q&quot;numAudioChannels&quot;Q&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}'/>
-  <struct name='FWADeviceStatus' type='{FWADeviceStatus=&quot;version&quot;L&quot;sampleCounter&quot;L&quot;inputSampleFrame&quot;L&quot;outputSampleFrame&quot;L&quot;inputClipSampleFrame&quot;L&quot;outputClipSampleFrame&quot;L&quot;meterData&quot;[1L]}' type64='{FWADeviceStatus=&quot;version&quot;Q&quot;sampleCounter&quot;Q&quot;inputSampleFrame&quot;Q&quot;outputSampleFrame&quot;Q&quot;inputClipSampleFrame&quot;Q&quot;outputClipSampleFrame&quot;Q&quot;meterData&quot;[1Q]}'/>
-  <struct name='FWADeviceStatusRec' type='{FWADeviceStatus=&quot;version&quot;L&quot;sampleCounter&quot;L&quot;inputSampleFrame&quot;L&quot;outputSampleFrame&quot;L&quot;inputClipSampleFrame&quot;L&quot;outputClipSampleFrame&quot;L&quot;meterData&quot;[1L]}' type64='{FWADeviceStatus=&quot;version&quot;Q&quot;sampleCounter&quot;Q&quot;inputSampleFrame&quot;Q&quot;outputSampleFrame&quot;Q&quot;inputClipSampleFrame&quot;Q&quot;outputClipSampleFrame&quot;Q&quot;meterData&quot;[1Q]}'/>
-  <struct name='FWADeviceStatusRecPtr' type='{FWADeviceStatus=&quot;version&quot;L&quot;sampleCounter&quot;L&quot;inputSampleFrame&quot;L&quot;outputSampleFrame&quot;L&quot;inputClipSampleFrame&quot;L&quot;outputClipSampleFrame&quot;L&quot;meterData&quot;[1L]}' type64='{FWADeviceStatus=&quot;version&quot;Q&quot;sampleCounter&quot;Q&quot;inputSampleFrame&quot;Q&quot;outputSampleFrame&quot;Q&quot;inputClipSampleFrame&quot;Q&quot;outputClipSampleFrame&quot;Q&quot;meterData&quot;[1Q]}'/>
-  <struct name='FWAMIDIReadBuf' type='{FWAMIDIReadBuffer=&quot;bufSize&quot;L&quot;mrBuf&quot;[64L]}' type64='{FWAMIDIReadBuffer=&quot;bufSize&quot;Q&quot;mrBuf&quot;[64Q]}'/>
-  <struct name='FWAMIDIReadBuffer' type='{FWAMIDIReadBuffer=&quot;bufSize&quot;L&quot;mrBuf&quot;[64L]}' type64='{FWAMIDIReadBuffer=&quot;bufSize&quot;Q&quot;mrBuf&quot;[64Q]}'/>
+  <struct name='FWACreateDeviceRec' type='{FWACreateDeviceRec=&quot;vendorID&quot;L&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}' type64='{FWACreateDeviceRec=&quot;vendorID&quot;Q&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}'>
+    <field name='vendorID' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='deviceName' declared_type='char*' type='[64c]'/>
+    <field name='guidStr' declared_type='char*' type='[64c]'/>
+  </struct>
+  <struct name='FWACreateDeviceRecPtr' type='{FWACreateDeviceRec=&quot;vendorID&quot;L&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}' type64='{FWACreateDeviceRec=&quot;vendorID&quot;Q&quot;deviceName&quot;[64c]&quot;guidStr&quot;[64c]}'>
+    <field name='vendorID' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='deviceName' declared_type='char*' type='[64c]'/>
+    <field name='guidStr' declared_type='char*' type='[64c]'/>
+  </struct>
+  <struct name='FWACreateMIDIPlugRec' type='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;L&quot;mpxID&quot;L&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}' type64='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;Q&quot;mpxID&quot;Q&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'>
+    <field name='owningMIDIStreamRef' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='mpxID' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='plugName' declared_type='char*' type='[64c]'/>
+    <field name='plugIdent' declared_type='unsigned char*' type='[36C]'/>
+    <field name='plugIdentIsNull' declared_type='_Bool' type='B'/>
+  </struct>
+  <struct name='FWACreateMIDIPlugRecPtr' type='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;L&quot;mpxID&quot;L&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}' type64='{FWACreateMIDIPlugRec=&quot;owningMIDIStreamRef&quot;Q&quot;mpxID&quot;Q&quot;plugName&quot;[64c]&quot;plugIdent&quot;[36C]&quot;plugIdentIsNull&quot;B}'>
+    <field name='owningMIDIStreamRef' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='mpxID' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='plugName' declared_type='char*' type='[64c]'/>
+    <field name='plugIdent' declared_type='unsigned char*' type='[36C]'/>
+    <field name='plugIdentIsNull' declared_type='_Bool' type='B'/>
+  </struct>
+  <struct name='FWACreateStreamRec' type='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;L&quot;channelNumber&quot;L&quot;direction&quot;L&quot;numAudioChannels&quot;L&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}' type64='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;Q&quot;channelNumber&quot;Q&quot;direction&quot;Q&quot;numAudioChannels&quot;Q&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}'>
+    <field name='owningIsochStreamRef' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='channelNumber' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='direction' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='numAudioChannels' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='streamName' declared_type='char*' type='[64c]'/>
+    <field name='streamIdent' declared_type='unsigned char*' type='[36C]'/>
+    <field name='streamIdentIsNull' declared_type='_Bool' type='B'/>
+  </struct>
+  <struct name='FWACreateStreamRecPtr' type='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;L&quot;channelNumber&quot;L&quot;direction&quot;L&quot;numAudioChannels&quot;L&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}' type64='{FWACreateStreamRec=&quot;owningIsochStreamRef&quot;Q&quot;channelNumber&quot;Q&quot;direction&quot;Q&quot;numAudioChannels&quot;Q&quot;streamName&quot;[64c]&quot;streamIdent&quot;[36C]&quot;streamIdentIsNull&quot;B}'>
+    <field name='owningIsochStreamRef' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='channelNumber' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='direction' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='numAudioChannels' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='streamName' declared_type='char*' type='[64c]'/>
+    <field name='streamIdent' declared_type='unsigned char*' type='[36C]'/>
+    <field name='streamIdentIsNull' declared_type='_Bool' type='B'/>
+  </struct>
+  <struct name='FWADeviceStatus' type='{FWADeviceStatus=&quot;version&quot;L&quot;sampleCounter&quot;L&quot;inputSampleFrame&quot;L&quot;outputSampleFrame&quot;L&quot;inputClipSampleFrame&quot;L&quot;outputClipSampleFrame&quot;L&quot;meterData&quot;[1L]}' type64='{FWADeviceStatus=&quot;version&quot;Q&quot;sampleCounter&quot;Q&quot;inputSampleFrame&quot;Q&quot;outputSampleFrame&quot;Q&quot;inputClipSampleFrame&quot;Q&quot;outputClipSampleFrame&quot;Q&quot;meterData&quot;[1Q]}'>
+    <field name='version' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleCounter' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='inputSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='outputSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='inputClipSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='outputClipSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='meterData' declared_type='unsigned long*' type='[1L]' type64='[1Q]'/>
+  </struct>
+  <struct name='FWADeviceStatusRec' type='{FWADeviceStatus=&quot;version&quot;L&quot;sampleCounter&quot;L&quot;inputSampleFrame&quot;L&quot;outputSampleFrame&quot;L&quot;inputClipSampleFrame&quot;L&quot;outputClipSampleFrame&quot;L&quot;meterData&quot;[1L]}' type64='{FWADeviceStatus=&quot;version&quot;Q&quot;sampleCounter&quot;Q&quot;inputSampleFrame&quot;Q&quot;outputSampleFrame&quot;Q&quot;inputClipSampleFrame&quot;Q&quot;outputClipSampleFrame&quot;Q&quot;meterData&quot;[1Q]}'>
+    <field name='version' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleCounter' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='inputSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='outputSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='inputClipSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='outputClipSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='meterData' declared_type='unsigned long*' type='[1L]' type64='[1Q]'/>
+  </struct>
+  <struct name='FWADeviceStatusRecPtr' type='{FWADeviceStatus=&quot;version&quot;L&quot;sampleCounter&quot;L&quot;inputSampleFrame&quot;L&quot;outputSampleFrame&quot;L&quot;inputClipSampleFrame&quot;L&quot;outputClipSampleFrame&quot;L&quot;meterData&quot;[1L]}' type64='{FWADeviceStatus=&quot;version&quot;Q&quot;sampleCounter&quot;Q&quot;inputSampleFrame&quot;Q&quot;outputSampleFrame&quot;Q&quot;inputClipSampleFrame&quot;Q&quot;outputClipSampleFrame&quot;Q&quot;meterData&quot;[1Q]}'>
+    <field name='version' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleCounter' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='inputSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='outputSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='inputClipSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='outputClipSampleFrame' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='meterData' declared_type='unsigned long*' type='[1L]' type64='[1Q]'/>
+  </struct>
+  <struct name='FWAMIDIReadBuf' type='{FWAMIDIReadBuffer=&quot;bufSize&quot;L&quot;mrBuf&quot;[64L]}' type64='{FWAMIDIReadBuffer=&quot;bufSize&quot;Q&quot;mrBuf&quot;[64Q]}'>
+    <field name='bufSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='mrBuf' declared_type='unsigned long*' type='[64L]' type64='[64Q]'/>
+  </struct>
+  <struct name='FWAMIDIReadBuffer' type='{FWAMIDIReadBuffer=&quot;bufSize&quot;L&quot;mrBuf&quot;[64L]}' type64='{FWAMIDIReadBuffer=&quot;bufSize&quot;Q&quot;mrBuf&quot;[64Q]}'>
+    <field name='bufSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='mrBuf' declared_type='unsigned long*' type='[64L]' type64='[64Q]'/>
+  </struct>
   <cftype name='FWAAudioStreamRef' type='^{OpaqueFWAAudioStreamRef=}'/>
   <cftype name='FWADeviceRef' type='^{OpaqueFWADeviceRef=}'/>
   <cftype name='FWAEngineRef' type='^{OpaqueFWAEngineRef=}'/>
@@ -21,7 +86,7 @@
   <cftype name='FWAMIDIPlugRef' type='^{OpaqueFWAMIDIPlugRef=}'/>
   <cftype name='FWAMIDIStreamRef' type='^{OpaqueFWAMIDIStreamRef=}'/>
   <cftype name='FWARef' type='^{OpaqueFWARef=}'/>
-  <constant name='kFWADeviceStatusCurrentVersion' type='L' type64='Q'/>
+  <constant name='kFWADeviceStatusCurrentVersion' declared_type='unsigned long' type='L' type64='Q' const='true'/>
   <string_constant name='kFWAStreamEndpointIndentifier' value='kFWAudioStreamEndpointIdentifier'/>
   <enum name='kCreateAudioStreamInParamCount' value='4294967295'/>
   <enum name='kCreateAudioStreamOutParamCount' value='4294967295'/>
@@ -250,519 +315,519 @@
   <enum name='kWriteQuadletInParamCount' value='3'/>
   <enum name='kWriteQuadletOutParamCount' value='0'/>
   <function name='CreateAsyncWakePort'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='notifyPort' declared_type='mach_port_t*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAClose'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACountDevices'>
-    <arg type='^S'/>
-    <arg type='^S'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceNodeIDArray' declared_type='UInt16*' type='^S'/>
+    <arg name='deviceCount' declared_type='UInt16*' type='^S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateAudioStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='audioIO' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='audioStreamRef' declared_type='UInt32*' type='^I'/>
+    <arg name='sequenceNum' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateFWAudioDevice'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='^^{OpaqueFWADeviceRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='deviceName' declared_type='char*' type='*' const='true'/>
+    <arg name='vendorID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='guid' declared_type='char*' type='*' const='true'/>
+    <arg name='device' declared_type='FWADeviceRef*' type='^^{OpaqueFWADeviceRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateFWAudioEngine'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWADeviceRef=}'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <arg type='^^{OpaqueFWAEngineRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='owningDevice' declared_type='FWADeviceRef' type='^{OpaqueFWADeviceRef=}'/>
+    <arg name='hasInput' declared_type='_Bool' type='B'/>
+    <arg name='hasOutput' declared_type='_Bool' type='B'/>
+    <arg name='engine' declared_type='FWAEngineRef*' type='^^{OpaqueFWAEngineRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateFWAudioMIDIPlug'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAMIDIStreamRef=}'/>
-    <arg type='C'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='^^{OpaqueFWAMIDIPlugRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='owningMIDIStreamRef' declared_type='FWAMIDIStreamRef' type='^{OpaqueFWAMIDIStreamRef=}'/>
+    <arg name='mpxID' declared_type='UInt8' type='C'/>
+    <arg name='plugName' declared_type='char*' type='*'/>
+    <arg name='plugIdent' declared_type='UInt8*' type='*'/>
+    <arg name='streamRef' declared_type='FWAMIDIPlugRef*' type='^^{OpaqueFWAMIDIPlugRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateFWAudioMIDIStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueFWAMIDIStreamRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='owningIsochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='sequenceNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='direction' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='streamRef' declared_type='FWAMIDIStreamRef*' type='^^{OpaqueFWAMIDIStreamRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateFWAudioStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='^^{OpaqueFWAAudioStreamRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='owningIsochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='channelNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='direction' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='numAudioChannels' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='streamName' declared_type='char*' type='*'/>
+    <arg name='streamIdent' declared_type='UInt8*' type='*'/>
+    <arg name='streamRef' declared_type='FWAAudioStreamRef*' type='^^{OpaqueFWAAudioStreamRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateIsochStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='i'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueFWAIsochStreamRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='channelNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='direction' declared_type='FWAStreamDirection' type='i'/>
+    <arg name='numAudioChannels' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='numMIDIChannels' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef*' type='^^{OpaqueFWAIsochStreamRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWACreateMIDIStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='midiIO' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='bufSizeInBytes' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='buf' declared_type='void*' type='^v'/>
+    <arg name='sequenceNum' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='midiStreamRef' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeAudioStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='audioStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeFWAudioDevice'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWADeviceRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='device' declared_type='FWADeviceRef' type='^{OpaqueFWADeviceRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeFWAudioEngine'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAEngineRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='engine' declared_type='FWAEngineRef' type='^{OpaqueFWAEngineRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeFWAudioMIDIPlug'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAMIDIPlugRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='plugRef' declared_type='FWAMIDIPlugRef' type='^{OpaqueFWAMIDIPlugRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeFWAudioMIDIStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAMIDIStreamRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='streamRef' declared_type='FWAMIDIStreamRef' type='^{OpaqueFWAMIDIStreamRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeFWAudioStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAAudioStreamRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='streamRef' declared_type='FWAAudioStreamRef' type='^{OpaqueFWAAudioStreamRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeIsochStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWADisposeMIDIStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='midiStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAExecuteAVC'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='cmd' declared_type='UInt8*' type='*'/>
+    <arg name='cmdSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='response' declared_type='UInt8*' type='*'/>
+    <arg name='responseSize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetAEvntSource'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <retval type='^{__CFRunLoopSource=}'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <retval declared_type='CFRunLoopSourceRef' type='^{__CFRunLoopSource=}'/>
   </function>
   <function name='FWAGetClockSource'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^^{OpaqueFWAIsochStreamRef}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='streamRef' declared_type='FWAIsochStreamRef*' type='^^{OpaqueFWAIsochStreamRef}'/>
+    <arg name='sequence' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetCurrentIsochStreamRefs'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^^{OpaqueFWAIsochStreamRef}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef*' type='^^{OpaqueFWAIsochStreamRef}'/>
+    <arg name='count' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetCycleTimeOffset'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='cycleTimeOffset' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetDeviceName'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='name' declared_type='char*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetDeviceSampleRate'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='rate' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetDeviceSendMode'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='mode' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetDeviceStatus'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='outData' declared_type='void*' type='^v'/>
+    <arg name='inSize' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetDeviceStreamInfo'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='audioStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='numInput' declared_type='UInt32*' type='^I'/>
+    <arg name='inputIsochChan' declared_type='UInt32*' type='^I'/>
+    <arg name='numOutput' declared_type='UInt32*' type='^I'/>
+    <arg name='outputIsochChan' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetGUID'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^Q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='guid' declared_type='UInt64*' type='^Q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamAudioSequenceCount'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='numAudioSequence' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamAudioType'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='type' declared_type='FWAudioType*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamChannelID'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='channelID' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamDirection'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='direction' declared_type='FWAStreamDirection*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamMIDISequenceCount'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='numMIDISequence' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamOutputSpeed'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='speed' declared_type='IOFWSpeed*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamSampleRate'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='rate' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetIsochStreamState'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='state' declared_type='FWAStreamState*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetMacGUID'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^Q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='guid' declared_type='UInt64*' type='^Q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetMaxIsochChannels'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='inChannels' declared_type='UInt32*' type='^I'/>
+    <arg name='outChannels' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetMaxSequences'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='numSequences' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetMaxSpeed'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='speed' declared_type='IOFWSpeed*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetNodeID'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='outNodeID' declared_type='UInt32*' type='^I'/>
+    <arg name='outGeneration' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetNumAudioInputPlugs'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='plugs' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetNumAudioOutputPlugs'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='plugs' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetNumMIDIInputPlugs'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='plugs' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetNumMIDIOutputPlugs'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='plugs' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetProperty'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='propertyID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='data' declared_type='void*' type='^v'/>
+    <arg name='size' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetSupportedAudioTypes'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^i'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='audioTypes' declared_type='FWAudioType*' type='^i'/>
+    <arg name='count' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetSupportedSampleRates'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='sampleRates' declared_type='UInt32*' type='^I'/>
+    <arg name='count' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetVendorID'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='vendorID' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAGetVendorName'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='name' declared_type='char*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAInitAEvntSource'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^^{__CFRunLoopSource}'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='source' declared_type='CFRunLoopSourceRef*' type='^^{__CFRunLoopSource}'/>
+    <arg name='refcon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAIsMIDICapable'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='supportsMIDI' declared_type='_Bool*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAOpen'>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueFWARef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='nodeID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outRef' declared_type='FWARef*' type='^^{OpaqueFWARef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAOpenLocal'>
-    <arg type='^^{OpaqueFWARef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outRef' declared_type='FWARef*' type='^^{OpaqueFWARef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWARead'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='C'/>
-    <arg type='C'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='inAddress' declared_type='UInt8' type='C'/>
+    <arg name='inSubAddress' declared_type='UInt8' type='C'/>
+    <arg name='inDataSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='inDataPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAReadBlock'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{FWAddressStruct=SSI}'/>
-    <arg type='^I'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='address' declared_type='FWAddressPtr' type='^{FWAddressStruct=SSI}'/>
+    <arg name='size' declared_type='UInt32*' type='^I'/>
+    <arg name='outData' declared_type='UInt8*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAReadMIDIData'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FWAMIDIReadBuffer=L[64L]}' type64='^{FWAMIDIReadBuffer=Q[64Q]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='midiStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='buf' declared_type='FWAMIDIReadBuf*' type='^{FWAMIDIReadBuffer=L[64L]}' type64='^{FWAMIDIReadBuffer=Q[64Q]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAReadMIDIDataAsync'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='i'/>
-      <arg type='^v'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='midiStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='readBufSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='callback' function_pointer='true' declared_type='IOAsyncCallback2' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='IOReturn' type='i'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAReadQuadlet'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{FWAddressStruct=SSI}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='address' declared_type='FWAddressPtr' type='^{FWAddressStruct=SSI}'/>
+    <arg name='outData' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetAutoLoad'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='enable' declared_type='_Bool' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetClockSource'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='streamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='sequence' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetCycleTimeOffset'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='cycleTimeOffset' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetDeviceStreamInfo'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='audioStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='numInput' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inputIsochChan' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='numOutput' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outputIsochChan' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='update' declared_type='_Bool' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetIsochStreamAudioSequenceCount'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='numAudioSequence' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetIsochStreamAudioType'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='type' declared_type='FWAudioType' type='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetIsochStreamChannelID'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='channelID' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetIsochStreamMIDISequenceCount'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='numMIDISequence' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetIsochStreamOutputSpeed'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='speed' declared_type='IOFWSpeed' type='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetIsochStreamSampleRate'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <arg name='rate' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetNumMIDIInputPlugs'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='plugs' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetNumMIDIOutputPlugs'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='plugs' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASetProperty'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='propertyID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='data' declared_type='void*' type='^v'/>
+    <arg name='size' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAStartFWAudioDevice'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWADeviceRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='device' declared_type='FWADeviceRef' type='^{OpaqueFWADeviceRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAStartIsochStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAStopFWAudioDevice'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWADeviceRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='device' declared_type='FWADeviceRef' type='^{OpaqueFWADeviceRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAStopIsochStream'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{OpaqueFWAIsochStreamRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='isochStreamRef' declared_type='FWAIsochStreamRef' type='^{OpaqueFWAIsochStreamRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWASyncUpDevice'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAWrite'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='C'/>
-    <arg type='C'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='inAddress' declared_type='UInt8' type='C'/>
+    <arg name='inSubAddress' declared_type='UInt8' type='C'/>
+    <arg name='inDataSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='inDataPtr' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAWriteBlock'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{FWAddressStruct=SSI}'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='address' declared_type='FWAddressPtr' type='^{FWAddressStruct=SSI}'/>
+    <arg name='size' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='data' declared_type='UInt8*' type='*' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAWriteMIDIData'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='midiStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='writeMsgLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='buf' declared_type='UInt8*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAWriteMIDIDataAsync'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='i'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='midiStreamRef' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='writeMsgLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='callback' function_pointer='true' declared_type='IOAsyncCallback1' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='IOReturn' type='i'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FWAWriteQuadlet'>
-    <arg type='^{OpaqueFWARef=}'/>
-    <arg type='^{FWAddressStruct=SSI}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FWARef' type='^{OpaqueFWARef=}'/>
+    <arg name='address' declared_type='FWAddressPtr' type='^{FWAddressStruct=SSI}'/>
+    <arg name='data' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

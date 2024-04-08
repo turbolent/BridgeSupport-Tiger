@@ -1,15 +1,83 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
   <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-  <struct name='PMInterfaceAPIVersion' type='{PMInterfaceAPIVersion=&quot;u&quot;{IUnknownVTbl=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?}&quot;apiVersion&quot;^?}'/>
-  <struct name='PMInterfacePrBrowser' type='{PMInterfacePrBrowser=&quot;u&quot;{IUnknownVTbl=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?}&quot;getSelectedPrinters&quot;^?&quot;initialize&quot;^?&quot;prologue&quot;^?&quot;resize&quot;^?&quot;sync&quot;^?&quot;terminate&quot;^?&quot;worksetPrinters&quot;^?}'/>
-  <struct name='PMPrBrowserCallbacks' type='{PMPrBrowserCallbacks=&quot;version&quot;i&quot;getLookupSpec&quot;^?&quot;syncRequest&quot;^?&quot;selStatus&quot;^?}'/>
-  <struct name='PlugInIntf' type='{PlugInIntf=&quot;vtable&quot;^{PlugInIntfVTable}}'/>
+  <struct name='PMInterfaceAPIVersion' type='{PMInterfaceAPIVersion=&quot;u&quot;{IUnknownVTbl=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?}&quot;apiVersion&quot;^?}'>
+    <field name='u' declared_type='IUnknownVTbl' type='{IUnknownVTbl=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?}'/>
+    <field name='apiVersion' function_pointer='true' declared_type='PMPrBrowserAPIVersionProcPtr' type='^?'>
+      <retval declared_type='UInt32' type='L' type64='I'/>
+    </field>
+  </struct>
+  <struct name='PMInterfacePrBrowser' type='{PMInterfacePrBrowser=&quot;u&quot;{IUnknownVTbl=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?}&quot;getSelectedPrinters&quot;^?&quot;initialize&quot;^?&quot;prologue&quot;^?&quot;resize&quot;^?&quot;sync&quot;^?&quot;terminate&quot;^?&quot;worksetPrinters&quot;^?}'>
+    <field name='u' declared_type='IUnknownVTbl' type='{IUnknownVTbl=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?}'/>
+    <field name='getSelectedPrinters' function_pointer='true' declared_type='PMPrBrowserGetSelectedPrintersProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserContext' type='L' type64='I'/>
+      <arg declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='initialize' function_pointer='true' declared_type='PMPrBrowserInitializeProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserContext' type='L' type64='I'/>
+      <arg declared_type='PMPrBrowserRef' type='l' type64='i'/>
+      <arg declared_type='PMPrBrowserCallbacksPtr' type='^{PMPrBrowserCallbacks=i^?^?^?}'/>
+      <arg declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='prologue' function_pointer='true' declared_type='PMPrBrowserPrologueProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserContext*' type='^I'/>
+      <arg declared_type='PMPrBrowserFlags' type='L' type64='I'/>
+      <arg declared_type='CFStringRef*' type='^^{__CFString}'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='resize' function_pointer='true' declared_type='PMPrBrowserResizeProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserContext' type='L' type64='I'/>
+      <arg declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='sync' function_pointer='true' declared_type='PMPrBrowserSyncProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserContext' type='L' type64='I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='terminate' function_pointer='true' declared_type='PMPrBrowserTerminateProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserContext' type='L' type64='I'/>
+      <arg declared_type='OSStatus' type='l' type64='i'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='worksetPrinters' function_pointer='true' declared_type='PMPrBrowserWorksetPrintersProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserContext' type='L' type64='I'/>
+      <arg declared_type='CFArrayRef' type='^{__CFArray=}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+  </struct>
+  <struct name='PMPrBrowserCallbacks' type='{PMPrBrowserCallbacks=&quot;version&quot;i&quot;getLookupSpec&quot;^?&quot;syncRequest&quot;^?&quot;selStatus&quot;^?}'>
+    <field name='version' declared_type='CFIndex' type='l' type64='i'/>
+    <field name='getLookupSpec' function_pointer='true' declared_type='PMPrBrowserGetLookupSpecProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserRef' type='l' type64='i'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='syncRequest' function_pointer='true' declared_type='PMPrBrowserSyncRequestProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserRef' type='l' type64='i'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='selStatus' function_pointer='true' declared_type='PMPrBrowserSelectionStatusProcPtr' type='^?'>
+      <arg declared_type='PMPrBrowserRef' type='l' type64='i'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='Boolean' type='B'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+  </struct>
+  <struct name='PlugInIntf' type='{PlugInIntf=&quot;vtable&quot;^{PlugInIntfVTable}}'>
+    <field name='vtable' declared_type='PlugInIntfVTable*' type='^{PlugInIntfVTable=i^?^?^?^?^?^?^?}'/>
+  </struct>
   <opaque name='PlugInIntfVTable' type='^{PlugInIntfVTable=}'/>
   <string_constant name='kAppPageSetupDialogTypeIDStr' nsstring='true' value='B9A0DA98-E57F-11D3-9E83-0050E4603277'/>
   <string_constant name='kAppPrintDialogTypeIDStr' nsstring='true' value='BCB07250-E57F-11D3-8CA6-0050E4603277'/>
@@ -80,329 +148,443 @@
   <enum name='kPMSyncPaneFromTicket' value='1'/>
   <enum name='kPMSyncTicketFromPane' value='0'/>
   <function name='DisposePMItemUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDialogPtr=}'/>
-      <arg type='s'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMItemUPP' type='^?'>
+      <arg declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+      <arg declared_type='short' type='s'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposePMPageSetupDialogInitUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPageFormat=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMPageSetupDialogInitUPP' type='^?'>
+      <arg declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposePMPrintDialogInitUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSettings=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMPrintDialogInitUPP' type='^?'>
+      <arg declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposePMSheetDoneUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSession=}'/>
-      <arg type='^{OpaqueWindowPtr=}'/>
-      <arg type='B'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMSheetDoneUPP' type='^?'>
+      <arg declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+      <arg declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokePMItemUPP'>
-    <arg type='^{OpaqueDialogPtr=}'/>
-    <arg type='s'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDialogPtr=}'/>
-      <arg type='s'/>
-      <retval type='v'/>
+    <arg name='theDialog' declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+    <arg name='item' declared_type='short' type='s'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMItemUPP' type='^?'>
+      <arg declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+      <arg declared_type='short' type='s'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokePMPageSetupDialogInitUPP'>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^^{OpaquePMDialog}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPageFormat=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='pageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='theDialog' declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMPageSetupDialogInitUPP' type='^?'>
+      <arg declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokePMPrintDialogInitUPP'>
-    <arg type='^{OpaquePMPrintSettings=}'/>
-    <arg type='^^{OpaquePMDialog}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSettings=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='printSettings' declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    <arg name='theDialog' declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMPrintDialogInitUPP' type='^?'>
+      <arg declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokePMSheetDoneUPP'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaqueWindowPtr=}'/>
-    <arg type='B'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSession=}'/>
-      <arg type='^{OpaqueWindowPtr=}'/>
-      <arg type='B'/>
-      <retval type='v'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='documentWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+    <arg name='accepted' declared_type='Boolean' type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='PMSheetDoneUPP' type='^?'>
+      <arg declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+      <arg declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='NewPMItemUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDialogPtr=}'/>
-      <arg type='s'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='PMItemProcPtr' type='^?'>
+      <arg declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+      <arg declared_type='short' type='s'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDialogPtr=}'/>
-      <arg type='s'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='PMItemUPP' type='^?'>
+      <arg declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+      <arg declared_type='short' type='s'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewPMPageSetupDialogInitUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPageFormat=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='PMPageSetupDialogInitProcPtr' type='^?'>
+      <arg declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPageFormat=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='PMPageSetupDialogInitUPP' type='^?'>
+      <arg declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewPMPrintDialogInitUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSettings=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='PMPrintDialogInitProcPtr' type='^?'>
+      <arg declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSettings=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='PMPrintDialogInitUPP' type='^?'>
+      <arg declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewPMSheetDoneUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSession=}'/>
-      <arg type='^{OpaqueWindowPtr=}'/>
-      <arg type='B'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='PMSheetDoneProcPtr' type='^?'>
+      <arg declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+      <arg declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSession=}'/>
-      <arg type='^{OpaqueWindowPtr=}'/>
-      <arg type='B'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='PMSheetDoneUPP' type='^?'>
+      <arg declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+      <arg declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='PMCreateLocalizedPaperSizeCFString'>
-    <arg type='i'/>
-    <arg type='S'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='listofPaperTickets' declared_type='int' type='i'/>
+    <arg name='paperToUse' declared_type='UInt16' type='S'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='PMCreatePaperSizeCFString'>
-    <arg type='i'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='selectedPaper' declared_type='int' type='i'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='PMGetDialogAccepted'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='process' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMGetDialogDone'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='done' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMGetDialogPtr'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg type='^^{OpaqueDialogPtr}'/>
-    <retval type='l' type64='i'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='theDialog' declared_type='DialogRef*' type='^^{OpaqueDialogPtr}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMGetItemProc'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg type='^^?'/>
-    <retval type='l' type64='i'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='itemProc' declared_type='PMItemUPP*' type='^^?'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMGetModalFilterProc'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg type='^^?'/>
-    <retval type='l' type64='i'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='filterProc' declared_type='ModalFilterUPP*' type='^^?'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionBeginCGDocument'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPrintSettings=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='printSettings' declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    <arg name='pageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionBeginDocument'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPrintSettings=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='printSettings' declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    <arg name='pageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionBeginPage'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^{PMRect=dddd}'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='pageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='pageFrame' declared_type='PMRect*' type='^{PMRect=dddd}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionDisablePrinterPresets'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='session' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionEnablePrinterPresets'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='session' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='graphicsType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionEndDocument'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionEndPage'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionPageSetupDialog'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='pageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='accepted' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionPageSetupDialogInit'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^^{OpaquePMDialog}'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='pageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='newDialog' declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionPageSetupDialogMain'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^B'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPageFormat=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='pageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='accepted' declared_type='Boolean*' type='^B'/>
+    <arg name='myInitProc' function_pointer='true' declared_type='PMPageSetupDialogInitUPP' type='^?'>
+      <arg declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionPrintDialog'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPrintSettings=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='printSettings' declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    <arg name='constPageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='accepted' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionPrintDialogInit'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPrintSettings=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^^{OpaquePMDialog}'/>
-    <retval type='l' type64='i'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='printSettings' declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    <arg name='constPageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='newDialog' declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionPrintDialogMain'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaquePMPrintSettings=}'/>
-    <arg type='^{OpaquePMPageFormat=}'/>
-    <arg type='^B'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSettings=}'/>
-      <arg type='^^{OpaquePMDialog}'/>
-      <retval type='v'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='printSettings' declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    <arg name='constPageFormat' declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    <arg name='accepted' declared_type='Boolean*' type='^B'/>
+    <arg name='myInitProc' function_pointer='true' declared_type='PMPrintDialogInitUPP' type='^?'>
+      <arg declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+      <arg declared_type='PMDialog*' type='^^{OpaquePMDialog}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSessionUseSheets'>
-    <arg type='^{OpaquePMPrintSession=}'/>
-    <arg type='^{OpaqueWindowPtr=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePMPrintSession=}'/>
-      <arg type='^{OpaqueWindowPtr=}'/>
-      <arg type='B'/>
-      <retval type='v'/>
+    <arg name='printSession' declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    <arg name='documentWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+    <arg name='sheetDoneProc' function_pointer='true' declared_type='PMSheetDoneUPP' type='^?'>
+      <arg declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+      <arg declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSetDialogAccepted'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='process' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSetDialogDone'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='done' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSetItemProc'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDialogPtr=}'/>
-      <arg type='s'/>
-      <retval type='v'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='itemProc' function_pointer='true' declared_type='PMItemUPP' type='^?'>
+      <arg declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+      <arg declared_type='short' type='s'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMSetModalFilterProc'>
-    <arg type='^{OpaquePMDialog=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDialogPtr=}'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <arg type='^s'/>
-      <retval type='B'/>
+    <arg name='pmDialog' declared_type='PMDialog' type='^{OpaquePMDialog=}'/>
+    <arg name='filterProc' function_pointer='true' declared_type='ModalFilterUPP' type='^?'>
+      <arg declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <arg declared_type='DialogItemIndex*' type='^s'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PMUpdatePrintButton'>
-    <arg type='S'/>
+    <arg name='dest' declared_type='PMDestinationType' type='S'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function_alias name='PMGetDialogRef' original='PMGetDialogPtr'/>
   <class name='NSObject'>
+    <method selector='PDEPanelsForType:withHostInfo:'>
+      <arg name='pdeType' declared_type='NSString*' type='@' index='0'/>
+      <arg name='host' declared_type='id' type='@' index='1'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='PMPrinter'>
+      <retval declared_type='PMPrinter' type='^{OpaquePMPrinter=}'/>
+    </method>
+    <method selector='PPDOptionKeyValueDidChange:ppdChoice:'>
+      <arg name='option' declared_type='NSString*' type='@' index='0'/>
+      <arg name='choice' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='initWithBundle:'>
-      <retval type='B'/>
+      <arg name='theBundle' declared_type='NSBundle*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='jobTemplate'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='pageFormat'>
+      <retval declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    </method>
+    <method selector='panelKind'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='panelName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='panelView'>
+      <retval declared_type='NSView*' type='@'/>
+    </method>
+    <method selector='panelViewDidResize'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='ppdFile'>
-      <retval type='^{_ppd_file_t=iiiiiiiiii*i^{?}***********i^{ppd_group_str}i^{?}[2f][2f][4f]i^{?}i^*i^{?}i^*i**ii^^{?}}'/>
+      <retval declared_type='ppd_file_t*' type='^{_ppd_file_t=iiiiiiiiii*i^{?}***********i^{ppd_group_str}i^{?}[2f][2f][4f]i^{?}i^*i^{?}i^*i**ii^^{?}}'/>
+    </method>
+    <method selector='printSession'>
+      <retval declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    </method>
+    <method selector='printSettings'>
+      <retval declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    </method>
+    <method selector='printerInfoTicket'>
+      <retval declared_type='id' type='@'/>
     </method>
     <method selector='restoreValuesAndReturnError:'>
-      <retval type='B'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='saveValuesAndReturnError:'>
-      <retval type='B'/>
+      <arg name='error' declared_type='NSError**' type='^@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='shouldHide'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='summaryInfo'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='supportedPPDOptionKeys'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='willChangePPDOptionKeyValue:ppdChoice:'>
-      <retval type='B'/>
+      <arg name='option' declared_type='NSString*' type='@' index='0'/>
+      <arg name='choice' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='willShow'>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <informal_protocol name='PDEPanel'>
-    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='PPDOptionKeyValueDidChange:ppdChoice:'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='panelKind'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='panelName'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='panelView'/>
-    <method type='B12@0:4^@8' type64='B24@0:8^@16' selector='restoreValuesAndReturnError:'/>
-    <method type='B12@0:4^@8' type64='B24@0:8^@16' selector='saveValuesAndReturnError:'/>
-    <method type='B8@0:4' type64='B16@0:8' selector='shouldHide'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='summaryInfo'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='supportedPPDOptionKeys'/>
-    <method type='v8@0:4' type64='v16@0:8' selector='willShow'/>
+    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='PPDOptionKeyValueDidChange:ppdChoice:'>
+      <arg name='option' declared_type='NSString*' type='@' index='0'/>
+      <arg name='choice' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='panelKind'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='panelName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='panelView'>
+      <retval declared_type='NSView*' type='@'/>
+    </method>
+    <method type='B12@0:4^@8' type64='B24@0:8^@16' selector='restoreValuesAndReturnError:'>
+      <arg name='error' declared_type='NSError**' type='^@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='B12@0:4^@8' type64='B24@0:8^@16' selector='saveValuesAndReturnError:'>
+      <arg name='error' declared_type='NSError**' type='^@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='B8@0:4' type64='B16@0:8' selector='shouldHide'>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='summaryInfo'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='supportedPPDOptionKeys'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method type='v8@0:4' type64='v16@0:8' selector='willShow'>
+      <retval declared_type='void' type='v'/>
+    </method>
   </informal_protocol>
   <informal_protocol name='PDEPlugIn'>
-    <method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='PDEPanelsForType:withHostInfo:'/>
-    <method type='B12@0:4@8' type64='B24@0:8@16' selector='initWithBundle:'/>
+    <method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='PDEPanelsForType:withHostInfo:'>
+      <arg name='pdeType' declared_type='NSString*' type='@' index='0'/>
+      <arg name='host' declared_type='id' type='@' index='1'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method type='B12@0:4@8' type64='B24@0:8@16' selector='initWithBundle:'>
+      <arg name='theBundle' declared_type='NSBundle*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
   </informal_protocol>
   <informal_protocol name='PDEPlugInCallbackProtocol'>
-    <method type='^{OpaquePMPrinter=}8@0:4' type64='^{OpaquePMPrinter=}16@0:8' selector='PMPrinter'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='jobTemplate'/>
-    <method type='^{OpaquePMPageFormat=}8@0:4' type64='^{OpaquePMPageFormat=}16@0:8' selector='pageFormat'/>
-    <method type='v8@0:4' type64='v16@0:8' selector='panelViewDidResize'/>
-    <method type='^{?=iiiiiiiiii*i^{?}***********i^{ppd_group_str}i^{?}[2f][2f][4f]i^{?}i^*i^{?}i^*i**ii^^{?}}8@0:4' type64='^{?=iiiiiiiiii*i^{?}***********i^{ppd_group_str}i^{?}[2f][2f][4f]i^{?}i^*i^{?}i^*i**ii^^{?}}16@0:8' selector='ppdFile'/>
-    <method type='^{OpaquePMPrintSession=}8@0:4' type64='^{OpaquePMPrintSession=}16@0:8' selector='printSession'/>
-    <method type='^{OpaquePMPrintSettings=}8@0:4' type64='^{OpaquePMPrintSettings=}16@0:8' selector='printSettings'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='printerInfoTicket'/>
-    <method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='willChangePPDOptionKeyValue:ppdChoice:'/>
+    <method type='^{OpaquePMPrinter=}8@0:4' type64='^{OpaquePMPrinter=}16@0:8' selector='PMPrinter'>
+      <retval declared_type='PMPrinter' type='^{OpaquePMPrinter=}'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='jobTemplate'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method type='^{OpaquePMPageFormat=}8@0:4' type64='^{OpaquePMPageFormat=}16@0:8' selector='pageFormat'>
+      <retval declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+    </method>
+    <method type='v8@0:4' type64='v16@0:8' selector='panelViewDidResize'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='^{?=iiiiiiiiii*i^{?}***********i^{ppd_group_str}i^{?}[2f][2f][4f]i^{?}i^*i^{?}i^*i**ii^^{?}}8@0:4' type64='^{?=iiiiiiiiii*i^{?}***********i^{ppd_group_str}i^{?}[2f][2f][4f]i^{?}i^*i^{?}i^*i**ii^^{?}}16@0:8' selector='ppdFile'>
+      <retval declared_type='ppd_file_t*' type='^{_ppd_file_t=iiiiiiiiii*i^{?}***********i^{ppd_group_str}i^{?}[2f][2f][4f]i^{?}i^*i^{?}i^*i**ii^^{?}}'/>
+    </method>
+    <method type='^{OpaquePMPrintSession=}8@0:4' type64='^{OpaquePMPrintSession=}16@0:8' selector='printSession'>
+      <retval declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+    </method>
+    <method type='^{OpaquePMPrintSettings=}8@0:4' type64='^{OpaquePMPrintSettings=}16@0:8' selector='printSettings'>
+      <retval declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='printerInfoTicket'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='willChangePPDOptionKeyValue:ppdChoice:'>
+      <arg name='option' declared_type='NSString*' type='@' index='0'/>
+      <arg name='choice' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
   </informal_protocol>
 </signatures>

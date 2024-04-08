@@ -1,57 +1,352 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
-  <struct name='AUPresetEvent' type='{AUPresetEvent=&quot;scope&quot;I&quot;element&quot;I&quot;preset&quot;^v}'/>
-  <struct name='AudioBalanceFade' type='{AudioBalanceFade=&quot;mLeftRightBalance&quot;f&quot;mBackFrontFade&quot;f&quot;mType&quot;I&quot;mChannelLayout&quot;^{AudioChannelLayout}}'/>
-  <struct name='AudioConverterPrimeInfo' type='{AudioConverterPrimeInfo=&quot;leadingFrames&quot;I&quot;trailingFrames&quot;I}'/>
-  <struct name='AudioFileFDFTable' type='{AudioFileFDFTable=&quot;mComponentStorage&quot;^v&quot;mReadBytesFDF&quot;^?&quot;mWriteBytesFDF&quot;^?&quot;mReadPacketsFDF&quot;^?&quot;mWritePacketsFDF&quot;^?&quot;mGetPropertyInfoFDF&quot;^?&quot;mGetPropertyFDF&quot;^?&quot;mSetPropertyFDF&quot;^?&quot;mCountUserDataFDF&quot;^?&quot;mGetUserDataSizeFDF&quot;^?&quot;mGetUserDataFDF&quot;^?&quot;mSetUserDataFDF&quot;^?}'/>
-  <struct name='AudioFileMarker' type='{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}'/>
-  <struct name='AudioFileMarkerList' type='{AudioFileMarkerList=&quot;mSMPTE_TimeType&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}'/>
-  <struct name='AudioFilePacketTableInfo' type='{AudioFilePacketTableInfo=&quot;mNumberValidFrames&quot;q&quot;mPrimingFrames&quot;i&quot;mRemainderFrames&quot;i}'/>
-  <struct name='AudioFileRegion' type='{AudioFileRegion=&quot;mRegionID&quot;I&quot;mName&quot;^{__CFString}&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}'/>
-  <struct name='AudioFileRegionList' type='{AudioFileRegionList=&quot;mSMPTE_TimeType&quot;I&quot;mNumberRegions&quot;I&quot;mRegions&quot;[1{AudioFileRegion=&quot;mRegionID&quot;I&quot;mName&quot;^{__CFString}&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}]}'/>
-  <struct name='AudioFileTypeAndFormatID' type='{AudioFileTypeAndFormatID=&quot;mFileType&quot;I&quot;mFormatID&quot;I}'/>
-  <struct name='AudioFile_SMPTE_Time' type='{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}'/>
-  <struct name='AudioFramePacketTranslation' type='{AudioFramePacketTranslation=&quot;mFrame&quot;q&quot;mPacket&quot;q&quot;mFrameOffsetInPacket&quot;I}'/>
-  <struct name='AudioPanningInfo' type='{AudioPanningInfo=&quot;mPanningMode&quot;I&quot;mCoordinateFlags&quot;I&quot;mCoordinates&quot;[3f]&quot;mGainScale&quot;f&quot;mOutputChannelMap&quot;^{AudioChannelLayout}}'/>
-  <struct name='AudioUnitEvent' type='{AudioUnitEvent=&quot;mEventType&quot;I&quot;mArgument&quot;(?=&quot;mParameter&quot;{AudioUnitParameter=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mParameterID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}&quot;mProperty&quot;{AudioUnitProperty=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mPropertyID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I})}'/>
-  <struct name='AudioUnitNodeConnection' type='{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}'/>
-  <struct name='CABarBeatTime' type='{CABarBeatTime=&quot;bar&quot;i&quot;beat&quot;S&quot;subbeat&quot;S&quot;subbeatDivisor&quot;S&quot;reserved&quot;S}'/>
-  <struct name='CAClockTime' type='{CAClockTime=&quot;format&quot;I&quot;reserved&quot;I&quot;time&quot;(?=&quot;hostTime&quot;Q&quot;samples&quot;d&quot;beats&quot;d&quot;seconds&quot;d&quot;smpte&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s})}'/>
-  <struct name='CAFAudioDescription' type='{CAFAudioDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I}'/>
-  <struct name='CAFChunkHeader' type='{CAFChunkHeader=&quot;mChunkType&quot;I&quot;mChunkSize&quot;q}'/>
-  <struct name='CAFDataChunk' type='{CAFDataChunk=&quot;mEditCount&quot;I&quot;mData&quot;[1C]}'/>
-  <struct name='CAFFileHeader' type='{CAFFileHeader=&quot;mFileType&quot;I&quot;mFileVersion&quot;S&quot;mFileFlags&quot;S}'/>
-  <struct name='CAFInfoStrings' type='{CAFInfoStrings=&quot;mNumEntries&quot;I}'/>
-  <struct name='CAFInstrumentChunk' type='{CAFInstrumentChunk=&quot;mBaseNote&quot;f&quot;mMIDILowNote&quot;C&quot;mMIDIHighNote&quot;C&quot;mMIDILowVelocity&quot;C&quot;mMIDIHighVelocity&quot;C&quot;mdBGain&quot;f&quot;mStartRegionID&quot;I&quot;mSustainRegionID&quot;I&quot;mReleaseRegionID&quot;I&quot;mInstrumentID&quot;I}'/>
-  <struct name='CAFMarker' type='{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}'/>
-  <struct name='CAFMarkerChunk' type='{CAFMarkerChunk=&quot;mSMPTE_TimeType&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}'/>
-  <struct name='CAFOverviewChunk' type='{CAFOverviewChunk=&quot;mEditCount&quot;I&quot;mNumFramesPerOVWSample&quot;I&quot;mData&quot;[1{CAFOverviewSample=&quot;mMinValue&quot;s&quot;mMaxValue&quot;s}]}'/>
-  <struct name='CAFOverviewSample' type='{CAFOverviewSample=&quot;mMinValue&quot;s&quot;mMaxValue&quot;s}'/>
-  <struct name='CAFPacketTableHeader' type='{CAFPacketTableHeader=&quot;mNumberPackets&quot;q&quot;mNumberValidFrames&quot;q&quot;mPrimingFrames&quot;i&quot;mRemainderFrames&quot;i&quot;mPacketDescriptions&quot;[1C]}'/>
-  <struct name='CAFPeakChunk' type='{CAFPeakChunk=&quot;mEditCount&quot;I&quot;mPeaks&quot;[1{CAFPositionPeak=&quot;mValue&quot;f&quot;mFrameNumber&quot;Q}]}'/>
-  <struct name='CAFPositionPeak' type='{CAFPositionPeak=&quot;mValue&quot;f&quot;mFrameNumber&quot;Q}'/>
-  <struct name='CAFRegion' type='{CAFRegion=&quot;mRegionID&quot;I&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}'/>
-  <struct name='CAFRegionChunk' type='{CAFRegionChunk=&quot;mSMPTE_TimeType&quot;I&quot;mNumberRegions&quot;I&quot;mRegions&quot;[1{CAFRegion=&quot;mRegionID&quot;I&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}]}'/>
-  <struct name='CAFStringID' type='{CAFStringID=&quot;mStringID&quot;I&quot;mStringStartByteOffset&quot;q}'/>
-  <struct name='CAFStrings' type='{CAFStrings=&quot;mNumEntries&quot;I&quot;mStringsIDs&quot;[1{CAFStringID=&quot;mStringID&quot;I&quot;mStringStartByteOffset&quot;q}]}'/>
-  <struct name='CAFUMIDChunk' type='{CAFUMIDChunk=&quot;mBytes&quot;[64C]}'/>
-  <struct name='CAF_SMPTE_Time' type='{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}'/>
-  <struct name='CAF_UUID_ChunkHeader' type='{CAF_UUID_ChunkHeader=&quot;mHeader&quot;{CAFChunkHeader=&quot;mChunkType&quot;I&quot;mChunkSize&quot;q}&quot;mUUID&quot;[16C]}'/>
-  <struct name='CAMeterTrackEntry' type='{CAMeterTrackEntry=&quot;beats&quot;d&quot;meterNumer&quot;S&quot;meterDenom&quot;S}'/>
-  <struct name='CATempoMapEntry' type='{CATempoMapEntry=&quot;beats&quot;d&quot;tempoBPM&quot;d}'/>
-  <struct name='ExtendedControlEvent' type='{ExtendedControlEvent=&quot;groupID&quot;I&quot;controlID&quot;I&quot;value&quot;f}'/>
-  <struct name='ExtendedNoteOnEvent' type='{ExtendedNoteOnEvent=&quot;instrumentID&quot;I&quot;groupID&quot;I&quot;duration&quot;f&quot;extendedParams&quot;{MusicDeviceNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f&quot;mControls&quot;[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]}}'/>
-  <struct name='ExtendedTempoEvent' type='{ExtendedTempoEvent=&quot;bpm&quot;d}'/>
-  <struct name='MIDIChannelMessage' type='{MIDIChannelMessage=&quot;status&quot;C&quot;data1&quot;C&quot;data2&quot;C&quot;reserved&quot;C}'/>
-  <struct name='MIDIMetaEvent' type='{MIDIMetaEvent=&quot;metaEventType&quot;C&quot;unused1&quot;C&quot;unused2&quot;C&quot;unused3&quot;C&quot;dataLength&quot;I&quot;data&quot;[1C]}'/>
-  <struct name='MIDINoteMessage' type='{MIDINoteMessage=&quot;channel&quot;C&quot;note&quot;C&quot;velocity&quot;C&quot;releaseVelocity&quot;C&quot;duration&quot;f}'/>
-  <struct name='MIDIRawData' type='{MIDIRawData=&quot;length&quot;I&quot;data&quot;[1C]}'/>
-  <struct name='MusicEventUserData' type='{MusicEventUserData=&quot;length&quot;I&quot;data&quot;[1C]}'/>
-  <struct name='ParameterEvent' type='{ParameterEvent=&quot;parameterID&quot;I&quot;scope&quot;I&quot;element&quot;I&quot;value&quot;f}'/>
+  <struct name='AUPresetEvent' type='{AUPresetEvent=&quot;scope&quot;I&quot;element&quot;I&quot;preset&quot;^v}'>
+    <field name='scope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <field name='element' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <field name='preset' declared_type='CFPropertyListRef' type='@'/>
+  </struct>
+  <struct name='AudioBalanceFade' type='{AudioBalanceFade=&quot;mLeftRightBalance&quot;f&quot;mBackFrontFade&quot;f&quot;mType&quot;I&quot;mChannelLayout&quot;^{AudioChannelLayout}}'>
+    <field name='mLeftRightBalance' declared_type='Float32' type='f'/>
+    <field name='mBackFrontFade' declared_type='Float32' type='f'/>
+    <field name='mType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mChannelLayout' declared_type='AudioChannelLayout*' type='^{AudioChannelLayout=III[1{AudioChannelDescription=II[3f]}]}' const='true'/>
+  </struct>
+  <struct name='AudioConverterPrimeInfo' type='{AudioConverterPrimeInfo=&quot;leadingFrames&quot;I&quot;trailingFrames&quot;I}'>
+    <field name='leadingFrames' declared_type='UInt32' type='L' type64='I'/>
+    <field name='trailingFrames' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioFileFDFTable' type='{AudioFileFDFTable=&quot;mComponentStorage&quot;^v&quot;mReadBytesFDF&quot;^?&quot;mWriteBytesFDF&quot;^?&quot;mReadPacketsFDF&quot;^?&quot;mWritePacketsFDF&quot;^?&quot;mGetPropertyInfoFDF&quot;^?&quot;mGetPropertyFDF&quot;^?&quot;mSetPropertyFDF&quot;^?&quot;mCountUserDataFDF&quot;^?&quot;mGetUserDataSizeFDF&quot;^?&quot;mGetUserDataFDF&quot;^?&quot;mSetUserDataFDF&quot;^?}'>
+    <field name='mComponentStorage' declared_type='void*' type='^v'/>
+    <field name='mReadBytesFDF' function_pointer='true' declared_type='ReadBytesFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mWriteBytesFDF' function_pointer='true' declared_type='WriteBytesFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mReadPacketsFDF' function_pointer='true' declared_type='ReadPacketsFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mWritePacketsFDF' function_pointer='true' declared_type='WritePacketsFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mGetPropertyInfoFDF' function_pointer='true' declared_type='GetPropertyInfoFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioFilePropertyID' type='L' type64='I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mGetPropertyFDF' function_pointer='true' declared_type='GetPropertyFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioFilePropertyID' type='L' type64='I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mSetPropertyFDF' function_pointer='true' declared_type='SetPropertyFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioFilePropertyID' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mCountUserDataFDF' function_pointer='true' declared_type='CountUserDataFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mGetUserDataSizeFDF' function_pointer='true' declared_type='GetUserDataSizeFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mGetUserDataFDF' function_pointer='true' declared_type='GetUserDataFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+    <field name='mSetUserDataFDF' function_pointer='true' declared_type='SetUserDataFDF' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+  </struct>
+  <struct name='AudioFileMarker' type='{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}'>
+    <field name='mFramePosition' declared_type='Float64' type='d'/>
+    <field name='mName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <field name='mMarkerID' declared_type='SInt32' type='l' type64='i'/>
+    <field name='mSMPTETime' declared_type='AudioFile_SMPTE_Time' type='{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}'/>
+    <field name='mType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mReserved' declared_type='UInt16' type='S'/>
+    <field name='mChannel' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='AudioFileMarkerList' type='{AudioFileMarkerList=&quot;mSMPTE_TimeType&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}'>
+    <field name='mSMPTE_TimeType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mNumberMarkers' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mMarkers' declared_type='AudioFileMarker*' type='[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]'/>
+  </struct>
+  <struct name='AudioFilePacketTableInfo' type='{AudioFilePacketTableInfo=&quot;mNumberValidFrames&quot;q&quot;mPrimingFrames&quot;i&quot;mRemainderFrames&quot;i}'>
+    <field name='mNumberValidFrames' declared_type='SInt64' type='q'/>
+    <field name='mPrimingFrames' declared_type='SInt32' type='l' type64='i'/>
+    <field name='mRemainderFrames' declared_type='SInt32' type='l' type64='i'/>
+  </struct>
+  <struct name='AudioFileRegion' type='{AudioFileRegion=&quot;mRegionID&quot;I&quot;mName&quot;^{__CFString}&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}'>
+    <field name='mRegionID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <field name='mFlags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mNumberMarkers' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mMarkers' declared_type='AudioFileMarker*' type='[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]'/>
+  </struct>
+  <struct name='AudioFileRegionList' type='{AudioFileRegionList=&quot;mSMPTE_TimeType&quot;I&quot;mNumberRegions&quot;I&quot;mRegions&quot;[1{AudioFileRegion=&quot;mRegionID&quot;I&quot;mName&quot;^{__CFString}&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}]}'>
+    <field name='mSMPTE_TimeType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mNumberRegions' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mRegions' declared_type='AudioFileRegion*' type='[1{AudioFileRegion=&quot;mRegionID&quot;I&quot;mName&quot;^{__CFString}&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{AudioFileMarker=&quot;mFramePosition&quot;d&quot;mName&quot;^{__CFString}&quot;mMarkerID&quot;i&quot;mSMPTETime&quot;{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}&quot;mType&quot;I&quot;mReserved&quot;S&quot;mChannel&quot;S}]}]'/>
+  </struct>
+  <struct name='AudioFileTypeAndFormatID' type='{AudioFileTypeAndFormatID=&quot;mFileType&quot;I&quot;mFormatID&quot;I}'>
+    <field name='mFileType' declared_type='AudioFileTypeID' type='L' type64='I'/>
+    <field name='mFormatID' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioFile_SMPTE_Time' type='{AudioFile_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;C&quot;mSeconds&quot;C&quot;mFrames&quot;C&quot;mSubFrameSampleOffset&quot;I}'>
+    <field name='mHours' declared_type='SInt8' type='c'/>
+    <field name='mMinutes' declared_type='UInt8' type='C'/>
+    <field name='mSeconds' declared_type='UInt8' type='C'/>
+    <field name='mFrames' declared_type='UInt8' type='C'/>
+    <field name='mSubFrameSampleOffset' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioFramePacketTranslation' type='{AudioFramePacketTranslation=&quot;mFrame&quot;q&quot;mPacket&quot;q&quot;mFrameOffsetInPacket&quot;I}'>
+    <field name='mFrame' declared_type='SInt64' type='q'/>
+    <field name='mPacket' declared_type='SInt64' type='q'/>
+    <field name='mFrameOffsetInPacket' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioPanningInfo' type='{AudioPanningInfo=&quot;mPanningMode&quot;I&quot;mCoordinateFlags&quot;I&quot;mCoordinates&quot;[3f]&quot;mGainScale&quot;f&quot;mOutputChannelMap&quot;^{AudioChannelLayout}}'>
+    <field name='mPanningMode' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mCoordinateFlags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mCoordinates' declared_type='Float32*' type='[3f]'/>
+    <field name='mGainScale' declared_type='Float32' type='f'/>
+    <field name='mOutputChannelMap' declared_type='AudioChannelLayout*' type='^{AudioChannelLayout=III[1{AudioChannelDescription=II[3f]}]}' const='true'/>
+  </struct>
+  <struct name='AudioUnitEvent' type='{AudioUnitEvent=&quot;mEventType&quot;I&quot;mArgument&quot;(?=&quot;mParameter&quot;{AudioUnitParameter=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mParameterID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}&quot;mProperty&quot;{AudioUnitProperty=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mPropertyID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I})}'>
+    <field name='mEventType' declared_type='AudioUnitEventType' type='L' type64='I'/>
+    <field name='mArgument' declared_type='union AudioUnitEvent::' type='(?=&quot;mParameter&quot;{AudioUnitParameter=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mParameterID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}&quot;mProperty&quot;{AudioUnitProperty=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mPropertyID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I})'/>
+  </struct>
+  <struct name='AudioUnitNodeConnection' type='{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}'>
+    <field name='sourceNode' declared_type='AUNode' type='l' type64='i'/>
+    <field name='sourceOutputNumber' declared_type='UInt32' type='L' type64='I'/>
+    <field name='destNode' declared_type='AUNode' type='l' type64='i'/>
+    <field name='destInputNumber' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='CABarBeatTime' type='{CABarBeatTime=&quot;bar&quot;i&quot;beat&quot;S&quot;subbeat&quot;S&quot;subbeatDivisor&quot;S&quot;reserved&quot;S}'>
+    <field name='bar' declared_type='SInt32' type='l' type64='i'/>
+    <field name='beat' declared_type='UInt16' type='S'/>
+    <field name='subbeat' declared_type='UInt16' type='S'/>
+    <field name='subbeatDivisor' declared_type='UInt16' type='S'/>
+    <field name='reserved' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='CAClockTime' type='{CAClockTime=&quot;format&quot;I&quot;reserved&quot;I&quot;time&quot;(?=&quot;hostTime&quot;Q&quot;samples&quot;d&quot;beats&quot;d&quot;seconds&quot;d&quot;smpte&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s})}'>
+    <field name='format' declared_type='CAClockTimeFormat' type='L' type64='I'/>
+    <field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+    <field name='time' declared_type='union CAClockTime::' type='(?=&quot;hostTime&quot;Q&quot;samples&quot;d&quot;beats&quot;d&quot;seconds&quot;d&quot;smpte&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s})'/>
+  </struct>
+  <struct name='CAFAudioDescription' type='{CAFAudioDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I}'>
+    <field name='mSampleRate' declared_type='Float64' type='d'/>
+    <field name='mFormatID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mFormatFlags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mBytesPerPacket' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mFramesPerPacket' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mChannelsPerFrame' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mBitsPerChannel' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='CAFChunkHeader' type='{CAFChunkHeader=&quot;mChunkType&quot;I&quot;mChunkSize&quot;q}'>
+    <field name='mChunkType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mChunkSize' declared_type='SInt64' type='q'/>
+  </struct>
+  <struct name='CAFDataChunk' type='{CAFDataChunk=&quot;mEditCount&quot;I&quot;mData&quot;[1C]}'>
+    <field name='mEditCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mData' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='CAFFileHeader' type='{CAFFileHeader=&quot;mFileType&quot;I&quot;mFileVersion&quot;S&quot;mFileFlags&quot;S}'>
+    <field name='mFileType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mFileVersion' declared_type='UInt16' type='S'/>
+    <field name='mFileFlags' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='CAFInfoStrings' type='{CAFInfoStrings=&quot;mNumEntries&quot;I}'>
+    <field name='mNumEntries' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='CAFInstrumentChunk' type='{CAFInstrumentChunk=&quot;mBaseNote&quot;f&quot;mMIDILowNote&quot;C&quot;mMIDIHighNote&quot;C&quot;mMIDILowVelocity&quot;C&quot;mMIDIHighVelocity&quot;C&quot;mdBGain&quot;f&quot;mStartRegionID&quot;I&quot;mSustainRegionID&quot;I&quot;mReleaseRegionID&quot;I&quot;mInstrumentID&quot;I}'>
+    <field name='mBaseNote' declared_type='Float32' type='f'/>
+    <field name='mMIDILowNote' declared_type='UInt8' type='C'/>
+    <field name='mMIDIHighNote' declared_type='UInt8' type='C'/>
+    <field name='mMIDILowVelocity' declared_type='UInt8' type='C'/>
+    <field name='mMIDIHighVelocity' declared_type='UInt8' type='C'/>
+    <field name='mdBGain' declared_type='Float32' type='f'/>
+    <field name='mStartRegionID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mSustainRegionID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mReleaseRegionID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mInstrumentID' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='CAFMarker' type='{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}'>
+    <field name='mType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mFramePosition' declared_type='Float64' type='d'/>
+    <field name='mMarkerID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mSMPTETime' declared_type='CAF_SMPTE_Time' type='{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}'/>
+    <field name='mChannel' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='CAFMarkerChunk' type='{CAFMarkerChunk=&quot;mSMPTE_TimeType&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}'>
+    <field name='mSMPTE_TimeType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mNumberMarkers' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mMarkers' declared_type='CAFMarker*' type='[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]'/>
+  </struct>
+  <struct name='CAFOverviewChunk' type='{CAFOverviewChunk=&quot;mEditCount&quot;I&quot;mNumFramesPerOVWSample&quot;I&quot;mData&quot;[1{CAFOverviewSample=&quot;mMinValue&quot;s&quot;mMaxValue&quot;s}]}'>
+    <field name='mEditCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mNumFramesPerOVWSample' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mData' declared_type='CAFOverviewSample*' type='[1{CAFOverviewSample=&quot;mMinValue&quot;s&quot;mMaxValue&quot;s}]'/>
+  </struct>
+  <struct name='CAFOverviewSample' type='{CAFOverviewSample=&quot;mMinValue&quot;s&quot;mMaxValue&quot;s}'>
+    <field name='mMinValue' declared_type='SInt16' type='s'/>
+    <field name='mMaxValue' declared_type='SInt16' type='s'/>
+  </struct>
+  <struct name='CAFPacketTableHeader' type='{CAFPacketTableHeader=&quot;mNumberPackets&quot;q&quot;mNumberValidFrames&quot;q&quot;mPrimingFrames&quot;i&quot;mRemainderFrames&quot;i&quot;mPacketDescriptions&quot;[1C]}'>
+    <field name='mNumberPackets' declared_type='SInt64' type='q'/>
+    <field name='mNumberValidFrames' declared_type='SInt64' type='q'/>
+    <field name='mPrimingFrames' declared_type='SInt32' type='l' type64='i'/>
+    <field name='mRemainderFrames' declared_type='SInt32' type='l' type64='i'/>
+    <field name='mPacketDescriptions' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='CAFPeakChunk' type='{CAFPeakChunk=&quot;mEditCount&quot;I&quot;mPeaks&quot;[1{CAFPositionPeak=&quot;mValue&quot;f&quot;mFrameNumber&quot;Q}]}'>
+    <field name='mEditCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mPeaks' declared_type='CAFPositionPeak*' type='[1{CAFPositionPeak=&quot;mValue&quot;f&quot;mFrameNumber&quot;Q}]'/>
+  </struct>
+  <struct name='CAFPositionPeak' type='{CAFPositionPeak=&quot;mValue&quot;f&quot;mFrameNumber&quot;Q}'>
+    <field name='mValue' declared_type='Float32' type='f'/>
+    <field name='mFrameNumber' declared_type='UInt64' type='Q'/>
+  </struct>
+  <struct name='CAFRegion' type='{CAFRegion=&quot;mRegionID&quot;I&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}'>
+    <field name='mRegionID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mFlags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mNumberMarkers' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mMarkers' declared_type='CAFMarker*' type='[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]'/>
+  </struct>
+  <struct name='CAFRegionChunk' type='{CAFRegionChunk=&quot;mSMPTE_TimeType&quot;I&quot;mNumberRegions&quot;I&quot;mRegions&quot;[1{CAFRegion=&quot;mRegionID&quot;I&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}]}'>
+    <field name='mSMPTE_TimeType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mNumberRegions' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mRegions' declared_type='CAFRegion*' type='[1{CAFRegion=&quot;mRegionID&quot;I&quot;mFlags&quot;I&quot;mNumberMarkers&quot;I&quot;mMarkers&quot;[1{CAFMarker=&quot;mType&quot;I&quot;mFramePosition&quot;d&quot;mMarkerID&quot;I&quot;mSMPTETime&quot;{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}&quot;mChannel&quot;I}]}]'/>
+  </struct>
+  <struct name='CAFStringID' type='{CAFStringID=&quot;mStringID&quot;I&quot;mStringStartByteOffset&quot;q}'>
+    <field name='mStringID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mStringStartByteOffset' declared_type='SInt64' type='q'/>
+  </struct>
+  <struct name='CAFStrings' type='{CAFStrings=&quot;mNumEntries&quot;I&quot;mStringsIDs&quot;[1{CAFStringID=&quot;mStringID&quot;I&quot;mStringStartByteOffset&quot;q}]}'>
+    <field name='mNumEntries' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mStringsIDs' declared_type='CAFStringID*' type='[1{CAFStringID=&quot;mStringID&quot;I&quot;mStringStartByteOffset&quot;q}]'/>
+  </struct>
+  <struct name='CAFUMIDChunk' type='{CAFUMIDChunk=&quot;mBytes&quot;[64C]}'>
+    <field name='mBytes' declared_type='UInt8*' type='[64C]'/>
+  </struct>
+  <struct name='CAF_SMPTE_Time' type='{CAF_SMPTE_Time=&quot;mHours&quot;c&quot;mMinutes&quot;c&quot;mSeconds&quot;c&quot;mFrames&quot;c&quot;mSubFrameSampleOffset&quot;I}'>
+    <field name='mHours' declared_type='SInt8' type='c'/>
+    <field name='mMinutes' declared_type='SInt8' type='c'/>
+    <field name='mSeconds' declared_type='SInt8' type='c'/>
+    <field name='mFrames' declared_type='SInt8' type='c'/>
+    <field name='mSubFrameSampleOffset' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='CAF_UUID_ChunkHeader' type='{CAF_UUID_ChunkHeader=&quot;mHeader&quot;{CAFChunkHeader=&quot;mChunkType&quot;I&quot;mChunkSize&quot;q}&quot;mUUID&quot;[16C]}'>
+    <field name='mHeader' declared_type='CAFChunkHeader' type='{CAFChunkHeader=&quot;mChunkType&quot;I&quot;mChunkSize&quot;q}'/>
+    <field name='mUUID' declared_type='UInt8*' type='[16C]'/>
+  </struct>
+  <struct name='CAMeterTrackEntry' type='{CAMeterTrackEntry=&quot;beats&quot;d&quot;meterNumer&quot;S&quot;meterDenom&quot;S}'>
+    <field name='beats' declared_type='CAClockBeats' type='d'/>
+    <field name='meterNumer' declared_type='UInt16' type='S'/>
+    <field name='meterDenom' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='CATempoMapEntry' type='{CATempoMapEntry=&quot;beats&quot;d&quot;tempoBPM&quot;d}'>
+    <field name='beats' declared_type='CAClockBeats' type='d'/>
+    <field name='tempoBPM' declared_type='CAClockTempo' type='d'/>
+  </struct>
+  <struct name='ExtendedControlEvent' type='{ExtendedControlEvent=&quot;groupID&quot;I&quot;controlID&quot;I&quot;value&quot;f}'>
+    <field name='groupID' declared_type='MusicDeviceGroupID' type='L' type64='I'/>
+    <field name='controlID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='value' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='ExtendedNoteOnEvent' type='{ExtendedNoteOnEvent=&quot;instrumentID&quot;I&quot;groupID&quot;I&quot;duration&quot;f&quot;extendedParams&quot;{MusicDeviceNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f&quot;mControls&quot;[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]}}'>
+    <field name='instrumentID' declared_type='MusicDeviceInstrumentID' type='L' type64='I'/>
+    <field name='groupID' declared_type='MusicDeviceGroupID' type='L' type64='I'/>
+    <field name='duration' declared_type='Float32' type='f'/>
+    <field name='extendedParams' declared_type='MusicDeviceNoteParams' type='{MusicDeviceNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f&quot;mControls&quot;[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]}'/>
+  </struct>
+  <struct name='ExtendedTempoEvent' type='{ExtendedTempoEvent=&quot;bpm&quot;d}'>
+    <field name='bpm' declared_type='Float64' type='d'/>
+  </struct>
+  <struct name='MIDIChannelMessage' type='{MIDIChannelMessage=&quot;status&quot;C&quot;data1&quot;C&quot;data2&quot;C&quot;reserved&quot;C}'>
+    <field name='status' declared_type='UInt8' type='C'/>
+    <field name='data1' declared_type='UInt8' type='C'/>
+    <field name='data2' declared_type='UInt8' type='C'/>
+    <field name='reserved' declared_type='UInt8' type='C'/>
+  </struct>
+  <struct name='MIDIMetaEvent' type='{MIDIMetaEvent=&quot;metaEventType&quot;C&quot;unused1&quot;C&quot;unused2&quot;C&quot;unused3&quot;C&quot;dataLength&quot;I&quot;data&quot;[1C]}'>
+    <field name='metaEventType' declared_type='UInt8' type='C'/>
+    <field name='unused1' declared_type='UInt8' type='C'/>
+    <field name='unused2' declared_type='UInt8' type='C'/>
+    <field name='unused3' declared_type='UInt8' type='C'/>
+    <field name='dataLength' declared_type='UInt32' type='L' type64='I'/>
+    <field name='data' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='MIDINoteMessage' type='{MIDINoteMessage=&quot;channel&quot;C&quot;note&quot;C&quot;velocity&quot;C&quot;releaseVelocity&quot;C&quot;duration&quot;f}'>
+    <field name='channel' declared_type='UInt8' type='C'/>
+    <field name='note' declared_type='UInt8' type='C'/>
+    <field name='velocity' declared_type='UInt8' type='C'/>
+    <field name='releaseVelocity' declared_type='UInt8' type='C'/>
+    <field name='duration' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='MIDIRawData' type='{MIDIRawData=&quot;length&quot;I&quot;data&quot;[1C]}'>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+    <field name='data' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='MusicEventUserData' type='{MusicEventUserData=&quot;length&quot;I&quot;data&quot;[1C]}'>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+    <field name='data' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='ParameterEvent' type='{ParameterEvent=&quot;parameterID&quot;I&quot;scope&quot;I&quot;element&quot;I&quot;value&quot;f}'>
+    <field name='parameterID' declared_type='AudioUnitParameterID' type='L' type64='I'/>
+    <field name='scope' declared_type='AudioUnitScope' type='L' type64='I'/>
+    <field name='element' declared_type='AudioUnitElement' type='L' type64='I'/>
+    <field name='value' declared_type='Float32' type='f'/>
+  </struct>
   <cftype name='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
   <cftype name='AUParameterListenerRef' type='^{AUListenerBase=}'/>
   <cftype name='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
@@ -416,1523 +711,1525 @@
   <enum name='kSequenceTrackProperty_SoloStatus' value='3'/>
   <enum name='kSequenceTrackProperty_TrackLength' value='5'/>
   <function name='AUEventListenerAddEventType'>
-    <arg type='^{AUListenerBase=}'/>
-    <arg type='^v'/>
-    <arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inListener' declared_type='AUEventListenerRef' type='^{AUListenerBase=}'/>
+    <arg name='inObject' declared_type='void*' type='^v'/>
+    <arg name='inEvent' declared_type='AudioUnitEvent*' type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUEventListenerCreate'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^v'/>
-      <arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
-      <arg type='Q'/>
-      <arg type='f'/>
-      <retval type='v'/>
+    <arg name='inProc' function_pointer='true' declared_type='AUEventListenerProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitEvent*' type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}' const='true'/>
+      <arg declared_type='UInt64' type='Q'/>
+      <arg declared_type='Float32' type='f'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='f'/>
-    <arg type='f'/>
-    <arg type='^^{AUListenerBase}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCallbackRefCon' declared_type='void*' type='^v'/>
+    <arg name='inRunLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='inRunLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inNotificationInterval' declared_type='Float32' type='f'/>
+    <arg name='inValueChangeGranularity' declared_type='Float32' type='f'/>
+    <arg name='outListener' declared_type='AUEventListenerRef*' type='^^{AUListenerBase}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUEventListenerNotify'>
-    <arg type='^{AUListenerBase=}'/>
-    <arg type='^v'/>
-    <arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSendingListener' declared_type='AUEventListenerRef' type='^{AUListenerBase=}'/>
+    <arg name='inSendingObject' declared_type='void*' type='^v'/>
+    <arg name='inEvent' declared_type='AudioUnitEvent*' type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUEventListenerRemoveEventType'>
-    <arg type='^{AUListenerBase=}'/>
-    <arg type='^v'/>
-    <arg type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inListener' declared_type='AUEventListenerRef' type='^{AUListenerBase=}'/>
+    <arg name='inObject' declared_type='void*' type='^v'/>
+    <arg name='inEvent' declared_type='AudioUnitEvent*' type='^{AudioUnitEvent=I(?={AudioUnitParameter=^{ComponentInstanceRecord}III}{AudioUnitProperty=^{ComponentInstanceRecord}III})}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphAddRenderNotify'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-      <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inCallback' function_pointer='true' declared_type='AURenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags*' type='^I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphClearConnections'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphClose'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphConnectNodeInput'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='L' type64='I'/>
-    <arg type='l' type64='i'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inSourceNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='inSourceOutputNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inDestNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='inDestInputNumber' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphCountNodeConnections'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='outNumConnections' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphDisconnectNodeInput'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inDestNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='inDestInputNumber' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetCPULoad'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^f'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outAverageCPULoad' declared_type='Float32*' type='^f'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetConnectionInfo'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^i'/>
-    <arg type='^I'/>
-    <arg type='^i'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inConnectionIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outSourceNode' declared_type='AUNode*' type='^i'/>
+    <arg name='outSourceOutputNumber' declared_type='UInt32*' type='^I'/>
+    <arg name='outDestNode' declared_type='AUNode*' type='^i'/>
+    <arg name='outDestInputNumber' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetIndNode'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outNode' declared_type='AUNode*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetMaxCPULoad'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^f'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outMaxLoad' declared_type='Float32*' type='^f'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetNodeConnections'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^{AudioUnitNodeConnection=iIiI}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='outConnections' declared_type='AudioUnitNodeConnection*' type='^{AudioUnitNodeConnection=iIiI}'/>
+    <arg name='ioNumConnections' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetNodeCount'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outNumberOfNodes' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetNodeInfo'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^{ComponentDescription=IIILL}' type64='^{ComponentDescription=IIIQQ}'/>
-    <arg type='^I'/>
-    <arg type='^^v'/>
-    <arg type='^^{ComponentInstanceRecord}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='outDescription' declared_type='ComponentDescription*' type='^{ComponentDescription=IIILL}' type64='^{ComponentDescription=IIIQQ}'/>
+    <arg name='outClassDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outClassData' declared_type='void**' type='^^v'/>
+    <arg name='outAudioUnit' declared_type='AudioUnit*' type='^^{ComponentInstanceRecord}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetNodeInfoSubGraph'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^^{OpaqueAUGraph}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}' const='true'/>
+    <arg name='inNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='outSubGraph' declared_type='AUGraph*' type='^^{OpaqueAUGraph}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphGetNumberOfConnections'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outNumConnections' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphInitialize'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphIsInitialized'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outIsInitialized' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphIsNodeSubGraph'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}' const='true'/>
+    <arg name='inNode' declared_type='AUNode' type='l' type64='i'/>
+    <arg name='outFlag' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphIsOpen'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outIsOpen' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphIsRunning'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outIsRunning' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphNewNode'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^{ComponentDescription=IIILL}' type64='^{ComponentDescription=IIIQQ}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inDescription' declared_type='ComponentDescription*' type='^{ComponentDescription=IIILL}' type64='^{ComponentDescription=IIIQQ}' const='true'/>
+    <arg name='inClassDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inClassData' declared_type='void*' type='^v' const='true'/>
+    <arg name='outNode' declared_type='AUNode*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphNewNodeSubGraph'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outNode' declared_type='AUNode*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphOpen'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphRemoveNode'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='l' type64='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inNode' declared_type='AUNode' type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphRemoveRenderNotification'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBuffer=II^v}'/>
-      <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inCallback' function_pointer='true' declared_type='AudioUnitRenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags' type='L' type64='I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBuffer*' type='^{AudioBuffer=II^v}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphRemoveRenderNotify'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-      <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inCallback' function_pointer='true' declared_type='AURenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags*' type='^I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphSetRenderNotification'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^{AudioBuffer=II^v}'/>
-      <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='inCallback' function_pointer='true' declared_type='AudioUnitRenderCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitRenderActionFlags' type='L' type64='I'/>
+      <arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='AudioBuffer*' type='^{AudioBuffer=II^v}'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphStart'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphStop'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphUninitialize'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUGraphUpdate'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <arg name='outIsUpdated' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUListenerAddParameter'>
-    <arg type='^{AUListenerBase=}'/>
-    <arg type='^v'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inListener' declared_type='AUParameterListenerRef' type='^{AUListenerBase=}'/>
+    <arg name='inObject' declared_type='void*' type='^v'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUListenerCreate'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^v'/>
-      <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-      <arg type='f'/>
-      <retval type='v'/>
+    <arg name='inProc' function_pointer='true' declared_type='AUParameterListenerProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+      <arg declared_type='Float32' type='f'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^{__CFRunLoop=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='f'/>
-    <arg type='^^{AUListenerBase}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <arg name='inRunLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+    <arg name='inRunLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inNotificationInterval' declared_type='Float32' type='f'/>
+    <arg name='outListener' declared_type='AUParameterListenerRef*' type='^^{AUListenerBase}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUListenerDispose'>
-    <arg type='^{AUListenerBase=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inListener' declared_type='AUParameterListenerRef' type='^{AUListenerBase=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUListenerRemoveParameter'>
-    <arg type='^{AUListenerBase=}'/>
-    <arg type='^v'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inListener' declared_type='AUParameterListenerRef' type='^{AUListenerBase=}'/>
+    <arg name='inObject' declared_type='void*' type='^v'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerConnectSource'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <arg name='inSource' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerCreate'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{OpaqueAUMIDIController}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inVirtualDestinationName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outController' declared_type='AUMIDIControllerRef*' type='^^{OpaqueAUMIDIController}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerDisconnectSource'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <arg name='inSource' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerDispose'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerExportXMLNames'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <arg type='^^{__CFURL}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <arg name='outXMLFileURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerHandleMIDI'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <arg name='inMIDIPacketList' declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerMapChannelToAU'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='l' type64='i'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <arg name='inSourceMIDIChannel' declared_type='SInt32' type='l' type64='i'/>
+    <arg name='inAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inDestMIDIChannel' declared_type='SInt32' type='l' type64='i'/>
+    <arg name='inCreateDefaultControlMappings' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerMapEventToParameter'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <arg type='C'/>
-    <arg type='S'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <arg name='inMIDIStatusByte' declared_type='UInt8' type='C'/>
+    <arg name='inMIDIControl' declared_type='UInt16' type='S'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUMIDIControllerUnmapAudioUnit'>
-    <arg type='^{OpaqueAUMIDIController=}'/>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inController' declared_type='AUMIDIControllerRef' type='^{OpaqueAUMIDIController=}'/>
+    <arg name='inAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUParameterFormatValue'>
-    <arg type='d'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <retval type='*'/>
+    <arg name='inParameterValue' declared_type='double' type='d'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <arg name='inTextBuffer' declared_type='char*' type='*'/>
+    <arg name='inDigits' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='char*' type='*'/>
   </function>
   <function name='AUParameterListenerNotify'>
-    <arg type='^{AUListenerBase=}'/>
-    <arg type='^v'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSendingListener' declared_type='AUParameterListenerRef' type='^{AUListenerBase=}'/>
+    <arg name='inSendingObject' declared_type='void*' type='^v'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUParameterSet'>
-    <arg type='^{AUListenerBase=}'/>
-    <arg type='^v'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <arg type='f'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSendingListener' declared_type='AUParameterListenerRef' type='^{AUListenerBase=}'/>
+    <arg name='inSendingObject' declared_type='void*' type='^v'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <arg name='inValue' declared_type='Float32' type='f'/>
+    <arg name='inBufferOffsetInFrames' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AUParameterValueFromLinear'>
-    <arg type='f'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <retval type='f'/>
+    <arg name='inLinearValue' declared_type='Float32' type='f'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <retval declared_type='Float32' type='f'/>
   </function>
   <function name='AUParameterValueToLinear'>
-    <arg type='f'/>
-    <arg type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}'/>
-    <retval type='f'/>
+    <arg name='inParameterValue' declared_type='Float32' type='f'/>
+    <arg name='inParameter' declared_type='AudioUnitParameter*' type='^{AudioUnitParameter=^{ComponentInstanceRecord}III}' const='true'/>
+    <retval declared_type='Float32' type='f'/>
   </function>
   <function name='AudioConverterConvertBuffer'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <arg name='inInputDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inInputData' declared_type='void*' type='^v' const='true'/>
+    <arg name='ioOutputDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outOutputData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterDispose'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterFillBuffer'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueAudioConverter=}'/>
-      <arg type='^I'/>
-      <arg type='^^v'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <arg name='inInputDataProc' function_pointer='true' declared_type='AudioConverterInputDataProc' type='^?'>
+      <arg declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='void**' type='^^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inInputDataProcUserData' declared_type='void*' type='^v'/>
+    <arg name='ioOutputDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outOutputData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterFillComplexBuffer'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueAudioConverter=}'/>
-      <arg type='^I'/>
-      <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-      <arg type='^^{AudioStreamPacketDescription}'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <arg name='inInputDataProc' function_pointer='true' declared_type='AudioConverterComplexInputDataProc' type='^?'>
+      <arg declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+      <arg declared_type='UInt32*' type='^I'/>
+      <arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+      <arg declared_type='AudioStreamPacketDescription**' type='^^{AudioStreamPacketDescription}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-    <arg type='^{AudioStreamPacketDescription=qII}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inInputDataProcUserData' declared_type='void*' type='^v'/>
+    <arg name='ioOutputDataPacketSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outOutputData' declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+    <arg name='outPacketDescription' declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterGetProperty'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <arg name='inPropertyID' declared_type='AudioConverterPropertyID' type='L' type64='I'/>
+    <arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterGetPropertyInfo'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <arg name='inPropertyID' declared_type='AudioConverterPropertyID' type='L' type64='I'/>
+    <arg name='outSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outWritable' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterNew'>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='^^{OpaqueAudioConverter}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSourceFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inDestinationFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='outAudioConverter' declared_type='AudioConverterRef*' type='^^{OpaqueAudioConverter}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterNewSpecific'>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioClassDescription=III}'/>
-    <arg type='^^{OpaqueAudioConverter}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSourceFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inDestinationFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inNumberClassDescriptions' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inClassDescriptions' declared_type='AudioClassDescription*' type='^{AudioClassDescription=III}'/>
+    <arg name='outAudioConverter' declared_type='AudioConverterRef*' type='^^{OpaqueAudioConverter}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterReset'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioConverterSetProperty'>
-    <arg type='^{OpaqueAudioConverter=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioConverter' declared_type='AudioConverterRef' type='^{OpaqueAudioConverter=}'/>
+    <arg name='inPropertyID' declared_type='AudioConverterPropertyID' type='L' type64='I'/>
+    <arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPropertyData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileClose'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileComponentCloseFile'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentCountUserData'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outNumberItems' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentCreate'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inParentRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outNewFileRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentDataIsThisFormat'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inClientData' declared_type='void*' type='^v'/>
+    <arg name='inReadFunc' function_pointer='true' declared_type='AudioFile_ReadProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inWriteFunc' function_pointer='true' declared_type='AudioFile_WriteProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <retval type='q'/>
+    <arg name='inGetSizeFunc' function_pointer='true' declared_type='AudioFile_GetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='SInt64' type='q'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <retval type='l' type64='i'/>
+    <arg name='inSetSizeFunc' function_pointer='true' declared_type='AudioFile_SetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='outResult' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentExtensionIsThisFormat'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inExtension' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outResult' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentFileIsThisFormat'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='s'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inFileRefNum' declared_type='SInt16' type='s'/>
+    <arg name='outResult' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentGetGlobalInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioFileComponentPropertyID' type='L' type64='I'/>
+    <arg name='inSpecifierSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inSpecifier' declared_type='void*' type='^v' const='true'/>
+    <arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentGetGlobalInfoSize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioFileComponentPropertyID' type='L' type64='I'/>
+    <arg name='inSpecifierSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inSpecifier' declared_type='void*' type='^v' const='true'/>
+    <arg name='outPropertySize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentGetProperty'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioFileComponentPropertyID' type='L' type64='I'/>
+    <arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentGetPropertyInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioFileComponentPropertyID' type='L' type64='I'/>
+    <arg name='outPropertySize' declared_type='UInt32*' type='^I'/>
+    <arg name='outWritable' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentGetUserData'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='ioUserDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outUserData' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentGetUserDataSize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outUserDataSize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentInitialize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inFileRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentInitializeWithCallbacks'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inClientData' declared_type='void*' type='^v'/>
+    <arg name='inReadFunc' function_pointer='true' declared_type='AudioFile_ReadProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inWriteFunc' function_pointer='true' declared_type='AudioFile_WriteProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <retval type='q'/>
+    <arg name='inGetSizeFunc' function_pointer='true' declared_type='AudioFile_GetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='SInt64' type='q'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <retval type='l' type64='i'/>
+    <arg name='inSetSizeFunc' function_pointer='true' declared_type='AudioFile_SetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='q'/>
+    <arg name='inFileType' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentOpenFile'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='c'/>
-    <arg type='s'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inFileRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inPermissions' declared_type='SInt8' type='c'/>
+    <arg name='inRefNum' declared_type='SInt16' type='s'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentOpenWithCallbacks'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inClientData' declared_type='void*' type='^v'/>
+    <arg name='inReadFunc' function_pointer='true' declared_type='AudioFile_ReadProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inWriteFunc' function_pointer='true' declared_type='AudioFile_WriteProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <retval type='q'/>
+    <arg name='inGetSizeFunc' function_pointer='true' declared_type='AudioFile_GetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='SInt64' type='q'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <retval type='l' type64='i'/>
+    <arg name='inSetSizeFunc' function_pointer='true' declared_type='AudioFile_SetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='q'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentOptimize'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentReadBytes'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='B'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='inStartingByte' declared_type='SInt64' type='q'/>
+    <arg name='ioNumBytes' declared_type='UInt32*' type='^I'/>
+    <arg name='outBuffer' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentReadPackets'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='B'/>
-    <arg type='^I'/>
-    <arg type='^{AudioStreamPacketDescription=qII}'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='outNumBytes' declared_type='UInt32*' type='^I'/>
+    <arg name='outPacketDescriptions' declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+    <arg name='inStartingPacket' declared_type='SInt64' type='q'/>
+    <arg name='ioNumPackets' declared_type='UInt32*' type='^I'/>
+    <arg name='outBuffer' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentSetProperty'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inPropertyID' declared_type='AudioFileComponentPropertyID' type='L' type64='I'/>
+    <arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPropertyData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentSetUserData'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inUserDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outUserData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentWriteBytes'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='B'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='inStartingByte' declared_type='SInt64' type='q'/>
+    <arg name='ioNumBytes' declared_type='UInt32*' type='^I'/>
+    <arg name='inBuffer' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileComponentWritePackets'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='B'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioStreamPacketDescription=qII}'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='inComponent' declared_type='AudioFileComponent' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='inNumBytes' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPacketDescriptions' declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+    <arg name='inStartingPacket' declared_type='SInt64' type='q'/>
+    <arg name='ioNumPackets' declared_type='UInt32*' type='^I'/>
+    <arg name='inBuffer' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='AudioFileCountUserData'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outNumberItems' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileCreate'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^^{OpaqueAudioFileID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inParentRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inFileType' declared_type='AudioFileTypeID' type='L' type64='I'/>
+    <arg name='inFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outNewFileRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <arg name='outAudioFile' declared_type='AudioFileID*' type='^^{OpaqueAudioFileID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileGetGlobalInfo'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPropertyID' declared_type='AudioFilePropertyID' type='L' type64='I'/>
+    <arg name='inSpecifierSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inSpecifier' declared_type='void*' type='^v'/>
+    <arg name='ioDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileGetGlobalInfoSize'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPropertyID' declared_type='AudioFilePropertyID' type='L' type64='I'/>
+    <arg name='inSpecifierSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inSpecifier' declared_type='void*' type='^v'/>
+    <arg name='outDataSize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileGetProperty'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inPropertyID' declared_type='AudioFilePropertyID' type='L' type64='I'/>
+    <arg name='ioDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileGetPropertyInfo'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inPropertyID' declared_type='AudioFilePropertyID' type='L' type64='I'/>
+    <arg name='outDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='isWritable' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileGetUserData'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='ioUserDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outUserData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileGetUserDataSize'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outUserDataSize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileInitialize'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueAudioFileID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inFileRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFileType' declared_type='AudioFileTypeID' type='L' type64='I'/>
+    <arg name='inFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outAudioFile' declared_type='AudioFileID*' type='^^{OpaqueAudioFileID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileInitializeWithCallbacks'>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <arg name='inReadFunc' function_pointer='true' declared_type='AudioFile_ReadProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inWriteFunc' function_pointer='true' declared_type='AudioFile_WriteProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <retval type='q'/>
+    <arg name='inGetSizeFunc' function_pointer='true' declared_type='AudioFile_GetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='SInt64' type='q'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <retval type='l' type64='i'/>
+    <arg name='inSetSizeFunc' function_pointer='true' declared_type='AudioFile_SetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueAudioFileID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inFileType' declared_type='AudioFileTypeID' type='L' type64='I'/>
+    <arg name='inFormat' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outAudioFile' declared_type='AudioFileID*' type='^^{OpaqueAudioFileID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileOpen'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='c'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueAudioFileID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inFileRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inPermissions' declared_type='SInt8' type='c'/>
+    <arg name='inFileTypeHint' declared_type='AudioFileTypeID' type='L' type64='I'/>
+    <arg name='outAudioFile' declared_type='AudioFileID*' type='^^{OpaqueAudioFileID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileOpenWithCallbacks'>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <arg name='inReadFunc' function_pointer='true' declared_type='AudioFile_ReadProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='inWriteFunc' function_pointer='true' declared_type='AudioFile_WriteProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <arg declared_type='ByteCount' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <arg declared_type='ByteCount*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <retval type='q'/>
+    <arg name='inGetSizeFunc' function_pointer='true' declared_type='AudioFile_GetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='SInt64' type='q'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='q'/>
-      <retval type='l' type64='i'/>
+    <arg name='inSetSizeFunc' function_pointer='true' declared_type='AudioFile_SetSizeProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='SInt64' type='q'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueAudioFileID}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inFileTypeHint' declared_type='AudioFileTypeID' type='L' type64='I'/>
+    <arg name='outAudioFile' declared_type='AudioFileID*' type='^^{OpaqueAudioFileID}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileOptimize'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileReadBytes'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='B'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='inStartingByte' declared_type='SInt64' type='q'/>
+    <arg name='ioNumBytes' declared_type='UInt32*' type='^I'/>
+    <arg name='outBuffer' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileReadPackets'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='B'/>
-    <arg type='^I'/>
-    <arg type='^{AudioStreamPacketDescription=qII}'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='outNumBytes' declared_type='UInt32*' type='^I'/>
+    <arg name='outPacketDescriptions' declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+    <arg name='inStartingPacket' declared_type='SInt64' type='q'/>
+    <arg name='ioNumPackets' declared_type='UInt32*' type='^I'/>
+    <arg name='outBuffer' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileSetProperty'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inPropertyID' declared_type='AudioFilePropertyID' type='L' type64='I'/>
+    <arg name='inDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPropertyData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileSetUserData'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUserDataID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inUserDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inUserData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileWriteBytes'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='B'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='inStartingByte' declared_type='SInt64' type='q'/>
+    <arg name='ioNumBytes' declared_type='UInt32*' type='^I'/>
+    <arg name='inBuffer' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFileWritePackets'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='B'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioStreamPacketDescription=qII}'/>
-    <arg type='q'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAudioFile' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inUseCache' declared_type='Boolean' type='B'/>
+    <arg name='inNumBytes' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPacketDescriptions' declared_type='AudioStreamPacketDescription*' type='^{AudioStreamPacketDescription=qII}'/>
+    <arg name='inStartingPacket' declared_type='SInt64' type='q'/>
+    <arg name='ioNumPackets' declared_type='UInt32*' type='^I'/>
+    <arg name='inBuffer' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFormatGetProperty'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPropertyID' declared_type='AudioFormatPropertyID' type='L' type64='I'/>
+    <arg name='inSpecifierSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inSpecifier' declared_type='void*' type='^v' const='true'/>
+    <arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AudioFormatGetPropertyInfo'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPropertyID' declared_type='AudioFormatPropertyID' type='L' type64='I'/>
+    <arg name='inSpecifierSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inSpecifier' declared_type='void*' type='^v' const='true'/>
+    <arg name='outPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockAddListener'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inListenerProc' function_pointer='true' declared_type='CAClockListenerProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='CAClockMessage' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inUserData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockArm'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockBarBeatTimeToBeats'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='^{CABarBeatTime=iSSSS}'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inBarBeatTime' declared_type='CABarBeatTime*' type='^{CABarBeatTime=iSSSS}' const='true'/>
+    <arg name='outBeats' declared_type='CAClockBeats*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockBeatsToBarBeatTime'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='d'/>
-    <arg type='S'/>
-    <arg type='^{CABarBeatTime=iSSSS}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inBeats' declared_type='CAClockBeats' type='d'/>
+    <arg name='inSubbeatDivisor' declared_type='UInt16' type='S'/>
+    <arg name='outBarBeatTime' declared_type='CABarBeatTime*' type='^{CABarBeatTime=iSSSS}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockDisarm'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockDispose'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockGetCurrentTempo'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='^d'/>
-    <arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='outTempo' declared_type='CAClockTempo*' type='^d'/>
+    <arg name='outTimestamp' declared_type='CAClockTime*' type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockGetCurrentTime'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inTimeFormat' declared_type='CAClockTimeFormat' type='L' type64='I'/>
+    <arg name='outTime' declared_type='CAClockTime*' type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockGetPlayRate'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='outPlayRate' declared_type='Float64*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockGetProperty'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inPropertyID' declared_type='CAClockPropertyID' type='L' type64='I'/>
+    <arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockGetPropertyInfo'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inPropertyID' declared_type='CAClockPropertyID' type='L' type64='I'/>
+    <arg name='outSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outWritable' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockGetStartTime'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inTimeFormat' declared_type='CAClockTimeFormat' type='L' type64='I'/>
+    <arg name='outTime' declared_type='CAClockTime*' type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockNew'>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueCAClock}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inReservedFlags' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outCAClock' declared_type='CAClockRef*' type='^^{OpaqueCAClock}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockRemoveListener'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inListenerProc' function_pointer='true' declared_type='CAClockListenerProc' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='CAClockMessage' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inUserData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockSMPTETimeToSeconds'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='^{SMPTETime=ssIIIssss}'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inSMPTETime' declared_type='SMPTETime*' type='^{SMPTETime=ssIIIssss}' const='true'/>
+    <arg name='outSeconds' declared_type='CAClockSeconds*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockSecondsToSMPTETime'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='d'/>
-    <arg type='S'/>
-    <arg type='^{SMPTETime=ssIIIssss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inSeconds' declared_type='CAClockSeconds' type='d'/>
+    <arg name='inSubframeDivisor' declared_type='UInt16' type='S'/>
+    <arg name='outSMPTETime' declared_type='SMPTETime*' type='^{SMPTETime=ssIIIssss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockSetCurrentTempo'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='d'/>
-    <arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inTempo' declared_type='CAClockTempo' type='d'/>
+    <arg name='inTimestamp' declared_type='CAClockTime*' type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockSetCurrentTime'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inTime' declared_type='CAClockTime*' type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockSetPlayRate'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inPlayRate' declared_type='Float64' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockSetProperty'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inPropertyID' declared_type='CAClockPropertyID' type='L' type64='I'/>
+    <arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPropertyData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockStart'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockStop'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAClockTranslateTime'>
-    <arg type='^{OpaqueCAClock=}'/>
-    <arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCAClock' declared_type='CAClockRef' type='^{OpaqueCAClock=}'/>
+    <arg name='inTime' declared_type='CAClockTime*' type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}' const='true'/>
+    <arg name='inOutputTimeFormat' declared_type='CAClockTimeFormat' type='L' type64='I'/>
+    <arg name='outTime' declared_type='CAClockTime*' type='^{CAClockTime=II(?=Qddd{SMPTETime=ssIIIssss})}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='CAShow'>
-    <arg type='^v'/>
+    <arg name='inObject' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='CAShowFile'>
-    <arg type='^v'/>
-    <arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+    <arg name='inObject' declared_type='void*' type='^v'/>
+    <arg name='inFile' declared_type='FILE*' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeAUGraph'>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DisposeMusicEventIterator'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DisposeMusicPlayer'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DisposeMusicSequence'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileCreateNew'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
-    <arg type='^{AudioChannelLayout=III[1{AudioChannelDescription=II[3f]}]}'/>
-    <arg type='^^{OpaqueExtAudioFile}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inParentDir' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inFileType' declared_type='AudioFileTypeID' type='L' type64='I'/>
+    <arg name='inStreamDesc' declared_type='AudioStreamBasicDescription*' type='^{AudioStreamBasicDescription=dIIIIIIII}' const='true'/>
+    <arg name='inChannelLayout' declared_type='AudioChannelLayout*' type='^{AudioChannelLayout=III[1{AudioChannelDescription=II[3f]}]}' const='true'/>
+    <arg name='outExtAudioFile' declared_type='ExtAudioFileRef*' type='^^{OpaqueExtAudioFile}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileDispose'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileGetProperty'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='inPropertyID' declared_type='ExtAudioFilePropertyID' type='L' type64='I'/>
+    <arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outPropertyData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileGetPropertyInfo'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='inPropertyID' declared_type='ExtAudioFilePropertyID' type='L' type64='I'/>
+    <arg name='outSize' declared_type='UInt32*' type='^I'/>
+    <arg name='outWritable' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileOpen'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^^{OpaqueExtAudioFile}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='outExtAudioFile' declared_type='ExtAudioFileRef*' type='^^{OpaqueExtAudioFile}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileRead'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='^I'/>
-    <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='ioNumberFrames' declared_type='UInt32*' type='^I'/>
+    <arg name='ioData' declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileSeek'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='inFrameOffset' declared_type='SInt64' type='q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileSetProperty'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='inPropertyID' declared_type='ExtAudioFilePropertyID' type='L' type64='I'/>
+    <arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inPropertyData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileTell'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='outFrameOffset' declared_type='SInt64*' type='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileWrapAudioFileID'>
-    <arg type='^{OpaqueAudioFileID=}'/>
-    <arg type='B'/>
-    <arg type='^^{OpaqueExtAudioFile}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inFileID' declared_type='AudioFileID' type='^{OpaqueAudioFileID=}'/>
+    <arg name='inForWriting' declared_type='Boolean' type='B'/>
+    <arg name='outExtAudioFile' declared_type='ExtAudioFileRef*' type='^^{OpaqueExtAudioFile}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileWrite'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='inNumberFrames' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='ioData' declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ExtAudioFileWriteAsync'>
-    <arg type='^{OpaqueExtAudioFile=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inExtAudioFile' declared_type='ExtAudioFileRef' type='^{OpaqueExtAudioFile=}'/>
+    <arg name='inNumberFrames' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='ioData' declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='GetNameFromSoundBank'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSoundBankRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='outName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorDeleteEvent'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorGetEventInfo'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <arg type='^d'/>
-    <arg type='^I'/>
-    <arg type='^^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <arg name='outTimeStamp' declared_type='MusicTimeStamp*' type='^d'/>
+    <arg name='outEventType' declared_type='MusicEventType*' type='^I'/>
+    <arg name='outEventData' declared_type='void**' type='^^v' const='true'/>
+    <arg name='outEventDataSize' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorHasCurrentEvent'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <arg name='outHasCurEvent' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorHasNextEvent'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <arg name='outHasNextEvent' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorHasPreviousEvent'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <arg name='outHasPrevEvent' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorNextEvent'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorPreviousEvent'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorSeek'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorSetEventInfo'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <arg name='inEventType' declared_type='MusicEventType' type='L' type64='I'/>
+    <arg name='inEventData' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicEventIteratorSetEventTime'>
-    <arg type='^{OpaqueMusicEventIterator=}'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIterator' declared_type='MusicEventIterator' type='^{OpaqueMusicEventIterator=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerGetBeatsForHostTime'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='Q'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='inHostTime' declared_type='UInt64' type='Q'/>
+    <arg name='outBeats' declared_type='MusicTimeStamp*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerGetHostTimeForBeats'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='d'/>
-    <arg type='^Q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='inBeats' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='outHostTime' declared_type='UInt64*' type='^Q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerGetPlayRateScalar'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='outScaleRate' declared_type='Float64*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerGetSequence'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='^^{OpaqueMusicSequence}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='outSequence' declared_type='MusicSequence*' type='^^{OpaqueMusicSequence}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerGetTime'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='outTime' declared_type='MusicTimeStamp*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerIsPlaying'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='outIsPlaying' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerPreroll'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerSetPlayRateScalar'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='inScaleRate' declared_type='Float64' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerSetSequence'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerSetTime'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <arg name='inTime' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerStart'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicPlayerStop'>
-    <arg type='^{OpaqueMusicPlayer=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPlayer' declared_type='MusicPlayer' type='^{OpaqueMusicPlayer=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceDisposeTrack'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceGetAUGraph'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^^{OpaqueAUGraph}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='outGraph' declared_type='AUGraph*' type='^^{OpaqueAUGraph}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceGetBeatsForSeconds'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='d'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inSeconds' declared_type='Float64' type='d'/>
+    <arg name='outBeats' declared_type='MusicTimeStamp*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceGetIndTrack'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueMusicTrack}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inTrackIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outTrack' declared_type='MusicTrack*' type='^^{OpaqueMusicTrack}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceGetSecondsForBeats'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='d'/>
-    <arg type='^d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inBeats' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='outSeconds' declared_type='Float64*' type='^d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceGetTempoTrack'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^^{OpaqueMusicTrack}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='outTrack' declared_type='MusicTrack*' type='^^{OpaqueMusicTrack}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceGetTrackCount'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='outNumberOfTracks' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceGetTrackIndex'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='outTrackIndex' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceLoadSMF'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inFileSpec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceLoadSMFData'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{__CFData=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inData' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceLoadSMFDataWithFlags'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{__CFData=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inData' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <arg name='inFlags' declared_type='MusicSequenceLoadFlags' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceLoadSMFWithFlags'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inFileRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFlags' declared_type='MusicSequenceLoadFlags' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceNewTrack'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^^{OpaqueMusicTrack}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='outTrack' declared_type='MusicTrack*' type='^^{OpaqueMusicTrack}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceReverse'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceSaveMIDIFile'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='S'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inParentDirectory' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inResolution' declared_type='UInt16' type='S'/>
+    <arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceSaveSMF'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inFileSpec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='inResolution' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceSaveSMFData'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^^{__CFData}'/>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='outData' declared_type='CFDataRef*' type='^^{__CFData}'/>
+    <arg name='inResolution' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceSetAUGraph'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{OpaqueAUGraph=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inGraph' declared_type='AUGraph' type='^{OpaqueAUGraph=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceSetMIDIEndpoint'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inEndpoint' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicSequenceSetUserCallback'>
-    <arg type='^{OpaqueMusicSequence=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^v'/>
-      <arg type='^{OpaqueMusicSequence=}'/>
-      <arg type='^{OpaqueMusicTrack=}'/>
-      <arg type='d'/>
-      <arg type='^{MusicEventUserData=I[1C]}'/>
-      <arg type='d'/>
-      <arg type='d'/>
-      <retval type='v'/>
+    <arg name='inSequence' declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+    <arg name='inCallback' function_pointer='true' declared_type='MusicSequenceUserCallback' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='MusicSequence' type='^{OpaqueMusicSequence=}'/>
+      <arg declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+      <arg declared_type='MusicTimeStamp' type='d'/>
+      <arg declared_type='MusicEventUserData*' type='^{MusicEventUserData=I[1C]}' const='true'/>
+      <arg declared_type='MusicTimeStamp' type='d'/>
+      <arg declared_type='MusicTimeStamp' type='d'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inClientData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackClear'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inStartTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inEndTime' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackCopyInsert'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSourceTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inSourceStartTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inSourceEndTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inDestTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inDestInsertTime' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackCut'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inStartTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inEndTime' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackGetDestMIDIEndpoint'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='^^{OpaqueMIDIEndpoint}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='outEndpoint' declared_type='MIDIEndpointRef*' type='^^{OpaqueMIDIEndpoint}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackGetDestNode'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='outNode' declared_type='AUNode*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackGetProperty'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inPropertyID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outData' declared_type='void*' type='^v'/>
+    <arg name='ioLength' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackGetSequence'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='^^{OpaqueMusicSequence}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='outSequence' declared_type='MusicSequence*' type='^^{OpaqueMusicSequence}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackMerge'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSourceTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inSourceStartTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inSourceEndTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inDestTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inDestInsertTime' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackMoveEvents'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inStartTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inEndTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inMoveTime' declared_type='MusicTimeStamp' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewAUPresetEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{AUPresetEvent=II^v}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inPresetEvent' declared_type='AUPresetEvent*' type='^{AUPresetEvent=II^v}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewExtendedControlEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{ExtendedControlEvent=IIf}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inInfo' declared_type='ExtendedControlEvent*' type='^{ExtendedControlEvent=IIf}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewExtendedNoteEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{ExtendedNoteOnEvent=IIf{MusicDeviceNoteParams=Iff[1{NoteParamsControlValue=If}]}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inInfo' declared_type='ExtendedNoteOnEvent*' type='^{ExtendedNoteOnEvent=IIf{MusicDeviceNoteParams=Iff[1{NoteParamsControlValue=If}]}}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewExtendedTempoEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inBPM' declared_type='Float64' type='d'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewMIDIChannelEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{MIDIChannelMessage=CCCC}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inMessage' declared_type='MIDIChannelMessage*' type='^{MIDIChannelMessage=CCCC}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewMIDINoteEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{MIDINoteMessage=CCCCf}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inMessage' declared_type='MIDINoteMessage*' type='^{MIDINoteMessage=CCCCf}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewMIDIRawDataEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{MIDIRawData=I[1C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inRawData' declared_type='MIDIRawData*' type='^{MIDIRawData=I[1C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewMetaEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{MIDIMetaEvent=CCCCI[1C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inMetaEvent' declared_type='MIDIMetaEvent*' type='^{MIDIMetaEvent=CCCCI[1C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewParameterEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{ParameterEvent=IIIf}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inInfo' declared_type='ParameterEvent*' type='^{ParameterEvent=IIIf}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackNewUserEvent'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='^{MusicEventUserData=I[1C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inTimeStamp' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inUserData' declared_type='MusicEventUserData*' type='^{MusicEventUserData=I[1C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackSetDestMIDIEndpoint'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inEndpoint' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackSetDestNode'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='l' type64='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inNode' declared_type='AUNode' type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MusicTrackSetProperty'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inPropertyID' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inData' declared_type='void*' type='^v'/>
+    <arg name='inLength' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewAUGraph'>
-    <arg type='^^{OpaqueAUGraph}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outGraph' declared_type='AUGraph*' type='^^{OpaqueAUGraph}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewMusicEventIterator'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='^^{OpaqueMusicEventIterator}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='outIterator' declared_type='MusicEventIterator*' type='^^{OpaqueMusicEventIterator}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewMusicPlayer'>
-    <arg type='^^{OpaqueMusicPlayer}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outPlayer' declared_type='MusicPlayer*' type='^^{OpaqueMusicPlayer}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewMusicSequence'>
-    <arg type='^^{OpaqueMusicSequence}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outSequence' declared_type='MusicSequence*' type='^^{OpaqueMusicSequence}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewMusicTrackFrom'>
-    <arg type='^{OpaqueMusicTrack=}'/>
-    <arg type='d'/>
-    <arg type='d'/>
-    <arg type='^^{OpaqueMusicTrack}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSourceTrack' declared_type='MusicTrack' type='^{OpaqueMusicTrack=}'/>
+    <arg name='inSourceStartTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='inSourceEndTime' declared_type='MusicTimeStamp' type='d'/>
+    <arg name='outNewTrack' declared_type='MusicTrack*' type='^^{OpaqueMusicTrack}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='OpenDefaultAudioOutput'>
-    <arg type='^^{ComponentInstanceRecord}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outUnit' declared_type='AudioUnit*' type='^^{ComponentInstanceRecord}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='OpenSystemSoundAudioOutput'>
-    <arg type='^^{ComponentInstanceRecord}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outUnit' declared_type='AudioUnit*' type='^^{ComponentInstanceRecord}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

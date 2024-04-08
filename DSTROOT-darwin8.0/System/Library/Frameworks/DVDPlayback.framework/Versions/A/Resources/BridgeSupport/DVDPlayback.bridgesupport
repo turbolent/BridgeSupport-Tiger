@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
@@ -324,484 +323,484 @@
   <enum name='kDVDVMGMDomain' value='1'/>
   <enum name='kDVDVTSMDomain' value='2'/>
   <function name='DVDClearLastPlayBookmark'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDCloseMediaFile'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDCloseMediaVolume'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDDisplaySubPicture'>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDisplay' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDDispose'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDDoButtonActivate'>
-    <arg type='l' type64='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIndex' declared_type='SInt32' type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDDoMenuClick'>
-    <arg type='{Point=ss}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPortPt' declared_type='Point' type='{Point=ss}'/>
+    <arg name='outIndex' declared_type='SInt32*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDDoMenuMouseOver'>
-    <arg type='{Point=ss}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPortPt' declared_type='Point' type='{Point=ss}'/>
+    <arg name='outIndex' declared_type='SInt32*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDDoUserNavigation'>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inNavigation' declared_type='DVDUserNavigation' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDEnableWebAccess'>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inEnable' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAngle'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outAngleNum' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAspectRatio'>
-    <arg type='^s' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outRatio' declared_type='DVDAspectRatio*' type='^s' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAudioLanguageCode'>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outCode' declared_type='DVDLanguageCode*' type='^I' type_modifier='o'/>
+    <arg name='outExtension' declared_type='DVDAudioExtensionCode*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAudioLanguageCodeByStream'>
-    <arg type='S'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inStreamNum' declared_type='UInt16' type='S'/>
+    <arg name='outCode' declared_type='DVDLanguageCode*' type='^I' type_modifier='o'/>
+    <arg name='outExtension' declared_type='DVDAudioExtensionCode*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAudioStream'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outStreamNum' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAudioStreamFormat'>
-    <arg type='^s' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outFormat' declared_type='DVDAudioFormat*' type='^s' type_modifier='o'/>
+    <arg name='outBitsPerSample' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='outSamplesPerSecond' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='outChannels' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAudioStreamFormatByStream'>
-    <arg type='L' type64='I'/>
-    <arg type='^s' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inStreamNum' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outFormat' declared_type='DVDAudioFormat*' type='^s' type_modifier='o'/>
+    <arg name='outBitsPerSample' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='outSamplesPerSecond' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='outChannels' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAudioVolume'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outVolume' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetAudioVolumeInfo'>
-    <arg type='^S' type_modifier='o'/>
-    <arg type='^S' type_modifier='o'/>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outMinVolume' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <arg name='outCurVolume' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <arg name='outMaxVolume' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetBookmark'>
-    <arg type='^v' type_modifier='o'/>
-    <arg type='^I' type_modifier='N'/>
-    <retval type='l' type64='i'/>
+    <arg name='outBookMarkData' declared_type='void*' type='^v' type_modifier='o'/>
+    <arg name='ioBookMarkDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetButtonPosition'>
-    <arg type='L' type64='I'/>
-    <arg type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='index' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outRect' declared_type='CGRect*' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type_modifier='o'/>
+    <arg name='autoAction' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetButtoninfo'>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='numberOfButtons' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='selectedButton' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='forcedActivateButton' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='userButtonOffset' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <arg name='numberOfUserButtons' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetChapter'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outChapterNum' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetDiscRegionCode'>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outCode' declared_type='DVDRegionCode*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetDriveRegionCode'>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^s' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outCode' declared_type='DVDRegionCode*' type='^I' type_modifier='o'/>
+    <arg name='outNumberChangesLeft' declared_type='SInt16*' type='^s' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetFormatStandard'>
-    <arg type='^s' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outFormat' declared_type='DVDFormat*' type='^s' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetGPRMValue'>
-    <arg type='L' type64='I'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='index' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='value' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetLastPlayBookmark'>
-    <arg type='^v' type_modifier='o'/>
-    <arg type='^I' type_modifier='N'/>
-    <retval type='l' type64='i'/>
+    <arg name='outBookMarkData' declared_type='void*' type='^v' type_modifier='o'/>
+    <arg name='ioBookMarkDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetMediaUniqueID'>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='outDiscID' declared_type='UInt8*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetMediaVolumeCFName'>
-    <arg type='^^{__CFString}' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outDiscVolumeCFName' declared_type='CFStringRef*' type='^^{__CFString}' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetMediaVolumeName'>
-    <arg type='^*' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outDiscVolumeName' declared_type='char**' type='^*' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetMenuLanguageCode'>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outCode' declared_type='DVDLanguageCode*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetNativeVideoSize'>
-    <arg type='^S' type_modifier='o'/>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outWidth' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <arg name='outHeight' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetNumAngles'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outNumAngles' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetNumAudioStreams'>
-    <arg type='^S' c_array_of_variable_length='true' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outNumStreams' declared_type='UInt16*' type='^S' c_array_of_variable_length='true' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetNumChapters'>
-    <arg type='S'/>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTitleNum' declared_type='UInt16' type='S'/>
+    <arg name='outNumChapters' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetNumSubPictureStreams'>
-    <arg type='^S' c_array_of_variable_length='true' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outNumStreams' declared_type='UInt16*' type='^S' c_array_of_variable_length='true' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetNumTitles'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outNumTitles' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetScanRate'>
-    <arg type='^s' type_modifier='o'/>
-    <arg type='*' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outRate' declared_type='DVDScanRate*' type='^s' type_modifier='o'/>
+    <arg name='outDirection' declared_type='DVDScanDirection*' type='*' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetState'>
-    <arg type='^i' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outState' declared_type='DVDState*' type='^i' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetSubPictureLanguageCode'>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outCode' declared_type='DVDLanguageCode*' type='^I' type_modifier='o'/>
+    <arg name='outExtension' declared_type='DVDSubpictureExtensionCode*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetSubPictureLanguageCodeByStream'>
-    <arg type='S'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inStreamNum' declared_type='UInt16' type='S'/>
+    <arg name='outCode' declared_type='DVDLanguageCode*' type='^I' type_modifier='o'/>
+    <arg name='outExtension' declared_type='DVDSubpictureExtensionCode*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetSubPictureStream'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outStreamNum' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetTime'>
-    <arg type='s'/>
-    <arg type='^I' type_modifier='o'/>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTimeCode' declared_type='DVDTimeCode' type='s'/>
+    <arg name='outTime' declared_type='DVDTimePosition*' type='^I' type_modifier='o'/>
+    <arg name='outFrames' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetTimeEventRate'>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outMilliseconds' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetTitle'>
-    <arg type='^S' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outTitleNum' declared_type='UInt16*' type='^S' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetVideoBounds'>
-    <arg type='^{Rect=ssss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outPortRect' declared_type='Rect*' type='^{Rect=ssss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetVideoDevice'>
-    <arg type='^^^{GDevice}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outDevice' declared_type='GDHandle*' type='^^^{GDevice}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetVideoDisplay'>
-    <arg type='^^{_CGDirectDisplayID}' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outDisplay' declared_type='CGDirectDisplayID*' type='^^{_CGDirectDisplayID}' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetVideoKeyColor'>
-    <arg type='^{RGBColor=SSS}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outKeyColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetVideoPort'>
-    <arg type='^^{OpaqueGrafPtr}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outVidPort' declared_type='CGrafPtr*' type='^^{OpaqueGrafPtr}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGetVideoWindowID'>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outVidWindowID' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGoBackOneLevel'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGoToMenu'>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inMenu' declared_type='DVDMenu' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDGotoBookmark'>
-    <arg type='^v' type_modifier='n'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inBookMarkData' declared_type='void*' type='^v' type_modifier='n'/>
+    <arg name='inBookMarkDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDHasMedia'>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outHasMedia' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDHasMenu'>
-    <arg type='L' type64='I'/>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inMenu' declared_type='DVDMenu' type='L' type64='I'/>
+    <arg name='outHasMenu' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDHasNextChapter'>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outHasChapter' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDHasPreviousChapter'>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outHasChapter' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIdle'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDInitialize'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsDisplayingSubPicture'>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outDisplayingSubPicture' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsMuted'>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outIsMuted' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsOnMenu'>
-    <arg type='^B' type_modifier='o'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outOnMenu' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <arg name='outMenu' declared_type='DVDMenu*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsPaused'>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outIsPaused' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsPlaying'>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='outIsPlaying' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsRegisteredEventCallBack'>
-    <arg type='L' type64='I' type_modifier='n'/>
-    <retval type='B'/>
+    <arg name='inCallBackID' declared_type='UInt32' type='L' type64='I' type_modifier='n'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='DVDIsSupportedDevice'>
-    <arg type='^^{GDevice}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDevice' declared_type='GDHandle' type='^^{GDevice}'/>
+    <arg name='outSupported' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsSupportedDisplay'>
-    <arg type='^{_CGDirectDisplayID=}'/>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDisplay' declared_type='CGDirectDisplayID' type='^{_CGDirectDisplayID=}'/>
+    <arg name='outSupported' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDIsValidMediaRef'>
-    <arg type='^{FSRef=[80C]}' type_modifier='n'/>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FSRef*' type='^{FSRef=[80C]}' type_modifier='n'/>
+    <arg name='outIsValid' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDMute'>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inMute' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDNextChapter'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDOpenMediaFile'>
-    <arg type='^{FSRef=[80C]}' type_modifier='n'/>
-    <retval type='l' type64='i'/>
+    <arg name='inFile' declared_type='FSRef*' type='^{FSRef=[80C]}' type_modifier='n'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDOpenMediaVolume'>
-    <arg type='^{FSRef=[80C]}' type_modifier='n'/>
-    <retval type='l' type64='i'/>
+    <arg name='inVolume' declared_type='FSRef*' type='^{FSRef=[80C]}' type_modifier='n'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDPause'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDPlay'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDPreviousChapter'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDRegisterEventCallBack'>
-    <arg function_pointer='true' type='^?' type_modifier='n'>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <arg type='L' type64='I'/>
-      <retval type='v'/>
+    <arg name='inCallBackProc' function_pointer='true' declared_type='DVDEventCallBackFunctionPtr' type='^?' type_modifier='n'>
+      <arg declared_type='DVDEventCode' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^I' type_modifier='n'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I' type_modifier='n'/>
-    <arg type='^I' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCode' declared_type='DVDEventCode*' type='^I' type_modifier='n'/>
+    <arg name='inCodeCount' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='inRefCon' declared_type='UInt32' type='L' type64='I' type_modifier='n'/>
+    <arg name='outCallBackID' declared_type='UInt32*' type='^I' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDResume'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDReturnToTitle'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDScan'>
-    <arg type='s'/>
-    <arg type='c'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRate' declared_type='DVDScanRate' type='s'/>
+    <arg name='inDirection' declared_type='DVDScanDirection' type='c'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetAngle'>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inAngleNum' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetAspectRatio'>
-    <arg type='s'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRatio' declared_type='DVDAspectRatio' type='s'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetAudioStream'>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inStreamNum' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetAudioVolume'>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inVolume' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetChapter'>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inChapterNum' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetDefaultAudioLanguageCode'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCode' declared_type='DVDLanguageCode' type='L' type64='I'/>
+    <arg name='inExtension' declared_type='DVDAudioExtensionCode' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetDefaultMenuLanguageCode'>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCode' declared_type='DVDLanguageCode' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetDefaultSubPictureLanguageCode'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCode' declared_type='DVDLanguageCode' type='L' type64='I'/>
+    <arg name='inExtension' declared_type='DVDSubpictureExtensionCode' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetDriveRegionCode'>
-    <arg type='L' type64='I'/>
-    <arg type='^{AuthorizationOpaqueRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCode' declared_type='DVDRegionCode' type='L' type64='I'/>
+    <arg name='inAuthorization' declared_type='AuthorizationRef' type='^{AuthorizationOpaqueRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetFatalErrorCallBack'>
-    <arg function_pointer='true' type='^?' type_modifier='n'>
-      <arg type='l' type64='i'/>
-      <arg type='L' type64='I'/>
-      <retval type='v'/>
+    <arg name='inCallBackProc' function_pointer='true' declared_type='DVDFatalErrCallBackFunctionPtr' type='^?' type_modifier='n'>
+      <arg declared_type='DVDErrorCode' type='l' type64='i'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='L' type64='I' type_modifier='n'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRefCon' declared_type='UInt32' type='L' type64='I' type_modifier='n'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetLastPlayBookmark'>
-    <arg type='^v' type_modifier='n'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inBookMarkData' declared_type='void*' type='^v' type_modifier='n'/>
+    <arg name='inBookMarkDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetSubPictureStream'>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inStreamNum' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetTime'>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTimeCode' declared_type='DVDTimeCode' type='s'/>
+    <arg name='inTime' declared_type='DVDTimePosition' type='L' type64='I'/>
+    <arg name='inFrames' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetTimeEventRate'>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inMilliseconds' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetTitle'>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTitleNum' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetVideoBounds'>
-    <arg type='^{Rect=ssss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPortRect' declared_type='Rect*' type='^{Rect=ssss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetVideoDevice'>
-    <arg type='^^{GDevice}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDevice' declared_type='GDHandle' type='^^{GDevice}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetVideoDisplay'>
-    <arg type='^{_CGDirectDisplayID=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDisplay' declared_type='CGDirectDisplayID' type='^{_CGDirectDisplayID=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetVideoPort'>
-    <arg type='^{OpaqueGrafPtr=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inVidPort' declared_type='CGrafPtr' type='^{OpaqueGrafPtr=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSetVideoWindowID'>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inVidWindowID' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSleep'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDStepFrame'>
-    <arg type='c'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDirection' declared_type='DVDScanDirection' type='c'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDStop'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSwitchToDevice'>
-    <arg type='^^{GDevice}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='newDevice' declared_type='GDHandle' type='^^{GDevice}'/>
+    <arg name='outSupported' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDSwitchToDisplay'>
-    <arg type='^{_CGDirectDisplayID=}'/>
-    <arg type='^B' type_modifier='o'/>
-    <retval type='l' type64='i'/>
+    <arg name='newDisplay' declared_type='CGDirectDisplayID' type='^{_CGDirectDisplayID=}'/>
+    <arg name='outSupported' declared_type='Boolean*' type='^B' type_modifier='o'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDUnregisterEventCallBack'>
-    <arg type='L' type64='I' type_modifier='n'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCallBackID' declared_type='UInt32' type='L' type64='I' type_modifier='n'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDUpdateVideo'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DVDWakeUp'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

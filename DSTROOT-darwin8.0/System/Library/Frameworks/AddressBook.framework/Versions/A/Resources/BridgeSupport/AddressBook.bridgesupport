@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
@@ -9,7 +8,27 @@
   <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
-  <struct name='ABActionCallbacks' type='{_ABActionCallbacks=&quot;version&quot;i&quot;property&quot;^?&quot;title&quot;^?&quot;enabled&quot;^?&quot;selected&quot;^?}'/>
+  <struct name='ABActionCallbacks' type='{_ABActionCallbacks=&quot;version&quot;i&quot;property&quot;^?&quot;title&quot;^?&quot;enabled&quot;^?&quot;selected&quot;^?}'>
+    <field name='version' declared_type='CFIndex' type='l' type64='i'/>
+    <field name='property' function_pointer='true' declared_type='ABActionGetPropertyCallback' type='^?'>
+      <retval declared_type='CFStringRef' type='^{__CFString=}'/>
+    </field>
+    <field name='title' function_pointer='true' declared_type='ABActionCopyTitleCallback' type='^?'>
+      <arg declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <retval declared_type='CFStringRef' type='^{__CFString=}'/>
+    </field>
+    <field name='enabled' function_pointer='true' declared_type='ABActionEnabledCallback' type='^?'>
+      <arg declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <retval declared_type='Boolean' type='B'/>
+    </field>
+    <field name='selected' function_pointer='true' declared_type='ABActionSelectedCallback' type='^?'>
+      <arg declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+  </struct>
   <cftype name='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
   <cftype name='ABGroupRef' type='^{__ABGroup=}'/>
   <cftype name='ABMultiValueRef' type='^{__ABMultiValue=}'/>
@@ -19,90 +38,90 @@
   <cftype name='ABRecordRef' type='^v'/>
   <cftype name='ABSearchElementRef' type='^{__ABSearchElementRef=}'/>
   <opaque name='ABRecordRef' type='@'/>
-  <constant name='ABPeoplePickerDisplayedPropertyDidChangeNotification' type='@'/>
-  <constant name='ABPeoplePickerGroupSelectionDidChangeNotification' type='@'/>
-  <constant name='ABPeoplePickerNameSelectionDidChangeNotification' type='@'/>
-  <constant name='ABPeoplePickerValueSelectionDidChangeNotification' type='@'/>
-  <constant name='kABAIMHomeLabel' type='@'/>
-  <constant name='kABAIMInstantProperty' type='@'/>
-  <constant name='kABAIMWorkLabel' type='@'/>
-  <constant name='kABAddressCityKey' type='@'/>
-  <constant name='kABAddressCountryCodeKey' type='@'/>
-  <constant name='kABAddressCountryKey' type='@'/>
-  <constant name='kABAddressHomeLabel' type='@'/>
-  <constant name='kABAddressProperty' type='@'/>
-  <constant name='kABAddressStateKey' type='@'/>
-  <constant name='kABAddressStreetKey' type='@'/>
-  <constant name='kABAddressWorkLabel' type='@'/>
-  <constant name='kABAddressZIPKey' type='@'/>
-  <constant name='kABAnniversaryLabel' type='@'/>
-  <constant name='kABAssistantLabel' type='@'/>
-  <constant name='kABBirthdayProperty' type='@'/>
-  <constant name='kABBrotherLabel' type='@'/>
-  <constant name='kABChildLabel' type='@'/>
-  <constant name='kABCreationDateProperty' type='@'/>
-  <constant name='kABDatabaseChangedExternallyNotification' type='@'/>
-  <constant name='kABDatabaseChangedNotification' type='@'/>
-  <constant name='kABDeletedRecords' type='@'/>
-  <constant name='kABDepartmentProperty' type='@'/>
-  <constant name='kABEmailHomeLabel' type='@'/>
-  <constant name='kABEmailProperty' type='@'/>
-  <constant name='kABEmailWorkLabel' type='@'/>
-  <constant name='kABFatherLabel' type='@'/>
-  <constant name='kABFirstNamePhoneticProperty' type='@'/>
-  <constant name='kABFirstNameProperty' type='@'/>
-  <constant name='kABFriendLabel' type='@'/>
-  <constant name='kABGroupNameProperty' type='@'/>
-  <constant name='kABHomeLabel' type='@'/>
-  <constant name='kABHomePageLabel' type='@'/>
-  <constant name='kABHomePageProperty' type='@'/>
-  <constant name='kABICQHomeLabel' type='@'/>
-  <constant name='kABICQInstantProperty' type='@'/>
-  <constant name='kABICQWorkLabel' type='@'/>
-  <constant name='kABInsertedRecords' type='@'/>
-  <constant name='kABJabberHomeLabel' type='@'/>
-  <constant name='kABJabberInstantProperty' type='@'/>
-  <constant name='kABJabberWorkLabel' type='@'/>
-  <constant name='kABJobTitleProperty' type='@'/>
-  <constant name='kABLastNamePhoneticProperty' type='@'/>
-  <constant name='kABLastNameProperty' type='@'/>
-  <constant name='kABMSNHomeLabel' type='@'/>
-  <constant name='kABMSNInstantProperty' type='@'/>
-  <constant name='kABMSNWorkLabel' type='@'/>
-  <constant name='kABMaidenNameProperty' type='@'/>
-  <constant name='kABManagerLabel' type='@'/>
-  <constant name='kABMiddleNamePhoneticProperty' type='@'/>
-  <constant name='kABMiddleNameProperty' type='@'/>
-  <constant name='kABModificationDateProperty' type='@'/>
-  <constant name='kABMotherLabel' type='@'/>
-  <constant name='kABNicknameProperty' type='@'/>
-  <constant name='kABNoteProperty' type='@'/>
-  <constant name='kABOrganizationProperty' type='@'/>
-  <constant name='kABOtherDatesProperty' type='@'/>
-  <constant name='kABOtherLabel' type='@'/>
-  <constant name='kABParentLabel' type='@'/>
-  <constant name='kABPartnerLabel' type='@'/>
-  <constant name='kABPersonFlags' type='@'/>
-  <constant name='kABPhoneHomeFAXLabel' type='@'/>
-  <constant name='kABPhoneHomeLabel' type='@'/>
-  <constant name='kABPhoneMainLabel' type='@'/>
-  <constant name='kABPhoneMobileLabel' type='@'/>
-  <constant name='kABPhonePagerLabel' type='@'/>
-  <constant name='kABPhoneProperty' type='@'/>
-  <constant name='kABPhoneWorkFAXLabel' type='@'/>
-  <constant name='kABPhoneWorkLabel' type='@'/>
-  <constant name='kABRelatedNamesProperty' type='@'/>
-  <constant name='kABSisterLabel' type='@'/>
-  <constant name='kABSpouseLabel' type='@'/>
-  <constant name='kABSuffixProperty' type='@'/>
-  <constant name='kABTitleProperty' type='@'/>
-  <constant name='kABUIDProperty' type='@'/>
-  <constant name='kABURLsProperty' type='@'/>
-  <constant name='kABUpdatedRecords' type='@'/>
-  <constant name='kABWorkLabel' type='@'/>
-  <constant name='kABYahooHomeLabel' type='@'/>
-  <constant name='kABYahooInstantProperty' type='@'/>
-  <constant name='kABYahooWorkLabel' type='@'/>
+  <constant name='ABPeoplePickerDisplayedPropertyDidChangeNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ABPeoplePickerGroupSelectionDidChangeNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ABPeoplePickerNameSelectionDidChangeNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ABPeoplePickerValueSelectionDidChangeNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAIMHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAIMInstantProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAIMWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressCityKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressCountryCodeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressCountryKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressStateKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressStreetKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAddressZIPKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAnniversaryLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABAssistantLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABBirthdayProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABBrotherLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABChildLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABCreationDateProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABDatabaseChangedExternallyNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABDatabaseChangedNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABDeletedRecords' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABDepartmentProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABEmailHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABEmailProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABEmailWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABFatherLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABFirstNamePhoneticProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABFirstNameProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABFriendLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABGroupNameProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABHomePageLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABHomePageProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABICQHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABICQInstantProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABICQWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABInsertedRecords' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABJabberHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABJabberInstantProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABJabberWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABJobTitleProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABLastNamePhoneticProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABLastNameProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABMSNHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABMSNInstantProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABMSNWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABMaidenNameProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABManagerLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABMiddleNamePhoneticProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABMiddleNameProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABModificationDateProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABMotherLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABNicknameProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABNoteProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABOrganizationProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABOtherDatesProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABOtherLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABParentLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPartnerLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPersonFlags' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhoneHomeFAXLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhoneHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhoneMainLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhoneMobileLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhonePagerLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhoneProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhoneWorkFAXLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABPhoneWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABRelatedNamesProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABSisterLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABSpouseLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABSuffixProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABTitleProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABUIDProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABURLsProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABUpdatedRecords' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABWorkLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABYahooHomeLabel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABYahooInstantProperty' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kABYahooWorkLabel' declared_type='NSString*' type='@' const='true'/>
   <enum name='ABMultipleValueSelection' value='2'/>
   <enum name='ABNoValueSelection' value='0'/>
   <enum name='ABSingleValueSelection' value='1'/>
@@ -169,555 +188,917 @@
   <enum name='kEventClassABPeoplePicker' value='1633841264'/>
   <enum name='kEventParamABPickerRef' value='1633841264'/>
   <function name='ABAddPropertiesAndTypes'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFDictionary=}'/>
-    <retval type='i'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='recordType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='propertiesAnTypes' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='int' type='i'/>
   </function>
   <function name='ABAddRecord'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='@'/>
-    <retval type='B'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABBeginLoadingImageDataForClient'>
-    <arg type='^{__ABPerson=}'/>
-    <arg function_pointer='true' type='^?' type_modifier='n'>
-      <arg type='^{__CFData=}'/>
-      <arg type='i'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='person' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <arg name='callback' function_pointer='true' declared_type='ABImageClientCallback' type='^?' type_modifier='n'>
+      <arg declared_type='CFDataRef' type='^{__CFData=}'/>
+      <arg declared_type='int' type='i'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='refcon' declared_type='void*' type='^v' type_modifier='n'/>
+    <retval declared_type='int' type='i'/>
   </function>
   <function name='ABCancelLoadingImageDataForTag'>
-    <arg type='i'/>
+    <arg name='tag' declared_type='int' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABCopyArrayOfAllGroups'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABCopyArrayOfAllPeople'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABCopyArrayOfMatchingRecords'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__ABSearchElementRef=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='search' declared_type='ABSearchElementRef' type='^{__ABSearchElementRef=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABCopyArrayOfPropertiesForRecordType'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='recordType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABCopyDefaultCountryCode'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABCopyLocalizedPropertyOrLabel'>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='labelOrProperty' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABCopyRecordForUniqueId'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='@'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='uniqueId' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='ABRecordRef' already_retained='true' type='@'/>
   </function>
   <function name='ABCopyRecordTypeFromUniqueId'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='uniqueId' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABCreateFormattedAddressFromDictionary'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__CFDictionary=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='address' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABGetMe'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <retval type='^{__ABPerson=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <retval declared_type='ABPersonRef' type='^{__ABPerson=}'/>
   </function>
   <function name='ABGetSharedAddressBook'>
-    <retval type='^{__ABAddressBookRef=}'/>
+    <retval declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
   </function>
   <function name='ABGroupAddGroup'>
-    <arg type='^{__ABGroup=}'/>
-    <arg type='^{__ABGroup=}'/>
-    <retval type='B'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <arg name='groupToAdd' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABGroupAddMember'>
-    <arg type='^{__ABGroup=}'/>
-    <arg type='^{__ABPerson=}'/>
-    <retval type='B'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <arg name='personToAdd' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABGroupCopyArrayOfAllMembers'>
-    <arg type='^{__ABGroup=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABGroupCopyArrayOfAllSubgroups'>
-    <arg type='^{__ABGroup=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABGroupCopyDistributionIdentifier'>
-    <arg type='^{__ABGroup=}'/>
-    <arg type='^{__ABPerson=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <arg name='person' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABGroupCopyParentGroups'>
-    <arg type='^{__ABGroup=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABGroupCreate'>
-    <retval already_retained='true' type='^{__ABGroup=}'/>
+    <retval declared_type='ABGroupRef' already_retained='true' type='^{__ABGroup=}'/>
   </function>
   <function name='ABGroupCreateSearchElement'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
-    <arg type='i'/>
-    <retval already_retained='true' type='^{__ABSearchElementRef=}'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='label' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='key' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <arg name='comparison' declared_type='ABSearchComparison' type='i'/>
+    <retval declared_type='ABSearchElementRef' already_retained='true' type='^{__ABSearchElementRef=}'/>
   </function>
   <function name='ABGroupRemoveGroup'>
-    <arg type='^{__ABGroup=}'/>
-    <arg type='^{__ABGroup=}'/>
-    <retval type='B'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <arg name='groupToRemove' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABGroupRemoveMember'>
-    <arg type='^{__ABGroup=}'/>
-    <arg type='^{__ABPerson=}'/>
-    <retval type='B'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <arg name='personToRemove' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABGroupSetDistributionIdentifier'>
-    <arg type='^{__ABGroup=}'/>
-    <arg type='^{__ABPerson=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='B'/>
+    <arg name='group' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <arg name='person' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='identifier' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABHasUnsavedChanges'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <retval type='B'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABLocalizedPropertyOrLabel'>
-    <arg type='@'/>
-    <retval type='@'/>
+    <arg name='propertyOrLabel' declared_type='NSString*' type='@'/>
+    <retval declared_type='NSString*' type='@'/>
   </function>
   <function name='ABMultiValueAdd'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFString}' type_modifier='o'/>
-    <retval type='B'/>
+    <arg name='multiValue' declared_type='ABMutableMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <arg name='label' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outIdentifier' declared_type='CFStringRef*' type='^^{__CFString}' type_modifier='o'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABMultiValueCopyIdentifierAtIndex'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='i'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='index' declared_type='int' type='i'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABMultiValueCopyLabelAtIndex'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='i'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='index' declared_type='int' type='i'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABMultiValueCopyPrimaryIdentifier'>
-    <arg type='^{__ABMultiValue=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABMultiValueCopyValueAtIndex'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='i'/>
-    <retval already_retained='true' type='@'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='index' declared_type='int' type='i'/>
+    <retval declared_type='CFTypeRef' already_retained='true' type='@'/>
   </function>
   <function name='ABMultiValueCount'>
-    <arg type='^{__ABMultiValue=}'/>
-    <retval type='I'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <retval declared_type='unsigned int' type='I'/>
   </function>
   <function name='ABMultiValueCreate'>
-    <retval already_retained='true' type='^{__ABMultiValue=}'/>
+    <retval declared_type='ABMultiValueRef' already_retained='true' type='^{__ABMultiValue=}'/>
   </function>
   <function name='ABMultiValueCreateCopy'>
-    <arg type='^{__ABMultiValue=}'/>
-    <retval already_retained='true' type='^{__ABMultiValue=}'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <retval declared_type='ABMultiValueRef' already_retained='true' type='^{__ABMultiValue=}'/>
   </function>
   <function name='ABMultiValueCreateMutable'>
-    <retval already_retained='true' type='^{__ABMultiValue=}'/>
+    <retval declared_type='ABMutableMultiValueRef' already_retained='true' type='^{__ABMultiValue=}'/>
   </function>
   <function name='ABMultiValueCreateMutableCopy'>
-    <arg type='^{__ABMultiValue=}'/>
-    <retval already_retained='true' type='^{__ABMultiValue=}'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <retval declared_type='ABMutableMultiValueRef' already_retained='true' type='^{__ABMultiValue=}'/>
   </function>
   <function name='ABMultiValueIndexForIdentifier'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='i'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='identifier' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='int' type='i'/>
   </function>
   <function name='ABMultiValueInsert'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='i'/>
-    <arg type='^^{__CFString}' type_modifier='o'/>
-    <retval type='B'/>
+    <arg name='multiValue' declared_type='ABMutableMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <arg name='label' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='index' declared_type='int' type='i'/>
+    <arg name='outIdentifier' declared_type='CFStringRef*' type='^^{__CFString}' type_modifier='o'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABMultiValuePropertyType'>
-    <arg type='^{__ABMultiValue=}'/>
-    <retval type='i'/>
+    <arg name='multiValue' declared_type='ABMultiValueRef' type='^{__ABMultiValue=}'/>
+    <retval declared_type='ABPropertyType' type='i'/>
   </function>
   <function name='ABMultiValueRemove'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='i'/>
-    <retval type='B'/>
+    <arg name='multiValue' declared_type='ABMutableMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='index' declared_type='int' type='i'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABMultiValueReplaceLabel'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='i'/>
-    <retval type='B'/>
+    <arg name='multiValue' declared_type='ABMutableMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='label' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='index' declared_type='int' type='i'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABMultiValueReplaceValue'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='@'/>
-    <arg type='i'/>
-    <retval type='B'/>
+    <arg name='multiValue' declared_type='ABMutableMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <arg name='index' declared_type='int' type='i'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABMultiValueSetPrimaryIdentifier'>
-    <arg type='^{__ABMultiValue=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='B'/>
+    <arg name='multiValue' declared_type='ABMutableMultiValueRef' type='^{__ABMultiValue=}'/>
+    <arg name='identifier' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABPersonCopyImageData'>
-    <arg type='^{__ABPerson=}'/>
-    <retval already_retained='true' type='^{__CFData=}'/>
+    <arg name='person' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
   </function>
   <function name='ABPersonCopyParentGroups'>
-    <arg type='^{__ABPerson=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='person' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABPersonCopyVCardRepresentation'>
-    <arg type='^{__ABPerson=}'/>
-    <retval already_retained='true' type='^{__CFData=}'/>
+    <arg name='person' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
   </function>
   <function name='ABPersonCreate'>
-    <retval already_retained='true' type='^{__ABPerson=}'/>
+    <retval declared_type='ABPersonRef' already_retained='true' type='^{__ABPerson=}'/>
   </function>
   <function name='ABPersonCreateSearchElement'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
-    <arg type='i'/>
-    <retval already_retained='true' type='^{__ABSearchElementRef=}'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='label' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='key' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <arg name='comparison' declared_type='ABSearchComparison' type='i'/>
+    <retval declared_type='ABSearchElementRef' already_retained='true' type='^{__ABSearchElementRef=}'/>
   </function>
   <function name='ABPersonCreateWithVCardRepresentation'>
-    <arg type='^{__CFData=}'/>
-    <retval already_retained='true' type='^{__ABPerson=}'/>
+    <arg name='vCard' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='ABPersonRef' already_retained='true' type='^{__ABPerson=}'/>
   </function>
   <function name='ABPersonSetImageData'>
-    <arg type='^{__ABPerson=}'/>
-    <arg type='^{__CFData=}'/>
-    <retval type='B'/>
+    <arg name='person' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <arg name='imageData' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABPickerAddProperty'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inProperty' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerChangeAttributes'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inAttributesToSet' declared_type='ABPickerAttributes' type='L' type64='I'/>
+    <arg name='inAttributesToClear' declared_type='ABPickerAttributes' type='L' type64='I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerClearSearchField'>
-    <arg type='^{OpaqueABPicker=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerCopyColumnTitle'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inProperty' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABPickerCopyDisplayedProperty'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABPickerCopyProperties'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABPickerCopySelectedGroups'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABPickerCopySelectedIdentifiers'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__ABPerson=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inPerson' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABPickerCopySelectedRecords'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABPickerCopySelectedValues'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='ABPickerCreate'>
-    <retval already_retained='true' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='ABPickerRef' already_retained='true' type='^{OpaqueABPicker=}'/>
   </function>
   <function name='ABPickerDeselectAll'>
-    <arg type='^{OpaqueABPicker=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerDeselectGroup'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__ABGroup=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inGroup' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerDeselectIdentifier'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__ABPerson=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inPerson' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <arg name='inIdentifier' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerDeselectRecord'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='@'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inRecord' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerEditInAddressBook'>
-    <arg type='^{OpaqueABPicker=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerGetAttributes'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='ABPickerAttributes' type='L' type64='I'/>
   </function>
   <function name='ABPickerGetDelegate'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval type='^{OpaqueHIObjectRef=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='HIObjectRef' type='^{OpaqueHIObjectRef=}'/>
   </function>
   <function name='ABPickerGetFrame'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type_modifier='o'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='outFrame' declared_type='HIRect*' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type_modifier='o'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerIsVisible'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <retval type='B'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABPickerRemoveProperty'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inProperty' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSelectGroup'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__ABGroup=}'/>
-    <arg type='B'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inGroup' declared_type='ABGroupRef' type='^{__ABGroup=}'/>
+    <arg name='inExtendSelection' declared_type='_Bool' type='B'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSelectIdentifier'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__ABPerson=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='B'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inPerson' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <arg name='inIdentifier' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inExtendSelection' declared_type='_Bool' type='B'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSelectInAddressBook'>
-    <arg type='^{OpaqueABPicker=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSelectRecord'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='@'/>
-    <arg type='B'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inRecord' declared_type='ABRecordRef' type='@'/>
+    <arg name='inExtendSelection' declared_type='_Bool' type='B'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSetColumnTitle'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inTitle' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inProperty' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSetDelegate'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{OpaqueHIObjectRef=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inDelegate' declared_type='HIObjectRef' type='^{OpaqueHIObjectRef=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSetDisplayedProperty'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{__CFString=}'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inProperty' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSetFrame'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type_modifier='n'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='inFrame' declared_type='HIRect*' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' const='true' type_modifier='n'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABPickerSetVisibility'>
-    <arg type='^{OpaqueABPicker=}'/>
-    <arg type='B'/>
+    <arg name='inPicker' declared_type='ABPickerRef' type='^{OpaqueABPicker=}'/>
+    <arg name='visible' declared_type='_Bool' type='B'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABRecordCopyRecordType'>
-    <arg type='@'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABRecordCopyUniqueId'>
-    <arg type='@'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='ABRecordCopyValue'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='@'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFTypeRef' already_retained='true' type='@'/>
   </function>
   <function name='ABRecordCreateCopy'>
-    <arg type='@'/>
-    <retval already_retained='true' type='@'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='ABRecordRef' already_retained='true' type='@'/>
   </function>
   <function name='ABRecordIsReadOnly'>
-    <arg type='@'/>
-    <retval type='B'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABRecordRemoveValue'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='B'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABRecordSetValue'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
-    <retval type='B'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABRemoveProperties'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFArray=}'/>
-    <retval type='i'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='recordType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='properties' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <retval declared_type='int' type='i'/>
   </function>
   <function name='ABRemoveRecord'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='@'/>
-    <retval type='B'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABSave'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <retval type='B'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABSearchElementCreateWithConjunction'>
-    <arg type='i'/>
-    <arg type='^{__CFArray=}'/>
-    <retval already_retained='true' type='^{__ABSearchElementRef=}'/>
+    <arg name='conjunction' declared_type='ABSearchConjunction' type='i'/>
+    <arg name='childrenSearchElement' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <retval declared_type='ABSearchElementRef' already_retained='true' type='^{__ABSearchElementRef=}'/>
   </function>
   <function name='ABSearchElementMatchesRecord'>
-    <arg type='^{__ABSearchElementRef=}'/>
-    <arg type='@'/>
-    <retval type='B'/>
+    <arg name='searchElement' declared_type='ABSearchElementRef' type='^{__ABSearchElementRef=}'/>
+    <arg name='record' declared_type='ABRecordRef' type='@'/>
+    <retval declared_type='_Bool' type='B'/>
   </function>
   <function name='ABSetMe'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__ABPerson=}'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='moi' declared_type='ABPersonRef' type='^{__ABPerson=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='ABTypeOfProperty'>
-    <arg type='^{__ABAddressBookRef=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='i'/>
+    <arg name='addressBook' declared_type='ABAddressBookRef' type='^{__ABAddressBookRef=}'/>
+    <arg name='recordType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='property' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='ABPropertyType' type='i'/>
   </function>
   <class name='ABAddressBook'>
     <method selector='addRecord:'>
-      <retval type='B'/>
+      <arg name='record' declared_type='ABRecord*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='defaultCountryCode'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='defaultNameOrdering'>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method selector='formattedAddressFromDictionary:'>
+      <arg name='address' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='NSAttributedString*' type='@'/>
+    </method>
+    <method selector='groups'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='hasUnsavedChanges'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='me'>
+      <retval declared_type='ABPerson*' type='@'/>
+    </method>
+    <method selector='people'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='recordClassFromUniqueId:'>
+      <arg name='uniqueId' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='recordForUniqueId:'>
+      <arg name='uniqueId' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='ABRecord*' type='@'/>
+    </method>
+    <method selector='recordsMatchingSearchElement:'>
+      <arg name='search' declared_type='ABSearchElement*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='removeRecord:'>
-      <retval type='B'/>
+      <arg name='record' declared_type='ABRecord*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='save'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='setMe:'>
+      <arg name='moi' declared_type='ABPerson*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method class_method='true' selector='sharedAddressBook'>
+      <retval declared_type='ABAddressBook*' type='@'/>
     </method>
   </class>
   <class name='ABGroup'>
     <method selector='addMember:'>
-      <retval type='B'/>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='addPropertiesAndTypes:'>
+      <arg name='properties' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='int' type='i'/>
     </method>
     <method selector='addSubgroup:'>
-      <retval type='B'/>
+      <arg name='group' declared_type='ABGroup*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='distributionIdentifierForProperty:person:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <arg name='person' declared_type='ABPerson*' type='@' index='1'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='members'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='parentGroups'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='properties'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='removeMember:'>
-      <retval type='B'/>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='removeProperties:'>
+      <arg name='properties' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='int' type='i'/>
     </method>
     <method selector='removeSubgroup:'>
-      <retval type='B'/>
+      <arg name='group' declared_type='ABGroup*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='searchElementForProperty:label:key:value:comparison:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <arg name='label' declared_type='NSString*' type='@' index='1'/>
+      <arg name='key' declared_type='NSString*' type='@' index='2'/>
+      <arg name='value' declared_type='id' type='@' index='3'/>
+      <arg name='comparison' declared_type='ABSearchComparison' type='i' index='4'/>
+      <retval declared_type='ABSearchElement*' type='@'/>
     </method>
     <method selector='setDistributionIdentifier:forProperty:person:'>
-      <retval type='B'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+      <arg name='property' declared_type='NSString*' type='@' index='1'/>
+      <arg name='person' declared_type='ABPerson*' type='@' index='2'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='subgroups'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='typeOfProperty:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='ABPropertyType' type='i'/>
+    </method>
+  </class>
+  <class name='ABMultiValue'>
+    <method selector='count'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='identifierAtIndex:'>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='indexForIdentifier:'>
+      <arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='labelAtIndex:'>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='primaryIdentifier'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='propertyType'>
+      <retval declared_type='ABPropertyType' type='i'/>
+    </method>
+    <method selector='valueAtIndex:'>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='id' type='@'/>
     </method>
   </class>
   <class name='ABMutableMultiValue'>
+    <method selector='addValue:withLabel:'>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='label' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='insertValue:withLabel:atIndex:'>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='label' declared_type='NSString*' type='@' index='1'/>
+      <arg name='index' declared_type='unsigned int' type='I' index='2'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
     <method selector='removeValueAndLabelAtIndex:'>
-      <retval type='B'/>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='replaceLabelAtIndex:withLabel:'>
-      <retval type='B'/>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <arg name='label' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='replaceValueAtIndex:withValue:'>
-      <retval type='B'/>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <arg name='value' declared_type='id' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='setPrimaryIdentifier:'>
-      <retval type='B'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
   </class>
   <class name='ABPeoplePickerView'>
+    <method selector='accessoryView'>
+      <retval declared_type='NSView*' type='@'/>
+    </method>
+    <method selector='addProperty:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='allowsGroupSelection'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='allowsMultipleSelection'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='autosaveName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='clearSearchField:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='columnTitleForProperty:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='deselectAll:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='deselectGroup:'>
+      <arg name='group' declared_type='ABGroup*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='deselectIdentifier:forPerson:'>
+      <arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+      <arg name='person' declared_type='ABPerson*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='deselectRecord:'>
+      <arg name='record' declared_type='ABRecord*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='displayedProperty'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='editInAddressBook:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='groupDoubleAction'>
+      <retval declared_type='SEL' type=':'/>
+    </method>
+    <method selector='nameDoubleAction'>
+      <retval declared_type='SEL' type=':'/>
+    </method>
+    <method selector='properties'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='removeProperty:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='selectGroup:byExtendingSelection:'>
-      <arg type='B' index='1'/>
+      <arg name='group' declared_type='ABGroup*' type='@' index='0'/>
+      <arg name='extend' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='selectIdentifier:forPerson:byExtendingSelection:'>
-      <arg type='B' index='2'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+      <arg name='person' declared_type='ABPerson*' type='@' index='1'/>
+      <arg name='extend' declared_type='BOOL' type='B' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='selectInAddressBook:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='selectRecord:byExtendingSelection:'>
-      <arg type='B' index='1'/>
+      <arg name='record' declared_type='ABRecord*' type='@' index='0'/>
+      <arg name='extend' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='selectedGroups'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='selectedIdentifiersForPerson:'>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='selectedRecords'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='selectedValues'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='setAccessoryView:'>
+      <arg name='accessory' declared_type='NSView*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setAllowsGroupSelection:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setAllowsMultipleSelection:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setAutosaveName:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setColumnTitle:forProperty:'>
+      <arg name='title' declared_type='NSString*' type='@' index='0'/>
+      <arg name='property' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDisplayedProperty:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setGroupDoubleAction:'>
-      <arg sel_of_type='v12@0:4@8' index='0' sel_of_type64='v24@0:8@16'/>
+      <arg name='action' sel_of_type='v12@0:4@8' declared_type='SEL' type=':' index='0' sel_of_type64='v24@0:8@16'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setNameDoubleAction:'>
-      <arg sel_of_type='v12@0:4@8' index='0' sel_of_type64='v24@0:8@16'/>
+      <arg name='action' sel_of_type='v12@0:4@8' declared_type='SEL' type=':' index='0' sel_of_type64='v24@0:8@16'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setTarget:'>
+      <arg name='target' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setValueSelectionBehavior:'>
+      <arg name='behavior' declared_type='ABPeoplePickerSelectionBehavior' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='target'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='valueSelectionBehavior'>
+      <retval declared_type='ABPeoplePickerSelectionBehavior' type='i'/>
     </method>
   </class>
   <class name='ABPerson'>
+    <method class_method='true' selector='addPropertiesAndTypes:'>
+      <arg name='properties' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method selector='beginLoadingImageDataForClient:'>
+      <arg name='client' declared_type='id' type='@' index='0'/>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method class_method='true' selector='cancelLoadingImageDataForTag:'>
+      <arg name='tag' declared_type='int' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='imageData'>
+      <retval declared_type='NSData*' type='@'/>
+    </method>
+    <method selector='initWithVCardRepresentation:'>
+      <arg name='vCardData' declared_type='NSData*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='parentGroups'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='properties'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='removeProperties:'>
+      <arg name='properties' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method class_method='true' selector='searchElementForProperty:label:key:value:comparison:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <arg name='label' declared_type='NSString*' type='@' index='1'/>
+      <arg name='key' declared_type='NSString*' type='@' index='2'/>
+      <arg name='value' declared_type='id' type='@' index='3'/>
+      <arg name='comparison' declared_type='ABSearchComparison' type='i' index='4'/>
+      <retval declared_type='ABSearchElement*' type='@'/>
+    </method>
     <method selector='setImageData:'>
-      <retval type='B'/>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='typeOfProperty:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='ABPropertyType' type='i'/>
+    </method>
+    <method selector='vCardRepresentation'>
+      <retval declared_type='NSData*' type='@'/>
     </method>
   </class>
   <class name='ABRecord'>
     <method selector='isReadOnly'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='removeValueForProperty:'>
-      <retval type='B'/>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='setValue:forProperty:'>
-      <retval type='B'/>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='property' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='uniqueId'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='valueForProperty:'>
+      <arg name='property' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
     </method>
   </class>
   <class name='ABSearchElement'>
     <method selector='matchesRecord:'>
-      <retval type='B'/>
+      <arg name='record' declared_type='ABRecord*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='searchElementForConjunction:children:'>
+      <arg name='conjuction' declared_type='ABSearchConjunction' type='i' index='0'/>
+      <arg name='children' declared_type='NSArray*' type='@' index='1'/>
+      <retval declared_type='ABSearchElement*' type='@'/>
     </method>
   </class>
   <class name='NSObject'>
+    <method selector='actionProperty'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='consumeImageData:forTag:'>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <arg name='tag' declared_type='int' type='i' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='performActionForPerson:identifier:'>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='shouldEnableActionForPerson:identifier:'>
-      <retval type='B'/>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='titleForPerson:identifier:'>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='NSString*' type='@'/>
     </method>
   </class>
   <informal_protocol name='ABActionDelegate'>
-    <method type='@8@0:4' type64='@16@0:8' selector='actionProperty'/>
-    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='performActionForPerson:identifier:'/>
-    <method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='shouldEnableActionForPerson:identifier:'/>
-    <method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='titleForPerson:identifier:'/>
+    <method type='@8@0:4' type64='@16@0:8' selector='actionProperty'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='performActionForPerson:identifier:'>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='shouldEnableActionForPerson:identifier:'>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='titleForPerson:identifier:'>
+      <arg name='person' declared_type='ABPerson*' type='@' index='0'/>
+      <arg name='identifier' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
   </informal_protocol>
   <informal_protocol name='ABImageClient'>
-    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='consumeImageData:forTag:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='consumeImageData:forTag:'>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <arg name='tag' declared_type='int' type='i' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
   </informal_protocol>
 </signatures>

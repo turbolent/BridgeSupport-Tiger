@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
@@ -16,557 +15,577 @@
   <enum name='kHRLookingForImageMap' value='4'/>
   <enum name='kHRRendererHTML32Type' value='1752445746'/>
   <function name='DisposeHRNewCFURLUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRNewCFURLUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeHRNewURLUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRNewURLUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeHRURLToFSRefUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRURLToFSRefUPP' type='^?'>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeHRURLToFSSpecUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRURLToFSSpecUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeHRWasCFURLVisitedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRWasCFURLVisitedUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeHRWasURLVisitedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRWasURLVisitedUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRActivate'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRDeactivate'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRDisposeReference'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRDraw'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{OpaqueRgnHandle=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='updateRgnH' declared_type='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRDrawInPort'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{OpaqueRgnHandle=}'/>
-    <arg type='^{OpaqueGrafPtr=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='updateRgnH' declared_type='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+    <arg name='grafPtr' declared_type='CGrafPtr' type='^{OpaqueGrafPtr=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRForceQuickdraw'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='forceQuickdraw' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRFreeMemory'>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inBytesNeeded' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='SInt32' type='l' type64='i'/>
   </function>
   <function name='HRGetBaseURL'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='baseURLH' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetBaseURLAsCFString'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='baseString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetHTMLFile'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='fsspec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetHTMLFileAsFSRef'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='fref' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetHTMLRenderingLibVersion'>
-    <arg type='^{NumVersion=CCCC}'/>
-    <retval type='l' type64='i'/>
+    <arg name='returnVers' declared_type='NumVersion*' type='^{NumVersion=CCCC}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetHTMLURL'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='HTMLURLH' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetHTMLURLAsCFURL'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^^{__CFURL}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='theURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetRenderedImageSize'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{Point=ss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='renderingSize' declared_type='Point*' type='^{Point=ss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetRenderedImageSize32'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='height' declared_type='UInt32*' type='^I'/>
+    <arg name='width' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetRootURL'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='rootURLH' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetRootURLAsCFString'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='rootString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetTitle'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='title' declared_type='StringPtr' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGetTitleAsCFString'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='title' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToAnchor'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='anchorName' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToAnchorCFString'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='anchorName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToCFURL'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{__CFURL=}'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='forceRefresh' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToData'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{__CFData=}'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='data' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='forceRefresh' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToFSRef'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='fref' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='forceRefresh' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToFile'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='fsspec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='forceRefresh' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToPtr'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='buffer' declared_type='char*' type='*'/>
+    <arg name='bufferSize' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='forceRefresh' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRGoToURL'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='*'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='forceRefresh' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRIsHREvent'>
-    <arg type='^{EventRecord=SII{Point=ss}S}'/>
-    <retval type='B'/>
+    <arg name='eventRecord' declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}' const='true'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='HRNewReference'>
-    <arg type='^^{OpaqueHRReference}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueGrafPtr=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference*' type='^^{OpaqueHRReference}'/>
+    <arg name='rendererType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='grafPtr' declared_type='GrafPtr' type='^{OpaqueGrafPtr=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRNewReferenceInWindow'>
-    <arg type='^^{OpaqueHRReference}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueWindowPtr=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference*' type='^^{OpaqueHRReference}'/>
+    <arg name='rendererType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='inWindowRef' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRRegisterNewCFURLUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='inURLUPP' function_pointer='true' declared_type='HRNewCFURLUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^v'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRRegisterNewURLUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='inNewURLUPP' function_pointer='true' declared_type='HRNewURLUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^v'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRRegisterURLToFSRefUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='inURLToFSRefUPP' function_pointer='true' declared_type='HRURLToFSRefUPP' type='^?'>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^v'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRRegisterURLToFSSpecUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='inURLToFSSpecUPP' function_pointer='true' declared_type='HRURLToFSSpecUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^v'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRRegisterWasCFURLVisitedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='inWasCFURLVisitedUPP' function_pointer='true' declared_type='HRWasCFURLVisitedUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^v'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRRegisterWasURLVisitedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='inWasURLVisitedUPP' function_pointer='true' declared_type='HRWasURLVisitedUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^v'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='inRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
-  <function name='HRScreenConfigurationChanged'/>
+  <function name='HRScreenConfigurationChanged'>
+    <retval declared_type='void' type='v'/>
+  </function>
   <function name='HRScrollToImageLocation32'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='l' type64='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='h' declared_type='SInt32' type='l' type64='i'/>
+    <arg name='v' declared_type='SInt32' type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRScrollToLocation'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{Point=ss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='location' declared_type='Point*' type='^{Point=ss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRSetDrawBorder'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='drawBorder' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRSetEmbeddingControl'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{OpaqueControlRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='controlRef' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRSetGrafPtr'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{OpaqueGrafPtr=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='grafPtr' declared_type='GrafPtr' type='^{OpaqueGrafPtr=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRSetGrowboxCutout'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='allowCutout' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRSetRenderingRect'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{Rect=ssss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='renderingRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRSetScrollbarState'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='hScrollbarState' declared_type='HRScrollbarState' type='s'/>
+    <arg name='vScrollbarState' declared_type='HRScrollbarState' type='s'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRSetWindowRef'>
-    <arg type='^{OpaqueHRReference=}'/>
-    <arg type='^{OpaqueWindowPtr=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <arg name='windowRef' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRUnregisterNewCFURLUPP'>
-    <arg type='^{OpaqueHRReference=}'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRUnregisterNewURLUPP'>
-    <arg type='^{OpaqueHRReference=}'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRUnregisterURLToFSRefUPP'>
-    <arg type='^{OpaqueHRReference=}'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRUnregisterURLToFSSpecUPP'>
-    <arg type='^{OpaqueHRReference=}'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRUnregisterWasCFURLVisitedUPP'>
-    <arg type='^{OpaqueHRReference=}'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRUnregisterWasURLVisitedUPP'>
-    <arg type='^{OpaqueHRReference=}'/>
+    <arg name='hrRef' declared_type='HRReference' type='^{OpaqueHRReference=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='HRUtilCreateFullCFURL'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFURL}'/>
-    <retval type='l' type64='i'/>
+    <arg name='rootString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='linkString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='url' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRUtilCreateFullURL'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='rootURL' declared_type='char*' type='*' const='true'/>
+    <arg name='linkURL' declared_type='char*' type='*' const='true'/>
+    <arg name='fullURLH' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRUtilGetFSRefFromURL'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='rootString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='linkString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='destRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRUtilGetFSSpecFromURL'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='rootURL' declared_type='char*' type='*' const='true'/>
+    <arg name='linkURL' declared_type='char*' type='*' const='true'/>
+    <arg name='destSpec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRUtilGetURLFromFSRef'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^^{__CFURL}'/>
-    <retval type='l' type64='i'/>
+    <arg name='fileRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='url' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='HRUtilGetURLFromFSSpec'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='fsspec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='urlHandle' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeHRNewCFURLUPP'>
-    <arg type='^{__CFURL=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='B'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <arg name='targetString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRNewCFURLUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeHRNewURLUPP'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='B'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='targetFrame' declared_type='char*' type='*' const='true'/>
+    <arg name='addToHistory' declared_type='Boolean' type='B'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRNewURLUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeHRURLToFSRefUPP'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='S'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='rootString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='linkString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='fref' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <arg name='urlSourceType' declared_type='URLSourceType' type='S'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRURLToFSRefUPP' type='^?'>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeHRURLToFSSpecUPP'>
-    <arg type='*'/>
-    <arg type='*'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='S'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='rootURL' declared_type='char*' type='*' const='true'/>
+    <arg name='linkURL' declared_type='char*' type='*' const='true'/>
+    <arg name='fsspec' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg name='urlSourceType' declared_type='URLSourceType' type='S'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRURLToFSSpecUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeHRWasCFURLVisitedUPP'>
-    <arg type='^{__CFURL=}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRWasCFURLVisitedUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='InvokeHRWasURLVisitedUPP'>
-    <arg type='*'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='url' declared_type='char*' type='*' const='true'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='HRWasURLVisitedUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='NewHRNewCFURLUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='HRNewCFURLProcPtr' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='HRNewCFURLUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='NewHRNewURLUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='HRNewURLProcPtr' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='B'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='HRNewURLUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='Boolean' type='B'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='NewHRURLToFSRefUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='HRURLToFSRefProcPtr' type='^?'>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='HRURLToFSRefUPP' type='^?'>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='NewHRURLToFSSpecUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='HRURLToFSSpecProcPtr' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='*'/>
-      <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-      <arg type='S'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='HRURLToFSSpecUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+      <arg declared_type='URLSourceType' type='S'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='NewHRWasCFURLVisitedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='HRWasCFURLVisitedProcPtr' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{__CFURL=}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='HRWasCFURLVisitedUPP' type='^?'>
+      <arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
   <function name='NewHRWasURLVisitedUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='HRWasURLVisitedProcPtr' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='HRWasURLVisitedUPP' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
 </signatures>

@@ -1,14 +1,45 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
-  <struct name='tAccessControlEntry' type='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}' type64='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}'/>
-  <struct name='tAttributeEntry' type='{_tAttributeEntry=&quot;fReserved1&quot;L&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}&quot;fAttributeValueCount&quot;L&quot;fAttributeDataSize&quot;L&quot;fAttributeValueMaxSize&quot;L&quot;fAttributeSignature&quot;{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}}' type64='{_tAttributeEntry=&quot;fReserved1&quot;Q&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}&quot;fAttributeValueCount&quot;Q&quot;fAttributeDataSize&quot;Q&quot;fAttributeValueMaxSize&quot;Q&quot;fAttributeSignature&quot;{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}}'/>
-  <struct name='tAttributeValueEntry' type='{_tAttributeValueEntry=&quot;fAttributeValueID&quot;L&quot;fAttributeValueData&quot;{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}}' type64='{_tAttributeValueEntry=&quot;fAttributeValueID&quot;Q&quot;fAttributeValueData&quot;{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}}'/>
-  <struct name='tDataBuffer' type='{_tDataBuffer=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}' type64='{_tDataBuffer=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}'/>
-  <struct name='tDataList' type='{_tDataList=&quot;fDataNodeCount&quot;L&quot;fDataListHead&quot;^{?}}' type64='{_tDataList=&quot;fDataNodeCount&quot;Q&quot;fDataListHead&quot;^{?}}'/>
-  <struct name='tDataNode' type='{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}' type64='{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}'/>
-  <struct name='tRecordEntry' type='{_tRecordEntry=&quot;fReserved1&quot;L&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}&quot;fRecordAttributeCount&quot;L&quot;fRecordNameAndType&quot;{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}}' type64='{_tRecordEntry=&quot;fReserved1&quot;Q&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}&quot;fRecordAttributeCount&quot;Q&quot;fRecordNameAndType&quot;{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}}'/>
+  <struct name='tAccessControlEntry' type='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}' type64='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}'>
+    <field name='fGuestAccessFlags' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fDirMemberFlags' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fDirNodeMemberFlags' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fOwnerFlags' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fAdministratorFlags' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
+  <struct name='tAttributeEntry' type='{_tAttributeEntry=&quot;fReserved1&quot;L&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}&quot;fAttributeValueCount&quot;L&quot;fAttributeDataSize&quot;L&quot;fAttributeValueMaxSize&quot;L&quot;fAttributeSignature&quot;{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}}' type64='{_tAttributeEntry=&quot;fReserved1&quot;Q&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}&quot;fAttributeValueCount&quot;Q&quot;fAttributeDataSize&quot;Q&quot;fAttributeValueMaxSize&quot;Q&quot;fAttributeSignature&quot;{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}}'>
+    <field name='fReserved1' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fReserved2' declared_type='tAccessControlEntry' type='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}' type64='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}'/>
+    <field name='fAttributeValueCount' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fAttributeDataSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fAttributeValueMaxSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fAttributeSignature' declared_type='tDataNode' type='{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}' type64='{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}'/>
+  </struct>
+  <struct name='tAttributeValueEntry' type='{_tAttributeValueEntry=&quot;fAttributeValueID&quot;L&quot;fAttributeValueData&quot;{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}}' type64='{_tAttributeValueEntry=&quot;fAttributeValueID&quot;Q&quot;fAttributeValueData&quot;{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}}'>
+    <field name='fAttributeValueID' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fAttributeValueData' declared_type='tDataNode' type='{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}' type64='{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}'/>
+  </struct>
+  <struct name='tDataBuffer' type='{_tDataBuffer=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}' type64='{_tDataBuffer=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}'>
+    <field name='fBufferSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fBufferLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fBufferData' declared_type='char*' type='[1c]'/>
+  </struct>
+  <struct name='tDataList' type='{_tDataList=&quot;fDataNodeCount&quot;L&quot;fDataListHead&quot;^{?}}' type64='{_tDataList=&quot;fDataNodeCount&quot;Q&quot;fDataListHead&quot;^{?}}'>
+    <field name='fDataNodeCount' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fDataListHead' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+  </struct>
+  <struct name='tDataNode' type='{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}' type64='{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}'>
+    <field name='fBufferSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fBufferLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fBufferData' declared_type='char*' type='[1c]'/>
+  </struct>
+  <struct name='tRecordEntry' type='{_tRecordEntry=&quot;fReserved1&quot;L&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}&quot;fRecordAttributeCount&quot;L&quot;fRecordNameAndType&quot;{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}}' type64='{_tRecordEntry=&quot;fReserved1&quot;Q&quot;fReserved2&quot;{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}&quot;fRecordAttributeCount&quot;Q&quot;fRecordNameAndType&quot;{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}}'>
+    <field name='fReserved1' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fReserved2' declared_type='tAccessControlEntry' type='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;L&quot;fDirMemberFlags&quot;L&quot;fDirNodeMemberFlags&quot;L&quot;fOwnerFlags&quot;L&quot;fAdministratorFlags&quot;L}' type64='{_tAccessControlEntry=&quot;fGuestAccessFlags&quot;Q&quot;fDirMemberFlags&quot;Q&quot;fDirNodeMemberFlags&quot;Q&quot;fOwnerFlags&quot;Q&quot;fAdministratorFlags&quot;Q}'/>
+    <field name='fRecordAttributeCount' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='fRecordNameAndType' declared_type='tDataNode' type='{_tDataNode=&quot;fBufferSize&quot;L&quot;fBufferLength&quot;L&quot;fBufferData&quot;[1c]}' type64='{_tDataNode=&quot;fBufferSize&quot;Q&quot;fBufferLength&quot;Q&quot;fBufferData&quot;[1c]}'/>
+  </struct>
   <string_constant name='kDS1AttrAdminLimits' value='dsAttrTypeStandard:AdminLimits'/>
   <string_constant name='kDS1AttrAdminStatus' value='dsAttrTypeStandard:AdminStatus'/>
   <string_constant name='kDS1AttrAlias' value='dsAttrTypeStandard:Alias'/>
@@ -592,644 +623,644 @@
   <enum name='eUnknownPlugIn' value='-14273'/>
   <enum name='eUnknownServerError' value='-14272'/>
   <function name='dsAddAttribute'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tAccessControlEntryPtr=LLLLL}' type64='^{_tAccessControlEntryPtr=QQQQQ}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inNewAttribute' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inNewAttributeAccess' declared_type='tAccessControlEntryPtr' type='^{_tAccessControlEntryPtr=LLLLL}' type64='^{_tAccessControlEntryPtr=QQQQQ}' type_modifier='n'/>
+    <arg name='inFirstAttributeValue' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsAddAttributeValue'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inAttributeValue' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsAddChildPIDToReference'>
-    <arg type='L' type64='Q'/>
-    <arg type='l' type64='q'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDirRef' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inValidChildPID' declared_type='long' type='l' type64='q'/>
+    <arg name='inValidAPIReferenceToGrantChild' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsAllocAttributeValueEntry'>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^v' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <retval type='^{_tAttributeValueEntryPtr=L{?=LL[1c]}}' type64='^{_tAttributeValueEntryPtr=Q{?=QQ[1c]}}'/>
+    <arg name='inDirRef' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inAttrValueID' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inAttrValueData' declared_type='void*' type='^v' type_modifier='n'/>
+    <arg name='inAttrValueDataLen' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tAttributeValueEntryPtr' type='^{_tAttributeValueEntryPtr=L{?=LL[1c]}}' type64='^{_tAttributeValueEntryPtr=Q{?=QQ[1c]}}'/>
   </function>
   <function name='dsAllocStringsFromList'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
-    <retval type='^*'/>
+    <arg name='inDirRef' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataList*' type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' const='true' type_modifier='n'/>
+    <retval declared_type='char**' type='^*'/>
   </function>
   <function name='dsAppendStringToList'>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
-    <arg type='*'/>
-    <retval type='i'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inCString' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsAppendStringToListAlloc'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='*'/>
-    <retval type='i'/>
+    <arg name='inDirReferences' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inCString' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsBuildFromPath'>
-    <arg type='L' type64='Q'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <retval type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inPathCString' declared_type='char*' type='*' const='true'/>
+    <arg name='inPathSeparatorCString' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
   </function>
   <function name='dsBuildListFromNodes' variadic='true'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
-    <retval type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inDirReferences' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='in1stDataNodePtr' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+    <retval declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
   </function>
   <function name='dsBuildListFromNodesAlloc' variadic='true'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirReferences' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='in1stDataNodePtr' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsBuildListFromPathAlloc'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='*'/>
-    <arg type='*'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inPathCString' declared_type='char*' type='*' const='true'/>
+    <arg name='inPathSeparatorCString' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsBuildListFromStrings' variadic='true'>
-    <arg type='L' type64='Q'/>
-    <arg type='*'/>
-    <retval type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='in1stCString' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
   </function>
   <function name='dsBuildListFromStringsAlloc' variadic='true'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='*'/>
-    <retval type='i'/>
+    <arg name='inDirReferences' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='in1stCString' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsBuildListFromStringsAllocV'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
-    <arg type='*'/>
-    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
-    <retval type='i'/>
+    <arg name='inDirRef' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataList*' type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
+    <arg name='in1stCString' declared_type='char*' type='*' const='true'/>
+    <arg name='args' declared_type='va_list' type='*' type64='^{__va_list_tag=II^v^v}' declared_type64='__va_list_tag*'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsCloseAttributeList'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inAttributeListRef' declared_type='tAttributeListRef' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsCloseAttributeValueList'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inAttributeValueListRef' declared_type='tAttributeValueListRef' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsCloseDirNode'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsCloseDirService'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsCloseRecord'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsCopyDirStatusName'>
-    <arg type='l' type64='q'/>
-    <retval type='*'/>
+    <arg name='inDirStatus' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='char*' type='*'/>
   </function>
   <function name='dsCreateRecord'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inRecordType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inRecordName' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsCreateRecordAndOpen'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inRecordType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inRecordName' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outRecordReference' declared_type='tRecordReference*' type='^I' type64='^Q' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataBufferAllocate'>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <retval type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inBufferSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}'/>
   </function>
   <function name='dsDataBufferDeAllocate'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataBufferPtr' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListAllocate'>
-    <arg type='L' type64='Q'/>
-    <retval type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <retval declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
   </function>
   <function name='dsDataListCopyList'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
-    <retval type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataListSource' declared_type='tDataList*' type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' const='true' type_modifier='n'/>
+    <retval declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
   </function>
   <function name='dsDataListDeAllocate'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='i'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inDeAllocateNodesFlag' declared_type='int' type='i'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListDeallocate'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListDeleteThisNode'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inNodeIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListGetNode'>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^^{?}'/>
-    <retval type='i'/>
+    <arg name='inDataListPtr' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inNodeIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='outDataNode' declared_type='tDataNodePtr*' type='^^{?}'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListGetNodeAlloc'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataListPtr' declared_type='tDataList*' type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' const='true' type_modifier='n'/>
+    <arg name='inNodeIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='outDataNode' declared_type='tDataNodePtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListGetNodeCount'>
-    <arg type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
-    <retval type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataList*' type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' const='true' type_modifier='n'/>
+    <retval declared_type='unsigned long' type='L' type64='Q'/>
   </function>
   <function name='dsDataListInsertAfter'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDirReferences' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inInsertDataNode' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inNodeIndex' declared_type='unsigned long' type='L' type64='Q' const='true'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListInsertNode'>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
-    <retval type='i'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inAfterDataNode' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+    <arg name='inInsertDataNode' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListMergeList'>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
-    <retval type='i'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inAfterDataNode' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+    <arg name='inMergeDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListMergeListAfter'>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inTargetList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inSourceList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inNodeIndex' declared_type='unsigned long' type='L' type64='Q' const='true'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListRemoveNodes'>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='in1stDataNode' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+    <arg name='inDeleteCount' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataListRemoveThisNode'>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDataList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}'/>
+    <arg name='inNodeIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inDeleteCount' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataNodeAllocateBlock'>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^v' type_modifier='n'/>
-    <retval type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataNodeSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inDataNodeLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inDataNodeBuffer' declared_type='tBuffer' type='^v' type_modifier='n'/>
+    <retval declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
   </function>
   <function name='dsDataNodeAllocateString'>
-    <arg type='L' type64='Q'/>
-    <arg type='*'/>
-    <retval type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inCString' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}'/>
   </function>
   <function name='dsDataNodeDeAllocate'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataNodePtr' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDataNodeGetLength'>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='L' type64='Q'/>
+    <arg name='inDataNodePtr' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='unsigned long' type='L' type64='Q'/>
   </function>
   <function name='dsDataNodeGetSize'>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='L' type64='Q'/>
+    <arg name='inDataNodePtr' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='unsigned long' type='L' type64='Q'/>
   </function>
   <function name='dsDataNodeSetLength'>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDataNodePtr' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inDataNodeLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDeallocAttributeEntry'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tAttributeEntryPtr=L{?=LLLLL}LLL{?=LL[1c]}}' type64='^{_tAttributeEntryPtr=Q{?=QQQQQ}QQQ{?=QQ[1c]}}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirRef' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inAttrEntry' declared_type='tAttributeEntryPtr' type='^{_tAttributeEntryPtr=L{?=LLLLL}LLL{?=LL[1c]}}' type64='^{_tAttributeEntryPtr=Q{?=QQQQQ}QQQ{?=QQ[1c]}}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDeallocAttributeValueEntry'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tAttributeValueEntryPtr=L{?=LL[1c]}}' type64='^{_tAttributeValueEntryPtr=Q{?=QQ[1c]}}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirRef' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inAttrValueEntry' declared_type='tAttributeValueEntryPtr' type='^{_tAttributeValueEntryPtr=L{?=LL[1c]}}' type64='^{_tAttributeValueEntryPtr=Q{?=QQ[1c]}}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDeallocRecordEntry'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tRecordEntryPtr=L{?=LLLLL}L{?=LL[1c]}}' type64='^{_tRecordEntryPtr=Q{?=QQQQQ}Q{?=QQ[1c]}}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirRef' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inRecEntry' declared_type='tRecordEntryPtr' type='^{_tRecordEntryPtr=L{?=LLLLL}L{?=LL[1c]}}' type64='^{_tRecordEntryPtr=Q{?=QQQQQ}Q{?=QQ[1c]}}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDeleteRecord'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDoAttributeValueSearch'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^L' type64='^Q' type_modifier='n'/>
-    <arg type='^^v' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inRecordTypeList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inPatternMatchType' declared_type='tDirPatternMatch' type='i'/>
+    <arg name='inPattern2Match' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inOutMatchRecordCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='n'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDoAttributeValueSearchWithData'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^L' type64='^Q' type_modifier='n'/>
-    <arg type='^^v' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inRecordTypeList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeMatchType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inPatternMatchType' declared_type='tDirPatternMatch' type='i'/>
+    <arg name='inPatternToMatch' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inAttributeTypeRequestList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeInfoOnly' declared_type='int' type='i'/>
+    <arg name='inOutMatchRecordCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='n'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDoDirNodeAuth'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
-    <arg type='^^v' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inDirNodeAuthName' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inDirNodeAuthOnlyFlag' declared_type='int' type='i'/>
+    <arg name='inAuthStepData' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outAuthStepDataResponse' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDoDirNodeAuthOnRecordType'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
-    <arg type='^^v' type_modifier='N'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inDirNodeAuthName' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inDirNodeAuthOnlyFlag' declared_type='int' type='i'/>
+    <arg name='inAuthStepData' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outAuthStepDataResponse' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <arg name='inRecordType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDoMultipleAttributeValueSearch'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^L' type64='^Q' type_modifier='N'/>
-    <arg type='^^v' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inRecordTypeList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inPatternMatchType' declared_type='tDirPatternMatch' type='i'/>
+    <arg name='inPatterns2Match' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inOutMatchRecordCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='N'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDoMultipleAttributeValueSearchWithData'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^L' type64='^Q' type_modifier='N'/>
-    <arg type='^^v' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inRecordTypeList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeMatchType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inPatternMatchType' declared_type='tDirPatternMatch' type='i'/>
+    <arg name='inPatternsToMatch' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeTypeRequestList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeInfoOnly' declared_type='int' type='i'/>
+    <arg name='inOutMatchRecordCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='N'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsDoPlugInCustomCall'>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inCustomRequestCode' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inCustomRequestData' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outCustomRequestResponse' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsFindDirNodes'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^L' type64='^Q' type_modifier='n'/>
-    <arg type='^^v' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inOutDataBufferPtr' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inNodeNamePattern' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inPatternMatchType' declared_type='tDirPatternMatch' type='i'/>
+    <arg name='outDirNodeCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='n'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsFlushRecord'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetAttributeEntry'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inAttributeListRef' declared_type='tAttributeListRef' type='L' type64='Q'/>
+    <arg name='inAttributeInfoIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='outAttributeValueListRef' declared_type='tAttributeValueListRef*' type='^I' type64='^Q' type_modifier='o'/>
+    <arg name='outAttributeInfoPtr' declared_type='tAttributeEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetAttributeValue'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inAttributeValueIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inAttributeValueListRef' declared_type='tAttributeValueListRef' type='L' type64='Q'/>
+    <arg name='outAttributeValue' declared_type='tAttributeValueEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetCustomAllocate'>
-    <arg type='L' type64='Q'/>
-    <arg type='^^?'/>
-    <arg type='^^?'/>
-    <arg type='^^v'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='outCustomAllocate' declared_type='fpCustomAllocate*' type='^^?'/>
+    <arg name='outCustomDeAllocate' declared_type='fpCustomDeAllocate*' type='^^?'/>
+    <arg name='outClientData' declared_type='tClientData*' type='^^v'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetCustomThread'>
-    <arg type='L' type64='Q'/>
-    <arg type='^^?'/>
-    <arg type='^^?'/>
-    <arg type='^^?'/>
-    <arg type='^^v'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='outCustomBlock' declared_type='fpCustomThreadBlock*' type='^^?'/>
+    <arg name='outCustomUnBlock' declared_type='fpCustomThreadUnBlock*' type='^^?'/>
+    <arg name='outCustomYield' declared_type='fpCustomThreadYield*' type='^^?'/>
+    <arg name='outClientData' declared_type='tClientData*' type='^^v'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetDataLength'>
-    <arg type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
-    <retval type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataList*' type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' const='true' type_modifier='n'/>
+    <retval declared_type='unsigned long' type='L' type64='Q'/>
   </function>
   <function name='dsGetDirNodeCount'>
-    <arg type='L' type64='Q'/>
-    <arg type='^L' type64='^Q' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='outDirectoryNodeCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetDirNodeCountWithInfo'>
-    <arg type='L' type64='Q'/>
-    <arg type='^L' type64='^Q' type_modifier='o'/>
-    <arg type='^L' type64='^Q' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='outDirectoryNodeCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='o'/>
+    <arg name='outDirectoryNodeChangeToken' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetDirNodeInfo'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='i'/>
-    <arg type='^L' type64='^Q' type_modifier='o'/>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <arg type='^^v' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inDirNodeInfoTypeList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inAttributeInfoOnly' declared_type='int' type='i'/>
+    <arg name='outAttributeInfoCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='o'/>
+    <arg name='outAttributeListRef' declared_type='tAttributeListRef*' type='^I' type64='^Q' type_modifier='o'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetDirNodeList'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='^L' type64='^Q' type_modifier='o'/>
-    <arg type='^^v' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inOutDataBufferPtr' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='outDirNodeCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='o'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetDirNodeName'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^^{?}' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inDirNodeIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inOutDataList' declared_type='tDataListPtr*' type='^^{?}' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetPathFromList'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' type_modifier='n'/>
-    <arg type='*'/>
-    <retval type='*'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDataList' declared_type='tDataList*' type='^{_tDataList=L^{?}}' type64='^{_tDataList=Q^{?}}' const='true' type_modifier='n'/>
+    <arg name='inDelimiter' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='char*' type='*'/>
   </function>
   <function name='dsGetRecordAttributeInfo'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outAttributeInfoPtr' declared_type='tAttributeEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordAttributeValueByID'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inValueID' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='outEntryPtr' declared_type='tAttributeValueEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordAttributeValueByIndex'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inValueIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='outEntryPtr' declared_type='tAttributeValueEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordAttributeValueByValue'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inAttributeValue' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outEntryPtr' declared_type='tAttributeValueEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordEntry'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inRecordEntryIndex' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='outAttributeListRef' declared_type='tAttributeListRef*' type='^I' type64='^Q' type_modifier='o'/>
+    <arg name='outRecordEntryPtr' declared_type='tRecordEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordList'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='i'/>
-    <arg type='^L' type64='^Q' type_modifier='N'/>
-    <arg type='^^v' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inOutDataBuffer' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='N'/>
+    <arg name='inRecordNameList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inPatternMatchType' declared_type='tDirPatternMatch' type='i'/>
+    <arg name='inRecordTypeList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeTypeList' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='inAttributeInfoOnly' declared_type='int' type='i'/>
+    <arg name='inOutRecordEntryCount' declared_type='unsigned long*' type='^L' type64='^Q' type_modifier='N'/>
+    <arg name='inOutContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordNameFromEntry'>
-    <arg type='^{_tRecordEntryPtr=L{?=LLLLL}L{?=LL[1c]}}' type64='^{_tRecordEntryPtr=Q{?=QQQQQ}Q{?=QQ[1c]}}' type_modifier='n'/>
-    <arg type='^*' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inRecEntryPtr' declared_type='tRecordEntryPtr' type='^{_tRecordEntryPtr=L{?=LLLLL}L{?=LL[1c]}}' type64='^{_tRecordEntryPtr=Q{?=QQQQQ}Q{?=QQ[1c]}}' type_modifier='n'/>
+    <arg name='outRecName' declared_type='char**' type='^*' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordReferenceInfo'>
-    <arg type='L' type64='Q'/>
-    <arg type='^^{?}' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='outRecordInfo' declared_type='tRecordEntryPtr*' type='^^{?}' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsGetRecordTypeFromEntry'>
-    <arg type='^{_tRecordEntryPtr=L{?=LLLLL}L{?=LL[1c]}}' type64='^{_tRecordEntryPtr=Q{?=QQQQQ}Q{?=QQ[1c]}}' type_modifier='n'/>
-    <arg type='^*' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inRecEntryPtr' declared_type='tRecordEntryPtr' type='^{_tRecordEntryPtr=L{?=LLLLL}L{?=LL[1c]}}' type64='^{_tRecordEntryPtr=Q{?=QQQQQ}Q{?=QQ[1c]}}' type_modifier='n'/>
+    <arg name='outRecType' declared_type='char**' type='^*' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsIsDirServiceRunning'>
-    <retval type='i'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsOpenDirNode'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inDirNodeName' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <arg name='outDirNodeReference' declared_type='tDirNodeReference*' type='^I' type64='^Q' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsOpenDirService'>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='outDirReference' declared_type='tDirReference*' type='^I' type64='^Q' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsOpenDirServiceProxy'>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <arg type='*'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
-    <arg type='^^v' type_modifier='N'/>
-    <retval type='i'/>
+    <arg name='outDirRef' declared_type='tDirReference*' type='^I' type64='^Q' type_modifier='o'/>
+    <arg name='inIPAddress' declared_type='char*' type='*' const='true'/>
+    <arg name='inIPPort' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inAuthMethod' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inAuthStepData' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outAuthStepDataResponse' declared_type='tDataBufferPtr' type='^{_tDataBufferPtr=LL[1c]}' type64='^{_tDataBufferPtr=QQ[1c]}' type_modifier='o'/>
+    <arg name='ioContinueData' declared_type='tContextData*' type='^^v' type_modifier='N'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsOpenRecord'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^I' type64='^Q' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inDirNodeReference' declared_type='tDirNodeReference' type='L' type64='Q'/>
+    <arg name='inRecordType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inRecordName' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='outRecordReference' declared_type='tRecordReference*' type='^I' type64='^Q' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsParseAuthAuthority'>
-    <arg type='*'/>
-    <arg type='^*' type_modifier='o'/>
-    <arg type='^*' type_modifier='o'/>
-    <arg type='^*' type_modifier='o'/>
-    <retval type='i'/>
+    <arg name='inAuthAuthority' declared_type='char*' type='*' const='true'/>
+    <arg name='outVersion' declared_type='char**' type='^*' type_modifier='o'/>
+    <arg name='outAuthTag' declared_type='char**' type='^*' type_modifier='o'/>
+    <arg name='outAuthData' declared_type='char**' type='^*' type_modifier='o'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsRegisterCustomMemory'>
-    <arg type='L' type64='Q'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <arg type='L' type64='Q'/>
-      <arg type='^^v'/>
-      <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inCustomAllocate' function_pointer='true' declared_type='fpCustomAllocate' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <arg declared_type='unsigned long' type='L' type64='Q'/>
+      <arg declared_type='tBuffer*' type='^^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inCustomDeAllocate' function_pointer='true' declared_type='fpCustomDeAllocate' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <arg declared_type='tBuffer' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='i'/>
+    <arg name='inClientData' declared_type='tClientData' type='^v'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsRegisterCustomThread'>
-    <arg type='L' type64='Q'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inCustomBlock' function_pointer='true' declared_type='fpCustomThreadBlock' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inCustomUnBlock' function_pointer='true' declared_type='fpCustomThreadUnBlock' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inCustomYield' function_pointer='true' declared_type='fpCustomThreadYield' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='i'/>
+    <arg name='inClientData' declared_type='tClientData' type='^v'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsReleaseContinueData'>
-    <arg type='L' type64='Q'/>
-    <arg type='^v' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inContinueData' declared_type='tContextData' type='^v' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsRemoveAttribute'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttribute' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsRemoveAttributeValue'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inAttributeValueID' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsSetAttributeValue'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tAttributeValueEntryPtr=L{?=LL[1c]}}' type64='^{_tAttributeValueEntryPtr=Q{?=QQ[1c]}}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inAttributeValuePtr' declared_type='tAttributeValueEntryPtr' type='^{_tAttributeValueEntryPtr=L{?=LL[1c]}}' type64='^{_tAttributeValueEntryPtr=Q{?=QQ[1c]}}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsSetAttributeValues'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <arg type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inAttributeType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <arg name='inAttributeValuesPtr' declared_type='tDataListPtr' type='^{_tDataListPtr=L^{?}}' type64='^{_tDataListPtr=Q^{?}}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsSetRecordName'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inNewRecordName' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsSetRecordType'>
-    <arg type='L' type64='Q'/>
-    <arg type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
-    <retval type='i'/>
+    <arg name='inRecordReference' declared_type='tRecordReference' type='L' type64='Q'/>
+    <arg name='inNewRecordType' declared_type='tDataNodePtr' type='^{_tDataNodePtr=LL[1c]}' type64='^{_tDataNodePtr=QQ[1c]}' type_modifier='n'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsUnRegisterCustomMemory'>
-    <arg type='L' type64='Q'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <arg type='L' type64='Q'/>
-      <arg type='^^v'/>
-      <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inCustomAllocate' function_pointer='true' declared_type='fpCustomAllocate' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <arg declared_type='unsigned long' type='L' type64='Q'/>
+      <arg declared_type='tBuffer*' type='^^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inCustomDeAllocate' function_pointer='true' declared_type='fpCustomDeAllocate' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <arg declared_type='tBuffer' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='i'/>
+    <arg name='inClientData' declared_type='tClientData' type='^v'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsUnRegisterCustomThread'>
-    <arg type='L' type64='Q'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <arg name='inCustomBlock' function_pointer='true' declared_type='fpCustomThreadBlock' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inCustomUnBlock' function_pointer='true' declared_type='fpCustomThreadUnBlock' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='Q'/>
-      <arg type='^v'/>
-      <retval type='i'/>
+    <arg name='inCustomYield' function_pointer='true' declared_type='fpCustomThreadYield' type='^?'>
+      <arg declared_type='tDirReference' type='L' type64='Q'/>
+      <arg declared_type='tClientData' type='^v'/>
+      <retval declared_type='tDirStatus' type='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='i'/>
+    <arg name='inClientData' declared_type='tClientData' type='^v'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
   <function name='dsVerifyDirRefNum'>
-    <arg type='L' type64='Q'/>
-    <retval type='i'/>
+    <arg name='inDirReference' declared_type='tDirReference' type='L' type64='Q'/>
+    <retval declared_type='tDirStatus' type='i'/>
   </function>
 </signatures>

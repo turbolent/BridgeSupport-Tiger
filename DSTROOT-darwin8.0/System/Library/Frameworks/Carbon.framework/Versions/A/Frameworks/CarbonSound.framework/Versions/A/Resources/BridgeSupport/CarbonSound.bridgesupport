@@ -1,41 +1,316 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
-  <struct name='AudioEndianAtom' type='{AudioEndianAtom=&quot;size&quot;l&quot;atomType&quot;I&quot;littleEndian&quot;s}' type64='{AudioEndianAtom=&quot;size&quot;q&quot;atomType&quot;I&quot;littleEndian&quot;s}'/>
-  <struct name='AudioFormatAtom' type='{AudioFormatAtom=&quot;size&quot;l&quot;atomType&quot;I&quot;format&quot;I}' type64='{AudioFormatAtom=&quot;size&quot;q&quot;atomType&quot;I&quot;format&quot;I}'/>
-  <struct name='AudioInfo' type='{AudioInfo=&quot;capabilitiesFlags&quot;l&quot;reserved&quot;l&quot;numVolumeSteps&quot;S}' type64='{AudioInfo=&quot;capabilitiesFlags&quot;q&quot;reserved&quot;q&quot;numVolumeSteps&quot;S}'/>
-  <struct name='AudioSelection' type='{AudioSelection=&quot;unitType&quot;l&quot;selStart&quot;I&quot;selEnd&quot;I}' type64='{AudioSelection=&quot;unitType&quot;q&quot;selStart&quot;I&quot;selEnd&quot;I}'/>
-  <struct name='AudioTerminatorAtom' type='{AudioTerminatorAtom=&quot;size&quot;l&quot;atomType&quot;I}' type64='{AudioTerminatorAtom=&quot;size&quot;q&quot;atomType&quot;I}'/>
-  <struct name='CmpSoundHeader' type='{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}' type64='{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}'/>
-  <struct name='CompressionInfo' type='{CompressionInfo=&quot;recordSize&quot;l&quot;format&quot;I&quot;compressionID&quot;s&quot;samplesPerPacket&quot;S&quot;bytesPerPacket&quot;S&quot;bytesPerFrame&quot;S&quot;bytesPerSample&quot;S&quot;futureUse1&quot;S}' type64='{CompressionInfo=&quot;recordSize&quot;q&quot;format&quot;I&quot;compressionID&quot;s&quot;samplesPerPacket&quot;S&quot;bytesPerPacket&quot;S&quot;bytesPerFrame&quot;S&quot;bytesPerSample&quot;S&quot;futureUse1&quot;S}'/>
-  <struct name='ConversionBlock' type='{ConversionBlock=&quot;destination&quot;s&quot;unused&quot;s&quot;inputPtr&quot;^{CmpSoundHeader}&quot;outputPtr&quot;^{CmpSoundHeader}}'/>
-  <struct name='EQSpectrumBandsRecord' type='{EQSpectrumBandsRecord=&quot;count&quot;s&quot;frequency&quot;^I}'/>
-  <struct name='ExtSoundHeader' type='{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]}' type64='{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]}'/>
-  <struct name='ExtendedScheduledSoundHeader' type='{ExtendedScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]})&quot;flags&quot;l&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;l&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}&quot;recordSize&quot;l&quot;extendedFlags&quot;l&quot;bufferSize&quot;l&quot;frameCount&quot;l&quot;frameSizesArray&quot;^l&quot;commonFrameSize&quot;l&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;l&quot;bufferFlags&quot;L&quot;bufferFlagsMask&quot;L}' type64='{ExtendedScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]})&quot;flags&quot;q&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;q&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}&quot;recordSize&quot;q&quot;extendedFlags&quot;q&quot;bufferSize&quot;q&quot;frameCount&quot;q&quot;frameSizesArray&quot;^q&quot;commonFrameSize&quot;q&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;q&quot;bufferFlags&quot;Q&quot;bufferFlagsMask&quot;Q}'/>
-  <struct name='ExtendedSoundComponentData' type='{ExtendedSoundComponentData=&quot;desc&quot;{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}&quot;recordSize&quot;l&quot;extendedFlags&quot;l&quot;bufferSize&quot;l&quot;frameCount&quot;l&quot;frameSizesArray&quot;^l&quot;commonFrameSize&quot;l&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;l&quot;bufferFlags&quot;L&quot;bufferFlagsMask&quot;L}' type64='{ExtendedSoundComponentData=&quot;desc&quot;{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}&quot;recordSize&quot;q&quot;extendedFlags&quot;q&quot;bufferSize&quot;q&quot;frameCount&quot;q&quot;frameSizesArray&quot;^q&quot;commonFrameSize&quot;q&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;q&quot;bufferFlags&quot;Q&quot;bufferFlagsMask&quot;Q}'/>
-  <struct name='ExtendedSoundParamBlock' type='{ExtendedSoundParamBlock=&quot;pb&quot;{SoundParamBlock=&quot;recordSize&quot;l&quot;desc&quot;{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;l&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;l&quot;result&quot;s}&quot;reserved&quot;s&quot;extendedFlags&quot;l&quot;bufferSize&quot;l&quot;frameCount&quot;l&quot;frameSizesArray&quot;^l&quot;commonFrameSize&quot;l&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;l&quot;bufferFlags&quot;L&quot;bufferFlagsMask&quot;L}' type64='{ExtendedSoundParamBlock=&quot;pb&quot;{SoundParamBlock=&quot;recordSize&quot;q&quot;desc&quot;{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;q&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;q&quot;result&quot;s}&quot;reserved&quot;s&quot;extendedFlags&quot;q&quot;bufferSize&quot;q&quot;frameCount&quot;q&quot;frameSizesArray&quot;^q&quot;commonFrameSize&quot;q&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;q&quot;bufferFlags&quot;Q&quot;bufferFlagsMask&quot;Q}'/>
-  <struct name='LeftOverBlock' type='{LeftOverBlock=&quot;count&quot;L&quot;sampleArea&quot;[32c]}' type64='{LeftOverBlock=&quot;count&quot;Q&quot;sampleArea&quot;[32c]}'/>
-  <struct name='LevelMeterInfo' type='{LevelMeterInfo=&quot;numChannels&quot;s&quot;leftMeter&quot;C&quot;rightMeter&quot;C}'/>
-  <struct name='ModRef' type='{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;l}' type64='{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;q}'/>
-  <struct name='SCStatus' type='{SCStatus=&quot;scStartTime&quot;I&quot;scEndTime&quot;I&quot;scCurrentTime&quot;I&quot;scChannelBusy&quot;B&quot;scChannelDisposed&quot;B&quot;scChannelPaused&quot;B&quot;scUnused&quot;B&quot;scChannelAttributes&quot;L&quot;scCPULoad&quot;l}' type64='{SCStatus=&quot;scStartTime&quot;I&quot;scEndTime&quot;I&quot;scCurrentTime&quot;I&quot;scChannelBusy&quot;B&quot;scChannelDisposed&quot;B&quot;scChannelPaused&quot;B&quot;scUnused&quot;B&quot;scChannelAttributes&quot;Q&quot;scCPULoad&quot;q}'/>
-  <struct name='SMStatus' type='{SMStatus=&quot;smMaxCPULoad&quot;s&quot;smNumChannels&quot;s&quot;smCurCPULoad&quot;s}'/>
-  <struct name='SPB' type='{SPB=&quot;inRefNum&quot;l&quot;count&quot;L&quot;milliseconds&quot;L&quot;bufferLength&quot;L&quot;bufferPtr&quot;*&quot;completionRoutine&quot;^?&quot;interruptRoutine&quot;^?&quot;userLong&quot;l&quot;error&quot;s&quot;unused1&quot;l}' type64='{SPB=&quot;inRefNum&quot;q&quot;count&quot;Q&quot;milliseconds&quot;Q&quot;bufferLength&quot;Q&quot;bufferPtr&quot;*&quot;completionRoutine&quot;^?&quot;interruptRoutine&quot;^?&quot;userLong&quot;q&quot;error&quot;s&quot;unused1&quot;q}'/>
-  <struct name='ScheduledSoundHeader' type='{ScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]})&quot;flags&quot;l&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;l&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}}' type64='{ScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]})&quot;flags&quot;q&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;q&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}}'/>
-  <struct name='Snd2ListResource' type='{Snd2ListResource=&quot;format&quot;s&quot;refCount&quot;s&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]&quot;dataPart&quot;[1C]}' type64='{Snd2ListResource=&quot;format&quot;s&quot;refCount&quot;s&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]&quot;dataPart&quot;[1C]}'/>
-  <struct name='SndChannel' type='{SndChannel=&quot;nextChan&quot;^{SndChannel}&quot;firstMod&quot;*&quot;callBack&quot;^?&quot;userInfo&quot;l&quot;wait&quot;l&quot;cmdInProgress&quot;{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}&quot;flags&quot;s&quot;qLength&quot;s&quot;qHead&quot;s&quot;qTail&quot;s&quot;queue&quot;[128{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]}' type64='{SndChannel=&quot;nextChan&quot;^{SndChannel}&quot;firstMod&quot;*&quot;callBack&quot;^?&quot;userInfo&quot;q&quot;wait&quot;q&quot;cmdInProgress&quot;{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}&quot;flags&quot;s&quot;qLength&quot;s&quot;qHead&quot;s&quot;qTail&quot;s&quot;queue&quot;[128{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]}'/>
-  <struct name='SndCommand' type='{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}' type64='{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}'/>
-  <struct name='SndInputCmpParam' type='{SndInputCmpParam=&quot;ioCompletion&quot;^?&quot;ioInterrupt&quot;^?&quot;ioResult&quot;s&quot;pad&quot;s&quot;ioReqCount&quot;L&quot;ioActCount&quot;L&quot;ioBuffer&quot;*&quot;ioMisc&quot;*}' type64='{SndInputCmpParam=&quot;ioCompletion&quot;^?&quot;ioInterrupt&quot;^?&quot;ioResult&quot;s&quot;pad&quot;s&quot;ioReqCount&quot;Q&quot;ioActCount&quot;Q&quot;ioBuffer&quot;*&quot;ioMisc&quot;*}'/>
-  <struct name='SndListResource' type='{SndListResource=&quot;format&quot;s&quot;numModifiers&quot;s&quot;modifierPart&quot;[1{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;l}]&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]&quot;dataPart&quot;[1C]}' type64='{SndListResource=&quot;format&quot;s&quot;numModifiers&quot;s&quot;modifierPart&quot;[1{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;q}]&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]&quot;dataPart&quot;[1C]}'/>
-  <struct name='SoundAudioCodecPropertyRequestParams' type='{SoundAudioCodecPropertyRequestParams=&quot;propertyClass&quot;I&quot;propertyID&quot;I&quot;propertyDataSize&quot;I&quot;propertyData&quot;^v&quot;propertyRequestFlags&quot;I&quot;propertyDataType&quot;I&quot;propertyRequestResult&quot;i}' type64='{SoundAudioCodecPropertyRequestParams=&quot;propertyClass&quot;I&quot;propertyID&quot;I&quot;propertyDataSize&quot;I&quot;propertyData&quot;^v&quot;propertyRequestFlags&quot;I&quot;propertyDataType&quot;I&quot;propertyRequestResult&quot;q}'/>
-  <struct name='SoundComponentData' type='{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}' type64='{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}'/>
-  <struct name='SoundComponentLink' type='{SoundComponentLink=&quot;description&quot;{ComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;L&quot;componentFlagsMask&quot;L}&quot;mixerID&quot;^{OpaqueSoundSource}&quot;linkID&quot;^^{OpaqueSoundSource}}' type64='{SoundComponentLink=&quot;description&quot;{ComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;Q&quot;componentFlagsMask&quot;Q}&quot;mixerID&quot;^{OpaqueSoundSource}&quot;linkID&quot;^^{OpaqueSoundSource}}'/>
-  <struct name='SoundHeader' type='{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}' type64='{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}'/>
-  <struct name='SoundInfoList' type='{SoundInfoList=&quot;count&quot;s&quot;infoHandle&quot;^*}'/>
-  <struct name='SoundParamBlock' type='{SoundParamBlock=&quot;recordSize&quot;l&quot;desc&quot;{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;l&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;l&quot;result&quot;s}' type64='{SoundParamBlock=&quot;recordSize&quot;q&quot;desc&quot;{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;q&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;q&quot;result&quot;s}'/>
-  <struct name='SoundSlopeAndInterceptRecord' type='{SoundSlopeAndInterceptRecord=&quot;slope&quot;d&quot;intercept&quot;d&quot;minClip&quot;d&quot;maxClip&quot;d}'/>
-  <struct name='StateBlock' type='{StateBlock=&quot;stateVar&quot;[64s]}'/>
+  <struct name='AudioEndianAtom' type='{AudioEndianAtom=&quot;size&quot;l&quot;atomType&quot;I&quot;littleEndian&quot;s}' type64='{AudioEndianAtom=&quot;size&quot;q&quot;atomType&quot;I&quot;littleEndian&quot;s}'>
+    <field name='size' declared_type='long' type='l' type64='q'/>
+    <field name='atomType' declared_type='OSType' type='L' type64='I'/>
+    <field name='littleEndian' declared_type='short' type='s'/>
+  </struct>
+  <struct name='AudioFormatAtom' type='{AudioFormatAtom=&quot;size&quot;l&quot;atomType&quot;I&quot;format&quot;I}' type64='{AudioFormatAtom=&quot;size&quot;q&quot;atomType&quot;I&quot;format&quot;I}'>
+    <field name='size' declared_type='long' type='l' type64='q'/>
+    <field name='atomType' declared_type='OSType' type='L' type64='I'/>
+    <field name='format' declared_type='OSType' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioInfo' type='{AudioInfo=&quot;capabilitiesFlags&quot;l&quot;reserved&quot;l&quot;numVolumeSteps&quot;S}' type64='{AudioInfo=&quot;capabilitiesFlags&quot;q&quot;reserved&quot;q&quot;numVolumeSteps&quot;S}'>
+    <field name='capabilitiesFlags' declared_type='long' type='l' type64='q'/>
+    <field name='reserved' declared_type='long' type='l' type64='q'/>
+    <field name='numVolumeSteps' declared_type='unsigned short' type='S'/>
+  </struct>
+  <struct name='AudioSelection' type='{AudioSelection=&quot;unitType&quot;l&quot;selStart&quot;I&quot;selEnd&quot;I}' type64='{AudioSelection=&quot;unitType&quot;q&quot;selStart&quot;I&quot;selEnd&quot;I}'>
+    <field name='unitType' declared_type='long' type='l' type64='q'/>
+    <field name='selStart' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='selEnd' declared_type='UnsignedFixed' type='L' type64='I'/>
+  </struct>
+  <struct name='AudioTerminatorAtom' type='{AudioTerminatorAtom=&quot;size&quot;l&quot;atomType&quot;I}' type64='{AudioTerminatorAtom=&quot;size&quot;q&quot;atomType&quot;I}'>
+    <field name='size' declared_type='long' type='l' type64='q'/>
+    <field name='atomType' declared_type='OSType' type='L' type64='I'/>
+  </struct>
+  <struct name='CmpSoundHeader' type='{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}' type64='{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}'>
+    <field name='samplePtr' declared_type='Ptr' type='*'/>
+    <field name='numChannels' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleRate' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='loopStart' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='loopEnd' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='encode' declared_type='UInt8' type='C'/>
+    <field name='baseFrequency' declared_type='UInt8' type='C'/>
+    <field name='numFrames' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='AIFFSampleRate' declared_type='extended80' type='{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}'/>
+    <field name='markerChunk' declared_type='Ptr' type='*'/>
+    <field name='format' declared_type='OSType' type='L' type64='I'/>
+    <field name='futureUse2' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='stateVars' declared_type='StateBlockPtr' type='^{StateBlock=[64s]}'/>
+    <field name='leftOverSamples' declared_type='LeftOverBlockPtr' type='^{LeftOverBlock=L[32c]}' type64='^{LeftOverBlock=Q[32c]}'/>
+    <field name='compressionID' declared_type='short' type='s'/>
+    <field name='packetSize' declared_type='unsigned short' type='S'/>
+    <field name='snthID' declared_type='unsigned short' type='S'/>
+    <field name='sampleSize' declared_type='unsigned short' type='S'/>
+    <field name='sampleArea' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='CompressionInfo' type='{CompressionInfo=&quot;recordSize&quot;l&quot;format&quot;I&quot;compressionID&quot;s&quot;samplesPerPacket&quot;S&quot;bytesPerPacket&quot;S&quot;bytesPerFrame&quot;S&quot;bytesPerSample&quot;S&quot;futureUse1&quot;S}' type64='{CompressionInfo=&quot;recordSize&quot;q&quot;format&quot;I&quot;compressionID&quot;s&quot;samplesPerPacket&quot;S&quot;bytesPerPacket&quot;S&quot;bytesPerFrame&quot;S&quot;bytesPerSample&quot;S&quot;futureUse1&quot;S}'>
+    <field name='recordSize' declared_type='long' type='l' type64='q'/>
+    <field name='format' declared_type='OSType' type='L' type64='I'/>
+    <field name='compressionID' declared_type='short' type='s'/>
+    <field name='samplesPerPacket' declared_type='unsigned short' type='S'/>
+    <field name='bytesPerPacket' declared_type='unsigned short' type='S'/>
+    <field name='bytesPerFrame' declared_type='unsigned short' type='S'/>
+    <field name='bytesPerSample' declared_type='unsigned short' type='S'/>
+    <field name='futureUse1' declared_type='unsigned short' type='S'/>
+  </struct>
+  <struct name='ConversionBlock' type='{ConversionBlock=&quot;destination&quot;s&quot;unused&quot;s&quot;inputPtr&quot;^{CmpSoundHeader}&quot;outputPtr&quot;^{CmpSoundHeader}}'>
+    <field name='destination' declared_type='short' type='s'/>
+    <field name='unused' declared_type='short' type='s'/>
+    <field name='inputPtr' declared_type='CmpSoundHeaderPtr' type='^{CmpSoundHeader=*LILLCCL{Float80=s[4S]}*IL^{StateBlock}^{LeftOverBlock}sSSS[1C]}' type64='^{CmpSoundHeader=*QIQQCCQ{Float80=s[4S]}*IQ^{StateBlock}^{LeftOverBlock}sSSS[1C]}'/>
+    <field name='outputPtr' declared_type='CmpSoundHeaderPtr' type='^{CmpSoundHeader=*LILLCCL{Float80=s[4S]}*IL^{StateBlock}^{LeftOverBlock}sSSS[1C]}' type64='^{CmpSoundHeader=*QIQQCCQ{Float80=s[4S]}*IQ^{StateBlock}^{LeftOverBlock}sSSS[1C]}'/>
+  </struct>
+  <struct name='EQSpectrumBandsRecord' type='{EQSpectrumBandsRecord=&quot;count&quot;s&quot;frequency&quot;^I}'>
+    <field name='count' declared_type='short' type='s'/>
+    <field name='frequency' declared_type='UnsignedFixedPtr' type='^I'/>
+  </struct>
+  <struct name='ExtSoundHeader' type='{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]}' type64='{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]}'>
+    <field name='samplePtr' declared_type='Ptr' type='*'/>
+    <field name='numChannels' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleRate' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='loopStart' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='loopEnd' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='encode' declared_type='UInt8' type='C'/>
+    <field name='baseFrequency' declared_type='UInt8' type='C'/>
+    <field name='numFrames' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='AIFFSampleRate' declared_type='extended80' type='{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}'/>
+    <field name='markerChunk' declared_type='Ptr' type='*'/>
+    <field name='instrumentChunks' declared_type='Ptr' type='*'/>
+    <field name='AESRecording' declared_type='Ptr' type='*'/>
+    <field name='sampleSize' declared_type='unsigned short' type='S'/>
+    <field name='futureUse1' declared_type='unsigned short' type='S'/>
+    <field name='futureUse2' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='futureUse3' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='futureUse4' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleArea' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='ExtendedScheduledSoundHeader' type='{ExtendedScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]})&quot;flags&quot;l&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;l&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}&quot;recordSize&quot;l&quot;extendedFlags&quot;l&quot;bufferSize&quot;l&quot;frameCount&quot;l&quot;frameSizesArray&quot;^l&quot;commonFrameSize&quot;l&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;l&quot;bufferFlags&quot;L&quot;bufferFlagsMask&quot;L}' type64='{ExtendedScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]})&quot;flags&quot;q&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;q&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}&quot;recordSize&quot;q&quot;extendedFlags&quot;q&quot;bufferSize&quot;q&quot;frameCount&quot;q&quot;frameSizesArray&quot;^q&quot;commonFrameSize&quot;q&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;q&quot;bufferFlags&quot;Q&quot;bufferFlagsMask&quot;Q}'>
+    <field name='u' declared_type='SoundHeaderUnion' type='(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]})' type64='(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]})'/>
+    <field name='flags' declared_type='long' type='l' type64='q'/>
+    <field name='reserved' declared_type='short' type='s'/>
+    <field name='callBackParam1' declared_type='short' type='s'/>
+    <field name='callBackParam2' declared_type='long' type='l' type64='q'/>
+    <field name='startTime' declared_type='TimeRecord' type='{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}'/>
+    <field name='recordSize' declared_type='long' type='l' type64='q'/>
+    <field name='extendedFlags' declared_type='long' type='l' type64='q'/>
+    <field name='bufferSize' declared_type='long' type='l' type64='q'/>
+    <field name='frameCount' declared_type='long' type='l' type64='q'/>
+    <field name='frameSizesArray' declared_type='long*' type='^l' type64='^q'/>
+    <field name='commonFrameSize' declared_type='long' type='l' type64='q'/>
+    <field name='extensionsPtr' declared_type='void*' type='^v'/>
+    <field name='extensionsSize' declared_type='long' type='l' type64='q'/>
+    <field name='bufferFlags' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='bufferFlagsMask' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
+  <struct name='ExtendedSoundComponentData' type='{ExtendedSoundComponentData=&quot;desc&quot;{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}&quot;recordSize&quot;l&quot;extendedFlags&quot;l&quot;bufferSize&quot;l&quot;frameCount&quot;l&quot;frameSizesArray&quot;^l&quot;commonFrameSize&quot;l&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;l&quot;bufferFlags&quot;L&quot;bufferFlagsMask&quot;L}' type64='{ExtendedSoundComponentData=&quot;desc&quot;{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}&quot;recordSize&quot;q&quot;extendedFlags&quot;q&quot;bufferSize&quot;q&quot;frameCount&quot;q&quot;frameSizesArray&quot;^q&quot;commonFrameSize&quot;q&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;q&quot;bufferFlags&quot;Q&quot;bufferFlagsMask&quot;Q}'>
+    <field name='desc' declared_type='SoundComponentData' type='{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}' type64='{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}'/>
+    <field name='recordSize' declared_type='long' type='l' type64='q'/>
+    <field name='extendedFlags' declared_type='long' type='l' type64='q'/>
+    <field name='bufferSize' declared_type='long' type='l' type64='q'/>
+    <field name='frameCount' declared_type='long' type='l' type64='q'/>
+    <field name='frameSizesArray' declared_type='long*' type='^l' type64='^q'/>
+    <field name='commonFrameSize' declared_type='long' type='l' type64='q'/>
+    <field name='extensionsPtr' declared_type='void*' type='^v'/>
+    <field name='extensionsSize' declared_type='long' type='l' type64='q'/>
+    <field name='bufferFlags' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='bufferFlagsMask' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
+  <struct name='ExtendedSoundParamBlock' type='{ExtendedSoundParamBlock=&quot;pb&quot;{SoundParamBlock=&quot;recordSize&quot;l&quot;desc&quot;{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;l&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;l&quot;result&quot;s}&quot;reserved&quot;s&quot;extendedFlags&quot;l&quot;bufferSize&quot;l&quot;frameCount&quot;l&quot;frameSizesArray&quot;^l&quot;commonFrameSize&quot;l&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;l&quot;bufferFlags&quot;L&quot;bufferFlagsMask&quot;L}' type64='{ExtendedSoundParamBlock=&quot;pb&quot;{SoundParamBlock=&quot;recordSize&quot;q&quot;desc&quot;{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;q&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;q&quot;result&quot;s}&quot;reserved&quot;s&quot;extendedFlags&quot;q&quot;bufferSize&quot;q&quot;frameCount&quot;q&quot;frameSizesArray&quot;^q&quot;commonFrameSize&quot;q&quot;extensionsPtr&quot;^v&quot;extensionsSize&quot;q&quot;bufferFlags&quot;Q&quot;bufferFlagsMask&quot;Q}'>
+    <field name='pb' declared_type='SoundParamBlock' type='{SoundParamBlock=&quot;recordSize&quot;l&quot;desc&quot;{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;l&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;l&quot;result&quot;s}' type64='{SoundParamBlock=&quot;recordSize&quot;q&quot;desc&quot;{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;q&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;q&quot;result&quot;s}'/>
+    <field name='reserved' declared_type='short' type='s'/>
+    <field name='extendedFlags' declared_type='long' type='l' type64='q'/>
+    <field name='bufferSize' declared_type='long' type='l' type64='q'/>
+    <field name='frameCount' declared_type='long' type='l' type64='q'/>
+    <field name='frameSizesArray' declared_type='long*' type='^l' type64='^q'/>
+    <field name='commonFrameSize' declared_type='long' type='l' type64='q'/>
+    <field name='extensionsPtr' declared_type='void*' type='^v'/>
+    <field name='extensionsSize' declared_type='long' type='l' type64='q'/>
+    <field name='bufferFlags' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='bufferFlagsMask' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
+  <struct name='LeftOverBlock' type='{LeftOverBlock=&quot;count&quot;L&quot;sampleArea&quot;[32c]}' type64='{LeftOverBlock=&quot;count&quot;Q&quot;sampleArea&quot;[32c]}'>
+    <field name='count' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleArea' declared_type='SInt8*' type='[32c]'/>
+  </struct>
+  <struct name='LevelMeterInfo' type='{LevelMeterInfo=&quot;numChannels&quot;s&quot;leftMeter&quot;C&quot;rightMeter&quot;C}'>
+    <field name='numChannels' declared_type='short' type='s'/>
+    <field name='leftMeter' declared_type='UInt8' type='C'/>
+    <field name='rightMeter' declared_type='UInt8' type='C'/>
+  </struct>
+  <struct name='ModRef' type='{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;l}' type64='{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;q}'>
+    <field name='modNumber' declared_type='unsigned short' type='S'/>
+    <field name='modInit' declared_type='long' type='l' type64='q'/>
+  </struct>
+  <struct name='SCStatus' type='{SCStatus=&quot;scStartTime&quot;I&quot;scEndTime&quot;I&quot;scCurrentTime&quot;I&quot;scChannelBusy&quot;B&quot;scChannelDisposed&quot;B&quot;scChannelPaused&quot;B&quot;scUnused&quot;B&quot;scChannelAttributes&quot;L&quot;scCPULoad&quot;l}' type64='{SCStatus=&quot;scStartTime&quot;I&quot;scEndTime&quot;I&quot;scCurrentTime&quot;I&quot;scChannelBusy&quot;B&quot;scChannelDisposed&quot;B&quot;scChannelPaused&quot;B&quot;scUnused&quot;B&quot;scChannelAttributes&quot;Q&quot;scCPULoad&quot;q}'>
+    <field name='scStartTime' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='scEndTime' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='scCurrentTime' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='scChannelBusy' declared_type='Boolean' type='B'/>
+    <field name='scChannelDisposed' declared_type='Boolean' type='B'/>
+    <field name='scChannelPaused' declared_type='Boolean' type='B'/>
+    <field name='scUnused' declared_type='Boolean' type='B'/>
+    <field name='scChannelAttributes' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='scCPULoad' declared_type='long' type='l' type64='q'/>
+  </struct>
+  <struct name='SMStatus' type='{SMStatus=&quot;smMaxCPULoad&quot;s&quot;smNumChannels&quot;s&quot;smCurCPULoad&quot;s}'>
+    <field name='smMaxCPULoad' declared_type='short' type='s'/>
+    <field name='smNumChannels' declared_type='short' type='s'/>
+    <field name='smCurCPULoad' declared_type='short' type='s'/>
+  </struct>
+  <struct name='SPB' type='{SPB=&quot;inRefNum&quot;l&quot;count&quot;L&quot;milliseconds&quot;L&quot;bufferLength&quot;L&quot;bufferPtr&quot;*&quot;completionRoutine&quot;^?&quot;interruptRoutine&quot;^?&quot;userLong&quot;l&quot;error&quot;s&quot;unused1&quot;l}' type64='{SPB=&quot;inRefNum&quot;q&quot;count&quot;Q&quot;milliseconds&quot;Q&quot;bufferLength&quot;Q&quot;bufferPtr&quot;*&quot;completionRoutine&quot;^?&quot;interruptRoutine&quot;^?&quot;userLong&quot;q&quot;error&quot;s&quot;unused1&quot;q}'>
+    <field name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <field name='count' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='milliseconds' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='bufferLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='bufferPtr' declared_type='Ptr' type='*'/>
+    <field name='completionRoutine' function_pointer='true' declared_type='SICompletionUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='interruptRoutine' function_pointer='true' declared_type='SIInterruptUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <arg declared_type='Ptr' type='*'/>
+      <arg declared_type='short' type='s'/>
+      <arg declared_type='long' type='l' type64='q'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='userLong' declared_type='long' type='l' type64='q'/>
+    <field name='error' declared_type='OSErr' type='s'/>
+    <field name='unused1' declared_type='long' type='l' type64='q'/>
+  </struct>
+  <struct name='ScheduledSoundHeader' type='{ScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]})&quot;flags&quot;l&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;l&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}}' type64='{ScheduledSoundHeader=&quot;u&quot;(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]})&quot;flags&quot;q&quot;reserved&quot;s&quot;callBackParam1&quot;s&quot;callBackParam2&quot;q&quot;startTime&quot;{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}}'>
+    <field name='u' declared_type='SoundHeaderUnion' type='(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;L&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;L&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;L&quot;futureUse3&quot;L&quot;futureUse4&quot;L&quot;sampleArea&quot;[1C]})' type64='(SoundHeaderUnion=&quot;stdHeader&quot;{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}&quot;cmpHeader&quot;{CmpSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;format&quot;I&quot;futureUse2&quot;Q&quot;stateVars&quot;^{StateBlock}&quot;leftOverSamples&quot;^{LeftOverBlock}&quot;compressionID&quot;s&quot;packetSize&quot;S&quot;snthID&quot;S&quot;sampleSize&quot;S&quot;sampleArea&quot;[1C]}&quot;extHeader&quot;{ExtSoundHeader=&quot;samplePtr&quot;*&quot;numChannels&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;numFrames&quot;Q&quot;AIFFSampleRate&quot;{Float80=&quot;exp&quot;s&quot;man&quot;[4S]}&quot;markerChunk&quot;*&quot;instrumentChunks&quot;*&quot;AESRecording&quot;*&quot;sampleSize&quot;S&quot;futureUse1&quot;S&quot;futureUse2&quot;Q&quot;futureUse3&quot;Q&quot;futureUse4&quot;Q&quot;sampleArea&quot;[1C]})'/>
+    <field name='flags' declared_type='long' type='l' type64='q'/>
+    <field name='reserved' declared_type='short' type='s'/>
+    <field name='callBackParam1' declared_type='short' type='s'/>
+    <field name='callBackParam2' declared_type='long' type='l' type64='q'/>
+    <field name='startTime' declared_type='TimeRecord' type='{TimeRecord=&quot;value&quot;{wide=&quot;lo&quot;I&quot;hi&quot;i}&quot;scale&quot;i&quot;base&quot;^{TimeBaseRecord}}'/>
+  </struct>
+  <struct name='Snd2ListResource' type='{Snd2ListResource=&quot;format&quot;s&quot;refCount&quot;s&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]&quot;dataPart&quot;[1C]}' type64='{Snd2ListResource=&quot;format&quot;s&quot;refCount&quot;s&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]&quot;dataPart&quot;[1C]}'>
+    <field name='format' declared_type='short' type='s'/>
+    <field name='refCount' declared_type='short' type='s'/>
+    <field name='numCommands' declared_type='short' type='s'/>
+    <field name='commandPart' declared_type='SndCommand*' type='[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]' type64='[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]'/>
+    <field name='dataPart' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='SndChannel' type='{SndChannel=&quot;nextChan&quot;^{SndChannel}&quot;firstMod&quot;*&quot;callBack&quot;^?&quot;userInfo&quot;l&quot;wait&quot;l&quot;cmdInProgress&quot;{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}&quot;flags&quot;s&quot;qLength&quot;s&quot;qHead&quot;s&quot;qTail&quot;s&quot;queue&quot;[128{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]}' type64='{SndChannel=&quot;nextChan&quot;^{SndChannel}&quot;firstMod&quot;*&quot;callBack&quot;^?&quot;userInfo&quot;q&quot;wait&quot;q&quot;cmdInProgress&quot;{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}&quot;flags&quot;s&quot;qLength&quot;s&quot;qHead&quot;s&quot;qTail&quot;s&quot;queue&quot;[128{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]}'>
+    <field name='nextChan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <field name='firstMod' declared_type='Ptr' type='*'/>
+    <field name='callBack' function_pointer='true' declared_type='SndCallBackUPP' type='^?'>
+      <arg declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+      <arg declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='userInfo' declared_type='long' type='l' type64='q'/>
+    <field name='wait' declared_type='long' type='l' type64='q'/>
+    <field name='cmdInProgress' declared_type='SndCommand' type='{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}' type64='{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}'/>
+    <field name='flags' declared_type='short' type='s'/>
+    <field name='qLength' declared_type='short' type='s'/>
+    <field name='qHead' declared_type='short' type='s'/>
+    <field name='qTail' declared_type='short' type='s'/>
+    <field name='queue' declared_type='SndCommand*' type='[128{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]' type64='[128{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]'/>
+  </struct>
+  <struct name='SndCommand' type='{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}' type64='{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}'>
+    <field name='cmd' declared_type='unsigned short' type='S'/>
+    <field name='param1' declared_type='short' type='s'/>
+    <field name='param2' declared_type='long' type='l' type64='q'/>
+  </struct>
+  <struct name='SndInputCmpParam' type='{SndInputCmpParam=&quot;ioCompletion&quot;^?&quot;ioInterrupt&quot;^?&quot;ioResult&quot;s&quot;pad&quot;s&quot;ioReqCount&quot;L&quot;ioActCount&quot;L&quot;ioBuffer&quot;*&quot;ioMisc&quot;*}' type64='{SndInputCmpParam=&quot;ioCompletion&quot;^?&quot;ioInterrupt&quot;^?&quot;ioResult&quot;s&quot;pad&quot;s&quot;ioReqCount&quot;Q&quot;ioActCount&quot;Q&quot;ioBuffer&quot;*&quot;ioMisc&quot;*}'>
+    <field name='ioCompletion' function_pointer='true' declared_type='SICCompletionProcPtr' type='^?'>
+      <arg declared_type='SndInputCmpParamPtr' type='^{SndInputCmpParam=^?^?ssLL**}' type64='^{SndInputCmpParam=^?^?ssQQ**}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='ioInterrupt' function_pointer='true' declared_type='SIInterruptProcPtr' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <arg declared_type='Ptr' type='*'/>
+      <arg declared_type='short' type='s'/>
+      <arg declared_type='long' type='l' type64='q'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='ioResult' declared_type='OSErr' type='s'/>
+    <field name='pad' declared_type='short' type='s'/>
+    <field name='ioReqCount' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='ioActCount' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='ioBuffer' declared_type='Ptr' type='*'/>
+    <field name='ioMisc' declared_type='Ptr' type='*'/>
+  </struct>
+  <struct name='SndListResource' type='{SndListResource=&quot;format&quot;s&quot;numModifiers&quot;s&quot;modifierPart&quot;[1{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;l}]&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]&quot;dataPart&quot;[1C]}' type64='{SndListResource=&quot;format&quot;s&quot;numModifiers&quot;s&quot;modifierPart&quot;[1{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;q}]&quot;numCommands&quot;s&quot;commandPart&quot;[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]&quot;dataPart&quot;[1C]}'>
+    <field name='format' declared_type='short' type='s'/>
+    <field name='numModifiers' declared_type='short' type='s'/>
+    <field name='modifierPart' declared_type='ModRef*' type='[1{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;l}]' type64='[1{ModRef=&quot;modNumber&quot;S&quot;modInit&quot;q}]'/>
+    <field name='numCommands' declared_type='short' type='s'/>
+    <field name='commandPart' declared_type='SndCommand*' type='[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;l}]' type64='[1{SndCommand=&quot;cmd&quot;S&quot;param1&quot;s&quot;param2&quot;q}]'/>
+    <field name='dataPart' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='SoundAudioCodecPropertyRequestParams' type='{SoundAudioCodecPropertyRequestParams=&quot;propertyClass&quot;I&quot;propertyID&quot;I&quot;propertyDataSize&quot;I&quot;propertyData&quot;^v&quot;propertyRequestFlags&quot;I&quot;propertyDataType&quot;I&quot;propertyRequestResult&quot;i}' type64='{SoundAudioCodecPropertyRequestParams=&quot;propertyClass&quot;I&quot;propertyID&quot;I&quot;propertyDataSize&quot;I&quot;propertyData&quot;^v&quot;propertyRequestFlags&quot;I&quot;propertyDataType&quot;I&quot;propertyRequestResult&quot;q}'>
+    <field name='propertyClass' declared_type='UInt32' type='L' type64='I'/>
+    <field name='propertyID' declared_type='UInt32' type='L' type64='I'/>
+    <field name='propertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='propertyData' declared_type='void*' type='^v'/>
+    <field name='propertyRequestFlags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='propertyDataType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='propertyRequestResult' declared_type='ComponentResult' type='l' type64='q'/>
+  </struct>
+  <struct name='SoundComponentData' type='{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}' type64='{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}'>
+    <field name='flags' declared_type='long' type='l' type64='q'/>
+    <field name='format' declared_type='OSType' type='L' type64='I'/>
+    <field name='numChannels' declared_type='short' type='s'/>
+    <field name='sampleSize' declared_type='short' type='s'/>
+    <field name='sampleRate' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='sampleCount' declared_type='long' type='l' type64='q'/>
+    <field name='buffer' declared_type='Byte*' type='*'/>
+    <field name='reserved' declared_type='long' type='l' type64='q'/>
+  </struct>
+  <struct name='SoundComponentLink' type='{SoundComponentLink=&quot;description&quot;{ComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;L&quot;componentFlagsMask&quot;L}&quot;mixerID&quot;^{OpaqueSoundSource}&quot;linkID&quot;^^{OpaqueSoundSource}}' type64='{SoundComponentLink=&quot;description&quot;{ComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;Q&quot;componentFlagsMask&quot;Q}&quot;mixerID&quot;^{OpaqueSoundSource}&quot;linkID&quot;^^{OpaqueSoundSource}}'>
+    <field name='description' declared_type='ComponentDescription' type='{ComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;L&quot;componentFlagsMask&quot;L}' type64='{ComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;Q&quot;componentFlagsMask&quot;Q}'/>
+    <field name='mixerID' declared_type='SoundSource' type='^{OpaqueSoundSource=}'/>
+    <field name='linkID' declared_type='SoundSource*' type='^^{OpaqueSoundSource}'/>
+  </struct>
+  <struct name='SoundHeader' type='{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;L&quot;sampleRate&quot;I&quot;loopStart&quot;L&quot;loopEnd&quot;L&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}' type64='{SoundHeader=&quot;samplePtr&quot;*&quot;length&quot;Q&quot;sampleRate&quot;I&quot;loopStart&quot;Q&quot;loopEnd&quot;Q&quot;encode&quot;C&quot;baseFrequency&quot;C&quot;sampleArea&quot;[1C]}'>
+    <field name='samplePtr' declared_type='Ptr' type='*'/>
+    <field name='length' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='sampleRate' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='loopStart' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='loopEnd' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='encode' declared_type='UInt8' type='C'/>
+    <field name='baseFrequency' declared_type='UInt8' type='C'/>
+    <field name='sampleArea' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='SoundInfoList' type='{SoundInfoList=&quot;count&quot;s&quot;infoHandle&quot;^*}'>
+    <field name='count' declared_type='short' type='s'/>
+    <field name='infoHandle' declared_type='Handle' type='^*'/>
+  </struct>
+  <struct name='SoundParamBlock' type='{SoundParamBlock=&quot;recordSize&quot;l&quot;desc&quot;{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;l&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;l&quot;result&quot;s}' type64='{SoundParamBlock=&quot;recordSize&quot;q&quot;desc&quot;{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}&quot;rateMultiplier&quot;I&quot;leftVolume&quot;s&quot;rightVolume&quot;s&quot;quality&quot;q&quot;filter&quot;^{ComponentInstanceRecord}&quot;moreRtn&quot;^?&quot;completionRtn&quot;^?&quot;refCon&quot;q&quot;result&quot;s}'>
+    <field name='recordSize' declared_type='long' type='l' type64='q'/>
+    <field name='desc' declared_type='SoundComponentData' type='{SoundComponentData=&quot;flags&quot;l&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;l&quot;buffer&quot;*&quot;reserved&quot;l}' type64='{SoundComponentData=&quot;flags&quot;q&quot;format&quot;I&quot;numChannels&quot;s&quot;sampleSize&quot;s&quot;sampleRate&quot;I&quot;sampleCount&quot;q&quot;buffer&quot;*&quot;reserved&quot;q}'/>
+    <field name='rateMultiplier' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <field name='leftVolume' declared_type='short' type='s'/>
+    <field name='rightVolume' declared_type='short' type='s'/>
+    <field name='quality' declared_type='long' type='l' type64='q'/>
+    <field name='filter' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <field name='moreRtn' function_pointer='true' declared_type='SoundParamUPP' type='^?'>
+      <arg declared_type='SoundParamBlockPtr*' type='^^{SoundParamBlock}'/>
+      <retval declared_type='Boolean' type='B'/>
+    </field>
+    <field name='completionRtn' function_pointer='true' declared_type='SoundParamUPP' type='^?'>
+      <arg declared_type='SoundParamBlockPtr*' type='^^{SoundParamBlock}'/>
+      <retval declared_type='Boolean' type='B'/>
+    </field>
+    <field name='refCon' declared_type='long' type='l' type64='q'/>
+    <field name='result' declared_type='short' type='s'/>
+  </struct>
+  <struct name='SoundSlopeAndInterceptRecord' type='{SoundSlopeAndInterceptRecord=&quot;slope&quot;d&quot;intercept&quot;d&quot;minClip&quot;d&quot;maxClip&quot;d}'>
+    <field name='slope' declared_type='Float64' type='d'/>
+    <field name='intercept' declared_type='Float64' type='d'/>
+    <field name='minClip' declared_type='Float64' type='d'/>
+    <field name='maxClip' declared_type='Float64' type='d'/>
+  </struct>
+  <struct name='StateBlock' type='{StateBlock=&quot;stateVar&quot;[64s]}'>
+    <field name='stateVar' declared_type='short*' type='[64s]'/>
+  </struct>
   <opaque name='SoundConverter' type='^{OpaqueSoundConverter=}'/>
   <opaque name='SoundSource' type='^{OpaqueSoundSource=}'/>
   <enum name='audioAllChannels' value='0'/>
@@ -411,609 +686,619 @@
   <enum name='volumeCmd' value='46'/>
   <enum name='waitCmd' value='10'/>
   <function name='CloseMixerSoundComponent'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='s'/>
+    <arg name='ci' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='DisposeSICompletionUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SICompletionUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeSIInterruptUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <arg type='*'/>
-      <arg type='s'/>
-      <arg type='l' type64='q'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SIInterruptUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <arg declared_type='Ptr' type='*'/>
+      <arg declared_type='short' type='s'/>
+      <arg declared_type='long' type='l' type64='q'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeSndCallBackUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-      <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SndCallBackUPP' type='^?'>
+      <arg declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+      <arg declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeSoundConverterFillBufferDataUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^^{SoundComponentData}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SoundConverterFillBufferDataUPP' type='^?'>
+      <arg declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeSoundParamUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^^{SoundParamBlock}'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SoundParamUPP' type='^?'>
+      <arg declared_type='SoundParamBlockPtr*' type='^^{SoundParamBlock}'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='GetCompressionInfo'>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='^{CompressionInfo=lIsSSSSS}' type64='^{CompressionInfo=qIsSSSSS}'/>
-    <retval type='s'/>
+    <arg name='compressionID' declared_type='short' type='s'/>
+    <arg name='format' declared_type='OSType' type='L' type64='I'/>
+    <arg name='numChannels' declared_type='short' type='s'/>
+    <arg name='sampleSize' declared_type='short' type='s'/>
+    <arg name='cp' declared_type='CompressionInfoPtr' type='^{CompressionInfo=lIsSSSSS}' type64='^{CompressionInfo=qIsSSSSS}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetCompressionName'>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <retval type='s'/>
+    <arg name='compressionType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='compressionName' declared_type='unsigned char*' type='*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetDefaultOutputVolume'>
-    <arg type='^l' type64='^q'/>
-    <retval type='s'/>
+    <arg name='level' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetSoundHeaderOffset'>
-    <arg type='^^{SndListResource}'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='s'/>
+    <arg name='sndHandle' declared_type='SndListHandle' type='^^{SndListResource}'/>
+    <arg name='offset' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetSoundOutputInfo'>
-    <arg type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='outputDevice' declared_type='Component' type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetSoundPreference'>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='name' declared_type='unsigned char*' type='*'/>
+    <arg name='settings' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetSysBeepVolume'>
-    <arg type='^l' type64='^q'/>
-    <retval type='s'/>
+    <arg name='level' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='InvokeSICompletionUPP'>
-    <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <retval type='v'/>
+    <arg name='inParamPtr' declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SICompletionUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeSIInterruptUPP'>
-    <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-    <arg type='*'/>
-    <arg type='s'/>
-    <arg type='l' type64='q'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <arg type='*'/>
-      <arg type='s'/>
-      <arg type='l' type64='q'/>
-      <retval type='v'/>
+    <arg name='inParamPtr' declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+    <arg name='dataBuffer' declared_type='Ptr' type='*'/>
+    <arg name='peakAmplitude' declared_type='short' type='s'/>
+    <arg name='sampleSize' declared_type='long' type='l' type64='q'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SIInterruptUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <arg declared_type='Ptr' type='*'/>
+      <arg declared_type='short' type='s'/>
+      <arg declared_type='long' type='l' type64='q'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeSndCallBackUPP'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-      <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-      <retval type='v'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='cmd' declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SndCallBackUPP' type='^?'>
+      <arg declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+      <arg declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeSoundConverterFillBufferDataUPP'>
-    <arg type='^^{SoundComponentData}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^^{SoundComponentData}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='data' declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SoundConverterFillBufferDataUPP' type='^?'>
+      <arg declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='InvokeSoundParamUPP'>
-    <arg type='^^{SoundParamBlock}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^^{SoundParamBlock}'/>
-      <retval type='B'/>
+    <arg name='pb' declared_type='SoundParamBlockPtr*' type='^^{SoundParamBlock}'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SoundParamUPP' type='^?'>
+      <arg declared_type='SoundParamBlockPtr*' type='^^{SoundParamBlock}'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='NewSICompletionUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='SICompletionProcPtr' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='SICompletionUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewSIInterruptUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <arg type='*'/>
-      <arg type='s'/>
-      <arg type='l' type64='q'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='SIInterruptProcPtr' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <arg declared_type='Ptr' type='*'/>
+      <arg declared_type='short' type='s'/>
+      <arg declared_type='long' type='l' type64='q'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-      <arg type='*'/>
-      <arg type='s'/>
-      <arg type='l' type64='q'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='SIInterruptUPP' type='^?'>
+      <arg declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+      <arg declared_type='Ptr' type='*'/>
+      <arg declared_type='short' type='s'/>
+      <arg declared_type='long' type='l' type64='q'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewSndCallBackUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-      <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='SndCallBackProcPtr' type='^?'>
+      <arg declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+      <arg declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-      <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='SndCallBackUPP' type='^?'>
+      <arg declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+      <arg declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='NewSoundConverterFillBufferDataUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^^{SoundComponentData}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='SoundConverterFillBufferDataProcPtr' type='^?'>
+      <arg declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^^{SoundComponentData}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='SoundConverterFillBufferDataUPP' type='^?'>
+      <arg declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
   <function name='NewSoundParamUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^^{SoundParamBlock}'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='SoundParamProcPtr' type='^?'>
+      <arg declared_type='SoundParamBlockPtr*' type='^^{SoundParamBlock}'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^^{SoundParamBlock}'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='SoundParamUPP' type='^?'>
+      <arg declared_type='SoundParamBlockPtr*' type='^^{SoundParamBlock}'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
   <function name='OpenMixerSoundComponent'>
-    <arg type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
-    <arg type='l' type64='q'/>
-    <arg type='^^{ComponentInstanceRecord}'/>
-    <retval type='s'/>
+    <arg name='outputDescription' declared_type='SoundComponentDataPtr' type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
+    <arg name='outputFlags' declared_type='long' type='l' type64='q'/>
+    <arg name='mixerComponent' declared_type='ComponentInstance*' type='^^{ComponentInstanceRecord}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ParseAIFFHeader'>
-    <arg type='s'/>
-    <arg type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='s'/>
+    <arg name='fRefNum' declared_type='short' type='s'/>
+    <arg name='sndInfo' declared_type='SoundComponentData*' type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
+    <arg name='numFrames' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='dataOffset' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ParseSndHeader'>
-    <arg type='^^{SndListResource}'/>
-    <arg type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='s'/>
+    <arg name='sndHandle' declared_type='SndListHandle' type='^^{SndListResource}'/>
+    <arg name='sndInfo' declared_type='SoundComponentData*' type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
+    <arg name='numFrames' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='dataOffset' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBBytesToMilliseconds'>
-    <arg type='l' type64='q'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <arg name='byteCount' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBCloseDevice'>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBGetDeviceInfo'>
-    <arg type='l' type64='q'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <arg name='infoType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBGetIndexedDevice'>
-    <arg type='s'/>
-    <arg type='*'/>
-    <arg type='^^*'/>
-    <retval type='s'/>
+    <arg name='count' declared_type='short' type='s'/>
+    <arg name='deviceName' declared_type='unsigned char*' type='*'/>
+    <arg name='deviceIconHandle' declared_type='Handle*' type='^^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBGetRecordingStatus'>
-    <arg type='l' type64='q'/>
-    <arg type='^s'/>
-    <arg type='^s'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <arg name='recordingStatus' declared_type='short*' type='^s'/>
+    <arg name='meterLevel' declared_type='short*' type='^s'/>
+    <arg name='totalSamplesToRecord' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='numberOfSamplesRecorded' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='totalMsecsToRecord' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='numberOfMsecsRecorded' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBMillisecondsToBytes'>
-    <arg type='l' type64='q'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <arg name='milliseconds' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBOpenDevice'>
-    <arg type='*'/>
-    <arg type='s'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='s'/>
+    <arg name='deviceName' declared_type='ConstStr255Param' type='*'/>
+    <arg name='permission' declared_type='short' type='s'/>
+    <arg name='inRefNum' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBPauseRecording'>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBRecord'>
-    <arg type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='inParamPtr' declared_type='SPBPtr' type='^{SPB=lLLL*^?^?lsl}' type64='^{SPB=qQQQ*^?^?qsq}'/>
+    <arg name='asynchFlag' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBResumeRecording'>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBSetDeviceInfo'>
-    <arg type='l' type64='q'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <arg name='infoType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBSignInDevice'>
-    <arg type='s'/>
-    <arg type='*'/>
-    <retval type='s'/>
+    <arg name='deviceRefNum' declared_type='short' type='s'/>
+    <arg name='deviceName' declared_type='ConstStr255Param' type='*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBSignOutDevice'>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='deviceRefNum' declared_type='short' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBStopRecording'>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='inRefNum' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SPBVersion'>
-    <retval type='{NumVersion=CCCC}'/>
+    <retval declared_type='NumVersion' type='{NumVersion=CCCC}'/>
   </function>
   <function name='SetDefaultOutputVolume'>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='level' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetSoundOutputInfo'>
-    <arg type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='outputDevice' declared_type='Component' type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetSoundPreference'>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='name' declared_type='unsigned char*' type='*'/>
+    <arg name='settings' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetSysBeepVolume'>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='level' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetupAIFFHeader'>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='Q'/>
-    <arg type='L' type64='Q'/>
-    <retval type='s'/>
+    <arg name='fRefNum' declared_type='short' type='s'/>
+    <arg name='numChannels' declared_type='short' type='s'/>
+    <arg name='sampleRate' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <arg name='sampleSize' declared_type='short' type='s'/>
+    <arg name='compressionType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='numBytes' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='numFrames' declared_type='unsigned long' type='L' type64='Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetupSndHeader'>
-    <arg type='^^{SndListResource}'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='s'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^s'/>
-    <retval type='s'/>
+    <arg name='sndHandle' declared_type='SndListHandle' type='^^{SndListResource}'/>
+    <arg name='numChannels' declared_type='short' type='s'/>
+    <arg name='sampleRate' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <arg name='sampleSize' declared_type='short' type='s'/>
+    <arg name='compressionType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='baseNote' declared_type='short' type='s'/>
+    <arg name='numBytes' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='headerLen' declared_type='short*' type='^s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndChannelStatus'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='s'/>
-    <arg type='^{SCStatus=IIIBBBBLl}' type64='^{SCStatus=IIIBBBBQq}'/>
-    <retval type='s'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='theLength' declared_type='short' type='s'/>
+    <arg name='theStatus' declared_type='SCStatusPtr' type='^{SCStatus=IIIBBBBLl}' type64='^{SCStatus=IIIBBBBQq}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndDisposeChannel'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='quietNow' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndDoCommand'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='cmd' declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}' const='true'/>
+    <arg name='noWait' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndDoImmediate'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-    <retval type='s'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='cmd' declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndGetInfo'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndGetSysBeepState'>
-    <arg type='^s'/>
+    <arg name='sysBeepState' declared_type='short*' type='^s'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='SndInputGetDeviceInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='infoType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoData' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputGetStatus'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^s'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='recordingStatus' declared_type='short*' type='^s'/>
+    <arg name='totalSamplesToRecord' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='numberOfSamplesRecorded' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputInitHardware'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputPauseRecording'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputReadAsync'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{SndInputCmpParam=^?^?ssLL**}' type64='^{SndInputCmpParam=^?^?ssQQ**}'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='SICParmPtr' declared_type='SndInputCmpParamPtr' type='^{SndInputCmpParam=^?^?ssLL**}' type64='^{SndInputCmpParam=^?^?ssQQ**}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputReadSync'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{SndInputCmpParam=^?^?ssLL**}' type64='^{SndInputCmpParam=^?^?ssQQ**}'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='SICParmPtr' declared_type='SndInputCmpParamPtr' type='^{SndInputCmpParam=^?^?ssLL**}' type64='^{SndInputCmpParam=^?^?ssQQ**}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputResumeRecording'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputSetDeviceInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='infoType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoData' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndInputStopRecording'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='self' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SndManagerStatus'>
-    <arg type='s'/>
-    <arg type='^{SMStatus=sss}'/>
-    <retval type='s'/>
+    <arg name='theLength' declared_type='short' type='s'/>
+    <arg name='theStatus' declared_type='SMStatusPtr' type='^{SMStatus=sss}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndNewChannel'>
-    <arg type='^^{SndChannel}'/>
-    <arg type='s'/>
-    <arg type='l' type64='q'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-      <arg type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
-      <retval type='v'/>
+    <arg name='chan' declared_type='SndChannelPtr*' type='^^{SndChannel}'/>
+    <arg name='synth' declared_type='short' type='s'/>
+    <arg name='init' declared_type='long' type='l' type64='q'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='SndCallBackUPP' type='^?'>
+      <arg declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+      <arg declared_type='SndCommand*' type='^{SndCommand=Ssl}' type64='^{SndCommand=Ssq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndPlay'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='^^{SndListResource}'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='sndHandle' declared_type='SndListHandle' type='^^{SndListResource}'/>
+    <arg name='async' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndRecord'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDialogPtr=}'/>
-      <arg type='^{EventRecord=SII{Point=ss}S}'/>
-      <arg type='^s'/>
-      <retval type='B'/>
+    <arg name='filterProc' function_pointer='true' declared_type='ModalFilterUPP' type='^?'>
+      <arg declared_type='DialogRef' type='^{OpaqueDialogPtr=}'/>
+      <arg declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+      <arg declared_type='DialogItemIndex*' type='^s'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='{Point=ss}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^^{SndListResource}'/>
-    <retval type='s'/>
+    <arg name='corner' declared_type='Point' type='{Point=ss}'/>
+    <arg name='quality' declared_type='OSType' type='L' type64='I'/>
+    <arg name='sndHandle' declared_type='SndListHandle*' type='^^^{SndListResource}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndSetInfo'>
-    <arg type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='chan' declared_type='SndChannelPtr' type='^{SndChannel=^{SndChannel}*^?ll{SndCommand=Ssl}ssss[128{SndCommand=Ssl}]}' type64='^{SndChannel=^{SndChannel}*^?qq{SndCommand=Ssq}ssss[128{SndCommand=Ssq}]}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndSetSysBeepState'>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='sysBeepState' declared_type='short' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SndSoundManagerVersion'>
-    <retval type='{NumVersion=CCCC}'/>
+    <retval declared_type='NumVersion' type='{NumVersion=CCCC}'/>
   </function>
   <function name='SoundComponentAddSource'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^^{OpaqueSoundSource}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceID' declared_type='SoundSource*' type='^^{OpaqueSoundSource}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentGetInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{OpaqueSoundSource=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceID' declared_type='SoundSource' type='^{OpaqueSoundSource=}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentGetSource'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{OpaqueSoundSource=}'/>
-    <arg type='^^{ComponentInstanceRecord}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceID' declared_type='SoundSource' type='^{OpaqueSoundSource=}'/>
+    <arg name='source' declared_type='ComponentInstance*' type='^^{ComponentInstanceRecord}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentGetSourceData'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^^{SoundComponentData}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceData' declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentInitOutputDevice'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='actions' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentPauseSource'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='s'/>
-    <arg type='^^{OpaqueSoundSource}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='count' declared_type='short' type='s'/>
+    <arg name='sources' declared_type='SoundSource*' type='^^{OpaqueSoundSource}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentPlaySourceBuffer'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{OpaqueSoundSource=}'/>
-    <arg type='^{SoundParamBlock=l{SoundComponentData=lIssIl*l}Issl^{ComponentInstanceRecord}^?^?ls}' type64='^{SoundParamBlock=q{SoundComponentData=qIssIq*q}Issq^{ComponentInstanceRecord}^?^?qs}'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceID' declared_type='SoundSource' type='^{OpaqueSoundSource=}'/>
+    <arg name='pb' declared_type='SoundParamBlockPtr' type='^{SoundParamBlock=l{SoundComponentData=lIssIl*l}Issl^{ComponentInstanceRecord}^?^?ls}' type64='^{SoundParamBlock=q{SoundComponentData=qIssIq*q}Issq^{ComponentInstanceRecord}^?^?qs}'/>
+    <arg name='actions' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentRemoveSource'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{OpaqueSoundSource=}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceID' declared_type='SoundSource' type='^{OpaqueSoundSource=}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentSetInfo'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{OpaqueSoundSource=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceID' declared_type='SoundSource' type='^{OpaqueSoundSource=}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentSetOutput'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
-    <arg type='^^{SoundComponentData}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='requested' declared_type='SoundComponentDataPtr' type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
+    <arg name='actual' declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentSetSource'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='^{OpaqueSoundSource=}'/>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='sourceID' declared_type='SoundSource' type='^{OpaqueSoundSource=}'/>
+    <arg name='source' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentStartSource'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='s'/>
-    <arg type='^^{OpaqueSoundSource}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='count' declared_type='short' type='s'/>
+    <arg name='sources' declared_type='SoundSource*' type='^^{OpaqueSoundSource}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundComponentStopSource'>
-    <arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-    <arg type='s'/>
-    <arg type='^^{OpaqueSoundSource}'/>
-    <retval type='l' type64='q'/>
+    <arg name='ti' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    <arg name='count' declared_type='short' type='s'/>
+    <arg name='sources' declared_type='SoundSource*' type='^^{OpaqueSoundSource}'/>
+    <retval declared_type='ComponentResult' type='l' type64='q'/>
   </function>
   <function name='SoundConverterBeginConversion'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <retval type='s'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterClose'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <retval type='s'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterConvertBuffer'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^v'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='s'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <arg name='inputPtr' declared_type='void*' type='^v' const='true'/>
+    <arg name='inputFrames' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='outputPtr' declared_type='void*' type='^v'/>
+    <arg name='outputFrames' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='outputBytes' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterEndConversion'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <arg type='^v'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='s'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <arg name='outputPtr' declared_type='void*' type='^v'/>
+    <arg name='outputFrames' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='outputBytes' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterFillBuffer'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^^{SoundComponentData}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <arg name='fillBufferDataUPP' function_pointer='true' declared_type='SoundConverterFillBufferDataUPP' type='^?'>
+      <arg declared_type='SoundComponentDataPtr*' type='^^{SoundComponentData}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^v'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='s'/>
+    <arg name='fillBufferDataRefCon' declared_type='void*' type='^v'/>
+    <arg name='outputBuffer' declared_type='void*' type='^v'/>
+    <arg name='outputBufferByteSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='bytesWritten' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='framesWritten' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='outputFlags' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterGetBufferSizes'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <arg type='L' type64='Q'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <arg type='^L' type64='^Q'/>
-    <retval type='s'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <arg name='inputBytesTarget' declared_type='unsigned long' type='L' type64='Q'/>
+    <arg name='inputFrames' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='inputBytes' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <arg name='outputBytes' declared_type='unsigned long*' type='^L' type64='^Q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterGetInfo'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterOpen'>
-    <arg type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
-    <arg type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}'/>
-    <arg type='^^{OpaqueSoundConverter}'/>
-    <retval type='s'/>
+    <arg name='inputFormat' declared_type='SoundComponentData*' type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}' const='true'/>
+    <arg name='outputFormat' declared_type='SoundComponentData*' type='^{SoundComponentData=lIssIl*l}' type64='^{SoundComponentData=qIssIq*q}' const='true'/>
+    <arg name='sc' declared_type='SoundConverter*' type='^^{OpaqueSoundConverter}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundConverterSetInfo'>
-    <arg type='^{OpaqueSoundConverter=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='sc' declared_type='SoundConverter' type='^{OpaqueSoundConverter=}'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundManagerGetInfo'>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SoundManagerSetInfo'>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='infoPtr' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SysBeep'>
-    <arg type='s'/>
+    <arg name='duration' declared_type='short' type='s'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='UnsignedFixedMulDiv'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='L' type64='I'/>
+    <arg name='value' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <arg name='multiplier' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <arg name='divisor' declared_type='UnsignedFixed' type='L' type64='I'/>
+    <retval declared_type='UnsignedFixed' type='L' type64='I'/>
   </function>
 </signatures>

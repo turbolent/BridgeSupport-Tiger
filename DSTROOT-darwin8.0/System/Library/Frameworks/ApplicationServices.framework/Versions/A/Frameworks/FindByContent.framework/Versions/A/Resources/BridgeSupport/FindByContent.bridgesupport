@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
@@ -73,327 +72,333 @@
   <enum name='swedishHighWord' value='268435456'/>
   <enum name='turkishHighWord' value='65536'/>
   <function name='DisposeFBCCallbackUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='S'/>
-      <arg type='f'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FBCCallbackUPP' type='^?'>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='float' type='f'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeFBCHitTestUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FBCHitTestUPP' type='^?'>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='FBCAddAllVolumesToSession'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='includeRemote' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCAddVolumeToSession'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='vRefNum' declared_type='SInt16' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCBlindExampleSearch'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <arg type='^^{OpaqueFBCSearchSession}'/>
-    <retval type='s'/>
+    <arg name='examples' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='numExamples' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='targetDirs' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='numTargets' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHits' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHitWords' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='allIndexes' declared_type='Boolean' type='B'/>
+    <arg name='includeRemote' declared_type='Boolean' type='B'/>
+    <arg name='theSession' declared_type='FBCSearchSession*' type='^^{OpaqueFBCSearchSession}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCBlindExampleSearchWithCallback'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='B'/>
-    <arg type='B'/>
-    <arg type='^^{OpaqueFBCSearchSession}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='S'/>
-      <arg type='f'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='examples' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='numExamples' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='targetDirs' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='numTargets' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHits' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHitWords' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='allIndexes' declared_type='Boolean' type='B'/>
+    <arg name='includeRemote' declared_type='Boolean' type='B'/>
+    <arg name='theSession' declared_type='FBCSearchSession*' type='^^{OpaqueFBCSearchSession}'/>
+    <arg name='callback' function_pointer='true' declared_type='FBCCallbackUPP' type='^?'>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='float' type='f'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='callbackData' declared_type='void*' type='^v'/>
+    <arg name='userHitTest' function_pointer='true' declared_type='FBCHitTestUPP' type='^?'>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='userHitTestData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCCloneSearchSession'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='^^{OpaqueFBCSearchSession}'/>
-    <retval type='s'/>
+    <arg name='original' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='clone' declared_type='FBCSearchSession*' type='^^{OpaqueFBCSearchSession}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCCreateSearchSession'>
-    <arg type='^^{OpaqueFBCSearchSession}'/>
-    <retval type='s'/>
+    <arg name='searchSession' declared_type='FBCSearchSession*' type='^^{OpaqueFBCSearchSession}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCDeleteIndexFileForFolder'>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='s'/>
+    <arg name='folder' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCDestroySearchSession'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCDestroyWordList'>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theList' declared_type='FBCWordList' type='^*'/>
+    <arg name='wordCount' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCDisposeSummary'>
-    <arg type='^{OpaqueFBCSummaryRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='summary' declared_type='FBCSummaryRef' type='^{OpaqueFBCSummaryRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FBCDoCFStringSearch'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='queryString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='targetDirs' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='numTargets' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHits' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHitWords' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCDoExampleSearch'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='^I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='exampleHitNums' declared_type='UInt32*' type='^I' const='true'/>
+    <arg name='numExamples' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='targetDirs' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='numTargets' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHits' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHitWords' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCDoQuerySearch'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='*'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='queryText' declared_type='char*' type='*'/>
+    <arg name='targetDirs' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='numTargets' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHits' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='maxHitWords' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCFindIndexFileFolderForFolder'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='s'/>
+    <arg name='inFolder' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='outFolder' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetHitCount'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='^I'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='count' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetHitDocument'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='hitNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='theDocument' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetHitDocumentRef'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='hitNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='theDocument' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetHitScore'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^f'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='hitNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='score' declared_type='float*' type='^f'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetMatchedWords'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^^*'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='hitNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='wordCount' declared_type='UInt32*' type='^I'/>
+    <arg name='list' declared_type='FBCWordList*' type='^^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetSessionVolumeCount'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='^S'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='count' declared_type='UInt16*' type='^S'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetSessionVolumes'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='^s'/>
-    <arg type='^S'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='vRefNums' declared_type='SInt16*' type='^s'/>
+    <arg name='numVolumes' declared_type='UInt16*' type='^S'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCGetSummaryOfCFString'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{OpaqueFBCSummaryRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='summary' declared_type='FBCSummaryRef*' type='^^{OpaqueFBCSummaryRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FBCGetSummarySentenceCount'>
-    <arg type='^{OpaqueFBCSummaryRef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='summary' declared_type='FBCSummaryRef' type='^{OpaqueFBCSummaryRef=}'/>
+    <arg name='numSentences' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FBCGetSummarySentences'>
-    <arg type='^{OpaqueFBCSummaryRef=}'/>
-    <arg type='^^{__CFString}'/>
-    <arg type='^I'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='summary' declared_type='FBCSummaryRef' type='^{OpaqueFBCSummaryRef=}'/>
+    <arg name='outString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <arg name='numSentences' declared_type='UInt32*' type='^I'/>
+    <arg name='paragraphs' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FBCGetTopicWords'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^^*'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='hitNumber' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='wordCount' declared_type='UInt32*' type='^I'/>
+    <arg name='list' declared_type='FBCWordList*' type='^^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCIndexItems'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theItems' declared_type='FSSpecArrayPtr' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg name='itemCount' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCIndexItemsInLanguages'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theItems' declared_type='FSSpecArrayPtr' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg name='itemCount' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='languageHighBits' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='languageLowBits' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCReleaseSessionHits'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCRemoveVolumeFromSession'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='vRefNum' declared_type='SInt16' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCSetCallback'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='S'/>
-      <arg type='f'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='fn' function_pointer='true' declared_type='FBCCallbackUPP' type='^?'>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='float' type='f'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^v'/>
+    <arg name='data' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='FBCSetHeapReservation'>
-    <arg type='L' type64='I'/>
+    <arg name='bytes' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='FBCSetSessionCallback'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='S'/>
-      <arg type='f'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='searchSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='fn' function_pointer='true' declared_type='FBCCallbackUPP' type='^?'>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='float' type='f'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^v'/>
+    <arg name='data' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='FBCSetSessionHitTest'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='fn' function_pointer='true' declared_type='FBCHitTestUPP' type='^?'>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^v'/>
+    <arg name='data' declared_type='void*' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='FBCSetSessionVolumes'>
-    <arg type='^{OpaqueFBCSearchSession=}'/>
-    <arg type='^s'/>
-    <arg type='S'/>
-    <retval type='s'/>
+    <arg name='theSession' declared_type='FBCSearchSession' type='^{OpaqueFBCSearchSession=}'/>
+    <arg name='vRefNums' declared_type='SInt16*' type='^s' const='true'/>
+    <arg name='numVolumes' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCSummarize'>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='s'/>
+    <arg name='inBuf' declared_type='void*' type='^v' const='true'/>
+    <arg name='inLength' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outBuf' declared_type='void*' type='^v'/>
+    <arg name='outLength' declared_type='UInt32*' type='^I'/>
+    <arg name='numSentences' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCSummarizeCFString'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFString}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inString' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <arg name='numSentences' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='FBCVolumeIndexPhysicalSize'>
-    <arg type='s'/>
-    <arg type='^I'/>
-    <retval type='s'/>
+    <arg name='theVRefNum' declared_type='SInt16' type='s'/>
+    <arg name='size' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCVolumeIndexTimeStamp'>
-    <arg type='s'/>
-    <arg type='^I'/>
-    <retval type='s'/>
+    <arg name='theVRefNum' declared_type='SInt16' type='s'/>
+    <arg name='timeStamp' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FBCVolumeIsIndexed'>
-    <arg type='s'/>
-    <retval type='B'/>
+    <arg name='theVRefNum' declared_type='SInt16' type='s'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='FBCVolumeIsRemote'>
-    <arg type='s'/>
-    <retval type='B'/>
+    <arg name='theVRefNum' declared_type='SInt16' type='s'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='InvokeFBCCallbackUPP'>
-    <arg type='S'/>
-    <arg type='f'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='S'/>
-      <arg type='f'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='phase' declared_type='UInt16' type='S'/>
+    <arg name='percentDone' declared_type='float' type='f'/>
+    <arg name='data' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FBCCallbackUPP' type='^?'>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='float' type='f'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='InvokeFBCHitTestUPP'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='theFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='data' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FBCHitTestUPP' type='^?'>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='NewFBCCallbackUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='S'/>
-      <arg type='f'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='FBCCallbackProcPtr' type='^?'>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='float' type='f'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='S'/>
-      <arg type='f'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='FBCCallbackUPP' type='^?'>
+      <arg declared_type='UInt16' type='S'/>
+      <arg declared_type='float' type='f'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
   <function name='NewFBCHitTestUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='FBCHitTestProcPtr' type='^?'>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{FSRef=[80C]}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <retval function_pointer='true' declared_type='FBCHitTestUPP' type='^?'>
+      <arg declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </retval>
   </function>
 </signatures>

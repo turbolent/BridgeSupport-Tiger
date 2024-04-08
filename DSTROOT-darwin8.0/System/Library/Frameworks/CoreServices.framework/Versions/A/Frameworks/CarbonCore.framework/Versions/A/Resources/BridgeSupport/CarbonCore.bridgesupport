@@ -1,13 +1,35 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
   <depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
-  <struct name='DRVRHeader' type='{DRVRHeader=&quot;drvrFlags&quot;s&quot;drvrDelay&quot;s&quot;drvrEMask&quot;s&quot;drvrMenu&quot;s&quot;drvrOpen&quot;s&quot;drvrPrime&quot;s&quot;drvrCtl&quot;s&quot;drvrStatus&quot;s&quot;drvrClose&quot;s&quot;drvrName&quot;[1C]}'/>
-  <struct name='RegEntryID' type='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;L&quot;es_spare2&quot;L}' type64='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;Q&quot;es_spare2&quot;Q}'/>
-  <struct name='RegEntryRef' type='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;L&quot;es_spare2&quot;L}' type64='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;Q&quot;es_spare2&quot;Q}'/>
+  <struct name='DRVRHeader' type='{DRVRHeader=&quot;drvrFlags&quot;s&quot;drvrDelay&quot;s&quot;drvrEMask&quot;s&quot;drvrMenu&quot;s&quot;drvrOpen&quot;s&quot;drvrPrime&quot;s&quot;drvrCtl&quot;s&quot;drvrStatus&quot;s&quot;drvrClose&quot;s&quot;drvrName&quot;[1C]}'>
+    <field name='drvrFlags' declared_type='short' type='s'/>
+    <field name='drvrDelay' declared_type='short' type='s'/>
+    <field name='drvrEMask' declared_type='short' type='s'/>
+    <field name='drvrMenu' declared_type='short' type='s'/>
+    <field name='drvrOpen' declared_type='short' type='s'/>
+    <field name='drvrPrime' declared_type='short' type='s'/>
+    <field name='drvrCtl' declared_type='short' type='s'/>
+    <field name='drvrStatus' declared_type='short' type='s'/>
+    <field name='drvrClose' declared_type='short' type='s'/>
+    <field name='drvrName' declared_type='unsigned char*' type='[1C]'/>
+  </struct>
+  <struct name='RegEntryID' type='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;L&quot;es_spare2&quot;L}' type64='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;Q&quot;es_spare2&quot;Q}'>
+    <field name='es_ver' declared_type='unsigned short' type='S'/>
+    <field name='es_gen' declared_type='unsigned short' type='S'/>
+    <field name='es_devid' declared_type='DeviceNodePtr' type='^{OpaqueDeviceNodePtr=}'/>
+    <field name='es_spare1' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='es_spare2' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
+  <struct name='RegEntryRef' type='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;L&quot;es_spare2&quot;L}' type64='{RegEntryID=&quot;es_ver&quot;S&quot;es_gen&quot;S&quot;es_devid&quot;^{OpaqueDeviceNodePtr}&quot;es_spare1&quot;Q&quot;es_spare2&quot;Q}'>
+    <field name='es_ver' declared_type='unsigned short' type='S'/>
+    <field name='es_gen' declared_type='unsigned short' type='S'/>
+    <field name='es_devid' declared_type='DeviceNodePtr' type='^{OpaqueDeviceNodePtr=}'/>
+    <field name='es_spare1' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='es_spare2' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
   <opaque name='DCtlHandle' type='^{OpaqueDCtlHandle=}'/>
   <opaque name='DeviceNodePtr' type='^{OpaqueDeviceNodePtr=}'/>
   <opaque name='IOCommandID' type='^{OpaqueIOCommandID=}'/>
@@ -2235,35 +2257,36 @@
   <enum name='writingPastEnd' value='-189'/>
   <enum name='wrongApplicationPlatform' value='-875'/>
   <function name='PBCloseAsync'>
-    <arg type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
-    <retval type='s'/>
+    <arg name='paramBlock' declared_type='ParmBlkPtr' type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PBCloseSync'>
-    <arg type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
-    <retval type='s'/>
+    <arg name='paramBlock' declared_type='ParmBlkPtr' type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PBReadAsync'>
-    <arg type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
-    <retval type='s'/>
+    <arg name='paramBlock' declared_type='ParmBlkPtr' type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PBReadSync'>
-    <arg type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
-    <retval type='s'/>
+    <arg name='paramBlock' declared_type='ParmBlkPtr' type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PBWaitIOComplete'>
-    <arg type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
-    <arg type='l' type64='i'/>
-    <retval type='s'/>
+    <arg name='paramBlock' declared_type='ParmBlkPtr' type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
+    <arg name='timeout' declared_type='Duration' type='l' type64='i'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PBWriteAsync'>
-    <arg type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
-    <retval type='s'/>
+    <arg name='paramBlock' declared_type='ParmBlkPtr' type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PBWriteSync'>
-    <arg type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
-    <retval type='s'/>
+    <arg name='paramBlock' declared_type='ParmBlkPtr' type='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**llsl}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}LSllSllLL}{VolumeParam=^{QElem}ss*^?s*slsLLSSSsSLLSLS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})' type64='^(ParamBlockRec={IOParam=^{QElem}ss*^?s*sscc**qqsq}{FileParam=^{QElem}ss*^?s*ssccscc{FInfo=IIS{Point=ss}s}QSqqSqqQQ}{VolumeParam=^{QElem}ss*^?s*sqsQQSSSsSQQSQS}{CntrlParam=^{QElem}ss*^?s*sss[11s]}{SlotDevParam=^{QElem}ss*^?s*sscc*scc}{MultiDevParam=^{QElem}ss*^?s*sscc*s*})'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SysError'>
-    <arg type='s'/>
+    <arg name='errorCode' declared_type='short' type='s'/>
+    <retval declared_type='void' type='v'/>
   </function>
 </signatures>

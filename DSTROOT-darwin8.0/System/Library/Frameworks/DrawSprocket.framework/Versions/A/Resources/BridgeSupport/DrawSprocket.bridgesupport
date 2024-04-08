@@ -1,12 +1,50 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-  <struct name='DSpAltBufferAttributes' type='{DSpAltBufferAttributes=&quot;width&quot;I&quot;height&quot;I&quot;options&quot;i&quot;reserved&quot;[4L]}' type64='{DSpAltBufferAttributes=&quot;width&quot;I&quot;height&quot;I&quot;options&quot;i&quot;reserved&quot;[4I]}'/>
-  <struct name='DSpBlitInfo' type='{DSpBlitInfo=&quot;completionFlag&quot;B&quot;filler&quot;[3c]&quot;completionProc&quot;^?&quot;srcContext&quot;^{OpaqueDSpContextReference}&quot;srcBuffer&quot;^{OpaqueGrafPtr}&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;srcKey&quot;I&quot;dstContext&quot;^{OpaqueDSpContextReference}&quot;dstBuffer&quot;^{OpaqueGrafPtr}&quot;dstRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;dstKey&quot;I&quot;mode&quot;i&quot;reserved&quot;[4L]}' type64='{DSpBlitInfo=&quot;completionFlag&quot;B&quot;filler&quot;[3c]&quot;completionProc&quot;^?&quot;srcContext&quot;^{OpaqueDSpContextReference}&quot;srcBuffer&quot;^{OpaqueGrafPtr}&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;srcKey&quot;I&quot;dstContext&quot;^{OpaqueDSpContextReference}&quot;dstBuffer&quot;^{OpaqueGrafPtr}&quot;dstRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;dstKey&quot;I&quot;mode&quot;i&quot;reserved&quot;[4I]}'/>
-  <struct name='DSpContextAttributes' type='{DSpContextAttributes=&quot;frequency&quot;i&quot;displayWidth&quot;I&quot;displayHeight&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;colorNeeds&quot;I&quot;colorTable&quot;^^{ColorTable}&quot;contextOptions&quot;I&quot;backBufferDepthMask&quot;I&quot;displayDepthMask&quot;I&quot;backBufferBestDepth&quot;I&quot;displayBestDepth&quot;I&quot;pageCount&quot;I&quot;filler&quot;[3c]&quot;gameMustConfirmSwitch&quot;B&quot;reserved3&quot;[4L]}' type64='{DSpContextAttributes=&quot;frequency&quot;i&quot;displayWidth&quot;I&quot;displayHeight&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;colorNeeds&quot;I&quot;colorTable&quot;^^{ColorTable}&quot;contextOptions&quot;I&quot;backBufferDepthMask&quot;I&quot;displayDepthMask&quot;I&quot;backBufferBestDepth&quot;I&quot;displayBestDepth&quot;I&quot;pageCount&quot;I&quot;filler&quot;[3c]&quot;gameMustConfirmSwitch&quot;B&quot;reserved3&quot;[4I]}'/>
+  <struct name='DSpAltBufferAttributes' type='{DSpAltBufferAttributes=&quot;width&quot;I&quot;height&quot;I&quot;options&quot;i&quot;reserved&quot;[4L]}' type64='{DSpAltBufferAttributes=&quot;width&quot;I&quot;height&quot;I&quot;options&quot;i&quot;reserved&quot;[4I]}'>
+    <field name='width' declared_type='UInt32' type='L' type64='I'/>
+    <field name='height' declared_type='UInt32' type='L' type64='I'/>
+    <field name='options' declared_type='DSpAltBufferOption' type='i'/>
+    <field name='reserved' declared_type='UInt32*' type='[4L]' type64='[4I]'/>
+  </struct>
+  <struct name='DSpBlitInfo' type='{DSpBlitInfo=&quot;completionFlag&quot;B&quot;filler&quot;[3c]&quot;completionProc&quot;^?&quot;srcContext&quot;^{OpaqueDSpContextReference}&quot;srcBuffer&quot;^{OpaqueGrafPtr}&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;srcKey&quot;I&quot;dstContext&quot;^{OpaqueDSpContextReference}&quot;dstBuffer&quot;^{OpaqueGrafPtr}&quot;dstRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;dstKey&quot;I&quot;mode&quot;i&quot;reserved&quot;[4L]}' type64='{DSpBlitInfo=&quot;completionFlag&quot;B&quot;filler&quot;[3c]&quot;completionProc&quot;^?&quot;srcContext&quot;^{OpaqueDSpContextReference}&quot;srcBuffer&quot;^{OpaqueGrafPtr}&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;srcKey&quot;I&quot;dstContext&quot;^{OpaqueDSpContextReference}&quot;dstBuffer&quot;^{OpaqueGrafPtr}&quot;dstRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;dstKey&quot;I&quot;mode&quot;i&quot;reserved&quot;[4I]}'>
+    <field name='completionFlag' declared_type='Boolean' type='B'/>
+    <field name='filler' declared_type='char*' type='[3c]'/>
+    <field name='completionProc' function_pointer='true' declared_type='DSpBlitDoneProc' type='^?'>
+      <arg declared_type='DSpBlitInfo*' type='^{DSpBlitInfo=B[3c]^?^{OpaqueDSpContextReference}^{OpaqueGrafPtr}{Rect=ssss}I^{OpaqueDSpContextReference}^{OpaqueGrafPtr}{Rect=ssss}Ii[4L]}' type64='^{DSpBlitInfo=B[3c]^?^{OpaqueDSpContextReference}^{OpaqueGrafPtr}{Rect=ssss}I^{OpaqueDSpContextReference}^{OpaqueGrafPtr}{Rect=ssss}Ii[4I]}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='srcContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <field name='srcBuffer' declared_type='CGrafPtr' type='^{OpaqueGrafPtr=}'/>
+    <field name='srcRect' declared_type='Rect' type='{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}'/>
+    <field name='srcKey' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dstContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <field name='dstBuffer' declared_type='CGrafPtr' type='^{OpaqueGrafPtr=}'/>
+    <field name='dstRect' declared_type='Rect' type='{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}'/>
+    <field name='dstKey' declared_type='UInt32' type='L' type64='I'/>
+    <field name='mode' declared_type='DSpBlitMode' type='i'/>
+    <field name='reserved' declared_type='UInt32*' type='[4L]' type64='[4I]'/>
+  </struct>
+  <struct name='DSpContextAttributes' type='{DSpContextAttributes=&quot;frequency&quot;i&quot;displayWidth&quot;I&quot;displayHeight&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;colorNeeds&quot;I&quot;colorTable&quot;^^{ColorTable}&quot;contextOptions&quot;I&quot;backBufferDepthMask&quot;I&quot;displayDepthMask&quot;I&quot;backBufferBestDepth&quot;I&quot;displayBestDepth&quot;I&quot;pageCount&quot;I&quot;filler&quot;[3c]&quot;gameMustConfirmSwitch&quot;B&quot;reserved3&quot;[4L]}' type64='{DSpContextAttributes=&quot;frequency&quot;i&quot;displayWidth&quot;I&quot;displayHeight&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;colorNeeds&quot;I&quot;colorTable&quot;^^{ColorTable}&quot;contextOptions&quot;I&quot;backBufferDepthMask&quot;I&quot;displayDepthMask&quot;I&quot;backBufferBestDepth&quot;I&quot;displayBestDepth&quot;I&quot;pageCount&quot;I&quot;filler&quot;[3c]&quot;gameMustConfirmSwitch&quot;B&quot;reserved3&quot;[4I]}'>
+    <field name='frequency' declared_type='Fixed' type='l' type64='i'/>
+    <field name='displayWidth' declared_type='UInt32' type='L' type64='I'/>
+    <field name='displayHeight' declared_type='UInt32' type='L' type64='I'/>
+    <field name='reserved1' declared_type='UInt32' type='L' type64='I'/>
+    <field name='reserved2' declared_type='UInt32' type='L' type64='I'/>
+    <field name='colorNeeds' declared_type='UInt32' type='L' type64='I'/>
+    <field name='colorTable' declared_type='CTabHandle' type='^^{ColorTable}'/>
+    <field name='contextOptions' declared_type='OptionBits' type='L' type64='I'/>
+    <field name='backBufferDepthMask' declared_type='OptionBits' type='L' type64='I'/>
+    <field name='displayDepthMask' declared_type='OptionBits' type='L' type64='I'/>
+    <field name='backBufferBestDepth' declared_type='UInt32' type='L' type64='I'/>
+    <field name='displayBestDepth' declared_type='UInt32' type='L' type64='I'/>
+    <field name='pageCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='filler' declared_type='char*' type='[3c]'/>
+    <field name='gameMustConfirmSwitch' declared_type='Boolean' type='B'/>
+    <field name='reserved3' declared_type='UInt32*' type='[4L]' type64='[4I]'/>
+  </struct>
   <opaque name='DSpAltBufferReference' type='^{OpaqueDSpAltBufferReference=}'/>
   <opaque name='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
   <opaque name='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
@@ -33,175 +71,175 @@
   <enum name='kDSpDepthMask_8' value='8'/>
   <enum name='kDSpDepthMask_All' value='-1'/>
   <function name='DSpContext_Dispose'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_FadeGamma'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^{RGBColor=SSS}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inPercentOfOriginalIntensity' declared_type='SInt32' type='l' type64='i'/>
+    <arg name='inZeroIntensityColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_FadeGammaIn'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{RGBColor=SSS}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inZeroIntensityColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_FadeGammaOut'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{RGBColor=SSS}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inZeroIntensityColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GetAttributes'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outAttributes' declared_type='DSpContextAttributesPtr' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GetBackBuffer'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='i'/>
-    <arg type='^^{OpaqueGrafPtr}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inBufferKind' declared_type='DSpBufferKind' type='i'/>
+    <arg name='outBackBuffer' declared_type='CGrafPtr*' type='^^{OpaqueGrafPtr}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GetCLUTEntries'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
-    <arg type='S'/>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outEntries' declared_type='ColorSpec*' type='^{ColorSpec=s{RGBColor=SSS}}'/>
+    <arg name='inStartingEntry' declared_type='UInt16' type='S'/>
+    <arg name='inLastEntry' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GetDisplayID'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outDisplayID' declared_type='DisplayIDType*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GetFrontBuffer'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^^{OpaqueGrafPtr}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outFrontBuffer' declared_type='CGrafPtr*' type='^^{OpaqueGrafPtr}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GetMonitorFrequency'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outFrequency' declared_type='Fixed*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GetState'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outState' declared_type='DSpContextState*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_GlobalToLocal'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{Point=ss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='ioPoint' declared_type='Point*' type='^{Point=ss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_IsBusy'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outBusyFlag' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_LocalToGlobal'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{Point=ss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='ioPoint' declared_type='Point*' type='^{Point=ss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_Queue'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inParentContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inChildContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inDesiredAttributes' declared_type='DSpContextAttributesPtr' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_Release'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_Reserve'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inDesiredAttributes' declared_type='DSpContextAttributesPtr' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_SetCLUTEntries'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{ColorSpec=s{RGBColor=SSS}}'/>
-    <arg type='S'/>
-    <arg type='S'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inEntries' declared_type='ColorSpec*' type='^{ColorSpec=s{RGBColor=SSS}}' const='true'/>
+    <arg name='inStartingEntry' declared_type='UInt16' type='S'/>
+    <arg name='inLastEntry' declared_type='UInt16' type='S'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_SetState'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inState' declared_type='DSpContextState' type='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_SwapBuffers'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaqueDSpContextReference=}'/>
-      <arg type='^v'/>
-      <retval type='B'/>
+    <arg name='inContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inBusyProc' function_pointer='true' declared_type='DSpCallbackUPP' type='^?'>
+      <arg declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Boolean' type='B'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inUserRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpContext_Switch'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inOldContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='inNewContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpFindBestContext'>
-    <arg type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
-    <arg type='^^{OpaqueDSpContextReference}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDesiredAttributes' declared_type='DSpContextAttributesPtr' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
+    <arg name='outContext' declared_type='DSpContextReference*' type='^^{OpaqueDSpContextReference}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpFindBestContextOnDisplayID'>
-    <arg type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
-    <arg type='^^{OpaqueDSpContextReference}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDesiredAttributes' declared_type='DSpContextAttributesPtr' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}' type64='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4I]}'/>
+    <arg name='outContext' declared_type='DSpContextReference*' type='^^{OpaqueDSpContextReference}'/>
+    <arg name='inDisplayID' declared_type='DisplayIDType' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpFindContextFromPoint'>
-    <arg type='{Point=ss}'/>
-    <arg type='^^{OpaqueDSpContextReference}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inGlobalPoint' declared_type='Point' type='{Point=ss}'/>
+    <arg name='outContext' declared_type='DSpContextReference*' type='^^{OpaqueDSpContextReference}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpGetCurrentContext'>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueDSpContextReference}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDisplayID' declared_type='DisplayIDType' type='L' type64='I'/>
+    <arg name='outContext' declared_type='DSpContextReference*' type='^^{OpaqueDSpContextReference}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpGetFirstContext'>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueDSpContextReference}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDisplayID' declared_type='DisplayIDType' type='L' type64='I'/>
+    <arg name='outContext' declared_type='DSpContextReference*' type='^^{OpaqueDSpContextReference}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpGetMouse'>
-    <arg type='^{Point=ss}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outGlobalPoint' declared_type='Point*' type='^{Point=ss}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpGetNextContext'>
-    <arg type='^{OpaqueDSpContextReference=}'/>
-    <arg type='^^{OpaqueDSpContextReference}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inCurrentContext' declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+    <arg name='outContext' declared_type='DSpContextReference*' type='^^{OpaqueDSpContextReference}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpGetVersion'>
-    <retval type='{NumVersion=CCCC}'/>
+    <retval declared_type='NumVersion' type='{NumVersion=CCCC}'/>
   </function>
   <function name='DSpProcessEvent'>
-    <arg type='^{EventRecord=SII{Point=ss}S}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inEvent' declared_type='EventRecord*' type='^{EventRecord=SII{Point=ss}S}'/>
+    <arg name='outEventWasProcessed' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpSetBlankingColor'>
-    <arg type='^{RGBColor=SSS}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRGBColor' declared_type='RGBColor*' type='^{RGBColor=SSS}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpSetDebugMode'>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='inDebugMode' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpShutdown'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DSpStartup'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

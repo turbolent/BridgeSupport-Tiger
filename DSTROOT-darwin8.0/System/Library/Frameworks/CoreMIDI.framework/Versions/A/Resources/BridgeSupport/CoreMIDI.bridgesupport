@@ -1,20 +1,98 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
-  <struct name='MIDIControlTransform' type='{MIDIControlTransform=&quot;controlType&quot;C&quot;remappedControlType&quot;C&quot;controlNumber&quot;S&quot;transform&quot;S&quot;param&quot;s}'/>
-  <struct name='MIDIIOErrorNotification' type='{MIDIIOErrorNotification=&quot;messageID&quot;i&quot;messageSize&quot;I&quot;driverDevice&quot;^{OpaqueMIDIDevice}&quot;errorCode&quot;i}'/>
-  <struct name='MIDINotification' type='{MIDINotification=&quot;messageID&quot;i&quot;messageSize&quot;I}'/>
-  <struct name='MIDIObjectAddRemoveNotification' type='{MIDIObjectAddRemoveNotification=&quot;messageID&quot;i&quot;messageSize&quot;I&quot;parent&quot;^v&quot;parentType&quot;i&quot;child&quot;^v&quot;childType&quot;i}'/>
-  <struct name='MIDIObjectPropertyChangeNotification' type='{MIDIObjectPropertyChangeNotification=&quot;messageID&quot;i&quot;messageSize&quot;I&quot;object&quot;^v&quot;objectType&quot;i&quot;propertyName&quot;^{__CFString}}'/>
-  <struct name='MIDIPacket' type='{MIDIPacket=&quot;timeStamp&quot;Q&quot;length&quot;S&quot;data&quot;[256C]}'/>
-  <struct name='MIDIPacketList' type='{MIDIPacketList=&quot;numPackets&quot;I&quot;packet&quot;[1{MIDIPacket=&quot;timeStamp&quot;Q&quot;length&quot;S&quot;data&quot;[256C]}]}'/>
-  <struct name='MIDISysexSendRequest' type='{MIDISysexSendRequest=&quot;destination&quot;^{OpaqueMIDIEndpoint}&quot;data&quot;*&quot;bytesToSend&quot;I&quot;complete&quot;B&quot;reserved&quot;[3C]&quot;completionProc&quot;^?&quot;completionRefCon&quot;^v}'/>
-  <struct name='MIDIThruConnectionEndpoint' type='{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}'/>
-  <struct name='MIDIThruConnectionParams' type='{MIDIThruConnectionParams=&quot;version&quot;I&quot;numSources&quot;I&quot;sources&quot;[8{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}]&quot;numDestinations&quot;I&quot;destinations&quot;[8{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}]&quot;channelMap&quot;[16C]&quot;lowVelocity&quot;C&quot;highVelocity&quot;C&quot;lowNote&quot;C&quot;highNote&quot;C&quot;noteNumber&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;velocity&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;keyPressure&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;channelPressure&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;programChange&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;pitchBend&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;filterOutSysEx&quot;C&quot;filterOutMTC&quot;C&quot;filterOutBeatClock&quot;C&quot;filterOutTuneRequest&quot;C&quot;reserved2&quot;[3C]&quot;filterOutAllControls&quot;C&quot;numControlTransforms&quot;S&quot;numMaps&quot;S&quot;reserved3&quot;[4S]}'/>
-  <struct name='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'/>
-  <struct name='MIDIValueMap' type='{MIDIValueMap=&quot;value&quot;[128C]}'/>
+  <struct name='MIDIControlTransform' type='{MIDIControlTransform=&quot;controlType&quot;C&quot;remappedControlType&quot;C&quot;controlNumber&quot;S&quot;transform&quot;S&quot;param&quot;s}'>
+    <field name='controlType' declared_type='MIDITransformControlType' type='C'/>
+    <field name='remappedControlType' declared_type='MIDITransformControlType' type='C'/>
+    <field name='controlNumber' declared_type='UInt16' type='S'/>
+    <field name='transform' declared_type='MIDITransformType' type='S'/>
+    <field name='param' declared_type='SInt16' type='s'/>
+  </struct>
+  <struct name='MIDIIOErrorNotification' type='{MIDIIOErrorNotification=&quot;messageID&quot;i&quot;messageSize&quot;I&quot;driverDevice&quot;^{OpaqueMIDIDevice}&quot;errorCode&quot;i}'>
+    <field name='messageID' declared_type='MIDINotificationMessageID' type='l' type64='i'/>
+    <field name='messageSize' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='driverDevice' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <field name='errorCode' declared_type='OSStatus' type='l' type64='i'/>
+  </struct>
+  <struct name='MIDINotification' type='{MIDINotification=&quot;messageID&quot;i&quot;messageSize&quot;I}'>
+    <field name='messageID' declared_type='MIDINotificationMessageID' type='l' type64='i'/>
+    <field name='messageSize' declared_type='ByteCount' type='L' type64='I'/>
+  </struct>
+  <struct name='MIDIObjectAddRemoveNotification' type='{MIDIObjectAddRemoveNotification=&quot;messageID&quot;i&quot;messageSize&quot;I&quot;parent&quot;^v&quot;parentType&quot;i&quot;child&quot;^v&quot;childType&quot;i}'>
+    <field name='messageID' declared_type='MIDINotificationMessageID' type='l' type64='i'/>
+    <field name='messageSize' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='parent' declared_type='MIDIObjectRef' type='@'/>
+    <field name='parentType' declared_type='MIDIObjectType' type='l' type64='i'/>
+    <field name='child' declared_type='MIDIObjectRef' type='@'/>
+    <field name='childType' declared_type='MIDIObjectType' type='l' type64='i'/>
+  </struct>
+  <struct name='MIDIObjectPropertyChangeNotification' type='{MIDIObjectPropertyChangeNotification=&quot;messageID&quot;i&quot;messageSize&quot;I&quot;object&quot;^v&quot;objectType&quot;i&quot;propertyName&quot;^{__CFString}}'>
+    <field name='messageID' declared_type='MIDINotificationMessageID' type='l' type64='i'/>
+    <field name='messageSize' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='object' declared_type='MIDIObjectRef' type='@'/>
+    <field name='objectType' declared_type='MIDIObjectType' type='l' type64='i'/>
+    <field name='propertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+  </struct>
+  <struct name='MIDIPacket' type='{MIDIPacket=&quot;timeStamp&quot;Q&quot;length&quot;S&quot;data&quot;[256C]}'>
+    <field name='timeStamp' declared_type='MIDITimeStamp' type='Q'/>
+    <field name='length' declared_type='UInt16' type='S'/>
+    <field name='data' declared_type='Byte*' type='[256C]'/>
+  </struct>
+  <struct name='MIDIPacketList' type='{MIDIPacketList=&quot;numPackets&quot;I&quot;packet&quot;[1{MIDIPacket=&quot;timeStamp&quot;Q&quot;length&quot;S&quot;data&quot;[256C]}]}'>
+    <field name='numPackets' declared_type='UInt32' type='L' type64='I'/>
+    <field name='packet' declared_type='MIDIPacket*' type='[1{MIDIPacket=&quot;timeStamp&quot;Q&quot;length&quot;S&quot;data&quot;[256C]}]'/>
+  </struct>
+  <struct name='MIDISysexSendRequest' type='{MIDISysexSendRequest=&quot;destination&quot;^{OpaqueMIDIEndpoint}&quot;data&quot;*&quot;bytesToSend&quot;I&quot;complete&quot;B&quot;reserved&quot;[3C]&quot;completionProc&quot;^?&quot;completionRefCon&quot;^v}'>
+    <field name='destination' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <field name='data' declared_type='Byte*' type='*' const='true'/>
+    <field name='bytesToSend' declared_type='UInt32' type='L' type64='I'/>
+    <field name='complete' declared_type='Boolean' type='B'/>
+    <field name='reserved' declared_type='Byte*' type='[3C]'/>
+    <field name='completionProc' function_pointer='true' declared_type='MIDICompletionProc' type='^?'>
+      <arg declared_type='MIDISysexSendRequest*' type='^{MIDISysexSendRequest=^{OpaqueMIDIEndpoint}*IB[3C]^?^v}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='completionRefCon' declared_type='void*' type='^v'/>
+  </struct>
+  <struct name='MIDIThruConnectionEndpoint' type='{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}'>
+    <field name='endpointRef' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <field name='uniqueID' declared_type='MIDIUniqueID' type='l' type64='i'/>
+  </struct>
+  <struct name='MIDIThruConnectionParams' type='{MIDIThruConnectionParams=&quot;version&quot;I&quot;numSources&quot;I&quot;sources&quot;[8{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}]&quot;numDestinations&quot;I&quot;destinations&quot;[8{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}]&quot;channelMap&quot;[16C]&quot;lowVelocity&quot;C&quot;highVelocity&quot;C&quot;lowNote&quot;C&quot;highNote&quot;C&quot;noteNumber&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;velocity&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;keyPressure&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;channelPressure&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;programChange&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;pitchBend&quot;{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}&quot;filterOutSysEx&quot;C&quot;filterOutMTC&quot;C&quot;filterOutBeatClock&quot;C&quot;filterOutTuneRequest&quot;C&quot;reserved2&quot;[3C]&quot;filterOutAllControls&quot;C&quot;numControlTransforms&quot;S&quot;numMaps&quot;S&quot;reserved3&quot;[4S]}'>
+    <field name='version' declared_type='UInt32' type='L' type64='I'/>
+    <field name='numSources' declared_type='UInt32' type='L' type64='I'/>
+    <field name='sources' declared_type='MIDIThruConnectionEndpoint*' type='[8{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}]'/>
+    <field name='numDestinations' declared_type='UInt32' type='L' type64='I'/>
+    <field name='destinations' declared_type='MIDIThruConnectionEndpoint*' type='[8{MIDIThruConnectionEndpoint=&quot;endpointRef&quot;^{OpaqueMIDIEndpoint}&quot;uniqueID&quot;i}]'/>
+    <field name='channelMap' declared_type='UInt8*' type='[16C]'/>
+    <field name='lowVelocity' declared_type='UInt8' type='C'/>
+    <field name='highVelocity' declared_type='UInt8' type='C'/>
+    <field name='lowNote' declared_type='UInt8' type='C'/>
+    <field name='highNote' declared_type='UInt8' type='C'/>
+    <field name='noteNumber' declared_type='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'/>
+    <field name='velocity' declared_type='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'/>
+    <field name='keyPressure' declared_type='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'/>
+    <field name='channelPressure' declared_type='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'/>
+    <field name='programChange' declared_type='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'/>
+    <field name='pitchBend' declared_type='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'/>
+    <field name='filterOutSysEx' declared_type='UInt8' type='C'/>
+    <field name='filterOutMTC' declared_type='UInt8' type='C'/>
+    <field name='filterOutBeatClock' declared_type='UInt8' type='C'/>
+    <field name='filterOutTuneRequest' declared_type='UInt8' type='C'/>
+    <field name='reserved2' declared_type='UInt8*' type='[3C]'/>
+    <field name='filterOutAllControls' declared_type='UInt8' type='C'/>
+    <field name='numControlTransforms' declared_type='UInt16' type='S'/>
+    <field name='numMaps' declared_type='UInt16' type='S'/>
+    <field name='reserved3' declared_type='UInt16*' type='[4S]'/>
+  </struct>
+  <struct name='MIDITransform' type='{MIDITransform=&quot;transform&quot;S&quot;param&quot;s}'>
+    <field name='transform' declared_type='MIDITransformType' type='S'/>
+    <field name='param' declared_type='SInt16' type='s'/>
+  </struct>
+  <struct name='MIDIValueMap' type='{MIDIValueMap=&quot;value&quot;[128C]}'>
+    <field name='value' declared_type='UInt8*' type='[128C]'/>
+  </struct>
   <cftype name='MIDIClientRef' type='^{OpaqueMIDIClient=}'/>
   <cftype name='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
   <cftype name='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
@@ -23,52 +101,52 @@
   <cftype name='MIDIPortRef' type='^{OpaqueMIDIPort=}'/>
   <cftype name='MIDISetupRef' type='^{OpaqueMIDISetup=}'/>
   <cftype name='MIDIThruConnectionRef' type='^{OpaqueMIDIThruConnection=}'/>
-  <constant name='kMIDIPropertyAdvanceScheduleTimeMuSec' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyCanRoute' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyConnectionUniqueID' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyDeviceID' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyDisplayName' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyDriverDeviceEditorApp' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyDriverOwner' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyDriverVersion' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyFactoryPatchNameFile' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyImage' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyIsBroadcast' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyIsDrumMachine' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyIsEffectUnit' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyIsEmbeddedEntity' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyIsMixer' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyIsSampler' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyManufacturer' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyMaxReceiveChannels' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyMaxSysExSpeed' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyMaxTransmitChannels' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyModel' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyName' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyNameConfiguration' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyOffline' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyPanDisruptsStereo' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyPrivate' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyReceiveChannels' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyReceivesBankSelectLSB' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyReceivesBankSelectMSB' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyReceivesClock' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyReceivesMTC' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyReceivesNotes' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyReceivesProgramChanges' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertySingleRealtimeEntity' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertySupportsGeneralMIDI' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertySupportsMMC' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertySupportsShowControl' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyTransmitChannels' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyTransmitsBankSelectLSB' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyTransmitsBankSelectMSB' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyTransmitsClock' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyTransmitsMTC' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyTransmitsNotes' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyTransmitsProgramChanges' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyUniqueID' type='^{__CFString=}'/>
-  <constant name='kMIDIPropertyUserPatchNameFile' type='^{__CFString=}'/>
+  <constant name='kMIDIPropertyAdvanceScheduleTimeMuSec' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyCanRoute' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyConnectionUniqueID' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyDeviceID' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyDisplayName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyDriverDeviceEditorApp' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyDriverOwner' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyDriverVersion' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyFactoryPatchNameFile' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyImage' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyIsBroadcast' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyIsDrumMachine' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyIsEffectUnit' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyIsEmbeddedEntity' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyIsMixer' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyIsSampler' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyManufacturer' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyMaxReceiveChannels' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyMaxSysExSpeed' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyMaxTransmitChannels' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyModel' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyNameConfiguration' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyOffline' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyPanDisruptsStereo' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyPrivate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyReceiveChannels' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyReceivesBankSelectLSB' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyReceivesBankSelectMSB' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyReceivesClock' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyReceivesMTC' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyReceivesNotes' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyReceivesProgramChanges' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertySingleRealtimeEntity' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertySupportsGeneralMIDI' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertySupportsMMC' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertySupportsShowControl' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyTransmitChannels' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyTransmitsBankSelectLSB' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyTransmitsBankSelectMSB' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyTransmitsClock' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyTransmitsMTC' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyTransmitsNotes' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyTransmitsProgramChanges' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyUniqueID' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kMIDIPropertyUserPatchNameFile' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
   <enum name='kMIDIControlType_14Bit' value='1'/>
   <enum name='kMIDIControlType_14BitNRPN' value='5'/>
   <enum name='kMIDIControlType_14BitRPN' value='3'/>
@@ -117,351 +195,352 @@
   <enum name='kMIDIWrongPropertyType' value='-10836'/>
   <enum name='kMIDIWrongThread' value='-10841'/>
   <function name='MIDIClientCreate'>
-    <arg type='^{__CFString=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{MIDINotification=iI}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='notifyProc' function_pointer='true' declared_type='MIDINotifyProc' type='^?'>
+      <arg declared_type='MIDINotification*' type='^{MIDINotification=iI}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueMIDIClient}'/>
-    <retval type='l' type64='i'/>
+    <arg name='notifyRefCon' declared_type='void*' type='^v'/>
+    <arg name='outClient' declared_type='MIDIClientRef*' type='^^{OpaqueMIDIClient}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIClientDispose'>
-    <arg type='^{OpaqueMIDIClient=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='client' declared_type='MIDIClientRef' type='^{OpaqueMIDIClient=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIDestinationCreate'>
-    <arg type='^{OpaqueMIDIClient=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
-      <arg type='^v'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='client' declared_type='MIDIClientRef' type='^{OpaqueMIDIClient=}'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='readProc' function_pointer='true' declared_type='MIDIReadProc' type='^?'>
+      <arg declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueMIDIEndpoint}'/>
-    <retval type='l' type64='i'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='outDest' declared_type='MIDIEndpointRef*' type='^^{OpaqueMIDIEndpoint}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIDeviceAddEntity'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='B'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueMIDIEntity}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='embedded' declared_type='Boolean' type='B'/>
+    <arg name='numSourceEndpoints' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='numDestinationEndpoints' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='newEntity' declared_type='MIDIEntityRef*' type='^^{OpaqueMIDIEntity}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIDeviceGetEntity'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIEntity=}'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <arg name='entityIndex0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
   </function>
   <function name='MIDIDeviceGetNumberOfEntities'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIDeviceRemoveEntity'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <arg type='^{OpaqueMIDIEntity=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <arg name='entity' declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIEndpointDispose'>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='endpt' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIEndpointGetEntity'>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <arg type='^^{OpaqueMIDIEntity}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inEndpoint' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='outEntity' declared_type='MIDIEntityRef*' type='^^{OpaqueMIDIEntity}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIEntityAddOrRemoveEndpoints'>
-    <arg type='^{OpaqueMIDIEntity=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='entity' declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
+    <arg name='numSourceEndpoints' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='numDestinationEndpoints' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIEntityGetDestination'>
-    <arg type='^{OpaqueMIDIEntity=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='entity' declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
+    <arg name='destIndex0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
   </function>
   <function name='MIDIEntityGetDevice'>
-    <arg type='^{OpaqueMIDIEntity=}'/>
-    <arg type='^^{OpaqueMIDIDevice}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inEntity' declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
+    <arg name='outDevice' declared_type='MIDIDeviceRef*' type='^^{OpaqueMIDIDevice}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIEntityGetNumberOfDestinations'>
-    <arg type='^{OpaqueMIDIEntity=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='entity' declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIEntityGetNumberOfSources'>
-    <arg type='^{OpaqueMIDIEntity=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='entity' declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIEntityGetSource'>
-    <arg type='^{OpaqueMIDIEntity=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='entity' declared_type='MIDIEntityRef' type='^{OpaqueMIDIEntity=}'/>
+    <arg name='sourceIndex0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
   </function>
   <function name='MIDIExternalDeviceCreate'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{OpaqueMIDIDevice}'/>
-    <retval type='l' type64='i'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='manufacturer' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='model' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outDevice' declared_type='MIDIDeviceRef*' type='^^{OpaqueMIDIDevice}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIFlushOutput'>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='dest' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIGetDestination'>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='destIndex0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
   </function>
   <function name='MIDIGetDevice'>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIDevice=}'/>
+    <arg name='deviceIndex0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
   </function>
   <function name='MIDIGetExternalDevice'>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIDevice=}'/>
+    <arg name='deviceIndex0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
   </function>
   <function name='MIDIGetNumberOfDestinations'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIGetNumberOfDevices'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIGetNumberOfExternalDevices'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIGetNumberOfSources'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='ItemCount' type='L' type64='I'/>
   </function>
   <function name='MIDIGetSerialPortDrivers'>
-    <arg type='^^{__CFArray}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outDriverNames' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIGetSerialPortOwner'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='portName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outDriverName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIGetSource'>
-    <arg type='L' type64='I'/>
-    <retval type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='sourceIndex0' declared_type='ItemCount' type='L' type64='I'/>
+    <retval declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
   </function>
   <function name='MIDIInputPortCreate'>
-    <arg type='^{OpaqueMIDIClient=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
-      <arg type='^v'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='client' declared_type='MIDIClientRef' type='^{OpaqueMIDIClient=}'/>
+    <arg name='portName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='readProc' function_pointer='true' declared_type='MIDIReadProc' type='^?'>
+      <arg declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}' const='true'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^v'/>
-    <arg type='^^{OpaqueMIDIPort}'/>
-    <retval type='l' type64='i'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='outPort' declared_type='MIDIPortRef*' type='^^{OpaqueMIDIPort}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectFindByUniqueID'>
-    <arg type='l' type64='i'/>
-    <arg type='^^v'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='inUniqueID' declared_type='MIDIUniqueID' type='l' type64='i'/>
+    <arg name='outObject' declared_type='MIDIObjectRef*' type='^^v'/>
+    <arg name='outObjectType' declared_type='MIDIObjectType*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectGetDataProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFData}'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outData' declared_type='CFDataRef*' type='^^{__CFData}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectGetDictionaryProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFDictionary}'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outDict' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectGetIntegerProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outValue' declared_type='SInt32*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectGetProperties'>
-    <arg type='@'/>
-    <arg type='^^v'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='outProperties' declared_type='CFPropertyListRef*' type='^^v'/>
+    <arg name='deep' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectGetStringProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='str' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectRemoveProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectSetDataProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFData=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='data' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectSetDictionaryProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFDictionary=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='data' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectSetIntegerProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='l' type64='i'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='SInt32' type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIObjectSetStringProperty'>
-    <arg type='@'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='obj' declared_type='MIDIObjectRef' type='@'/>
+    <arg name='propertyID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='str' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIOutputPortCreate'>
-    <arg type='^{OpaqueMIDIClient=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{OpaqueMIDIPort}'/>
-    <retval type='l' type64='i'/>
+    <arg name='client' declared_type='MIDIClientRef' type='^{OpaqueMIDIClient=}'/>
+    <arg name='portName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outPort' declared_type='MIDIPortRef*' type='^^{OpaqueMIDIPort}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIPacketListAdd'>
-    <arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{MIDIPacket=QS[256C]}'/>
-    <arg type='Q'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <retval type='^{MIDIPacket=QS[256C]}'/>
+    <arg name='pktlist' declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
+    <arg name='listSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='curPacket' declared_type='MIDIPacket*' type='^{MIDIPacket=QS[256C]}'/>
+    <arg name='time' declared_type='MIDITimeStamp' type='Q'/>
+    <arg name='nData' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='data' declared_type='Byte*' type='*' const='true'/>
+    <retval declared_type='MIDIPacket*' type='^{MIDIPacket=QS[256C]}'/>
   </function>
   <function name='MIDIPacketListInit'>
-    <arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
-    <retval type='^{MIDIPacket=QS[256C]}'/>
+    <arg name='pktlist' declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
+    <retval declared_type='MIDIPacket*' type='^{MIDIPacket=QS[256C]}'/>
   </function>
   <function name='MIDIPortConnectSource'>
-    <arg type='^{OpaqueMIDIPort=}'/>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='port' declared_type='MIDIPortRef' type='^{OpaqueMIDIPort=}'/>
+    <arg name='source' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='connRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIPortDisconnectSource'>
-    <arg type='^{OpaqueMIDIPort=}'/>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='port' declared_type='MIDIPortRef' type='^{OpaqueMIDIPort=}'/>
+    <arg name='source' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIPortDispose'>
-    <arg type='^{OpaqueMIDIPort=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='port' declared_type='MIDIPortRef' type='^{OpaqueMIDIPort=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIReceived'>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='src' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='pktlist' declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIRestart'>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISend'>
-    <arg type='^{OpaqueMIDIPort=}'/>
-    <arg type='^{OpaqueMIDIEndpoint=}'/>
-    <arg type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='port' declared_type='MIDIPortRef' type='^{OpaqueMIDIPort=}'/>
+    <arg name='dest' declared_type='MIDIEndpointRef' type='^{OpaqueMIDIEndpoint=}'/>
+    <arg name='pktlist' declared_type='MIDIPacketList*' type='^{MIDIPacketList=I[1{MIDIPacket=QS[256C]}]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISendSysex'>
-    <arg type='^{MIDISysexSendRequest=^{OpaqueMIDIEndpoint}*IB[3C]^?^v}'/>
-    <retval type='l' type64='i'/>
+    <arg name='request' declared_type='MIDISysexSendRequest*' type='^{MIDISysexSendRequest=^{OpaqueMIDIEndpoint}*IB[3C]^?^v}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetSerialPortOwner'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='portName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='driverName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupAddDevice'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupAddExternalDevice'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupCreate'>
-    <arg type='^^{OpaqueMIDISetup}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outSetup' declared_type='MIDISetupRef*' type='^^{OpaqueMIDISetup}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupDispose'>
-    <arg type='^{OpaqueMIDISetup=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='setup' declared_type='MIDISetupRef' type='^{OpaqueMIDISetup=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupFromData'>
-    <arg type='^{__CFData=}'/>
-    <arg type='^^{OpaqueMIDISetup}'/>
-    <retval type='l' type64='i'/>
+    <arg name='data' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <arg name='outSetup' declared_type='MIDISetupRef*' type='^^{OpaqueMIDISetup}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupGetCurrent'>
-    <arg type='^^{OpaqueMIDISetup}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outSetup' declared_type='MIDISetupRef*' type='^^{OpaqueMIDISetup}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupInstall'>
-    <arg type='^{OpaqueMIDISetup=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='setup' declared_type='MIDISetupRef' type='^{OpaqueMIDISetup=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupRemoveDevice'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupRemoveExternalDevice'>
-    <arg type='^{OpaqueMIDIDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='MIDIDeviceRef' type='^{OpaqueMIDIDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISetupToData'>
-    <arg type='^{OpaqueMIDISetup=}'/>
-    <arg type='^^{__CFData}'/>
-    <retval type='l' type64='i'/>
+    <arg name='setup' declared_type='MIDISetupRef' type='^{OpaqueMIDISetup=}'/>
+    <arg name='outData' declared_type='CFDataRef*' type='^^{__CFData}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDISourceCreate'>
-    <arg type='^{OpaqueMIDIClient=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{OpaqueMIDIEndpoint}'/>
-    <retval type='l' type64='i'/>
+    <arg name='client' declared_type='MIDIClientRef' type='^{OpaqueMIDIClient=}'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outSrc' declared_type='MIDIEndpointRef*' type='^^{OpaqueMIDIEndpoint}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIThruConnectionCreate'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFData=}'/>
-    <arg type='^^{OpaqueMIDIThruConnection}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPersistentOwnerID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inConnectionParams' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <arg name='outConnection' declared_type='MIDIThruConnectionRef*' type='^^{OpaqueMIDIThruConnection}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIThruConnectionDispose'>
-    <arg type='^{OpaqueMIDIThruConnection=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='connection' declared_type='MIDIThruConnectionRef' type='^{OpaqueMIDIThruConnection=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIThruConnectionFind'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFData}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPersistentOwnerID' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outConnectionList' declared_type='CFDataRef*' type='^^{__CFData}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIThruConnectionGetParams'>
-    <arg type='^{OpaqueMIDIThruConnection=}'/>
-    <arg type='^^{__CFData}'/>
-    <retval type='l' type64='i'/>
+    <arg name='connection' declared_type='MIDIThruConnectionRef' type='^{OpaqueMIDIThruConnection=}'/>
+    <arg name='outConnectionParams' declared_type='CFDataRef*' type='^^{__CFData}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='MIDIThruConnectionParamsInitialize'>
-    <arg type='^{MIDIThruConnectionParams=II[8{MIDIThruConnectionEndpoint=^{OpaqueMIDIEndpoint}i}]I[8{MIDIThruConnectionEndpoint=^{OpaqueMIDIEndpoint}i}][16C]CCCC{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}CCCC[3C]CSS[4S]}'/>
+    <arg name='inConnectionParams' declared_type='MIDIThruConnectionParams*' type='^{MIDIThruConnectionParams=II[8{MIDIThruConnectionEndpoint=^{OpaqueMIDIEndpoint}i}]I[8{MIDIThruConnectionEndpoint=^{OpaqueMIDIEndpoint}i}][16C]CCCC{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}{MIDITransform=Ss}CCCC[3C]CSS[4S]}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='MIDIThruConnectionSetParams'>
-    <arg type='^{OpaqueMIDIThruConnection=}'/>
-    <arg type='^{__CFData=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='connection' declared_type='MIDIThruConnectionRef' type='^{OpaqueMIDIThruConnection=}'/>
+    <arg name='inConnectionParams' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

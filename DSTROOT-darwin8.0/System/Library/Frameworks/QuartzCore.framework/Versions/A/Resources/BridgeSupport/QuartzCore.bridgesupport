@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
   <depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
@@ -7,112 +6,607 @@
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
-  <constant name='kCIApplyOptionDefinition' type='@'/>
-  <constant name='kCIApplyOptionExtent' type='@'/>
-  <constant name='kCIApplyOptionUserInfo' type='@'/>
-  <constant name='kCIAttributeClass' type='@'/>
-  <constant name='kCIAttributeDefault' type='@'/>
-  <constant name='kCIAttributeDisplayName' type='@'/>
-  <constant name='kCIAttributeFilterCategories' type='@'/>
-  <constant name='kCIAttributeFilterDisplayName' type='@'/>
-  <constant name='kCIAttributeFilterName' type='@'/>
-  <constant name='kCIAttributeIdentity' type='@'/>
-  <constant name='kCIAttributeMax' type='@'/>
-  <constant name='kCIAttributeMin' type='@'/>
-  <constant name='kCIAttributeName' type='@'/>
-  <constant name='kCIAttributeSliderMax' type='@'/>
-  <constant name='kCIAttributeSliderMin' type='@'/>
-  <constant name='kCIAttributeType' type='@'/>
-  <constant name='kCIAttributeTypeAngle' type='@'/>
-  <constant name='kCIAttributeTypeBoolean' type='@'/>
-  <constant name='kCIAttributeTypeDistance' type='@'/>
-  <constant name='kCIAttributeTypeGradient' type='@'/>
-  <constant name='kCIAttributeTypeOffset' type='@'/>
-  <constant name='kCIAttributeTypeOpaqueColor' type='@'/>
-  <constant name='kCIAttributeTypePosition' type='@'/>
-  <constant name='kCIAttributeTypePosition3' type='@'/>
-  <constant name='kCIAttributeTypeRectangle' type='@'/>
-  <constant name='kCIAttributeTypeScalar' type='@'/>
-  <constant name='kCIAttributeTypeTime' type='@'/>
-  <constant name='kCICategoryBlur' type='@'/>
-  <constant name='kCICategoryBuiltIn' type='@'/>
-  <constant name='kCICategoryColorAdjustment' type='@'/>
-  <constant name='kCICategoryColorEffect' type='@'/>
-  <constant name='kCICategoryCompositeOperation' type='@'/>
-  <constant name='kCICategoryDistortionEffect' type='@'/>
-  <constant name='kCICategoryGenerator' type='@'/>
-  <constant name='kCICategoryGeometryAdjustment' type='@'/>
-  <constant name='kCICategoryGradient' type='@'/>
-  <constant name='kCICategoryHalftoneEffect' type='@'/>
-  <constant name='kCICategoryHighDynamicRange' type='@'/>
-  <constant name='kCICategoryInterlaced' type='@'/>
-  <constant name='kCICategoryNonSquarePixels' type='@'/>
-  <constant name='kCICategorySharpen' type='@'/>
-  <constant name='kCICategoryStillImage' type='@'/>
-  <constant name='kCICategoryStylize' type='@'/>
-  <constant name='kCICategoryTileEffect' type='@'/>
-  <constant name='kCICategoryTransition' type='@'/>
-  <constant name='kCICategoryVideo' type='@'/>
-  <constant name='kCIContextOutputColorSpace' type='@'/>
-  <constant name='kCIContextUseSoftwareRenderer' type='@'/>
-  <constant name='kCIContextWorkingColorSpace' type='@'/>
-  <constant name='kCIFormatARGB8' type='i'/>
-  <constant name='kCIFormatRGBA16' type='i'/>
-  <constant name='kCIFormatRGBAf' type='i'/>
-  <constant name='kCIImageColorSpace' type='@'/>
-  <constant name='kCIImageProviderTileSize' type='@'/>
-  <constant name='kCIImageProviderUserInfo' type='@'/>
-  <constant name='kCISamplerAffineMatrix' type='@'/>
-  <constant name='kCISamplerFilterLinear' type='@'/>
-  <constant name='kCISamplerFilterMode' type='@'/>
-  <constant name='kCISamplerFilterNearest' type='@'/>
-  <constant name='kCISamplerWrapBlack' type='@'/>
-  <constant name='kCISamplerWrapClamp' type='@'/>
-  <constant name='kCISamplerWrapMode' type='@'/>
+  <constant name='kCIApplyOptionDefinition' declared_type='NSString*' type='@'/>
+  <constant name='kCIApplyOptionExtent' declared_type='NSString*' type='@'/>
+  <constant name='kCIApplyOptionUserInfo' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeClass' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeDefault' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeDisplayName' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeFilterCategories' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeFilterDisplayName' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeFilterName' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeIdentity' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeMax' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeMin' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeName' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeSliderMax' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeSliderMin' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeType' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeAngle' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeBoolean' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeDistance' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeGradient' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeOffset' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeOpaqueColor' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypePosition' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypePosition3' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeRectangle' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeScalar' declared_type='NSString*' type='@'/>
+  <constant name='kCIAttributeTypeTime' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryBlur' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryBuiltIn' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryColorAdjustment' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryColorEffect' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryCompositeOperation' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryDistortionEffect' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryGenerator' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryGeometryAdjustment' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryGradient' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryHalftoneEffect' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryHighDynamicRange' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryInterlaced' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryNonSquarePixels' declared_type='NSString*' type='@'/>
+  <constant name='kCICategorySharpen' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryStillImage' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryStylize' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryTileEffect' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryTransition' declared_type='NSString*' type='@'/>
+  <constant name='kCICategoryVideo' declared_type='NSString*' type='@'/>
+  <constant name='kCIContextOutputColorSpace' declared_type='NSString*' type='@'/>
+  <constant name='kCIContextUseSoftwareRenderer' declared_type='NSString*' type='@'/>
+  <constant name='kCIContextWorkingColorSpace' declared_type='NSString*' type='@'/>
+  <constant name='kCIFormatARGB8' declared_type='CIFormat' type='i'/>
+  <constant name='kCIFormatRGBA16' declared_type='CIFormat' type='i'/>
+  <constant name='kCIFormatRGBAf' declared_type='CIFormat' type='i'/>
+  <constant name='kCIImageColorSpace' declared_type='NSString*' type='@'/>
+  <constant name='kCIImageProviderTileSize' declared_type='NSString*' type='@'/>
+  <constant name='kCIImageProviderUserInfo' declared_type='NSString*' type='@'/>
+  <constant name='kCISamplerAffineMatrix' declared_type='NSString*' type='@'/>
+  <constant name='kCISamplerFilterLinear' declared_type='NSString*' type='@'/>
+  <constant name='kCISamplerFilterMode' declared_type='NSString*' type='@'/>
+  <constant name='kCISamplerFilterNearest' declared_type='NSString*' type='@'/>
+  <constant name='kCISamplerWrapBlack' declared_type='NSString*' type='@'/>
+  <constant name='kCISamplerWrapClamp' declared_type='NSString*' type='@'/>
+  <constant name='kCISamplerWrapMode' declared_type='NSString*' type='@'/>
+  <class name='CIColor'>
+    <method selector='alpha'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='blue'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='colorSpace'>
+      <retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+    </method>
+    <method class_method='true' selector='colorWithCGColor:'>
+      <arg name='c' declared_type='CGColorRef' type='^{CGColor=}' index='0'/>
+      <retval declared_type='CIColor*' type='@'/>
+    </method>
+    <method class_method='true' selector='colorWithRed:green:blue:'>
+      <arg name='r' declared_type='float' type='f' index='0'/>
+      <arg name='g' declared_type='float' type='f' index='1'/>
+      <arg name='b' declared_type='float' type='f' index='2'/>
+      <retval declared_type='CIColor*' type='@'/>
+    </method>
+    <method class_method='true' selector='colorWithRed:green:blue:alpha:'>
+      <arg name='r' declared_type='float' type='f' index='0'/>
+      <arg name='g' declared_type='float' type='f' index='1'/>
+      <arg name='b' declared_type='float' type='f' index='2'/>
+      <arg name='a' declared_type='float' type='f' index='3'/>
+      <retval declared_type='CIColor*' type='@'/>
+    </method>
+    <method class_method='true' selector='colorWithString:'>
+      <arg name='representation' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='CIColor*' type='@'/>
+    </method>
+    <method selector='components'>
+      <retval declared_type='float*' type='^f' const='true'/>
+    </method>
+    <method selector='green'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='initWithCGColor:'>
+      <arg name='c' declared_type='CGColorRef' type='^{CGColor=}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='numberOfComponents'>
+      <retval declared_type='size_t' type='L' type64='Q'/>
+    </method>
+    <method selector='red'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='stringRepresentation'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+  </class>
+  <class name='CIContext'>
+    <method selector='clearCaches'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method class_method='true' selector='contextWithCGContext:options:'>
+      <arg name='ctx' declared_type='CGContextRef' type='^{CGContext=}' index='0'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='CIContext*' type='@'/>
+    </method>
+    <method class_method='true' selector='contextWithCGLContext:pixelFormat:options:'>
+      <arg name='ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+      <arg name='pf' declared_type='CGLPixelFormatObj' type='^{_CGLPixelFormatObject=}' index='1'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='2'/>
+      <retval declared_type='CIContext*' type='@'/>
+    </method>
+    <method selector='createCGImage:fromRect:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1'/>
+      <retval declared_type='CGImageRef' type='^{CGImage=}'/>
+    </method>
+    <method selector='createCGLayerWithSize:info:'>
+      <arg name='size' declared_type='CGSize' type='{CGSize=ff}' index='0'/>
+      <arg name='d' declared_type='CFDictionaryRef' type='^{__CFDictionary=}' index='1'/>
+      <retval declared_type='CGLayerRef' type='^{CGLayer=}'/>
+    </method>
+    <method selector='drawImage:atPoint:fromRect:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='p' declared_type='CGPoint' type='{CGPoint=ff}' index='1'/>
+      <arg name='src' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='drawImage:inRect:fromRect:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='dest' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1'/>
+      <arg name='src' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='reclaimResources'>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='CIFilter'>
+    <method variadic='true' selector='apply:'>
+      <arg name='k' declared_type='CIKernel*' type='@' index='0'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method selector='apply:arguments:options:'>
+      <arg name='k' declared_type='CIKernel*' type='@' index='0'/>
+      <arg name='args' declared_type='NSArray*' type='@' index='1'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='2'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method selector='attributes'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method class_method='true' selector='filterNamesInCategories:'>
+      <arg name='categories' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='filterNamesInCategory:'>
+      <arg name='category' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='filterWithName:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='CIFilter*' type='@'/>
+    </method>
+    <method class_method='true' variadic='true' selector='filterWithName:keysAndValues:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <arg name='key0' declared_type='id' type='@' index='1'/>
+      <retval declared_type='CIFilter*' type='@'/>
+    </method>
+    <method selector='inputKeys'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='localizedNameForCategory:'>
+      <arg name='category' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method class_method='true' selector='localizedNameForFilterName:'>
+      <arg name='filterName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='outputKeys'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='registerFilterName:constructor:classAttributes:'>
+      <arg name='name' declared_type='NSString*' type='@' index='0'/>
+      <arg name='anObject' declared_type='id' type='@' index='1'/>
+      <arg name='attributes' declared_type='NSDictionary*' type='@' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDefaults'>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
   <class name='CIFilterShape'>
+    <method selector='initWithRect:'>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='insetByX:Y:'>
+      <arg name='dx' declared_type='int' type='i' index='0'/>
+      <arg name='dy' declared_type='int' type='i' index='1'/>
+      <retval declared_type='CIFilterShape*' type='@'/>
+    </method>
+    <method selector='intersectWith:'>
+      <arg name='s2' declared_type='CIFilterShape*' type='@' index='0'/>
+      <retval declared_type='CIFilterShape*' type='@'/>
+    </method>
+    <method selector='intersectWithRect:'>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0'/>
+      <retval declared_type='CIFilterShape*' type='@'/>
+    </method>
+    <method class_method='true' selector='shapeWithRect:'>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
     <method selector='transformBy:interior:'>
-      <arg type='B' index='1'/>
+      <arg name='m' declared_type='CGAffineTransform' type='{CGAffineTransform=ffffff}' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='CIFilterShape*' type='@'/>
+    </method>
+    <method selector='unionWith:'>
+      <arg name='s2' declared_type='CIFilterShape*' type='@' index='0'/>
+      <retval declared_type='CIFilterShape*' type='@'/>
+    </method>
+    <method selector='unionWithRect:'>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0'/>
+      <retval declared_type='CIFilterShape*' type='@'/>
     </method>
   </class>
   <class name='CIImage'>
+    <method selector='definition'>
+      <retval declared_type='CIFilterShape*' type='@'/>
+    </method>
+    <method selector='extent'>
+      <retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+    </method>
+    <method selector='imageByApplyingTransform:'>
+      <arg name='matrix' declared_type='CGAffineTransform' type='{CGAffineTransform=ffffff}' index='0'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithBitmapData:bytesPerRow:size:format:colorSpace:'>
+      <arg name='d' declared_type='NSData*' type='@' index='0'/>
+      <arg name='bpr' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <arg name='size' declared_type='CGSize' type='{CGSize=ff}' index='2'/>
+      <arg name='f' declared_type='CIFormat' type='i' index='3'/>
+      <arg name='cs' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='4'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithCGImage:'>
+      <arg name='image' declared_type='CGImageRef' type='^{CGImage=}' index='0'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithCGImage:options:'>
+      <arg name='image' declared_type='CGImageRef' type='^{CGImage=}' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithCGLayer:'>
+      <arg name='layer' declared_type='CGLayerRef' type='^{CGLayer=}' index='0'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithCGLayer:options:'>
+      <arg name='layer' declared_type='CGLayerRef' type='^{CGLayer=}' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithCVImageBuffer:'>
+      <arg name='imageBuffer' declared_type='CVImageBufferRef' type='^{__CVBuffer=}' index='0'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithCVImageBuffer:options:'>
+      <arg name='imageBuffer' declared_type='CVImageBufferRef' type='^{__CVBuffer=}' index='0'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithContentsOfURL:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithContentsOfURL:options:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithData:'>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithData:options:'>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageWithImageProvider:size::format:colorSpace:options:'>
+      <arg name='p' declared_type='id' type='@' index='0'/>
+      <arg name='width' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <arg name='height' declared_type='size_t' type='L' type64='Q' index='2'/>
+      <arg name='f' declared_type='CIFormat' type='i' index='3'/>
+      <arg name='cs' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='4'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='5'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
     <method class_method='true' selector='imageWithTexture:size:flipped:colorSpace:'>
-      <arg type='B' index='2'/>
+      <arg name='name' declared_type='unsigned int' type='I' index='0'/>
+      <arg name='size' declared_type='CGSize' type='{CGSize=ff}' index='1'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='2'/>
+      <arg name='cs' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='3'/>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method selector='initWithBitmapData:bytesPerRow:size:format:colorSpace:'>
+      <arg name='d' declared_type='NSData*' type='@' index='0'/>
+      <arg name='bpr' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <arg name='size' declared_type='CGSize' type='{CGSize=ff}' index='2'/>
+      <arg name='f' declared_type='CIFormat' type='i' index='3'/>
+      <arg name='c' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='4'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithCGImage:'>
+      <arg name='image' declared_type='CGImageRef' type='^{CGImage=}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithCGImage:options:'>
+      <arg name='image' declared_type='CGImageRef' type='^{CGImage=}' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithCGLayer:'>
+      <arg name='layer' declared_type='CGLayerRef' type='^{CGLayer=}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithCGLayer:options:'>
+      <arg name='layer' declared_type='CGLayerRef' type='^{CGLayer=}' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithCVImageBuffer:'>
+      <arg name='imageBuffer' declared_type='CVImageBufferRef' type='^{__CVBuffer=}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithCVImageBuffer:options:'>
+      <arg name='imageBuffer' declared_type='CVImageBufferRef' type='^{__CVBuffer=}' index='0'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithContentsOfURL:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithContentsOfURL:options:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithData:'>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithData:options:'>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <arg name='d' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithImageProvider:size::format:colorSpace:options:'>
+      <arg name='p' declared_type='id' type='@' index='0'/>
+      <arg name='width' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <arg name='height' declared_type='size_t' type='L' type64='Q' index='2'/>
+      <arg name='f' declared_type='CIFormat' type='i' index='3'/>
+      <arg name='cs' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='4'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='5'/>
+      <retval declared_type='id' type='@'/>
     </method>
     <method selector='initWithTexture:size:flipped:colorSpace:'>
-      <arg type='B' index='2'/>
+      <arg name='name' declared_type='unsigned int' type='I' index='0'/>
+      <arg name='size' declared_type='CGSize' type='{CGSize=ff}' index='1'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='2'/>
+      <arg name='cs' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='3'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+  </class>
+  <class name='CIImageAccumulator'>
+    <method selector='extent'>
+      <retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+    </method>
+    <method selector='format'>
+      <retval declared_type='CIFormat' type='i'/>
+    </method>
+    <method selector='image'>
+      <retval declared_type='CIImage*' type='@'/>
+    </method>
+    <method class_method='true' selector='imageAccumulatorWithExtent:format:'>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0'/>
+      <arg name='f' declared_type='CIFormat' type='i' index='1'/>
+      <retval declared_type='CIImageAccumulator*' type='@'/>
+    </method>
+    <method selector='initWithExtent:format:'>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0'/>
+      <arg name='f' declared_type='CIFormat' type='i' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='setImage:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setImage:dirtyRect:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='r' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='CIKernel'>
+    <method class_method='true' selector='kernelsWithString:'>
+      <arg name='s' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='name'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
     <method selector='setROISelector:'>
-      <arg sel_of_type='{CGRect={CGPoint=ff}{CGSize=ff}}32@0:4i8{CGRect={CGPoint=ff}{CGSize=ff}}12@28' index='0' sel_of_type64='{CGRect={CGPoint=ff}{CGSize=ff}}44@0:8i16{CGRect={CGPoint=ff}{CGSize=ff}}20@36'/>
+      <arg name='aMethod' sel_of_type='{CGRect={CGPoint=ff}{CGSize=ff}}32@0:4i8{CGRect={CGPoint=ff}{CGSize=ff}}12@28' declared_type='SEL' type=':' index='0' sel_of_type64='{CGRect={CGPoint=ff}{CGSize=ff}}44@0:8i16{CGRect={CGPoint=ff}{CGSize=ff}}20@36'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='CIPlugIn'>
+    <method class_method='true' selector='loadAllPlugIns'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method class_method='true' selector='loadNonExecutablePlugIns'>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method class_method='true' selector='loadPlugIn:allowNonExecutable:'>
-      <arg type='B' index='1'/>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <arg name='allowNonExecutable' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='CISampler'>
+    <method selector='definition'>
+      <retval declared_type='CIFilterShape*' type='@'/>
+    </method>
+    <method selector='extent'>
+      <retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+    </method>
+    <method selector='initWithImage:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method variadic='true' selector='initWithImage:keysAndValues:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='key0' declared_type='id' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithImage:options:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method class_method='true' selector='samplerWithImage:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <retval declared_type='CISampler*' type='@'/>
+    </method>
+    <method class_method='true' variadic='true' selector='samplerWithImage:keysAndValues:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='key0' declared_type='id' type='@' index='1'/>
+      <retval declared_type='CISampler*' type='@'/>
+    </method>
+    <method class_method='true' selector='samplerWithImage:options:'>
+      <arg name='im' declared_type='CIImage*' type='@' index='0'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='CISampler*' type='@'/>
     </method>
   </class>
   <class name='CIVector'>
+    <method selector='W'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='X'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='Y'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='Z'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='count'>
+      <retval declared_type='size_t' type='L' type64='Q'/>
+    </method>
     <method selector='initWithValues:count:'>
-      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg name='values' c_array_length_in_arg='1' declared_type='float*' type='^f' const='true' index='0' type_modifier='n'/>
+      <arg name='count' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithX:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithX:Y:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <arg name='y' declared_type='float' type='f' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithX:Y:Z:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <arg name='y' declared_type='float' type='f' index='1'/>
+      <arg name='z' declared_type='float' type='f' index='2'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithX:Y:Z:W:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <arg name='y' declared_type='float' type='f' index='1'/>
+      <arg name='z' declared_type='float' type='f' index='2'/>
+      <arg name='w' declared_type='float' type='f' index='3'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='stringRepresentation'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='valueAtIndex:'>
+      <arg name='index' declared_type='size_t' type='L' type64='Q' index='0'/>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method class_method='true' selector='vectorWithString:'>
+      <arg name='representation' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='CIVector*' type='@'/>
     </method>
     <method class_method='true' selector='vectorWithValues:count:'>
-      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg name='values' c_array_length_in_arg='1' declared_type='float*' type='^f' const='true' index='0' type_modifier='n'/>
+      <arg name='count' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <retval declared_type='CIVector*' type='@'/>
+    </method>
+    <method class_method='true' selector='vectorWithX:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <retval declared_type='CIVector*' type='@'/>
+    </method>
+    <method class_method='true' selector='vectorWithX:Y:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <arg name='y' declared_type='float' type='f' index='1'/>
+      <retval declared_type='CIVector*' type='@'/>
+    </method>
+    <method class_method='true' selector='vectorWithX:Y:Z:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <arg name='y' declared_type='float' type='f' index='1'/>
+      <arg name='z' declared_type='float' type='f' index='2'/>
+      <retval declared_type='CIVector*' type='@'/>
+    </method>
+    <method class_method='true' selector='vectorWithX:Y:Z:W:'>
+      <arg name='x' declared_type='float' type='f' index='0'/>
+      <arg name='y' declared_type='float' type='f' index='1'/>
+      <arg name='z' declared_type='float' type='f' index='2'/>
+      <arg name='w' declared_type='float' type='f' index='3'/>
+      <retval declared_type='CIVector*' type='@'/>
     </method>
   </class>
   <class name='NSObject'>
     <method selector='load:'>
-      <arg index='0' type_modifier='n'/>
-      <retval type='B'/>
+      <arg name='host' declared_type='void*' type='^v' index='0' type_modifier='n'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='provideImageData:bytesPerRow:origin::size::userInfo:'>
-      <arg index='0' type_modifier='n'/>
+      <arg name='data' declared_type='void*' type='^v' index='0' type_modifier='n'/>
+      <arg name='rowbytes' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <arg name='x' declared_type='size_t' type='L' type64='Q' index='2'/>
+      <arg name='y' declared_type='size_t' type='L' type64='Q' index='3'/>
+      <arg name='width' declared_type='size_t' type='L' type64='Q' index='4'/>
+      <arg name='height' declared_type='size_t' type='L' type64='Q' index='5'/>
+      <arg name='info' declared_type='id' type='@' index='6'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <informal_protocol name='CIImageProvider'>
-    <method type='v36@0:4^v8L12L16L20L24L28@32' type64='v72@0:8^v16Q24Q32Q40Q48Q56@64' selector='provideImageData:bytesPerRow:origin::size::userInfo:'/>
+    <method type='v36@0:4^v8L12L16L20L24L28@32' type64='v72@0:8^v16Q24Q32Q40Q48Q56@64' selector='provideImageData:bytesPerRow:origin::size::userInfo:'>
+      <arg name='data' declared_type='void*' type='^v' index='0' type_modifier='n'/>
+      <arg name='rowbytes' declared_type='size_t' type='L' type64='Q' index='1'/>
+      <arg name='x' declared_type='size_t' type='L' type64='Q' index='2'/>
+      <arg name='y' declared_type='size_t' type='L' type64='Q' index='3'/>
+      <arg name='width' declared_type='size_t' type='L' type64='Q' index='4'/>
+      <arg name='height' declared_type='size_t' type='L' type64='Q' index='5'/>
+      <arg name='info' declared_type='id' type='@' index='6'/>
+      <retval declared_type='void' type='v'/>
+    </method>
   </informal_protocol>
   <informal_protocol name='CIPlugInRegistration'>
-    <method type='B12@0:4^v8' type64='B24@0:8^v16' selector='load:'/>
+    <method type='B12@0:4^v8' type64='B24@0:8^v16' selector='load:'>
+      <arg name='host' declared_type='void*' type='^v' index='0' type_modifier='n'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
   </informal_protocol>
 </signatures>

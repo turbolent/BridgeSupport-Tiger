@@ -1,120 +1,617 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
-  <struct name='ATSFontFilter' type='{ATSFontFilter=&quot;version&quot;I&quot;filterSelector&quot;i&quot;filter&quot;(?=&quot;generationFilter&quot;I&quot;fontFamilyFilter&quot;I&quot;fontFamilyApplierFunctionFilter&quot;^?&quot;fontApplierFunctionFilter&quot;^?)}'/>
-  <struct name='ATSFontMetrics' type='{ATSFontMetrics=&quot;version&quot;I&quot;ascent&quot;f&quot;descent&quot;f&quot;leading&quot;f&quot;avgAdvanceWidth&quot;f&quot;maxAdvanceWidth&quot;f&quot;minLeftSideBearing&quot;f&quot;minRightSideBearing&quot;f&quot;stemWidth&quot;f&quot;stemHeight&quot;f&quot;capHeight&quot;f&quot;xHeight&quot;f&quot;italicAngle&quot;f&quot;underlinePosition&quot;f&quot;underlineThickness&quot;f}'/>
-  <struct name='ATSFontQuerySourceContext' type='{ATSFontQuerySourceContext=&quot;version&quot;I&quot;refCon&quot;^v&quot;retain&quot;^?&quot;release&quot;^?}'/>
-  <struct name='ATSGlyphIdealMetrics' type='{ATSGlyphIdealMetrics=&quot;advance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}'/>
-  <struct name='ATSGlyphScreenMetrics' type='{ATSGlyphScreenMetrics=&quot;deviceAdvance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;topLeft&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;height&quot;I&quot;width&quot;I&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}'/>
-  <struct name='ATSJustWidthDeltaEntryOverride' type='{ATSJustWidthDeltaEntryOverride=&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}'/>
-  <struct name='ATSLayoutRecord' type='{ATSLayoutRecord=&quot;glyphID&quot;S&quot;flags&quot;I&quot;originalOffset&quot;I&quot;realPos&quot;i}'/>
-  <struct name='ATSTrapezoid' type='{ATSTrapezoid=&quot;upperLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;upperRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}}'/>
-  <struct name='ATSUCurvePath' type='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}' type64='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}'/>
-  <struct name='ATSUCurvePaths' type='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]}' type64='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]}'/>
-  <struct name='ATSULayoutOperationOverrideSpecifier' type='{ATSULayoutOperationOverrideSpecifier=&quot;operationSelector&quot;I&quot;overrideUPP&quot;^?}'/>
-  <struct name='BslnFormat0Part' type='{BslnFormat0Part=&quot;deltas&quot;[32s]}'/>
-  <struct name='BslnFormat1Part' type='{BslnFormat1Part=&quot;deltas&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='BslnFormat2Part' type='{BslnFormat2Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]}'/>
-  <struct name='BslnFormat3Part' type='{BslnFormat3Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='BslnTable' type='{BslnTable=&quot;version&quot;i&quot;format&quot;S&quot;defaultBaseline&quot;S&quot;parts&quot;(BslnFormatUnion=&quot;fmt0Part&quot;{BslnFormat0Part=&quot;deltas&quot;[32s]}&quot;fmt1Part&quot;{BslnFormat1Part=&quot;deltas&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;fmt2Part&quot;{BslnFormat2Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]}&quot;fmt3Part&quot;{BslnFormat3Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}})}'/>
-  <struct name='FMFilter' type='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]})}' type64='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]})}'/>
-  <struct name='FMFontDirectoryFilter' type='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]}' type64='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]}'/>
-  <struct name='FMFontFamilyInstance' type='{FMFontFamilyInstance=&quot;fontFamily&quot;s&quot;fontStyle&quot;s}'/>
-  <struct name='FMFontFamilyInstanceIterator' type='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16L]}' type64='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16I]}'/>
-  <struct name='FMFontFamilyIterator' type='{FMFontFamilyIterator=&quot;reserved&quot;[16L]}' type64='{FMFontFamilyIterator=&quot;reserved&quot;[16I]}'/>
-  <struct name='FMFontIterator' type='{FMFontIterator=&quot;reserved&quot;[16L]}' type64='{FMFontIterator=&quot;reserved&quot;[16I]}'/>
-  <struct name='FontVariation' type='{FontVariation=&quot;name&quot;I&quot;value&quot;i}'/>
-  <struct name='JustDirectionTable' type='{JustDirectionTable=&quot;justClass&quot;S&quot;widthDeltaClusters&quot;S&quot;postcomp&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='JustPCAction' type='{JustPCAction=&quot;actionCount&quot;I&quot;actions&quot;[1{JustPCActionSubrecord=&quot;theClass&quot;S&quot;theType&quot;S&quot;length&quot;I&quot;data&quot;I}]}'/>
-  <struct name='JustPCActionSubrecord' type='{JustPCActionSubrecord=&quot;theClass&quot;S&quot;theType&quot;S&quot;length&quot;I&quot;data&quot;I}'/>
-  <struct name='JustPCConditionalAddAction' type='{JustPCConditionalAddAction=&quot;substThreshhold&quot;i&quot;addGlyph&quot;S&quot;substGlyph&quot;S}'/>
-  <struct name='JustPCDecompositionAction' type='{JustPCDecompositionAction=&quot;lowerLimit&quot;i&quot;upperLimit&quot;i&quot;order&quot;S&quot;count&quot;S&quot;glyphs&quot;[1S]}'/>
-  <struct name='JustPCDuctilityAction' type='{JustPCDuctilityAction=&quot;ductilityAxis&quot;I&quot;minimumLimit&quot;i&quot;noStretchValue&quot;i&quot;maximumLimit&quot;i}'/>
-  <struct name='JustPCGlyphRepeatAddAction' type='{JustPCGlyphRepeatAddAction=&quot;flags&quot;S&quot;glyph&quot;S}'/>
-  <struct name='JustPostcompTable' type='{JustPostcompTable=&quot;lookupTable&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='JustTable' type='{JustTable=&quot;version&quot;i&quot;format&quot;S&quot;horizHeaderOffset&quot;S&quot;vertHeaderOffset&quot;S}'/>
-  <struct name='JustWidthDeltaEntry' type='{JustWidthDeltaEntry=&quot;justClass&quot;I&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}'/>
-  <struct name='JustWidthDeltaGroup' type='{JustWidthDeltaGroup=&quot;count&quot;I&quot;entries&quot;[1{JustWidthDeltaEntry=&quot;justClass&quot;I&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}]}'/>
-  <struct name='KernIndexArrayHeader' type='{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]}'/>
-  <struct name='KernKerningPair' type='{KernKerningPair=&quot;left&quot;S&quot;right&quot;S}'/>
-  <struct name='KernOffsetTable' type='{KernOffsetTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;offsetTable&quot;[1S]}'/>
-  <struct name='KernOrderedListEntry' type='{KernOrderedListEntry=&quot;pair&quot;{KernKerningPair=&quot;left&quot;S&quot;right&quot;S}&quot;value&quot;s}'/>
-  <struct name='KernOrderedListHeader' type='{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}'/>
-  <struct name='KernSimpleArrayHeader' type='{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}'/>
-  <struct name='KernStateEntry' type='{KernStateEntry=&quot;newState&quot;S&quot;flags&quot;S}'/>
-  <struct name='KernStateHeader' type='{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}'/>
-  <struct name='KernSubtableHeader' type='{KernSubtableHeader=&quot;length&quot;i&quot;stInfo&quot;S&quot;tupleIndex&quot;s&quot;fsHeader&quot;(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})}'/>
-  <struct name='KernTableHeader' type='{KernTableHeader=&quot;version&quot;i&quot;nTables&quot;i&quot;firstSubtable&quot;[1S]}'/>
-  <struct name='KernVersion0Header' type='{KernVersion0Header=&quot;version&quot;S&quot;nTables&quot;S&quot;firstSubtable&quot;[1S]}'/>
-  <struct name='KernVersion0SubtableHeader' type='{KernVersion0SubtableHeader=&quot;version&quot;S&quot;length&quot;S&quot;stInfo&quot;S&quot;fsHeader&quot;(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})}'/>
-  <struct name='LcarCaretClassEntry' type='{LcarCaretClassEntry=&quot;count&quot;S&quot;partials&quot;[1S]}'/>
-  <struct name='LcarCaretTable' type='{LcarCaretTable=&quot;version&quot;i&quot;format&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='MortChain' type='{MortChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;S&quot;nSubtables&quot;S&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}'/>
-  <struct name='MortContextualSubtable' type='{MortContextualSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;substitutionTableOffset&quot;S}'/>
-  <struct name='MortFeatureEntry' type='{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}'/>
-  <struct name='MortInsertionSubtable' type='{MortInsertionSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}'/>
-  <struct name='MortLigatureSubtable' type='{MortLigatureSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;ligatureActionTableOffset&quot;S&quot;componentTableOffset&quot;S&quot;ligatureTableOffset&quot;S}'/>
-  <struct name='MortRearrangementSubtable' type='{MortRearrangementSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}'/>
-  <struct name='MortSubtable' type='{MortSubtable=&quot;length&quot;S&quot;coverage&quot;S&quot;flags&quot;I&quot;u&quot;(MortSpecificSubtable=&quot;rearrangement&quot;{MortRearrangementSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}&quot;contextual&quot;{MortContextualSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;substitutionTableOffset&quot;S}&quot;ligature&quot;{MortLigatureSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;ligatureActionTableOffset&quot;S&quot;componentTableOffset&quot;S&quot;ligatureTableOffset&quot;S}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MortInsertionSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}})}'/>
-  <struct name='MortSwashSubtable' type='{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='MortTable' type='{MortTable=&quot;version&quot;i&quot;nChains&quot;I&quot;chains&quot;[1{MortChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;S&quot;nSubtables&quot;S&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]}'/>
-  <struct name='MorxChain' type='{MorxChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;I&quot;nSubtables&quot;I&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}'/>
-  <struct name='MorxContextualSubtable' type='{MorxContextualSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;substitutionTableOffset&quot;I}'/>
-  <struct name='MorxInsertionSubtable' type='{MorxInsertionSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;insertionGlyphTableOffset&quot;I}'/>
-  <struct name='MorxLigatureSubtable' type='{MorxLigatureSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;ligatureActionTableOffset&quot;I&quot;componentTableOffset&quot;I&quot;ligatureTableOffset&quot;I}'/>
-  <struct name='MorxRearrangementSubtable' type='{MorxRearrangementSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}}'/>
-  <struct name='MorxSubtable' type='{MorxSubtable=&quot;length&quot;I&quot;coverage&quot;I&quot;flags&quot;I&quot;u&quot;(MorxSpecificSubtable=&quot;rearrangement&quot;{MorxRearrangementSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}}&quot;contextual&quot;{MorxContextualSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;substitutionTableOffset&quot;I}&quot;ligature&quot;{MorxLigatureSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;ligatureActionTableOffset&quot;I&quot;componentTableOffset&quot;I&quot;ligatureTableOffset&quot;I}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MorxInsertionSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;insertionGlyphTableOffset&quot;I})}'/>
-  <struct name='MorxTable' type='{MorxTable=&quot;version&quot;i&quot;nChains&quot;I&quot;chains&quot;[1{MorxChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;I&quot;nSubtables&quot;I&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]}'/>
-  <struct name='OpbdSideValues' type='{OpbdSideValues=&quot;leftSideShift&quot;s&quot;topSideShift&quot;s&quot;rightSideShift&quot;s&quot;bottomSideShift&quot;s}'/>
-  <struct name='OpbdTable' type='{OpbdTable=&quot;version&quot;i&quot;format&quot;S&quot;lookupTable&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='PropLookupSegment' type='{PropLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;S}'/>
-  <struct name='PropLookupSingle' type='{PropLookupSingle=&quot;glyph&quot;S&quot;props&quot;S}'/>
-  <struct name='PropTable' type='{PropTable=&quot;version&quot;i&quot;format&quot;S&quot;defaultProps&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'/>
-  <struct name='SFNTLookupArrayHeader' type='{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}'/>
-  <struct name='SFNTLookupBinarySearchHeader' type='{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}'/>
-  <struct name='SFNTLookupSegment' type='{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}'/>
-  <struct name='SFNTLookupSegmentHeader' type='{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}'/>
-  <struct name='SFNTLookupSingle' type='{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}'/>
-  <struct name='SFNTLookupSingleHeader' type='{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}'/>
-  <struct name='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
-  <struct name='SFNTLookupTrimmedArrayHeader' type='{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]}'/>
-  <struct name='STClassTable' type='{STClassTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;classes&quot;[1C]}'/>
-  <struct name='STEntryOne' type='{STEntryOne=&quot;newState&quot;S&quot;flags&quot;S&quot;offset1&quot;S}'/>
-  <struct name='STEntryTwo' type='{STEntryTwo=&quot;newState&quot;S&quot;flags&quot;S&quot;offset1&quot;S&quot;offset2&quot;S}'/>
-  <struct name='STEntryZero' type='{STEntryZero=&quot;newState&quot;S&quot;flags&quot;S}'/>
-  <struct name='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'/>
-  <struct name='STXClassTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
-  <struct name='STXEntryOne' type='{STXEntryOne=&quot;newState&quot;S&quot;flags&quot;S&quot;index1&quot;S}'/>
-  <struct name='STXEntryTwo' type='{STXEntryTwo=&quot;newState&quot;S&quot;flags&quot;S&quot;index1&quot;S&quot;index2&quot;S}'/>
-  <struct name='STXEntryZero' type='{STXEntryZero=&quot;newState&quot;S&quot;flags&quot;S}'/>
-  <struct name='STXHeader' type='{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}'/>
-  <struct name='TrakTable' type='{TrakTable=&quot;version&quot;i&quot;format&quot;S&quot;horizOffset&quot;S&quot;vertOffset&quot;S}'/>
-  <struct name='TrakTableData' type='{TrakTableData=&quot;nTracks&quot;S&quot;nSizes&quot;S&quot;sizeTableOffset&quot;I&quot;trakTable&quot;[1{TrakTableEntry=&quot;track&quot;i&quot;nameTableIndex&quot;S&quot;sizesOffset&quot;S}]}'/>
-  <struct name='TrakTableEntry' type='{TrakTableEntry=&quot;track&quot;i&quot;nameTableIndex&quot;S&quot;sizesOffset&quot;S}'/>
-  <struct name='scalerPrerequisiteItem' type='{scalerPrerequisiteItem=&quot;enumeration&quot;l&quot;size&quot;l&quot;name&quot;[1C]}' type64='{scalerPrerequisiteItem=&quot;enumeration&quot;q&quot;size&quot;q&quot;name&quot;[1C]}'/>
-  <struct name='scalerStream' type='{scalerStream=&quot;streamRefCon&quot;^v&quot;targetVersion&quot;*&quot;types&quot;I&quot;action&quot;i&quot;memorySize&quot;L&quot;variationCount&quot;l&quot;variations&quot;^v&quot;info&quot;(?=&quot;font&quot;{?=&quot;encoding&quot;^S&quot;glyphBits&quot;^l&quot;name&quot;*}&quot;prerequisiteQuery&quot;{?=&quot;size&quot;l&quot;list&quot;^v}&quot;prerequisiteItem&quot;l&quot;variationQueryResult&quot;l)}' type64='{scalerStream=&quot;streamRefCon&quot;^v&quot;targetVersion&quot;*&quot;types&quot;Q&quot;action&quot;q&quot;memorySize&quot;Q&quot;variationCount&quot;q&quot;variations&quot;^v&quot;info&quot;(?=&quot;font&quot;{?=&quot;encoding&quot;^S&quot;glyphBits&quot;^q&quot;name&quot;*}&quot;prerequisiteQuery&quot;{?=&quot;size&quot;q&quot;list&quot;^v}&quot;prerequisiteItem&quot;q&quot;variationQueryResult&quot;q)}'/>
-  <struct name='scalerStreamData' type='{scalerStreamData=&quot;hexFlag&quot;l&quot;byteCount&quot;l&quot;data&quot;^v}' type64='{scalerStreamData=&quot;hexFlag&quot;q&quot;byteCount&quot;q&quot;data&quot;^v}'/>
-  <struct name='sfntCMapEncoding' type='{sfntCMapEncoding=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;offset&quot;I}'/>
-  <struct name='sfntCMapExtendedSubHeader' type='{sfntCMapExtendedSubHeader=&quot;format&quot;S&quot;reserved&quot;S&quot;length&quot;I&quot;language&quot;I}'/>
-  <struct name='sfntCMapHeader' type='{sfntCMapHeader=&quot;version&quot;S&quot;numTables&quot;S&quot;encoding&quot;[1{sfntCMapEncoding=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;offset&quot;I}]}'/>
-  <struct name='sfntCMapSubHeader' type='{sfntCMapSubHeader=&quot;format&quot;S&quot;length&quot;S&quot;languageID&quot;S}'/>
-  <struct name='sfntDescriptorHeader' type='{sfntDescriptorHeader=&quot;version&quot;i&quot;descriptorCount&quot;i&quot;descriptor&quot;[1{sfntFontDescriptor=&quot;name&quot;I&quot;value&quot;i}]}'/>
-  <struct name='sfntDirectory' type='{sfntDirectory=&quot;format&quot;I&quot;numOffsets&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1{sfntDirectoryEntry=&quot;tableTag&quot;I&quot;checkSum&quot;I&quot;offset&quot;I&quot;length&quot;I}]}'/>
-  <struct name='sfntDirectoryEntry' type='{sfntDirectoryEntry=&quot;tableTag&quot;I&quot;checkSum&quot;I&quot;offset&quot;I&quot;length&quot;I}'/>
-  <struct name='sfntFeatureHeader' type='{sfntFeatureHeader=&quot;version&quot;i&quot;featureNameCount&quot;S&quot;featureSetCount&quot;S&quot;reserved&quot;i&quot;names&quot;[1{sfntFeatureName=&quot;featureType&quot;S&quot;settingCount&quot;S&quot;offsetToSettings&quot;i&quot;featureFlags&quot;S&quot;nameID&quot;S}]&quot;settings&quot;[1{sfntFontFeatureSetting=&quot;setting&quot;S&quot;nameID&quot;S}]&quot;runs&quot;[1{sfntFontRunFeature=&quot;featureType&quot;S&quot;setting&quot;S}]}'/>
-  <struct name='sfntFeatureName' type='{sfntFeatureName=&quot;featureType&quot;S&quot;settingCount&quot;S&quot;offsetToSettings&quot;i&quot;featureFlags&quot;S&quot;nameID&quot;S}'/>
-  <struct name='sfntFontDescriptor' type='{sfntFontDescriptor=&quot;name&quot;I&quot;value&quot;i}'/>
-  <struct name='sfntFontFeatureSetting' type='{sfntFontFeatureSetting=&quot;setting&quot;S&quot;nameID&quot;S}'/>
-  <struct name='sfntFontRunFeature' type='{sfntFontRunFeature=&quot;featureType&quot;S&quot;setting&quot;S}'/>
-  <struct name='sfntInstance' type='{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1l]}' type64='{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1i]}'/>
-  <struct name='sfntNameHeader' type='{sfntNameHeader=&quot;format&quot;S&quot;count&quot;S&quot;stringOffset&quot;S&quot;rec&quot;[1{sfntNameRecord=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;languageID&quot;S&quot;nameID&quot;S&quot;length&quot;S&quot;offset&quot;S}]}'/>
-  <struct name='sfntNameRecord' type='{sfntNameRecord=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;languageID&quot;S&quot;nameID&quot;S&quot;length&quot;S&quot;offset&quot;S}'/>
-  <struct name='sfntVariationAxis' type='{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}'/>
-  <struct name='sfntVariationHeader' type='{sfntVariationHeader=&quot;version&quot;i&quot;offsetToData&quot;S&quot;countSizePairs&quot;S&quot;axisCount&quot;S&quot;axisSize&quot;S&quot;instanceCount&quot;S&quot;instanceSize&quot;S&quot;axis&quot;[1{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}]&quot;instance&quot;[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1l]}]}' type64='{sfntVariationHeader=&quot;version&quot;i&quot;offsetToData&quot;S&quot;countSizePairs&quot;S&quot;axisCount&quot;S&quot;axisSize&quot;S&quot;instanceCount&quot;S&quot;instanceSize&quot;S&quot;axis&quot;[1{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}]&quot;instance&quot;[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1i]}]}'/>
+  <struct name='ATSFontFilter' type='{ATSFontFilter=&quot;version&quot;I&quot;filterSelector&quot;i&quot;filter&quot;(?=&quot;generationFilter&quot;I&quot;fontFamilyFilter&quot;I&quot;fontFamilyApplierFunctionFilter&quot;^?&quot;fontApplierFunctionFilter&quot;^?)}'>
+    <field name='version' declared_type='UInt32' type='L' type64='I'/>
+    <field name='filterSelector' declared_type='ATSFontFilterSelector' type='i'/>
+    <field name='filter' declared_type='union ATSFontFilter::' type='(?=&quot;generationFilter&quot;I&quot;fontFamilyFilter&quot;I&quot;fontFamilyApplierFunctionFilter&quot;^?&quot;fontApplierFunctionFilter&quot;^?)'/>
+  </struct>
+  <struct name='ATSFontMetrics' type='{ATSFontMetrics=&quot;version&quot;I&quot;ascent&quot;f&quot;descent&quot;f&quot;leading&quot;f&quot;avgAdvanceWidth&quot;f&quot;maxAdvanceWidth&quot;f&quot;minLeftSideBearing&quot;f&quot;minRightSideBearing&quot;f&quot;stemWidth&quot;f&quot;stemHeight&quot;f&quot;capHeight&quot;f&quot;xHeight&quot;f&quot;italicAngle&quot;f&quot;underlinePosition&quot;f&quot;underlineThickness&quot;f}'>
+    <field name='version' declared_type='UInt32' type='L' type64='I'/>
+    <field name='ascent' declared_type='Float32' type='f'/>
+    <field name='descent' declared_type='Float32' type='f'/>
+    <field name='leading' declared_type='Float32' type='f'/>
+    <field name='avgAdvanceWidth' declared_type='Float32' type='f'/>
+    <field name='maxAdvanceWidth' declared_type='Float32' type='f'/>
+    <field name='minLeftSideBearing' declared_type='Float32' type='f'/>
+    <field name='minRightSideBearing' declared_type='Float32' type='f'/>
+    <field name='stemWidth' declared_type='Float32' type='f'/>
+    <field name='stemHeight' declared_type='Float32' type='f'/>
+    <field name='capHeight' declared_type='Float32' type='f'/>
+    <field name='xHeight' declared_type='Float32' type='f'/>
+    <field name='italicAngle' declared_type='Float32' type='f'/>
+    <field name='underlinePosition' declared_type='Float32' type='f'/>
+    <field name='underlineThickness' declared_type='Float32' type='f'/>
+  </struct>
+  <struct name='ATSFontQuerySourceContext' type='{ATSFontQuerySourceContext=&quot;version&quot;I&quot;refCon&quot;^v&quot;retain&quot;^?&quot;release&quot;^?}'>
+    <field name='version' declared_type='UInt32' type='L' type64='I'/>
+    <field name='refCon' declared_type='void*' type='^v'/>
+    <field name='retain' function_pointer='true' declared_type='CFAllocatorRetainCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void*' type='^v' const='true'/>
+    </field>
+    <field name='release' function_pointer='true' declared_type='CFAllocatorReleaseCallBack' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+  </struct>
+  <struct name='ATSGlyphIdealMetrics' type='{ATSGlyphIdealMetrics=&quot;advance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}'>
+    <field name='advance' declared_type='Float32Point' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+    <field name='sideBearing' declared_type='Float32Point' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+    <field name='otherSideBearing' declared_type='Float32Point' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+  </struct>
+  <struct name='ATSGlyphScreenMetrics' type='{ATSGlyphScreenMetrics=&quot;deviceAdvance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;topLeft&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;height&quot;I&quot;width&quot;I&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}'>
+    <field name='deviceAdvance' declared_type='Float32Point' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+    <field name='topLeft' declared_type='Float32Point' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+    <field name='height' declared_type='UInt32' type='L' type64='I'/>
+    <field name='width' declared_type='UInt32' type='L' type64='I'/>
+    <field name='sideBearing' declared_type='Float32Point' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+    <field name='otherSideBearing' declared_type='Float32Point' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}'/>
+  </struct>
+  <struct name='ATSJustWidthDeltaEntryOverride' type='{ATSJustWidthDeltaEntryOverride=&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}'>
+    <field name='beforeGrowLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='beforeShrinkLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='afterGrowLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='afterShrinkLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='growFlags' declared_type='JustificationFlags' type='S'/>
+    <field name='shrinkFlags' declared_type='JustificationFlags' type='S'/>
+  </struct>
+  <struct name='ATSLayoutRecord' type='{ATSLayoutRecord=&quot;glyphID&quot;S&quot;flags&quot;I&quot;originalOffset&quot;I&quot;realPos&quot;i}'>
+    <field name='glyphID' declared_type='ATSGlyphRef' type='S'/>
+    <field name='flags' declared_type='ATSGlyphInfoFlags' type='L' type64='I'/>
+    <field name='originalOffset' declared_type='ByteCount' type='L' type64='I'/>
+    <field name='realPos' declared_type='Fixed' type='l' type64='i'/>
+  </struct>
+  <struct name='ATSTrapezoid' type='{ATSTrapezoid=&quot;upperLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;upperRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}}'>
+    <field name='upperLeft' declared_type='FixedPoint' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+    <field name='upperRight' declared_type='FixedPoint' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+    <field name='lowerRight' declared_type='FixedPoint' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+    <field name='lowerLeft' declared_type='FixedPoint' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+  </struct>
+  <struct name='ATSUCurvePath' type='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}' type64='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}'>
+    <field name='vectors' declared_type='UInt32' type='L' type64='I'/>
+    <field name='controlBits' declared_type='UInt32*' type='[1L]' type64='[1I]'/>
+    <field name='vector' declared_type='Float32Point*' type='[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]'/>
+  </struct>
+  <struct name='ATSUCurvePaths' type='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]}' type64='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]}'>
+    <field name='contours' declared_type='UInt32' type='L' type64='I'/>
+    <field name='contour' declared_type='ATSUCurvePath*' type='[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]' type64='[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]'/>
+  </struct>
+  <struct name='ATSULayoutOperationOverrideSpecifier' type='{ATSULayoutOperationOverrideSpecifier=&quot;operationSelector&quot;I&quot;overrideUPP&quot;^?}'>
+    <field name='operationSelector' declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+    <field name='overrideUPP' function_pointer='true' declared_type='ATSUDirectLayoutOperationOverrideUPP' type='^?'>
+      <arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+      <arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
+    </field>
+  </struct>
+  <struct name='BslnFormat0Part' type='{BslnFormat0Part=&quot;deltas&quot;[32s]}'>
+    <field name='deltas' declared_type='SInt16*' type='[32s]'/>
+  </struct>
+  <struct name='BslnFormat1Part' type='{BslnFormat1Part=&quot;deltas&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='deltas' declared_type='SInt16*' type='[32s]'/>
+    <field name='mappingData' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='BslnFormat2Part' type='{BslnFormat2Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]}'>
+    <field name='stdGlyph' declared_type='UInt16' type='S'/>
+    <field name='ctlPoints' declared_type='SInt16*' type='[32s]'/>
+  </struct>
+  <struct name='BslnFormat3Part' type='{BslnFormat3Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='stdGlyph' declared_type='UInt16' type='S'/>
+    <field name='ctlPoints' declared_type='SInt16*' type='[32s]'/>
+    <field name='mappingData' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='BslnTable' type='{BslnTable=&quot;version&quot;i&quot;format&quot;S&quot;defaultBaseline&quot;S&quot;parts&quot;(BslnFormatUnion=&quot;fmt0Part&quot;{BslnFormat0Part=&quot;deltas&quot;[32s]}&quot;fmt1Part&quot;{BslnFormat1Part=&quot;deltas&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;fmt2Part&quot;{BslnFormat2Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]}&quot;fmt3Part&quot;{BslnFormat3Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}})}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='format' declared_type='BslnTableFormat' type='S'/>
+    <field name='defaultBaseline' declared_type='UInt16' type='S'/>
+    <field name='parts' declared_type='BslnFormatUnion' type='(BslnFormatUnion=&quot;fmt0Part&quot;{BslnFormat0Part=&quot;deltas&quot;[32s]}&quot;fmt1Part&quot;{BslnFormat1Part=&quot;deltas&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;fmt2Part&quot;{BslnFormat2Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]}&quot;fmt3Part&quot;{BslnFormat3Part=&quot;stdGlyph&quot;S&quot;ctlPoints&quot;[32s]&quot;mappingData&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}})'/>
+  </struct>
+  <struct name='FMFilter' type='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]})}' type64='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]})}'>
+    <field name='format' declared_type='UInt32' type='L' type64='I'/>
+    <field name='selector' declared_type='FMFilterSelector' type='L' type64='I'/>
+    <field name='filter' declared_type='union FMFilter::' type='(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]})' type64='(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]})'/>
+  </struct>
+  <struct name='FMFontDirectoryFilter' type='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]}' type64='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]}'>
+    <field name='fontFolderDomain' declared_type='SInt16' type='s'/>
+    <field name='reserved' declared_type='UInt32*' type='[2L]' type64='[2I]'/>
+  </struct>
+  <struct name='FMFontFamilyInstance' type='{FMFontFamilyInstance=&quot;fontFamily&quot;s&quot;fontStyle&quot;s}'>
+    <field name='fontFamily' declared_type='FMFontFamily' type='s'/>
+    <field name='fontStyle' declared_type='FMFontStyle' type='s'/>
+  </struct>
+  <struct name='FMFontFamilyInstanceIterator' type='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16L]}' type64='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16I]}'>
+    <field name='reserved' declared_type='UInt32*' type='[16L]' type64='[16I]'/>
+  </struct>
+  <struct name='FMFontFamilyIterator' type='{FMFontFamilyIterator=&quot;reserved&quot;[16L]}' type64='{FMFontFamilyIterator=&quot;reserved&quot;[16I]}'>
+    <field name='reserved' declared_type='UInt32*' type='[16L]' type64='[16I]'/>
+  </struct>
+  <struct name='FMFontIterator' type='{FMFontIterator=&quot;reserved&quot;[16L]}' type64='{FMFontIterator=&quot;reserved&quot;[16I]}'>
+    <field name='reserved' declared_type='UInt32*' type='[16L]' type64='[16I]'/>
+  </struct>
+  <struct name='FontVariation' type='{FontVariation=&quot;name&quot;I&quot;value&quot;i}'>
+    <field name='name' declared_type='FourCharCode' type='L' type64='I'/>
+    <field name='value' declared_type='Fixed' type='l' type64='i'/>
+  </struct>
+  <struct name='JustDirectionTable' type='{JustDirectionTable=&quot;justClass&quot;S&quot;widthDeltaClusters&quot;S&quot;postcomp&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='justClass' declared_type='UInt16' type='S'/>
+    <field name='widthDeltaClusters' declared_type='UInt16' type='S'/>
+    <field name='postcomp' declared_type='UInt16' type='S'/>
+    <field name='lookup' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='JustPCAction' type='{JustPCAction=&quot;actionCount&quot;I&quot;actions&quot;[1{JustPCActionSubrecord=&quot;theClass&quot;S&quot;theType&quot;S&quot;length&quot;I&quot;data&quot;I}]}'>
+    <field name='actionCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='actions' declared_type='JustPCActionSubrecord*' type='[1{JustPCActionSubrecord=&quot;theClass&quot;S&quot;theType&quot;S&quot;length&quot;I&quot;data&quot;I}]'/>
+  </struct>
+  <struct name='JustPCActionSubrecord' type='{JustPCActionSubrecord=&quot;theClass&quot;S&quot;theType&quot;S&quot;length&quot;I&quot;data&quot;I}'>
+    <field name='theClass' declared_type='UInt16' type='S'/>
+    <field name='theType' declared_type='JustPCActionType' type='S'/>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+    <field name='data' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='JustPCConditionalAddAction' type='{JustPCConditionalAddAction=&quot;substThreshhold&quot;i&quot;addGlyph&quot;S&quot;substGlyph&quot;S}'>
+    <field name='substThreshhold' declared_type='Fixed' type='l' type64='i'/>
+    <field name='addGlyph' declared_type='UInt16' type='S'/>
+    <field name='substGlyph' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='JustPCDecompositionAction' type='{JustPCDecompositionAction=&quot;lowerLimit&quot;i&quot;upperLimit&quot;i&quot;order&quot;S&quot;count&quot;S&quot;glyphs&quot;[1S]}'>
+    <field name='lowerLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='upperLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='order' declared_type='UInt16' type='S'/>
+    <field name='count' declared_type='UInt16' type='S'/>
+    <field name='glyphs' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='JustPCDuctilityAction' type='{JustPCDuctilityAction=&quot;ductilityAxis&quot;I&quot;minimumLimit&quot;i&quot;noStretchValue&quot;i&quot;maximumLimit&quot;i}'>
+    <field name='ductilityAxis' declared_type='UInt32' type='L' type64='I'/>
+    <field name='minimumLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='noStretchValue' declared_type='Fixed' type='l' type64='i'/>
+    <field name='maximumLimit' declared_type='Fixed' type='l' type64='i'/>
+  </struct>
+  <struct name='JustPCGlyphRepeatAddAction' type='{JustPCGlyphRepeatAddAction=&quot;flags&quot;S&quot;glyph&quot;S}'>
+    <field name='flags' declared_type='UInt16' type='S'/>
+    <field name='glyph' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='JustPostcompTable' type='{JustPostcompTable=&quot;lookupTable&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='lookupTable' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='JustTable' type='{JustTable=&quot;version&quot;i&quot;format&quot;S&quot;horizHeaderOffset&quot;S&quot;vertHeaderOffset&quot;S}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='format' declared_type='UInt16' type='S'/>
+    <field name='horizHeaderOffset' declared_type='UInt16' type='S'/>
+    <field name='vertHeaderOffset' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='JustWidthDeltaEntry' type='{JustWidthDeltaEntry=&quot;justClass&quot;I&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}'>
+    <field name='justClass' declared_type='UInt32' type='L' type64='I'/>
+    <field name='beforeGrowLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='beforeShrinkLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='afterGrowLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='afterShrinkLimit' declared_type='Fixed' type='l' type64='i'/>
+    <field name='growFlags' declared_type='JustificationFlags' type='S'/>
+    <field name='shrinkFlags' declared_type='JustificationFlags' type='S'/>
+  </struct>
+  <struct name='JustWidthDeltaGroup' type='{JustWidthDeltaGroup=&quot;count&quot;I&quot;entries&quot;[1{JustWidthDeltaEntry=&quot;justClass&quot;I&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}]}'>
+    <field name='count' declared_type='UInt32' type='L' type64='I'/>
+    <field name='entries' declared_type='JustWidthDeltaEntry*' type='[1{JustWidthDeltaEntry=&quot;justClass&quot;I&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}]'/>
+  </struct>
+  <struct name='KernIndexArrayHeader' type='{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]}'>
+    <field name='glyphCount' declared_type='UInt16' type='S'/>
+    <field name='kernValueCount' declared_type='UInt8' type='C'/>
+    <field name='leftClassCount' declared_type='UInt8' type='C'/>
+    <field name='rightClassCount' declared_type='UInt8' type='C'/>
+    <field name='flags' declared_type='UInt8' type='C'/>
+    <field name='kernValue' declared_type='SInt16*' type='[1s]'/>
+    <field name='leftClass' declared_type='UInt8*' type='[1C]'/>
+    <field name='rightClass' declared_type='UInt8*' type='[1C]'/>
+    <field name='kernIndex' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='KernKerningPair' type='{KernKerningPair=&quot;left&quot;S&quot;right&quot;S}'>
+    <field name='left' declared_type='UInt16' type='S'/>
+    <field name='right' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='KernOffsetTable' type='{KernOffsetTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;offsetTable&quot;[1S]}'>
+    <field name='firstGlyph' declared_type='UInt16' type='S'/>
+    <field name='nGlyphs' declared_type='UInt16' type='S'/>
+    <field name='offsetTable' declared_type='KernArrayOffset*' type='[1S]'/>
+  </struct>
+  <struct name='KernOrderedListEntry' type='{KernOrderedListEntry=&quot;pair&quot;{KernKerningPair=&quot;left&quot;S&quot;right&quot;S}&quot;value&quot;s}'>
+    <field name='pair' declared_type='KernKerningPair' type='{KernKerningPair=&quot;left&quot;S&quot;right&quot;S}'/>
+    <field name='value' declared_type='KernKerningValue' type='s'/>
+  </struct>
+  <struct name='KernOrderedListHeader' type='{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}'>
+    <field name='nPairs' declared_type='UInt16' type='S'/>
+    <field name='searchRange' declared_type='UInt16' type='S'/>
+    <field name='entrySelector' declared_type='UInt16' type='S'/>
+    <field name='rangeShift' declared_type='UInt16' type='S'/>
+    <field name='table' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='KernSimpleArrayHeader' type='{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}'>
+    <field name='rowWidth' declared_type='UInt16' type='S'/>
+    <field name='leftOffsetTable' declared_type='UInt16' type='S'/>
+    <field name='rightOffsetTable' declared_type='UInt16' type='S'/>
+    <field name='theArray' declared_type='KernArrayOffset' type='S'/>
+    <field name='firstTable' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='KernStateEntry' type='{KernStateEntry=&quot;newState&quot;S&quot;flags&quot;S}'>
+    <field name='newState' declared_type='UInt16' type='S'/>
+    <field name='flags' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='KernStateHeader' type='{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}'>
+    <field name='header' declared_type='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'/>
+    <field name='valueTable' declared_type='UInt16' type='S'/>
+    <field name='firstTable' declared_type='UInt8*' type='[1C]'/>
+  </struct>
+  <struct name='KernSubtableHeader' type='{KernSubtableHeader=&quot;length&quot;i&quot;stInfo&quot;S&quot;tupleIndex&quot;s&quot;fsHeader&quot;(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})}'>
+    <field name='length' declared_type='SInt32' type='l' type64='i'/>
+    <field name='stInfo' declared_type='KernSubtableInfo' type='S'/>
+    <field name='tupleIndex' declared_type='SInt16' type='s'/>
+    <field name='fsHeader' declared_type='KernFormatSpecificHeader' type='(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})'/>
+  </struct>
+  <struct name='KernTableHeader' type='{KernTableHeader=&quot;version&quot;i&quot;nTables&quot;i&quot;firstSubtable&quot;[1S]}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='nTables' declared_type='SInt32' type='l' type64='i'/>
+    <field name='firstSubtable' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='KernVersion0Header' type='{KernVersion0Header=&quot;version&quot;S&quot;nTables&quot;S&quot;firstSubtable&quot;[1S]}'>
+    <field name='version' declared_type='UInt16' type='S'/>
+    <field name='nTables' declared_type='UInt16' type='S'/>
+    <field name='firstSubtable' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='KernVersion0SubtableHeader' type='{KernVersion0SubtableHeader=&quot;version&quot;S&quot;length&quot;S&quot;stInfo&quot;S&quot;fsHeader&quot;(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})}'>
+    <field name='version' declared_type='UInt16' type='S'/>
+    <field name='length' declared_type='UInt16' type='S'/>
+    <field name='stInfo' declared_type='KernSubtableInfo' type='S'/>
+    <field name='fsHeader' declared_type='KernFormatSpecificHeader' type='(KernFormatSpecificHeader=&quot;orderedList&quot;{KernOrderedListHeader=&quot;nPairs&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1S]}&quot;stateTable&quot;{KernStateHeader=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;valueTable&quot;S&quot;firstTable&quot;[1C]}&quot;simpleArray&quot;{KernSimpleArrayHeader=&quot;rowWidth&quot;S&quot;leftOffsetTable&quot;S&quot;rightOffsetTable&quot;S&quot;theArray&quot;S&quot;firstTable&quot;[1S]}&quot;indexArray&quot;{KernIndexArrayHeader=&quot;glyphCount&quot;S&quot;kernValueCount&quot;C&quot;leftClassCount&quot;C&quot;rightClassCount&quot;C&quot;flags&quot;C&quot;kernValue&quot;[1s]&quot;leftClass&quot;[1C]&quot;rightClass&quot;[1C]&quot;kernIndex&quot;[1C]})'/>
+  </struct>
+  <struct name='LcarCaretClassEntry' type='{LcarCaretClassEntry=&quot;count&quot;S&quot;partials&quot;[1S]}'>
+    <field name='count' declared_type='UInt16' type='S'/>
+    <field name='partials' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='LcarCaretTable' type='{LcarCaretTable=&quot;version&quot;i&quot;format&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='format' declared_type='UInt16' type='S'/>
+    <field name='lookup' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='MortChain' type='{MortChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;S&quot;nSubtables&quot;S&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}'>
+    <field name='defaultFlags' declared_type='MortSubtableMaskFlags' type='L' type64='I'/>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+    <field name='nFeatures' declared_type='UInt16' type='S'/>
+    <field name='nSubtables' declared_type='UInt16' type='S'/>
+    <field name='featureEntries' declared_type='MortFeatureEntry*' type='[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]'/>
+  </struct>
+  <struct name='MortContextualSubtable' type='{MortContextualSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;substitutionTableOffset&quot;S}'>
+    <field name='header' declared_type='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'/>
+    <field name='substitutionTableOffset' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='MortFeatureEntry' type='{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}'>
+    <field name='featureType' declared_type='UInt16' type='S'/>
+    <field name='featureSelector' declared_type='UInt16' type='S'/>
+    <field name='enableFlags' declared_type='MortSubtableMaskFlags' type='L' type64='I'/>
+    <field name='disableFlags' declared_type='MortSubtableMaskFlags' type='L' type64='I'/>
+  </struct>
+  <struct name='MortInsertionSubtable' type='{MortInsertionSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}'>
+    <field name='header' declared_type='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'/>
+  </struct>
+  <struct name='MortLigatureSubtable' type='{MortLigatureSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;ligatureActionTableOffset&quot;S&quot;componentTableOffset&quot;S&quot;ligatureTableOffset&quot;S}'>
+    <field name='header' declared_type='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'/>
+    <field name='ligatureActionTableOffset' declared_type='UInt16' type='S'/>
+    <field name='componentTableOffset' declared_type='UInt16' type='S'/>
+    <field name='ligatureTableOffset' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='MortRearrangementSubtable' type='{MortRearrangementSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}'>
+    <field name='header' declared_type='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'/>
+  </struct>
+  <struct name='MortSubtable' type='{MortSubtable=&quot;length&quot;S&quot;coverage&quot;S&quot;flags&quot;I&quot;u&quot;(MortSpecificSubtable=&quot;rearrangement&quot;{MortRearrangementSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}&quot;contextual&quot;{MortContextualSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;substitutionTableOffset&quot;S}&quot;ligature&quot;{MortLigatureSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;ligatureActionTableOffset&quot;S&quot;componentTableOffset&quot;S&quot;ligatureTableOffset&quot;S}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MortInsertionSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}})}'>
+    <field name='length' declared_type='UInt16' type='S'/>
+    <field name='coverage' declared_type='UInt16' type='S'/>
+    <field name='flags' declared_type='MortSubtableMaskFlags' type='L' type64='I'/>
+    <field name='u' declared_type='MortSpecificSubtable' type='(MortSpecificSubtable=&quot;rearrangement&quot;{MortRearrangementSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}}&quot;contextual&quot;{MortContextualSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;substitutionTableOffset&quot;S}&quot;ligature&quot;{MortLigatureSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}&quot;ligatureActionTableOffset&quot;S&quot;componentTableOffset&quot;S&quot;ligatureTableOffset&quot;S}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MortInsertionSubtable=&quot;header&quot;{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}})'/>
+  </struct>
+  <struct name='MortSwashSubtable' type='{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='lookup' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='MortTable' type='{MortTable=&quot;version&quot;i&quot;nChains&quot;I&quot;chains&quot;[1{MortChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;S&quot;nSubtables&quot;S&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='nChains' declared_type='UInt32' type='L' type64='I'/>
+    <field name='chains' declared_type='MortChain*' type='[1{MortChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;S&quot;nSubtables&quot;S&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]'/>
+  </struct>
+  <struct name='MorxChain' type='{MorxChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;I&quot;nSubtables&quot;I&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}'>
+    <field name='defaultFlags' declared_type='MortSubtableMaskFlags' type='L' type64='I'/>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+    <field name='nFeatures' declared_type='UInt32' type='L' type64='I'/>
+    <field name='nSubtables' declared_type='UInt32' type='L' type64='I'/>
+    <field name='featureEntries' declared_type='MortFeatureEntry*' type='[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]'/>
+  </struct>
+  <struct name='MorxContextualSubtable' type='{MorxContextualSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;substitutionTableOffset&quot;I}'>
+    <field name='header' declared_type='STXHeader' type='{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}'/>
+    <field name='substitutionTableOffset' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='MorxInsertionSubtable' type='{MorxInsertionSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;insertionGlyphTableOffset&quot;I}'>
+    <field name='header' declared_type='STXHeader' type='{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}'/>
+    <field name='insertionGlyphTableOffset' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='MorxLigatureSubtable' type='{MorxLigatureSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;ligatureActionTableOffset&quot;I&quot;componentTableOffset&quot;I&quot;ligatureTableOffset&quot;I}'>
+    <field name='header' declared_type='STXHeader' type='{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}'/>
+    <field name='ligatureActionTableOffset' declared_type='UInt32' type='L' type64='I'/>
+    <field name='componentTableOffset' declared_type='UInt32' type='L' type64='I'/>
+    <field name='ligatureTableOffset' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='MorxRearrangementSubtable' type='{MorxRearrangementSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}}'>
+    <field name='header' declared_type='STXHeader' type='{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}'/>
+  </struct>
+  <struct name='MorxSubtable' type='{MorxSubtable=&quot;length&quot;I&quot;coverage&quot;I&quot;flags&quot;I&quot;u&quot;(MorxSpecificSubtable=&quot;rearrangement&quot;{MorxRearrangementSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}}&quot;contextual&quot;{MorxContextualSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;substitutionTableOffset&quot;I}&quot;ligature&quot;{MorxLigatureSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;ligatureActionTableOffset&quot;I&quot;componentTableOffset&quot;I&quot;ligatureTableOffset&quot;I}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MorxInsertionSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;insertionGlyphTableOffset&quot;I})}'>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+    <field name='coverage' declared_type='UInt32' type='L' type64='I'/>
+    <field name='flags' declared_type='MortSubtableMaskFlags' type='L' type64='I'/>
+    <field name='u' declared_type='MorxSpecificSubtable' type='(MorxSpecificSubtable=&quot;rearrangement&quot;{MorxRearrangementSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}}&quot;contextual&quot;{MorxContextualSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;substitutionTableOffset&quot;I}&quot;ligature&quot;{MorxLigatureSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;ligatureActionTableOffset&quot;I&quot;componentTableOffset&quot;I&quot;ligatureTableOffset&quot;I}&quot;swash&quot;{MortSwashSubtable=&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}&quot;insertion&quot;{MorxInsertionSubtable=&quot;header&quot;{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}&quot;insertionGlyphTableOffset&quot;I})'/>
+  </struct>
+  <struct name='MorxTable' type='{MorxTable=&quot;version&quot;i&quot;nChains&quot;I&quot;chains&quot;[1{MorxChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;I&quot;nSubtables&quot;I&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='nChains' declared_type='UInt32' type='L' type64='I'/>
+    <field name='chains' declared_type='MorxChain*' type='[1{MorxChain=&quot;defaultFlags&quot;I&quot;length&quot;I&quot;nFeatures&quot;I&quot;nSubtables&quot;I&quot;featureEntries&quot;[1{MortFeatureEntry=&quot;featureType&quot;S&quot;featureSelector&quot;S&quot;enableFlags&quot;I&quot;disableFlags&quot;I}]}]'/>
+  </struct>
+  <struct name='OpbdSideValues' type='{OpbdSideValues=&quot;leftSideShift&quot;s&quot;topSideShift&quot;s&quot;rightSideShift&quot;s&quot;bottomSideShift&quot;s}'>
+    <field name='leftSideShift' declared_type='SInt16' type='s'/>
+    <field name='topSideShift' declared_type='SInt16' type='s'/>
+    <field name='rightSideShift' declared_type='SInt16' type='s'/>
+    <field name='bottomSideShift' declared_type='SInt16' type='s'/>
+  </struct>
+  <struct name='OpbdTable' type='{OpbdTable=&quot;version&quot;i&quot;format&quot;S&quot;lookupTable&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='format' declared_type='OpbdTableFormat' type='S'/>
+    <field name='lookupTable' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='PropLookupSegment' type='{PropLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;S}'>
+    <field name='lastGlyph' declared_type='UInt16' type='S'/>
+    <field name='firstGlyph' declared_type='UInt16' type='S'/>
+    <field name='value' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='PropLookupSingle' type='{PropLookupSingle=&quot;glyph&quot;S&quot;props&quot;S}'>
+    <field name='glyph' declared_type='UInt16' type='S'/>
+    <field name='props' declared_type='PropCharProperties' type='S'/>
+  </struct>
+  <struct name='PropTable' type='{PropTable=&quot;version&quot;i&quot;format&quot;S&quot;defaultProps&quot;S&quot;lookup&quot;{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='format' declared_type='UInt16' type='S'/>
+    <field name='defaultProps' declared_type='PropCharProperties' type='S'/>
+    <field name='lookup' declared_type='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'/>
+  </struct>
+  <struct name='SFNTLookupArrayHeader' type='{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}'>
+    <field name='lookupValues' declared_type='SFNTLookupValue*' type='[1S]'/>
+  </struct>
+  <struct name='SFNTLookupBinarySearchHeader' type='{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}'>
+    <field name='unitSize' declared_type='UInt16' type='S'/>
+    <field name='nUnits' declared_type='UInt16' type='S'/>
+    <field name='searchRange' declared_type='UInt16' type='S'/>
+    <field name='entrySelector' declared_type='UInt16' type='S'/>
+    <field name='rangeShift' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='SFNTLookupSegment' type='{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}'>
+    <field name='lastGlyph' declared_type='UInt16' type='S'/>
+    <field name='firstGlyph' declared_type='UInt16' type='S'/>
+    <field name='value' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='SFNTLookupSegmentHeader' type='{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}'>
+    <field name='binSearch' declared_type='SFNTLookupBinarySearchHeader' type='{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}'/>
+    <field name='segments' declared_type='SFNTLookupSegment*' type='[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]'/>
+  </struct>
+  <struct name='SFNTLookupSingle' type='{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}'>
+    <field name='glyph' declared_type='UInt16' type='S'/>
+    <field name='value' declared_type='UInt16*' type='[1S]'/>
+  </struct>
+  <struct name='SFNTLookupSingleHeader' type='{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}'>
+    <field name='binSearch' declared_type='SFNTLookupBinarySearchHeader' type='{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}'/>
+    <field name='entries' declared_type='SFNTLookupSingle*' type='[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]'/>
+  </struct>
+  <struct name='SFNTLookupTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'>
+    <field name='format' declared_type='SFNTLookupTableFormat' type='S'/>
+    <field name='fsHeader' declared_type='SFNTLookupFormatSpecificHeader' type='(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})'/>
+  </struct>
+  <struct name='SFNTLookupTrimmedArrayHeader' type='{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]}'>
+    <field name='firstGlyph' declared_type='UInt16' type='S'/>
+    <field name='count' declared_type='UInt16' type='S'/>
+    <field name='valueArray' declared_type='SFNTLookupValue*' type='[1S]'/>
+  </struct>
+  <struct name='STClassTable' type='{STClassTable=&quot;firstGlyph&quot;S&quot;nGlyphs&quot;S&quot;classes&quot;[1C]}'>
+    <field name='firstGlyph' declared_type='UInt16' type='S'/>
+    <field name='nGlyphs' declared_type='UInt16' type='S'/>
+    <field name='classes' declared_type='STClass*' type='[1C]'/>
+  </struct>
+  <struct name='STEntryOne' type='{STEntryOne=&quot;newState&quot;S&quot;flags&quot;S&quot;offset1&quot;S}'>
+    <field name='newState' declared_type='UInt16' type='S'/>
+    <field name='flags' declared_type='UInt16' type='S'/>
+    <field name='offset1' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='STEntryTwo' type='{STEntryTwo=&quot;newState&quot;S&quot;flags&quot;S&quot;offset1&quot;S&quot;offset2&quot;S}'>
+    <field name='newState' declared_type='UInt16' type='S'/>
+    <field name='flags' declared_type='UInt16' type='S'/>
+    <field name='offset1' declared_type='UInt16' type='S'/>
+    <field name='offset2' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='STEntryZero' type='{STEntryZero=&quot;newState&quot;S&quot;flags&quot;S}'>
+    <field name='newState' declared_type='UInt16' type='S'/>
+    <field name='flags' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='STHeader' type='{STHeader=&quot;filler&quot;C&quot;nClasses&quot;C&quot;classTableOffset&quot;S&quot;stateArrayOffset&quot;S&quot;entryTableOffset&quot;S}'>
+    <field name='filler' declared_type='UInt8' type='C'/>
+    <field name='nClasses' declared_type='STClass' type='C'/>
+    <field name='classTableOffset' declared_type='UInt16' type='S'/>
+    <field name='stateArrayOffset' declared_type='UInt16' type='S'/>
+    <field name='entryTableOffset' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='STXClassTable' type='{SFNTLookupTable=&quot;format&quot;S&quot;fsHeader&quot;(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})}'>
+    <field name='format' declared_type='SFNTLookupTableFormat' type='S'/>
+    <field name='fsHeader' declared_type='SFNTLookupFormatSpecificHeader' type='(SFNTLookupFormatSpecificHeader=&quot;theArray&quot;{SFNTLookupArrayHeader=&quot;lookupValues&quot;[1S]}&quot;segment&quot;{SFNTLookupSegmentHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;segments&quot;[1{SFNTLookupSegment=&quot;lastGlyph&quot;S&quot;firstGlyph&quot;S&quot;value&quot;[1S]}]}&quot;single&quot;{SFNTLookupSingleHeader=&quot;binSearch&quot;{SFNTLookupBinarySearchHeader=&quot;unitSize&quot;S&quot;nUnits&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S}&quot;entries&quot;[1{SFNTLookupSingle=&quot;glyph&quot;S&quot;value&quot;[1S]}]}&quot;trimmedArray&quot;{SFNTLookupTrimmedArrayHeader=&quot;firstGlyph&quot;S&quot;count&quot;S&quot;valueArray&quot;[1S]})'/>
+  </struct>
+  <struct name='STXEntryOne' type='{STXEntryOne=&quot;newState&quot;S&quot;flags&quot;S&quot;index1&quot;S}'>
+    <field name='newState' declared_type='STXStateIndex' type='S'/>
+    <field name='flags' declared_type='UInt16' type='S'/>
+    <field name='index1' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='STXEntryTwo' type='{STXEntryTwo=&quot;newState&quot;S&quot;flags&quot;S&quot;index1&quot;S&quot;index2&quot;S}'>
+    <field name='newState' declared_type='STXStateIndex' type='S'/>
+    <field name='flags' declared_type='UInt16' type='S'/>
+    <field name='index1' declared_type='UInt16' type='S'/>
+    <field name='index2' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='STXEntryZero' type='{STXEntryZero=&quot;newState&quot;S&quot;flags&quot;S}'>
+    <field name='newState' declared_type='STXStateIndex' type='S'/>
+    <field name='flags' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='STXHeader' type='{STXHeader=&quot;nClasses&quot;I&quot;classTableOffset&quot;I&quot;stateArrayOffset&quot;I&quot;entryTableOffset&quot;I}'>
+    <field name='nClasses' declared_type='UInt32' type='L' type64='I'/>
+    <field name='classTableOffset' declared_type='UInt32' type='L' type64='I'/>
+    <field name='stateArrayOffset' declared_type='UInt32' type='L' type64='I'/>
+    <field name='entryTableOffset' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='TrakTable' type='{TrakTable=&quot;version&quot;i&quot;format&quot;S&quot;horizOffset&quot;S&quot;vertOffset&quot;S}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='format' declared_type='UInt16' type='S'/>
+    <field name='horizOffset' declared_type='UInt16' type='S'/>
+    <field name='vertOffset' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='TrakTableData' type='{TrakTableData=&quot;nTracks&quot;S&quot;nSizes&quot;S&quot;sizeTableOffset&quot;I&quot;trakTable&quot;[1{TrakTableEntry=&quot;track&quot;i&quot;nameTableIndex&quot;S&quot;sizesOffset&quot;S}]}'>
+    <field name='nTracks' declared_type='UInt16' type='S'/>
+    <field name='nSizes' declared_type='UInt16' type='S'/>
+    <field name='sizeTableOffset' declared_type='UInt32' type='L' type64='I'/>
+    <field name='trakTable' declared_type='TrakTableEntry*' type='[1{TrakTableEntry=&quot;track&quot;i&quot;nameTableIndex&quot;S&quot;sizesOffset&quot;S}]'/>
+  </struct>
+  <struct name='TrakTableEntry' type='{TrakTableEntry=&quot;track&quot;i&quot;nameTableIndex&quot;S&quot;sizesOffset&quot;S}'>
+    <field name='track' declared_type='Fixed' type='l' type64='i'/>
+    <field name='nameTableIndex' declared_type='UInt16' type='S'/>
+    <field name='sizesOffset' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='scalerPrerequisiteItem' type='{scalerPrerequisiteItem=&quot;enumeration&quot;l&quot;size&quot;l&quot;name&quot;[1C]}' type64='{scalerPrerequisiteItem=&quot;enumeration&quot;q&quot;size&quot;q&quot;name&quot;[1C]}'>
+    <field name='enumeration' declared_type='long' type='l' type64='q'/>
+    <field name='size' declared_type='long' type='l' type64='q'/>
+    <field name='name' declared_type='unsigned char*' type='[1C]'/>
+  </struct>
+  <struct name='scalerStream' type='{scalerStream=&quot;streamRefCon&quot;^v&quot;targetVersion&quot;*&quot;types&quot;I&quot;action&quot;i&quot;memorySize&quot;L&quot;variationCount&quot;l&quot;variations&quot;^v&quot;info&quot;(?=&quot;font&quot;{?=&quot;encoding&quot;^S&quot;glyphBits&quot;^l&quot;name&quot;*}&quot;prerequisiteQuery&quot;{?=&quot;size&quot;l&quot;list&quot;^v}&quot;prerequisiteItem&quot;l&quot;variationQueryResult&quot;l)}' type64='{scalerStream=&quot;streamRefCon&quot;^v&quot;targetVersion&quot;*&quot;types&quot;Q&quot;action&quot;q&quot;memorySize&quot;Q&quot;variationCount&quot;q&quot;variations&quot;^v&quot;info&quot;(?=&quot;font&quot;{?=&quot;encoding&quot;^S&quot;glyphBits&quot;^q&quot;name&quot;*}&quot;prerequisiteQuery&quot;{?=&quot;size&quot;q&quot;list&quot;^v}&quot;prerequisiteItem&quot;q&quot;variationQueryResult&quot;q)}'>
+    <field name='streamRefCon' declared_type='void*' type='^v' const='true'/>
+    <field name='targetVersion' declared_type='char*' type='*' const='true'/>
+    <field name='types' declared_type='scalerStreamTypeFlag' type='L' type64='Q'/>
+    <field name='action' declared_type='scalerStreamAction' type='l' type64='q'/>
+    <field name='memorySize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='variationCount' declared_type='long' type='l' type64='q'/>
+    <field name='variations' declared_type='void*' type='^v' const='true'/>
+    <field name='info' declared_type='union scalerStream::' type='(?=&quot;font&quot;{?=&quot;encoding&quot;^S&quot;glyphBits&quot;^l&quot;name&quot;*}&quot;prerequisiteQuery&quot;{?=&quot;size&quot;l&quot;list&quot;^v}&quot;prerequisiteItem&quot;l&quot;variationQueryResult&quot;l)' type64='(?=&quot;font&quot;{?=&quot;encoding&quot;^S&quot;glyphBits&quot;^q&quot;name&quot;*}&quot;prerequisiteQuery&quot;{?=&quot;size&quot;q&quot;list&quot;^v}&quot;prerequisiteItem&quot;q&quot;variationQueryResult&quot;q)'/>
+  </struct>
+  <struct name='scalerStreamData' type='{scalerStreamData=&quot;hexFlag&quot;l&quot;byteCount&quot;l&quot;data&quot;^v}' type64='{scalerStreamData=&quot;hexFlag&quot;q&quot;byteCount&quot;q&quot;data&quot;^v}'>
+    <field name='hexFlag' declared_type='long' type='l' type64='q'/>
+    <field name='byteCount' declared_type='long' type='l' type64='q'/>
+    <field name='data' declared_type='void*' type='^v' const='true'/>
+  </struct>
+  <struct name='sfntCMapEncoding' type='{sfntCMapEncoding=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;offset&quot;I}'>
+    <field name='platformID' declared_type='UInt16' type='S'/>
+    <field name='scriptID' declared_type='UInt16' type='S'/>
+    <field name='offset' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='sfntCMapExtendedSubHeader' type='{sfntCMapExtendedSubHeader=&quot;format&quot;S&quot;reserved&quot;S&quot;length&quot;I&quot;language&quot;I}'>
+    <field name='format' declared_type='UInt16' type='S'/>
+    <field name='reserved' declared_type='UInt16' type='S'/>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+    <field name='language' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='sfntCMapHeader' type='{sfntCMapHeader=&quot;version&quot;S&quot;numTables&quot;S&quot;encoding&quot;[1{sfntCMapEncoding=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;offset&quot;I}]}'>
+    <field name='version' declared_type='UInt16' type='S'/>
+    <field name='numTables' declared_type='UInt16' type='S'/>
+    <field name='encoding' declared_type='sfntCMapEncoding*' type='[1{sfntCMapEncoding=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;offset&quot;I}]'/>
+  </struct>
+  <struct name='sfntCMapSubHeader' type='{sfntCMapSubHeader=&quot;format&quot;S&quot;length&quot;S&quot;languageID&quot;S}'>
+    <field name='format' declared_type='UInt16' type='S'/>
+    <field name='length' declared_type='UInt16' type='S'/>
+    <field name='languageID' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='sfntDescriptorHeader' type='{sfntDescriptorHeader=&quot;version&quot;i&quot;descriptorCount&quot;i&quot;descriptor&quot;[1{sfntFontDescriptor=&quot;name&quot;I&quot;value&quot;i}]}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='descriptorCount' declared_type='SInt32' type='l' type64='i'/>
+    <field name='descriptor' declared_type='sfntFontDescriptor*' type='[1{sfntFontDescriptor=&quot;name&quot;I&quot;value&quot;i}]'/>
+  </struct>
+  <struct name='sfntDirectory' type='{sfntDirectory=&quot;format&quot;I&quot;numOffsets&quot;S&quot;searchRange&quot;S&quot;entrySelector&quot;S&quot;rangeShift&quot;S&quot;table&quot;[1{sfntDirectoryEntry=&quot;tableTag&quot;I&quot;checkSum&quot;I&quot;offset&quot;I&quot;length&quot;I}]}'>
+    <field name='format' declared_type='FourCharCode' type='L' type64='I'/>
+    <field name='numOffsets' declared_type='UInt16' type='S'/>
+    <field name='searchRange' declared_type='UInt16' type='S'/>
+    <field name='entrySelector' declared_type='UInt16' type='S'/>
+    <field name='rangeShift' declared_type='UInt16' type='S'/>
+    <field name='table' declared_type='sfntDirectoryEntry*' type='[1{sfntDirectoryEntry=&quot;tableTag&quot;I&quot;checkSum&quot;I&quot;offset&quot;I&quot;length&quot;I}]'/>
+  </struct>
+  <struct name='sfntDirectoryEntry' type='{sfntDirectoryEntry=&quot;tableTag&quot;I&quot;checkSum&quot;I&quot;offset&quot;I&quot;length&quot;I}'>
+    <field name='tableTag' declared_type='FourCharCode' type='L' type64='I'/>
+    <field name='checkSum' declared_type='UInt32' type='L' type64='I'/>
+    <field name='offset' declared_type='UInt32' type='L' type64='I'/>
+    <field name='length' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='sfntFeatureHeader' type='{sfntFeatureHeader=&quot;version&quot;i&quot;featureNameCount&quot;S&quot;featureSetCount&quot;S&quot;reserved&quot;i&quot;names&quot;[1{sfntFeatureName=&quot;featureType&quot;S&quot;settingCount&quot;S&quot;offsetToSettings&quot;i&quot;featureFlags&quot;S&quot;nameID&quot;S}]&quot;settings&quot;[1{sfntFontFeatureSetting=&quot;setting&quot;S&quot;nameID&quot;S}]&quot;runs&quot;[1{sfntFontRunFeature=&quot;featureType&quot;S&quot;setting&quot;S}]}'>
+    <field name='version' declared_type='SInt32' type='l' type64='i'/>
+    <field name='featureNameCount' declared_type='UInt16' type='S'/>
+    <field name='featureSetCount' declared_type='UInt16' type='S'/>
+    <field name='reserved' declared_type='SInt32' type='l' type64='i'/>
+    <field name='names' declared_type='sfntFeatureName*' type='[1{sfntFeatureName=&quot;featureType&quot;S&quot;settingCount&quot;S&quot;offsetToSettings&quot;i&quot;featureFlags&quot;S&quot;nameID&quot;S}]'/>
+    <field name='settings' declared_type='sfntFontFeatureSetting*' type='[1{sfntFontFeatureSetting=&quot;setting&quot;S&quot;nameID&quot;S}]'/>
+    <field name='runs' declared_type='sfntFontRunFeature*' type='[1{sfntFontRunFeature=&quot;featureType&quot;S&quot;setting&quot;S}]'/>
+  </struct>
+  <struct name='sfntFeatureName' type='{sfntFeatureName=&quot;featureType&quot;S&quot;settingCount&quot;S&quot;offsetToSettings&quot;i&quot;featureFlags&quot;S&quot;nameID&quot;S}'>
+    <field name='featureType' declared_type='UInt16' type='S'/>
+    <field name='settingCount' declared_type='UInt16' type='S'/>
+    <field name='offsetToSettings' declared_type='SInt32' type='l' type64='i'/>
+    <field name='featureFlags' declared_type='UInt16' type='S'/>
+    <field name='nameID' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='sfntFontDescriptor' type='{sfntFontDescriptor=&quot;name&quot;I&quot;value&quot;i}'>
+    <field name='name' declared_type='FourCharCode' type='L' type64='I'/>
+    <field name='value' declared_type='Fixed' type='l' type64='i'/>
+  </struct>
+  <struct name='sfntFontFeatureSetting' type='{sfntFontFeatureSetting=&quot;setting&quot;S&quot;nameID&quot;S}'>
+    <field name='setting' declared_type='UInt16' type='S'/>
+    <field name='nameID' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='sfntFontRunFeature' type='{sfntFontRunFeature=&quot;featureType&quot;S&quot;setting&quot;S}'>
+    <field name='featureType' declared_type='UInt16' type='S'/>
+    <field name='setting' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='sfntInstance' type='{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1l]}' type64='{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1i]}'>
+    <field name='nameID' declared_type='SInt16' type='s'/>
+    <field name='flags' declared_type='SInt16' type='s'/>
+    <field name='coord' declared_type='Fixed*' type='[1l]' type64='[1i]'/>
+  </struct>
+  <struct name='sfntNameHeader' type='{sfntNameHeader=&quot;format&quot;S&quot;count&quot;S&quot;stringOffset&quot;S&quot;rec&quot;[1{sfntNameRecord=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;languageID&quot;S&quot;nameID&quot;S&quot;length&quot;S&quot;offset&quot;S}]}'>
+    <field name='format' declared_type='UInt16' type='S'/>
+    <field name='count' declared_type='UInt16' type='S'/>
+    <field name='stringOffset' declared_type='UInt16' type='S'/>
+    <field name='rec' declared_type='sfntNameRecord*' type='[1{sfntNameRecord=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;languageID&quot;S&quot;nameID&quot;S&quot;length&quot;S&quot;offset&quot;S}]'/>
+  </struct>
+  <struct name='sfntNameRecord' type='{sfntNameRecord=&quot;platformID&quot;S&quot;scriptID&quot;S&quot;languageID&quot;S&quot;nameID&quot;S&quot;length&quot;S&quot;offset&quot;S}'>
+    <field name='platformID' declared_type='UInt16' type='S'/>
+    <field name='scriptID' declared_type='UInt16' type='S'/>
+    <field name='languageID' declared_type='UInt16' type='S'/>
+    <field name='nameID' declared_type='UInt16' type='S'/>
+    <field name='length' declared_type='UInt16' type='S'/>
+    <field name='offset' declared_type='UInt16' type='S'/>
+  </struct>
+  <struct name='sfntVariationAxis' type='{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}'>
+    <field name='axisTag' declared_type='FourCharCode' type='L' type64='I'/>
+    <field name='minValue' declared_type='Fixed' type='l' type64='i'/>
+    <field name='defaultValue' declared_type='Fixed' type='l' type64='i'/>
+    <field name='maxValue' declared_type='Fixed' type='l' type64='i'/>
+    <field name='flags' declared_type='SInt16' type='s'/>
+    <field name='nameID' declared_type='SInt16' type='s'/>
+  </struct>
+  <struct name='sfntVariationHeader' type='{sfntVariationHeader=&quot;version&quot;i&quot;offsetToData&quot;S&quot;countSizePairs&quot;S&quot;axisCount&quot;S&quot;axisSize&quot;S&quot;instanceCount&quot;S&quot;instanceSize&quot;S&quot;axis&quot;[1{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}]&quot;instance&quot;[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1l]}]}' type64='{sfntVariationHeader=&quot;version&quot;i&quot;offsetToData&quot;S&quot;countSizePairs&quot;S&quot;axisCount&quot;S&quot;axisSize&quot;S&quot;instanceCount&quot;S&quot;instanceSize&quot;S&quot;axis&quot;[1{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}]&quot;instance&quot;[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1i]}]}'>
+    <field name='version' declared_type='Fixed' type='l' type64='i'/>
+    <field name='offsetToData' declared_type='UInt16' type='S'/>
+    <field name='countSizePairs' declared_type='UInt16' type='S'/>
+    <field name='axisCount' declared_type='UInt16' type='S'/>
+    <field name='axisSize' declared_type='UInt16' type='S'/>
+    <field name='instanceCount' declared_type='UInt16' type='S'/>
+    <field name='instanceSize' declared_type='UInt16' type='S'/>
+    <field name='axis' declared_type='sfntVariationAxis*' type='[1{sfntVariationAxis=&quot;axisTag&quot;I&quot;minValue&quot;i&quot;defaultValue&quot;i&quot;maxValue&quot;i&quot;flags&quot;s&quot;nameID&quot;s}]'/>
+    <field name='instance' declared_type='sfntInstance*' type='[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1l]}]' type64='[1{sfntInstance=&quot;nameID&quot;s&quot;flags&quot;s&quot;coord&quot;[1i]}]'/>
+  </struct>
   <cftype name='ATSFontNotificationInfoRef' type='^{ATSFontNotificationInfoRef_=}'/>
   <cftype name='ATSFontNotificationRef' type='^{ATSFontNotificationRef_=}'/>
   <cftype name='ATSULineRef' type='^{ATSGlyphVector=}'/>
@@ -847,335 +1344,338 @@
   <enum name='variationPSOperatorStreamAction' value='7'/>
   <enum name='variationQueryStreamAction' value='6'/>
   <function name='ATSCreateFontQueryRunLoopSource'>
-    <arg type='l' type64='i'/>
-    <arg type='l' type64='i'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='i'/>
-      <arg type='@'/>
-      <arg type='^v'/>
-      <retval type='@'/>
+    <arg name='queryOrder' declared_type='CFIndex' type='l' type64='i'/>
+    <arg name='sourceOrder' declared_type='CFIndex' type='l' type64='i'/>
+    <arg name='callout' function_pointer='true' declared_type='ATSFontQueryCallback' type='^?'>
+      <arg declared_type='ATSFontQueryMessageID' type='i'/>
+      <arg declared_type='CFPropertyListRef' type='@'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='CFPropertyListRef' type='@'/>
     </arg>
-    <arg type='^{ATSFontQuerySourceContext=I^v^?^?}'/>
-    <retval already_retained='true' type='^{__CFRunLoopSource=}'/>
+    <arg name='context' declared_type='ATSFontQuerySourceContext*' type='^{ATSFontQuerySourceContext=I^v^?^?}' const='true'/>
+    <retval declared_type='CFRunLoopSourceRef' already_retained='true' type='^{__CFRunLoopSource=}'/>
   </function>
   <function name='ATSFontActivateFromFileSpecification'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='iContext' declared_type='ATSFontContext' type='L' type64='I'/>
+    <arg name='iFormat' declared_type='ATSFontFormat' type='L' type64='I'/>
+    <arg name='iReserved' declared_type='void*' type='^v'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='oContainer' declared_type='ATSFontContainerRef*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontActivateFromMemory'>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iData' declared_type='LogicalAddress' type='^v'/>
+    <arg name='iLength' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='iContext' declared_type='ATSFontContext' type='L' type64='I'/>
+    <arg name='iFormat' declared_type='ATSFontFormat' type='L' type64='I'/>
+    <arg name='iReserved' declared_type='void*' type='^v'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='oContainer' declared_type='ATSFontContainerRef*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontApplyFunction'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='iFunction' function_pointer='true' declared_type='ATSFontApplierFunction' type='^?'>
+      <arg declared_type='ATSFontRef' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontDeactivate'>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iContainer' declared_type='ATSFontContainerRef' type='L' type64='I'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFamilyApplyFunction'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='iFunction' function_pointer='true' declared_type='ATSFontFamilyApplierFunction' type='^?'>
+      <arg declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFamilyFindFromName'>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='L' type64='I'/>
+    <arg name='iName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <retval declared_type='ATSFontFamilyRef' type='L' type64='I'/>
   </function>
   <function name='ATSFontFamilyFindFromQuickDrawName'>
-    <arg type='*'/>
-    <retval type='L' type64='I'/>
+    <arg name='iName' declared_type='ConstStr255Param' type='*'/>
+    <retval declared_type='ATSFontFamilyRef' type='L' type64='I'/>
   </function>
   <function name='ATSFontFamilyGetEncoding'>
-    <arg type='L' type64='I'/>
-    <retval type='L' type64='I'/>
+    <arg name='iFamily' declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+    <retval declared_type='TextEncoding' type='L' type64='I'/>
   </function>
   <function name='ATSFontFamilyGetGeneration'>
-    <arg type='L' type64='I'/>
-    <retval type='L' type64='I'/>
+    <arg name='iFamily' declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+    <retval declared_type='ATSGeneration' type='L' type64='I'/>
   </function>
   <function name='ATSFontFamilyGetName'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFamily' declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='oName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFamilyGetQuickDrawName'>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFamily' declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+    <arg name='oName' declared_type='unsigned char*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFamilyIteratorCreate'>
-    <arg type='L' type64='I'/>
-    <arg type='^{ATSFontFilter=Ii(?=II^?^?)}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{ATSFontFamilyIterator_}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iContext' declared_type='ATSFontContext' type='L' type64='I'/>
+    <arg name='iFilter' declared_type='ATSFontFilter*' type='^{ATSFontFilter=Ii(?=II^?^?)}' const='true'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='ioIterator' declared_type='ATSFontFamilyIterator*' type='^^{ATSFontFamilyIterator_}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFamilyIteratorNext'>
-    <arg type='^{ATSFontFamilyIterator_=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iIterator' declared_type='ATSFontFamilyIterator' type='^{ATSFontFamilyIterator_=}'/>
+    <arg name='oFamily' declared_type='ATSFontFamilyRef*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFamilyIteratorRelease'>
-    <arg type='^^{ATSFontFamilyIterator_}'/>
-    <retval type='l' type64='i'/>
+    <arg name='ioIterator' declared_type='ATSFontFamilyIterator*' type='^^{ATSFontFamilyIterator_}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFamilyIteratorReset'>
-    <arg type='L' type64='I'/>
-    <arg type='^{ATSFontFilter=Ii(?=II^?^?)}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{ATSFontFamilyIterator_}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iContext' declared_type='ATSFontContext' type='L' type64='I'/>
+    <arg name='iFilter' declared_type='ATSFontFilter*' type='^{ATSFontFilter=Ii(?=II^?^?)}' const='true'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='ioIterator' declared_type='ATSFontFamilyIterator*' type='^^{ATSFontFamilyIterator_}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFindFromContainer'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iContainer' declared_type='ATSFontContainerRef' type='L' type64='I'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='iCount' declared_type='ItemCount' type='L' type64='I'/>
+    <arg name='ioArray' declared_type='ATSFontRef*' type='^I'/>
+    <arg name='oCount' declared_type='ItemCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontFindFromName'>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='L' type64='I'/>
+    <arg name='iName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <retval declared_type='ATSFontRef' type='L' type64='I'/>
   </function>
   <function name='ATSFontFindFromPostScriptName'>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='L' type64='I'/>
+    <arg name='iName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <retval declared_type='ATSFontRef' type='L' type64='I'/>
   </function>
   <function name='ATSFontGetFileSpecification'>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='oFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontGetFontFamilyResource'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='iBufferSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='ioBuffer' declared_type='void*' type='^v'/>
+    <arg name='oSize' declared_type='ByteCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontGetGeneration'>
-    <arg type='L' type64='I'/>
-    <retval type='L' type64='I'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <retval declared_type='ATSGeneration' type='L' type64='I'/>
   </function>
   <function name='ATSFontGetHorizontalMetrics'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{ATSFontMetrics=Iffffffffffffff}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='oMetrics' declared_type='ATSFontMetrics*' type='^{ATSFontMetrics=Iffffffffffffff}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontGetName'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='oName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontGetPostScriptName'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='oName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontGetTable'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='iTag' declared_type='FourCharCode' type='L' type64='I'/>
+    <arg name='iOffset' declared_type='ByteOffset' type='L' type64='I'/>
+    <arg name='iBufferSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='ioBuffer' declared_type='void*' type='^v'/>
+    <arg name='oSize' declared_type='ByteCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontGetTableDirectory'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='iBufferSize' declared_type='ByteCount' type='L' type64='I'/>
+    <arg name='ioBuffer' declared_type='void*' type='^v'/>
+    <arg name='oSize' declared_type='ByteCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontGetVerticalMetrics'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{ATSFontMetrics=Iffffffffffffff}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='ATSFontRef' type='L' type64='I'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='oMetrics' declared_type='ATSFontMetrics*' type='^{ATSFontMetrics=Iffffffffffffff}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontIteratorCreate'>
-    <arg type='L' type64='I'/>
-    <arg type='^{ATSFontFilter=Ii(?=II^?^?)}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{ATSFontIterator_}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iContext' declared_type='ATSFontContext' type='L' type64='I'/>
+    <arg name='iFilter' declared_type='ATSFontFilter*' type='^{ATSFontFilter=Ii(?=II^?^?)}' const='true'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='ioIterator' declared_type='ATSFontIterator*' type='^^{ATSFontIterator_}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontIteratorNext'>
-    <arg type='^{ATSFontIterator_=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='iIterator' declared_type='ATSFontIterator' type='^{ATSFontIterator_=}'/>
+    <arg name='oFont' declared_type='ATSFontRef*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontIteratorRelease'>
-    <arg type='^^{ATSFontIterator_}'/>
-    <retval type='l' type64='i'/>
+    <arg name='ioIterator' declared_type='ATSFontIterator*' type='^^{ATSFontIterator_}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontIteratorReset'>
-    <arg type='L' type64='I'/>
-    <arg type='^{ATSFontFilter=Ii(?=II^?^?)}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{ATSFontIterator_}'/>
-    <retval type='l' type64='i'/>
+    <arg name='iContext' declared_type='ATSFontContext' type='L' type64='I'/>
+    <arg name='iFilter' declared_type='ATSFontFilter*' type='^{ATSFontFilter=Ii(?=II^?^?)}' const='true'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <arg name='iOptions' declared_type='ATSOptionFlags' type='L' type64='I'/>
+    <arg name='ioIterator' declared_type='ATSFontIterator*' type='^^{ATSFontIterator_}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontNotificationSubscribe'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{ATSFontNotificationInfoRef_=}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='callback' function_pointer='true' declared_type='ATSNotificationCallback' type='^?'>
+      <arg declared_type='ATSFontNotificationInfoRef' type='^{ATSFontNotificationInfoRef_=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='i'/>
-    <arg type='^v'/>
-    <arg type='^^{ATSFontNotificationRef_}'/>
-    <retval type='l' type64='i'/>
+    <arg name='options' declared_type='ATSFontNotifyOption' type='i'/>
+    <arg name='iRefcon' declared_type='void*' type='^v'/>
+    <arg name='oNotificationRef' declared_type='ATSFontNotificationRef*' type='^^{ATSFontNotificationRef_}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontNotificationUnsubscribe'>
-    <arg type='^{ATSFontNotificationRef_=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='notificationRef' declared_type='ATSFontNotificationRef' type='^{ATSFontNotificationRef_=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSFontNotify'>
-    <arg type='i'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='action' declared_type='ATSFontNotifyAction' type='i'/>
+    <arg name='info' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ATSGetGeneration'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='ATSGeneration' type='L' type64='I'/>
   </function>
   <function name='DisposeATSUDirectLayoutOperationOverrideUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^{ATSGlyphVector=}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='ATSUDirectLayoutOperationOverrideUPP' type='^?'>
+      <arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+      <arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeFMFontCallbackFilterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FMFontCallbackFilterUPP' type='^?'>
+      <arg declared_type='FMFont' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeFMFontFamilyCallbackFilterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='s'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FMFontFamilyCallbackFilterUPP' type='^?'>
+      <arg declared_type='FMFontFamily' type='s'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeATSUDirectLayoutOperationOverrideUPP'>
-    <arg type='L' type64='I'/>
-    <arg type='^{ATSGlyphVector=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='^I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^{ATSGlyphVector=}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='iCurrentOperation' declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+    <arg name='iLineRef' declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+    <arg name='iRefCon' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='iOperationCallbackParameterPtr' declared_type='void*' type='^v'/>
+    <arg name='oCallbackStatus' declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+    <arg name='userUPP' function_pointer='true' declared_type='ATSUDirectLayoutOperationOverrideUPP' type='^?'>
+      <arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+      <arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeFMFontCallbackFilterUPP'>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='iFont' declared_type='FMFont' type='L' type64='I'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FMFontCallbackFilterUPP' type='^?'>
+      <arg declared_type='FMFont' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='InvokeFMFontFamilyCallbackFilterUPP'>
-    <arg type='s'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='s'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='iFontFamily' declared_type='FMFontFamily' type='s'/>
+    <arg name='iRefCon' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='FMFontFamilyCallbackFilterUPP' type='^?'>
+      <arg declared_type='FMFontFamily' type='s'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval type='l' type64='i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='NewATSUDirectLayoutOperationOverrideUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^{ATSGlyphVector=}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='ATSUDirectLayoutOperationOverrideProcPtr' type='^?'>
+      <arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+      <arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^{ATSGlyphVector=}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <arg type='^I'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='ATSUDirectLayoutOperationOverrideUPP' type='^?'>
+      <arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+      <arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='NewFMFontCallbackFilterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='FMFontCallbackFilterProcPtr' type='^?'>
+      <arg declared_type='FMFont' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='FMFontCallbackFilterUPP' type='^?'>
+      <arg declared_type='FMFont' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
   <function name='NewFMFontFamilyCallbackFilterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='s'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='FMFontFamilyCallbackFilterProcPtr' type='^?'>
+      <arg declared_type='FMFontFamily' type='s'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='s'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <retval function_pointer='true' declared_type='FMFontFamilyCallbackFilterUPP' type='^?'>
+      <arg declared_type='FMFontFamily' type='s'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </retval>
   </function>
 </signatures>

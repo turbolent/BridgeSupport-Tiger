@@ -1,29 +1,28 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
-  <constant name='ISyncAvailabilityChangedNotification' type='@'/>
-  <constant name='ISyncChangePropertyActionKey' type='@'/>
-  <constant name='ISyncChangePropertyClear' type='@'/>
-  <constant name='ISyncChangePropertyNameKey' type='@'/>
-  <constant name='ISyncChangePropertySet' type='@'/>
-  <constant name='ISyncChangePropertyValueKey' type='@'/>
-  <constant name='ISyncClientTypeApplication' type='@'/>
-  <constant name='ISyncClientTypeDevice' type='@'/>
-  <constant name='ISyncClientTypePeer' type='@'/>
-  <constant name='ISyncClientTypeServer' type='@'/>
-  <constant name='ISyncInvalidEntityException' type='@'/>
-  <constant name='ISyncInvalidRecordException' type='@'/>
-  <constant name='ISyncInvalidRecordIdentifiersKey' type='@'/>
-  <constant name='ISyncInvalidRecordReasonsKey' type='@'/>
-  <constant name='ISyncInvalidRecordsKey' type='@'/>
-  <constant name='ISyncRecordEntityNameKey' type='@'/>
-  <constant name='ISyncServerUnavailableException' type='@'/>
-  <constant name='ISyncSessionCancelledException' type='@'/>
-  <constant name='ISyncSessionUnavailableException' type='@'/>
-  <constant name='ISyncUnsupportedEntityException' type='@'/>
+  <constant name='ISyncAvailabilityChangedNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncChangePropertyActionKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncChangePropertyClear' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncChangePropertyNameKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncChangePropertySet' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncChangePropertyValueKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncClientTypeApplication' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncClientTypeDevice' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncClientTypePeer' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncClientTypeServer' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncInvalidEntityException' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncInvalidRecordException' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncInvalidRecordIdentifiersKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncInvalidRecordReasonsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncInvalidRecordsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncRecordEntityNameKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncServerUnavailableException' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncSessionCancelledException' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncSessionUnavailableException' declared_type='NSString*' type='@' const='true'/>
+  <constant name='ISyncUnsupportedEntityException' declared_type='NSString*' type='@' const='true'/>
   <enum name='ISyncChangeTypeAdd' value='1'/>
   <enum name='ISyncChangeTypeDelete' value='3'/>
   <enum name='ISyncChangeTypeModify' value='2'/>
@@ -34,83 +33,335 @@
   <enum name='ISyncStatusRunning' value='1'/>
   <enum name='ISyncStatusSuccess' value='2'/>
   <enum name='ISyncStatusWarnings' value='3'/>
+  <class name='ISyncChange'>
+    <method class_method='true' selector='changeWithType:recordIdentifier:changes:'>
+      <arg name='type' declared_type='ISyncChangeType' type='i' index='0'/>
+      <arg name='recordIdentifier' declared_type='NSString*' type='@' index='1'/>
+      <arg name='changes' declared_type='NSArray*' type='@' index='2'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='changes'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='initWithChangeType:recordIdentifier:changes:'>
+      <arg name='type' declared_type='ISyncChangeType' type='i' index='0'/>
+      <arg name='recordIdentifier' declared_type='NSString*' type='@' index='1'/>
+      <arg name='changes' declared_type='NSArray*' type='@' index='2'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='record'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='recordIdentifier'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='type'>
+      <retval declared_type='ISyncChangeType' type='i'/>
+    </method>
+  </class>
   <class name='ISyncClient'>
     <method selector='canPullChangesForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canPushChangesForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='clientIdentifier'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='clientType'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='displayName'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='enabledEntityNames'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='filters'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='imagePath'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
     <method selector='isEnabledForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='lastSyncDateForEntityName:'>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSDate*' type='@'/>
+    </method>
+    <method selector='lastSyncStatusForEntityName:'>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='ISyncStatus' type='i'/>
+    </method>
+    <method selector='objectForKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='setDisplayName:'>
+      <arg name='displayName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setEnabled:forEntityNames:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setFilters:'>
+      <arg name='filters' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setImagePath:'>
+      <arg name='path' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setObject:forKey:'>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='key' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setShouldReplaceClientRecords:forEntityNames:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setShouldSynchronize:withClientsOfType:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <arg name='clientType' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setSyncAlertHandler:selector:'>
-      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+      <arg name='handler' declared_type='id' type='@' index='0'/>
+      <arg name='selector' sel_of_type='v16@0:4@8@12' declared_type='SEL' type=':' index='1' sel_of_type64='v32@0:8@16@24'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setSyncAlertToolPath:'>
+      <arg name='path' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='shouldReplaceClientRecordsForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='shouldSynchronizeWithClientsOfType:'>
-      <retval type='B'/>
+      <arg name='clientType' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='supportedEntityNames'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='syncAlertToolPath'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+  </class>
+  <class name='ISyncFilter'>
+    <method class_method='true' selector='filterMatchingAllFilters:'>
+      <arg name='filters' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method class_method='true' selector='filterMatchingAtLeastOneFilter:'>
+      <arg name='filters' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
     </method>
   </class>
   <class name='ISyncManager'>
+    <method selector='clientWithIdentifier:'>
+      <arg name='clientId' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='ISyncClient*' type='@'/>
+    </method>
     <method selector='isEnabled'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='registerClientWithIdentifier:descriptionFilePath:'>
+      <arg name='clientId' declared_type='NSString*' type='@' index='0'/>
+      <arg name='descriptionFilePath' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='ISyncClient*' type='@'/>
     </method>
     <method selector='registerSchemaWithBundlePath:'>
-      <retval type='B'/>
+      <arg name='bundlePath' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='sharedManager'>
+      <retval declared_type='ISyncManager*' type='@'/>
+    </method>
+    <method selector='snapshotOfRecordsInTruthWithEntityNames:usingIdentifiersForClient:'>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='0'/>
+      <arg name='client' declared_type='ISyncClient*' type='@' index='1'/>
+      <retval declared_type='ISyncRecordSnapshot*' type='@'/>
+    </method>
+    <method selector='unregisterClient:'>
+      <arg name='client' declared_type='ISyncClient*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='unregisterSchemaWithName:'>
+      <arg name='schemaName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='ISyncRecordSnapshot'>
+    <method selector='recordsWithIdentifiers:'>
+      <arg name='recordIds' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='recordsWithMatchingAttributes:'>
+      <arg name='attributes' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='sourceIdentifiersForRelationshipName:withTargetIdentifier:'>
+      <arg name='relationshipName' declared_type='NSString*' type='@' index='0'/>
+      <arg name='sourceId' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='targetIdentifiersForRelationshipName:withSourceIdentifier:'>
+      <arg name='relationshipName' declared_type='NSString*' type='@' index='0'/>
+      <arg name='sourceId' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
   </class>
   <class name='ISyncSession'>
     <method class_method='true' selector='beginSessionInBackgroundWithClient:entityNames:target:selector:'>
-      <arg sel_of_type='v16@0:4@8@12' index='3' sel_of_type64='v32@0:8@16@24'/>
+      <arg name='client' declared_type='ISyncClient*' type='@' index='0'/>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='1'/>
+      <arg name='target' declared_type='id' type='@' index='2'/>
+      <arg name='selector' sel_of_type='v16@0:4@8@12' declared_type='SEL' type=':' index='3' sel_of_type64='v32@0:8@16@24'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method class_method='true' selector='beginSessionWithClient:entityNames:beforeDate:'>
+      <arg name='client' declared_type='ISyncClient*' type='@' index='0'/>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='1'/>
+      <arg name='date' declared_type='NSDate*' type='@' index='2'/>
+      <retval declared_type='ISyncSession*' type='@'/>
+    </method>
+    <method class_method='true' selector='cancelPreviousBeginSessionWithClient:'>
+      <arg name='client' declared_type='ISyncClient*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='cancelSyncing'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='changeEnumeratorForEntityNames:'>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='NSEnumerator*' type='@'/>
+    </method>
+    <method selector='clientAcceptedChangesForRecordWithIdentifier:formattedRecord:newRecordIdentifier:'>
+      <arg name='recordId' declared_type='NSString*' type='@' index='0'/>
+      <arg name='formattedRecord' declared_type='NSDictionary*' type='@' index='1'/>
+      <arg name='recordId' declared_type='NSString*' type='@' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='clientChangedRecordIdentifiers:'>
+      <arg name='oldToNew' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='clientCommittedAcceptedChanges'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='clientDidResetEntityNames:'>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='clientInfoForRecordWithIdentifier:'>
+      <arg name='recordId' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
     </method>
     <method selector='clientLostRecordWithIdentifier:shouldReplaceOnNextSync:'>
-      <arg type='B' index='1'/>
+      <arg name='recordId' declared_type='NSString*' type='@' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='clientRefusedChangesForRecordWithIdentifier:'>
+      <arg name='recordId' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='clientWantsToPushAllRecordsForEntityNames:'>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='deleteRecordWithIdentifier:'>
+      <arg name='recordId' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='finishSyncing'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='isCancelled'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='prepareToPullChangesForEntityNames:beforeDate:'>
-      <retval type='B'/>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='0'/>
+      <arg name='date' declared_type='NSDate*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='prepareToPullChangesInBackgroundForEntityNames:target:selector:'>
-      <arg sel_of_type='v16@0:4@8@12' index='2' sel_of_type64='v32@0:8@16@24'/>
+      <arg name='entityNames' declared_type='NSArray*' type='@' index='0'/>
+      <arg name='target' declared_type='id' type='@' index='1'/>
+      <arg name='selector' sel_of_type='v16@0:4@8@12' declared_type='SEL' type=':' index='2' sel_of_type64='v32@0:8@16@24'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='pushChange:'>
+      <arg name='change' declared_type='ISyncChange*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='pushChangesFromRecord:withIdentifier:'>
+      <arg name='record' declared_type='NSDictionary*' type='@' index='0'/>
+      <arg name='recordId' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setClientInfo:forRecordWithIdentifier:'>
+      <arg name='clientInfo' declared_type='id' type='@' index='0'/>
+      <arg name='recordId' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='shouldPullChangesForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='shouldPushAllRecordsForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='shouldPushChangesForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='shouldReplaceAllRecordsOnClientForEntityName:'>
-      <retval type='B'/>
+      <arg name='entityName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='snapshotOfRecordsInTruth'>
+      <retval declared_type='ISyncRecordSnapshot*' type='@'/>
     </method>
   </class>
   <class name='NSObject'>
     <method selector='isEqual:'>
-      <retval type='B'/>
+      <arg name='anotherFilter' declared_type='id' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='shouldApplyRecord:withRecordIdentifier:'>
-      <retval type='B'/>
+      <arg name='record' declared_type='NSDictionary*' type='@' index='0'/>
+      <arg name='recordId' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='supportedEntityNames'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
   </class>
   <informal_protocol name='ISyncFiltering'>
-    <method type='B12@0:4@8' type64='B24@0:8@16' selector='isEqual:'/>
-    <method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='shouldApplyRecord:withRecordIdentifier:'/>
-    <method type='@8@0:4' type64='@16@0:8' selector='supportedEntityNames'/>
+    <method type='B12@0:4@8' type64='B24@0:8@16' selector='isEqual:'>
+      <arg name='anotherFilter' declared_type='id' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='shouldApplyRecord:withRecordIdentifier:'>
+      <arg name='record' declared_type='NSDictionary*' type='@' index='0'/>
+      <arg name='recordId' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='@8@0:4' type64='@16@0:8' selector='supportedEntityNames'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
   </informal_protocol>
 </signatures>

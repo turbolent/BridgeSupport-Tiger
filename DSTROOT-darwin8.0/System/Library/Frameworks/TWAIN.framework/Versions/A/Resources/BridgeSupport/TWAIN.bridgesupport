@@ -1,91 +1,546 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
-  <struct name='TW_ARRAY' type='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;ItemList&quot;[1C]}'/>
-  <struct name='TW_AUDIOINFO' type='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;I}' type64='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;Q}'/>
-  <struct name='TW_CALLBACK' type='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;I&quot;Message&quot;s}' type64='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;Q&quot;Message&quot;s}'/>
-  <struct name='TW_CAPABILITY' type='{TW_CAPABILITY=&quot;Cap&quot;S&quot;ConType&quot;S&quot;hContainer&quot;^*}'/>
-  <struct name='TW_CAPEXT' type='{_TW_CAPEXT=&quot;Cap&quot;S&quot;Properties&quot;S}'/>
-  <struct name='TW_CIECOLOR' type='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;i&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}' type64='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;q&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}'/>
-  <struct name='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
-  <struct name='TW_CUSTOMDSDATA' type='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;I&quot;hData&quot;^*}' type64='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;Q&quot;hData&quot;^*}'/>
-  <struct name='TW_DECODEFUNCTION' type='{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
-  <struct name='TW_DEVICEEVENT' type='{TW_DEVICEEVENT=&quot;Event&quot;I&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;I&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;i&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;I&quot;AutomaticCapture&quot;I&quot;TimeBeforeFirstCapture&quot;I&quot;TimeBetweenCaptures&quot;I}' type64='{TW_DEVICEEVENT=&quot;Event&quot;Q&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;Q&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;q&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;Q&quot;AutomaticCapture&quot;Q&quot;TimeBeforeFirstCapture&quot;Q&quot;TimeBetweenCaptures&quot;Q}'/>
-  <struct name='TW_ELEMENT8' type='{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}'/>
-  <struct name='TW_ENUMERATION' type='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;CurrentIndex&quot;I&quot;DefaultIndex&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;CurrentIndex&quot;Q&quot;DefaultIndex&quot;Q&quot;ItemList&quot;[1C]}'/>
-  <struct name='TW_EVENT' type='{TW_EVENT=&quot;pEvent&quot;*&quot;TWMessage&quot;S}'/>
-  <struct name='TW_EXTIMAGEINFO' type='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;I&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}]}' type64='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;Q&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}]}'/>
-  <struct name='TW_FILESYSTEM' type='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;i&quot;Size&quot;I&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;I&quot;NewImageSize&quot;i&quot;NumberOfFiles&quot;I&quot;NumberOfSnippets&quot;I&quot;DeviceGroupMask&quot;I&quot;Reserved&quot;[508c]}' type64='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;q&quot;Size&quot;Q&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;Q&quot;NewImageSize&quot;q&quot;NumberOfFiles&quot;Q&quot;NumberOfSnippets&quot;Q&quot;DeviceGroupMask&quot;Q&quot;Reserved&quot;[508c]}'/>
-  <struct name='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
-  <struct name='TW_FRAME' type='{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
-  <struct name='TW_GRAYRESPONSE' type='{TW_GRAYRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'/>
-  <struct name='TW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'/>
-  <struct name='TW_IMAGEINFO' type='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;i&quot;ImageLength&quot;i&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}' type64='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;q&quot;ImageLength&quot;q&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}'/>
-  <struct name='TW_IMAGELAYOUT' type='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;I&quot;PageNumber&quot;I&quot;FrameNumber&quot;I}' type64='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;Q&quot;PageNumber&quot;Q&quot;FrameNumber&quot;Q}'/>
-  <struct name='TW_IMAGEMEMXFER' type='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;I&quot;Columns&quot;I&quot;Rows&quot;I&quot;XOffset&quot;I&quot;YOffset&quot;I&quot;BytesWritten&quot;I&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}}' type64='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;Q&quot;Columns&quot;Q&quot;Rows&quot;Q&quot;XOffset&quot;Q&quot;YOffset&quot;Q&quot;BytesWritten&quot;Q&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}}'/>
-  <struct name='TW_INFO' type='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}' type64='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}'/>
-  <struct name='TW_JPEGCOMPRESSION' type='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;I&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]}' type64='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;Q&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]}'/>
-  <struct name='TW_MEMORY' type='{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}' type64='{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}'/>
-  <struct name='TW_ONEVALUE' type='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;I}' type64='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;Q}'/>
-  <struct name='TW_PALETTE8' type='{TW_PALETTE8=&quot;NumColors&quot;S&quot;PaletteType&quot;S&quot;Colors&quot;[256{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'/>
-  <struct name='TW_PASSTHRU' type='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;I&quot;Direction&quot;i&quot;pData&quot;*&quot;DataBytes&quot;I&quot;DataBytesXfered&quot;I}' type64='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;Q&quot;Direction&quot;q&quot;pData&quot;*&quot;DataBytes&quot;Q&quot;DataBytesXfered&quot;Q}'/>
-  <struct name='TW_PENDINGXFERS' type='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;I&quot;Reserved&quot;I)}' type64='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;Q&quot;Reserved&quot;Q)}'/>
-  <struct name='TW_RANGE' type='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;I&quot;MaxValue&quot;I&quot;StepSize&quot;I&quot;DefaultValue&quot;I&quot;CurrentValue&quot;I}' type64='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;Q&quot;MaxValue&quot;Q&quot;StepSize&quot;Q&quot;DefaultValue&quot;Q&quot;CurrentValue&quot;Q}'/>
-  <struct name='TW_RGBRESPONSE' type='{TW_RGBRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'/>
-  <struct name='TW_SETUPAUDIOFILEXFER' type='{TW_SETUPAUDIOFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'/>
-  <struct name='TW_SETUPFILEXFER' type='{TW_SETUPFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'/>
-  <struct name='TW_SETUPFILEXFER2' type='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;I}' type64='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;Q}'/>
-  <struct name='TW_SETUPMEMXFER' type='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;I&quot;MaxBufSize&quot;I&quot;Preferred&quot;I}' type64='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;Q&quot;MaxBufSize&quot;Q&quot;Preferred&quot;Q}'/>
-  <struct name='TW_STATUS' type='{TW_STATUS=&quot;ConditionCode&quot;S&quot;Reserved&quot;S}'/>
-  <struct name='TW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'/>
-  <struct name='TW_TWUNKDSENTRYPARAMS' type='{_TW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;i&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;i}' type64='{_TW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;q&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;q}'/>
-  <struct name='TW_TWUNKDSENTRYRETURN' type='{_TW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;i}' type64='{_TW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;q}'/>
-  <struct name='TW_TWUNKIDENTITY' type='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}' type64='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}'/>
-  <struct name='TW_USERINTERFACE' type='{TW_USERINTERFACE=&quot;ShowUI&quot;S&quot;ModalUI&quot;S&quot;hParent&quot;^*}'/>
-  <struct name='TW_VERSION' type='{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}'/>
-  <struct name='pTW_ARRAY' type='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;ItemList&quot;[1C]}'/>
-  <struct name='pTW_AUDIOINFO' type='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;I}' type64='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;Q}'/>
-  <struct name='pTW_CALLBACK' type='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;I&quot;Message&quot;s}' type64='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;Q&quot;Message&quot;s}'/>
-  <struct name='pTW_CAPABILITY' type='{TW_CAPABILITY=&quot;Cap&quot;S&quot;ConType&quot;S&quot;hContainer&quot;^*}'/>
-  <struct name='pTW_CAPEXT' type='{_pTW_CAPEXT=&quot;Cap&quot;S&quot;Properties&quot;S}'/>
-  <struct name='pTW_CIECOLOR' type='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;i&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}' type64='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;q&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}'/>
-  <struct name='pTW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
-  <struct name='pTW_CUSTOMDSDATA' type='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;I&quot;hData&quot;^*}' type64='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;Q&quot;hData&quot;^*}'/>
-  <struct name='pTW_DECODEFUNCTION' type='{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
-  <struct name='pTW_DEVICEEVENT' type='{TW_DEVICEEVENT=&quot;Event&quot;I&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;I&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;i&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;I&quot;AutomaticCapture&quot;I&quot;TimeBeforeFirstCapture&quot;I&quot;TimeBetweenCaptures&quot;I}' type64='{TW_DEVICEEVENT=&quot;Event&quot;Q&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;Q&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;q&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;Q&quot;AutomaticCapture&quot;Q&quot;TimeBeforeFirstCapture&quot;Q&quot;TimeBetweenCaptures&quot;Q}'/>
-  <struct name='pTW_ELEMENT8' type='{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}'/>
-  <struct name='pTW_ENUMERATION' type='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;CurrentIndex&quot;I&quot;DefaultIndex&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;CurrentIndex&quot;Q&quot;DefaultIndex&quot;Q&quot;ItemList&quot;[1C]}'/>
-  <struct name='pTW_EVENT' type='{TW_EVENT=&quot;pEvent&quot;*&quot;TWMessage&quot;S}'/>
-  <struct name='pTW_EXTIMAGEINFO' type='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;I&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}]}' type64='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;Q&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}]}'/>
-  <struct name='pTW_FILESYSTEM' type='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;i&quot;Size&quot;I&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;I&quot;NewImageSize&quot;i&quot;NumberOfFiles&quot;I&quot;NumberOfSnippets&quot;I&quot;DeviceGroupMask&quot;I&quot;Reserved&quot;[508c]}' type64='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;q&quot;Size&quot;Q&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;Q&quot;NewImageSize&quot;q&quot;NumberOfFiles&quot;Q&quot;NumberOfSnippets&quot;Q&quot;DeviceGroupMask&quot;Q&quot;Reserved&quot;[508c]}'/>
-  <struct name='pTW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
-  <struct name='pTW_FRAME' type='{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
-  <struct name='pTW_GRAYRESPONSE' type='{TW_GRAYRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'/>
-  <struct name='pTW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'/>
-  <struct name='pTW_IMAGEINFO' type='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;i&quot;ImageLength&quot;i&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}' type64='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;q&quot;ImageLength&quot;q&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}'/>
-  <struct name='pTW_IMAGELAYOUT' type='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;I&quot;PageNumber&quot;I&quot;FrameNumber&quot;I}' type64='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;Q&quot;PageNumber&quot;Q&quot;FrameNumber&quot;Q}'/>
-  <struct name='pTW_IMAGEMEMXFER' type='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;I&quot;Columns&quot;I&quot;Rows&quot;I&quot;XOffset&quot;I&quot;YOffset&quot;I&quot;BytesWritten&quot;I&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}}' type64='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;Q&quot;Columns&quot;Q&quot;Rows&quot;Q&quot;XOffset&quot;Q&quot;YOffset&quot;Q&quot;BytesWritten&quot;Q&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}}'/>
-  <struct name='pTW_INFO' type='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}' type64='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}'/>
-  <struct name='pTW_JPEGCOMPRESSION' type='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;I&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]}' type64='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;Q&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]}'/>
-  <struct name='pTW_MEMORY' type='{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}' type64='{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}'/>
-  <struct name='pTW_ONEVALUE' type='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;I}' type64='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;Q}'/>
-  <struct name='pTW_PALETTE8' type='{TW_PALETTE8=&quot;NumColors&quot;S&quot;PaletteType&quot;S&quot;Colors&quot;[256{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'/>
-  <struct name='pTW_PASSTHRU' type='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;I&quot;Direction&quot;i&quot;pData&quot;*&quot;DataBytes&quot;I&quot;DataBytesXfered&quot;I}' type64='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;Q&quot;Direction&quot;q&quot;pData&quot;*&quot;DataBytes&quot;Q&quot;DataBytesXfered&quot;Q}'/>
-  <struct name='pTW_PENDINGXFERS' type='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;I&quot;Reserved&quot;I)}' type64='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;Q&quot;Reserved&quot;Q)}'/>
-  <struct name='pTW_RANGE' type='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;I&quot;MaxValue&quot;I&quot;StepSize&quot;I&quot;DefaultValue&quot;I&quot;CurrentValue&quot;I}' type64='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;Q&quot;MaxValue&quot;Q&quot;StepSize&quot;Q&quot;DefaultValue&quot;Q&quot;CurrentValue&quot;Q}'/>
-  <struct name='pTW_RGBRESPONSE' type='{TW_RGBRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'/>
-  <struct name='pTW_SETUPAUDIOFILEXFER' type='{TW_SETUPAUDIOFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'/>
-  <struct name='pTW_SETUPFILEXFER' type='{TW_SETUPFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'/>
-  <struct name='pTW_SETUPFILEXFER2' type='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;I}' type64='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;Q}'/>
-  <struct name='pTW_SETUPMEMXFER' type='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;I&quot;MaxBufSize&quot;I&quot;Preferred&quot;I}' type64='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;Q&quot;MaxBufSize&quot;Q&quot;Preferred&quot;Q}'/>
-  <struct name='pTW_STATUS' type='{TW_STATUS=&quot;ConditionCode&quot;S&quot;Reserved&quot;S}'/>
-  <struct name='pTW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'/>
-  <struct name='pTW_TWUNKDSENTRYPARAMS' type='{_pTW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;i&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;i}' type64='{_pTW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;q&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;q}'/>
-  <struct name='pTW_TWUNKDSENTRYRETURN' type='{_pTW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;i}' type64='{_pTW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;q}'/>
-  <struct name='pTW_TWUNKIDENTITY' type='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}' type64='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}'/>
-  <struct name='pTW_USERINTERFACE' type='{TW_USERINTERFACE=&quot;ShowUI&quot;S&quot;ModalUI&quot;S&quot;hParent&quot;^*}'/>
-  <struct name='pTW_VERSION' type='{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}'/>
+  <struct name='TW_ARRAY' type='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;ItemList&quot;[1C]}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='NumItems' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='ItemList' declared_type='TW_UINT8*' type='[1C]'/>
+  </struct>
+  <struct name='TW_AUDIOINFO' type='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;I}' type64='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;Q}'>
+    <field name='Name' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Reserved' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_CALLBACK' type='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;I&quot;Message&quot;s}' type64='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;Q&quot;Message&quot;s}'>
+    <field name='CallBackProc' declared_type='TW_MEMREF' type='*'/>
+    <field name='RefCon' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Message' declared_type='TW_INT16' type='s'/>
+  </struct>
+  <struct name='TW_CAPABILITY' type='{TW_CAPABILITY=&quot;Cap&quot;S&quot;ConType&quot;S&quot;hContainer&quot;^*}'>
+    <field name='Cap' declared_type='TW_UINT16' type='S'/>
+    <field name='ConType' declared_type='TW_UINT16' type='S'/>
+    <field name='hContainer' declared_type='TW_HANDLE' type='^*'/>
+  </struct>
+  <struct name='TW_CAPEXT' type='{_TW_CAPEXT=&quot;Cap&quot;S&quot;Properties&quot;S}'>
+    <field name='Cap' declared_type='TW_UINT16' type='S'/>
+    <field name='Properties' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='TW_CIECOLOR' type='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;i&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}' type64='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;q&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}'>
+    <field name='ColorSpace' declared_type='TW_UINT16' type='S'/>
+    <field name='LowEndian' declared_type='TW_INT16' type='s'/>
+    <field name='DeviceDependent' declared_type='TW_INT16' type='s'/>
+    <field name='VersionNumber' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='StageABC' declared_type='TW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'/>
+    <field name='StageLMN' declared_type='TW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'/>
+    <field name='WhitePoint' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='BlackPoint' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='WhitePaper' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='BlackInk' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='Samples' declared_type='TW_FIX32*' type='[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]'/>
+  </struct>
+  <struct name='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'>
+    <field name='X' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Y' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Z' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+  </struct>
+  <struct name='TW_CUSTOMDSDATA' type='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;I&quot;hData&quot;^*}' type64='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;Q&quot;hData&quot;^*}'>
+    <field name='InfoLength' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='hData' declared_type='TW_HANDLE' type='^*'/>
+  </struct>
+  <struct name='TW_DECODEFUNCTION' type='{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'>
+    <field name='StartIn' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='BreakIn' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='EndIn' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='StartOut' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='BreakOut' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='EndOut' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Gamma' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='SampleCount' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+  </struct>
+  <struct name='TW_DEVICEEVENT' type='{TW_DEVICEEVENT=&quot;Event&quot;I&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;I&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;i&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;I&quot;AutomaticCapture&quot;I&quot;TimeBeforeFirstCapture&quot;I&quot;TimeBetweenCaptures&quot;I}' type64='{TW_DEVICEEVENT=&quot;Event&quot;Q&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;Q&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;q&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;Q&quot;AutomaticCapture&quot;Q&quot;TimeBeforeFirstCapture&quot;Q&quot;TimeBetweenCaptures&quot;Q}'>
+    <field name='Event' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DeviceName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='BatteryMinutes' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='BatteryPercentage' declared_type='TW_INT16' type='s'/>
+    <field name='PowerSupply' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='XResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='YResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='FlashUsed2' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='AutomaticCapture' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='TimeBeforeFirstCapture' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='TimeBetweenCaptures' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_ELEMENT8' type='{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}'>
+    <field name='Index' declared_type='TW_UINT8' type='C'/>
+    <field name='Channel1' declared_type='TW_UINT8' type='C'/>
+    <field name='Channel2' declared_type='TW_UINT8' type='C'/>
+    <field name='Channel3' declared_type='TW_UINT8' type='C'/>
+  </struct>
+  <struct name='TW_ENUMERATION' type='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;CurrentIndex&quot;I&quot;DefaultIndex&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;CurrentIndex&quot;Q&quot;DefaultIndex&quot;Q&quot;ItemList&quot;[1C]}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='NumItems' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='CurrentIndex' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DefaultIndex' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='ItemList' declared_type='TW_UINT8*' type='[1C]'/>
+  </struct>
+  <struct name='TW_EVENT' type='{TW_EVENT=&quot;pEvent&quot;*&quot;TWMessage&quot;S}'>
+    <field name='pEvent' declared_type='TW_MEMREF' type='*'/>
+    <field name='TWMessage' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='TW_EXTIMAGEINFO' type='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;I&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}]}' type64='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;Q&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}]}'>
+    <field name='NumInfos' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Info' declared_type='TW_INFO*' type='[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}]' type64='[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}]'/>
+  </struct>
+  <struct name='TW_FILESYSTEM' type='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;i&quot;Size&quot;I&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;I&quot;NewImageSize&quot;i&quot;NumberOfFiles&quot;I&quot;NumberOfSnippets&quot;I&quot;DeviceGroupMask&quot;I&quot;Reserved&quot;[508c]}' type64='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;q&quot;Size&quot;Q&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;Q&quot;NewImageSize&quot;q&quot;NumberOfFiles&quot;Q&quot;NumberOfSnippets&quot;Q&quot;DeviceGroupMask&quot;Q&quot;Reserved&quot;[508c]}'>
+    <field name='InputName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='OutputName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Context' declared_type='TW_MEMREF' type='*'/>
+    <field name='Recursive' declared_type='int' type='i'/>
+    <field name='FileType' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='Size' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='CreateTimeDate' declared_type='TW_STR32' type='[34C]'/>
+    <field name='ModifiedTimeDate' declared_type='TW_STR32' type='[34C]'/>
+    <field name='FreeSpace' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='NewImageSize' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='NumberOfFiles' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='NumberOfSnippets' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DeviceGroupMask' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Reserved' declared_type='char*' type='[508c]'/>
+  </struct>
+  <struct name='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'>
+    <field name='Whole' declared_type='TW_INT16' type='s'/>
+    <field name='Frac' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='TW_FRAME' type='{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'>
+    <field name='Left' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Top' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Right' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Bottom' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+  </struct>
+  <struct name='TW_GRAYRESPONSE' type='{TW_GRAYRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'>
+    <field name='Response' declared_type='TW_ELEMENT8*' type='[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]'/>
+  </struct>
+  <struct name='TW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'>
+    <field name='Id' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Version' declared_type='TW_VERSION' type='{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}'/>
+    <field name='ProtocolMajor' declared_type='TW_UINT16' type='S'/>
+    <field name='ProtocolMinor' declared_type='TW_UINT16' type='S'/>
+    <field name='SupportedGroups' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Manufacturer' declared_type='TW_STR32' type='[34C]'/>
+    <field name='ProductFamily' declared_type='TW_STR32' type='[34C]'/>
+    <field name='ProductName' declared_type='TW_STR32' type='[34C]'/>
+  </struct>
+  <struct name='TW_IMAGEINFO' type='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;i&quot;ImageLength&quot;i&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}' type64='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;q&quot;ImageLength&quot;q&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}'>
+    <field name='XResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='YResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='ImageWidth' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='ImageLength' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='SamplesPerPixel' declared_type='TW_INT16' type='s'/>
+    <field name='BitsPerSample' declared_type='TW_INT16*' type='[8s]'/>
+    <field name='BitsPerPixel' declared_type='TW_INT16' type='s'/>
+    <field name='Planar' declared_type='TW_BOOL' type='S'/>
+    <field name='PixelType' declared_type='TW_INT16' type='s'/>
+    <field name='Compression' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='TW_IMAGELAYOUT' type='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;I&quot;PageNumber&quot;I&quot;FrameNumber&quot;I}' type64='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;Q&quot;PageNumber&quot;Q&quot;FrameNumber&quot;Q}'>
+    <field name='Frame' declared_type='TW_FRAME' type='{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='DocumentNumber' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='PageNumber' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='FrameNumber' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_IMAGEMEMXFER' type='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;I&quot;Columns&quot;I&quot;Rows&quot;I&quot;XOffset&quot;I&quot;YOffset&quot;I&quot;BytesWritten&quot;I&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}}' type64='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;Q&quot;Columns&quot;Q&quot;Rows&quot;Q&quot;XOffset&quot;Q&quot;YOffset&quot;Q&quot;BytesWritten&quot;Q&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}}'>
+    <field name='Compression' declared_type='TW_UINT16' type='S'/>
+    <field name='BytesPerRow' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Columns' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Rows' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='XOffset' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='YOffset' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='BytesWritten' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Memory' declared_type='TW_MEMORY' type='{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}' type64='{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}'/>
+  </struct>
+  <struct name='TW_INFO' type='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}' type64='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}'>
+    <field name='InfoID' declared_type='TW_UINT16' type='S'/>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='NumItems' declared_type='TW_UINT16' type='S'/>
+    <field name='CondCode' declared_type='TW_UINT16' type='S'/>
+    <field name='Item' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_JPEGCOMPRESSION' type='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;I&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]}' type64='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;Q&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]}'>
+    <field name='ColorSpace' declared_type='TW_UINT16' type='S'/>
+    <field name='SubSampling' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='NumComponents' declared_type='TW_UINT16' type='S'/>
+    <field name='RestartFrequency' declared_type='TW_UINT16' type='S'/>
+    <field name='QuantMap' declared_type='TW_UINT16*' type='[4S]'/>
+    <field name='QuantTable' declared_type='TW_MEMORY*' type='[4{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]' type64='[4{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]'/>
+    <field name='HuffmanMap' declared_type='TW_UINT16*' type='[4S]'/>
+    <field name='HuffmanDC' declared_type='TW_MEMORY*' type='[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]' type64='[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]'/>
+    <field name='HuffmanAC' declared_type='TW_MEMORY*' type='[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]' type64='[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]'/>
+  </struct>
+  <struct name='TW_MEMORY' type='{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}' type64='{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}'>
+    <field name='Flags' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Length' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='TheMem' declared_type='TW_MEMREF' type='*'/>
+  </struct>
+  <struct name='TW_ONEVALUE' type='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;I}' type64='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;Q}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='Item' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_PALETTE8' type='{TW_PALETTE8=&quot;NumColors&quot;S&quot;PaletteType&quot;S&quot;Colors&quot;[256{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'>
+    <field name='NumColors' declared_type='TW_UINT16' type='S'/>
+    <field name='PaletteType' declared_type='TW_UINT16' type='S'/>
+    <field name='Colors' declared_type='TW_ELEMENT8*' type='[256{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]'/>
+  </struct>
+  <struct name='TW_PASSTHRU' type='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;I&quot;Direction&quot;i&quot;pData&quot;*&quot;DataBytes&quot;I&quot;DataBytesXfered&quot;I}' type64='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;Q&quot;Direction&quot;q&quot;pData&quot;*&quot;DataBytes&quot;Q&quot;DataBytesXfered&quot;Q}'>
+    <field name='pCommand' declared_type='TW_MEMREF' type='*'/>
+    <field name='CommandBytes' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Direction' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='pData' declared_type='TW_MEMREF' type='*'/>
+    <field name='DataBytes' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DataBytesXfered' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_PENDINGXFERS' type='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;I&quot;Reserved&quot;I)}' type64='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;Q&quot;Reserved&quot;Q)}'>
+    <field name='Count' declared_type='TW_UINT16' type='S'/>
+    <field name='TW_JOBCONTROL' declared_type='union TW_PENDINGXFERS::' type='(?=&quot;EOJ&quot;I&quot;Reserved&quot;I)' type64='(?=&quot;EOJ&quot;Q&quot;Reserved&quot;Q)'/>
+  </struct>
+  <struct name='TW_RANGE' type='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;I&quot;MaxValue&quot;I&quot;StepSize&quot;I&quot;DefaultValue&quot;I&quot;CurrentValue&quot;I}' type64='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;Q&quot;MaxValue&quot;Q&quot;StepSize&quot;Q&quot;DefaultValue&quot;Q&quot;CurrentValue&quot;Q}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='MinValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='MaxValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='StepSize' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DefaultValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='CurrentValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_RGBRESPONSE' type='{TW_RGBRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'>
+    <field name='Response' declared_type='TW_ELEMENT8*' type='[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]'/>
+  </struct>
+  <struct name='TW_SETUPAUDIOFILEXFER' type='{TW_SETUPAUDIOFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'>
+    <field name='FileName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Format' declared_type='TW_UINT16' type='S'/>
+    <field name='VRefNum' declared_type='TW_INT16' type='s'/>
+  </struct>
+  <struct name='TW_SETUPFILEXFER' type='{TW_SETUPFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'>
+    <field name='FileName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Format' declared_type='TW_UINT16' type='S'/>
+    <field name='VRefNum' declared_type='TW_INT16' type='s'/>
+  </struct>
+  <struct name='TW_SETUPFILEXFER2' type='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;I}' type64='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;Q}'>
+    <field name='FileName' declared_type='TW_MEMREF' type='*'/>
+    <field name='FileNameType' declared_type='TW_UINT16' type='S'/>
+    <field name='Format' declared_type='TW_UINT16' type='S'/>
+    <field name='VRefNum' declared_type='TW_INT16' type='s'/>
+    <field name='ParID' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_SETUPMEMXFER' type='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;I&quot;MaxBufSize&quot;I&quot;Preferred&quot;I}' type64='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;Q&quot;MaxBufSize&quot;Q&quot;Preferred&quot;Q}'>
+    <field name='MinBufSize' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='MaxBufSize' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Preferred' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='TW_STATUS' type='{TW_STATUS=&quot;ConditionCode&quot;S&quot;Reserved&quot;S}'>
+    <field name='ConditionCode' declared_type='TW_UINT16' type='S'/>
+    <field name='Reserved' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='TW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'>
+    <field name='Decode' declared_type='TW_DECODEFUNCTION*' type='[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]'/>
+    <field name='Mix' declared_type='TW_FIX32**' type='[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]'/>
+  </struct>
+  <struct name='TW_TWUNKDSENTRYPARAMS' type='{_TW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;i&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;i}' type64='{_TW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;q&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;q}'>
+    <field name='destFlag' declared_type='TW_INT8' type='c'/>
+    <field name='dest' declared_type='TW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'/>
+    <field name='dataGroup' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='dataArgType' declared_type='TW_INT16' type='s'/>
+    <field name='message' declared_type='TW_INT16' type='s'/>
+    <field name='pDataSize' declared_type='TW_INT32' type='l' type64='q'/>
+  </struct>
+  <struct name='TW_TWUNKDSENTRYRETURN' type='{_TW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;i}' type64='{_TW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;q}'>
+    <field name='returnCode' declared_type='TW_UINT16' type='S'/>
+    <field name='conditionCode' declared_type='TW_UINT16' type='S'/>
+    <field name='pDataSize' declared_type='TW_INT32' type='l' type64='q'/>
+  </struct>
+  <struct name='TW_TWUNKIDENTITY' type='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}' type64='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}'>
+    <field name='identity' declared_type='TW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'/>
+    <field name='dsPath' declared_type='TW_STR255' type='[256C]'/>
+  </struct>
+  <struct name='TW_USERINTERFACE' type='{TW_USERINTERFACE=&quot;ShowUI&quot;S&quot;ModalUI&quot;S&quot;hParent&quot;^*}'>
+    <field name='ShowUI' declared_type='TW_BOOL' type='S'/>
+    <field name='ModalUI' declared_type='TW_BOOL' type='S'/>
+    <field name='hParent' declared_type='TW_HANDLE' type='^*'/>
+  </struct>
+  <struct name='TW_VERSION' type='{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}'>
+    <field name='MajorNum' declared_type='TW_UINT16' type='S'/>
+    <field name='MinorNum' declared_type='TW_UINT16' type='S'/>
+    <field name='Language' declared_type='TW_UINT16' type='S'/>
+    <field name='Country' declared_type='TW_UINT16' type='S'/>
+    <field name='Info' declared_type='TW_STR32' type='[34C]'/>
+  </struct>
+  <struct name='pTW_ARRAY' type='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ARRAY=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;ItemList&quot;[1C]}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='NumItems' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='ItemList' declared_type='TW_UINT8*' type='[1C]'/>
+  </struct>
+  <struct name='pTW_AUDIOINFO' type='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;I}' type64='{TW_AUDIOINFO=&quot;Name&quot;[256C]&quot;Reserved&quot;Q}'>
+    <field name='Name' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Reserved' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_CALLBACK' type='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;I&quot;Message&quot;s}' type64='{TW_CALLBACK=&quot;CallBackProc&quot;*&quot;RefCon&quot;Q&quot;Message&quot;s}'>
+    <field name='CallBackProc' declared_type='TW_MEMREF' type='*'/>
+    <field name='RefCon' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Message' declared_type='TW_INT16' type='s'/>
+  </struct>
+  <struct name='pTW_CAPABILITY' type='{TW_CAPABILITY=&quot;Cap&quot;S&quot;ConType&quot;S&quot;hContainer&quot;^*}'>
+    <field name='Cap' declared_type='TW_UINT16' type='S'/>
+    <field name='ConType' declared_type='TW_UINT16' type='S'/>
+    <field name='hContainer' declared_type='TW_HANDLE' type='^*'/>
+  </struct>
+  <struct name='pTW_CAPEXT' type='{_pTW_CAPEXT=&quot;Cap&quot;S&quot;Properties&quot;S}'>
+    <field name='Cap' declared_type='TW_UINT16' type='S'/>
+    <field name='Properties' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='pTW_CIECOLOR' type='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;i&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}' type64='{TW_CIECOLOR=&quot;ColorSpace&quot;S&quot;LowEndian&quot;s&quot;DeviceDependent&quot;s&quot;VersionNumber&quot;q&quot;StageABC&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;StageLMN&quot;{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}&quot;WhitePoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackPoint&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;WhitePaper&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;BlackInk&quot;{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;Samples&quot;[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]}'>
+    <field name='ColorSpace' declared_type='TW_UINT16' type='S'/>
+    <field name='LowEndian' declared_type='TW_INT16' type='s'/>
+    <field name='DeviceDependent' declared_type='TW_INT16' type='s'/>
+    <field name='VersionNumber' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='StageABC' declared_type='TW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'/>
+    <field name='StageLMN' declared_type='TW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'/>
+    <field name='WhitePoint' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='BlackPoint' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='WhitePaper' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='BlackInk' declared_type='TW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='Samples' declared_type='TW_FIX32*' type='[1{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]'/>
+  </struct>
+  <struct name='pTW_CIEPOINT' type='{TW_CIEPOINT=&quot;X&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Y&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Z&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'>
+    <field name='X' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Y' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Z' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+  </struct>
+  <struct name='pTW_CUSTOMDSDATA' type='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;I&quot;hData&quot;^*}' type64='{TW_CUSTOMDSDATA=&quot;InfoLength&quot;Q&quot;hData&quot;^*}'>
+    <field name='InfoLength' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='hData' declared_type='TW_HANDLE' type='^*'/>
+  </struct>
+  <struct name='pTW_DECODEFUNCTION' type='{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'>
+    <field name='StartIn' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='BreakIn' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='EndIn' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='StartOut' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='BreakOut' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='EndOut' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Gamma' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='SampleCount' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+  </struct>
+  <struct name='pTW_DEVICEEVENT' type='{TW_DEVICEEVENT=&quot;Event&quot;I&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;I&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;i&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;I&quot;AutomaticCapture&quot;I&quot;TimeBeforeFirstCapture&quot;I&quot;TimeBetweenCaptures&quot;I}' type64='{TW_DEVICEEVENT=&quot;Event&quot;Q&quot;DeviceName&quot;[256C]&quot;BatteryMinutes&quot;Q&quot;BatteryPercentage&quot;s&quot;PowerSupply&quot;q&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;FlashUsed2&quot;Q&quot;AutomaticCapture&quot;Q&quot;TimeBeforeFirstCapture&quot;Q&quot;TimeBetweenCaptures&quot;Q}'>
+    <field name='Event' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DeviceName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='BatteryMinutes' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='BatteryPercentage' declared_type='TW_INT16' type='s'/>
+    <field name='PowerSupply' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='XResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='YResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='FlashUsed2' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='AutomaticCapture' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='TimeBeforeFirstCapture' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='TimeBetweenCaptures' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_ELEMENT8' type='{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}'>
+    <field name='Index' declared_type='TW_UINT8' type='C'/>
+    <field name='Channel1' declared_type='TW_UINT8' type='C'/>
+    <field name='Channel2' declared_type='TW_UINT8' type='C'/>
+    <field name='Channel3' declared_type='TW_UINT8' type='C'/>
+  </struct>
+  <struct name='pTW_ENUMERATION' type='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;I&quot;CurrentIndex&quot;I&quot;DefaultIndex&quot;I&quot;ItemList&quot;[1C]}' type64='{TW_ENUMERATION=&quot;ItemType&quot;S&quot;NumItems&quot;Q&quot;CurrentIndex&quot;Q&quot;DefaultIndex&quot;Q&quot;ItemList&quot;[1C]}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='NumItems' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='CurrentIndex' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DefaultIndex' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='ItemList' declared_type='TW_UINT8*' type='[1C]'/>
+  </struct>
+  <struct name='pTW_EVENT' type='{TW_EVENT=&quot;pEvent&quot;*&quot;TWMessage&quot;S}'>
+    <field name='pEvent' declared_type='TW_MEMREF' type='*'/>
+    <field name='TWMessage' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='pTW_EXTIMAGEINFO' type='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;I&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}]}' type64='{TW_EXTIMAGEINFO=&quot;NumInfos&quot;Q&quot;Info&quot;[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}]}'>
+    <field name='NumInfos' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Info' declared_type='TW_INFO*' type='[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}]' type64='[1{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}]'/>
+  </struct>
+  <struct name='pTW_FILESYSTEM' type='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;i&quot;Size&quot;I&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;I&quot;NewImageSize&quot;i&quot;NumberOfFiles&quot;I&quot;NumberOfSnippets&quot;I&quot;DeviceGroupMask&quot;I&quot;Reserved&quot;[508c]}' type64='{TW_FILESYSTEM=&quot;InputName&quot;[256C]&quot;OutputName&quot;[256C]&quot;Context&quot;*&quot;Recursive&quot;i&quot;FileType&quot;q&quot;Size&quot;Q&quot;CreateTimeDate&quot;[34C]&quot;ModifiedTimeDate&quot;[34C]&quot;FreeSpace&quot;Q&quot;NewImageSize&quot;q&quot;NumberOfFiles&quot;Q&quot;NumberOfSnippets&quot;Q&quot;DeviceGroupMask&quot;Q&quot;Reserved&quot;[508c]}'>
+    <field name='InputName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='OutputName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Context' declared_type='TW_MEMREF' type='*'/>
+    <field name='Recursive' declared_type='int' type='i'/>
+    <field name='FileType' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='Size' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='CreateTimeDate' declared_type='TW_STR32' type='[34C]'/>
+    <field name='ModifiedTimeDate' declared_type='TW_STR32' type='[34C]'/>
+    <field name='FreeSpace' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='NewImageSize' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='NumberOfFiles' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='NumberOfSnippets' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DeviceGroupMask' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Reserved' declared_type='char*' type='[508c]'/>
+  </struct>
+  <struct name='pTW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'>
+    <field name='Whole' declared_type='TW_INT16' type='s'/>
+    <field name='Frac' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='pTW_FRAME' type='{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'>
+    <field name='Left' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Top' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Right' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='Bottom' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+  </struct>
+  <struct name='pTW_GRAYRESPONSE' type='{TW_GRAYRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'>
+    <field name='Response' declared_type='TW_ELEMENT8*' type='[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]'/>
+  </struct>
+  <struct name='pTW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'>
+    <field name='Id' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Version' declared_type='TW_VERSION' type='{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}'/>
+    <field name='ProtocolMajor' declared_type='TW_UINT16' type='S'/>
+    <field name='ProtocolMinor' declared_type='TW_UINT16' type='S'/>
+    <field name='SupportedGroups' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Manufacturer' declared_type='TW_STR32' type='[34C]'/>
+    <field name='ProductFamily' declared_type='TW_STR32' type='[34C]'/>
+    <field name='ProductName' declared_type='TW_STR32' type='[34C]'/>
+  </struct>
+  <struct name='pTW_IMAGEINFO' type='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;i&quot;ImageLength&quot;i&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}' type64='{TW_IMAGEINFO=&quot;XResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;YResolution&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;ImageWidth&quot;q&quot;ImageLength&quot;q&quot;SamplesPerPixel&quot;s&quot;BitsPerSample&quot;[8s]&quot;BitsPerPixel&quot;s&quot;Planar&quot;S&quot;PixelType&quot;s&quot;Compression&quot;S}'>
+    <field name='XResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='YResolution' declared_type='TW_FIX32' type='{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}'/>
+    <field name='ImageWidth' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='ImageLength' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='SamplesPerPixel' declared_type='TW_INT16' type='s'/>
+    <field name='BitsPerSample' declared_type='TW_INT16*' type='[8s]'/>
+    <field name='BitsPerPixel' declared_type='TW_INT16' type='s'/>
+    <field name='Planar' declared_type='TW_BOOL' type='S'/>
+    <field name='PixelType' declared_type='TW_INT16' type='s'/>
+    <field name='Compression' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='pTW_IMAGELAYOUT' type='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;I&quot;PageNumber&quot;I&quot;FrameNumber&quot;I}' type64='{TW_IMAGELAYOUT=&quot;Frame&quot;{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}&quot;DocumentNumber&quot;Q&quot;PageNumber&quot;Q&quot;FrameNumber&quot;Q}'>
+    <field name='Frame' declared_type='TW_FRAME' type='{TW_FRAME=&quot;Left&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Top&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Right&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Bottom&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}'/>
+    <field name='DocumentNumber' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='PageNumber' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='FrameNumber' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_IMAGEMEMXFER' type='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;I&quot;Columns&quot;I&quot;Rows&quot;I&quot;XOffset&quot;I&quot;YOffset&quot;I&quot;BytesWritten&quot;I&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}}' type64='{TW_IMAGEMEMXFER=&quot;Compression&quot;S&quot;BytesPerRow&quot;Q&quot;Columns&quot;Q&quot;Rows&quot;Q&quot;XOffset&quot;Q&quot;YOffset&quot;Q&quot;BytesWritten&quot;Q&quot;Memory&quot;{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}}'>
+    <field name='Compression' declared_type='TW_UINT16' type='S'/>
+    <field name='BytesPerRow' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Columns' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Rows' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='XOffset' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='YOffset' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='BytesWritten' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Memory' declared_type='TW_MEMORY' type='{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}' type64='{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}'/>
+  </struct>
+  <struct name='pTW_INFO' type='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;I}' type64='{TW_INFO=&quot;InfoID&quot;S&quot;ItemType&quot;S&quot;NumItems&quot;S&quot;CondCode&quot;S&quot;Item&quot;Q}'>
+    <field name='InfoID' declared_type='TW_UINT16' type='S'/>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='NumItems' declared_type='TW_UINT16' type='S'/>
+    <field name='CondCode' declared_type='TW_UINT16' type='S'/>
+    <field name='Item' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_JPEGCOMPRESSION' type='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;I&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]}' type64='{TW_JPEGCOMPRESSION=&quot;ColorSpace&quot;S&quot;SubSampling&quot;Q&quot;NumComponents&quot;S&quot;RestartFrequency&quot;S&quot;QuantMap&quot;[4S]&quot;QuantTable&quot;[4{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanMap&quot;[4S]&quot;HuffmanDC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]&quot;HuffmanAC&quot;[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]}'>
+    <field name='ColorSpace' declared_type='TW_UINT16' type='S'/>
+    <field name='SubSampling' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='NumComponents' declared_type='TW_UINT16' type='S'/>
+    <field name='RestartFrequency' declared_type='TW_UINT16' type='S'/>
+    <field name='QuantMap' declared_type='TW_UINT16*' type='[4S]'/>
+    <field name='QuantTable' declared_type='TW_MEMORY*' type='[4{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]' type64='[4{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]'/>
+    <field name='HuffmanMap' declared_type='TW_UINT16*' type='[4S]'/>
+    <field name='HuffmanDC' declared_type='TW_MEMORY*' type='[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]' type64='[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]'/>
+    <field name='HuffmanAC' declared_type='TW_MEMORY*' type='[2{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}]' type64='[2{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}]'/>
+  </struct>
+  <struct name='pTW_MEMORY' type='{TW_MEMORY=&quot;Flags&quot;I&quot;Length&quot;I&quot;TheMem&quot;*}' type64='{TW_MEMORY=&quot;Flags&quot;Q&quot;Length&quot;Q&quot;TheMem&quot;*}'>
+    <field name='Flags' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Length' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='TheMem' declared_type='TW_MEMREF' type='*'/>
+  </struct>
+  <struct name='pTW_ONEVALUE' type='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;I}' type64='{TW_ONEVALUE=&quot;ItemType&quot;S&quot;Item&quot;Q}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='Item' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_PALETTE8' type='{TW_PALETTE8=&quot;NumColors&quot;S&quot;PaletteType&quot;S&quot;Colors&quot;[256{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'>
+    <field name='NumColors' declared_type='TW_UINT16' type='S'/>
+    <field name='PaletteType' declared_type='TW_UINT16' type='S'/>
+    <field name='Colors' declared_type='TW_ELEMENT8*' type='[256{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]'/>
+  </struct>
+  <struct name='pTW_PASSTHRU' type='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;I&quot;Direction&quot;i&quot;pData&quot;*&quot;DataBytes&quot;I&quot;DataBytesXfered&quot;I}' type64='{TW_PASSTHRU=&quot;pCommand&quot;*&quot;CommandBytes&quot;Q&quot;Direction&quot;q&quot;pData&quot;*&quot;DataBytes&quot;Q&quot;DataBytesXfered&quot;Q}'>
+    <field name='pCommand' declared_type='TW_MEMREF' type='*'/>
+    <field name='CommandBytes' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Direction' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='pData' declared_type='TW_MEMREF' type='*'/>
+    <field name='DataBytes' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DataBytesXfered' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_PENDINGXFERS' type='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;I&quot;Reserved&quot;I)}' type64='{TW_PENDINGXFERS=&quot;Count&quot;S&quot;TW_JOBCONTROL&quot;(?=&quot;EOJ&quot;Q&quot;Reserved&quot;Q)}'>
+    <field name='Count' declared_type='TW_UINT16' type='S'/>
+    <field name='TW_JOBCONTROL' declared_type='union TW_PENDINGXFERS::' type='(?=&quot;EOJ&quot;I&quot;Reserved&quot;I)' type64='(?=&quot;EOJ&quot;Q&quot;Reserved&quot;Q)'/>
+  </struct>
+  <struct name='pTW_RANGE' type='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;I&quot;MaxValue&quot;I&quot;StepSize&quot;I&quot;DefaultValue&quot;I&quot;CurrentValue&quot;I}' type64='{TW_RANGE=&quot;ItemType&quot;S&quot;MinValue&quot;Q&quot;MaxValue&quot;Q&quot;StepSize&quot;Q&quot;DefaultValue&quot;Q&quot;CurrentValue&quot;Q}'>
+    <field name='ItemType' declared_type='TW_UINT16' type='S'/>
+    <field name='MinValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='MaxValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='StepSize' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='DefaultValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='CurrentValue' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_RGBRESPONSE' type='{TW_RGBRESPONSE=&quot;Response&quot;[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]}'>
+    <field name='Response' declared_type='TW_ELEMENT8*' type='[1{TW_ELEMENT8=&quot;Index&quot;C&quot;Channel1&quot;C&quot;Channel2&quot;C&quot;Channel3&quot;C}]'/>
+  </struct>
+  <struct name='pTW_SETUPAUDIOFILEXFER' type='{TW_SETUPAUDIOFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'>
+    <field name='FileName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Format' declared_type='TW_UINT16' type='S'/>
+    <field name='VRefNum' declared_type='TW_INT16' type='s'/>
+  </struct>
+  <struct name='pTW_SETUPFILEXFER' type='{TW_SETUPFILEXFER=&quot;FileName&quot;[256C]&quot;Format&quot;S&quot;VRefNum&quot;s}'>
+    <field name='FileName' declared_type='TW_STR255' type='[256C]'/>
+    <field name='Format' declared_type='TW_UINT16' type='S'/>
+    <field name='VRefNum' declared_type='TW_INT16' type='s'/>
+  </struct>
+  <struct name='pTW_SETUPFILEXFER2' type='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;I}' type64='{TW_SETUPFILEXFER2=&quot;FileName&quot;*&quot;FileNameType&quot;S&quot;Format&quot;S&quot;VRefNum&quot;s&quot;ParID&quot;Q}'>
+    <field name='FileName' declared_type='TW_MEMREF' type='*'/>
+    <field name='FileNameType' declared_type='TW_UINT16' type='S'/>
+    <field name='Format' declared_type='TW_UINT16' type='S'/>
+    <field name='VRefNum' declared_type='TW_INT16' type='s'/>
+    <field name='ParID' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_SETUPMEMXFER' type='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;I&quot;MaxBufSize&quot;I&quot;Preferred&quot;I}' type64='{TW_SETUPMEMXFER=&quot;MinBufSize&quot;Q&quot;MaxBufSize&quot;Q&quot;Preferred&quot;Q}'>
+    <field name='MinBufSize' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='MaxBufSize' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <field name='Preferred' declared_type='TW_UINT32' type='L' type64='Q'/>
+  </struct>
+  <struct name='pTW_STATUS' type='{TW_STATUS=&quot;ConditionCode&quot;S&quot;Reserved&quot;S}'>
+    <field name='ConditionCode' declared_type='TW_UINT16' type='S'/>
+    <field name='Reserved' declared_type='TW_UINT16' type='S'/>
+  </struct>
+  <struct name='pTW_TRANSFORMSTAGE' type='{TW_TRANSFORMSTAGE=&quot;Decode&quot;[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]&quot;Mix&quot;[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]}'>
+    <field name='Decode' declared_type='TW_DECODEFUNCTION*' type='[3{TW_DECODEFUNCTION=&quot;StartIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndIn&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;StartOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;BreakOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;EndOut&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;Gamma&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}&quot;SampleCount&quot;{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}}]'/>
+    <field name='Mix' declared_type='TW_FIX32**' type='[3[3{TW_FIX32=&quot;Whole&quot;s&quot;Frac&quot;S}]]'/>
+  </struct>
+  <struct name='pTW_TWUNKDSENTRYPARAMS' type='{_pTW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;i&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;i}' type64='{_pTW_TWUNKDSENTRYPARAMS=&quot;destFlag&quot;c&quot;dest&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dataGroup&quot;q&quot;dataArgType&quot;s&quot;message&quot;s&quot;pDataSize&quot;q}'>
+    <field name='destFlag' declared_type='TW_INT8' type='c'/>
+    <field name='dest' declared_type='TW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'/>
+    <field name='dataGroup' declared_type='TW_INT32' type='l' type64='q'/>
+    <field name='dataArgType' declared_type='TW_INT16' type='s'/>
+    <field name='message' declared_type='TW_INT16' type='s'/>
+    <field name='pDataSize' declared_type='TW_INT32' type='l' type64='q'/>
+  </struct>
+  <struct name='pTW_TWUNKDSENTRYRETURN' type='{_pTW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;i}' type64='{_pTW_TWUNKDSENTRYRETURN=&quot;returnCode&quot;S&quot;conditionCode&quot;S&quot;pDataSize&quot;q}'>
+    <field name='returnCode' declared_type='TW_UINT16' type='S'/>
+    <field name='conditionCode' declared_type='TW_UINT16' type='S'/>
+    <field name='pDataSize' declared_type='TW_INT32' type='l' type64='q'/>
+  </struct>
+  <struct name='pTW_TWUNKIDENTITY' type='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}' type64='{TW_TWUNKIDENTITY=&quot;identity&quot;{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}&quot;dsPath&quot;[256C]}'>
+    <field name='identity' declared_type='TW_IDENTITY' type='{TW_IDENTITY=&quot;Id&quot;I&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;I&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}' type64='{TW_IDENTITY=&quot;Id&quot;Q&quot;Version&quot;{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}&quot;ProtocolMajor&quot;S&quot;ProtocolMinor&quot;S&quot;SupportedGroups&quot;Q&quot;Manufacturer&quot;[34C]&quot;ProductFamily&quot;[34C]&quot;ProductName&quot;[34C]}'/>
+    <field name='dsPath' declared_type='TW_STR255' type='[256C]'/>
+  </struct>
+  <struct name='pTW_USERINTERFACE' type='{TW_USERINTERFACE=&quot;ShowUI&quot;S&quot;ModalUI&quot;S&quot;hParent&quot;^*}'>
+    <field name='ShowUI' declared_type='TW_BOOL' type='S'/>
+    <field name='ModalUI' declared_type='TW_BOOL' type='S'/>
+    <field name='hParent' declared_type='TW_HANDLE' type='^*'/>
+  </struct>
+  <struct name='pTW_VERSION' type='{TW_VERSION=&quot;MajorNum&quot;S&quot;MinorNum&quot;S&quot;Language&quot;S&quot;Country&quot;S&quot;Info&quot;[34C]}'>
+    <field name='MajorNum' declared_type='TW_UINT16' type='S'/>
+    <field name='MinorNum' declared_type='TW_UINT16' type='S'/>
+    <field name='Language' declared_type='TW_UINT16' type='S'/>
+    <field name='Country' declared_type='TW_UINT16' type='S'/>
+    <field name='Info' declared_type='TW_STR32' type='[34C]'/>
+  </struct>
   <enum name='ACAP_AUDIOFILEFORMAT' value='4609'/>
   <enum name='ACAP_XFERMECH' value='4610'/>
   <enum name='CAP_ALARMS' value='4120'/>
@@ -1075,20 +1530,20 @@
   <enum name='TWUN_POINTS' value='3'/>
   <enum name='TWUN_TWIPS' value='4'/>
   <function name='DSM_Entry'>
-    <arg type='^{TW_IDENTITY=I{TW_VERSION=SSSS[34C]}SSI[34C][34C][34C]}' type64='^{TW_IDENTITY=Q{TW_VERSION=SSSS[34C]}SSQ[34C][34C][34C]}'/>
-    <arg type='^{TW_IDENTITY=I{TW_VERSION=SSSS[34C]}SSI[34C][34C][34C]}' type64='^{TW_IDENTITY=Q{TW_VERSION=SSSS[34C]}SSQ[34C][34C][34C]}'/>
-    <arg type='L' type64='Q'/>
-    <arg type='S'/>
-    <arg type='S'/>
-    <arg type='*'/>
-    <retval type='S'/>
+    <arg name='pOrigin' declared_type='pTW_IDENTITY' type='^{TW_IDENTITY=I{TW_VERSION=SSSS[34C]}SSI[34C][34C][34C]}' type64='^{TW_IDENTITY=Q{TW_VERSION=SSSS[34C]}SSQ[34C][34C][34C]}'/>
+    <arg name='pDest' declared_type='pTW_IDENTITY' type='^{TW_IDENTITY=I{TW_VERSION=SSSS[34C]}SSI[34C][34C][34C]}' type64='^{TW_IDENTITY=Q{TW_VERSION=SSSS[34C]}SSQ[34C][34C][34C]}'/>
+    <arg name='DG' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <arg name='DAT' declared_type='TW_UINT16' type='S'/>
+    <arg name='MSG' declared_type='TW_UINT16' type='S'/>
+    <arg name='pData' declared_type='TW_MEMREF' type='*'/>
+    <retval declared_type='TW_UINT16' type='S'/>
   </function>
   <function name='DS_Entry'>
-    <arg type='^{TW_IDENTITY=I{TW_VERSION=SSSS[34C]}SSI[34C][34C][34C]}' type64='^{TW_IDENTITY=Q{TW_VERSION=SSSS[34C]}SSQ[34C][34C][34C]}'/>
-    <arg type='L' type64='Q'/>
-    <arg type='S'/>
-    <arg type='S'/>
-    <arg type='*'/>
-    <retval type='S'/>
+    <arg name='pOrigin' declared_type='pTW_IDENTITY' type='^{TW_IDENTITY=I{TW_VERSION=SSSS[34C]}SSI[34C][34C][34C]}' type64='^{TW_IDENTITY=Q{TW_VERSION=SSSS[34C]}SSQ[34C][34C][34C]}'/>
+    <arg name='DG' declared_type='TW_UINT32' type='L' type64='Q'/>
+    <arg name='DAT' declared_type='TW_UINT16' type='S'/>
+    <arg name='MSG' declared_type='TW_UINT16' type='S'/>
+    <arg name='pData' declared_type='TW_MEMREF' type='*'/>
+    <retval declared_type='TW_UINT16' type='S'/>
   </function>
 </signatures>

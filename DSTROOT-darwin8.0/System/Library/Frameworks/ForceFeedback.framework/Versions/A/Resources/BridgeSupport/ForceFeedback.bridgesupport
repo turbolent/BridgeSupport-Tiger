@@ -1,22 +1,176 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
-  <struct name='FFCAPABILITIES' type='{FFCAPABILITIES=&quot;ffSpecVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;supportedEffects&quot;I&quot;emulatedEffects&quot;I&quot;subType&quot;I&quot;numFfAxes&quot;I&quot;ffAxes&quot;[32C]&quot;storageCapacity&quot;I&quot;playbackCapacity&quot;I&quot;firmwareVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;hardwareVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;driverVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'/>
-  <struct name='FFCONDITION' type='{FFCONDITION=&quot;lOffset&quot;i&quot;lPositiveCoefficient&quot;i&quot;lNegativeCoefficient&quot;i&quot;dwPositiveSaturation&quot;I&quot;dwNegativeSaturation&quot;I&quot;lDeadBand&quot;i}'/>
-  <struct name='FFCONSTANTFORCE' type='{FFCONSTANTFORCE=&quot;lMagnitude&quot;i}'/>
-  <struct name='FFCUSTOMFORCE' type='{FFCUSTOMFORCE=&quot;cChannels&quot;I&quot;dwSamplePeriod&quot;I&quot;cSamples&quot;I&quot;rglForceData&quot;^i}'/>
+  <struct name='FFCAPABILITIES' type='{FFCAPABILITIES=&quot;ffSpecVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;supportedEffects&quot;I&quot;emulatedEffects&quot;I&quot;subType&quot;I&quot;numFfAxes&quot;I&quot;ffAxes&quot;[32C]&quot;storageCapacity&quot;I&quot;playbackCapacity&quot;I&quot;firmwareVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;hardwareVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;driverVer&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'>
+    <field name='ffSpecVer' declared_type='NumVersion' type='{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'/>
+    <field name='supportedEffects' declared_type='UInt32' type='L' type64='I'/>
+    <field name='emulatedEffects' declared_type='UInt32' type='L' type64='I'/>
+    <field name='subType' declared_type='UInt32' type='L' type64='I'/>
+    <field name='numFfAxes' declared_type='UInt32' type='L' type64='I'/>
+    <field name='ffAxes' declared_type='UInt8*' type='[32C]'/>
+    <field name='storageCapacity' declared_type='UInt32' type='L' type64='I'/>
+    <field name='playbackCapacity' declared_type='UInt32' type='L' type64='I'/>
+    <field name='firmwareVer' declared_type='NumVersion' type='{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'/>
+    <field name='hardwareVer' declared_type='NumVersion' type='{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'/>
+    <field name='driverVer' declared_type='NumVersion' type='{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'/>
+  </struct>
+  <struct name='FFCONDITION' type='{FFCONDITION=&quot;lOffset&quot;i&quot;lPositiveCoefficient&quot;i&quot;lNegativeCoefficient&quot;i&quot;dwPositiveSaturation&quot;I&quot;dwNegativeSaturation&quot;I&quot;lDeadBand&quot;i}'>
+    <field name='lOffset' declared_type='LONG' type='l' type64='i'/>
+    <field name='lPositiveCoefficient' declared_type='LONG' type='l' type64='i'/>
+    <field name='lNegativeCoefficient' declared_type='LONG' type='l' type64='i'/>
+    <field name='dwPositiveSaturation' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwNegativeSaturation' declared_type='DWORD' type='L' type64='I'/>
+    <field name='lDeadBand' declared_type='LONG' type='l' type64='i'/>
+  </struct>
+  <struct name='FFCONSTANTFORCE' type='{FFCONSTANTFORCE=&quot;lMagnitude&quot;i}'>
+    <field name='lMagnitude' declared_type='LONG' type='l' type64='i'/>
+  </struct>
+  <struct name='FFCUSTOMFORCE' type='{FFCUSTOMFORCE=&quot;cChannels&quot;I&quot;dwSamplePeriod&quot;I&quot;cSamples&quot;I&quot;rglForceData&quot;^i}'>
+    <field name='cChannels' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwSamplePeriod' declared_type='DWORD' type='L' type64='I'/>
+    <field name='cSamples' declared_type='DWORD' type='L' type64='I'/>
+    <field name='rglForceData' declared_type='LPLONG' type='^i'/>
+  </struct>
   <struct name='FFDeviceObjectReference' type='{_FFDeviceObjectReference=}'/>
-  <struct name='FFEFFECT' type='{FFEFFECT=&quot;dwSize&quot;I&quot;dwFlags&quot;I&quot;dwDuration&quot;I&quot;dwSamplePeriod&quot;I&quot;dwGain&quot;I&quot;dwTriggerButton&quot;I&quot;dwTriggerRepeatInterval&quot;I&quot;cAxes&quot;I&quot;rgdwAxes&quot;^I&quot;rglDirection&quot;^i&quot;lpEnvelope&quot;^{FFENVELOPE}&quot;cbTypeSpecificParams&quot;I&quot;lpvTypeSpecificParams&quot;^v&quot;dwStartDelay&quot;I}'/>
-  <struct name='FFEFFESCAPE' type='{FFEFFESCAPE=&quot;dwSize&quot;I&quot;dwCommand&quot;I&quot;lpvInBuffer&quot;^v&quot;cbInBuffer&quot;I&quot;lpvOutBuffer&quot;^v&quot;cbOutBuffer&quot;I}'/>
-  <struct name='FFENVELOPE' type='{FFENVELOPE=&quot;dwSize&quot;I&quot;dwAttackLevel&quot;I&quot;dwAttackTime&quot;I&quot;dwFadeLevel&quot;I&quot;dwFadeTime&quot;I}'/>
+  <struct name='FFEFFECT' type='{FFEFFECT=&quot;dwSize&quot;I&quot;dwFlags&quot;I&quot;dwDuration&quot;I&quot;dwSamplePeriod&quot;I&quot;dwGain&quot;I&quot;dwTriggerButton&quot;I&quot;dwTriggerRepeatInterval&quot;I&quot;cAxes&quot;I&quot;rgdwAxes&quot;^I&quot;rglDirection&quot;^i&quot;lpEnvelope&quot;^{FFENVELOPE}&quot;cbTypeSpecificParams&quot;I&quot;lpvTypeSpecificParams&quot;^v&quot;dwStartDelay&quot;I}'>
+    <field name='dwSize' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwFlags' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwDuration' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwSamplePeriod' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwGain' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwTriggerButton' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwTriggerRepeatInterval' declared_type='DWORD' type='L' type64='I'/>
+    <field name='cAxes' declared_type='DWORD' type='L' type64='I'/>
+    <field name='rgdwAxes' declared_type='LPDWORD' type='^I'/>
+    <field name='rglDirection' declared_type='LPLONG' type='^i'/>
+    <field name='lpEnvelope' declared_type='PFFENVELOPE' type='^{FFENVELOPE=IIIII}'/>
+    <field name='cbTypeSpecificParams' declared_type='DWORD' type='L' type64='I'/>
+    <field name='lpvTypeSpecificParams' declared_type='void*' type='^v'/>
+    <field name='dwStartDelay' declared_type='DWORD' type='L' type64='I'/>
+  </struct>
+  <struct name='FFEFFESCAPE' type='{FFEFFESCAPE=&quot;dwSize&quot;I&quot;dwCommand&quot;I&quot;lpvInBuffer&quot;^v&quot;cbInBuffer&quot;I&quot;lpvOutBuffer&quot;^v&quot;cbOutBuffer&quot;I}'>
+    <field name='dwSize' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwCommand' declared_type='DWORD' type='L' type64='I'/>
+    <field name='lpvInBuffer' declared_type='void*' type='^v'/>
+    <field name='cbInBuffer' declared_type='DWORD' type='L' type64='I'/>
+    <field name='lpvOutBuffer' declared_type='void*' type='^v'/>
+    <field name='cbOutBuffer' declared_type='DWORD' type='L' type64='I'/>
+  </struct>
+  <struct name='FFENVELOPE' type='{FFENVELOPE=&quot;dwSize&quot;I&quot;dwAttackLevel&quot;I&quot;dwAttackTime&quot;I&quot;dwFadeLevel&quot;I&quot;dwFadeTime&quot;I}'>
+    <field name='dwSize' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwAttackLevel' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwAttackTime' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwFadeLevel' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwFadeTime' declared_type='DWORD' type='L' type64='I'/>
+  </struct>
   <struct name='FFEffectObjectReference' type='{_FFEffectObjectReference=}'/>
-  <struct name='FFPERIODIC' type='{FFPERIODIC=&quot;dwMagnitude&quot;I&quot;lOffset&quot;i&quot;dwPhase&quot;I&quot;dwPeriod&quot;I}'/>
-  <struct name='FFRAMPFORCE' type='{FFRAMPFORCE=&quot;lStart&quot;i&quot;lEnd&quot;i}'/>
-  <struct name='ForceFeedbackDeviceState' type='{ForceFeedbackDeviceState=&quot;dwSize&quot;I&quot;dwState&quot;I&quot;dwLoad&quot;I}'/>
-  <struct name='ForceFeedbackVersion' type='{ForceFeedbackVersion=&quot;apiVersion&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;plugInVersion&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'/>
-  <struct name='IOForceFeedbackDeviceInterface' type='{IOForceFeedbackDeviceInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;ForceFeedbackGetVersion&quot;^?&quot;InitializeTerminate&quot;^?&quot;DestroyEffect&quot;^?&quot;DownloadEffect&quot;^?&quot;Escape&quot;^?&quot;GetEffectStatus&quot;^?&quot;GetForceFeedbackCapabilities&quot;^?&quot;GetForceFeedbackState&quot;^?&quot;SendForceFeedbackCommand&quot;^?&quot;SetProperty&quot;^?&quot;StartEffect&quot;^?&quot;StopEffect&quot;^?}'/>
+  <struct name='FFPERIODIC' type='{FFPERIODIC=&quot;dwMagnitude&quot;I&quot;lOffset&quot;i&quot;dwPhase&quot;I&quot;dwPeriod&quot;I}'>
+    <field name='dwMagnitude' declared_type='DWORD' type='L' type64='I'/>
+    <field name='lOffset' declared_type='LONG' type='l' type64='i'/>
+    <field name='dwPhase' declared_type='DWORD' type='L' type64='I'/>
+    <field name='dwPeriod' declared_type='DWORD' type='L' type64='I'/>
+  </struct>
+  <struct name='FFRAMPFORCE' type='{FFRAMPFORCE=&quot;lStart&quot;i&quot;lEnd&quot;i}'>
+    <field name='lStart' declared_type='LONG' type='l' type64='i'/>
+    <field name='lEnd' declared_type='LONG' type='l' type64='i'/>
+  </struct>
+  <struct name='ForceFeedbackDeviceState' type='{ForceFeedbackDeviceState=&quot;dwSize&quot;I&quot;dwState&quot;I&quot;dwLoad&quot;I}'>
+    <field name='dwSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dwState' declared_type='UInt32' type='L' type64='I'/>
+    <field name='dwLoad' declared_type='UInt32' type='L' type64='I'/>
+  </struct>
+  <struct name='ForceFeedbackVersion' type='{ForceFeedbackVersion=&quot;apiVersion&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}&quot;plugInVersion&quot;{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'>
+    <field name='apiVersion' declared_type='NumVersion' type='{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'/>
+    <field name='plugInVersion' declared_type='NumVersion' type='{NumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'/>
+  </struct>
+  <struct name='IOForceFeedbackDeviceInterface' type='{IOForceFeedbackDeviceInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;ForceFeedbackGetVersion&quot;^?&quot;InitializeTerminate&quot;^?&quot;DestroyEffect&quot;^?&quot;DownloadEffect&quot;^?&quot;Escape&quot;^?&quot;GetEffectStatus&quot;^?&quot;GetForceFeedbackCapabilities&quot;^?&quot;GetForceFeedbackState&quot;^?&quot;SendForceFeedbackCommand&quot;^?&quot;SetProperty&quot;^?&quot;StartEffect&quot;^?&quot;StopEffect&quot;^?}'>
+    <field name='_reserved' declared_type='void*' type='^v'/>
+    <field name='QueryInterface' function_pointer='true' declared_type='HRESULT (*)(void *, REFIID, LPVOID *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='REFIID' type='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+      <arg declared_type='LPVOID*' type='^^v'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='AddRef' function_pointer='true' declared_type='ULONG (*)(void *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='ULONG' type='L' type64='I'/>
+    </field>
+    <field name='Release' function_pointer='true' declared_type='ULONG (*)(void *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='ULONG' type='L' type64='I'/>
+    </field>
+    <field name='ForceFeedbackGetVersion' function_pointer='true' declared_type='HRESULT (*)(void *, ForceFeedbackVersion *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ForceFeedbackVersion*' type='^{ForceFeedbackVersion={NumVersion=CCCC}{NumVersion=CCCC}}'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='InitializeTerminate' function_pointer='true' declared_type='HRESULT (*)(void *, NumVersion, io_object_t, boolean_t)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='NumVersion' type='{NumVersion=CCCC}'/>
+      <arg declared_type='io_object_t' type='I'/>
+      <arg declared_type='boolean_t' type='i' type64='I'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='DestroyEffect' function_pointer='true' declared_type='HRESULT (*)(void *, FFEffectDownloadID)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFEffectDownloadID' type='L' type64='I'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='DownloadEffect' function_pointer='true' declared_type='HRESULT (*)(void *, CFUUIDRef, FFEffectDownloadID *, FFEFFECT *, FFEffectParameterFlag)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='CFUUIDRef' type='^{__CFUUID=}'/>
+      <arg declared_type='FFEffectDownloadID*' type='^I'/>
+      <arg declared_type='FFEFFECT*' type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
+      <arg declared_type='FFEffectParameterFlag' type='L' type64='I'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='Escape' function_pointer='true' declared_type='HRESULT (*)(void *, FFEffectDownloadID, FFEFFESCAPE *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFEffectDownloadID' type='L' type64='I'/>
+      <arg declared_type='FFEFFESCAPE*' type='^{FFEFFESCAPE=II^vI^vI}'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='GetEffectStatus' function_pointer='true' declared_type='HRESULT (*)(void *, FFEffectDownloadID, FFEffectStatusFlag *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFEffectDownloadID' type='L' type64='I'/>
+      <arg declared_type='FFEffectStatusFlag*' type='^I'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='GetForceFeedbackCapabilities' function_pointer='true' declared_type='HRESULT (*)(void *, FFCAPABILITIES *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFCAPABILITIES*' type='^{FFCAPABILITIES={NumVersion=CCCC}IIII[32C]II{NumVersion=CCCC}{NumVersion=CCCC}{NumVersion=CCCC}}'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='GetForceFeedbackState' function_pointer='true' declared_type='HRESULT (*)(void *, ForceFeedbackDeviceState *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='ForceFeedbackDeviceState*' type='^{ForceFeedbackDeviceState=III}'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='SendForceFeedbackCommand' function_pointer='true' declared_type='HRESULT (*)(void *, FFCommandFlag)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFCommandFlag' type='L' type64='I'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='SetProperty' function_pointer='true' declared_type='HRESULT (*)(void *, FFProperty, void *)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFProperty' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='StartEffect' function_pointer='true' declared_type='HRESULT (*)(void *, FFEffectDownloadID, FFEffectStartFlag, UInt32)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFEffectDownloadID' type='L' type64='I'/>
+      <arg declared_type='FFEffectStartFlag' type='L' type64='I'/>
+      <arg declared_type='UInt32' type='L' type64='I'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+    <field name='StopEffect' function_pointer='true' declared_type='HRESULT (*)(void *, FFEffectDownloadID)' type='^?'>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='FFEffectDownloadID' type='L' type64='I'/>
+      <retval declared_type='HRESULT' type='l' type64='i'/>
+    </field>
+  </struct>
   <enum name='E_PENDING' value='2147483658'/>
   <enum name='FFCAP_ET_CONSTANTFORCE' value='1'/>
   <enum name='FFCAP_ET_CUSTOMFORCE' value='2048'/>
@@ -157,107 +311,107 @@
   <enum name='kFFPlugInAPINonRelRev' value='0'/>
   <enum name='kFFPlugInAPIStage' value='128'/>
   <function name='FFCreateDevice'>
-    <arg type='I'/>
-    <arg type='^^{?}'/>
-    <retval type='l' type64='i'/>
+    <arg name='hidDevice' declared_type='io_service_t' type='I'/>
+    <arg name='pDeviceReference' declared_type='FFDeviceObjectReference*' type='^^{?}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceCreateEffect'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='^{__CFUUID=}'/>
-    <arg type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
-    <arg type='^^{?}'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='uuidRef' declared_type='CFUUIDRef' type='^{__CFUUID=}'/>
+    <arg name='pEffectDefinition' declared_type='FFEFFECT*' type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
+    <arg name='pEffectReference' declared_type='FFEffectObjectReference*' type='^^{?}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceEscape'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='^{FFEFFESCAPE=II^vI^vI}'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='pFFEffectEscape' declared_type='FFEFFESCAPE*' type='^{FFEFFESCAPE=II^vI^vI}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceGetForceFeedbackCapabilities'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='^{FFCAPABILITIES={NumVersion=CCCC}IIII[32C]II{NumVersion=CCCC}{NumVersion=CCCC}{NumVersion=CCCC}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='pFFCapabilities' declared_type='FFCAPABILITIES*' type='^{FFCAPABILITIES={NumVersion=CCCC}IIII[32C]II{NumVersion=CCCC}{NumVersion=CCCC}{NumVersion=CCCC}}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceGetForceFeedbackProperty'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='property' declared_type='FFProperty' type='L' type64='I'/>
+    <arg name='pValue' declared_type='void*' type='^v'/>
+    <arg name='valueSize' declared_type='IOByteCount' type='L' type64='I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceGetForceFeedbackState'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='pFFState' declared_type='FFState*' type='^I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceReleaseEffect'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceSendForceFeedbackCommand'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='flags' declared_type='FFCommandFlag' type='L' type64='I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceSetCooperativeLevel'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='^v'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='taskIdentifier' declared_type='void*' type='^v'/>
+    <arg name='flags' declared_type='FFCooperativeLevelFlag' type='L' type64='I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFDeviceSetForceFeedbackProperty'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <arg name='property' declared_type='FFProperty' type='L' type64='I'/>
+    <arg name='pValue' declared_type='void*' type='^v'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectDownload'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectEscape'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <arg type='^{FFEFFESCAPE=II^vI^vI}'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <arg name='pFFEffectEscape' declared_type='FFEFFESCAPE*' type='^{FFEFFESCAPE=II^vI^vI}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectGetEffectStatus'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <arg name='pFlags' declared_type='FFEffectStatusFlag*' type='^I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectGetParameters'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <arg type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <arg name='pFFEffect' declared_type='FFEFFECT*' type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
+    <arg name='flags' declared_type='FFEffectParameterFlag' type='L' type64='I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectSetParameters'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <arg type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <arg name='pFFEffect' declared_type='FFEFFECT*' type='^{FFEFFECT=IIIIIIII^I^i^{FFENVELOPE}I^vI}'/>
+    <arg name='flags' declared_type='FFEffectParameterFlag' type='L' type64='I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectStart'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <arg name='iterations' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='flags' declared_type='FFEffectStartFlag' type='L' type64='I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectStop'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFEffectUnload'>
-    <arg type='^{_FFEffectObjectReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='effectReference' declared_type='FFEffectObjectReference' type='^{_FFEffectObjectReference=}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFIsForceFeedback'>
-    <arg type='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='hidDevice' declared_type='io_service_t' type='I'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
   <function name='FFReleaseDevice'>
-    <arg type='^{_FFDeviceObjectReference=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='deviceReference' declared_type='FFDeviceObjectReference' type='^{_FFDeviceObjectReference=}'/>
+    <retval declared_type='HRESULT' type='l' type64='i'/>
   </function>
 </signatures>

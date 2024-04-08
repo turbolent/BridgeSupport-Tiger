@@ -1,55 +1,137 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
   <depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
   <depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
-  <constant name='QCCompositionAttributeCopyrightKey' type='@'/>
-  <constant name='QCCompositionAttributeDescriptionKey' type='@'/>
-  <constant name='QCCompositionAttributeNameKey' type='@'/>
-  <constant name='QCPortAttributeMaximumValueKey' type='@'/>
-  <constant name='QCPortAttributeMinimumValueKey' type='@'/>
-  <constant name='QCPortAttributeNameKey' type='@'/>
-  <constant name='QCPortAttributeTypeKey' type='@'/>
-  <constant name='QCPortTypeBoolean' type='@'/>
-  <constant name='QCPortTypeColor' type='@'/>
-  <constant name='QCPortTypeImage' type='@'/>
-  <constant name='QCPortTypeIndex' type='@'/>
-  <constant name='QCPortTypeNumber' type='@'/>
-  <constant name='QCPortTypeString' type='@'/>
-  <constant name='QCPortTypeStructure' type='@'/>
-  <constant name='QCRendererEventKey' type='@'/>
-  <constant name='QCRendererMouseLocationKey' type='@'/>
-  <constant name='QCViewDidStartRenderingNotification' type='@'/>
-  <constant name='QCViewDidStopRenderingNotification' type='@'/>
+  <constant name='QCCompositionAttributeCopyrightKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCCompositionAttributeDescriptionKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCCompositionAttributeNameKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortAttributeMaximumValueKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortAttributeMinimumValueKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortAttributeNameKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortAttributeTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortTypeBoolean' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortTypeColor' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortTypeImage' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortTypeIndex' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortTypeNumber' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortTypeString' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCPortTypeStructure' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCRendererEventKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCRendererMouseLocationKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCViewDidStartRenderingNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='QCViewDidStopRenderingNotification' declared_type='NSString*' type='@' const='true'/>
   <class name='QCRenderer'>
+    <method selector='attributes'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='initWithOpenGLContext:pixelFormat:file:'>
+      <arg name='context' declared_type='NSOpenGLContext*' type='@' index='0'/>
+      <arg name='format' declared_type='NSOpenGLPixelFormat*' type='@' index='1'/>
+      <arg name='path' declared_type='NSString*' type='@' index='2'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='inputKeys'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='outputKeys'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
     <method selector='renderAtTime:arguments:'>
-      <retval type='B'/>
+      <arg name='time' declared_type='NSTimeInterval' type='d' index='0'/>
+      <arg name='arguments' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='setValue:forInputKey:'>
-      <retval type='B'/>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='key' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='valueForInputKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='valueForOutputKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
     </method>
   </class>
   <class name='QCView'>
+    <method selector='attributes'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
     <method selector='autostartsRendering'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='erase'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='eraseColor'>
+      <retval declared_type='NSColor*' type='@'/>
+    </method>
+    <method selector='eventForwardingMask'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='inputKeys'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='isRendering'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='loadCompositionFromFile:'>
-      <retval type='B'/>
+      <arg name='path' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='maxRenderingFrameRate'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='outputKeys'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
     <method selector='setAutostartsRendering:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setEraseColor:'>
+      <arg name='color' declared_type='NSColor*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setEventForwardingMask:'>
+      <arg name='mask' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setMaxRenderingFrameRate:'>
+      <arg name='maxFPS' declared_type='float' type='f' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setValue:forInputKey:'>
-      <retval type='B'/>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='key' declared_type='NSString*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='start:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='startRendering'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='stop:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='stopRendering'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='valueForInputKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='valueForOutputKey:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
     </method>
   </class>
 </signatures>

@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
@@ -11,21 +10,120 @@
   <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework'/>
-  <struct name='AppParameters' type='{AppParameters=&quot;theMsgEvent&quot;{?=&quot;what&quot;S&quot;message&quot;I&quot;when&quot;I&quot;where&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;modifiers&quot;S}&quot;eventRefCon&quot;L&quot;messageLength&quot;L}' type64='{AppParameters=&quot;theMsgEvent&quot;{?=&quot;what&quot;S&quot;message&quot;I&quot;when&quot;I&quot;where&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;modifiers&quot;S}&quot;eventRefCon&quot;Q&quot;messageLength&quot;Q}'/>
-  <struct name='CIcon' type='{CIcon=&quot;iconPMap&quot;{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;l&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}&quot;iconMask&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconBMap&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconData&quot;^*&quot;iconMaskData&quot;[1s]}' type64='{CIcon=&quot;iconPMap&quot;{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;q&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}&quot;iconMask&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconBMap&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconData&quot;^*&quot;iconMaskData&quot;[1s]}'/>
-  <struct name='ICAppSpec' type='{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}'/>
-  <struct name='ICAppSpecList' type='{ICAppSpecList=&quot;numberOfItems&quot;s&quot;appSpecs&quot;[1{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}]}'/>
-  <struct name='ICCharTable' type='{ICCharTable=&quot;netToMac&quot;[256C]&quot;macToNet&quot;[256C]}'/>
-  <struct name='ICDirSpec' type='{ICDirSpec=&quot;vRefNum&quot;s&quot;dirID&quot;l}' type64='{ICDirSpec=&quot;vRefNum&quot;s&quot;dirID&quot;q}'/>
-  <struct name='ICFileSpec' type='{ICFileSpec=&quot;volName&quot;[32C]&quot;volCreationDate&quot;l&quot;fss&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;alias&quot;{AliasRecord=&quot;userType&quot;I&quot;aliasSize&quot;S}}' type64='{ICFileSpec=&quot;volName&quot;[32C]&quot;volCreationDate&quot;q&quot;fss&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;alias&quot;{AliasRecord=&quot;userType&quot;I&quot;aliasSize&quot;S}}'/>
-  <struct name='ICFontRecord' type='{ICFontRecord=&quot;size&quot;s&quot;face&quot;C&quot;pad&quot;c&quot;font&quot;[256C]}'/>
-  <struct name='ICMapEntry' type='{ICMapEntry=&quot;totalLength&quot;s&quot;fixedLength&quot;s&quot;version&quot;s&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;postCreator&quot;I&quot;flags&quot;i&quot;extension&quot;[256C]&quot;creatorAppName&quot;[256C]&quot;postAppName&quot;[256C]&quot;MIMEType&quot;[256C]&quot;entryName&quot;[256C]}' type64='{ICMapEntry=&quot;totalLength&quot;s&quot;fixedLength&quot;s&quot;version&quot;s&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;postCreator&quot;I&quot;flags&quot;q&quot;extension&quot;[256C]&quot;creatorAppName&quot;[256C]&quot;postAppName&quot;[256C]&quot;MIMEType&quot;[256C]&quot;entryName&quot;[256C]}'/>
-  <struct name='ICServiceEntry' type='{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}'/>
-  <struct name='ICServices' type='{ICServices=&quot;count&quot;s&quot;services&quot;[1{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}]}'/>
-  <struct name='LaunchParamBlockRec' type='{LaunchParamBlockRec=&quot;reserved1&quot;L&quot;reserved2&quot;S&quot;launchBlockID&quot;S&quot;launchEPBLength&quot;L&quot;launchFileFlags&quot;S&quot;launchControlFlags&quot;S&quot;launchAppSpec&quot;^{FSSpec}&quot;launchProcessSN&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;launchPreferredSize&quot;L&quot;launchMinimumSize&quot;L&quot;launchAvailableSize&quot;L&quot;launchAppParameters&quot;^{AppParameters}}' type64='{LaunchParamBlockRec=&quot;reserved1&quot;Q&quot;reserved2&quot;S&quot;launchBlockID&quot;S&quot;launchEPBLength&quot;Q&quot;launchFileFlags&quot;S&quot;launchControlFlags&quot;S&quot;launchAppSpec&quot;^{FSSpec}&quot;launchProcessSN&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;launchPreferredSize&quot;Q&quot;launchMinimumSize&quot;Q&quot;launchAvailableSize&quot;Q&quot;launchAppParameters&quot;^{AppParameters}}'/>
-  <struct name='ProcessInfoExtendedRec' type='{ProcessInfoExtendedRec=&quot;processInfoLength&quot;L&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;L&quot;processSignature&quot;I&quot;processMode&quot;L&quot;processLocation&quot;*&quot;processSize&quot;L&quot;processFreeMem&quot;L&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;L&quot;processActiveTime&quot;L&quot;processAppSpec&quot;^{FSSpec}&quot;processTempMemTotal&quot;L&quot;processPurgeableTempMemTotal&quot;L}' type64='{ProcessInfoExtendedRec=&quot;processInfoLength&quot;Q&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;Q&quot;processSignature&quot;I&quot;processMode&quot;Q&quot;processLocation&quot;*&quot;processSize&quot;Q&quot;processFreeMem&quot;Q&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;Q&quot;processActiveTime&quot;Q&quot;processAppSpec&quot;^{FSSpec}&quot;processTempMemTotal&quot;Q&quot;processPurgeableTempMemTotal&quot;Q}'/>
-  <struct name='ProcessInfoRec' type='{ProcessInfoRec=&quot;processInfoLength&quot;L&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;L&quot;processSignature&quot;I&quot;processMode&quot;L&quot;processLocation&quot;*&quot;processSize&quot;L&quot;processFreeMem&quot;L&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;L&quot;processActiveTime&quot;L&quot;processAppSpec&quot;^{FSSpec}}' type64='{ProcessInfoRec=&quot;processInfoLength&quot;Q&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;Q&quot;processSignature&quot;I&quot;processMode&quot;Q&quot;processLocation&quot;*&quot;processSize&quot;Q&quot;processFreeMem&quot;Q&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;Q&quot;processActiveTime&quot;Q&quot;processAppSpec&quot;^{FSSpec}}'/>
-  <struct name='SizeResourceRec' type='{SizeResourceRec=&quot;flags&quot;S&quot;preferredHeapSize&quot;L&quot;minimumHeapSize&quot;L}' type64='{SizeResourceRec=&quot;flags&quot;S&quot;preferredHeapSize&quot;Q&quot;minimumHeapSize&quot;Q}'/>
+  <struct name='AppParameters' type='{AppParameters=&quot;theMsgEvent&quot;{?=&quot;what&quot;S&quot;message&quot;I&quot;when&quot;I&quot;where&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;modifiers&quot;S}&quot;eventRefCon&quot;L&quot;messageLength&quot;L}' type64='{AppParameters=&quot;theMsgEvent&quot;{?=&quot;what&quot;S&quot;message&quot;I&quot;when&quot;I&quot;where&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;modifiers&quot;S}&quot;eventRefCon&quot;Q&quot;messageLength&quot;Q}'>
+    <field name='theMsgEvent' declared_type='struct AppParameters::' type='{_structAppParameters=&quot;what&quot;S&quot;message&quot;I&quot;when&quot;I&quot;where&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;modifiers&quot;S}'/>
+    <field name='eventRefCon' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='messageLength' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
+  <struct name='CIcon' type='{CIcon=&quot;iconPMap&quot;{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;l&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}&quot;iconMask&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconBMap&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconData&quot;^*&quot;iconMaskData&quot;[1s]}' type64='{CIcon=&quot;iconPMap&quot;{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;q&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}&quot;iconMask&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconBMap&quot;{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}&quot;iconData&quot;^*&quot;iconMaskData&quot;[1s]}'>
+    <field name='iconPMap' declared_type='PixMap' type='{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;l&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}' type64='{PixMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;pmVersion&quot;s&quot;packType&quot;s&quot;packSize&quot;q&quot;hRes&quot;i&quot;vRes&quot;i&quot;pixelType&quot;s&quot;pixelSize&quot;s&quot;cmpCount&quot;s&quot;cmpSize&quot;s&quot;pixelFormat&quot;I&quot;pmTable&quot;^^{ColorTable}&quot;pmExt&quot;^v}'/>
+    <field name='iconMask' declared_type='BitMap' type='{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}'/>
+    <field name='iconBMap' declared_type='BitMap' type='{BitMap=&quot;baseAddr&quot;*&quot;rowBytes&quot;s&quot;bounds&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}}'/>
+    <field name='iconData' declared_type='Handle' type='^*'/>
+    <field name='iconMaskData' declared_type='SInt16*' type='[1s]'/>
+  </struct>
+  <struct name='ICAppSpec' type='{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}'>
+    <field name='fCreator' declared_type='OSType' type='L' type64='I'/>
+    <field name='name' declared_type='Str63' type='[64C]'/>
+  </struct>
+  <struct name='ICAppSpecList' type='{ICAppSpecList=&quot;numberOfItems&quot;s&quot;appSpecs&quot;[1{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}]}'>
+    <field name='numberOfItems' declared_type='short' type='s'/>
+    <field name='appSpecs' declared_type='ICAppSpec*' type='[1{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}]'/>
+  </struct>
+  <struct name='ICCharTable' type='{ICCharTable=&quot;netToMac&quot;[256C]&quot;macToNet&quot;[256C]}'>
+    <field name='netToMac' declared_type='unsigned char*' type='[256C]'/>
+    <field name='macToNet' declared_type='unsigned char*' type='[256C]'/>
+  </struct>
+  <struct name='ICDirSpec' type='{ICDirSpec=&quot;vRefNum&quot;s&quot;dirID&quot;l}' type64='{ICDirSpec=&quot;vRefNum&quot;s&quot;dirID&quot;q}'>
+    <field name='vRefNum' declared_type='short' type='s'/>
+    <field name='dirID' declared_type='long' type='l' type64='q'/>
+  </struct>
+  <struct name='ICFileSpec' type='{ICFileSpec=&quot;volName&quot;[32C]&quot;volCreationDate&quot;l&quot;fss&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;alias&quot;{AliasRecord=&quot;userType&quot;I&quot;aliasSize&quot;S}}' type64='{ICFileSpec=&quot;volName&quot;[32C]&quot;volCreationDate&quot;q&quot;fss&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;alias&quot;{AliasRecord=&quot;userType&quot;I&quot;aliasSize&quot;S}}'>
+    <field name='volName' declared_type='Str31' type='[32C]'/>
+    <field name='volCreationDate' declared_type='long' type='l' type64='q'/>
+    <field name='fss' declared_type='FSSpec' type='{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}' type64='{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}'/>
+    <field name='alias' declared_type='AliasRecord' type='{AliasRecord=&quot;userType&quot;I&quot;aliasSize&quot;S}'/>
+  </struct>
+  <struct name='ICFontRecord' type='{ICFontRecord=&quot;size&quot;s&quot;face&quot;C&quot;pad&quot;c&quot;font&quot;[256C]}'>
+    <field name='size' declared_type='short' type='s'/>
+    <field name='face' declared_type='Style' type='C'/>
+    <field name='pad' declared_type='char' type='c'/>
+    <field name='font' declared_type='Str255' type='[256C]'/>
+  </struct>
+  <struct name='ICMapEntry' type='{ICMapEntry=&quot;totalLength&quot;s&quot;fixedLength&quot;s&quot;version&quot;s&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;postCreator&quot;I&quot;flags&quot;i&quot;extension&quot;[256C]&quot;creatorAppName&quot;[256C]&quot;postAppName&quot;[256C]&quot;MIMEType&quot;[256C]&quot;entryName&quot;[256C]}' type64='{ICMapEntry=&quot;totalLength&quot;s&quot;fixedLength&quot;s&quot;version&quot;s&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;postCreator&quot;I&quot;flags&quot;q&quot;extension&quot;[256C]&quot;creatorAppName&quot;[256C]&quot;postAppName&quot;[256C]&quot;MIMEType&quot;[256C]&quot;entryName&quot;[256C]}'>
+    <field name='totalLength' declared_type='short' type='s'/>
+    <field name='fixedLength' declared_type='ICFixedLength' type='s'/>
+    <field name='version' declared_type='short' type='s'/>
+    <field name='fileType' declared_type='OSType' type='L' type64='I'/>
+    <field name='fileCreator' declared_type='OSType' type='L' type64='I'/>
+    <field name='postCreator' declared_type='OSType' type='L' type64='I'/>
+    <field name='flags' declared_type='ICMapEntryFlags' type='l' type64='q'/>
+    <field name='extension' declared_type='Str255' type='[256C]'/>
+    <field name='creatorAppName' declared_type='Str255' type='[256C]'/>
+    <field name='postAppName' declared_type='Str255' type='[256C]'/>
+    <field name='MIMEType' declared_type='Str255' type='[256C]'/>
+    <field name='entryName' declared_type='Str255' type='[256C]'/>
+  </struct>
+  <struct name='ICServiceEntry' type='{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}'>
+    <field name='name' declared_type='Str255' type='[256C]'/>
+    <field name='port' declared_type='short' type='s'/>
+    <field name='flags' declared_type='ICServiceEntryFlags' type='s'/>
+  </struct>
+  <struct name='ICServices' type='{ICServices=&quot;count&quot;s&quot;services&quot;[1{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}]}'>
+    <field name='count' declared_type='short' type='s'/>
+    <field name='services' declared_type='ICServiceEntry*' type='[1{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}]'/>
+  </struct>
+  <struct name='LaunchParamBlockRec' type='{LaunchParamBlockRec=&quot;reserved1&quot;L&quot;reserved2&quot;S&quot;launchBlockID&quot;S&quot;launchEPBLength&quot;L&quot;launchFileFlags&quot;S&quot;launchControlFlags&quot;S&quot;launchAppSpec&quot;^{FSSpec}&quot;launchProcessSN&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;launchPreferredSize&quot;L&quot;launchMinimumSize&quot;L&quot;launchAvailableSize&quot;L&quot;launchAppParameters&quot;^{AppParameters}}' type64='{LaunchParamBlockRec=&quot;reserved1&quot;Q&quot;reserved2&quot;S&quot;launchBlockID&quot;S&quot;launchEPBLength&quot;Q&quot;launchFileFlags&quot;S&quot;launchControlFlags&quot;S&quot;launchAppSpec&quot;^{FSSpec}&quot;launchProcessSN&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;launchPreferredSize&quot;Q&quot;launchMinimumSize&quot;Q&quot;launchAvailableSize&quot;Q&quot;launchAppParameters&quot;^{AppParameters}}'>
+    <field name='reserved1' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='reserved2' declared_type='unsigned short' type='S'/>
+    <field name='launchBlockID' declared_type='unsigned short' type='S'/>
+    <field name='launchEPBLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='launchFileFlags' declared_type='unsigned short' type='S'/>
+    <field name='launchControlFlags' declared_type='LaunchFlags' type='S'/>
+    <field name='launchAppSpec' declared_type='FSSpecPtr' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <field name='launchProcessSN' declared_type='ProcessSerialNumber' type='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+    <field name='launchPreferredSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='launchMinimumSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='launchAvailableSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='launchAppParameters' declared_type='AppParametersPtr' type='^{AppParameters={?=SII{Point=ss}S}LL}' type64='^{AppParameters={?=SII{Point=ss}S}QQ}'/>
+  </struct>
+  <struct name='ProcessInfoExtendedRec' type='{ProcessInfoExtendedRec=&quot;processInfoLength&quot;L&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;L&quot;processSignature&quot;I&quot;processMode&quot;L&quot;processLocation&quot;*&quot;processSize&quot;L&quot;processFreeMem&quot;L&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;L&quot;processActiveTime&quot;L&quot;processAppSpec&quot;^{FSSpec}&quot;processTempMemTotal&quot;L&quot;processPurgeableTempMemTotal&quot;L}' type64='{ProcessInfoExtendedRec=&quot;processInfoLength&quot;Q&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;Q&quot;processSignature&quot;I&quot;processMode&quot;Q&quot;processLocation&quot;*&quot;processSize&quot;Q&quot;processFreeMem&quot;Q&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;Q&quot;processActiveTime&quot;Q&quot;processAppSpec&quot;^{FSSpec}&quot;processTempMemTotal&quot;Q&quot;processPurgeableTempMemTotal&quot;Q}'>
+    <field name='processInfoLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processName' declared_type='StringPtr' type='*'/>
+    <field name='processNumber' declared_type='ProcessSerialNumber' type='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+    <field name='processType' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processSignature' declared_type='OSType' type='L' type64='I'/>
+    <field name='processMode' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processLocation' declared_type='Ptr' type='*'/>
+    <field name='processSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processFreeMem' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processLauncher' declared_type='ProcessSerialNumber' type='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+    <field name='processLaunchDate' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processActiveTime' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processAppSpec' declared_type='FSSpecPtr' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <field name='processTempMemTotal' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processPurgeableTempMemTotal' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
+  <struct name='ProcessInfoRec' type='{ProcessInfoRec=&quot;processInfoLength&quot;L&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;L&quot;processSignature&quot;I&quot;processMode&quot;L&quot;processLocation&quot;*&quot;processSize&quot;L&quot;processFreeMem&quot;L&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;L&quot;processActiveTime&quot;L&quot;processAppSpec&quot;^{FSSpec}}' type64='{ProcessInfoRec=&quot;processInfoLength&quot;Q&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;Q&quot;processSignature&quot;I&quot;processMode&quot;Q&quot;processLocation&quot;*&quot;processSize&quot;Q&quot;processFreeMem&quot;Q&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;Q&quot;processActiveTime&quot;Q&quot;processAppSpec&quot;^{FSSpec}}'>
+    <field name='processInfoLength' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processName' declared_type='StringPtr' type='*'/>
+    <field name='processNumber' declared_type='ProcessSerialNumber' type='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+    <field name='processType' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processSignature' declared_type='OSType' type='L' type64='I'/>
+    <field name='processMode' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processLocation' declared_type='Ptr' type='*'/>
+    <field name='processSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processFreeMem' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processLauncher' declared_type='ProcessSerialNumber' type='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+    <field name='processLaunchDate' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processActiveTime' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='processAppSpec' declared_type='FSSpecPtr' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+  </struct>
+  <struct name='SizeResourceRec' type='{SizeResourceRec=&quot;flags&quot;S&quot;preferredHeapSize&quot;L&quot;minimumHeapSize&quot;L}' type64='{SizeResourceRec=&quot;flags&quot;S&quot;preferredHeapSize&quot;Q&quot;minimumHeapSize&quot;Q}'>
+    <field name='flags' declared_type='unsigned short' type='S'/>
+    <field name='preferredHeapSize' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='minimumHeapSize' declared_type='unsigned long' type='L' type64='Q'/>
+  </struct>
   <cftype name='AXObserverRef' gettypeid_func='AXObserverGetTypeID' type='^{__AXObserver=}'/>
   <cftype name='AXUIElementRef' gettypeid_func='AXUIElementGetTypeID' type='^{__AXUIElement=}'/>
   <cftype name='AXValueRef' gettypeid_func='AXValueGetTypeID' type='^{__AXValue=}'/>
@@ -33,25 +131,25 @@
   <cftype name='PasteboardRef' gettypeid_func='PasteboardGetTypeID' type='^{OpaquePasteboardRef=}'/>
   <cftype name='TranslationRef' gettypeid_func='TranslationGetTypeID' type='^{OpaqueTranslationRef=}'/>
   <opaque name='ICInstance' type='^{OpaqueICInstance=}'/>
-  <constant name='kAXAttachmentTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXBackgroundColorTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXFontFamilyKey' type='^{__CFString=}'/>
-  <constant name='kAXFontNameKey' type='^{__CFString=}'/>
-  <constant name='kAXFontSizeKey' type='^{__CFString=}'/>
-  <constant name='kAXFontTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXForegoundColorTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXForegroundColorTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXLinkTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXMisspelledTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXNaturalLanguageTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXReplacementStringTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXShadowTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXStrikethroughColorTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXStrikethroughTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXSuperscriptTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXUnderlineColorTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXUnderlineTextAttribute' type='^{__CFString=}'/>
-  <constant name='kAXVisibleNameKey' type='^{__CFString=}'/>
+  <constant name='kAXAttachmentTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXBackgroundColorTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXFontFamilyKey' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXFontNameKey' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXFontSizeKey' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXFontTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXForegoundColorTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXForegroundColorTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXLinkTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXMisspelledTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXNaturalLanguageTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXReplacementStringTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXShadowTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXStrikethroughColorTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXStrikethroughTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXSuperscriptTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXUnderlineColorTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXUnderlineTextAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+  <constant name='kAXVisibleNameKey' declared_type='CFStringRef' type='^{__CFString=}'/>
   <string_constant name='kAXAMPMFieldAttribute' nsstring='true' value='AXAMPMField'/>
   <string_constant name='kAXAllowedValuesAttribute' nsstring='true' value='AXAllowedValues'/>
   <string_constant name='kAXApplicationActivatedNotification' nsstring='true' value='AXApplicationActivated'/>
@@ -877,1207 +975,1214 @@
   <enum name='undoDev' value='9'/>
   <enum name='updateDev' value='4'/>
   <function name='AXAPIEnabled'>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='AXIsProcessTrusted'>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='AXMakeProcessTrusted'>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='executablePath' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXObserverAddNotification'>
-    <arg type='^{__AXObserver=}'/>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='observer' declared_type='AXObserverRef' type='^{__AXObserver=}'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='notification' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='refcon' declared_type='void*' type='^v'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXObserverCreate'>
-    <arg type='i'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__AXObserver=}'/>
-      <arg type='^{__AXUIElement=}'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='^v'/>
-      <retval type='v'/>
+    <arg name='application' declared_type='pid_t' type='i'/>
+    <arg name='callback' function_pointer='true' declared_type='AXObserverCallback' type='^?'>
+      <arg declared_type='AXObserverRef' type='^{__AXObserver=}'/>
+      <arg declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^^{__AXObserver}'/>
-    <retval type='l' type64='i'/>
+    <arg name='outObserver' declared_type='AXObserverRef*' type='^^{__AXObserver}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXObserverGetRunLoopSource'>
-    <arg type='^{__AXObserver=}'/>
-    <retval type='^{__CFRunLoopSource=}'/>
+    <arg name='observer' declared_type='AXObserverRef' type='^{__AXObserver=}'/>
+    <retval declared_type='CFRunLoopSourceRef' type='^{__CFRunLoopSource=}'/>
   </function>
   <function name='AXObserverGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='AXObserverRemoveNotification'>
-    <arg type='^{__AXObserver=}'/>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='observer' declared_type='AXObserverRef' type='^{__AXObserver=}'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='notification' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyActionDescription'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='action' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='description' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyActionNames'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^^{__CFArray}'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='names' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyAttributeNames'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^^{__CFArray}'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='names' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyAttributeValue'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='attribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='CFTypeRef*' type='^^v'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyAttributeValues'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='l' type64='i'/>
-    <arg type='^^{__CFArray}'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='attribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='index' declared_type='CFIndex' type='l' type64='i'/>
+    <arg name='maxValues' declared_type='CFIndex' type='l' type64='i'/>
+    <arg name='values' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyElementAtPosition'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='f'/>
-    <arg type='f'/>
-    <arg type='^^{__AXUIElement}'/>
-    <retval type='l' type64='i'/>
+    <arg name='application' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='x' declared_type='float' type='f'/>
+    <arg name='y' declared_type='float' type='f'/>
+    <arg name='element' declared_type='AXUIElementRef*' type='^^{__AXUIElement}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyMultipleAttributeValues'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFArray=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{__CFArray}'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='attributes' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <arg name='options' declared_type='AXCopyMultipleAttributeOptions' type='L' type64='I'/>
+    <arg name='values' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyParameterizedAttributeNames'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^^{__CFArray}'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='names' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCopyParameterizedAttributeValue'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
-    <arg type='^^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='parameterizedAttribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='parameter' declared_type='CFTypeRef' type='@'/>
+    <arg name='result' declared_type='CFTypeRef*' type='^^v'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementCreateApplication'>
-    <arg type='i'/>
-    <retval already_retained='true' type='^{__AXUIElement=}'/>
+    <arg name='pid' declared_type='pid_t' type='i'/>
+    <retval declared_type='AXUIElementRef' already_retained='true' type='^{__AXUIElement=}'/>
   </function>
   <function name='AXUIElementCreateSystemWide'>
-    <retval already_retained='true' type='^{__AXUIElement=}'/>
+    <retval declared_type='AXUIElementRef' already_retained='true' type='^{__AXUIElement=}'/>
   </function>
   <function name='AXUIElementGetAttributeValueCount'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='attribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='count' declared_type='CFIndex*' type='^i'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementGetPid'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='pid' declared_type='pid_t*' type='^i'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='AXUIElementIsAttributeSettable'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^B'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='attribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='settable' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementPerformAction'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='action' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementPostKeyboardEvent'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='S'/>
-    <arg type='S'/>
-    <arg type='B'/>
-    <retval type='l' type64='i'/>
+    <arg name='application' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='keyChar' declared_type='CGCharCode' type='S'/>
+    <arg name='virtualKey' declared_type='CGKeyCode' type='S'/>
+    <arg name='keyDown' declared_type='Boolean' type='B'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementSetAttributeValue'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='attribute' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXUIElementSetMessagingTimeout'>
-    <arg type='^{__AXUIElement=}'/>
-    <arg type='f'/>
-    <retval type='l' type64='i'/>
+    <arg name='element' declared_type='AXUIElementRef' type='^{__AXUIElement=}'/>
+    <arg name='timeoutInSeconds' declared_type='float' type='f'/>
+    <retval declared_type='AXError' type='l' type64='i'/>
   </function>
   <function name='AXValueCreate'>
-    <arg type='i'/>
-    <arg type='^v'/>
-    <retval already_retained='true' type='^{__AXValue=}'/>
+    <arg name='theType' declared_type='AXValueType' type='i'/>
+    <arg name='valuePtr' declared_type='void*' type='^v' const='true'/>
+    <retval declared_type='AXValueRef' already_retained='true' type='^{__AXValue=}'/>
   </function>
   <function name='AXValueGetType'>
-    <arg type='^{__AXValue=}'/>
-    <retval type='i'/>
+    <arg name='value' declared_type='AXValueRef' type='^{__AXValue=}'/>
+    <retval declared_type='AXValueType' type='i'/>
   </function>
   <function name='AXValueGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='AXValueGetValue'>
-    <arg type='^{__AXValue=}'/>
-    <arg type='i'/>
-    <arg type='^v'/>
-    <retval type='B'/>
+    <arg name='value' declared_type='AXValueRef' type='^{__AXValue=}'/>
+    <arg name='theType' declared_type='AXValueType' type='i'/>
+    <arg name='valuePtr' declared_type='void*' type='^v'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='AcquireIconRef'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='AddIconToSuite'>
-    <arg type='^*'/>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theIconData' declared_type='Handle' type='^*'/>
+    <arg name='theSuite' declared_type='IconSuiteRef' type='^*'/>
+    <arg name='theType' declared_type='ResType' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='CompositeIconRef'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='backgroundIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='foregroundIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='compositeIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='CopyProcessName'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='psn' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='name' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DisposeCIcon'>
-    <arg type='^^{CIcon}'/>
+    <arg name='theIcon' declared_type='CIconHandle' type='^^{CIcon}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeIconActionUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^^*'/>
-      <arg type='^v'/>
-      <retval type='s'/>
+    <arg name='userUPP' function_pointer='true' declared_type='IconActionUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='Handle*' type='^^*'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSErr' type='s'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeIconGetterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='userUPP' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DisposeIconSuite'>
-    <arg type='^*'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='theIconSuite' declared_type='IconSuiteRef' type='^*'/>
+    <arg name='disposeData' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
-  <function name='ExitToShell'/>
+  <function name='ExitToShell'>
+    <retval declared_type='void' type='v'/>
+  </function>
   <function name='FlushIconRefs'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='creator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='FlushIconRefsByVolume'>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='vRefNum' declared_type='SInt16' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ForEachIconDo'>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^^*'/>
-      <arg type='^v'/>
-      <retval type='s'/>
+    <arg name='theSuite' declared_type='IconSuiteRef' type='^*'/>
+    <arg name='selector' declared_type='IconSelectorValue' type='L' type64='I'/>
+    <arg name='action' function_pointer='true' declared_type='IconActionUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='Handle*' type='^^*'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSErr' type='s'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetCIcon'>
-    <arg type='s'/>
-    <retval type='^^{CIcon}'/>
+    <arg name='iconID' declared_type='SInt16' type='s'/>
+    <retval declared_type='CIconHandle' type='^^{CIcon}'/>
   </function>
   <function name='GetCustomIconsEnabled'>
-    <arg type='s'/>
-    <arg type='^B'/>
-    <retval type='s'/>
+    <arg name='vRefNum' declared_type='SInt16' type='s'/>
+    <arg name='customIconsEnabled' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetFrontProcess'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <retval type='s'/>
+    <arg name='PSN' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIcon'>
-    <arg type='s'/>
-    <retval type='^*'/>
+    <arg name='iconID' declared_type='SInt16' type='s'/>
+    <retval declared_type='Handle' type='^*'/>
   </function>
   <function name='GetIconCacheData'>
-    <arg type='^*'/>
-    <arg type='^^v'/>
-    <retval type='s'/>
+    <arg name='theCache' declared_type='IconCacheRef' type='^*'/>
+    <arg name='theData' declared_type='void**' type='^^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconCacheProc'>
-    <arg type='^*'/>
-    <arg type='^^?'/>
-    <retval type='s'/>
+    <arg name='theCache' declared_type='IconCacheRef' type='^*'/>
+    <arg name='theProc' declared_type='IconGetterUPP*' type='^^?'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconFamilyData'>
-    <arg type='^^{IconFamilyResource}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle' type='^^{IconFamilyResource}'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='h' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconFromSuite'>
-    <arg type='^^*'/>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theIconData' declared_type='Handle*' type='^^*'/>
+    <arg name='theSuite' declared_type='IconSuiteRef' type='^*'/>
+    <arg name='theType' declared_type='ResType' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconRef'>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='vRefNum' declared_type='SInt16' type='s'/>
+    <arg name='creator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconRefFromFile'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <arg type='^s'/>
-    <retval type='s'/>
+    <arg name='theFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <arg name='theLabel' declared_type='SInt16*' type='^s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconRefFromFileInfo'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^S'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}[4L][16C][16C]QQQQII}' type64='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}[4I][16C][16C]QQQQII}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <arg type='^s'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inFileNameLength' declared_type='UniCharCount' type='L' type64='I'/>
+    <arg name='inFileName' declared_type='UniChar*' type='^S' const='true'/>
+    <arg name='inWhichInfo' declared_type='FSCatalogInfoBitmap' type='L' type64='I'/>
+    <arg name='inCatalogInfo' declared_type='FSCatalogInfo*' type='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}[4L][16C][16C]QQQQII}' type64='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}[4I][16C][16C]QQQQII}' const='true'/>
+    <arg name='inUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+    <arg name='outIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <arg name='outLabel' declared_type='SInt16*' type='^s'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='GetIconRefFromFolder'>
-    <arg type='s'/>
-    <arg type='l' type64='i'/>
-    <arg type='l' type64='i'/>
-    <arg type='c'/>
-    <arg type='c'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='vRefNum' declared_type='SInt16' type='s'/>
+    <arg name='parentFolderID' declared_type='SInt32' type='l' type64='i'/>
+    <arg name='folderID' declared_type='SInt32' type='l' type64='i'/>
+    <arg name='attributes' declared_type='SInt8' type='c'/>
+    <arg name='accessPrivileges' declared_type='SInt8' type='c'/>
+    <arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconRefFromIconFamilyPtr'>
-    <arg type='^{IconFamilyResource=Ii[1{IconFamilyElement=Ii[1C]}]}' type64='^{IconFamilyResource=Iq[1{IconFamilyElement=Iq[1C]}]}'/>
-    <arg type='l' type64='q'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inIconFamilyPtr' declared_type='IconFamilyResource*' type='^{IconFamilyResource=Ii[1{IconFamilyElement=Ii[1C]}]}' type64='^{IconFamilyResource=Iq[1{IconFamilyElement=Iq[1C]}]}' const='true'/>
+    <arg name='inSize' declared_type='Size' type='l' type64='q'/>
+    <arg name='outIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='GetIconRefFromTypeInfo'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='inCreator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='inType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='inExtension' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inMIMEType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+    <arg name='outIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconRefOwners'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='^S'/>
-    <retval type='s'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='owners' declared_type='UInt16*' type='^S'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconRefVariant'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^s'/>
-    <retval type='^{OpaqueIconRef=}'/>
+    <arg name='inIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='inVariant' declared_type='OSType' type='L' type64='I'/>
+    <arg name='outTransform' declared_type='IconTransformType*' type='^s'/>
+    <retval declared_type='IconRef' type='^{OpaqueIconRef=}'/>
   </function>
   <function name='GetIconSizesFromIconRef'>
-    <arg type='L' type64='I'/>
-    <arg type='^I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='iconSelectorInput' declared_type='IconSelectorValue' type='L' type64='I'/>
+    <arg name='iconSelectorOutputPtr' declared_type='IconSelectorValue*' type='^I'/>
+    <arg name='iconServicesUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetIconSuite'>
-    <arg type='^^*'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='theIconSuite' declared_type='IconSuiteRef*' type='^^*'/>
+    <arg name='theResID' declared_type='SInt16' type='s'/>
+    <arg name='selector' declared_type='IconSelectorValue' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetLabel'>
-    <arg type='s'/>
-    <arg type='^{RGBColor=SSS}'/>
-    <arg type='*'/>
-    <retval type='s'/>
+    <arg name='labelNumber' declared_type='SInt16' type='s'/>
+    <arg name='labelColor' declared_type='RGBColor*' type='^{RGBColor=SSS}'/>
+    <arg name='labelString' declared_type='unsigned char*' type='*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetNextProcess'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <retval type='s'/>
+    <arg name='PSN' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetProcessBundleLocation'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='psn' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='location' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='GetProcessForPID'>
-    <arg type='i'/>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <retval type='l' type64='i'/>
+    <arg name='pid' declared_type='pid_t' type='i'/>
+    <arg name='psn' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='GetProcessInformation'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='^{ProcessInfoRec=L*{ProcessSerialNumber=II}LIL*LL{ProcessSerialNumber=II}LL^{FSSpec}}' type64='^{ProcessInfoRec=Q*{ProcessSerialNumber=II}QIQ*QQ{ProcessSerialNumber=II}QQ^{FSSpec}}'/>
-    <retval type='s'/>
+    <arg name='PSN' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='info' declared_type='ProcessInfoRec*' type='^{ProcessInfoRec=L*{ProcessSerialNumber=II}LIL*LL{ProcessSerialNumber=II}LL^{FSSpec}}' type64='^{ProcessInfoRec=Q*{ProcessSerialNumber=II}QIQ*QQ{ProcessSerialNumber=II}QQ^{FSSpec}}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='GetProcessPID'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='^i'/>
-    <retval type='l' type64='i'/>
+    <arg name='psn' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='pid' declared_type='pid_t*' type='^i'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='GetSuiteLabel'>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theSuite' declared_type='IconSuiteRef' type='^*'/>
+    <retval declared_type='SInt16' type='s'/>
   </function>
   <function name='ICAddMapEntry'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICAddProfile'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <arg type='^i' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='prototypeID' declared_type='ICProfileID' type='l' type64='q'/>
+    <arg name='newID' declared_type='ICProfileID*' type='^i' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICBegin'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='C'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='perm' declared_type='ICPerm' type='C'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICCountMapEntries'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='count' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICCountPref'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='count' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICCountProfiles'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='count' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICCreateGURLEvent'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^*'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='helperCreator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='urlH' declared_type='Handle' type='^*'/>
+    <arg name='theEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICDeleteMapEntry'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='pos' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICDeletePref'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICDeleteProfile'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='thisID' declared_type='ICProfileID' type='l' type64='q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICEditPreferences'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICEnd'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICFindPrefHandle'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='^I'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <arg name='attr' declared_type='ICAttr*' type='^I'/>
+    <arg name='prefh' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetConfigName'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='B'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='longname' declared_type='Boolean' type='B'/>
+    <arg name='name' declared_type='unsigned char*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetCurrentProfile'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^i' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='currentID' declared_type='ICProfileID*' type='^i' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetDefaultPref'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <arg name='prefH' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetIndMapEntry'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='l' type64='q'/>
-    <arg type='^l' type64='^q'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='index' declared_type='long' type='l' type64='q'/>
+    <arg name='pos' declared_type='long*' type='^l' type64='^q'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetIndPref'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='index' declared_type='long' type='l' type64='q'/>
+    <arg name='key' declared_type='unsigned char*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetIndProfile'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <arg type='^i' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='index' declared_type='long' type='l' type64='q'/>
+    <arg name='thisID' declared_type='ICProfileID*' type='^i' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetMapEntry'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='l' type64='q'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='pos' declared_type='long' type='l' type64='q'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetPerm'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='perm' declared_type='ICPerm*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetPref'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='^I'/>
-    <arg type='^v'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <arg name='attr' declared_type='ICAttr*' type='^I'/>
+    <arg name='buf' declared_type='void*' type='^v'/>
+    <arg name='size' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetPrefHandle'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='^I'/>
-    <arg type='^^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <arg name='attr' declared_type='ICAttr*' type='^I'/>
+    <arg name='prefh' declared_type='Handle*' type='^^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetProfileName'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='thisID' declared_type='ICProfileID' type='l' type64='q'/>
+    <arg name='name' declared_type='unsigned char*' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetSeed'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='seed' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICGetVersion'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='whichVersion' declared_type='long' type='l' type64='q'/>
+    <arg name='version' declared_type='UInt32*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICLaunchURL'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='^v'/>
-    <arg type='l' type64='q'/>
-    <arg type='^l' type64='^q'/>
-    <arg type='^l' type64='^q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='hint' declared_type='ConstStr255Param' type='*'/>
+    <arg name='data' declared_type='void*' type='^v' const='true'/>
+    <arg name='len' declared_type='long' type='l' type64='q'/>
+    <arg name='selStart' declared_type='long*' type='^l' type64='^q'/>
+    <arg name='selEnd' declared_type='long*' type='^l' type64='^q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICMapEntriesFilename'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='*'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='filename' declared_type='ConstStr255Param' type='*'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICMapEntriesTypeCreator'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='fType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='fCreator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='filename' declared_type='ConstStr255Param' type='*'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICMapFilename'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='filename' declared_type='ConstStr255Param' type='*'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICMapTypeCreator'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='*'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='fType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='fCreator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='filename' declared_type='ConstStr255Param' type='*'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICParseURL'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='^v'/>
-    <arg type='l' type64='q'/>
-    <arg type='^l' type64='^q'/>
-    <arg type='^l' type64='^q'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='hint' declared_type='ConstStr255Param' type='*'/>
+    <arg name='data' declared_type='void*' type='^v' const='true'/>
+    <arg name='len' declared_type='long' type='l' type64='q'/>
+    <arg name='selStart' declared_type='long*' type='^l' type64='^q'/>
+    <arg name='selEnd' declared_type='long*' type='^l' type64='^q'/>
+    <arg name='url' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICSendGURLEvent'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='theEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICSetCurrentProfile'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='newID' declared_type='ICProfileID' type='l' type64='q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICSetMapEntry'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='^*'/>
-    <arg type='l' type64='q'/>
-    <arg type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='entries' declared_type='Handle' type='^*'/>
+    <arg name='pos' declared_type='long' type='l' type64='q'/>
+    <arg name='entry' declared_type='ICMapEntry*' type='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}' type64='^{ICMapEntry=sssIIIq[256C][256C][256C][256C][256C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICSetPref'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg type='l' type64='q'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <arg name='attr' declared_type='ICAttr' type='L' type64='I'/>
+    <arg name='buf' declared_type='void*' type='^v' const='true'/>
+    <arg name='size' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICSetPrefHandle'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='*'/>
-    <arg type='L' type64='I'/>
-    <arg type='^*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='key' declared_type='ConstStr255Param' type='*'/>
+    <arg name='attr' declared_type='ICAttr' type='L' type64='I'/>
+    <arg name='prefh' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICSetProfileName'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <arg type='l' type64='q'/>
-    <arg type='*'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <arg name='thisID' declared_type='ICProfileID' type='l' type64='q'/>
+    <arg name='name' declared_type='ConstStr255Param' type='*'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICStart'>
-    <arg type='^^{OpaqueICInstance}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance*' type='^^{OpaqueICInstance}'/>
+    <arg name='signature' declared_type='OSType' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='ICStop'>
-    <arg type='^{OpaqueICInstance=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inst' declared_type='ICInstance' type='^{OpaqueICInstance=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='IconFamilyToIconSuite'>
-    <arg type='^^{IconFamilyResource}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^*'/>
-    <retval type='s'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle' type='^^{IconFamilyResource}'/>
+    <arg name='whichIcons' declared_type='IconSelectorValue' type='L' type64='I'/>
+    <arg name='iconSuite' declared_type='IconSuiteRef*' type='^^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='IconIDToRgn'>
-    <arg type='^{OpaqueRgnHandle=}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='theRgn' declared_type='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='iconID' declared_type='SInt16' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='IconMethodToRgn'>
-    <arg type='^{OpaqueRgnHandle=}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='theRgn' declared_type='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='theMethod' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='IconRefToIconFamily'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^^{IconFamilyResource}'/>
-    <retval type='s'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='whichIcons' declared_type='IconSelectorValue' type='L' type64='I'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle*' type='^^^{IconFamilyResource}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='IconRefToRgn'>
-    <arg type='^{OpaqueRgnHandle=}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='theRgn' declared_type='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='iconServicesUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='IconSuiteToIconFamily'>
-    <arg type='^*'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^^{IconFamilyResource}'/>
-    <retval type='s'/>
+    <arg name='iconSuite' declared_type='IconSuiteRef' type='^*'/>
+    <arg name='whichIcons' declared_type='IconSelectorValue' type='L' type64='I'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle*' type='^^^{IconFamilyResource}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='IconSuiteToRgn'>
-    <arg type='^{OpaqueRgnHandle=}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theRgn' declared_type='RgnHandle' type='^{OpaqueRgnHandle=}'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='theIconSuite' declared_type='IconSuiteRef' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='InvokeIconActionUPP'>
-    <arg type='L' type64='I'/>
-    <arg type='^^*'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^^*'/>
-      <arg type='^v'/>
-      <retval type='s'/>
+    <arg name='theType' declared_type='ResType' type='L' type64='I'/>
+    <arg name='theIcon' declared_type='Handle*' type='^^*'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='IconActionUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='Handle*' type='^^*'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSErr' type='s'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='InvokeIconGetterUPP'>
-    <arg type='L' type64='I'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='theType' declared_type='ResType' type='L' type64='I'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <retval type='^*'/>
+    <retval declared_type='Handle' type='^*'/>
   </function>
   <function name='IsDataAvailableInIconRef'>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='B'/>
+    <arg name='inIconKind' declared_type='OSType' type='L' type64='I'/>
+    <arg name='inIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='IsIconRefComposite'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='compositeIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='backgroundIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <arg name='foregroundIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='IsIconRefMaskEmpty'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='B'/>
+    <arg name='iconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='IsProcessVisible'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <retval type='B'/>
+    <arg name='psn' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='IsValidIconRef'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='B'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='KillProcess'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <retval type='s'/>
+    <arg name='inProcess' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='LaunchApplication'>
-    <arg type='^{LaunchParamBlockRec=LSSLSS^{FSSpec}{ProcessSerialNumber=II}LLL^{AppParameters}}' type64='^{LaunchParamBlockRec=QSSQSS^{FSSpec}{ProcessSerialNumber=II}QQQ^{AppParameters}}'/>
-    <retval type='s'/>
+    <arg name='LaunchParams' declared_type='LaunchPBPtr' type='^{LaunchParamBlockRec=LSSLSS^{FSSpec}{ProcessSerialNumber=II}LLL^{AppParameters}}' type64='^{LaunchParamBlockRec=QSSQSS^{FSSpec}{ProcessSerialNumber=II}QQQ^{AppParameters}}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='LoadIconCache'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theIconCache' declared_type='IconCacheRef' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='MakeIconCache'>
-    <arg type='^^*'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='theCache' declared_type='IconCacheRef*' type='^^*'/>
+    <arg name='makeIcon' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='NewIconActionUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^^*'/>
-      <arg type='^v'/>
-      <retval type='s'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='IconActionProcPtr' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='Handle*' type='^^*'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSErr' type='s'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^^*'/>
-      <arg type='^v'/>
-      <retval type='s'/>
+    <retval function_pointer='true' declared_type='IconActionUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='Handle*' type='^^*'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSErr' type='s'/>
     </retval>
   </function>
   <function name='NewIconGetterUPP'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='IconGetterProcPtr' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <retval function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </retval>
   </function>
   <function name='NewIconSuite'>
-    <arg type='^^*'/>
-    <retval type='s'/>
+    <arg name='theIconSuite' declared_type='IconSuiteRef*' type='^^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='OverrideIconRef'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='oldIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='newIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='OverrideIconRefFromResource'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <arg name='resourceFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='resourceID' declared_type='SInt16' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PasteboardClear'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardCopyItemFlavorData'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^v'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{__CFData}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='inItem' declared_type='PasteboardItemID' type='^v'/>
+    <arg name='inFlavorType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outData' declared_type='CFDataRef*' type='^^{__CFData}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardCopyItemFlavors'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^v'/>
-    <arg type='^^{__CFArray}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='inItem' declared_type='PasteboardItemID' type='^v'/>
+    <arg name='outFlavorTypes' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardCopyName'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='outName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardCopyPasteLocation'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^^{__CFURL}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='outPasteLocation' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardCreate'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^^{OpaquePasteboardRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outPasteboard' declared_type='PasteboardRef*' type='^^{OpaquePasteboardRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardGetItemCount'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='outItemCount' declared_type='ItemCount*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardGetItemFlavorFlags'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^v'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='inItem' declared_type='PasteboardItemID' type='^v'/>
+    <arg name='inFlavorType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outFlags' declared_type='PasteboardFlavorFlags*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardGetItemIdentifier'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='inIndex' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='outItem' declared_type='PasteboardItemID*' type='^^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='PasteboardPutItemFlavor'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^v'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFData=}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='inItem' declared_type='PasteboardItemID' type='^v'/>
+    <arg name='inFlavorType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inData' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <arg name='inFlags' declared_type='PasteboardFlavorFlags' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardResolvePromises'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardSetPasteLocation'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg type='^{__CFURL=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='inPasteLocation' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardSetPromiseKeeper'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{OpaquePasteboardRef=}'/>
-      <arg type='^v'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <arg name='inPromiseKeeper' function_pointer='true' declared_type='PasteboardPromiseKeeperProcPtr' type='^?'>
+      <arg declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+      <arg declared_type='PasteboardItemID' type='^v'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='void*' type='^v'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PasteboardSynchronize'>
-    <arg type='^{OpaquePasteboardRef=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='inPasteboard' declared_type='PasteboardRef' type='^{OpaquePasteboardRef=}'/>
+    <retval declared_type='PasteboardSyncFlags' type='L' type64='I'/>
   </function>
   <function name='PlotCIcon'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='^^{CIcon}'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='theIcon' declared_type='CIconHandle' type='^^{CIcon}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='PlotCIconHandle'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='^^{CIcon}'/>
-    <retval type='s'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theCIcon' declared_type='CIconHandle' type='^^{CIcon}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PlotIcon'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='^*'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='theIcon' declared_type='Handle' type='^*'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='PlotIconHandle'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theIcon' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PlotIconID'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theResID' declared_type='SInt16' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PlotIconMethod'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theMethod' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PlotIconRef'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theIconServicesUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PlotIconRefInContext'>
-    <arg type='^{CGContext=}'/>
-    <arg type='^{CGRect={CGPoint=ff}{CGSize=ff}}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='^{RGBColor=SSS}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inContext' declared_type='CGContextRef' type='^{CGContext=}'/>
+    <arg name='inRect' declared_type='CGRect*' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' const='true'/>
+    <arg name='inAlign' declared_type='IconAlignmentType' type='s'/>
+    <arg name='inTransform' declared_type='IconTransformType' type='s'/>
+    <arg name='inLabelColor' declared_type='RGBColor*' type='^{RGBColor=SSS}' const='true'/>
+    <arg name='inFlags' declared_type='PlotIconRefFlags' type='L' type64='I'/>
+    <arg name='inIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='PlotIconSuite'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theIconSuite' declared_type='IconSuiteRef' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='PlotSICNHandle'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='theRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='transform' declared_type='IconTransformType' type='s'/>
+    <arg name='theSICN' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ProcessInformationCopyDictionary'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='L' type64='I'/>
-    <retval already_retained='true' type='^{__CFDictionary=}'/>
+    <arg name='PSN' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='infoToReturn' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
   </function>
   <function name='PtInIconID'>
-    <arg type='{Point=ss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <retval type='B'/>
+    <arg name='testPt' declared_type='Point' type='{Point=ss}'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='iconID' declared_type='SInt16' type='s'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='PtInIconMethod'>
-    <arg type='{Point=ss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='testPt' declared_type='Point' type='{Point=ss}'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='theMethod' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='B'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='PtInIconRef'>
-    <arg type='^{Point=ss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='B'/>
+    <arg name='testPt' declared_type='Point*' type='^{Point=ss}' const='true'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='theIconServicesUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='PtInIconSuite'>
-    <arg type='{Point=ss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='^*'/>
-    <retval type='B'/>
+    <arg name='testPt' declared_type='Point' type='{Point=ss}'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='theIconSuite' declared_type='IconSuiteRef' type='^*'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='ReadIconFile'>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^^^{IconFamilyResource}'/>
-    <retval type='s'/>
+    <arg name='iconFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle*' type='^^^{IconFamilyResource}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ReadIconFromFSRef'>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^^^{IconFamilyResource}'/>
-    <retval type='l' type64='i'/>
+    <arg name='ref' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle*' type='^^^{IconFamilyResource}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='RectInIconID'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='s'/>
-    <retval type='B'/>
+    <arg name='testRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='iconID' declared_type='SInt16' type='s'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='RectInIconMethod'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='testRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='theMethod' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <arg type='^v'/>
-    <retval type='B'/>
+    <arg name='yourDataPtr' declared_type='void*' type='^v'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='RectInIconRef'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='B'/>
+    <arg name='testRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='iconServicesUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='RectInIconSuite'>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='^{Rect=ssss}'/>
-    <arg type='s'/>
-    <arg type='^*'/>
-    <retval type='B'/>
+    <arg name='testRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='iconRect' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+    <arg name='align' declared_type='IconAlignmentType' type='s'/>
+    <arg name='theIconSuite' declared_type='IconSuiteRef' type='^*'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='RegisterIconRefFromFSRef'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='creator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='RegisterIconRefFromIconFamily'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{IconFamilyResource}'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='creator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle' type='^^{IconFamilyResource}'/>
+    <arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='RegisterIconRefFromIconFile'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='creator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='RegisterIconRefFromResource'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <arg type='s'/>
-    <arg type='^^{OpaqueIconRef}'/>
-    <retval type='s'/>
+    <arg name='creator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='resourceFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <arg name='resourceID' declared_type='SInt16' type='s'/>
+    <arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ReleaseIconRef'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='RemoveIconRefOverride'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SameProcess'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='^B'/>
-    <retval type='s'/>
+    <arg name='PSN1' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='PSN2' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='result' declared_type='Boolean*' type='^B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetCustomIconsEnabled'>
-    <arg type='s'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='vRefNum' declared_type='SInt16' type='s'/>
+    <arg name='enableCustomIcons' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetFrontProcess'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <retval type='s'/>
+    <arg name='PSN' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetFrontProcessWithOptions'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inProcess' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='inOptions' declared_type='OptionBits' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='SetIconCacheData'>
-    <arg type='^*'/>
-    <arg type='^v'/>
-    <retval type='s'/>
+    <arg name='theCache' declared_type='IconCacheRef' type='^*'/>
+    <arg name='theData' declared_type='void*' type='^v'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetIconCacheProc'>
-    <arg type='^*'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='^*'/>
+    <arg name='theCache' declared_type='IconCacheRef' type='^*'/>
+    <arg name='theProc' function_pointer='true' declared_type='IconGetterUPP' type='^?'>
+      <arg declared_type='ResType' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='Handle' type='^*'/>
     </arg>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetIconFamilyData'>
-    <arg type='^^{IconFamilyResource}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^*'/>
-    <retval type='s'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle' type='^^{IconFamilyResource}'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <arg name='h' declared_type='Handle' type='^*'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SetSuiteLabel'>
-    <arg type='^*'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='theSuite' declared_type='IconSuiteRef' type='^*'/>
+    <arg name='theLabel' declared_type='SInt16' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='ShowHideProcess'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='psn' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='visible' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='TransformProcessType'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='psn' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <arg name='transformState' declared_type='ProcessApplicationTransformState' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationCopyDestinationType'>
-    <arg type='^{OpaqueTranslationRef=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTranslation' declared_type='TranslationRef' type='^{OpaqueTranslationRef=}'/>
+    <arg name='outDestinationType' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationCopySourceType'>
-    <arg type='^{OpaqueTranslationRef=}'/>
-    <arg type='^^{__CFString}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTranslation' declared_type='TranslationRef' type='^{OpaqueTranslationRef=}'/>
+    <arg name='outSourceType' declared_type='CFStringRef*' type='^^{__CFString}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationCreate'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{OpaqueTranslationRef}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSourceType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inDestinationType' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='inTranslationFlags' declared_type='TranslationFlags' type='L' type64='I'/>
+    <arg name='outTranslation' declared_type='TranslationRef*' type='^^{OpaqueTranslationRef}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationCreateWithSourceArray'>
-    <arg type='^{__CFArray=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='^^{__CFArray}'/>
-    <arg type='^^{__CFDictionary}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inSourceTypes' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <arg name='inTranslationFlags' declared_type='TranslationFlags' type='L' type64='I'/>
+    <arg name='outDestinationTypes' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+    <arg name='outTranslations' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationGetTranslationFlags'>
-    <arg type='^{OpaqueTranslationRef=}'/>
-    <arg type='^I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTranslation' declared_type='TranslationRef' type='^{OpaqueTranslationRef=}'/>
+    <arg name='outTranslationFlags' declared_type='TranslationFlags*' type='^I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='TranslationPerformForData'>
-    <arg type='^{OpaqueTranslationRef=}'/>
-    <arg type='^{__CFData=}'/>
-    <arg type='^^{__CFData}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTranslation' declared_type='TranslationRef' type='^{OpaqueTranslationRef=}'/>
+    <arg name='inSourceData' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <arg name='outDestinationData' declared_type='CFDataRef*' type='^^{__CFData}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationPerformForFile'>
-    <arg type='^{OpaqueTranslationRef=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTranslation' declared_type='TranslationRef' type='^{OpaqueTranslationRef=}'/>
+    <arg name='inSourceFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inDestinationDirectory' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <arg name='inDestinationName' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='outTranslatedFile' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='TranslationPerformForURL'>
-    <arg type='^{OpaqueTranslationRef=}'/>
-    <arg type='^{__CFURL=}'/>
-    <arg type='^{__CFURL=}'/>
-    <arg type='^^{__CFURL}'/>
-    <retval type='l' type64='i'/>
+    <arg name='inTranslation' declared_type='TranslationRef' type='^{OpaqueTranslationRef=}'/>
+    <arg name='inSourceURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <arg name='inDestinationURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+    <arg name='outTranslatedURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='UAZoomChangeFocus'>
-    <arg type='^{CGRect={CGPoint=ff}{CGSize=ff}}'/>
-    <arg type='^{CGRect={CGPoint=ff}{CGSize=ff}}'/>
-    <arg type='L' type64='I'/>
-    <retval type='l' type64='i'/>
+    <arg name='inRect' declared_type='CGRect*' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' const='true'/>
+    <arg name='inHighlightRect' declared_type='CGRect*' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' const='true'/>
+    <arg name='inType' declared_type='UAZoomChangeFocusType' type='L' type64='I'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='UAZoomEnabled'>
-    <retval type='B'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='UnregisterIconRef'>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='creator' declared_type='OSType' type='L' type64='I'/>
+    <arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='UpdateIconRef'>
-    <arg type='^{OpaqueIconRef=}'/>
-    <retval type='s'/>
+    <arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='WakeUpProcess'>
-    <arg type='^{ProcessSerialNumber=II}'/>
-    <retval type='s'/>
+    <arg name='PSN' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='WriteIconFile'>
-    <arg type='^^{IconFamilyResource}'/>
-    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
-    <retval type='s'/>
+    <arg name='iconFamily' declared_type='IconFamilyHandle' type='^^{IconFamilyResource}'/>
+    <arg name='iconFile' declared_type='FSSpec*' type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}' const='true'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function_alias name='MacGetCurrentProcess' original='GetCurrentProcess'/>
 </signatures>

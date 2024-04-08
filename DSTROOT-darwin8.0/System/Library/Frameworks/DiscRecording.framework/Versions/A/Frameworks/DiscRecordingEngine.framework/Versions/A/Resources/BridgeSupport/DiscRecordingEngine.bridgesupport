@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
@@ -7,456 +6,473 @@
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
-  <struct name='DRRefConCallbacks' type='{DRRefConCallbacks=&quot;version&quot;L&quot;retain&quot;^?&quot;release&quot;^?}' type64='{DRRefConCallbacks=&quot;version&quot;Q&quot;retain&quot;^?&quot;release&quot;^?}'/>
-  <struct name='DRTrackProductionInfo' type='{DRTrackProductionInfo=&quot;buffer&quot;^v&quot;reqCount&quot;I&quot;actCount&quot;I&quot;flags&quot;I&quot;blockSize&quot;I&quot;requestedAddress&quot;Q}'/>
+  <struct name='DRRefConCallbacks' type='{DRRefConCallbacks=&quot;version&quot;L&quot;retain&quot;^?&quot;release&quot;^?}' type64='{DRRefConCallbacks=&quot;version&quot;Q&quot;retain&quot;^?&quot;release&quot;^?}'>
+    <field name='version' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='retain' function_pointer='true' declared_type='DRRefConRetainCallback' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void*' type='^v' const='true'/>
+    </field>
+    <field name='release' function_pointer='true' declared_type='DRRefConReleaseCallback' type='^?'>
+      <arg declared_type='void*' type='^v' const='true'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+  </struct>
+  <struct name='DRTrackProductionInfo' type='{DRTrackProductionInfo=&quot;buffer&quot;^v&quot;reqCount&quot;I&quot;actCount&quot;I&quot;flags&quot;I&quot;blockSize&quot;I&quot;requestedAddress&quot;Q}'>
+    <field name='buffer' declared_type='void*' type='^v'/>
+    <field name='reqCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='actCount' declared_type='UInt32' type='L' type64='I'/>
+    <field name='flags' declared_type='UInt32' type='L' type64='I'/>
+    <field name='blockSize' declared_type='UInt32' type='L' type64='I'/>
+    <field name='requestedAddress' declared_type='UInt64' type='Q'/>
+  </struct>
   <cftype name='DRBurnRef' gettypeid_func='DRBurnGetTypeID' type='^{__DRBurn=}'/>
   <cftype name='DRCDTextBlockRef' gettypeid_func='DRCDTextBlockGetTypeID' type='^{__DRCDTextBlock=}'/>
   <cftype name='DRDeviceRef' gettypeid_func='DRDeviceGetTypeID' type='^{__DRDevice=}'/>
   <cftype name='DREraseRef' gettypeid_func='DREraseGetTypeID' type='^{__DRErase=}'/>
   <cftype name='DRNotificationCenterRef' gettypeid_func='DRNotificationCenterGetTypeID' type='^{__DRNotificationCenter=}'/>
   <cftype name='DRTrackRef' gettypeid_func='DRTrackGetTypeID' type='^{__DRTrack=}'/>
-  <constant name='DRAbstractFile' type='@'/>
-  <constant name='DRApplicationIdentifier' type='@'/>
-  <constant name='DRAudioFourChannelKey' type='@'/>
-  <constant name='DRAudioPreEmphasisKey' type='@'/>
-  <constant name='DRBibliographicFile' type='@'/>
-  <constant name='DRBlockSize' type='@'/>
-  <constant name='DRBlockSizeKey' type='@'/>
-  <constant name='DRBlockTypeKey' type='@'/>
-  <constant name='DRBurnAppendableKey' type='@'/>
-  <constant name='DRBurnCompletionActionEject' type='@'/>
-  <constant name='DRBurnCompletionActionKey' type='@'/>
-  <constant name='DRBurnCompletionActionMount' type='@'/>
-  <constant name='DRBurnDoubleLayerL0DataZoneBlocksKey' type='@'/>
-  <constant name='DRBurnFailureActionEject' type='@'/>
-  <constant name='DRBurnFailureActionKey' type='@'/>
-  <constant name='DRBurnFailureActionNone' type='@'/>
-  <constant name='DRBurnOverwriteDiscKey' type='@'/>
-  <constant name='DRBurnRequestedSpeedKey' type='@'/>
-  <constant name='DRBurnStatusChangedNotification' type='@'/>
-  <constant name='DRBurnStrategyCDRaw' type='@'/>
-  <constant name='DRBurnStrategyCDSAO' type='@'/>
-  <constant name='DRBurnStrategyCDTAO' type='@'/>
-  <constant name='DRBurnStrategyDVDDAO' type='@'/>
-  <constant name='DRBurnStrategyIsRequiredKey' type='@'/>
-  <constant name='DRBurnStrategyKey' type='@'/>
-  <constant name='DRBurnTestingKey' type='@'/>
-  <constant name='DRBurnUnderrunProtectionKey' type='@'/>
-  <constant name='DRBurnVerifyDiscKey' type='@'/>
-  <constant name='DRCDTextArrangerKey' type='@'/>
-  <constant name='DRCDTextCharacterCodeKey' type='@'/>
-  <constant name='DRCDTextClosedKey' type='@'/>
-  <constant name='DRCDTextComposerKey' type='@'/>
-  <constant name='DRCDTextCopyrightAssertedForNamesKey' type='@'/>
-  <constant name='DRCDTextCopyrightAssertedForSpecialMessagesKey' type='@'/>
-  <constant name='DRCDTextCopyrightAssertedForTitlesKey' type='@'/>
-  <constant name='DRCDTextDiscIdentKey' type='@'/>
-  <constant name='DRCDTextGenreCodeKey' type='@'/>
-  <constant name='DRCDTextGenreKey' type='@'/>
-  <constant name='DRCDTextKey' type='@'/>
-  <constant name='DRCDTextLanguageKey' type='@'/>
-  <constant name='DRCDTextMCNISRCKey' type='@'/>
-  <constant name='DRCDTextNSStringEncodingKey' type='@'/>
-  <constant name='DRCDTextPerformerKey' type='@'/>
-  <constant name='DRCDTextSizeKey' type='@'/>
-  <constant name='DRCDTextSongwriterKey' type='@'/>
-  <constant name='DRCDTextSpecialMessageKey' type='@'/>
-  <constant name='DRCDTextTOC2Key' type='@'/>
-  <constant name='DRCDTextTOCKey' type='@'/>
-  <constant name='DRCDTextTitleKey' type='@'/>
-  <constant name='DRCopyrightFile' type='@'/>
-  <constant name='DRDVDCopyrightInfoKey' type='@'/>
-  <constant name='DRDVDTimestampKey' type='@'/>
-  <constant name='DRDataFormKey' type='@'/>
-  <constant name='DRDataPreparer' type='@'/>
-  <constant name='DRDefaultDate' type='@'/>
-  <constant name='DRDeviceAppearedNotification' type='@'/>
-  <constant name='DRDeviceBurnSpeedCD1x' type='f'/>
-  <constant name='DRDeviceBurnSpeedDVD1x' type='f'/>
-  <constant name='DRDeviceBurnSpeedMax' type='f'/>
-  <constant name='DRDeviceBurnSpeedsKey' type='@'/>
-  <constant name='DRDeviceCanTestWriteCDKey' type='@'/>
-  <constant name='DRDeviceCanTestWriteDVDKey' type='@'/>
-  <constant name='DRDeviceCanUnderrunProtectCDKey' type='@'/>
-  <constant name='DRDeviceCanUnderrunProtectDVDKey' type='@'/>
-  <constant name='DRDeviceCanWriteCDKey' type='@'/>
-  <constant name='DRDeviceCanWriteCDRKey' type='@'/>
-  <constant name='DRDeviceCanWriteCDRWKey' type='@'/>
-  <constant name='DRDeviceCanWriteCDRawKey' type='@'/>
-  <constant name='DRDeviceCanWriteCDSAOKey' type='@'/>
-  <constant name='DRDeviceCanWriteCDTAOKey' type='@'/>
-  <constant name='DRDeviceCanWriteCDTextKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDDAOKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDPlusRDoubleLayerKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDPlusRKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDPlusRWKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDRAMKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDRKey' type='@'/>
-  <constant name='DRDeviceCanWriteDVDRWKey' type='@'/>
-  <constant name='DRDeviceCanWriteISRCKey' type='@'/>
-  <constant name='DRDeviceCanWriteIndexPointsKey' type='@'/>
-  <constant name='DRDeviceCanWriteKey' type='@'/>
-  <constant name='DRDeviceCurrentWriteSpeedKey' type='@'/>
-  <constant name='DRDeviceDisappearedNotification' type='@'/>
-  <constant name='DRDeviceFirmwareRevisionKey' type='@'/>
-  <constant name='DRDeviceIORegistryEntryPathKey' type='@'/>
-  <constant name='DRDeviceIsBusyKey' type='@'/>
-  <constant name='DRDeviceIsTrayOpenKey' type='@'/>
-  <constant name='DRDeviceLoadingMechanismCanEjectKey' type='@'/>
-  <constant name='DRDeviceLoadingMechanismCanInjectKey' type='@'/>
-  <constant name='DRDeviceLoadingMechanismCanOpenKey' type='@'/>
-  <constant name='DRDeviceMaximumWriteSpeedKey' type='@'/>
-  <constant name='DRDeviceMediaBSDNameKey' type='@'/>
-  <constant name='DRDeviceMediaBlocksFreeKey' type='@'/>
-  <constant name='DRDeviceMediaBlocksOverwritableKey' type='@'/>
-  <constant name='DRDeviceMediaBlocksUsedKey' type='@'/>
-  <constant name='DRDeviceMediaClassCD' type='@'/>
-  <constant name='DRDeviceMediaClassDVD' type='@'/>
-  <constant name='DRDeviceMediaClassKey' type='@'/>
-  <constant name='DRDeviceMediaClassUnknown' type='@'/>
-  <constant name='DRDeviceMediaDoubleLayerL0DataZoneBlocksKey' type='@'/>
-  <constant name='DRDeviceMediaFreeSpaceKey' type='@'/>
-  <constant name='DRDeviceMediaInfoKey' type='@'/>
-  <constant name='DRDeviceMediaIsAppendableKey' type='@'/>
-  <constant name='DRDeviceMediaIsBlankKey' type='@'/>
-  <constant name='DRDeviceMediaIsErasableKey' type='@'/>
-  <constant name='DRDeviceMediaIsOverwritableKey' type='@'/>
-  <constant name='DRDeviceMediaIsReservedKey' type='@'/>
-  <constant name='DRDeviceMediaOverwritableSpaceKey' type='@'/>
-  <constant name='DRDeviceMediaSessionCountKey' type='@'/>
-  <constant name='DRDeviceMediaStateInTransition' type='@'/>
-  <constant name='DRDeviceMediaStateKey' type='@'/>
-  <constant name='DRDeviceMediaStateMediaPresent' type='@'/>
-  <constant name='DRDeviceMediaStateNone' type='@'/>
-  <constant name='DRDeviceMediaTrackCountKey' type='@'/>
-  <constant name='DRDeviceMediaTypeCDR' type='@'/>
-  <constant name='DRDeviceMediaTypeCDROM' type='@'/>
-  <constant name='DRDeviceMediaTypeCDRW' type='@'/>
-  <constant name='DRDeviceMediaTypeDVDPlusR' type='@'/>
-  <constant name='DRDeviceMediaTypeDVDPlusRDoubleLayer' type='@'/>
-  <constant name='DRDeviceMediaTypeDVDPlusRW' type='@'/>
-  <constant name='DRDeviceMediaTypeDVDR' type='@'/>
-  <constant name='DRDeviceMediaTypeDVDRAM' type='@'/>
-  <constant name='DRDeviceMediaTypeDVDROM' type='@'/>
-  <constant name='DRDeviceMediaTypeDVDRW' type='@'/>
-  <constant name='DRDeviceMediaTypeKey' type='@'/>
-  <constant name='DRDeviceMediaTypeUnknown' type='@'/>
-  <constant name='DRDeviceMediaUsedSpaceKey' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectATAPI' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectFibreChannel' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectFireWire' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectKey' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectLocationExternal' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectLocationInternal' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectLocationKey' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectLocationUnknown' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectSCSI' type='@'/>
-  <constant name='DRDevicePhysicalInterconnectUSB' type='@'/>
-  <constant name='DRDeviceProductNameKey' type='@'/>
-  <constant name='DRDeviceStatusChangedNotification' type='@'/>
-  <constant name='DRDeviceSupportLevelAppleShipping' type='@'/>
-  <constant name='DRDeviceSupportLevelAppleSupported' type='@'/>
-  <constant name='DRDeviceSupportLevelKey' type='@'/>
-  <constant name='DRDeviceSupportLevelNone' type='@'/>
-  <constant name='DRDeviceSupportLevelUnsupported' type='@'/>
-  <constant name='DRDeviceSupportLevelVendorSupported' type='@'/>
-  <constant name='DRDeviceTrackInfoKey' type='@'/>
-  <constant name='DRDeviceTrackRefsKey' type='@'/>
-  <constant name='DRDeviceVendorNameKey' type='@'/>
-  <constant name='DRDeviceWriteBufferSizeKey' type='@'/>
-  <constant name='DRDeviceWriteCapabilitiesKey' type='@'/>
-  <constant name='DREraseStatusChangedNotification' type='@'/>
-  <constant name='DREraseTypeComplete' type='@'/>
-  <constant name='DREraseTypeKey' type='@'/>
-  <constant name='DREraseTypeQuick' type='@'/>
-  <constant name='DRErrorStatusAdditionalSenseStringKey' type='@'/>
-  <constant name='DRErrorStatusErrorInfoStringKey' type='@'/>
-  <constant name='DRErrorStatusErrorKey' type='@'/>
-  <constant name='DRErrorStatusErrorStringKey' type='@'/>
-  <constant name='DRErrorStatusKey' type='@'/>
-  <constant name='DRErrorStatusSenseCodeStringKey' type='@'/>
-  <constant name='DRErrorStatusSenseKey' type='@'/>
-  <constant name='DRFreeBlocksKey' type='@'/>
-  <constant name='DRISOLevel' type='@'/>
-  <constant name='DRISOMacExtensions' type='@'/>
-  <constant name='DRISORockRidgeExtensions' type='@'/>
-  <constant name='DRIndexPointsKey' type='@'/>
-  <constant name='DRMaxBurnSpeedKey' type='@'/>
-  <constant name='DRMediaCatalogNumberKey' type='@'/>
-  <constant name='DRNextWritableAddressKey' type='@'/>
-  <constant name='DRPreGapLengthKey' type='@'/>
-  <constant name='DRPublisher' type='@'/>
-  <constant name='DRSCMSCopyrightFree' type='@'/>
-  <constant name='DRSCMSCopyrightProtectedCopy' type='@'/>
-  <constant name='DRSCMSCopyrightProtectedOriginal' type='@'/>
-  <constant name='DRSerialCopyManagementStateKey' type='@'/>
-  <constant name='DRSessionFormatKey' type='@'/>
-  <constant name='DRSessionNumberKey' type='@'/>
-  <constant name='DRStatusCurrentSessionKey' type='@'/>
-  <constant name='DRStatusCurrentSpeedKey' type='@'/>
-  <constant name='DRStatusCurrentTrackKey' type='@'/>
-  <constant name='DRStatusEraseTypeKey' type='@'/>
-  <constant name='DRStatusPercentCompleteKey' type='@'/>
-  <constant name='DRStatusProgressCurrentKPS' type='@'/>
-  <constant name='DRStatusProgressCurrentXFactor' type='@'/>
-  <constant name='DRStatusProgressInfoKey' type='@'/>
-  <constant name='DRStatusStateDone' type='@'/>
-  <constant name='DRStatusStateErasing' type='@'/>
-  <constant name='DRStatusStateFailed' type='@'/>
-  <constant name='DRStatusStateFinishing' type='@'/>
-  <constant name='DRStatusStateKey' type='@'/>
-  <constant name='DRStatusStateNone' type='@'/>
-  <constant name='DRStatusStatePreparing' type='@'/>
-  <constant name='DRStatusStateSessionClose' type='@'/>
-  <constant name='DRStatusStateSessionOpen' type='@'/>
-  <constant name='DRStatusStateTrackClose' type='@'/>
-  <constant name='DRStatusStateTrackOpen' type='@'/>
-  <constant name='DRStatusStateTrackWrite' type='@'/>
-  <constant name='DRStatusStateVerifying' type='@'/>
-  <constant name='DRStatusTotalSessionsKey' type='@'/>
-  <constant name='DRStatusTotalTracksKey' type='@'/>
-  <constant name='DRSuppressMacSpecificFiles' type='@'/>
-  <constant name='DRSynchronousBehaviorKey' type='@'/>
-  <constant name='DRSystemIdentifier' type='@'/>
-  <constant name='DRTrackISRCKey' type='@'/>
-  <constant name='DRTrackIsEmptyKey' type='@'/>
-  <constant name='DRTrackLengthKey' type='@'/>
-  <constant name='DRTrackModeKey' type='@'/>
-  <constant name='DRTrackNumberKey' type='@'/>
-  <constant name='DRTrackPacketSizeKey' type='@'/>
-  <constant name='DRTrackPacketTypeFixed' type='@'/>
-  <constant name='DRTrackPacketTypeKey' type='@'/>
-  <constant name='DRTrackPacketTypeVariable' type='@'/>
-  <constant name='DRTrackStartAddressKey' type='@'/>
-  <constant name='DRTrackTypeClosed' type='@'/>
-  <constant name='DRTrackTypeIncomplete' type='@'/>
-  <constant name='DRTrackTypeInvisible' type='@'/>
-  <constant name='DRTrackTypeKey' type='@'/>
-  <constant name='DRTrackTypeReserved' type='@'/>
-  <constant name='DRVerificationTypeChecksum' type='@'/>
-  <constant name='DRVerificationTypeKey' type='@'/>
-  <constant name='DRVerificationTypeNone' type='@'/>
-  <constant name='DRVerificationTypeProduceAgain' type='@'/>
-  <constant name='DRVerificationTypeReceiveData' type='@'/>
-  <constant name='DRVolumeCheckedDate' type='@'/>
-  <constant name='DRVolumeCreationDate' type='@'/>
-  <constant name='DRVolumeEffectiveDate' type='@'/>
-  <constant name='DRVolumeExpirationDate' type='@'/>
-  <constant name='DRVolumeModificationDate' type='@'/>
-  <constant name='DRVolumeSet' type='@'/>
-  <constant name='kDRAudioFourChannelKey' type='^{__CFString=}'/>
-  <constant name='kDRAudioPreEmphasisKey' type='^{__CFString=}'/>
-  <constant name='kDRBlockSizeKey' type='^{__CFString=}'/>
-  <constant name='kDRBlockTypeKey' type='^{__CFString=}'/>
-  <constant name='kDRBufferZone1DataKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnAppendableKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnCompletionActionEject' type='^{__CFString=}'/>
-  <constant name='kDRBurnCompletionActionKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnCompletionActionMount' type='^{__CFString=}'/>
-  <constant name='kDRBurnDoubleLayerL0DataZoneBlocksKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnFailureActionEject' type='^{__CFString=}'/>
-  <constant name='kDRBurnFailureActionKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnFailureActionNone' type='^{__CFString=}'/>
-  <constant name='kDRBurnKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnOverwriteDiscKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnRequestedSpeedKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnStatusChangedNotification' type='^{__CFString=}'/>
-  <constant name='kDRBurnStrategyCDRaw' type='^{__CFString=}'/>
-  <constant name='kDRBurnStrategyCDSAO' type='^{__CFString=}'/>
-  <constant name='kDRBurnStrategyCDTAO' type='^{__CFString=}'/>
-  <constant name='kDRBurnStrategyDVDDAO' type='^{__CFString=}'/>
-  <constant name='kDRBurnStrategyIsRequiredKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnStrategyKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnTestingKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnUnderrunProtectionKey' type='^{__CFString=}'/>
-  <constant name='kDRBurnVerifyDiscKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextArrangerKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextCFStringEncodingKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextCharacterCodeKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextClosedKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextComposerKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextCopyrightAssertedForNamesKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextCopyrightAssertedForSpecialMessagesKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextCopyrightAssertedForTitlesKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextDiscIdentKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextGenreCodeKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextGenreKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextLanguageKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextMCNISRCKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextPerformerKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextSizeKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextSongwriterKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextSpecialMessageKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextTOC2Key' type='^{__CFString=}'/>
-  <constant name='kDRCDTextTOCKey' type='^{__CFString=}'/>
-  <constant name='kDRCDTextTitleKey' type='^{__CFString=}'/>
-  <constant name='kDRDVDCopyrightInfoKey' type='^{__CFString=}'/>
-  <constant name='kDRDVDTimestampKey' type='^{__CFString=}'/>
-  <constant name='kDRDataFormKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceAppearedNotification' type='^{__CFString=}'/>
-  <constant name='kDRDeviceBurnSpeedCD1x' type='f'/>
-  <constant name='kDRDeviceBurnSpeedDVD1x' type='f'/>
-  <constant name='kDRDeviceBurnSpeedMax' type='f'/>
-  <constant name='kDRDeviceBurnSpeedsKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanTestWriteCDKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanTestWriteDVDKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanUnderrunProtectCDKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanUnderrunProtectDVDKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteCDKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteCDRKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteCDRWKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteCDRawKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteCDSAOKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteCDTAOKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteCDTextKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDDAOKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDPlusRDoubleLayerKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDPlusRKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDPlusRWKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDRAMKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDRKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteDVDRWKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteISRCKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteIndexPointsKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCanWriteKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceCurrentWriteSpeedKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceDisappearedNotification' type='^{__CFString=}'/>
-  <constant name='kDRDeviceFirmwareRevisionKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceIORegistryEntryPathKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceIsBusyKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceIsTrayOpenKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceLoadingMechanismCanEjectKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceLoadingMechanismCanInjectKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceLoadingMechanismCanOpenKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMaximumWriteSpeedKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaBSDNameKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaBlocksFreeKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaBlocksOverwritableKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaBlocksUsedKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaClassCD' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaClassDVD' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaClassKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaClassUnknown' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaDoubleLayerL0DataZoneBlocksKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaInfoKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaIsAppendableKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaIsBlankKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaIsErasableKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaIsOverwritableKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaIsReservedKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaSessionCountKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaStateInTransition' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaStateKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaStateMediaPresent' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaStateNone' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTrackCountKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeCDR' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeCDROM' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeCDRW' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeDVDPlusR' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeDVDPlusRDoubleLayer' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeDVDPlusRW' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeDVDR' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeDVDRAM' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeDVDROM' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeDVDRW' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceMediaTypeUnknown' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectATAPI' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectFibreChannel' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectFireWire' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectKey' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectLocationExternal' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectLocationInternal' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectLocationKey' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectLocationUnknown' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectSCSI' type='^{__CFString=}'/>
-  <constant name='kDRDevicePhysicalInterconnectUSB' type='^{__CFString=}'/>
-  <constant name='kDRDeviceProductNameKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceStatusChangedNotification' type='^{__CFString=}'/>
-  <constant name='kDRDeviceSupportLevelAppleShipping' type='^{__CFString=}'/>
-  <constant name='kDRDeviceSupportLevelAppleSupported' type='^{__CFString=}'/>
-  <constant name='kDRDeviceSupportLevelKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceSupportLevelNone' type='^{__CFString=}'/>
-  <constant name='kDRDeviceSupportLevelUnsupported' type='^{__CFString=}'/>
-  <constant name='kDRDeviceSupportLevelVendorSupported' type='^{__CFString=}'/>
-  <constant name='kDRDeviceTrackInfoKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceTrackRefsKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceVendorNameKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceWriteBufferSizeKey' type='^{__CFString=}'/>
-  <constant name='kDRDeviceWriteCapabilitiesKey' type='^{__CFString=}'/>
-  <constant name='kDREraseStatusChangedNotification' type='^{__CFString=}'/>
-  <constant name='kDREraseTypeComplete' type='^{__CFString=}'/>
-  <constant name='kDREraseTypeKey' type='^{__CFString=}'/>
-  <constant name='kDREraseTypeQuick' type='^{__CFString=}'/>
-  <constant name='kDRErrorStatusAdditionalSenseStringKey' type='^{__CFString=}'/>
-  <constant name='kDRErrorStatusErrorInfoStringKey' type='^{__CFString=}'/>
-  <constant name='kDRErrorStatusErrorKey' type='^{__CFString=}'/>
-  <constant name='kDRErrorStatusErrorStringKey' type='^{__CFString=}'/>
-  <constant name='kDRErrorStatusKey' type='^{__CFString=}'/>
-  <constant name='kDRErrorStatusSenseCodeStringKey' type='^{__CFString=}'/>
-  <constant name='kDRErrorStatusSenseKey' type='^{__CFString=}'/>
-  <constant name='kDRFreeBlocksKey' type='^{__CFString=}'/>
-  <constant name='kDRIndexPointsKey' type='^{__CFString=}'/>
-  <constant name='kDRMaxBurnSpeedKey' type='^{__CFString=}'/>
-  <constant name='kDRMediaCatalogNumberKey' type='^{__CFString=}'/>
-  <constant name='kDRNextWritableAddressKey' type='^{__CFString=}'/>
-  <constant name='kDRPreGapIsRequiredKey' type='^{__CFString=}'/>
-  <constant name='kDRPreGapLengthKey' type='^{__CFString=}'/>
-  <constant name='kDRRefConCFTypeCallbacks' type='{DRRefConCallbacks=L^?^?}' type64='{DRRefConCallbacks=Q^?^?}'/>
-  <constant name='kDRSCMSCopyrightFree' type='^{__CFString=}'/>
-  <constant name='kDRSCMSCopyrightProtectedCopy' type='^{__CFString=}'/>
-  <constant name='kDRSCMSCopyrightProtectedOriginal' type='^{__CFString=}'/>
-  <constant name='kDRSerialCopyManagementStateKey' type='^{__CFString=}'/>
-  <constant name='kDRSessionFormatKey' type='^{__CFString=}'/>
-  <constant name='kDRSessionNumberKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusCurrentSessionKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusCurrentSpeedKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusCurrentTrackKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusEraseTypeKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusPercentCompleteKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusProgressCurrentKPS' type='^{__CFString=}'/>
-  <constant name='kDRStatusProgressCurrentXFactor' type='^{__CFString=}'/>
-  <constant name='kDRStatusProgressInfoKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateDone' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateErasing' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateFailed' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateFinishing' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateNone' type='^{__CFString=}'/>
-  <constant name='kDRStatusStatePreparing' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateSessionClose' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateSessionOpen' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateTrackClose' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateTrackOpen' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateTrackWrite' type='^{__CFString=}'/>
-  <constant name='kDRStatusStateVerifying' type='^{__CFString=}'/>
-  <constant name='kDRStatusTotalSessionsKey' type='^{__CFString=}'/>
-  <constant name='kDRStatusTotalTracksKey' type='^{__CFString=}'/>
-  <constant name='kDRSynchronousBehaviorKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackISRCKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackIsEmptyKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackLengthKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackModeKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackNumberKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackPacketSizeKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackPacketTypeFixed' type='^{__CFString=}'/>
-  <constant name='kDRTrackPacketTypeKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackPacketTypeVariable' type='^{__CFString=}'/>
-  <constant name='kDRTrackStartAddressKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackTypeClosed' type='^{__CFString=}'/>
-  <constant name='kDRTrackTypeIncomplete' type='^{__CFString=}'/>
-  <constant name='kDRTrackTypeInvisible' type='^{__CFString=}'/>
-  <constant name='kDRTrackTypeKey' type='^{__CFString=}'/>
-  <constant name='kDRTrackTypeReserved' type='^{__CFString=}'/>
-  <constant name='kDRVerificationTypeChecksum' type='^{__CFString=}'/>
-  <constant name='kDRVerificationTypeKey' type='^{__CFString=}'/>
-  <constant name='kDRVerificationTypeNone' type='^{__CFString=}'/>
-  <constant name='kDRVerificationTypeProduceAgain' type='^{__CFString=}'/>
-  <constant name='kDRVerificationTypeReceiveData' type='^{__CFString=}'/>
+  <constant name='DRAbstractFile' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRApplicationIdentifier' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRAudioFourChannelKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRAudioPreEmphasisKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBibliographicFile' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBlockSize' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBlockSizeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBlockTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnAppendableKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnCompletionActionEject' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnCompletionActionKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnCompletionActionMount' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnDoubleLayerL0DataZoneBlocksKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnFailureActionEject' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnFailureActionKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnFailureActionNone' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnOverwriteDiscKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnRequestedSpeedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnStatusChangedNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnStrategyCDRaw' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnStrategyCDSAO' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnStrategyCDTAO' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnStrategyDVDDAO' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnStrategyIsRequiredKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnStrategyKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnTestingKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnUnderrunProtectionKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRBurnVerifyDiscKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextArrangerKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextCharacterCodeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextClosedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextComposerKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextCopyrightAssertedForNamesKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextCopyrightAssertedForSpecialMessagesKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextCopyrightAssertedForTitlesKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextDiscIdentKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextGenreCodeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextGenreKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextLanguageKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextMCNISRCKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextNSStringEncodingKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextPerformerKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextSizeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextSongwriterKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextSpecialMessageKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextTOC2Key' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextTOCKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCDTextTitleKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRCopyrightFile' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDVDCopyrightInfoKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDVDTimestampKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDataFormKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDataPreparer' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDefaultDate' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceAppearedNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceBurnSpeedCD1x' declared_type='float' type='f' const='true'/>
+  <constant name='DRDeviceBurnSpeedDVD1x' declared_type='float' type='f' const='true'/>
+  <constant name='DRDeviceBurnSpeedMax' declared_type='float' type='f' const='true'/>
+  <constant name='DRDeviceBurnSpeedsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanTestWriteCDKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanTestWriteDVDKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanUnderrunProtectCDKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanUnderrunProtectDVDKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteCDKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteCDRKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteCDRWKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteCDRawKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteCDSAOKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteCDTAOKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteCDTextKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDDAOKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDPlusRDoubleLayerKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDPlusRKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDPlusRWKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDRAMKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDRKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteDVDRWKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteISRCKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteIndexPointsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCanWriteKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceCurrentWriteSpeedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceDisappearedNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceFirmwareRevisionKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceIORegistryEntryPathKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceIsBusyKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceIsTrayOpenKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceLoadingMechanismCanEjectKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceLoadingMechanismCanInjectKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceLoadingMechanismCanOpenKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMaximumWriteSpeedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaBSDNameKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaBlocksFreeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaBlocksOverwritableKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaBlocksUsedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaClassCD' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaClassDVD' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaClassKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaClassUnknown' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaDoubleLayerL0DataZoneBlocksKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaFreeSpaceKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaInfoKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaIsAppendableKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaIsBlankKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaIsErasableKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaIsOverwritableKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaIsReservedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaOverwritableSpaceKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaSessionCountKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaStateInTransition' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaStateKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaStateMediaPresent' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaStateNone' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTrackCountKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeCDR' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeCDROM' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeCDRW' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeDVDPlusR' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeDVDPlusRDoubleLayer' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeDVDPlusRW' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeDVDR' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeDVDRAM' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeDVDROM' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeDVDRW' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaTypeUnknown' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceMediaUsedSpaceKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectATAPI' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectFibreChannel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectFireWire' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectLocationExternal' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectLocationInternal' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectLocationKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectLocationUnknown' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectSCSI' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDevicePhysicalInterconnectUSB' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceProductNameKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceStatusChangedNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceSupportLevelAppleShipping' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceSupportLevelAppleSupported' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceSupportLevelKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceSupportLevelNone' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceSupportLevelUnsupported' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceSupportLevelVendorSupported' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceTrackInfoKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceTrackRefsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceVendorNameKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceWriteBufferSizeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRDeviceWriteCapabilitiesKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DREraseStatusChangedNotification' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DREraseTypeComplete' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DREraseTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DREraseTypeQuick' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRErrorStatusAdditionalSenseStringKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRErrorStatusErrorInfoStringKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRErrorStatusErrorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRErrorStatusErrorStringKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRErrorStatusKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRErrorStatusSenseCodeStringKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRErrorStatusSenseKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRFreeBlocksKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRISOLevel' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRISOMacExtensions' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRISORockRidgeExtensions' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRIndexPointsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRMaxBurnSpeedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRMediaCatalogNumberKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRNextWritableAddressKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRPreGapLengthKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRPublisher' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSCMSCopyrightFree' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSCMSCopyrightProtectedCopy' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSCMSCopyrightProtectedOriginal' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSerialCopyManagementStateKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSessionFormatKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSessionNumberKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusCurrentSessionKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusCurrentSpeedKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusCurrentTrackKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusEraseTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusPercentCompleteKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusProgressCurrentKPS' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusProgressCurrentXFactor' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusProgressInfoKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateDone' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateErasing' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateFailed' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateFinishing' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateNone' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStatePreparing' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateSessionClose' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateSessionOpen' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateTrackClose' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateTrackOpen' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateTrackWrite' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusStateVerifying' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusTotalSessionsKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRStatusTotalTracksKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSuppressMacSpecificFiles' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSynchronousBehaviorKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRSystemIdentifier' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackISRCKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackIsEmptyKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackLengthKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackModeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackNumberKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackPacketSizeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackPacketTypeFixed' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackPacketTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackPacketTypeVariable' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackStartAddressKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackTypeClosed' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackTypeIncomplete' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackTypeInvisible' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRTrackTypeReserved' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVerificationTypeChecksum' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVerificationTypeKey' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVerificationTypeNone' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVerificationTypeProduceAgain' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVerificationTypeReceiveData' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVolumeCheckedDate' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVolumeCreationDate' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVolumeEffectiveDate' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVolumeExpirationDate' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVolumeModificationDate' declared_type='NSString*' type='@' const='true'/>
+  <constant name='DRVolumeSet' declared_type='NSString*' type='@' const='true'/>
+  <constant name='kDRAudioFourChannelKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRAudioPreEmphasisKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBlockSizeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBlockTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBufferZone1DataKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnAppendableKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnCompletionActionEject' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnCompletionActionKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnCompletionActionMount' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnDoubleLayerL0DataZoneBlocksKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnFailureActionEject' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnFailureActionKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnFailureActionNone' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnOverwriteDiscKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnRequestedSpeedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnStatusChangedNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnStrategyCDRaw' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnStrategyCDSAO' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnStrategyCDTAO' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnStrategyDVDDAO' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnStrategyIsRequiredKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnStrategyKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnTestingKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnUnderrunProtectionKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRBurnVerifyDiscKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextArrangerKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextCFStringEncodingKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextCharacterCodeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextClosedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextComposerKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextCopyrightAssertedForNamesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextCopyrightAssertedForSpecialMessagesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextCopyrightAssertedForTitlesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextDiscIdentKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextGenreCodeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextGenreKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextLanguageKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextMCNISRCKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextPerformerKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextSizeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextSongwriterKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextSpecialMessageKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextTOC2Key' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextTOCKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRCDTextTitleKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDVDCopyrightInfoKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDVDTimestampKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDataFormKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceAppearedNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceBurnSpeedCD1x' declared_type='float' type='f' const='true'/>
+  <constant name='kDRDeviceBurnSpeedDVD1x' declared_type='float' type='f' const='true'/>
+  <constant name='kDRDeviceBurnSpeedMax' declared_type='float' type='f' const='true'/>
+  <constant name='kDRDeviceBurnSpeedsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanTestWriteCDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanTestWriteDVDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanUnderrunProtectCDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanUnderrunProtectDVDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteCDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteCDRKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteCDRWKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteCDRawKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteCDSAOKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteCDTAOKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteCDTextKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDDAOKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDPlusRDoubleLayerKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDPlusRKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDPlusRWKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDRAMKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDRKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteDVDRWKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteISRCKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteIndexPointsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCanWriteKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceCurrentWriteSpeedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceDisappearedNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceFirmwareRevisionKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceIORegistryEntryPathKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceIsBusyKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceIsTrayOpenKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceLoadingMechanismCanEjectKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceLoadingMechanismCanInjectKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceLoadingMechanismCanOpenKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMaximumWriteSpeedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaBSDNameKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaBlocksFreeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaBlocksOverwritableKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaBlocksUsedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaClassCD' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaClassDVD' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaClassKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaClassUnknown' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaDoubleLayerL0DataZoneBlocksKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaInfoKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaIsAppendableKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaIsBlankKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaIsErasableKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaIsOverwritableKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaIsReservedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaSessionCountKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaStateInTransition' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaStateKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaStateMediaPresent' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaStateNone' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTrackCountKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeCDR' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeCDROM' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeCDRW' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeDVDPlusR' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeDVDPlusRDoubleLayer' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeDVDPlusRW' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeDVDR' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeDVDRAM' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeDVDROM' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeDVDRW' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceMediaTypeUnknown' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectATAPI' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectFibreChannel' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectFireWire' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectLocationExternal' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectLocationInternal' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectLocationKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectLocationUnknown' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectSCSI' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDevicePhysicalInterconnectUSB' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceProductNameKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceStatusChangedNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceSupportLevelAppleShipping' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceSupportLevelAppleSupported' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceSupportLevelKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceSupportLevelNone' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceSupportLevelUnsupported' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceSupportLevelVendorSupported' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceTrackInfoKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceTrackRefsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceVendorNameKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceWriteBufferSizeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRDeviceWriteCapabilitiesKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDREraseStatusChangedNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDREraseTypeComplete' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDREraseTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDREraseTypeQuick' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRErrorStatusAdditionalSenseStringKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRErrorStatusErrorInfoStringKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRErrorStatusErrorKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRErrorStatusErrorStringKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRErrorStatusKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRErrorStatusSenseCodeStringKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRErrorStatusSenseKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRFreeBlocksKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRIndexPointsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRMaxBurnSpeedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRMediaCatalogNumberKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRNextWritableAddressKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRPreGapIsRequiredKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRPreGapLengthKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRRefConCFTypeCallbacks' declared_type='DRRefConCallbacks' type='{DRRefConCallbacks=L^?^?}' type64='{DRRefConCallbacks=Q^?^?}' const='true'/>
+  <constant name='kDRSCMSCopyrightFree' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRSCMSCopyrightProtectedCopy' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRSCMSCopyrightProtectedOriginal' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRSerialCopyManagementStateKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRSessionFormatKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRSessionNumberKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusCurrentSessionKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusCurrentSpeedKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusCurrentTrackKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusEraseTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusPercentCompleteKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusProgressCurrentKPS' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusProgressCurrentXFactor' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusProgressInfoKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateDone' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateErasing' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateFailed' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateFinishing' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateNone' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStatePreparing' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateSessionClose' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateSessionOpen' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateTrackClose' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateTrackOpen' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateTrackWrite' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusStateVerifying' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusTotalSessionsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRStatusTotalTracksKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRSynchronousBehaviorKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackISRCKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackIsEmptyKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackLengthKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackModeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackNumberKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackPacketSizeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackPacketTypeFixed' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackPacketTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackPacketTypeVariable' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackStartAddressKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackTypeClosed' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackTypeIncomplete' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackTypeInvisible' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRTrackTypeReserved' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRVerificationTypeChecksum' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRVerificationTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRVerificationTypeNone' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRVerificationTypeProduceAgain' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+  <constant name='kDRVerificationTypeReceiveData' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
   <enum name='DRCDTextEncodingASCII' value='1'/>
   <enum name='DRCDTextEncodingISOLatin1Modified' value='5'/>
   <enum name='DRCDTextGenreCodeAdultContemporary' value='2'/>
@@ -589,342 +605,734 @@
   <enum name='kDRUserCanceledErr' value='2147614822'/>
   <enum name='kDRVerificationFailedErr' value='2147614819'/>
   <function name='DRBurnAbort'>
-    <arg type='^{__DRBurn=}'/>
+    <arg name='burn' declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRBurnCopyStatus'>
-    <arg type='^{__DRBurn=}'/>
-    <retval already_retained='true' type='^{__CFDictionary=}'/>
+    <arg name='burn' declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+    <retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
   </function>
   <function name='DRBurnCreate'>
-    <arg type='^{__DRDevice=}'/>
-    <retval already_retained='true' type='^{__DRBurn=}'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='DRBurnRef' already_retained='true' type='^{__DRBurn=}'/>
   </function>
   <function name='DRBurnGetDevice'>
-    <arg type='^{__DRBurn=}'/>
-    <retval type='^{__DRDevice=}'/>
+    <arg name='burn' declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+    <retval declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
   </function>
   <function name='DRBurnGetProperties'>
-    <arg type='^{__DRBurn=}'/>
-    <retval type='^{__CFDictionary=}'/>
+    <arg name='burn' declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+    <retval declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
   </function>
   <function name='DRBurnGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='DRBurnSetProperties'>
-    <arg type='^{__DRBurn=}'/>
-    <arg type='^{__CFDictionary=}'/>
+    <arg name='burn' declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+    <arg name='properties' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRBurnWriteLayout'>
-    <arg type='^{__DRBurn=}'/>
-    <arg type='@'/>
-    <retval type='l' type64='i'/>
+    <arg name='burn' declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+    <arg name='layout' declared_type='CFTypeRef' type='@'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DRCDTextBlockCreate'>
-    <arg type='^{__CFString=}'/>
-    <arg type='L' type64='I'/>
-    <retval already_retained='true' type='^{__DRCDTextBlock=}'/>
+    <arg name='language' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='encoding' declared_type='CFStringEncoding' type='L' type64='I'/>
+    <retval declared_type='DRCDTextBlockRef' already_retained='true' type='^{__DRCDTextBlock=}'/>
   </function>
   <function name='DRCDTextBlockCreateArrayFromPackList'>
-    <arg type='^{__CFData=}'/>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <arg name='packs' declared_type='CFDataRef' type='^{__CFData=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='DRCDTextBlockFlatten'>
-    <arg type='^{__DRCDTextBlock=}'/>
-    <retval type='L' type64='I'/>
+    <arg name='block' declared_type='DRCDTextBlockRef' type='^{__DRCDTextBlock=}'/>
+    <retval declared_type='UInt32' type='L' type64='I'/>
   </function>
   <function name='DRCDTextBlockGetProperties'>
-    <arg type='^{__DRCDTextBlock=}'/>
-    <retval type='^{__CFDictionary=}'/>
+    <arg name='block' declared_type='DRCDTextBlockRef' type='^{__DRCDTextBlock=}'/>
+    <retval declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
   </function>
   <function name='DRCDTextBlockGetTrackDictionaries'>
-    <arg type='^{__DRCDTextBlock=}'/>
-    <retval type='^{__CFArray=}'/>
+    <arg name='block' declared_type='DRCDTextBlockRef' type='^{__DRCDTextBlock=}'/>
+    <retval declared_type='CFArrayRef' type='^{__CFArray=}'/>
   </function>
   <function name='DRCDTextBlockGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='DRCDTextBlockGetValue'>
-    <arg type='^{__DRCDTextBlock=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='@'/>
+    <arg name='block' declared_type='DRCDTextBlockRef' type='^{__DRCDTextBlock=}'/>
+    <arg name='trackIndex' declared_type='CFIndex' type='l' type64='i'/>
+    <arg name='key' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='CFTypeRef' type='@'/>
   </function>
   <function name='DRCDTextBlockSetProperties'>
-    <arg type='^{__DRCDTextBlock=}'/>
-    <arg type='^{__CFDictionary=}'/>
+    <arg name='block' declared_type='DRCDTextBlockRef' type='^{__DRCDTextBlock=}'/>
+    <arg name='properties' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRCDTextBlockSetTrackDictionaries'>
-    <arg type='^{__DRCDTextBlock=}'/>
-    <arg type='^{__CFArray=}'/>
+    <arg name='block' declared_type='DRCDTextBlockRef' type='^{__DRCDTextBlock=}'/>
+    <arg name='array' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRCDTextBlockSetValue'>
-    <arg type='^{__DRCDTextBlock=}'/>
-    <arg type='l' type64='i'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
+    <arg name='block' declared_type='DRCDTextBlockRef' type='^{__DRCDTextBlock=}'/>
+    <arg name='trackIndex' declared_type='CFIndex' type='l' type64='i'/>
+    <arg name='key' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='value' declared_type='CFTypeRef' type='@'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRCopyDeviceArray'>
-    <retval already_retained='true' type='^{__CFArray=}'/>
+    <retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
   </function>
   <function name='DRCopyLocalizedStringForAdditionalSense'>
-    <arg type='C'/>
-    <arg type='C'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='ASC' declared_type='UInt8' type='C'/>
+    <arg name='ASCQ' declared_type='UInt8' type='C'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='DRCopyLocalizedStringForDiscRecordingError'>
-    <arg type='l' type64='i'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='osError' declared_type='OSStatus' type='l' type64='i'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='DRCopyLocalizedStringForSenseCode'>
-    <arg type='C'/>
-    <retval already_retained='true' type='^{__CFString=}'/>
+    <arg name='senseCode' declared_type='UInt8' type='C'/>
+    <retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
   </function>
   <function name='DRDeviceAcquireExclusiveAccess'>
-    <arg type='^{__DRDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DRDeviceAcquireMediaReservation'>
-    <arg type='^{__DRDevice=}'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRDeviceCloseTray'>
-    <arg type='^{__DRDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DRDeviceCopyDeviceForBSDName'>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__DRDevice=}'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='DRDeviceRef' already_retained='true' type='^{__DRDevice=}'/>
   </function>
   <function name='DRDeviceCopyDeviceForIORegistryEntryPath'>
-    <arg type='^{__CFString=}'/>
-    <retval already_retained='true' type='^{__DRDevice=}'/>
+    <arg name='path' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='DRDeviceRef' already_retained='true' type='^{__DRDevice=}'/>
   </function>
   <function name='DRDeviceCopyInfo'>
-    <arg type='^{__DRDevice=}'/>
-    <retval already_retained='true' type='^{__CFDictionary=}'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
   </function>
   <function name='DRDeviceCopyStatus'>
-    <arg type='^{__DRDevice=}'/>
-    <retval already_retained='true' type='^{__CFDictionary=}'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
   </function>
   <function name='DRDeviceEjectMedia'>
-    <arg type='^{__DRDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DRDeviceGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='DRDeviceIsValid'>
-    <arg type='^{__DRDevice=}'/>
-    <retval type='B'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='DRDeviceOpenTray'>
-    <arg type='^{__DRDevice=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DRDeviceReleaseExclusiveAccess'>
-    <arg type='^{__DRDevice=}'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRDeviceReleaseMediaReservation'>
-    <arg type='^{__DRDevice=}'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DREraseCopyStatus'>
-    <arg type='^{__DRErase=}'/>
-    <retval already_retained='true' type='^{__CFDictionary=}'/>
+    <arg name='erase' declared_type='DREraseRef' type='^{__DRErase=}'/>
+    <retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
   </function>
   <function name='DREraseCreate'>
-    <arg type='^{__DRDevice=}'/>
-    <retval already_retained='true' type='^{__DRErase=}'/>
+    <arg name='device' declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+    <retval declared_type='DREraseRef' already_retained='true' type='^{__DRErase=}'/>
   </function>
   <function name='DREraseGetDevice'>
-    <arg type='^{__DRErase=}'/>
-    <retval type='^{__DRDevice=}'/>
+    <arg name='erase' declared_type='DREraseRef' type='^{__DRErase=}'/>
+    <retval declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
   </function>
   <function name='DREraseGetProperties'>
-    <arg type='^{__DRErase=}'/>
-    <retval type='^{__CFDictionary=}'/>
+    <arg name='erase' declared_type='DREraseRef' type='^{__DRErase=}'/>
+    <retval declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
   </function>
   <function name='DREraseGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='DREraseSetProperties'>
-    <arg type='^{__DRErase=}'/>
-    <arg type='^{__CFDictionary=}'/>
+    <arg name='erase' declared_type='DREraseRef' type='^{__DRErase=}'/>
+    <arg name='properties' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DREraseStart'>
-    <arg type='^{__DRErase=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='erase' declared_type='DREraseRef' type='^{__DRErase=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='DRGetRefCon'>
-    <arg type='@'/>
-    <retval type='^v'/>
+    <arg name='ref' declared_type='DRTypeRef' type='@'/>
+    <retval declared_type='void*' type='^v'/>
   </function>
   <function name='DRGetVersion'>
-    <retval type='{NumVersion=CCCC}'/>
+    <retval declared_type='NumVersion' type='{NumVersion=CCCC}'/>
   </function>
   <function name='DRNotificationCenterAddObserver'>
-    <arg type='^{__DRNotificationCenter=}'/>
-    <arg type='^v'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__DRNotificationCenter=}'/>
-      <arg type='^v'/>
-      <arg type='^{__CFString=}'/>
-      <arg type='@'/>
-      <arg type='^{__CFDictionary=}'/>
-      <retval type='v'/>
+    <arg name='center' declared_type='DRNotificationCenterRef' type='^{__DRNotificationCenter=}'/>
+    <arg name='observer' declared_type='void*' type='^v' const='true'/>
+    <arg name='callback' function_pointer='true' declared_type='DRNotificationCallback' type='^?'>
+      <arg declared_type='DRNotificationCenterRef' type='^{__DRNotificationCenter=}'/>
+      <arg declared_type='void*' type='^v'/>
+      <arg declared_type='CFStringRef' type='^{__CFString=}'/>
+      <arg declared_type='DRTypeRef' type='@'/>
+      <arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='object' declared_type='DRTypeRef' type='@'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRNotificationCenterCreate'>
-    <retval already_retained='true' type='^{__DRNotificationCenter=}'/>
+    <retval declared_type='DRNotificationCenterRef' already_retained='true' type='^{__DRNotificationCenter=}'/>
   </function>
   <function name='DRNotificationCenterCreateRunLoopSource'>
-    <arg type='^{__DRNotificationCenter=}'/>
-    <retval already_retained='true' type='^{__CFRunLoopSource=}'/>
+    <arg name='center' declared_type='DRNotificationCenterRef' type='^{__DRNotificationCenter=}'/>
+    <retval declared_type='CFRunLoopSourceRef' already_retained='true' type='^{__CFRunLoopSource=}'/>
   </function>
   <function name='DRNotificationCenterGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='DRNotificationCenterRemoveObserver'>
-    <arg type='^{__DRNotificationCenter=}'/>
-    <arg type='^v'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='@'/>
+    <arg name='center' declared_type='DRNotificationCenterRef' type='^{__DRNotificationCenter=}'/>
+    <arg name='observer' declared_type='void*' type='^v' const='true'/>
+    <arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='object' declared_type='DRTypeRef' type='@'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRSetRefCon'>
-    <arg type='@'/>
-    <arg type='^v'/>
-    <arg type='^{DRRefConCallbacks=L^?^?}' type64='^{DRRefConCallbacks=Q^?^?}'/>
+    <arg name='ref' declared_type='DRTypeRef' type='@'/>
+    <arg name='refCon' declared_type='void*' type='^v'/>
+    <arg name='callbacks' declared_type='DRRefConCallbacks*' type='^{DRRefConCallbacks=L^?^?}' type64='^{DRRefConCallbacks=Q^?^?}' const='true'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRTrackCreate'>
-    <arg type='^{__CFDictionary=}'/>
-    <arg function_pointer='true' type='^?'>
-      <arg type='^{__DRTrack=}'/>
-      <arg type='L' type64='I'/>
-      <arg type='^v'/>
-      <retval type='l' type64='i'/>
+    <arg name='properties' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <arg name='callback' function_pointer='true' declared_type='DRTrackCallbackProc' type='^?'>
+      <arg declared_type='DRTrackRef' type='^{__DRTrack=}'/>
+      <arg declared_type='DRTrackMessage' type='L' type64='I'/>
+      <arg declared_type='void*' type='^v'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </arg>
-    <retval already_retained='true' type='^{__DRTrack=}'/>
+    <retval declared_type='DRTrackRef' already_retained='true' type='^{__DRTrack=}'/>
   </function>
   <function name='DRTrackEstimateLength'>
-    <arg type='^{__DRTrack=}'/>
-    <retval type='Q'/>
+    <arg name='track' declared_type='DRTrackRef' type='^{__DRTrack=}'/>
+    <retval declared_type='UInt64' type='Q'/>
   </function>
   <function name='DRTrackGetProperties'>
-    <arg type='^{__DRTrack=}'/>
-    <retval type='^{__CFDictionary=}'/>
+    <arg name='track' declared_type='DRTrackRef' type='^{__DRTrack=}'/>
+    <retval declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
   </function>
   <function name='DRTrackGetTypeID'>
-    <retval type='L' type64='I'/>
+    <retval declared_type='CFTypeID' type='L' type64='I'/>
   </function>
   <function name='DRTrackSetProperties'>
-    <arg type='^{__DRTrack=}'/>
-    <arg type='^{__CFDictionary=}'/>
+    <arg name='track' declared_type='DRTrackRef' type='^{__DRTrack=}'/>
+    <arg name='properties' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='DRTrackSpeedTest'>
-    <arg type='^{__DRTrack=}'/>
-    <arg type='L' type64='I'/>
-    <arg type='L' type64='I'/>
-    <retval type='f'/>
+    <arg name='track' declared_type='DRTrackRef' type='^{__DRTrack=}'/>
+    <arg name='howManyMilliseconds' declared_type='UInt32' type='L' type64='I'/>
+    <arg name='howManyBytes' declared_type='UInt32' type='L' type64='I'/>
+    <retval declared_type='float' type='f'/>
   </function>
   <class name='DRBurn'>
+    <method selector='abort'>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='appendable'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='burnForDevice:'>
+      <arg name='device' declared_type='DRDevice*' type='@' index='0'/>
+      <retval declared_type='DRBurn*' type='@'/>
+    </method>
+    <method selector='completionAction'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='device'>
+      <retval declared_type='DRDevice*' type='@'/>
+    </method>
+    <method selector='initWithDevice:'>
+      <arg name='device' declared_type='DRDevice*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='properties'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='requestedBurnSpeed'>
+      <retval declared_type='float' type='f'/>
     </method>
     <method selector='setAppendable:'>
-      <arg type='B' index='0'/>
+      <arg name='appendable' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setCompletionAction:'>
+      <arg name='action' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setProperties:'>
+      <arg name='properties' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setRequestedBurnSpeed:'>
+      <arg name='speed' declared_type='float' type='f' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setVerifyDisc:'>
-      <arg type='B' index='0'/>
+      <arg name='verify' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='status'>
+      <retval declared_type='NSDictionary*' type='@'/>
     </method>
     <method selector='verifyDisc'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='writeLayout:'>
+      <arg name='layout' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='DRCDTextBlock'>
+    <method class_method='true' selector='arrayOfCDTextBlocksFromPacks:'>
+      <arg name='packs' declared_type='NSData*' type='@' index='0'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method class_method='true' selector='cdTextBlockWithLanguage:encoding:'>
+      <arg name='lang' declared_type='NSString*' type='@' index='0'/>
+      <arg name='enc' declared_type='NSStringEncoding' type='I' index='1'/>
+      <retval declared_type='DRCDTextBlock*' type='@'/>
+    </method>
+    <method selector='encoding'>
+      <retval declared_type='NSStringEncoding' type='I'/>
+    </method>
+    <method selector='flatten'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='initWithLanguage:encoding:'>
+      <arg name='lang' declared_type='NSString*' type='@' index='0'/>
+      <arg name='enc' declared_type='NSStringEncoding' type='I' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='language'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='objectForKey:ofTrack:'>
+      <arg name='key' declared_type='NSString*' type='@' index='0'/>
+      <arg name='trackIndex' declared_type='unsigned int' type='I' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='properties'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='setObject:forKey:ofTrack:'>
+      <arg name='value' declared_type='id' type='@' index='0'/>
+      <arg name='key' declared_type='NSString*' type='@' index='1'/>
+      <arg name='trackIndex' declared_type='unsigned int' type='I' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setProperties:'>
+      <arg name='properties' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setTrackDictionaries:'>
+      <arg name='tracks' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='trackDictionaries'>
+      <retval declared_type='NSArray*' type='@'/>
     </method>
   </class>
   <class name='DRDevice'>
     <method selector='acquireExclusiveAccess'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='acquireMediaReservation'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='bsdName'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
     <method selector='closeTray'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method class_method='true' selector='deviceForBSDName:'>
+      <arg name='bsdName' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='DRDevice*' type='@'/>
+    </method>
+    <method class_method='true' selector='deviceForIORegistryEntryPath:'>
+      <arg name='path' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='DRDevice*' type='@'/>
+    </method>
+    <method class_method='true' selector='devices'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='displayName'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
     <method selector='ejectMedia'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='info'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='ioRegistryEntryPath'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
     <method selector='isEqualToDevice:'>
-      <retval type='B'/>
+      <arg name='otherDevice' declared_type='DRDevice*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='isValid'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsAppendable'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsBlank'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsBusy'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsErasable'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsOverwritable'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsPresent'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsReserved'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='mediaIsTransitioning'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='mediaSpaceFree'>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='mediaSpaceOverwritable'>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='mediaSpaceUsed'>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='mediaType'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
     <method selector='openTray'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='releaseExclusiveAccess'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='releaseMediaReservation'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='status'>
+      <retval declared_type='NSDictionary*' type='@'/>
     </method>
     <method selector='trayIsOpen'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='writesCD'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='writesDVD'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+  </class>
+  <class name='DRErase'>
+    <method selector='device'>
+      <retval declared_type='DRDevice*' type='@'/>
+    </method>
+    <method class_method='true' selector='eraseForDevice:'>
+      <arg name='device' declared_type='DRDevice*' type='@' index='0'/>
+      <retval declared_type='DRErase*' type='@'/>
+    </method>
+    <method selector='eraseType'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='initWithDevice:'>
+      <arg name='device' declared_type='DRDevice*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='properties'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='setEraseType:'>
+      <arg name='type' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setProperties:'>
+      <arg name='properties' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='start'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='status'>
+      <retval declared_type='NSDictionary*' type='@'/>
     </method>
   </class>
   <class name='DRMSF'>
+    <method selector='description'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='descriptionWithFormat:'>
+      <arg name='format' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='frames'>
+      <retval declared_type='unsigned long' type='L' type64='Q'/>
+    </method>
+    <method selector='initWithFrames:'>
+      <arg name='frames' declared_type='unsigned long' type='L' type64='Q' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithString:'>
+      <arg name='string' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
     <method selector='isEqualToMSF:'>
-      <retval type='B'/>
+      <arg name='otherDRMSF' declared_type='DRMSF*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='minutes'>
+      <retval declared_type='unsigned long' type='L' type64='Q'/>
+    </method>
+    <method class_method='true' selector='msf'>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='msfByAdding:'>
+      <arg name='msf' declared_type='DRMSF*' type='@' index='0'/>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='msfBySubtracting:'>
+      <arg name='msf' declared_type='DRMSF*' type='@' index='0'/>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method class_method='true' selector='msfWithFrames:'>
+      <arg name='frames' declared_type='unsigned long' type='L' type64='Q' index='0'/>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method class_method='true' selector='msfWithString:'>
+      <arg name='string' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='seconds'>
+      <retval declared_type='unsigned long' type='L' type64='Q'/>
+    </method>
+    <method selector='sectors'>
+      <retval declared_type='unsigned long' type='L' type64='Q'/>
+    </method>
+  </class>
+  <class name='DRMSFFormatter'>
+    <method selector='format'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='initWithFormat:'>
+      <arg name='format' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='setFormat:'>
+      <arg name='format' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='DRNotificationCenter'>
+    <method selector='addObserver:selector:name:object:'>
+      <arg name='observer' declared_type='id' type='@' index='0'/>
+      <arg name='aSelector' declared_type='SEL' type=':' index='1'/>
+      <arg name='notificationName' declared_type='NSString*' type='@' index='2'/>
+      <arg name='anObject' declared_type='id' type='@' index='3'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method class_method='true' selector='currentRunLoopCenter'>
+      <retval declared_type='DRNotificationCenter*' type='@'/>
+    </method>
+    <method selector='removeObserver:name:object:'>
+      <arg name='observer' declared_type='id' type='@' index='0'/>
+      <arg name='aName' declared_type='NSString*' type='@' index='1'/>
+      <arg name='anObject' declared_type='id' type='@' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='DRTrack'>
+    <method selector='estimateLength'>
+      <retval declared_type='uint64_t' type='Q'/>
+    </method>
+    <method selector='initWithProducer:'>
+      <arg name='producer' declared_type='id' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='length'>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='preGap'>
+      <retval declared_type='DRMSF*' type='@'/>
+    </method>
+    <method selector='properties'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='setPreGap:'>
+      <arg name='preGap' declared_type='DRMSF*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setProperties:'>
+      <arg name='properties' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='testProductionSpeedForInterval:'>
+      <arg name='interval' declared_type='NSTimeInterval' type='d' index='0'/>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='testProductionSpeedForLength:'>
+      <arg name='length' declared_type='uint32_t' type='I' index='0'/>
+      <retval declared_type='float' type='f'/>
     </method>
   </class>
   <class name='NSObject'>
+    <method selector='cleanupTrackAfterBurn:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='cleanupTrackAfterVerification:'>
-      <retval type='B'/>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='estimateLengthOfTrack:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='uint64_t' type='Q'/>
     </method>
     <method selector='prepareTrack:forBurn:toMedia:'>
-      <retval type='B'/>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='burn' declared_type='DRBurn*' type='@' index='1'/>
+      <arg name='mediaInfo' declared_type='NSDictionary*' type='@' index='2'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='prepareTrackForVerification:'>
-      <retval type='B'/>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='produceDataForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='uint32_t' type='I'/>
+    </method>
+    <method selector='producePreGapForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='uint32_t' type='I'/>
     </method>
     <method selector='verifyDataForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'>
-      <retval type='B'/>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' const='true' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='verifyPreGapForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'>
-      <retval type='B'/>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' const='true' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
   </class>
   <informal_protocol name='DRTrackDataProduction'>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='cleanupTrackAfterBurn:'/>
-    <method type='B12@0:4@8' type64='B24@0:8@16' selector='cleanupTrackAfterVerification:'/>
-    <method type='Q12@0:4@8' type64='Q24@0:8@16' selector='estimateLengthOfTrack:'/>
-    <method type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32' selector='prepareTrack:forBurn:toMedia:'/>
-    <method type='B12@0:4@8' type64='B24@0:8@16' selector='prepareTrackForVerification:'/>
-    <method type='I36@0:4@8*12I16Q20I28^I32' type64='I56@0:8@16*24I32Q36I44^I48' selector='produceDataForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'/>
-    <method type='I36@0:4@8*12I16Q20I28^I32' type64='I56@0:8@16*24I32Q36I44^I48' selector='producePreGapForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'/>
-    <method type='B36@0:4@8r*12I16Q20I28^I32' type64='B56@0:8@16r*24I32Q36I44^I48' selector='verifyDataForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'/>
-    <method type='B36@0:4@8r*12I16Q20I28^I32' type64='B56@0:8@16r*24I32Q36I44^I48' selector='verifyPreGapForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='cleanupTrackAfterBurn:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='B12@0:4@8' type64='B24@0:8@16' selector='cleanupTrackAfterVerification:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='Q12@0:4@8' type64='Q24@0:8@16' selector='estimateLengthOfTrack:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='uint64_t' type='Q'/>
+    </method>
+    <method type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32' selector='prepareTrack:forBurn:toMedia:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='burn' declared_type='DRBurn*' type='@' index='1'/>
+      <arg name='mediaInfo' declared_type='NSDictionary*' type='@' index='2'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='B12@0:4@8' type64='B24@0:8@16' selector='prepareTrackForVerification:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='I36@0:4@8*12I16Q20I28^I32' type64='I56@0:8@16*24I32Q36I44^I48' selector='produceDataForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='uint32_t' type='I'/>
+    </method>
+    <method type='I36@0:4@8*12I16Q20I28^I32' type64='I56@0:8@16*24I32Q36I44^I48' selector='producePreGapForTrack:intoBuffer:length:atAddress:blockSize:ioFlags:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='uint32_t' type='I'/>
+    </method>
+    <method type='B36@0:4@8r*12I16Q20I28^I32' type64='B56@0:8@16r*24I32Q36I44^I48' selector='verifyDataForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' const='true' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method type='B36@0:4@8r*12I16Q20I28^I32' type64='B56@0:8@16r*24I32Q36I44^I48' selector='verifyPreGapForTrack:inBuffer:length:atAddress:blockSize:ioFlags:'>
+      <arg name='track' declared_type='DRTrack*' type='@' index='0'/>
+      <arg name='buffer' declared_type='char*' type='*' const='true' index='1'/>
+      <arg name='bufferLength' declared_type='uint32_t' type='I' index='2'/>
+      <arg name='address' declared_type='uint64_t' type='Q' index='3'/>
+      <arg name='blockSize' declared_type='uint32_t' type='I' index='4'/>
+      <arg name='flags' declared_type='uint32_t*' type='^I' index='5'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
   </informal_protocol>
 </signatures>

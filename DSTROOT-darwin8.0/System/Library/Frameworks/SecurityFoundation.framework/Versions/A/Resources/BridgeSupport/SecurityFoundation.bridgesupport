@@ -1,22 +1,41 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Security.framework'/>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
   <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
   <class name='SFAuthorization'>
+    <method class_method='true' selector='authorization'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='authorizationRef'>
+      <retval declared_type='AuthorizationRef' type='^{AuthorizationOpaqueRef=}'/>
+    </method>
     <method class_method='true' selector='authorizationWithFlags:rights:environment:'>
-      <arg type='^{_AuthorizationRights=I^{?}}' index='1' type_modifier='n'/>
-      <arg type='^{_AuthorizationEnvironment=I^{?}}' index='2' type_modifier='n'/>
+      <arg name='flags' declared_type='AuthorizationFlags' type='L' type64='I' index='0'/>
+      <arg name='rights' declared_type='AuthorizationRights*' type='^{_AuthorizationRights=I^{?}}' const='true' index='1' type_modifier='n'/>
+      <arg name='environment' declared_type='AuthorizationEnvironment*' type='^{_AuthorizationEnvironment=I^{?}}' const='true' index='2' type_modifier='n'/>
+      <retval declared_type='id' type='@'/>
     </method>
     <method selector='initWithFlags:rights:environment:'>
-      <arg type='^{_AuthorizationRights=I^{?}}' index='1' type_modifier='n'/>
-      <arg type='^{_AuthorizationEnvironment=I^{?}}' index='2' type_modifier='n'/>
+      <arg name='flags' declared_type='AuthorizationFlags' type='L' type64='I' index='0'/>
+      <arg name='rights' declared_type='AuthorizationRights*' type='^{_AuthorizationRights=I^{?}}' const='true' index='1' type_modifier='n'/>
+      <arg name='environment' declared_type='AuthorizationEnvironment*' type='^{_AuthorizationEnvironment=I^{?}}' const='true' index='2' type_modifier='n'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='invalidateCredentials'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='permitWithRight:flags:'>
+      <arg name='rightName' declared_type='AuthorizationString' type='*' index='0'/>
+      <arg name='flags' declared_type='AuthorizationFlags' type='L' type64='I' index='1'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </method>
     <method selector='permitWithRights:flags:environment:authorizedRights:'>
-      <arg type='^{_AuthorizationRights=I^{?}}' index='0' type_modifier='n'/>
-      <arg type='^{_AuthorizationEnvironment=I^{?}}' index='2' type_modifier='n'/>
-      <arg type='^{_AuthorizationRights=I^{?}}' index='3' type_modifier='o'/>
+      <arg name='rights' declared_type='AuthorizationRights*' type='^{_AuthorizationRights=I^{?}}' const='true' index='0' type_modifier='n'/>
+      <arg name='flags' declared_type='AuthorizationFlags' type='L' type64='I' index='1'/>
+      <arg name='environment' declared_type='AuthorizationEnvironment*' type='^{_AuthorizationEnvironment=I^{?}}' const='true' index='2' type_modifier='n'/>
+      <arg name='authorizedRights' declared_type='AuthorizationRights*' type='^{_AuthorizationRights=I^{?}}' index='3' type_modifier='o'/>
+      <retval declared_type='OSStatus' type='l' type64='i'/>
     </method>
   </class>
 </signatures>

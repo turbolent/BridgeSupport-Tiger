@@ -1,9 +1,21 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
-  <struct name='SRCallBackParam' type='{SRCallBackParam=&quot;callBack&quot;^?&quot;refCon&quot;l}' type64='{SRCallBackParam=&quot;callBack&quot;^?&quot;refCon&quot;q}'/>
-  <struct name='SRCallBackStruct' type='{SRCallBackStruct=&quot;what&quot;l&quot;message&quot;l&quot;instance&quot;^{OpaqueSRSpeechObject}&quot;status&quot;s&quot;flags&quot;s&quot;refCon&quot;l}' type64='{SRCallBackStruct=&quot;what&quot;q&quot;message&quot;q&quot;instance&quot;^{OpaqueSRSpeechObject}&quot;status&quot;s&quot;flags&quot;s&quot;refCon&quot;q}'/>
+  <struct name='SRCallBackParam' type='{SRCallBackParam=&quot;callBack&quot;^?&quot;refCon&quot;l}' type64='{SRCallBackParam=&quot;callBack&quot;^?&quot;refCon&quot;q}'>
+    <field name='callBack' function_pointer='true' declared_type='SRCallBackUPP' type='^?'>
+      <arg declared_type='SRCallBackStruct*' type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
+      <retval declared_type='void' type='v'/>
+    </field>
+    <field name='refCon' declared_type='long' type='l' type64='q'/>
+  </struct>
+  <struct name='SRCallBackStruct' type='{SRCallBackStruct=&quot;what&quot;l&quot;message&quot;l&quot;instance&quot;^{OpaqueSRSpeechObject}&quot;status&quot;s&quot;flags&quot;s&quot;refCon&quot;l}' type64='{SRCallBackStruct=&quot;what&quot;q&quot;message&quot;q&quot;instance&quot;^{OpaqueSRSpeechObject}&quot;status&quot;s&quot;flags&quot;s&quot;refCon&quot;q}'>
+    <field name='what' declared_type='long' type='l' type64='q'/>
+    <field name='message' declared_type='long' type='l' type64='q'/>
+    <field name='instance' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}'/>
+    <field name='status' declared_type='OSErr' type='s'/>
+    <field name='flags' declared_type='short' type='s'/>
+    <field name='refCon' declared_type='long' type='l' type64='q'/>
+  </struct>
   <opaque name='SRSpeechObject' type='^{OpaqueSRSpeechObject=}'/>
   <enum name='kAESpeechDetected' value='1936876132'/>
   <enum name='kAESpeechDone' value='1936880484'/>
@@ -103,232 +115,234 @@
   <enum name='typeSRRecognizer' value='1953654115'/>
   <enum name='typeSRSpeechResult' value='1953722482'/>
   <function name='DisposeSRCallBackUPP'>
-    <arg function_pointer='true' type='^?' type_modifier='n'>
-      <arg type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
-      <retval type='v'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SRCallBackUPP' type='^?' type_modifier='n'>
+      <arg declared_type='SRCallBackStruct*' type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='InvokeSRCallBackUPP'>
-    <arg type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}' type_modifier='n'/>
-    <arg function_pointer='true' type='^?' type_modifier='n'>
-      <arg type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
-      <retval type='v'/>
+    <arg name='param' declared_type='SRCallBackStruct*' type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}' type_modifier='n'/>
+    <arg name='userUPP' function_pointer='true' declared_type='SRCallBackUPP' type='^?' type_modifier='n'>
+      <arg declared_type='SRCallBackStruct*' type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='NewSRCallBackUPP'>
-    <arg function_pointer='true' type='^?' type_modifier='n'>
-      <arg type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
-      <retval type='v'/>
+    <arg name='userRoutine' function_pointer='true' declared_type='SRCallBackProcPtr' type='^?' type_modifier='n'>
+      <arg declared_type='SRCallBackStruct*' type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
+      <retval declared_type='void' type='v'/>
     </arg>
-    <retval function_pointer='true' type='^?'>
-      <arg type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
-      <retval type='v'/>
+    <retval function_pointer='true' declared_type='SRCallBackUPP' type='^?'>
+      <arg declared_type='SRCallBackStruct*' type='^{SRCallBackStruct=ll^{OpaqueSRSpeechObject}ssl}' type64='^{SRCallBackStruct=qq^{OpaqueSRSpeechObject}ssq}'/>
+      <retval declared_type='void' type='v'/>
     </retval>
   </function>
   <function name='SRAddLanguageObject'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='base' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='addon' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRAddText'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='base' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='text' c_array_length_in_arg='2' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='textLength' declared_type='Size' type='l' type64='q'/>
+    <arg name='refCon' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRCancelRecognition'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRChangeLanguageObject'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='languageObject' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='text' c_array_length_in_arg='2' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='textLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRCloseRecognitionSystem'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRContinueRecognition'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRCountItems'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^l' type64='^q' type_modifier='o'/>
-    <retval type='s'/>
+    <arg name='container' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='count' declared_type='long*' type='^l' type64='^q' type_modifier='o'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRDrawRecognizedText'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='dispText' c_array_length_in_arg='2' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='dispLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRDrawText'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='dispText' c_array_length_in_arg='2' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='dispLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SREmptyLanguageObject'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='languageObject' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRGetIndexedItem'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='container' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='item' declared_type='SRSpeechObject*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <arg name='index' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRGetLanguageModel'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='languageModel' declared_type='SRLanguageModel*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRGetProperty'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='L' type64='I'/>
-    <arg c_array_length_in_arg='3' type='^v' type_modifier='o'/>
-    <arg type='^i' type64='^q' type_modifier='o'/>
-    <retval type='s'/>
+    <arg name='srObject' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='property' c_array_length_in_arg='3' declared_type='void*' type='^v' type_modifier='o'/>
+    <arg name='propertyLen' declared_type='Size*' type='^i' type64='^q' type_modifier='o'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRGetReference'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <retval type='s'/>
+    <arg name='srObject' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='newObjectRef' declared_type='SRSpeechObject*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRIdle'>
-    <retval type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRNewLanguageModel'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='model' declared_type='SRLanguageModel*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <arg name='name' c_array_length_in_arg='3' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='nameLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRNewLanguageObjectFromDataFile'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='languageObject' declared_type='SRLanguageObject*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <arg name='fRefNum' declared_type='short' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRNewLanguageObjectFromHandle'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <arg type='^*' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='languageObject' declared_type='SRLanguageObject*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <arg name='lObjHandle' declared_type='Handle' type='^*' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRNewPath'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='path' declared_type='SRPath*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRNewPhrase'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='phrase' declared_type='SRPhrase*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <arg name='text' c_array_length_in_arg='3' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='textLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRNewRecognizer'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='recognizer' declared_type='SRRecognizer*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <arg name='sourceID' declared_type='OSType' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRNewWord'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
-    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='word' declared_type='SRWord*' type='^^{OpaqueSRSpeechObject}' type_modifier='o'/>
+    <arg name='text' c_array_length_in_arg='3' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='textLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SROpenRecognitionSystem'>
-    <arg type='^^{OpaqueSRSpeechObject}' type_modifier='n'/>
-    <arg type='L' type64='I'/>
-    <retval type='s'/>
+    <arg name='system' declared_type='SRRecognitionSystem*' type='^^{OpaqueSRSpeechObject}' type_modifier='n'/>
+    <arg name='systemID' declared_type='OSType' type='L' type64='I'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRProcessBegin'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='failed' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRProcessEnd'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='B'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='failed' declared_type='Boolean' type='B'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRPutLanguageObjectIntoDataFile'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='s'/>
-    <retval type='s'/>
+    <arg name='languageObject' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='fRefNum' declared_type='short' type='s'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRPutLanguageObjectIntoHandle'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^*' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='languageObject' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='lobjHandle' declared_type='Handle' type='^*' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRReleaseObject'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='srObject' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRRemoveIndexedItem'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='container' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='index' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRRemoveLanguageObject'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='base' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='toRemove' declared_type='SRLanguageObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRSetIndexedItem'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='container' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='item' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='index' declared_type='long' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRSetLanguageModel'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='languageModel' declared_type='SRLanguageModel' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRSetProperty'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg type='L' type64='I'/>
-    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='srObject' declared_type='SRSpeechObject' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='selector' declared_type='OSType' type='L' type64='I'/>
+    <arg name='property' c_array_length_in_arg='3' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='propertyLen' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRSpeakAndDrawText'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='text' c_array_length_in_arg='2' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='textLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRSpeakText'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
-    <arg type='l' type64='q'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <arg name='speakText' c_array_length_in_arg='2' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+    <arg name='speakLength' declared_type='Size' type='l' type64='q'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRSpeechBusy'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='B'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='Boolean' type='B'/>
   </function>
   <function name='SRStartListening'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRStopListening'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
   <function name='SRStopSpeech'>
-    <arg type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
-    <retval type='s'/>
+    <arg name='recognizer' declared_type='SRRecognizer' type='^{OpaqueSRSpeechObject=}' type_modifier='n'/>
+    <retval declared_type='OSErr' type='s'/>
   </function>
 </signatures>

@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
   <depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
@@ -12,11 +11,24 @@
   <enum name='AUViewPropertiesDisplayFlag' value='2'/>
   <enum name='AUViewTitleDisplayFlag' value='1'/>
   <class name='AUGenericView'>
+    <method selector='audioUnit'>
+      <retval declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+    </method>
+    <method selector='initWithAudioUnit:'>
+      <arg name='au' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithAudioUnit:displayFlags:'>
+      <arg name='inAudioUnit' declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}' index='0'/>
+      <arg name='inFlags' declared_type='UInt32' type='L' type64='I' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
     <method selector='setShowsExpertParameters:'>
-      <arg type='B' index='0'/>
+      <arg name='inShowsExpertParameters' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='showsExpertParameters'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
   </class>
 </signatures>

@@ -1,28 +1,27 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
-  <constant name='PDFDocumentAuthorAttribute' type='@'/>
-  <constant name='PDFDocumentCreationDateAttribute' type='@'/>
-  <constant name='PDFDocumentCreatorAttribute' type='@'/>
-  <constant name='PDFDocumentDidBeginFindNotification' type='@'/>
-  <constant name='PDFDocumentDidBeginPageFindNotification' type='@'/>
-  <constant name='PDFDocumentDidEndFindNotification' type='@'/>
-  <constant name='PDFDocumentDidEndPageFindNotification' type='@'/>
-  <constant name='PDFDocumentDidFindMatchNotification' type='@'/>
-  <constant name='PDFDocumentDidUnlockNotification' type='@'/>
-  <constant name='PDFDocumentKeywordsAttribute' type='@'/>
-  <constant name='PDFDocumentModificationDateAttribute' type='@'/>
-  <constant name='PDFDocumentProducerAttribute' type='@'/>
-  <constant name='PDFDocumentSubjectAttribute' type='@'/>
-  <constant name='PDFDocumentTitleAttribute' type='@'/>
-  <constant name='PDFViewAnnotationHitNotification' type='@'/>
-  <constant name='PDFViewChangedHistoryNotification' type='@'/>
-  <constant name='PDFViewCopyPermissionNotification' type='@'/>
-  <constant name='PDFViewDocumentChangedNotification' type='@'/>
-  <constant name='PDFViewPageChangedNotification' type='@'/>
-  <constant name='PDFViewPrintPermissionNotification' type='@'/>
-  <constant name='PDFViewScaleChangedNotification' type='@'/>
+  <constant name='PDFDocumentAuthorAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentCreationDateAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentCreatorAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentDidBeginFindNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentDidBeginPageFindNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentDidEndFindNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentDidEndPageFindNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentDidFindMatchNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentDidUnlockNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentKeywordsAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentModificationDateAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentProducerAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentSubjectAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFDocumentTitleAttribute' declared_type='NSString*' type='@'/>
+  <constant name='PDFViewAnnotationHitNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFViewChangedHistoryNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFViewCopyPermissionNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFViewDocumentChangedNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFViewPageChangedNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFViewPrintPermissionNotification' declared_type='NSString*' type='@'/>
+  <constant name='PDFViewScaleChangedNotification' declared_type='NSString*' type='@'/>
   <enum name='kPDFAnnotationArea' value='4'/>
   <enum name='kPDFBorderStyleBeveled' value='2'/>
   <enum name='kPDFBorderStyleDashed' value='1'/>
@@ -65,164 +64,925 @@
   <enum name='kPDFWidgetPushButtonControl' value='0'/>
   <enum name='kPDFWidgetRadioButtonControl' value='1'/>
   <enum name='kPDFWidgetUnknownControl' value='-1'/>
+  <class name='NSObject'>
+    <method selector='PDFViewWillChangeScaleFactor:toScale:'>
+      <arg name='sender' declared_type='PDFView*' type='@' index='0'/>
+      <arg name='scale' declared_type='float' type='f' index='1'/>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='PDFViewWillClickOnLink:withURL:'>
+      <arg name='sender' declared_type='PDFView*' type='@' index='0'/>
+      <arg name='url' declared_type='NSURL*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='didMatchString:'>
+      <arg name='instance' declared_type='PDFSelection*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='documentDidBeginDocumentFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='documentDidBeginPageFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='documentDidEndDocumentFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='documentDidEndPageFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='documentDidFindMatch:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='documentDidUnlock:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
   <class name='PDFAnnotation'>
+    <method selector='border'>
+      <retval declared_type='PDFBorder*' type='@'/>
+    </method>
+    <method selector='bounds'>
+      <retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+    </method>
+    <method selector='color'>
+      <retval declared_type='NSColor*' type='@'/>
+    </method>
+    <method selector='contents'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='drawWithBox:'>
+      <arg name='box' declared_type='PDFDisplayBox' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='hasAppearanceStream'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='initWithBounds:'>
+      <arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='page'>
+      <retval declared_type='PDFPage*' type='@'/>
+    </method>
+    <method selector='setBorder:'>
+      <arg name='border' declared_type='PDFBorder*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setBounds:'>
+      <arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setColor:'>
+      <arg name='color' declared_type='NSColor*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setContents:'>
+      <arg name='contents' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setShouldDisplay:'>
-      <arg type='B' index='0'/>
+      <arg name='display' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setShouldPrint:'>
-      <arg type='B' index='0'/>
+      <arg name='print' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='shouldDisplay'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='shouldPrint'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='toolTip'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='type'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
   </class>
   <class name='PDFAnnotationButtonWidget'>
+    <method selector='backgroundColor'>
+      <retval declared_type='NSColor*' type='@'/>
+    </method>
+    <method selector='controlType'>
+      <retval declared_type='PDFWidgetControlType' type='i'/>
+    </method>
+    <method selector='parentID'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='setBackgroundColor:'>
+      <arg name='color' declared_type='NSColor*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='setHighlighted:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setState:'>
+      <arg name='value' declared_type='int' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='state'>
+      <retval declared_type='int' type='i'/>
+    </method>
+  </class>
+  <class name='PDFAnnotationCircle'>
+    <method selector='interiorColor'>
+      <retval declared_type='NSColor*' type='@'/>
+    </method>
+    <method selector='setInteriorColor:'>
+      <arg name='color' declared_type='NSColor*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='PDFAnnotationFreeText'>
+    <method selector='alignment'>
+      <retval declared_type='NSTextAlignment' type='i'/>
+    </method>
+    <method selector='font'>
+      <retval declared_type='NSFont*' type='@'/>
+    </method>
+    <method selector='setAlignment:'>
+      <arg name='alignment' declared_type='NSTextAlignment' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setFont:'>
+      <arg name='font' declared_type='NSFont*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='PDFAnnotationInk'>
+    <method selector='addBezierPath:'>
+      <arg name='path' declared_type='NSBezierPath*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='paths'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='removeBezierPath:'>
+      <arg name='path' declared_type='NSBezierPath*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='PDFAnnotationLine'>
+    <method selector='endLineStyle'>
+      <retval declared_type='PDFLineStyle' type='i'/>
+    </method>
+    <method selector='endPoint'>
+      <retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
+    </method>
+    <method selector='setEndLineStyle:'>
+      <arg name='style' declared_type='PDFLineStyle' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setEndPoint:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setStartLineStyle:'>
+      <arg name='style' declared_type='PDFLineStyle' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setStartPoint:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='startLineStyle'>
+      <retval declared_type='PDFLineStyle' type='i'/>
+    </method>
+    <method selector='startPoint'>
+      <retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
     </method>
   </class>
   <class name='PDFAnnotationLink'>
+    <method selector='URL'>
+      <retval declared_type='NSURL*' type='@'/>
+    </method>
+    <method selector='destination'>
+      <retval declared_type='PDFDestination*' type='@'/>
+    </method>
+    <method selector='setDestination:'>
+      <arg name='destination' declared_type='PDFDestination*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='setHighlighted:'>
-      <arg type='B' index='0'/>
+      <arg name='flag' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setURL:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='PDFAnnotationMarkup'>
+    <method selector='markupType'>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method selector='quadrilateralPoints'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='setMarkupType:'>
+      <arg name='type' declared_type='int' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setQuadrilateralPoints:'>
+      <arg name='points' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='PDFAnnotationSquare'>
+    <method selector='interiorColor'>
+      <retval declared_type='NSColor*' type='@'/>
+    </method>
+    <method selector='setInteriorColor:'>
+      <arg name='color' declared_type='NSColor*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='PDFAnnotationText'>
+    <method selector='iconType'>
+      <retval declared_type='PDFTextAnnotationIconType' type='i'/>
+    </method>
+    <method selector='setIconType:'>
+      <arg name='type' declared_type='PDFTextAnnotationIconType' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
     <method selector='setWindowIsOpen:'>
-      <arg type='B' index='0'/>
+      <arg name='isOpen' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='windowIsOpen'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+  </class>
+  <class name='PDFAnnotationTextWidget'>
+    <method selector='alignment'>
+      <retval declared_type='NSTextAlignment' type='i'/>
+    </method>
+    <method selector='font'>
+      <retval declared_type='NSFont*' type='@'/>
+    </method>
+    <method selector='setAlignment:'>
+      <arg name='alignment' declared_type='NSTextAlignment' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setFont:'>
+      <arg name='font' declared_type='NSFont*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setStringValue:'>
+      <arg name='value' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='stringValue'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+  </class>
+  <class name='PDFBorder'>
+    <method selector='dashPattern'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='drawInRect:'>
+      <arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='horizontalCornerRadius'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='lineWidth'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='setDashPattern:'>
+      <arg name='pattern' declared_type='NSArray*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setHorizontalCornerRadius:'>
+      <arg name='radius' declared_type='float' type='f' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setLineWidth:'>
+      <arg name='width' declared_type='float' type='f' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setStyle:'>
+      <arg name='style' declared_type='PDFBorderStyle' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setVerticalCornerRadius:'>
+      <arg name='radius' declared_type='float' type='f' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='style'>
+      <retval declared_type='PDFBorderStyle' type='i'/>
+    </method>
+    <method selector='verticalCornerRadius'>
+      <retval declared_type='float' type='f'/>
+    </method>
+  </class>
+  <class name='PDFDestination'>
+    <method selector='initWithPage:atPoint:'>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='page'>
+      <retval declared_type='PDFPage*' type='@'/>
+    </method>
+    <method selector='point'>
+      <retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
     </method>
   </class>
   <class name='PDFDocument'>
     <method selector='allowsCopying'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='allowsPrinting'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='beginFindString:withOptions:'>
+      <arg name='string' declared_type='NSString*' type='@' index='0'/>
+      <arg name='options' declared_type='int' type='i' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='cancelFindString'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='dataRepresentation'>
+      <retval declared_type='NSData*' type='@'/>
+    </method>
+    <method selector='delegate'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='documentAttributes'>
+      <retval declared_type='NSDictionary*' type='@'/>
+    </method>
+    <method selector='documentURL'>
+      <retval declared_type='NSURL*' type='@'/>
+    </method>
+    <method selector='exchangePageAtIndex:withPageAtIndex:'>
+      <arg name='indexA' declared_type='unsigned int' type='I' index='0'/>
+      <arg name='indexB' declared_type='unsigned int' type='I' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='findString:fromSelection:withOptions:'>
+      <arg name='string' declared_type='NSString*' type='@' index='0'/>
+      <arg name='selection' declared_type='PDFSelection*' type='@' index='1'/>
+      <arg name='options' declared_type='int' type='i' index='2'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='findString:withOptions:'>
+      <arg name='string' declared_type='NSString*' type='@' index='0'/>
+      <arg name='options' declared_type='int' type='i' index='1'/>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='indexForPage:'>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='initWithData:'>
+      <arg name='data' declared_type='NSData*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='initWithURL:'>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='insertPage:atIndex:'>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <arg name='index' declared_type='unsigned int' type='I' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='isEncrypted'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='isFinding'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='isLocked'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='majorVersion'>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method selector='minorVersion'>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method selector='outlineItemForSelection:'>
+      <arg name='selection' declared_type='PDFSelection*' type='@' index='0'/>
+      <retval declared_type='PDFOutline*' type='@'/>
+    </method>
+    <method selector='outlineRoot'>
+      <retval declared_type='PDFOutline*' type='@'/>
+    </method>
+    <method selector='pageAtIndex:'>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='PDFPage*' type='@'/>
+    </method>
+    <method selector='pageCount'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='removePageAtIndex:'>
+      <arg name='index' declared_type='unsigned int' type='I' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='selectionForEntireDocument'>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='selectionFromPage:atCharacterIndex:toPage:atCharacterIndex:'>
+      <arg name='startPage' declared_type='PDFPage*' type='@' index='0'/>
+      <arg name='startChar' declared_type='unsigned int' type='I' index='1'/>
+      <arg name='endPage' declared_type='PDFPage*' type='@' index='2'/>
+      <arg name='endChar' declared_type='unsigned int' type='I' index='3'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='selectionFromPage:atPoint:toPage:atPoint:'>
+      <arg name='startPage' declared_type='PDFPage*' type='@' index='0'/>
+      <arg name='startPt' declared_type='NSPoint' type='{_NSPoint=ff}' index='1'/>
+      <arg name='endPage' declared_type='PDFPage*' type='@' index='2'/>
+      <arg name='endPt' declared_type='NSPoint' type='{_NSPoint=ff}' index='3'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='setDelegate:'>
+      <arg name='anObject' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDocumentAttributes:'>
+      <arg name='attributes' declared_type='NSDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='string'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
     <method selector='unlockWithPassword:'>
-      <retval type='B'/>
+      <arg name='password' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='writeToFile:'>
-      <retval type='B'/>
+      <arg name='path' declared_type='NSString*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='writeToFile:withOptions:'>
-      <retval type='B'/>
+      <arg name='path' declared_type='NSString*' type='@' index='0'/>
+      <arg name='options' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='writeToURL:'>
-      <retval type='B'/>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='writeToURL:withOptions:'>
-      <retval type='B'/>
+      <arg name='url' declared_type='NSURL*' type='@' index='0'/>
+      <arg name='options' declared_type='NSDictionary*' type='@' index='1'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+  </class>
+  <class name='PDFOutline'>
+    <method selector='childAtIndex:'>
+      <arg name='index' declared_type='int' type='i' index='0'/>
+      <retval declared_type='PDFOutline*' type='@'/>
+    </method>
+    <method selector='destination'>
+      <retval declared_type='PDFDestination*' type='@'/>
+    </method>
+    <method selector='document'>
+      <retval declared_type='PDFDocument*' type='@'/>
+    </method>
+    <method selector='initWithDocument:'>
+      <arg name='document' declared_type='PDFDocument*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='label'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='numberOfChildren'>
+      <retval declared_type='int' type='i'/>
     </method>
   </class>
   <class name='PDFPage'>
+    <method selector='addAnnotation:'>
+      <arg name='annotation' declared_type='PDFAnnotation*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='annotationAtPoint:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <retval declared_type='PDFAnnotation*' type='@'/>
+    </method>
+    <method selector='annotations'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='attributedString'>
+      <retval declared_type='NSAttributedString*' type='@'/>
+    </method>
+    <method selector='boundsForBox:'>
+      <arg name='box' declared_type='PDFDisplayBox' type='i' index='0'/>
+      <retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+    </method>
+    <method selector='characterBoundsAtIndex:'>
+      <arg name='index' declared_type='int' type='i' index='0'/>
+      <retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+    </method>
+    <method selector='characterIndexAtPoint:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method selector='dataRepresentation'>
+      <retval declared_type='NSData*' type='@'/>
+    </method>
     <method selector='displaysAnnotations'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='document'>
+      <retval declared_type='PDFDocument*' type='@'/>
+    </method>
+    <method selector='drawWithBox:'>
+      <arg name='box' declared_type='PDFDisplayBox' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='initWithDocument:'>
+      <arg name='document' declared_type='PDFDocument*' type='@' index='0'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='label'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='numberOfCharacters'>
+      <retval declared_type='unsigned int' type='I'/>
+    </method>
+    <method selector='removeAnnotation:'>
+      <arg name='annotation' declared_type='PDFAnnotation*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='rotation'>
+      <retval declared_type='int' type='i'/>
+    </method>
+    <method selector='selectionForLineAtPoint:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='selectionForRange:'>
+      <arg name='range' declared_type='NSRange' type='{_NSRange=II}' index='0'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='selectionForRect:'>
+      <arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' index='0'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='selectionForWordAtPoint:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='selectionFromPoint:toPoint:'>
+      <arg name='startPoint' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <arg name='endPoint' declared_type='NSPoint' type='{_NSPoint=ff}' index='1'/>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='setBounds:forBox:'>
+      <arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' index='0'/>
+      <arg name='box' declared_type='PDFDisplayBox' type='i' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setDisplaysAnnotations:'>
-      <arg type='B' index='0'/>
+      <arg name='display' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setRotation:'>
+      <arg name='angle' declared_type='int' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='string'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
   </class>
   <class name='PDFSelection'>
+    <method selector='addSelection:'>
+      <arg name='selection' declared_type='PDFSelection*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='attributedString'>
+      <retval declared_type='NSAttributedString*' type='@'/>
+    </method>
+    <method selector='boundsForPage:'>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+    </method>
     <method selector='drawForPage:active:'>
-      <arg type='B' index='1'/>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <arg name='active' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='drawForPage:withBox:active:'>
-      <arg type='B' index='2'/>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <arg name='box' declared_type='PDFDisplayBox' type='i' index='1'/>
+      <arg name='active' declared_type='BOOL' type='B' index='2'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='extendSelectionAtEnd:'>
+      <arg name='chars' declared_type='int' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='extendSelectionAtStart:'>
+      <arg name='chars' declared_type='int' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='pages'>
+      <retval declared_type='NSArray*' type='@'/>
+    </method>
+    <method selector='string'>
+      <retval declared_type='NSString*' type='@'/>
     </method>
   </class>
   <class name='PDFView'>
     <method selector='allowsDragging'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='areaOfInterestForMouse:'>
+      <arg name='theEvent' declared_type='NSEvent*' type='@' index='0'/>
+      <retval declared_type='PDFAreaOfInterest' type='i'/>
     </method>
     <method selector='autoScales'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='backgroundColor'>
+      <retval declared_type='NSColor*' type='@'/>
     </method>
     <method selector='canGoBack'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canGoForward'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canGoToFirstPage'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canGoToLastPage'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canGoToNextPage'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canGoToPreviousPage'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canZoomIn'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='canZoomOut'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='clearSelection'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='convertPoint:fromPage:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <arg name='page' declared_type='PDFPage*' type='@' index='1'/>
+      <retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
+    </method>
+    <method selector='convertPoint:toPage:'>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <arg name='page' declared_type='PDFPage*' type='@' index='1'/>
+      <retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
+    </method>
+    <method selector='convertRect:fromPage:'>
+      <arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' index='0'/>
+      <arg name='page' declared_type='PDFPage*' type='@' index='1'/>
+      <retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+    </method>
+    <method selector='convertRect:toPage:'>
+      <arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' index='0'/>
+      <arg name='page' declared_type='PDFPage*' type='@' index='1'/>
+      <retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+    </method>
+    <method selector='copy:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='currentDestination'>
+      <retval declared_type='PDFDestination*' type='@'/>
+    </method>
+    <method selector='currentPage'>
+      <retval declared_type='PDFPage*' type='@'/>
+    </method>
+    <method selector='currentSelection'>
+      <retval declared_type='PDFSelection*' type='@'/>
+    </method>
+    <method selector='delegate'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='displayBox'>
+      <retval declared_type='PDFDisplayBox' type='i'/>
+    </method>
+    <method selector='displayMode'>
+      <retval declared_type='PDFDisplayMode' type='i'/>
     </method>
     <method selector='displaysAsBook'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='displaysPageBreaks'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='document'>
+      <retval declared_type='PDFDocument*' type='@'/>
+    </method>
+    <method selector='documentView'>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='drawPage:'>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goBack:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goForward:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goToDestination:'>
+      <arg name='destination' declared_type='PDFDestination*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goToFirstPage:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goToLastPage:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goToNextPage:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goToPage:'>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goToPreviousPage:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='goToSelection:'>
+      <arg name='selection' declared_type='PDFSelection*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='greekingThreshold'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='layoutDocumentView'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='pageForPoint:nearest:'>
-      <arg type='B' index='1'/>
+      <arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' index='0'/>
+      <arg name='nearest' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='PDFPage*' type='@'/>
     </method>
     <method selector='printWithInfo:autoRotate:'>
-      <arg type='B' index='1'/>
+      <arg name='printInfo' declared_type='NSPrintInfo*' type='@' index='0'/>
+      <arg name='doRotate' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='rowSizeForPage:'>
+      <arg name='page' declared_type='PDFPage*' type='@' index='0'/>
+      <retval declared_type='NSSize' type='{_NSSize=ff}'/>
+    </method>
+    <method selector='scaleFactor'>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method selector='scrollSelectionToVisible:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='selectAll:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setAllowsDragging:'>
-      <arg type='B' index='0'/>
+      <arg name='allow' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setAutoScales:'>
-      <arg type='B' index='0'/>
+      <arg name='newAuto' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setBackgroundColor:'>
+      <arg name='newColor' declared_type='NSColor*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setCurrentSelection:'>
+      <arg name='selection' declared_type='PDFSelection*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setCursorForAreaOfInterest:'>
+      <arg name='area' declared_type='PDFAreaOfInterest' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDelegate:'>
+      <arg name='anObject' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDisplayBox:'>
+      <arg name='box' declared_type='PDFDisplayBox' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDisplayMode:'>
+      <arg name='mode' declared_type='PDFDisplayMode' type='i' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setDisplaysAsBook:'>
-      <arg type='B' index='0'/>
+      <arg name='asBook' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setDisplaysPageBreaks:'>
-      <arg type='B' index='0'/>
+      <arg name='breaks' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setDocument:'>
+      <arg name='document' declared_type='PDFDocument*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setGreekingThreshold:'>
+      <arg name='threshold' declared_type='float' type='f' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='setScaleFactor:'>
+      <arg name='scale' declared_type='float' type='f' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='setShouldAntiAlias:'>
-      <arg type='B' index='0'/>
+      <arg name='aliasing' declared_type='BOOL' type='B' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='shouldAntiAlias'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
+    </method>
+    <method selector='takeBackgroundColorFrom:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='takePasswordFrom:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='zoomIn:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='zoomOut:'>
+      <arg name='sender' declared_type='id' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <informal_protocol name='PDFDocumentDelegate'>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='didMatchString:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='didMatchString:'>
+      <arg name='instance' declared_type='PDFSelection*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
   </informal_protocol>
   <informal_protocol name='PDFDocumentNotifications'>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidBeginDocumentFind:'/>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidBeginPageFind:'/>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidEndDocumentFind:'/>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidEndPageFind:'/>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidFindMatch:'/>
-    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidUnlock:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidBeginDocumentFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidBeginPageFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidEndDocumentFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidEndPageFind:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidFindMatch:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='documentDidUnlock:'>
+      <arg name='notification' declared_type='NSNotification*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
   </informal_protocol>
   <informal_protocol name='PDFViewDelegate'>
-    <method type='f16@0:4@8f12' type64='f28@0:8@16f24' selector='PDFViewWillChangeScaleFactor:toScale:'/>
-    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='PDFViewWillClickOnLink:withURL:'/>
+    <method type='f16@0:4@8f12' type64='f28@0:8@16f24' selector='PDFViewWillChangeScaleFactor:toScale:'>
+      <arg name='sender' declared_type='PDFView*' type='@' index='0'/>
+      <arg name='scale' declared_type='float' type='f' index='1'/>
+      <retval declared_type='float' type='f'/>
+    </method>
+    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='PDFViewWillClickOnLink:withURL:'>
+      <arg name='sender' declared_type='PDFView*' type='@' index='0'/>
+      <arg name='url' declared_type='NSURL*' type='@' index='1'/>
+      <retval declared_type='void' type='v'/>
+    </method>
   </informal_protocol>
 </signatures>

@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
   <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
@@ -9,27 +8,27 @@
   <enum name='kAHTOCTypeDeveloper' value='1'/>
   <enum name='kAHTOCTypeUser' value='0'/>
   <function name='AHGotoMainTOC'>
-    <arg type='s'/>
-    <retval type='l' type64='i'/>
+    <arg name='toctype' declared_type='AHTOCType' type='s'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AHGotoPage'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='bookname' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='path' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='anchor' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AHLookupAnchor'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='bookname' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='anchor' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AHRegisterHelpBook'>
-    <arg type='^{FSRef=[80C]}'/>
-    <retval type='l' type64='i'/>
+    <arg name='appBundleRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
   <function name='AHSearch'>
-    <arg type='^{__CFString=}'/>
-    <arg type='^{__CFString=}'/>
-    <retval type='l' type64='i'/>
+    <arg name='bookname' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <arg name='query' declared_type='CFStringRef' type='^{__CFString=}'/>
+    <retval declared_type='OSStatus' type='l' type64='i'/>
   </function>
 </signatures>

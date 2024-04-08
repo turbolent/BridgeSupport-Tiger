@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
   <depends_on path='/System/Library/Frameworks/Automator.framework/Frameworks/MediaBrowser.framework'/>
   <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
@@ -9,24 +8,87 @@
   <depends_on path='/System/Library/Frameworks/QuickTime.framework'/>
   <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
   <class name='AMAction'>
+    <method selector='activated'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='definition'>
+      <retval declared_type='NSMutableDictionary*' type='@'/>
+    </method>
     <method selector='initWithDefinition:fromArchive:'>
-      <arg type='B' index='1'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='0'/>
+      <arg name='archived' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='opened'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='parametersUpdated'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='reset'>
+      <retval declared_type='void' type='v'/>
     </method>
     <method selector='runWithInput:fromAction:error:'>
-      <arg index='2' type_modifier='o'/>
+      <arg name='input' declared_type='id' type='@' index='0'/>
+      <arg name='anAction' declared_type='AMAction*' type='@' index='1'/>
+      <arg name='errorInfo' declared_type='NSDictionary**' type='^@' index='2' type_modifier='o'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='stop'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='updateParameters'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='writeToDictionary:'>
+      <arg name='dictionary' declared_type='NSMutableDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+  </class>
+  <class name='AMAppleScriptAction'>
+    <method selector='script'>
+      <retval declared_type='OSAScript*' type='@'/>
+    </method>
+    <method selector='setScript:'>
+      <arg name='newScript' declared_type='OSAScript*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
     </method>
   </class>
   <class name='AMBundleAction'>
+    <method selector='awakeFromBundle'>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='bundle'>
+      <retval declared_type='NSBundle*' type='@'/>
+    </method>
     <method selector='hasView'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
     <method selector='initWithDefinition:fromArchive:'>
-      <arg type='B' index='1'/>
+      <arg name='dict' declared_type='NSDictionary*' type='@' index='0'/>
+      <arg name='archived' declared_type='BOOL' type='B' index='1'/>
+      <retval declared_type='id' type='@'/>
+    </method>
+    <method selector='parameters'>
+      <retval declared_type='NSMutableDictionary*' type='@'/>
+    </method>
+    <method selector='setParameters:'>
+      <arg name='newParameters' declared_type='NSMutableDictionary*' type='@' index='0'/>
+      <retval declared_type='void' type='v'/>
+    </method>
+    <method selector='view'>
+      <retval declared_type='id' type='@'/>
     </method>
   </class>
   <class name='AMShellScriptAction'>
+    <method selector='inputFieldSeparator'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
+    <method selector='outputFieldSeparator'>
+      <retval declared_type='NSString*' type='@'/>
+    </method>
     <method selector='remapLineEndings'>
-      <retval type='B'/>
+      <retval declared_type='BOOL' type='B'/>
     </method>
   </class>
 </signatures>
