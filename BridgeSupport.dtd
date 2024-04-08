@@ -100,6 +100,7 @@
 <!ATTLIST retval type64 CDATA #IMPLIED>
 <!ATTLIST retval function_pointer %boolean; #IMPLIED>
 <!ATTLIST retval declared_type CDATA #IMPLIED>
+<!ATTLIST retval declared_type64 CDATA #IMPLIED>
 <!ATTLIST retval const %boolean; #IMPLIED>
 
 <!-- Functions. -->
