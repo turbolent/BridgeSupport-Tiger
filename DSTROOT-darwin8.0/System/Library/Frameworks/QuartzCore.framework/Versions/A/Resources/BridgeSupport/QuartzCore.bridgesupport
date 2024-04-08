@@ -1,0 +1,118 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+  <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+  <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+  <constant name='kCIApplyOptionDefinition' type='@'/>
+  <constant name='kCIApplyOptionExtent' type='@'/>
+  <constant name='kCIApplyOptionUserInfo' type='@'/>
+  <constant name='kCIAttributeClass' type='@'/>
+  <constant name='kCIAttributeDefault' type='@'/>
+  <constant name='kCIAttributeDisplayName' type='@'/>
+  <constant name='kCIAttributeFilterCategories' type='@'/>
+  <constant name='kCIAttributeFilterDisplayName' type='@'/>
+  <constant name='kCIAttributeFilterName' type='@'/>
+  <constant name='kCIAttributeIdentity' type='@'/>
+  <constant name='kCIAttributeMax' type='@'/>
+  <constant name='kCIAttributeMin' type='@'/>
+  <constant name='kCIAttributeName' type='@'/>
+  <constant name='kCIAttributeSliderMax' type='@'/>
+  <constant name='kCIAttributeSliderMin' type='@'/>
+  <constant name='kCIAttributeType' type='@'/>
+  <constant name='kCIAttributeTypeAngle' type='@'/>
+  <constant name='kCIAttributeTypeBoolean' type='@'/>
+  <constant name='kCIAttributeTypeDistance' type='@'/>
+  <constant name='kCIAttributeTypeGradient' type='@'/>
+  <constant name='kCIAttributeTypeOffset' type='@'/>
+  <constant name='kCIAttributeTypeOpaqueColor' type='@'/>
+  <constant name='kCIAttributeTypePosition' type='@'/>
+  <constant name='kCIAttributeTypePosition3' type='@'/>
+  <constant name='kCIAttributeTypeRectangle' type='@'/>
+  <constant name='kCIAttributeTypeScalar' type='@'/>
+  <constant name='kCIAttributeTypeTime' type='@'/>
+  <constant name='kCICategoryBlur' type='@'/>
+  <constant name='kCICategoryBuiltIn' type='@'/>
+  <constant name='kCICategoryColorAdjustment' type='@'/>
+  <constant name='kCICategoryColorEffect' type='@'/>
+  <constant name='kCICategoryCompositeOperation' type='@'/>
+  <constant name='kCICategoryDistortionEffect' type='@'/>
+  <constant name='kCICategoryGenerator' type='@'/>
+  <constant name='kCICategoryGeometryAdjustment' type='@'/>
+  <constant name='kCICategoryGradient' type='@'/>
+  <constant name='kCICategoryHalftoneEffect' type='@'/>
+  <constant name='kCICategoryHighDynamicRange' type='@'/>
+  <constant name='kCICategoryInterlaced' type='@'/>
+  <constant name='kCICategoryNonSquarePixels' type='@'/>
+  <constant name='kCICategorySharpen' type='@'/>
+  <constant name='kCICategoryStillImage' type='@'/>
+  <constant name='kCICategoryStylize' type='@'/>
+  <constant name='kCICategoryTileEffect' type='@'/>
+  <constant name='kCICategoryTransition' type='@'/>
+  <constant name='kCICategoryVideo' type='@'/>
+  <constant name='kCIContextOutputColorSpace' type='@'/>
+  <constant name='kCIContextUseSoftwareRenderer' type='@'/>
+  <constant name='kCIContextWorkingColorSpace' type='@'/>
+  <constant name='kCIFormatARGB8' type='i'/>
+  <constant name='kCIFormatRGBA16' type='i'/>
+  <constant name='kCIFormatRGBAf' type='i'/>
+  <constant name='kCIImageColorSpace' type='@'/>
+  <constant name='kCIImageProviderTileSize' type='@'/>
+  <constant name='kCIImageProviderUserInfo' type='@'/>
+  <constant name='kCISamplerAffineMatrix' type='@'/>
+  <constant name='kCISamplerFilterLinear' type='@'/>
+  <constant name='kCISamplerFilterMode' type='@'/>
+  <constant name='kCISamplerFilterNearest' type='@'/>
+  <constant name='kCISamplerWrapBlack' type='@'/>
+  <constant name='kCISamplerWrapClamp' type='@'/>
+  <constant name='kCISamplerWrapMode' type='@'/>
+  <class name='CIFilterShape'>
+    <method selector='transformBy:interior:'>
+      <arg type='B' index='1'/>
+    </method>
+  </class>
+  <class name='CIImage'>
+    <method class_method='true' selector='imageWithTexture:size:flipped:colorSpace:'>
+      <arg type='B' index='2'/>
+    </method>
+    <method selector='initWithTexture:size:flipped:colorSpace:'>
+      <arg type='B' index='2'/>
+    </method>
+  </class>
+  <class name='CIKernel'>
+    <method selector='setROISelector:'>
+      <arg sel_of_type='{CGRect={CGPoint=ff}{CGSize=ff}}32@0:4i8{CGRect={CGPoint=ff}{CGSize=ff}}12@28' index='0' sel_of_type64='{CGRect={CGPoint=ff}{CGSize=ff}}44@0:8i16{CGRect={CGPoint=ff}{CGSize=ff}}20@36'/>
+    </method>
+  </class>
+  <class name='CIPlugIn'>
+    <method class_method='true' selector='loadPlugIn:allowNonExecutable:'>
+      <arg type='B' index='1'/>
+    </method>
+  </class>
+  <class name='CIVector'>
+    <method selector='initWithValues:count:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method class_method='true' selector='vectorWithValues:count:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+  </class>
+  <class name='NSObject'>
+    <method selector='load:'>
+      <arg index='0' type_modifier='n'/>
+      <retval type='B'/>
+    </method>
+    <method selector='provideImageData:bytesPerRow:origin::size::userInfo:'>
+      <arg index='0' type_modifier='n'/>
+    </method>
+  </class>
+  <informal_protocol name='CIImageProvider'>
+    <method type='v36@0:4^v8L12L16L20L24L28@32' type64='v72@0:8^v16Q24Q32Q40Q48Q56@64' selector='provideImageData:bytesPerRow:origin::size::userInfo:'/>
+  </informal_protocol>
+  <informal_protocol name='CIPlugInRegistration'>
+    <method type='B12@0:4^v8' type64='B24@0:8^v16' selector='load:'/>
+  </informal_protocol>
+</signatures>

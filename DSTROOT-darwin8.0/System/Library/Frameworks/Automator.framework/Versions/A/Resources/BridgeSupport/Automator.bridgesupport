@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/Automator.framework/Frameworks/MediaBrowser.framework'/>
+  <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/AppleScriptKit.framework'/>
+  <depends_on path='/System/Library/Frameworks/OSAKit.framework'/>
+  <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+  <depends_on path='/System/Library/Frameworks/QuickTime.framework'/>
+  <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+  <class name='AMAction'>
+    <method selector='initWithDefinition:fromArchive:'>
+      <arg type='B' index='1'/>
+    </method>
+    <method selector='runWithInput:fromAction:error:'>
+      <arg index='2' type_modifier='o'/>
+    </method>
+  </class>
+  <class name='AMBundleAction'>
+    <method selector='hasView'>
+      <retval type='B'/>
+    </method>
+    <method selector='initWithDefinition:fromArchive:'>
+      <arg type='B' index='1'/>
+    </method>
+  </class>
+  <class name='AMShellScriptAction'>
+    <method selector='remapLineEndings'>
+      <retval type='B'/>
+    </method>
+  </class>
+</signatures>

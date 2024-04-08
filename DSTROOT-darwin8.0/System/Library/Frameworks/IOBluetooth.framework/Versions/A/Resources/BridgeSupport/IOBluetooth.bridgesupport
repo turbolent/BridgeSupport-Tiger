@@ -1,0 +1,3020 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+  <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+  <struct name='BluetoothDeviceAddress' type='{BluetoothDeviceAddress=&quot;data&quot;[6C]}'/>
+  <struct name='BluetoothHCIAutomaticFlushTimeoutInfo' type='{BluetoothHCIAutomaticFlushTimeoutInfo=&quot;handle&quot;S&quot;timeout&quot;S}'/>
+  <struct name='BluetoothHCIBufferSize' type='{BluetoothHCIBufferSize=&quot;ACLDataPacketLength&quot;S&quot;SCODataPacketLength&quot;C&quot;totalNumACLDataPackets&quot;S&quot;totalNumSCODataPackets&quot;S}'/>
+  <struct name='BluetoothHCICurrentInquiryAccessCodes' type='{BluetoothHCICurrentInquiryAccessCodes=&quot;count&quot;C&quot;codes&quot;^{BluetoothHCIInquiryAccessCode}}'/>
+  <struct name='BluetoothHCIEventAuthenticationCompleteResults' type='{BluetoothHCIEventAuthenticationCompleteResults=&quot;connectionHandle&quot;S}'/>
+  <struct name='BluetoothHCIEventChangeConnectionLinkKeyCompleteResults' type='{BluetoothHCIEventChangeConnectionLinkKeyCompleteResults=&quot;connectionHandle&quot;S}'/>
+  <struct name='BluetoothHCIEventConnectionCompleteResults' type='{BluetoothHCIEventConnectionCompleteResults=&quot;connectionHandle&quot;S&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;linkType&quot;C&quot;encryptionMode&quot;C}'/>
+  <struct name='BluetoothHCIEventConnectionPacketTypeResults' type='{BluetoothHCIEventConnectionPacketTypeResults=&quot;connectionHandle&quot;S&quot;packetType&quot;S}'/>
+  <struct name='BluetoothHCIEventConnectionRequestResults' type='{BluetoothHCIEventConnectionRequestResults=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;classOfDevice&quot;I&quot;linkType&quot;C}'/>
+  <struct name='BluetoothHCIEventDataBufferOverflowResults' type='{BluetoothHCIEventDataBufferOverflowResults=&quot;linkType&quot;C}'/>
+  <struct name='BluetoothHCIEventDisconnectionCompleteResults' type='{BluetoothHCIEventDisconnectionCompleteResults=&quot;connectionHandle&quot;S&quot;reason&quot;C}'/>
+  <struct name='BluetoothHCIEventEncryptionChangeResults' type='{BluetoothHCIEventEncryptionChangeResults=&quot;connectionHandle&quot;S&quot;enable&quot;C}'/>
+  <struct name='BluetoothHCIEventFlushOccurredResults' type='{BluetoothHCIEventFlushOccurredResults=&quot;connectionHandle&quot;S}'/>
+  <struct name='BluetoothHCIEventHardwareErrorResults' type='{BluetoothHCIEventHardwareErrorResults=&quot;error&quot;C}'/>
+  <struct name='BluetoothHCIEventLinkKeyNotificationResults' type='{BluetoothHCIEventLinkKeyNotificationResults=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;linkKey&quot;{BluetoothKey=&quot;data&quot;[16C]}&quot;keyType&quot;C}'/>
+  <struct name='BluetoothHCIEventMasterLinkKeyCompleteResults' type='{BluetoothHCIEventMasterLinkKeyCompleteResults=&quot;connectionHandle&quot;S&quot;keyFlag&quot;C}'/>
+  <struct name='BluetoothHCIEventMaxSlotsChangeResults' type='{BluetoothHCIEventMaxSlotsChangeResults=&quot;connectionHandle&quot;S&quot;maxSlots&quot;C}'/>
+  <struct name='BluetoothHCIEventModeChangeResults' type='{BluetoothHCIEventModeChangeResults=&quot;connectionHandle&quot;S&quot;mode&quot;C&quot;modeInterval&quot;S}'/>
+  <struct name='BluetoothHCIEventPageScanModeChangeResults' type='{BluetoothHCIEventPageScanModeChangeResults=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;pageScanMode&quot;C}'/>
+  <struct name='BluetoothHCIEventPageScanRepetitionModeChangeResults' type='{BluetoothHCIEventPageScanRepetitionModeChangeResults=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;pageScanRepetitionMode&quot;C}'/>
+  <struct name='BluetoothHCIEventQoSSetupCompleteResults' type='{BluetoothHCIEventQoSSetupCompleteResults=&quot;connectionHandle&quot;S&quot;setupParams&quot;{BluetoothHCIQualityOfServiceSetupParams=&quot;flags&quot;C&quot;serviceType&quot;C&quot;tokenRate&quot;I&quot;peakBandwidth&quot;I&quot;latency&quot;I&quot;delayVariation&quot;I}}'/>
+  <struct name='BluetoothHCIEventQoSViolationResults' type='{BluetoothHCIEventQoSViolationResults=&quot;connectionHandle&quot;S}'/>
+  <struct name='BluetoothHCIEventReadClockOffsetResults' type='{BluetoothHCIEventReadClockOffsetResults=&quot;connectionHandle&quot;S&quot;clockOffset&quot;S}'/>
+  <struct name='BluetoothHCIEventReadRemoteSupportedFeaturesResults' type='{BluetoothHCIEventReadRemoteSupportedFeaturesResults=&quot;error&quot;C&quot;connectionHandle&quot;S&quot;lmpFeatures&quot;{BluetoothHCISupportedFeatures=&quot;data&quot;[8C]}}'/>
+  <struct name='BluetoothHCIEventReadRemoteVersionInfoResults' type='{BluetoothHCIEventReadRemoteVersionInfoResults=&quot;connectionHandle&quot;S&quot;lmpVersion&quot;C&quot;manufacturerName&quot;S&quot;lmpSubversion&quot;S}'/>
+  <struct name='BluetoothHCIEventReadSupportedFeaturesResults' type='{BluetoothHCIEventReadSupportedFeaturesResults=&quot;connectionHandle&quot;S&quot;supportedFeatures&quot;{BluetoothHCISupportedFeatures=&quot;data&quot;[8C]}}'/>
+  <struct name='BluetoothHCIEventRemoteNameRequestResults' type='{BluetoothHCIEventRemoteNameRequestResults=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;deviceName&quot;[256C]}'/>
+  <struct name='BluetoothHCIEventReturnLinkKeysResults' type='{BluetoothHCIEventReturnLinkKeysResults=&quot;numLinkKeys&quot;C&quot;linkKeys&quot;[1{?=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;linkKey&quot;{BluetoothKey=&quot;data&quot;[16C]}}]}'/>
+  <struct name='BluetoothHCIEventRoleChangeResults' type='{BluetoothHCIEventRoleChangeResults=&quot;connectionHandle&quot;S&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;role&quot;C}'/>
+  <struct name='BluetoothHCIEventVendorSpecificResults' type='{BluetoothHCIEventVendorSpecificResults=&quot;length&quot;C&quot;data&quot;[255C]}'/>
+  <struct name='BluetoothHCIFailedContactInfo' type='{BluetoothHCIFailedContactInfo=&quot;count&quot;S&quot;handle&quot;S}'/>
+  <struct name='BluetoothHCIInquiryAccessCode' type='{BluetoothHCIInquiryAccessCode=&quot;data&quot;[3C]}'/>
+  <struct name='BluetoothHCIInquiryResult' type='{BluetoothHCIInquiryResult=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;pageScanRepetitionMode&quot;C&quot;pageScanPeriodMode&quot;C&quot;pageScanMode&quot;C&quot;classOfDevice&quot;I&quot;clockOffset&quot;S}'/>
+  <struct name='BluetoothHCIInquiryResults' type='{BluetoothHCIInquiryResults=&quot;results&quot;[50{BluetoothHCIInquiryResult=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;pageScanRepetitionMode&quot;C&quot;pageScanPeriodMode&quot;C&quot;pageScanMode&quot;C&quot;classOfDevice&quot;I&quot;clockOffset&quot;S}]&quot;count&quot;I}'/>
+  <struct name='BluetoothHCILinkPolicySettingsInfo' type='{BluetoothHCILinkPolicySettingsInfo=&quot;settings&quot;S&quot;handle&quot;S}'/>
+  <struct name='BluetoothHCILinkQualityInfo' type='{BluetoothHCILinkQualityInfo=&quot;handle&quot;S&quot;qualityValue&quot;C}'/>
+  <struct name='BluetoothHCILinkSupervisionTimeout' type='{BluetoothHCILinkSupervisionTimeout=&quot;handle&quot;S&quot;timeout&quot;S}'/>
+  <struct name='BluetoothHCIQualityOfServiceSetupParams' type='{BluetoothHCIQualityOfServiceSetupParams=&quot;flags&quot;C&quot;serviceType&quot;C&quot;tokenRate&quot;I&quot;peakBandwidth&quot;I&quot;latency&quot;I&quot;delayVariation&quot;I}'/>
+  <struct name='BluetoothHCIRSSIInfo' type='{BluetoothHCIRSSIInfo=&quot;handle&quot;S&quot;RSSIValue&quot;C}'/>
+  <struct name='BluetoothHCIRequestCallbackInfo' type='{BluetoothHCIRequestCallbackInfo=&quot;userCallback&quot;^v&quot;userRefCon&quot;^v&quot;internalRefCon&quot;^v&quot;asyncIDRefCon&quot;^v&quot;reserved&quot;^v}'/>
+  <struct name='BluetoothHCIRequestNotificationInfo' type='{BluetoothHCIRequestNotificationInfo=&quot;HCIRequestID&quot;^{OpaqueBluetoothHCIRequestID}&quot;refCon&quot;^v&quot;reserved1&quot;^v&quot;eventCode&quot;C&quot;eventStatus&quot;C&quot;status&quot;C&quot;reserved2&quot;C&quot;opCode&quot;S&quot;dataSize&quot;I&quot;data&quot;*}'/>
+  <struct name='BluetoothHCIRoleInfo' type='{BluetoothHCIRoleInfo=&quot;role&quot;C&quot;handle&quot;S}'/>
+  <struct name='BluetoothHCIScanActivity' type='{BluetoothHCIScanActivity=&quot;scanInterval&quot;S&quot;scanWindow&quot;S}'/>
+  <struct name='BluetoothHCIStoredLinkKeysInfo' type='{BluetoothHCIStoredLinkKeysInfo=&quot;numLinkKeysRead&quot;S&quot;maxNumLinkKeysAllowedInDevice&quot;S}'/>
+  <struct name='BluetoothHCISupportedFeatures' type='{BluetoothHCISupportedFeatures=&quot;data&quot;[8C]}'/>
+  <struct name='BluetoothHCITransmitPowerLevelInfo' type='{BluetoothHCITransmitPowerLevelInfo=&quot;handle&quot;S&quot;level&quot;c}'/>
+  <struct name='BluetoothHCIVersionInfo' type='{BluetoothHCIVersionInfo=&quot;manufacturerName&quot;S&quot;lmpVersion&quot;C&quot;lmpSubVersion&quot;S&quot;hciVersion&quot;C&quot;hciRevision&quot;S}'/>
+  <struct name='BluetoothKey' type='{BluetoothKey=&quot;data&quot;[16C]}'/>
+  <struct name='BluetoothL2CAPQualityOfServiceOptions' type='{BluetoothL2CAPQualityOfServiceOptions=&quot;flags&quot;C&quot;serviceType&quot;C&quot;tokenRate&quot;I&quot;tokenBucketSize&quot;I&quot;peakBandwidth&quot;I&quot;latency&quot;I&quot;delayVariation&quot;I}'/>
+  <struct name='BluetoothL2CAPRetransmissionAndFlowControlOptions' type='{BluetoothL2CAPRetransmissionAndFlowControlOptions=&quot;flags&quot;C&quot;txWindowSize&quot;C&quot;maxTransmit&quot;C&quot;retransmissionTimeout&quot;S&quot;monitorTimeout&quot;S&quot;maxPDUPayloadSize&quot;S}'/>
+  <struct name='BluetoothPINCode' type='{BluetoothPINCode=&quot;data&quot;[16C]}'/>
+  <struct name='BluetoothSetEventMask' type='{BluetoothSetEventMask=&quot;data&quot;[8C]}'/>
+  <struct name='BluetoothTransportInfo' type='{BluetoothTransportInfo=&quot;productID&quot;I&quot;vendorID&quot;I&quot;type&quot;I&quot;productName&quot;[25c]&quot;vendorName&quot;[25c]}'/>
+  <struct name='IOBluetoothDeviceSearchAttributes' type='{IOBluetoothDeviceSearchAttributes=&quot;options&quot;I&quot;maxResults&quot;I&quot;deviceAttributeCount&quot;I&quot;attributeList&quot;^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+  <struct name='IOBluetoothDeviceSearchDeviceAttributes' type='{IOBluetoothDeviceSearchDeviceAttributes=&quot;address&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;name&quot;[256C]&quot;serviceClassMajor&quot;I&quot;deviceClassMajor&quot;I&quot;deviceClassMinor&quot;I}'/>
+  <struct name='IOBluetoothL2CAPChannelDataBlock' type='{IOBluetoothL2CAPChannelDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;I}' type64='{IOBluetoothL2CAPChannelDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;Q}'/>
+  <struct name='IOBluetoothL2CAPChannelEvent' type='{IOBluetoothL2CAPChannelEvent=&quot;eventType&quot;i&quot;u&quot;(?=&quot;data&quot;{IOBluetoothL2CAPChannelDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;I}&quot;writeRefCon&quot;^v&quot;padding&quot;[32C])&quot;status&quot;i}' type64='{IOBluetoothL2CAPChannelEvent=&quot;eventType&quot;i&quot;u&quot;(?=&quot;data&quot;{IOBluetoothL2CAPChannelDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;Q}&quot;writeRefCon&quot;^v&quot;padding&quot;[32C])&quot;status&quot;i}'/>
+  <struct name='IOBluetoothRFCOMMChannelEvent' type='{IOBluetoothRFCOMMChannelEvent=&quot;eventType&quot;i&quot;u&quot;(?=&quot;data&quot;{IOBluetoothRFCOMMDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;I}&quot;flowStatus&quot;i&quot;terminatedChannel&quot;^{OpaqueIOBluetoothObjectRef}&quot;writeRefCon&quot;^v&quot;padding&quot;[32C]&quot;newData&quot;{IOBluetoothRFCOMMDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;I})&quot;status&quot;i}' type64='{IOBluetoothRFCOMMChannelEvent=&quot;eventType&quot;i&quot;u&quot;(?=&quot;data&quot;{IOBluetoothRFCOMMDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;Q}&quot;flowStatus&quot;i&quot;terminatedChannel&quot;^{OpaqueIOBluetoothObjectRef}&quot;writeRefCon&quot;^v&quot;padding&quot;[32C]&quot;newData&quot;{IOBluetoothRFCOMMDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;Q})&quot;status&quot;i}'/>
+  <struct name='IOBluetoothRFCOMMDataBlock' type='{IOBluetoothRFCOMMDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;I}' type64='{IOBluetoothRFCOMMDataBlock=&quot;dataPtr&quot;^v&quot;dataSize&quot;Q}'/>
+  <struct name='OBEXAbortCommandData' type='{OBEXAbortCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}' type64='{OBEXAbortCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}'/>
+  <struct name='OBEXAbortCommandResponseData' type='{OBEXAbortCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}' type64='{OBEXAbortCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}'/>
+  <struct name='OBEXConnectCommandData' type='{OBEXConnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}' type64='{OBEXConnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}'/>
+  <struct name='OBEXConnectCommandResponseData' type='{OBEXConnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}' type64='{OBEXConnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}'/>
+  <struct name='OBEXDisconnectCommandData' type='{OBEXDisconnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}' type64='{OBEXDisconnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}'/>
+  <struct name='OBEXDisconnectCommandResponseData' type='{OBEXDisconnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}' type64='{OBEXDisconnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}'/>
+  <struct name='OBEXErrorData' type='{OBEXErrorData=&quot;error&quot;i&quot;dataPtr&quot;^v&quot;dataLength&quot;I}' type64='{OBEXErrorData=&quot;error&quot;i&quot;dataPtr&quot;^v&quot;dataLength&quot;Q}'/>
+  <struct name='OBEXGetCommandData' type='{OBEXGetCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}' type64='{OBEXGetCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}'/>
+  <struct name='OBEXGetCommandResponseData' type='{OBEXGetCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}' type64='{OBEXGetCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}'/>
+  <struct name='OBEXPutCommandData' type='{OBEXPutCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;bodyDataLeftToSend&quot;I}' type64='{OBEXPutCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;bodyDataLeftToSend&quot;Q}'/>
+  <struct name='OBEXPutCommandResponseData' type='{OBEXPutCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}' type64='{OBEXPutCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}'/>
+  <struct name='OBEXSessionEvent' type='{OBEXSessionEvent=&quot;type&quot;I&quot;session&quot;^{OpaqueOBEXSessionRef}&quot;refCon&quot;^v&quot;isEndOfEventData&quot;B&quot;reserved1&quot;^v&quot;reserved2&quot;^v&quot;u&quot;(?=&quot;connectCommandResponseData&quot;{OBEXConnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}&quot;disconnectCommandResponseData&quot;{OBEXDisconnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}&quot;putCommandResponseData&quot;{OBEXPutCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}&quot;getCommandResponseData&quot;{OBEXGetCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}&quot;setPathCommandResponseData&quot;{OBEXSetPathCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;flags&quot;C&quot;constants&quot;C}&quot;abortCommandResponseData&quot;{OBEXAbortCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}&quot;connectCommandData&quot;{OBEXConnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}&quot;disconnectCommandData&quot;{OBEXDisconnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}&quot;putCommandData&quot;{OBEXPutCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;bodyDataLeftToSend&quot;I}&quot;getCommandData&quot;{OBEXGetCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}&quot;setPathCommandData&quot;{OBEXSetPathCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;flags&quot;C&quot;constants&quot;C}&quot;abortCommandData&quot;{OBEXAbortCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I}&quot;errorData&quot;{OBEXErrorData=&quot;error&quot;i&quot;dataPtr&quot;^v&quot;dataLength&quot;I})}' type64='{OBEXSessionEvent=&quot;type&quot;I&quot;session&quot;^{OpaqueOBEXSessionRef}&quot;refCon&quot;^v&quot;isEndOfEventData&quot;B&quot;reserved1&quot;^v&quot;reserved2&quot;^v&quot;u&quot;(?=&quot;connectCommandResponseData&quot;{OBEXConnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}&quot;disconnectCommandResponseData&quot;{OBEXDisconnectCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}&quot;putCommandResponseData&quot;{OBEXPutCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}&quot;getCommandResponseData&quot;{OBEXGetCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}&quot;setPathCommandResponseData&quot;{OBEXSetPathCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;flags&quot;C&quot;constants&quot;C}&quot;abortCommandResponseData&quot;{OBEXAbortCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}&quot;connectCommandData&quot;{OBEXConnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;maxPacketSize&quot;S&quot;version&quot;C&quot;flags&quot;C}&quot;disconnectCommandData&quot;{OBEXDisconnectCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}&quot;putCommandData&quot;{OBEXPutCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;bodyDataLeftToSend&quot;Q}&quot;getCommandData&quot;{OBEXGetCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}&quot;setPathCommandData&quot;{OBEXSetPathCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;flags&quot;C&quot;constants&quot;C}&quot;abortCommandData&quot;{OBEXAbortCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q}&quot;errorData&quot;{OBEXErrorData=&quot;error&quot;i&quot;dataPtr&quot;^v&quot;dataLength&quot;Q})}'/>
+  <struct name='OBEXSetPathCommandData' type='{OBEXSetPathCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;flags&quot;C&quot;constants&quot;C}' type64='{OBEXSetPathCommandData=&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;flags&quot;C&quot;constants&quot;C}'/>
+  <struct name='OBEXSetPathCommandResponseData' type='{OBEXSetPathCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;I&quot;flags&quot;C&quot;constants&quot;C}' type64='{OBEXSetPathCommandResponseData=&quot;serverResponseOpCode&quot;C&quot;headerDataPtr&quot;^v&quot;headerDataLength&quot;Q&quot;flags&quot;C&quot;constants&quot;C}'/>
+  <struct name='OBEXTransportEvent' type='{OBEXTransportEvent=&quot;type&quot;I&quot;status&quot;i&quot;dataPtr&quot;^v&quot;dataLength&quot;I}' type64='{OBEXTransportEvent=&quot;type&quot;I&quot;status&quot;i&quot;dataPtr&quot;^v&quot;dataLength&quot;Q}'/>
+  <cftype name='IOBluetoothDeviceInquiryRef' type='^{OpaqueIOBluetoothDeviceInquiryRef=}'/>
+  <cftype name='IOBluetoothDeviceRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='IOBluetoothL2CAPChannelRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='IOBluetoothObjectRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='IOBluetoothRFCOMMChannelRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='IOBluetoothSDPDataElementRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='IOBluetoothSDPServiceRecordRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='IOBluetoothSDPUUIDRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='IOBluetoothUserNotificationRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  <cftype name='OBEXFileTransferServicesRef' type='^{OpaqueFileTransferServicesRef=}'/>
+  <cftype name='OBEXSessionRef' type='^{OpaqueOBEXSessionRef=}'/>
+  <cftype name='PrivOBEXSessionDataRef' type='^{OpaquePrivOBEXSessionData=}'/>
+  <opaque name='BluetoothHCIOperationID' type='^{OpaqueBluetoothHCIOperationID=}'/>
+  <opaque name='BluetoothHCIRequestID' type='^{OpaqueBluetoothHCIRequestID=}'/>
+  <opaque name='BluetoothHCITransportCommandID' type='^{OpaqueBluetoothHCITransportCommandID=}'/>
+  <opaque name='BluetoothHCITransportID' type='^{OpaqueBluetoothHCITransportID=}'/>
+  <constant name='kFTSListingNameKey' type='^{__CFString=}'/>
+  <constant name='kFTSListingSizeKey' type='^{__CFString=}'/>
+  <constant name='kFTSListingTypeKey' type='^{__CFString=}'/>
+  <constant name='kFTSProgressBytesTotalKey' type='^{__CFString=}'/>
+  <constant name='kFTSProgressBytesTransferredKey' type='^{__CFString=}'/>
+  <constant name='kFTSProgressEstimatedTimeKey' type='^{__CFString=}'/>
+  <constant name='kFTSProgressPrecentageKey' type='^{__CFString=}'/>
+  <constant name='kFTSProgressTimeElapsedKey' type='^{__CFString=}'/>
+  <constant name='kFTSProgressTransferRateKey' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyAppParameters' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyAuthorizationChallenge' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyAuthorizationResponse' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyBody' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyByteSequence' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyConnectionID' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyCount' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyDescription' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyEndOfBody' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyHTTP' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyLength' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyName' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyObjectClass' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyTarget' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyTime4Byte' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyTimeISO' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyType' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyUnknown1ByteQuantity' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyUnknown4ByteQuantity' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyUnknownByteSequence' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyUnknownUnicodeText' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyUserDefined' type='^{__CFString=}'/>
+  <constant name='kOBEXHeaderIDKeyWho' type='^{__CFString=}'/>
+  <string_constant name='kBluetoothTargetDoesNotRespondToCallbackExceptionName' nsstring='true' value='BluetoothTargetDoesNotRespondToCallbackException'/>
+  <string_constant name='kCharsetStringISO88591' value='CHARSET=ISO-8859-1'/>
+  <string_constant name='kCharsetStringUTF8' value='UTF-8'/>
+  <string_constant name='kEncodingString8Bit' value='8BIT'/>
+  <string_constant name='kEncodingStringBase64' value='BASE-64'/>
+  <string_constant name='kEncodingStringQuotedPrintable' value='QUOTED-PRINTABLE'/>
+  <string_constant name='kIOBluetoothDeviceInquiryInfoChangedNotification' nsstring='true' value='IOBluetoothDeviceInquiryInfoChanged'/>
+  <string_constant name='kIOBluetoothDeviceNameChangedNotification' nsstring='true' value='IOBluetoothDeviceNameChanged'/>
+  <string_constant name='kIOBluetoothDeviceNotificationNameConnected' nsstring='true' value='IOBluetoothDeviceConnected'/>
+  <string_constant name='kIOBluetoothDeviceNotificationNameDisconnected' nsstring='true' value='IOBluetoothDeviceDisconnected'/>
+  <string_constant name='kIOBluetoothDeviceServicesChangedNotification' nsstring='true' value='IOBluetoothDeviceServicesChanged'/>
+  <enum name='BLUETOOTH_VERSION_1_0' value='4096'/>
+  <enum name='BLUETOOTH_VERSION_1_0_0' value='4096'/>
+  <enum name='BLUETOOTH_VERSION_1_0_1' value='4097'/>
+  <enum name='BLUETOOTH_VERSION_1_1' value='4160'/>
+  <enum name='BLUETOOTH_VERSION_1_1_0' value='4160'/>
+  <enum name='BLUETOOTH_VERSION_1_2' value='4224'/>
+  <enum name='BLUETOOTH_VERSION_1_2_0' value='4224'/>
+  <enum name='BLUETOOTH_VERSION_1_2_1' value='4225'/>
+  <enum name='BLUETOOTH_VERSION_1_3' value='4288'/>
+  <enum name='BLUETOOTH_VERSION_1_3_0' value='4288'/>
+  <enum name='BLUETOOTH_VERSION_1_3_1' value='4289'/>
+  <enum name='BLUETOOTH_VERSION_1_6' value='4480'/>
+  <enum name='BLUETOOTH_VERSION_1_6_0' value='4480'/>
+  <enum name='BLUETOOTH_VERSION_1_6_3' value='4483'/>
+  <enum name='BLUETOOTH_VERSION_CURRENT' value='4483'/>
+  <enum name='BLUETOOTH_VERSION_MAX_ALLOWED' value='4289'/>
+  <enum name='BluetoothRFCOMMLineStatusFramingError' value='3'/>
+  <enum name='BluetoothRFCOMMLineStatusNoError' value='0'/>
+  <enum name='BluetoothRFCOMMLineStatusOverrunError' value='1'/>
+  <enum name='BluetoothRFCOMMLineStatusParityError' value='2'/>
+  <enum name='MAC_OS_X_VERSION_10_2_1' value='1021'/>
+  <enum name='MAC_OS_X_VERSION_10_2_2' value='1022'/>
+  <enum name='MAC_OS_X_VERSION_10_2_3' value='1023'/>
+  <enum name='MAC_OS_X_VERSION_10_2_4' value='1024'/>
+  <enum name='MAC_OS_X_VERSION_10_2_5' value='1025'/>
+  <enum name='MAC_OS_X_VERSION_10_2_6' value='1026'/>
+  <enum name='MAC_OS_X_VERSION_10_2_7' value='1027'/>
+  <enum name='kAuthenticationDisabled' value='0'/>
+  <enum name='kAuthenticationEnabled' value='1'/>
+  <enum name='kBluetoothACLConnection' value='1'/>
+  <enum name='kBluetoothACLLogicalChannelL2CAPContinue' value='1'/>
+  <enum name='kBluetoothACLLogicalChannelL2CAPStart' value='2'/>
+  <enum name='kBluetoothACLLogicalChannelLMP' value='3'/>
+  <enum name='kBluetoothACLLogicalChannelReserved' value='0'/>
+  <enum name='kBluetoothAllowRoleSwitch' value='1'/>
+  <enum name='kBluetoothConnectionHandleNone' value='65535'/>
+  <enum name='kBluetoothDeviceClassMajorAny' value='707406378'/>
+  <enum name='kBluetoothDeviceClassMajorAudio' value='4'/>
+  <enum name='kBluetoothDeviceClassMajorComputer' value='1'/>
+  <enum name='kBluetoothDeviceClassMajorEnd' value='1852796518'/>
+  <enum name='kBluetoothDeviceClassMajorImaging' value='6'/>
+  <enum name='kBluetoothDeviceClassMajorLANAccessPoint' value='3'/>
+  <enum name='kBluetoothDeviceClassMajorMiscellaneous' value='0'/>
+  <enum name='kBluetoothDeviceClassMajorNone' value='1852796517'/>
+  <enum name='kBluetoothDeviceClassMajorPeripheral' value='5'/>
+  <enum name='kBluetoothDeviceClassMajorPhone' value='2'/>
+  <enum name='kBluetoothDeviceClassMajorUnclassified' value='31'/>
+  <enum name='kBluetoothDeviceClassMinorAny' value='707406378'/>
+  <enum name='kBluetoothDeviceClassMinorAudioCamcorder' value='13'/>
+  <enum name='kBluetoothDeviceClassMinorAudioCar' value='8'/>
+  <enum name='kBluetoothDeviceClassMinorAudioGamingToy' value='18'/>
+  <enum name='kBluetoothDeviceClassMinorAudioHandsFree' value='2'/>
+  <enum name='kBluetoothDeviceClassMinorAudioHeadphones' value='6'/>
+  <enum name='kBluetoothDeviceClassMinorAudioHeadset' value='1'/>
+  <enum name='kBluetoothDeviceClassMinorAudioHiFi' value='10'/>
+  <enum name='kBluetoothDeviceClassMinorAudioLoudspeaker' value='5'/>
+  <enum name='kBluetoothDeviceClassMinorAudioMicrophone' value='4'/>
+  <enum name='kBluetoothDeviceClassMinorAudioPortable' value='7'/>
+  <enum name='kBluetoothDeviceClassMinorAudioReserved1' value='3'/>
+  <enum name='kBluetoothDeviceClassMinorAudioReserved2' value='17'/>
+  <enum name='kBluetoothDeviceClassMinorAudioSetTopBox' value='9'/>
+  <enum name='kBluetoothDeviceClassMinorAudioUnclassified' value='0'/>
+  <enum name='kBluetoothDeviceClassMinorAudioVCR' value='11'/>
+  <enum name='kBluetoothDeviceClassMinorAudioVideoCamera' value='12'/>
+  <enum name='kBluetoothDeviceClassMinorAudioVideoConferencing' value='16'/>
+  <enum name='kBluetoothDeviceClassMinorAudioVideoDisplayAndLoudspeaker' value='15'/>
+  <enum name='kBluetoothDeviceClassMinorAudioVideoMonitor' value='14'/>
+  <enum name='kBluetoothDeviceClassMinorComputerDesktopWorkstation' value='1'/>
+  <enum name='kBluetoothDeviceClassMinorComputerHandheld' value='4'/>
+  <enum name='kBluetoothDeviceClassMinorComputerLaptop' value='3'/>
+  <enum name='kBluetoothDeviceClassMinorComputerPalmSized' value='5'/>
+  <enum name='kBluetoothDeviceClassMinorComputerServer' value='2'/>
+  <enum name='kBluetoothDeviceClassMinorComputerUnclassified' value='0'/>
+  <enum name='kBluetoothDeviceClassMinorComputerWearable' value='6'/>
+  <enum name='kBluetoothDeviceClassMinorEnd' value='1852796518'/>
+  <enum name='kBluetoothDeviceClassMinorImaging1Camera' value='8'/>
+  <enum name='kBluetoothDeviceClassMinorImaging1Display' value='4'/>
+  <enum name='kBluetoothDeviceClassMinorImaging1Printer' value='32'/>
+  <enum name='kBluetoothDeviceClassMinorImaging1Scanner' value='16'/>
+  <enum name='kBluetoothDeviceClassMinorImaging2Unclassified' value='0'/>
+  <enum name='kBluetoothDeviceClassMinorNone' value='1852796517'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral1Combo' value='48'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral1Keyboard' value='16'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral1Pointing' value='32'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral2Gamepad' value='2'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral2Joystick' value='1'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral2RemoteControl' value='3'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral2SensingDevice' value='4'/>
+  <enum name='kBluetoothDeviceClassMinorPeripheral2Unclassified' value='0'/>
+  <enum name='kBluetoothDeviceClassMinorPhoneCellular' value='1'/>
+  <enum name='kBluetoothDeviceClassMinorPhoneCommonISDNAccess' value='5'/>
+  <enum name='kBluetoothDeviceClassMinorPhoneCordless' value='2'/>
+  <enum name='kBluetoothDeviceClassMinorPhoneSmartPhone' value='3'/>
+  <enum name='kBluetoothDeviceClassMinorPhoneUnclassified' value='0'/>
+  <enum name='kBluetoothDeviceClassMinorPhoneWiredModemOrVoiceGateway' value='4'/>
+  <enum name='kBluetoothDeviceNameMaxLength' value='248'/>
+  <enum name='kBluetoothDontAllowRoleSwitch' value='0'/>
+  <enum name='kBluetoothEncryptionEnableOff' value='0'/>
+  <enum name='kBluetoothEncryptionEnableOn' value='1'/>
+  <enum name='kBluetoothFeatureAFHCapableMaster' value='8'/>
+  <enum name='kBluetoothFeatureAFHCapableSlave' value='8'/>
+  <enum name='kBluetoothFeatureAFHClassificationMaster' value='16'/>
+  <enum name='kBluetoothFeatureAFHClassificationSlave' value='16'/>
+  <enum name='kBluetoothFeatureALawLog' value='128'/>
+  <enum name='kBluetoothFeatureAbsenceMasks' value='4'/>
+  <enum name='kBluetoothFeatureAliasAuhentication' value='32'/>
+  <enum name='kBluetoothFeatureAnonymityMode' value='64'/>
+  <enum name='kBluetoothFeatureBroadcastEncryption' value='128'/>
+  <enum name='kBluetoothFeatureCVSD' value='1'/>
+  <enum name='kBluetoothFeatureChannelQuality' value='4'/>
+  <enum name='kBluetoothFeatureEV4Packets' value='1'/>
+  <enum name='kBluetoothFeatureEV5Packets' value='2'/>
+  <enum name='kBluetoothFeatureEncryption' value='4'/>
+  <enum name='kBluetoothFeatureEnhancedInquiryScan' value='8'/>
+  <enum name='kBluetoothFeatureExtendedSCOLink' value='128'/>
+  <enum name='kBluetoothFeatureFiveSlotPackets' value='2'/>
+  <enum name='kBluetoothFeatureFlowControlLagBit0' value='16'/>
+  <enum name='kBluetoothFeatureFlowControlLagBit1' value='32'/>
+  <enum name='kBluetoothFeatureFlowControlLagBit2' value='64'/>
+  <enum name='kBluetoothFeatureHV2Packets' value='16'/>
+  <enum name='kBluetoothFeatureHV3Packets' value='32'/>
+  <enum name='kBluetoothFeatureHoldMode' value='64'/>
+  <enum name='kBluetoothFeatureInterlacedInquiryScan' value='16'/>
+  <enum name='kBluetoothFeatureInterlacedPageScan' value='32'/>
+  <enum name='kBluetoothFeaturePagingScheme' value='2'/>
+  <enum name='kBluetoothFeatureParkMode' value='1'/>
+  <enum name='kBluetoothFeaturePowerControl' value='4'/>
+  <enum name='kBluetoothFeatureRSSI' value='2'/>
+  <enum name='kBluetoothFeatureRSSIWithInquiryResult' value='64'/>
+  <enum name='kBluetoothFeatureReserved1' value='2'/>
+  <enum name='kBluetoothFeatureReserved2' value='4'/>
+  <enum name='kBluetoothFeatureSCOLink' value='8'/>
+  <enum name='kBluetoothFeatureScatterMode' value='1'/>
+  <enum name='kBluetoothFeatureSlotOffset' value='8'/>
+  <enum name='kBluetoothFeatureSniffMode' value='128'/>
+  <enum name='kBluetoothFeatureSwitchRoles' value='32'/>
+  <enum name='kBluetoothFeatureThreeSlotPackets' value='1'/>
+  <enum name='kBluetoothFeatureTimingAccuracy' value='16'/>
+  <enum name='kBluetoothFeatureTransparentSCOData' value='8'/>
+  <enum name='kBluetoothFeatureULawLog' value='64'/>
+  <enum name='kBluetoothGeneralInquiryAccessCodeIndex' value='0'/>
+  <enum name='kBluetoothGeneralInquiryAccessCodeLAPValue' value='10390323'/>
+  <enum name='kBluetoothHCICommandAcceptConnectionRequest' value='9'/>
+  <enum name='kBluetoothHCICommandAddSCOConnection' value='7'/>
+  <enum name='kBluetoothHCICommandAuthenticationRequested' value='17'/>
+  <enum name='kBluetoothHCICommandChangeConnectionLinkKey' value='21'/>
+  <enum name='kBluetoothHCICommandChangeConnectionPacketType' value='15'/>
+  <enum name='kBluetoothHCICommandChangeLocalName' value='19'/>
+  <enum name='kBluetoothHCICommandCreateConnection' value='5'/>
+  <enum name='kBluetoothHCICommandCreateNewUnitKey' value='11'/>
+  <enum name='kBluetoothHCICommandDeleteStoredLinkKey' value='18'/>
+  <enum name='kBluetoothHCICommandDisconnect' value='6'/>
+  <enum name='kBluetoothHCICommandEnableDeviceUnderTestMode' value='3'/>
+  <enum name='kBluetoothHCICommandExitParkMode' value='6'/>
+  <enum name='kBluetoothHCICommandExitPeriodicInquiryMode' value='4'/>
+  <enum name='kBluetoothHCICommandExitSniffMode' value='4'/>
+  <enum name='kBluetoothHCICommandFlush' value='8'/>
+  <enum name='kBluetoothHCICommandGetLinkQuality' value='3'/>
+  <enum name='kBluetoothHCICommandGroupHostController' value='3'/>
+  <enum name='kBluetoothHCICommandGroupInformational' value='4'/>
+  <enum name='kBluetoothHCICommandGroupLinkControl' value='1'/>
+  <enum name='kBluetoothHCICommandGroupLinkPolicy' value='2'/>
+  <enum name='kBluetoothHCICommandGroupLogoTesting' value='62'/>
+  <enum name='kBluetoothHCICommandGroupMax' value='64'/>
+  <enum name='kBluetoothHCICommandGroupNoOp' value='0'/>
+  <enum name='kBluetoothHCICommandGroupStatus' value='5'/>
+  <enum name='kBluetoothHCICommandGroupTesting' value='6'/>
+  <enum name='kBluetoothHCICommandGroupVendorSpecific' value='63'/>
+  <enum name='kBluetoothHCICommandHoldMode' value='1'/>
+  <enum name='kBluetoothHCICommandHostBufferSize' value='51'/>
+  <enum name='kBluetoothHCICommandHostNumberOfCompletedPackets' value='53'/>
+  <enum name='kBluetoothHCICommandInquiry' value='1'/>
+  <enum name='kBluetoothHCICommandInquiryCancel' value='2'/>
+  <enum name='kBluetoothHCICommandInvalidateFlashAndReboot' value='23'/>
+  <enum name='kBluetoothHCICommandLinkKeyRequestNegativeReply' value='12'/>
+  <enum name='kBluetoothHCICommandLinkKeyRequestReply' value='11'/>
+  <enum name='kBluetoothHCICommandMasterLinkKey' value='23'/>
+  <enum name='kBluetoothHCICommandMax' value='1023'/>
+  <enum name='kBluetoothHCICommandNoOp' value='0'/>
+  <enum name='kBluetoothHCICommandPINCodeRequestNegativeReply' value='14'/>
+  <enum name='kBluetoothHCICommandPINCodeRequestReply' value='13'/>
+  <enum name='kBluetoothHCICommandPacketHeaderSize' value='3'/>
+  <enum name='kBluetoothHCICommandPacketMaxDataSize' value='255'/>
+  <enum name='kBluetoothHCICommandParkMode' value='5'/>
+  <enum name='kBluetoothHCICommandPeriodicInquiryMode' value='3'/>
+  <enum name='kBluetoothHCICommandQoSSetup' value='7'/>
+  <enum name='kBluetoothHCICommandReadAuthenticationEnable' value='31'/>
+  <enum name='kBluetoothHCICommandReadAutomaticFlushTimeout' value='39'/>
+  <enum name='kBluetoothHCICommandReadBufferSize' value='5'/>
+  <enum name='kBluetoothHCICommandReadClassOfDevice' value='35'/>
+  <enum name='kBluetoothHCICommandReadClockOffset' value='31'/>
+  <enum name='kBluetoothHCICommandReadConnectionAcceptTimeout' value='21'/>
+  <enum name='kBluetoothHCICommandReadCountryCode' value='7'/>
+  <enum name='kBluetoothHCICommandReadCurrentIACLAP' value='57'/>
+  <enum name='kBluetoothHCICommandReadDeviceAddress' value='9'/>
+  <enum name='kBluetoothHCICommandReadEncryptionMode' value='33'/>
+  <enum name='kBluetoothHCICommandReadFailedContactCounter' value='1'/>
+  <enum name='kBluetoothHCICommandReadHoldModeActivity' value='43'/>
+  <enum name='kBluetoothHCICommandReadInquiryScanActivity' value='29'/>
+  <enum name='kBluetoothHCICommandReadLinkPolicySettings' value='12'/>
+  <enum name='kBluetoothHCICommandReadLinkSupervisionTimeout' value='54'/>
+  <enum name='kBluetoothHCICommandReadLocalName' value='20'/>
+  <enum name='kBluetoothHCICommandReadLocalSupportedFeatures' value='3'/>
+  <enum name='kBluetoothHCICommandReadLocalVersionInformation' value='1'/>
+  <enum name='kBluetoothHCICommandReadLoopbackMode' value='1'/>
+  <enum name='kBluetoothHCICommandReadNumberOfBroadcastRetransmissions' value='41'/>
+  <enum name='kBluetoothHCICommandReadNumberOfSupportedIAC' value='56'/>
+  <enum name='kBluetoothHCICommandReadPINType' value='9'/>
+  <enum name='kBluetoothHCICommandReadPageScanActivity' value='27'/>
+  <enum name='kBluetoothHCICommandReadPageScanMode' value='61'/>
+  <enum name='kBluetoothHCICommandReadPageScanPeriodMode' value='59'/>
+  <enum name='kBluetoothHCICommandReadPageTimeout' value='23'/>
+  <enum name='kBluetoothHCICommandReadRSSI' value='5'/>
+  <enum name='kBluetoothHCICommandReadRemoteSupportedFeatures' value='27'/>
+  <enum name='kBluetoothHCICommandReadRemoteVersionInformation' value='29'/>
+  <enum name='kBluetoothHCICommandReadSCOFlowControlEnable' value='46'/>
+  <enum name='kBluetoothHCICommandReadScanEnable' value='25'/>
+  <enum name='kBluetoothHCICommandReadStoredLinkKey' value='13'/>
+  <enum name='kBluetoothHCICommandReadTransmitPowerLevel' value='45'/>
+  <enum name='kBluetoothHCICommandReadVoiceSetting' value='37'/>
+  <enum name='kBluetoothHCICommandRejectConnectionRequest' value='10'/>
+  <enum name='kBluetoothHCICommandRemoteNameRequest' value='25'/>
+  <enum name='kBluetoothHCICommandReset' value='3'/>
+  <enum name='kBluetoothHCICommandResetFailedContactCounter' value='2'/>
+  <enum name='kBluetoothHCICommandRoleDiscovery' value='9'/>
+  <enum name='kBluetoothHCICommandSetConnectionEncryption' value='19'/>
+  <enum name='kBluetoothHCICommandSetEventFilter' value='5'/>
+  <enum name='kBluetoothHCICommandSetEventMask' value='1'/>
+  <enum name='kBluetoothHCICommandSetHostControllerToHostFlowControl' value='49'/>
+  <enum name='kBluetoothHCICommandSniffMode' value='3'/>
+  <enum name='kBluetoothHCICommandSwitchRole' value='11'/>
+  <enum name='kBluetoothHCICommandWriteAuthenticationEnable' value='32'/>
+  <enum name='kBluetoothHCICommandWriteAutomaticFlushTimeout' value='40'/>
+  <enum name='kBluetoothHCICommandWriteClassOfDevice' value='36'/>
+  <enum name='kBluetoothHCICommandWriteConnectionAcceptTimeout' value='22'/>
+  <enum name='kBluetoothHCICommandWriteCurrentIACLAP' value='58'/>
+  <enum name='kBluetoothHCICommandWriteDeviceAddress' value='1'/>
+  <enum name='kBluetoothHCICommandWriteEncryptionMode' value='34'/>
+  <enum name='kBluetoothHCICommandWriteHoldModeActivity' value='44'/>
+  <enum name='kBluetoothHCICommandWriteHoppingChannels' value='18'/>
+  <enum name='kBluetoothHCICommandWriteInquiryScanActivity' value='30'/>
+  <enum name='kBluetoothHCICommandWriteLinkPolicySettings' value='13'/>
+  <enum name='kBluetoothHCICommandWriteLinkSupervisionTimeout' value='55'/>
+  <enum name='kBluetoothHCICommandWriteLoopbackMode' value='2'/>
+  <enum name='kBluetoothHCICommandWriteNumberOfBroadcastRetransmissions' value='42'/>
+  <enum name='kBluetoothHCICommandWritePINType' value='10'/>
+  <enum name='kBluetoothHCICommandWritePageScanActivity' value='28'/>
+  <enum name='kBluetoothHCICommandWritePageScanMode' value='62'/>
+  <enum name='kBluetoothHCICommandWritePageScanPeriodMode' value='60'/>
+  <enum name='kBluetoothHCICommandWritePageTimeout' value='24'/>
+  <enum name='kBluetoothHCICommandWriteSCOFlowControlEnable' value='47'/>
+  <enum name='kBluetoothHCICommandWriteScanEnable' value='26'/>
+  <enum name='kBluetoothHCICommandWriteStoredLinkKey' value='17'/>
+  <enum name='kBluetoothHCICommandWriteVoiceSetting' value='38'/>
+  <enum name='kBluetoothHCIDataPacketHeaderSize' value='4'/>
+  <enum name='kBluetoothHCIDataPacketMaxDataSize' value='65535'/>
+  <enum name='kBluetoothHCIErrorACLConnectionAlreadyExists' value='11'/>
+  <enum name='kBluetoothHCIErrorAuthenticationFailure' value='5'/>
+  <enum name='kBluetoothHCIErrorCommandDisallowed' value='12'/>
+  <enum name='kBluetoothHCIErrorConnectionTerminatedByLocalHost' value='22'/>
+  <enum name='kBluetoothHCIErrorConnectionTimeout' value='8'/>
+  <enum name='kBluetoothHCIErrorEncryptionModeNotAcceptable' value='37'/>
+  <enum name='kBluetoothHCIErrorHardwareFailure' value='3'/>
+  <enum name='kBluetoothHCIErrorHostRejectedLimitedResources' value='13'/>
+  <enum name='kBluetoothHCIErrorHostRejectedRemoteDeviceIsPersonal' value='15'/>
+  <enum name='kBluetoothHCIErrorHostRejectedSecurityReasons' value='14'/>
+  <enum name='kBluetoothHCIErrorHostTimeout' value='16'/>
+  <enum name='kBluetoothHCIErrorInstantPassed' value='40'/>
+  <enum name='kBluetoothHCIErrorInvalidHCICommandParameters' value='18'/>
+  <enum name='kBluetoothHCIErrorInvalidLMPParameters' value='30'/>
+  <enum name='kBluetoothHCIErrorKeyMissing' value='6'/>
+  <enum name='kBluetoothHCIErrorLMPErrorTransactionCollision' value='35'/>
+  <enum name='kBluetoothHCIErrorLMPPDUNotAllowed' value='36'/>
+  <enum name='kBluetoothHCIErrorLMPResponseTimeout' value='34'/>
+  <enum name='kBluetoothHCIErrorMax' value='41'/>
+  <enum name='kBluetoothHCIErrorMaxNumberOfConnections' value='9'/>
+  <enum name='kBluetoothHCIErrorMaxNumberOfSCOConnectionsToADevice' value='10'/>
+  <enum name='kBluetoothHCIErrorMemoryFull' value='7'/>
+  <enum name='kBluetoothHCIErrorNoConnection' value='2'/>
+  <enum name='kBluetoothHCIErrorOtherEndTerminatedConnectionAboutToPowerOff' value='21'/>
+  <enum name='kBluetoothHCIErrorOtherEndTerminatedConnectionLowResources' value='20'/>
+  <enum name='kBluetoothHCIErrorOtherEndTerminatedConnectionUserEnded' value='19'/>
+  <enum name='kBluetoothHCIErrorPageTimeout' value='4'/>
+  <enum name='kBluetoothHCIErrorPairingNotAllowed' value='24'/>
+  <enum name='kBluetoothHCIErrorPairingWithUnitKeyNotSupported' value='41'/>
+  <enum name='kBluetoothHCIErrorPowerIsOFF' value='42'/>
+  <enum name='kBluetoothHCIErrorQoSNotSupported' value='39'/>
+  <enum name='kBluetoothHCIErrorRepeatedAttempts' value='23'/>
+  <enum name='kBluetoothHCIErrorRoleChangeNotAllowed' value='33'/>
+  <enum name='kBluetoothHCIErrorSCOAirModeRejected' value='29'/>
+  <enum name='kBluetoothHCIErrorSCOIntervalRejected' value='28'/>
+  <enum name='kBluetoothHCIErrorSCOOffsetRejected' value='27'/>
+  <enum name='kBluetoothHCIErrorSuccess' value='0'/>
+  <enum name='kBluetoothHCIErrorUnitKeyUsed' value='38'/>
+  <enum name='kBluetoothHCIErrorUnknownHCICommand' value='1'/>
+  <enum name='kBluetoothHCIErrorUnknownLMPPDU' value='25'/>
+  <enum name='kBluetoothHCIErrorUnspecifiedError' value='31'/>
+  <enum name='kBluetoothHCIErrorUnsupportedFeatureOrParameterValue' value='17'/>
+  <enum name='kBluetoothHCIErrorUnsupportedLMPParameterValue' value='32'/>
+  <enum name='kBluetoothHCIErrorUnsupportedRemoteFeature' value='26'/>
+  <enum name='kBluetoothHCIEventAuthenticationComplete' value='6'/>
+  <enum name='kBluetoothHCIEventChangeConnectionLinkKeyComplete' value='9'/>
+  <enum name='kBluetoothHCIEventCommandComplete' value='14'/>
+  <enum name='kBluetoothHCIEventCommandStatus' value='15'/>
+  <enum name='kBluetoothHCIEventConnectionComplete' value='3'/>
+  <enum name='kBluetoothHCIEventConnectionPacketType' value='29'/>
+  <enum name='kBluetoothHCIEventConnectionRequest' value='4'/>
+  <enum name='kBluetoothHCIEventDataBufferOverflow' value='26'/>
+  <enum name='kBluetoothHCIEventDisconnectionComplete' value='5'/>
+  <enum name='kBluetoothHCIEventEncryptionChange' value='8'/>
+  <enum name='kBluetoothHCIEventFlushOccurred' value='17'/>
+  <enum name='kBluetoothHCIEventHardwareError' value='16'/>
+  <enum name='kBluetoothHCIEventInquiryComplete' value='1'/>
+  <enum name='kBluetoothHCIEventInquiryResult' value='2'/>
+  <enum name='kBluetoothHCIEventLinkKeyNotification' value='24'/>
+  <enum name='kBluetoothHCIEventLinkKeyRequest' value='23'/>
+  <enum name='kBluetoothHCIEventLogoTesting' value='254'/>
+  <enum name='kBluetoothHCIEventLoopbackCommand' value='25'/>
+  <enum name='kBluetoothHCIEventMaskAll' value='4294967295'/>
+  <enum name='kBluetoothHCIEventMaskAuthenticationComplete' value='32'/>
+  <enum name='kBluetoothHCIEventMaskChangeConnectionLinkKeyComplete' value='256'/>
+  <enum name='kBluetoothHCIEventMaskCommandComplete' value='8192'/>
+  <enum name='kBluetoothHCIEventMaskCommandStatus' value='16384'/>
+  <enum name='kBluetoothHCIEventMaskConnectionComplete' value='4'/>
+  <enum name='kBluetoothHCIEventMaskConnectionPacketTypeChanged' value='268435456'/>
+  <enum name='kBluetoothHCIEventMaskConnectionRequest' value='8'/>
+  <enum name='kBluetoothHCIEventMaskDataBufferOverflow' value='33554432'/>
+  <enum name='kBluetoothHCIEventMaskDefault' value='4294967295'/>
+  <enum name='kBluetoothHCIEventMaskDisconnectionComplete' value='16'/>
+  <enum name='kBluetoothHCIEventMaskEncryptionChange' value='128'/>
+  <enum name='kBluetoothHCIEventMaskFlushOccurred' value='65536'/>
+  <enum name='kBluetoothHCIEventMaskHardwareError' value='32768'/>
+  <enum name='kBluetoothHCIEventMaskInquiryComplete' value='1'/>
+  <enum name='kBluetoothHCIEventMaskInquiryResult' value='2'/>
+  <enum name='kBluetoothHCIEventMaskLinkKeyNotification' value='8388608'/>
+  <enum name='kBluetoothHCIEventMaskLinkKeyRequest' value='4194304'/>
+  <enum name='kBluetoothHCIEventMaskLoopbackCommand' value='16777216'/>
+  <enum name='kBluetoothHCIEventMaskMasterLinkKeyComplete' value='512'/>
+  <enum name='kBluetoothHCIEventMaskMaxSlotsChange' value='67108864'/>
+  <enum name='kBluetoothHCIEventMaskModeChange' value='524288'/>
+  <enum name='kBluetoothHCIEventMaskNone' value='0'/>
+  <enum name='kBluetoothHCIEventMaskNumberOfCompletedPackets' value='262144'/>
+  <enum name='kBluetoothHCIEventMaskPINCodeRequest' value='2097152'/>
+  <enum name='kBluetoothHCIEventMaskPageScanModeChange' value='1073741824'/>
+  <enum name='kBluetoothHCIEventMaskPageScanRepetitionModeChange' value='2147483648'/>
+  <enum name='kBluetoothHCIEventMaskQoSSetupComplete' value='4096'/>
+  <enum name='kBluetoothHCIEventMaskQoSViolation' value='536870912'/>
+  <enum name='kBluetoothHCIEventMaskReadClockOffsetComplete' value='134217728'/>
+  <enum name='kBluetoothHCIEventMaskReadRemoteSupportedFeaturesComplete' value='1024'/>
+  <enum name='kBluetoothHCIEventMaskReadRemoteVersionInformationComplete' value='2048'/>
+  <enum name='kBluetoothHCIEventMaskRemoteNameRequestComplete' value='64'/>
+  <enum name='kBluetoothHCIEventMaskReturnLinkKeys' value='1048576'/>
+  <enum name='kBluetoothHCIEventMaskRoleChange' value='131072'/>
+  <enum name='kBluetoothHCIEventMasterLinkKeyComplete' value='10'/>
+  <enum name='kBluetoothHCIEventMaxSlotsChange' value='27'/>
+  <enum name='kBluetoothHCIEventModeChange' value='20'/>
+  <enum name='kBluetoothHCIEventNumberOfCompletedPackets' value='19'/>
+  <enum name='kBluetoothHCIEventPINCodeRequest' value='22'/>
+  <enum name='kBluetoothHCIEventPacketHeaderSize' value='2'/>
+  <enum name='kBluetoothHCIEventPacketMaxDataSize' value='255'/>
+  <enum name='kBluetoothHCIEventPageScanModeChange' value='31'/>
+  <enum name='kBluetoothHCIEventPageScanRepetitionModeChange' value='32'/>
+  <enum name='kBluetoothHCIEventQoSSetupComplete' value='13'/>
+  <enum name='kBluetoothHCIEventQoSViolation' value='30'/>
+  <enum name='kBluetoothHCIEventReadClockOffsetComplete' value='28'/>
+  <enum name='kBluetoothHCIEventReadRemoteSupportedFeaturesComplete' value='11'/>
+  <enum name='kBluetoothHCIEventReadRemoteVersionInformationComplete' value='12'/>
+  <enum name='kBluetoothHCIEventRemoteNameRequestComplete' value='7'/>
+  <enum name='kBluetoothHCIEventReturnLinkKeys' value='21'/>
+  <enum name='kBluetoothHCIEventRoleChange' value='18'/>
+  <enum name='kBluetoothHCIEventVendorSpecific' value='255'/>
+  <enum name='kBluetoothHCILoopbackModeLocal' value='1'/>
+  <enum name='kBluetoothHCILoopbackModeOff' value='0'/>
+  <enum name='kBluetoothHCILoopbackModeRemote' value='2'/>
+  <enum name='kBluetoothHCIMasterRole' value='0'/>
+  <enum name='kBluetoothHCIMaxCommandPacketSize' value='258'/>
+  <enum name='kBluetoothHCIMaxDataPacketSize' value='65539'/>
+  <enum name='kBluetoothHCIMaxEventPacketSize' value='257'/>
+  <enum name='kBluetoothHCIOpCodeNoOp' value='0'/>
+  <enum name='kBluetoothHCIPowerStateOFF' value='0'/>
+  <enum name='kBluetoothHCIPowerStateON' value='1'/>
+  <enum name='kBluetoothHCIPowerStateUnintialized' value='255'/>
+  <enum name='kBluetoothHCISlaveRole' value='1'/>
+  <enum name='kBluetoothHCITransportUSBClassCode' value='224'/>
+  <enum name='kBluetoothHCITransportUSBProtocolCode' value='1'/>
+  <enum name='kBluetoothHCITransportUSBSubClassCode' value='1'/>
+  <enum name='kBluetoothKeyFlagSemiPermanent' value='0'/>
+  <enum name='kBluetoothKeyFlagTemporary' value='1'/>
+  <enum name='kBluetoothKeyTypeCombination' value='0'/>
+  <enum name='kBluetoothKeyTypeLocalUnit' value='1'/>
+  <enum name='kBluetoothKeyTypeRemoteUnit' value='2'/>
+  <enum name='kBluetoothL2CAPChannelConnectionLessData' value='2'/>
+  <enum name='kBluetoothL2CAPChannelDynamicEnd' value='65535'/>
+  <enum name='kBluetoothL2CAPChannelDynamicStart' value='64'/>
+  <enum name='kBluetoothL2CAPChannelEnd' value='65535'/>
+  <enum name='kBluetoothL2CAPChannelNull' value='0'/>
+  <enum name='kBluetoothL2CAPChannelReservedEnd' value='63'/>
+  <enum name='kBluetoothL2CAPChannelReservedStart' value='3'/>
+  <enum name='kBluetoothL2CAPChannelSignalling' value='1'/>
+  <enum name='kBluetoothL2CAPCommandCodeCommandReject' value='1'/>
+  <enum name='kBluetoothL2CAPCommandCodeConfigureRequest' value='4'/>
+  <enum name='kBluetoothL2CAPCommandCodeConfigureResponse' value='5'/>
+  <enum name='kBluetoothL2CAPCommandCodeConnectionRequest' value='2'/>
+  <enum name='kBluetoothL2CAPCommandCodeConnectionResponse' value='3'/>
+  <enum name='kBluetoothL2CAPCommandCodeDisconnectionRequest' value='6'/>
+  <enum name='kBluetoothL2CAPCommandCodeDisconnectionResponse' value='7'/>
+  <enum name='kBluetoothL2CAPCommandCodeEchoRequest' value='8'/>
+  <enum name='kBluetoothL2CAPCommandCodeEchoResponse' value='9'/>
+  <enum name='kBluetoothL2CAPCommandCodeInformationRequest' value='10'/>
+  <enum name='kBluetoothL2CAPCommandCodeInformationResponse' value='11'/>
+  <enum name='kBluetoothL2CAPCommandCodeReserved' value='0'/>
+  <enum name='kBluetoothL2CAPCommandRejectReasonCommandNotUnderstood' value='0'/>
+  <enum name='kBluetoothL2CAPCommandRejectReasonInvalidCIDInRequest' value='2'/>
+  <enum name='kBluetoothL2CAPCommandRejectReasonSignallingMTUExceeded' value='1'/>
+  <enum name='kBluetoothL2CAPConfigurationBasicL2CAPModeFlag' value='0'/>
+  <enum name='kBluetoothL2CAPConfigurationFlowControlModeFlag' value='2'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionFlushTimeout' value='2'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionFlushTimeoutLength' value='2'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionMTU' value='1'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionMTULength' value='2'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionQoS' value='3'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionQoSLength' value='22'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionRetransmissionAndFlowControl' value='4'/>
+  <enum name='kBluetoothL2CAPConfigurationOptionRetransmissionAndFlowControlLength' value='9'/>
+  <enum name='kBluetoothL2CAPConfigurationResultRejected' value='2'/>
+  <enum name='kBluetoothL2CAPConfigurationResultSuccess' value='0'/>
+  <enum name='kBluetoothL2CAPConfigurationResultUnacceptableParams' value='1'/>
+  <enum name='kBluetoothL2CAPConfigurationResultUnknownOptions' value='3'/>
+  <enum name='kBluetoothL2CAPConfigurationRetransmissionModeFlag' value='1'/>
+  <enum name='kBluetoothL2CAPConnectionResultPending' value='1'/>
+  <enum name='kBluetoothL2CAPConnectionResultRefusedNoResources' value='4'/>
+  <enum name='kBluetoothL2CAPConnectionResultRefusedPSMNotSupported' value='2'/>
+  <enum name='kBluetoothL2CAPConnectionResultRefusedSecurityBlock' value='3'/>
+  <enum name='kBluetoothL2CAPConnectionResultSuccessful' value='0'/>
+  <enum name='kBluetoothL2CAPConnectionStatusAuthenticationPending' value='1'/>
+  <enum name='kBluetoothL2CAPConnectionStatusAuthorizationPending' value='2'/>
+  <enum name='kBluetoothL2CAPConnectionStatusNoInfoAvailable' value='0'/>
+  <enum name='kBluetoothL2CAPFlushTimeoutDefault' value='65535'/>
+  <enum name='kBluetoothL2CAPFlushTimeoutEnd' value='65536'/>
+  <enum name='kBluetoothL2CAPFlushTimeoutForever' value='65535'/>
+  <enum name='kBluetoothL2CAPFlushTimeoutImmediate' value='1'/>
+  <enum name='kBluetoothL2CAPFlushTimeoutUseExisting' value='0'/>
+  <enum name='kBluetoothL2CAPInfoTypeMaxConnectionlessMTUSize' value='1'/>
+  <enum name='kBluetoothL2CAPInformationBidirectionalQoS' value='4'/>
+  <enum name='kBluetoothL2CAPInformationFlowControlMode' value='1'/>
+  <enum name='kBluetoothL2CAPInformationNoExtendedFeatures' value='0'/>
+  <enum name='kBluetoothL2CAPInformationResultNotSupported' value='1'/>
+  <enum name='kBluetoothL2CAPInformationResultSuccess' value='0'/>
+  <enum name='kBluetoothL2CAPInformationRetransmissionMode' value='2'/>
+  <enum name='kBluetoothL2CAPInformationTypeConnectionlessMTU' value='1'/>
+  <enum name='kBluetoothL2CAPInformationTypeExtendedFeatures' value='2'/>
+  <enum name='kBluetoothL2CAPMTUDefault' value='672'/>
+  <enum name='kBluetoothL2CAPMTUMaximum' value='65535'/>
+  <enum name='kBluetoothL2CAPMTUMinimum' value='48'/>
+  <enum name='kBluetoothL2CAPMTUSIG' value='48'/>
+  <enum name='kBluetoothL2CAPMTUStart' value='32767'/>
+  <enum name='kBluetoothL2CAPMaxPacketSize' value='65535'/>
+  <enum name='kBluetoothL2CAPPSMAVCTP' value='23'/>
+  <enum name='kBluetoothL2CAPPSMAVDTP' value='25'/>
+  <enum name='kBluetoothL2CAPPSMBNEP' value='15'/>
+  <enum name='kBluetoothL2CAPPSMDynamicEnd' value='65535'/>
+  <enum name='kBluetoothL2CAPPSMDynamicStart' value='4097'/>
+  <enum name='kBluetoothL2CAPPSMHIDControl' value='17'/>
+  <enum name='kBluetoothL2CAPPSMHIDInterrupt' value='19'/>
+  <enum name='kBluetoothL2CAPPSMNone' value='0'/>
+  <enum name='kBluetoothL2CAPPSMRFCOMM' value='3'/>
+  <enum name='kBluetoothL2CAPPSMReservedEnd' value='4096'/>
+  <enum name='kBluetoothL2CAPPSMReservedStart' value='1'/>
+  <enum name='kBluetoothL2CAPPSMSDP' value='1'/>
+  <enum name='kBluetoothL2CAPPSMTCS_BIN' value='5'/>
+  <enum name='kBluetoothL2CAPPSMTCS_BIN_Cordless' value='7'/>
+  <enum name='kBluetoothL2CAPPSMUID_C_Plane' value='29'/>
+  <enum name='kBluetoothL2CAPPacketHeaderSize' value='4'/>
+  <enum name='kBluetoothL2CAPQoSDelayVariationDefault' value='4294967295'/>
+  <enum name='kBluetoothL2CAPQoSFlagsDefault' value='0'/>
+  <enum name='kBluetoothL2CAPQoSLatencyDefault' value='4294967295'/>
+  <enum name='kBluetoothL2CAPQoSPeakBandwidthDefault' value='0'/>
+  <enum name='kBluetoothL2CAPQoSTokenBucketSizeDefault' value='0'/>
+  <enum name='kBluetoothL2CAPQoSTokenRateDefault' value='0'/>
+  <enum name='kBluetoothL2CAPQoSTypeBestEffort' value='1'/>
+  <enum name='kBluetoothL2CAPQoSTypeDefault' value='1'/>
+  <enum name='kBluetoothL2CAPQoSTypeGuaranteed' value='2'/>
+  <enum name='kBluetoothL2CAPQoSTypeNoTraffic' value='0'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_ConfigReq' value='3'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_ConfigResp' value='19'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_ConnectReq' value='1'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_ConnectResp' value='17'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_DisableCLT' value='4'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_DisconnectReq' value='2'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_DisconnectResp' value='18'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_EnableCLT' value='5'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_GetInfo' value='14'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_GroupAddMember' value='8'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_GroupClose' value='7'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_GroupCreate' value='6'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_GroupMembership' value='10'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_GroupRemoveMember' value='9'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_Ping' value='13'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_ReadData' value='12'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_Reserved1' value='15'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_Reserved2' value='16'/>
+  <enum name='kBluetoothL2CAPTCICommandL2CA_WriteData' value='11'/>
+  <enum name='kBluetoothL2CAPTCICommandReserved' value='0'/>
+  <enum name='kBluetoothL2CAPTCIEventIDL2CA_ConfigInd' value='2'/>
+  <enum name='kBluetoothL2CAPTCIEventIDL2CA_ConnectInd' value='1'/>
+  <enum name='kBluetoothL2CAPTCIEventIDL2CA_DisconnectInd' value='3'/>
+  <enum name='kBluetoothL2CAPTCIEventIDL2CA_QoSViolationInd' value='4'/>
+  <enum name='kBluetoothL2CAPTCIEventIDL2CA_TimeOutInd' value='5'/>
+  <enum name='kBluetoothL2CAPTCIEventIDReserved' value='0'/>
+  <enum name='kBluetoothLimitedInquiryAccessCodeEnd' value='10390273'/>
+  <enum name='kBluetoothLimitedInquiryAccessCodeIndex' value='1'/>
+  <enum name='kBluetoothLimitedInquiryAccessCodeLAPValue' value='10390272'/>
+  <enum name='kBluetoothLinkTypeNone' value='255'/>
+  <enum name='kBluetoothPacketTypeAUX' value='512'/>
+  <enum name='kBluetoothPacketTypeDH1' value='16'/>
+  <enum name='kBluetoothPacketTypeDH3' value='2048'/>
+  <enum name='kBluetoothPacketTypeDH5' value='32768'/>
+  <enum name='kBluetoothPacketTypeDM1' value='8'/>
+  <enum name='kBluetoothPacketTypeDM3' value='1024'/>
+  <enum name='kBluetoothPacketTypeDM5' value='16384'/>
+  <enum name='kBluetoothPacketTypeDV' value='256'/>
+  <enum name='kBluetoothPacketTypeEnd' value='32769'/>
+  <enum name='kBluetoothPacketTypeHV1' value='32'/>
+  <enum name='kBluetoothPacketTypeHV2' value='64'/>
+  <enum name='kBluetoothPacketTypeHV3' value='128'/>
+  <enum name='kBluetoothPageScanModeMandatory' value='0'/>
+  <enum name='kBluetoothPageScanModeOptional1' value='1'/>
+  <enum name='kBluetoothPageScanModeOptional2' value='2'/>
+  <enum name='kBluetoothPageScanModeOptional3' value='3'/>
+  <enum name='kBluetoothPageScanPeriodModeP0' value='0'/>
+  <enum name='kBluetoothPageScanPeriodModeP1' value='1'/>
+  <enum name='kBluetoothPageScanPeriodModeP2' value='2'/>
+  <enum name='kBluetoothPageScanRepetitionModeR0' value='0'/>
+  <enum name='kBluetoothPageScanRepetitionModeR1' value='1'/>
+  <enum name='kBluetoothPageScanRepetitionModeR2' value='2'/>
+  <enum name='kBluetoothRFCOMMParityTypeEvenParity' value='2'/>
+  <enum name='kBluetoothRFCOMMParityTypeMaxParity' value='3'/>
+  <enum name='kBluetoothRFCOMMParityTypeNoParity' value='0'/>
+  <enum name='kBluetoothRFCOMMParityTypeOddParity' value='1'/>
+  <enum name='kBluetoothRoleBecomeMaster' value='0'/>
+  <enum name='kBluetoothRoleRemainSlave' value='1'/>
+  <enum name='kBluetoothSCOConnection' value='0'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierClientExecutableURL' value='11'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierDocumentationURL' value='10'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierPrimaryRecord' value='516'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierProductID' value='514'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierReservedRangeEnd' value='767'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierReservedRangeStart' value='518'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierServiceDescription' value='1'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierSpecificationID' value='512'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierVendorID' value='513'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierVendorIDSource' value='517'/>
+  <enum name='kBluetoothSDPAttributeDeviceIdentifierVersion' value='515'/>
+  <enum name='kBluetoothSDPAttributeIdentifierAdditionalProtocolsDescriptorList' value='13'/>
+  <enum name='kBluetoothSDPAttributeIdentifierAudioFeedbackSupport' value='773'/>
+  <enum name='kBluetoothSDPAttributeIdentifierBluetoothProfileDescriptorList' value='9'/>
+  <enum name='kBluetoothSDPAttributeIdentifierBrowseGroupList' value='5'/>
+  <enum name='kBluetoothSDPAttributeIdentifierClientExecutableURL' value='11'/>
+  <enum name='kBluetoothSDPAttributeIdentifierDocumentationURL' value='10'/>
+  <enum name='kBluetoothSDPAttributeIdentifierExternalNetwork' value='769'/>
+  <enum name='kBluetoothSDPAttributeIdentifierFaxClass1Support' value='770'/>
+  <enum name='kBluetoothSDPAttributeIdentifierFaxClass2Support' value='772'/>
+  <enum name='kBluetoothSDPAttributeIdentifierFaxClass2_0Support' value='771'/>
+  <enum name='kBluetoothSDPAttributeIdentifierGroupID' value='512'/>
+  <enum name='kBluetoothSDPAttributeIdentifierHomepageURL' value='776'/>
+  <enum name='kBluetoothSDPAttributeIdentifierIPSubnet' value='512'/>
+  <enum name='kBluetoothSDPAttributeIdentifierIconURL' value='12'/>
+  <enum name='kBluetoothSDPAttributeIdentifierLanguageBaseAttributeIDList' value='6'/>
+  <enum name='kBluetoothSDPAttributeIdentifierMaxNetAccessRate' value='780'/>
+  <enum name='kBluetoothSDPAttributeIdentifierNetAccessType' value='779'/>
+  <enum name='kBluetoothSDPAttributeIdentifierNetwork' value='769'/>
+  <enum name='kBluetoothSDPAttributeIdentifierNetworkAddress' value='774'/>
+  <enum name='kBluetoothSDPAttributeIdentifierProtocolDescriptorList' value='4'/>
+  <enum name='kBluetoothSDPAttributeIdentifierProviderName' value='2'/>
+  <enum name='kBluetoothSDPAttributeIdentifierRemoteAudioVolumeControl' value='770'/>
+  <enum name='kBluetoothSDPAttributeIdentifierSecurityDescription' value='778'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceAvailability' value='8'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceClassIDList' value='1'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceDatabaseState' value='513'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceDescription' value='1'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceID' value='3'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceInfoTimeToLive' value='7'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceName' value='0'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceRecordHandle' value='0'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceRecordState' value='2'/>
+  <enum name='kBluetoothSDPAttributeIdentifierServiceVersion' value='768'/>
+  <enum name='kBluetoothSDPAttributeIdentifierSupportedCapabilities' value='784'/>
+  <enum name='kBluetoothSDPAttributeIdentifierSupportedDataStoresList' value='769'/>
+  <enum name='kBluetoothSDPAttributeIdentifierSupportedFeatures' value='785'/>
+  <enum name='kBluetoothSDPAttributeIdentifierSupportedFunctions' value='786'/>
+  <enum name='kBluetoothSDPAttributeIdentifierSupporterFormatsList' value='771'/>
+  <enum name='kBluetoothSDPAttributeIdentifierTotalImagingDataCapacity' value='787'/>
+  <enum name='kBluetoothSDPAttributeIdentifierVersionNumberList' value='512'/>
+  <enum name='kBluetoothSDPAttributeIdentifierWAPGateway' value='775'/>
+  <enum name='kBluetoothSDPAttributeIdentifierWAPStackType' value='777'/>
+  <enum name='kBluetoothSDPDataElementTypeBoolean' value='5'/>
+  <enum name='kBluetoothSDPDataElementTypeDataElementAlternative' value='7'/>
+  <enum name='kBluetoothSDPDataElementTypeDataElementSequence' value='6'/>
+  <enum name='kBluetoothSDPDataElementTypeNil' value='0'/>
+  <enum name='kBluetoothSDPDataElementTypeReservedEnd' value='31'/>
+  <enum name='kBluetoothSDPDataElementTypeReservedStart' value='9'/>
+  <enum name='kBluetoothSDPDataElementTypeSignedInt' value='2'/>
+  <enum name='kBluetoothSDPDataElementTypeString' value='4'/>
+  <enum name='kBluetoothSDPDataElementTypeURL' value='8'/>
+  <enum name='kBluetoothSDPDataElementTypeUUID' value='3'/>
+  <enum name='kBluetoothSDPDataElementTypeUnsignedInt' value='1'/>
+  <enum name='kBluetoothSDPErrorCodeInsufficientResources' value='6'/>
+  <enum name='kBluetoothSDPErrorCodeInvalidContinuationState' value='5'/>
+  <enum name='kBluetoothSDPErrorCodeInvalidPDUSize' value='4'/>
+  <enum name='kBluetoothSDPErrorCodeInvalidRequestSyntax' value='3'/>
+  <enum name='kBluetoothSDPErrorCodeInvalidSDPVersion' value='1'/>
+  <enum name='kBluetoothSDPErrorCodeInvalidServiceRecordHandle' value='2'/>
+  <enum name='kBluetoothSDPErrorCodeReserved' value='0'/>
+  <enum name='kBluetoothSDPErrorCodeReservedEnd' value='65535'/>
+  <enum name='kBluetoothSDPErrorCodeReservedStart' value='7'/>
+  <enum name='kBluetoothSDPErrorCodeSuccess' value='0'/>
+  <enum name='kBluetoothSDPPDUIDErrorResponse' value='1'/>
+  <enum name='kBluetoothSDPPDUIDReserved' value='0'/>
+  <enum name='kBluetoothSDPPDUIDServiceAttributeRequest' value='4'/>
+  <enum name='kBluetoothSDPPDUIDServiceAttributeResponse' value='5'/>
+  <enum name='kBluetoothSDPPDUIDServiceSearchAttributeRequest' value='6'/>
+  <enum name='kBluetoothSDPPDUIDServiceSearchAttributeResponse' value='7'/>
+  <enum name='kBluetoothSDPPDUIDServiceSearchRequest' value='2'/>
+  <enum name='kBluetoothSDPPDUIDServiceSearchResponse' value='3'/>
+  <enum name='kBluetoothSDPProtocolParameterBNEPSupportedNetworkPacketTypeList' value='2'/>
+  <enum name='kBluetoothSDPProtocolParameterBNEPVersion' value='1'/>
+  <enum name='kBluetoothSDPProtocolParameterL2CAPPSM' value='1'/>
+  <enum name='kBluetoothSDPProtocolParameterRFCOMMChannel' value='1'/>
+  <enum name='kBluetoothSDPProtocolParameterTCPPort' value='1'/>
+  <enum name='kBluetoothSDPProtocolParameterUDPPort' value='1'/>
+  <enum name='kBluetoothSDPUUID16AVCTP' value='23'/>
+  <enum name='kBluetoothSDPUUID16AVDTP' value='25'/>
+  <enum name='kBluetoothSDPUUID16BNEP' value='15'/>
+  <enum name='kBluetoothSDPUUID16Base' value='0'/>
+  <enum name='kBluetoothSDPUUID16CMPT' value='27'/>
+  <enum name='kBluetoothSDPUUID16FTP' value='10'/>
+  <enum name='kBluetoothSDPUUID16HIDP' value='17'/>
+  <enum name='kBluetoothSDPUUID16HTTP' value='12'/>
+  <enum name='kBluetoothSDPUUID16HardcopyControlChannel' value='18'/>
+  <enum name='kBluetoothSDPUUID16HardcopyDataChannel' value='20'/>
+  <enum name='kBluetoothSDPUUID16HardcopyNotification' value='22'/>
+  <enum name='kBluetoothSDPUUID16IP' value='9'/>
+  <enum name='kBluetoothSDPUUID16L2CAP' value='256'/>
+  <enum name='kBluetoothSDPUUID16OBEX' value='8'/>
+  <enum name='kBluetoothSDPUUID16RFCOMM' value='3'/>
+  <enum name='kBluetoothSDPUUID16SDP' value='1'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassAVRemoteControl' value='4366'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassAVRemoteControlTarget' value='4364'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassAdvancedAudioDistribution' value='4365'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassAudioSink' value='4363'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassAudioSource' value='4362'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassBasicPrinting' value='4386'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassBrowseGroupDescriptor' value='4097'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassCommonISDNAccess' value='4392'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassCordlessTelephony' value='4361'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassDialupNetworking' value='4355'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassDirectPrinting' value='4376'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassDirectPrintingReferenceObjectsService' value='4384'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassFax' value='4369'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassGN' value='4375'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassGenericAudio' value='4611'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassGenericFileTransfer' value='4610'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassGenericNetworking' value='4609'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassGenericTelephony' value='4612'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHCR_Print' value='4390'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHCR_Scan' value='4391'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHandsfree' value='4382'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHandsfreeAudioGateway' value='4383'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHardcopyCableReplacement' value='4389'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHeadset' value='4360'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHeadsetAudioGateway' value='4370'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassHumanInterfaceDeviceService' value='4388'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassImaging' value='4378'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassImagingAutomaticArchive' value='4380'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassImagingReferencedObjects' value='4381'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassImagingResponder' value='4379'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassIntercom' value='4368'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassIrMCSync' value='4356'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassIrMCSyncCommand' value='4359'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassLANAccessUsingPPP' value='4354'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassNAP' value='4374'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassOBEXFileTransfer' value='4358'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassOBEXObjectPush' value='4357'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassPANU' value='4373'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassPnPInformation' value='4608'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassPrintingStatus' value='4387'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassPublicBrowseGroup' value='4098'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassReferencePrinting' value='4377'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassReflectedUI' value='4385'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassSerialPort' value='4353'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassServiceDiscoveryServer' value='4096'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassUDI_MT' value='4394'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassUDI_TA' value='4395'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassVideoConferencing' value='4367'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassVideoConferencingGW' value='4393'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassWAP' value='4371'/>
+  <enum name='kBluetoothSDPUUID16ServiceClassWAPClient' value='4372'/>
+  <enum name='kBluetoothSDPUUID16TCP' value='4'/>
+  <enum name='kBluetoothSDPUUID16TCSAT' value='6'/>
+  <enum name='kBluetoothSDPUUID16TCSBIN' value='5'/>
+  <enum name='kBluetoothSDPUUID16UDI_C_Plane' value='29'/>
+  <enum name='kBluetoothSDPUUID16UDP' value='2'/>
+  <enum name='kBluetoothSDPUUID16UPNP' value='16'/>
+  <enum name='kBluetoothSDPUUID16WSP' value='14'/>
+  <enum name='kBluetoothServiceClassMajorAny' value='707406378'/>
+  <enum name='kBluetoothServiceClassMajorAudio' value='256'/>
+  <enum name='kBluetoothServiceClassMajorCapturing' value='64'/>
+  <enum name='kBluetoothServiceClassMajorEnd' value='1852796518'/>
+  <enum name='kBluetoothServiceClassMajorInformation' value='1024'/>
+  <enum name='kBluetoothServiceClassMajorLimitedDiscoverableMode' value='1'/>
+  <enum name='kBluetoothServiceClassMajorNetworking' value='16'/>
+  <enum name='kBluetoothServiceClassMajorNone' value='1852796517'/>
+  <enum name='kBluetoothServiceClassMajorObjectTransfer' value='128'/>
+  <enum name='kBluetoothServiceClassMajorPositioning' value='8'/>
+  <enum name='kBluetoothServiceClassMajorRendering' value='32'/>
+  <enum name='kBluetoothServiceClassMajorReserved1' value='2'/>
+  <enum name='kBluetoothServiceClassMajorReserved2' value='4'/>
+  <enum name='kBluetoothServiceClassMajorTelephony' value='512'/>
+  <enum name='kBluetoothTransportTypePCCard' value='2'/>
+  <enum name='kBluetoothTransportTypePCICard' value='3'/>
+  <enum name='kBluetoothTransportTypeUSB' value='1'/>
+  <enum name='kConnectionActiveMode' value='0'/>
+  <enum name='kConnectionHoldMode' value='1'/>
+  <enum name='kConnectionModeReservedForFutureUse' value='4'/>
+  <enum name='kConnectionParkMode' value='3'/>
+  <enum name='kConnectionSniffMode' value='2'/>
+  <enum name='kDefaultPageTimeout' value='8192'/>
+  <enum name='kDeleteAllStoredLinkKeys' value='1'/>
+  <enum name='kDeleteKeyForSpecifiedDeviceOnly' value='0'/>
+  <enum name='kDisableAllLMModes' value='0'/>
+  <enum name='kEnableHoldMode' value='2'/>
+  <enum name='kEnableMasterSlaveSwitch' value='1'/>
+  <enum name='kEnableParkMode' value='8'/>
+  <enum name='kEnableSniffMode' value='4'/>
+  <enum name='kEncryptionDisabled' value='0'/>
+  <enum name='kEncryptionForBothPointToPointAndBroadcastPackets' value='2'/>
+  <enum name='kEncryptionOnlyForPointToPointPackets' value='1'/>
+  <enum name='kFTSFileTypeFile' value='2'/>
+  <enum name='kFTSFileTypeFolder' value='1'/>
+  <enum name='kHCIACLDataPacketsOffHCISCODataPacketsOn' value='2'/>
+  <enum name='kHCIACLDataPacketsOnHCISCODataPacketsOff' value='1'/>
+  <enum name='kHCIACLDataPacketsOnHCISCODataPacketsOn' value='3'/>
+  <enum name='kHostControllerToHostFlowControlOff' value='0'/>
+  <enum name='kIOBluetoothConnectionAlreadyExists' value='-536739838'/>
+  <enum name='kIOBluetoothDeviceResetError' value='-536739839'/>
+  <enum name='kIOBluetoothHCIPowerStatesNotSupported' value='-536739836'/>
+  <enum name='kIOBluetoothL2CAPChannelEventTypeClosed' value='3'/>
+  <enum name='kIOBluetoothL2CAPChannelEventTypeData' value='1'/>
+  <enum name='kIOBluetoothL2CAPChannelEventTypeOpenComplete' value='2'/>
+  <enum name='kIOBluetoothL2CAPChannelEventTypeQueueSpaceAvailable' value='6'/>
+  <enum name='kIOBluetoothL2CAPChannelEventTypeReconfigured' value='4'/>
+  <enum name='kIOBluetoothL2CAPChannelEventTypeWriteComplete' value='5'/>
+  <enum name='kIOBluetoothNoHCIController' value='-536739837'/>
+  <enum name='kIOBluetoothObjectIDNULL' value='0'/>
+  <enum name='kIOBluetoothRFCOMMChannelEventTypeClosed' value='2'/>
+  <enum name='kIOBluetoothRFCOMMChannelEventTypeControlSignalsChanged' value='4'/>
+  <enum name='kIOBluetoothRFCOMMChannelEventTypeData' value='0'/>
+  <enum name='kIOBluetoothRFCOMMChannelEventTypeFlowControlChanged' value='1'/>
+  <enum name='kIOBluetoothRFCOMMChannelEventTypeOpenComplete' value='3'/>
+  <enum name='kIOBluetoothRFCOMMChannelEventTypeQueueSpaceAvailable' value='6'/>
+  <enum name='kIOBluetoothRFCOMMChannelEventTypeWriteComplete' value='5'/>
+  <enum name='kIOBluetoothRFCOMMChannelFlowControlStatusIsOff' value='0'/>
+  <enum name='kIOBluetoothRFCOMMChannelFlowControlStatusIsOn' value='1'/>
+  <enum name='kIOBluetoothRFCOMMChannelTerminatedEvent' value='2'/>
+  <enum name='kIOBluetoothRFCOMMFlowControlChangedEvent' value='1'/>
+  <enum name='kIOBluetoothRFCOMMNewDataEvent' value='0'/>
+  <enum name='kIOBluetoothUserNotificationChannelDirectionAny' value='0'/>
+  <enum name='kIOBluetoothUserNotificationChannelDirectionIncoming' value='1'/>
+  <enum name='kIOBluetoothUserNotificationChannelDirectionOutgoing' value='2'/>
+  <enum name='kInfoStringMaxLength' value='25'/>
+  <enum name='kInquiryScanDisabledPageScanEnabled' value='2'/>
+  <enum name='kInquiryScanEnabledPageScanDisabled' value='1'/>
+  <enum name='kInquiryScanEnabledPageScanEnabled' value='3'/>
+  <enum name='kMaintainCurrentPowerState' value='0'/>
+  <enum name='kMandatoryPageScanMode' value='0'/>
+  <enum name='kMaxChannelIDPerSide' value='31'/>
+  <enum name='kNoScansEnabled' value='0'/>
+  <enum name='kOBEXBadArgumentError' value='-21854'/>
+  <enum name='kOBEXBadRequestError' value='-21856'/>
+  <enum name='kOBEXCancelledError' value='-21857'/>
+  <enum name='kOBEXConnectFlag1Reserved' value='2'/>
+  <enum name='kOBEXConnectFlag2Reserved' value='4'/>
+  <enum name='kOBEXConnectFlag3Reserved' value='8'/>
+  <enum name='kOBEXConnectFlag4Reserved' value='16'/>
+  <enum name='kOBEXConnectFlag5Reserved' value='32'/>
+  <enum name='kOBEXConnectFlag6Reserved' value='64'/>
+  <enum name='kOBEXConnectFlag7Reserved' value='128'/>
+  <enum name='kOBEXConnectFlagNone' value='0'/>
+  <enum name='kOBEXConnectFlagSupportMultipleItLMPConnections' value='1'/>
+  <enum name='kOBEXErrorRangeMax' value='-21899'/>
+  <enum name='kOBEXErrorRangeMin' value='-21850'/>
+  <enum name='kOBEXGeneralError' value='-21850'/>
+  <enum name='kOBEXHeaderIDAppParameters' value='76'/>
+  <enum name='kOBEXHeaderIDAuthorizationChallenge' value='77'/>
+  <enum name='kOBEXHeaderIDAuthorizationResponse' value='78'/>
+  <enum name='kOBEXHeaderIDBody' value='72'/>
+  <enum name='kOBEXHeaderIDConnectionID' value='203'/>
+  <enum name='kOBEXHeaderIDCount' value='192'/>
+  <enum name='kOBEXHeaderIDDescription' value='5'/>
+  <enum name='kOBEXHeaderIDEndOfBody' value='73'/>
+  <enum name='kOBEXHeaderIDHTTP' value='71'/>
+  <enum name='kOBEXHeaderIDLength' value='195'/>
+  <enum name='kOBEXHeaderIDName' value='1'/>
+  <enum name='kOBEXHeaderIDObjectClass' value='79'/>
+  <enum name='kOBEXHeaderIDReservedRangeEnd' value='47'/>
+  <enum name='kOBEXHeaderIDReservedRangeStart' value='16'/>
+  <enum name='kOBEXHeaderIDTarget' value='70'/>
+  <enum name='kOBEXHeaderIDTime4Byte' value='196'/>
+  <enum name='kOBEXHeaderIDTimeISO' value='68'/>
+  <enum name='kOBEXHeaderIDType' value='66'/>
+  <enum name='kOBEXHeaderIDUserDefinedRangeEnd' value='63'/>
+  <enum name='kOBEXHeaderIDUserDefinedRangeStart' value='48'/>
+  <enum name='kOBEXHeaderIDWho' value='74'/>
+  <enum name='kOBEXInternalError' value='-21853'/>
+  <enum name='kOBEXNoResourcesError' value='-21851'/>
+  <enum name='kOBEXNonceFlag2Reserved' value='4'/>
+  <enum name='kOBEXNonceFlag3Reserved' value='8'/>
+  <enum name='kOBEXNonceFlag4Reserved' value='16'/>
+  <enum name='kOBEXNonceFlag5Reserved' value='32'/>
+  <enum name='kOBEXNonceFlag6Reserved' value='64'/>
+  <enum name='kOBEXNonceFlag7Reserved' value='128'/>
+  <enum name='kOBEXNonceFlagAccessModeReadOnly' value='2'/>
+  <enum name='kOBEXNonceFlagNone' value='0'/>
+  <enum name='kOBEXNonceFlagSendUserIDInResponse' value='1'/>
+  <enum name='kOBEXOpCodeAbort' value='255'/>
+  <enum name='kOBEXOpCodeConnect' value='128'/>
+  <enum name='kOBEXOpCodeDisconnect' value='129'/>
+  <enum name='kOBEXOpCodeGet' value='3'/>
+  <enum name='kOBEXOpCodeGetWithHighBitSet' value='131'/>
+  <enum name='kOBEXOpCodePut' value='2'/>
+  <enum name='kOBEXOpCodePutWithHighBitSet' value='130'/>
+  <enum name='kOBEXOpCodeReserved' value='4'/>
+  <enum name='kOBEXOpCodeReservedRangeEnd' value='15'/>
+  <enum name='kOBEXOpCodeReservedRangeStart' value='6'/>
+  <enum name='kOBEXOpCodeReservedWithHighBitSet' value='132'/>
+  <enum name='kOBEXOpCodeSetPath' value='133'/>
+  <enum name='kOBEXOpCodeUserDefinedEnd' value='31'/>
+  <enum name='kOBEXOpCodeUserDefinedStart' value='16'/>
+  <enum name='kOBEXPutFlag2Reserved' value='4'/>
+  <enum name='kOBEXPutFlag3Reserved' value='8'/>
+  <enum name='kOBEXPutFlag4Reserved' value='16'/>
+  <enum name='kOBEXPutFlag5Reserved' value='32'/>
+  <enum name='kOBEXPutFlag6Reserved' value='64'/>
+  <enum name='kOBEXPutFlag7Reserved' value='128'/>
+  <enum name='kOBEXPutFlagDontCreateDirectory' value='2'/>
+  <enum name='kOBEXPutFlagGoToParentDirFirst' value='1'/>
+  <enum name='kOBEXPutFlagNone' value='0'/>
+  <enum name='kOBEXRealmASCII' value='0'/>
+  <enum name='kOBEXRealmISO88591' value='1'/>
+  <enum name='kOBEXRealmISO88592' value='2'/>
+  <enum name='kOBEXRealmISO88593' value='3'/>
+  <enum name='kOBEXRealmISO88594' value='4'/>
+  <enum name='kOBEXRealmISO88595' value='5'/>
+  <enum name='kOBEXRealmISO88596' value='6'/>
+  <enum name='kOBEXRealmISO88597' value='7'/>
+  <enum name='kOBEXRealmISO88598' value='8'/>
+  <enum name='kOBEXRealmISO88599' value='9'/>
+  <enum name='kOBEXRealmUNICODE' value='255'/>
+  <enum name='kOBEXResponseCodeAccepted' value='34'/>
+  <enum name='kOBEXResponseCodeAcceptedWithFinalBit' value='162'/>
+  <enum name='kOBEXResponseCodeBadGateway' value='82'/>
+  <enum name='kOBEXResponseCodeBadGatewayWithFinalBit' value='210'/>
+  <enum name='kOBEXResponseCodeBadRequest' value='64'/>
+  <enum name='kOBEXResponseCodeBadRequestWithFinalBit' value='192'/>
+  <enum name='kOBEXResponseCodeConflict' value='73'/>
+  <enum name='kOBEXResponseCodeConflictWithFinalBit' value='201'/>
+  <enum name='kOBEXResponseCodeContinue' value='16'/>
+  <enum name='kOBEXResponseCodeContinueWithFinalBit' value='144'/>
+  <enum name='kOBEXResponseCodeCreated' value='33'/>
+  <enum name='kOBEXResponseCodeCreatedWithFinalBit' value='161'/>
+  <enum name='kOBEXResponseCodeDatabaseFull' value='96'/>
+  <enum name='kOBEXResponseCodeDatabaseFullWithFinalBit' value='224'/>
+  <enum name='kOBEXResponseCodeDatabaseLocked' value='97'/>
+  <enum name='kOBEXResponseCodeDatabaseLockedWithFinalBit' value='225'/>
+  <enum name='kOBEXResponseCodeForbidden' value='67'/>
+  <enum name='kOBEXResponseCodeForbiddenWithFinalBit' value='195'/>
+  <enum name='kOBEXResponseCodeGatewayTimeout' value='84'/>
+  <enum name='kOBEXResponseCodeGatewayTimeoutWithFinalBit' value='212'/>
+  <enum name='kOBEXResponseCodeGone' value='74'/>
+  <enum name='kOBEXResponseCodeGoneWithFinalBit' value='202'/>
+  <enum name='kOBEXResponseCodeHTTPVersionNotSupported' value='85'/>
+  <enum name='kOBEXResponseCodeHTTPVersionNotSupportedWithFinalBit' value='213'/>
+  <enum name='kOBEXResponseCodeInternalServerError' value='80'/>
+  <enum name='kOBEXResponseCodeInternalServerErrorWithFinalBit' value='208'/>
+  <enum name='kOBEXResponseCodeLengthRequired' value='75'/>
+  <enum name='kOBEXResponseCodeLengthRequiredFinalBit' value='203'/>
+  <enum name='kOBEXResponseCodeMethodNotAllowed' value='69'/>
+  <enum name='kOBEXResponseCodeMethodNotAllowedWithFinalBit' value='197'/>
+  <enum name='kOBEXResponseCodeMovedPermanently' value='49'/>
+  <enum name='kOBEXResponseCodeMovedPermanentlyWithFinalBit' value='177'/>
+  <enum name='kOBEXResponseCodeMovedTemporarily' value='50'/>
+  <enum name='kOBEXResponseCodeMovedTemporarilyWithFinalBit' value='178'/>
+  <enum name='kOBEXResponseCodeMultipleChoices' value='48'/>
+  <enum name='kOBEXResponseCodeMultipleChoicesWithFinalBit' value='176'/>
+  <enum name='kOBEXResponseCodeNoContent' value='36'/>
+  <enum name='kOBEXResponseCodeNoContentWithFinalBit' value='164'/>
+  <enum name='kOBEXResponseCodeNonAuthoritativeInfo' value='35'/>
+  <enum name='kOBEXResponseCodeNonAuthoritativeInfoWithFinalBit' value='163'/>
+  <enum name='kOBEXResponseCodeNotAcceptable' value='70'/>
+  <enum name='kOBEXResponseCodeNotAcceptableWithFinalBit' value='198'/>
+  <enum name='kOBEXResponseCodeNotFound' value='68'/>
+  <enum name='kOBEXResponseCodeNotFoundWithFinalBit' value='196'/>
+  <enum name='kOBEXResponseCodeNotImplemented' value='81'/>
+  <enum name='kOBEXResponseCodeNotImplementedWithFinalBit' value='209'/>
+  <enum name='kOBEXResponseCodeNotModified' value='52'/>
+  <enum name='kOBEXResponseCodeNotModifiedWithFinalBit' value='180'/>
+  <enum name='kOBEXResponseCodePartialContent' value='38'/>
+  <enum name='kOBEXResponseCodePartialContentWithFinalBit' value='166'/>
+  <enum name='kOBEXResponseCodePaymentRequired' value='66'/>
+  <enum name='kOBEXResponseCodePaymentRequiredWithFinalBit' value='194'/>
+  <enum name='kOBEXResponseCodePreconditionFailed' value='76'/>
+  <enum name='kOBEXResponseCodePreconditionFailedWithFinalBit' value='204'/>
+  <enum name='kOBEXResponseCodeProxyAuthenticationRequired' value='71'/>
+  <enum name='kOBEXResponseCodeProxyAuthenticationRequiredWithFinalBit' value='199'/>
+  <enum name='kOBEXResponseCodeRequestTimeOut' value='72'/>
+  <enum name='kOBEXResponseCodeRequestTimeOutWithFinalBit' value='200'/>
+  <enum name='kOBEXResponseCodeRequestURLTooLarge' value='78'/>
+  <enum name='kOBEXResponseCodeRequestURLTooLargeWithFinalBit' value='206'/>
+  <enum name='kOBEXResponseCodeRequestedEntityTooLarge' value='77'/>
+  <enum name='kOBEXResponseCodeRequestedEntityTooLargeWithFinalBit' value='205'/>
+  <enum name='kOBEXResponseCodeReservedRangeEnd' value='15'/>
+  <enum name='kOBEXResponseCodeReservedRangeStart' value='0'/>
+  <enum name='kOBEXResponseCodeResetContent' value='37'/>
+  <enum name='kOBEXResponseCodeResetContentWithFinalBit' value='165'/>
+  <enum name='kOBEXResponseCodeSeeOther' value='51'/>
+  <enum name='kOBEXResponseCodeSeeOtherWithFinalBit' value='179'/>
+  <enum name='kOBEXResponseCodeServiceUnavailable' value='83'/>
+  <enum name='kOBEXResponseCodeServiceUnavailableWithFinalBit' value='211'/>
+  <enum name='kOBEXResponseCodeSuccess' value='32'/>
+  <enum name='kOBEXResponseCodeSuccessWithFinalBit' value='160'/>
+  <enum name='kOBEXResponseCodeUnauthorized' value='65'/>
+  <enum name='kOBEXResponseCodeUnauthorizedWithFinalBit' value='193'/>
+  <enum name='kOBEXResponseCodeUnsupportedMediaType' value='79'/>
+  <enum name='kOBEXResponseCodeUnsupportedMediaTypeWithFinalBit' value='207'/>
+  <enum name='kOBEXResponseCodeUseProxy' value='53'/>
+  <enum name='kOBEXResponseCodeUseProxyWithFinalBit' value='181'/>
+  <enum name='kOBEXSessionAlreadyConnectedError' value='-21882'/>
+  <enum name='kOBEXSessionBadRequestError' value='-21877'/>
+  <enum name='kOBEXSessionBadResponseError' value='-21878'/>
+  <enum name='kOBEXSessionBusyError' value='-21875'/>
+  <enum name='kOBEXSessionEventTypeAbortCommandReceived' value='1330857281'/>
+  <enum name='kOBEXSessionEventTypeAbortCommandResponseReceived' value='1329808705'/>
+  <enum name='kOBEXSessionEventTypeConnectCommandReceived' value='1330857283'/>
+  <enum name='kOBEXSessionEventTypeConnectCommandResponseReceived' value='1329808707'/>
+  <enum name='kOBEXSessionEventTypeDisconnectCommandReceived' value='1330857284'/>
+  <enum name='kOBEXSessionEventTypeDisconnectCommandResponseReceived' value='1329808708'/>
+  <enum name='kOBEXSessionEventTypeError' value='1330070853'/>
+  <enum name='kOBEXSessionEventTypeGetCommandReceived' value='1330857287'/>
+  <enum name='kOBEXSessionEventTypeGetCommandResponseReceived' value='1329808711'/>
+  <enum name='kOBEXSessionEventTypePutCommandReceived' value='1330857296'/>
+  <enum name='kOBEXSessionEventTypePutCommandResponseReceived' value='1329808720'/>
+  <enum name='kOBEXSessionEventTypeSetPathCommandReceived' value='1330857299'/>
+  <enum name='kOBEXSessionEventTypeSetPathCommandResponseReceived' value='1329808723'/>
+  <enum name='kOBEXSessionNoTransportError' value='-21879'/>
+  <enum name='kOBEXSessionNotConnectedError' value='-21876'/>
+  <enum name='kOBEXSessionTimeoutError' value='-21881'/>
+  <enum name='kOBEXSessionTransportDiedError' value='-21880'/>
+  <enum name='kOBEXSuccess' value='0'/>
+  <enum name='kOBEXTimeoutError' value='-21855'/>
+  <enum name='kOBEXTransportEventTypeDataReceived' value='1147237441'/>
+  <enum name='kOBEXTransportEventTypeStatus' value='1400136020'/>
+  <enum name='kOBEXUnsupportedError' value='-21852'/>
+  <enum name='kOBEXVersion10' value='16'/>
+  <enum name='kOptionalPageScanMode1' value='1'/>
+  <enum name='kOptionalPageScanMode2' value='2'/>
+  <enum name='kOptionalPageScanMode3' value='3'/>
+  <enum name='kP0Mode' value='0'/>
+  <enum name='kP1Mode' value='1'/>
+  <enum name='kP2Mode' value='2'/>
+  <enum name='kReadAllStoredLinkKeys' value='1'/>
+  <enum name='kReadCurrentTransmitPowerLevel' value='0'/>
+  <enum name='kReadMaximumTransmitPowerLevel' value='1'/>
+  <enum name='kReservedForFutureUse' value='16'/>
+  <enum name='kReturnLinkKeyForSpecifiedDeviceOnly' value='0'/>
+  <enum name='kSCOFlowControlDisabled' value='0'/>
+  <enum name='kSCOFlowControlEnabled' value='1'/>
+  <enum name='kSearchOptionsAlwaysStartInquiry' value='1'/>
+  <enum name='kSearchOptionsDiscardCachedResults' value='2'/>
+  <enum name='kSearchOptionsNone' value='0'/>
+  <enum name='kSuspendInquiryScan' value='2'/>
+  <enum name='kSuspendPageScan' value='1'/>
+  <enum name='kSuspendPeriodicInquiries' value='3'/>
+  <function name='IOBluetoothAddServiceDict'>
+    <arg type='^{__CFDictionary=}'/>
+    <arg type='^^{OpaqueIOBluetoothObjectRef}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceAddToFavorites'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceCloseConnection'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceCreateWithAddress'>
+    <arg type='^{BluetoothDeviceAddress=[6C]}' type_modifier='n'/>
+    <retval already_retained='true' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetAddress'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{BluetoothDeviceAddress=[6C]}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetAddressString'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetClassOfDevice'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothDeviceGetClockOffset'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothDeviceGetConnectionHandle'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothDeviceGetDeviceClassMajor'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothDeviceGetDeviceClassMinor'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothDeviceGetEncryptionMode'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothDeviceGetLastInquiryUpdate'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFDate=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetLastNameUpdate'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFDate=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetLastServicesUpdate'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFDate=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetLinkType'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothDeviceGetName'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetNameOrAddress'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetPageScanMode'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothDeviceGetPageScanPeriodMode'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothDeviceGetPageScanRepetitionMode'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothDeviceGetRecentAccessDate'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFDate=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetServiceClassMajor'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothDeviceGetServiceRecordForUUID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothDeviceGetServices'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFArray=}'/>
+  </function>
+  <function name='IOBluetoothDeviceIsConnected'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothDeviceIsFavorite'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothDeviceIsPaired'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenConnection'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenConnectionWithOptions'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='S'/>
+    <arg type='B'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenL2CAPChannel'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='S'/>
+    <arg type='B'/>
+    <arg type='^^{OpaqueIOBluetoothObjectRef}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenL2CAPChannelAsync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^^{OpaqueIOBluetoothObjectRef}' type_modifier='o'/>
+    <arg type='S'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='^{IOBluetoothL2CAPChannelEvent=i(?={IOBluetoothL2CAPChannelDataBlock=^vI}^v[32C])i}' type64='^{IOBluetoothL2CAPChannelEvent=i(?={IOBluetoothL2CAPChannelDataBlock=^vQ}^v[32C])i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenL2CAPChannelSync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^^{OpaqueIOBluetoothObjectRef}' type_modifier='o'/>
+    <arg type='S'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='^{IOBluetoothL2CAPChannelEvent=i(?={IOBluetoothL2CAPChannelDataBlock=^vI}^v[32C])i}' type64='^{IOBluetoothL2CAPChannelEvent=i(?={IOBluetoothL2CAPChannelDataBlock=^vQ}^v[32C])i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenRFCOMMChannel'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='C'/>
+    <arg type='^^{OpaqueIOBluetoothObjectRef}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenRFCOMMChannelAsync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^^{OpaqueIOBluetoothObjectRef}' type_modifier='o'/>
+    <arg type='C'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vI}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vI})i}' type64='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vQ}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vQ})i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceOpenRFCOMMChannelSync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^^{OpaqueIOBluetoothObjectRef}' type_modifier='o'/>
+    <arg type='C'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vI}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vI})i}' type64='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vQ}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vQ})i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDevicePerformSDPQuery'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceRegisterForDisconnectNotification'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothDeviceRemoteNameRequest'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='*' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceRemoteNameRequestWithTimeout'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='*' type_modifier='o'/>
+    <arg type='S'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceRemoveFromFavorites'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceRequestAuthentication'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothDeviceSendL2CAPEchoRequest'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='S'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothFavoriteDevices'>
+    <retval type='^{__CFArray=}'/>
+  </function>
+  <function name='IOBluetoothFindNumberOfRegistryEntriesOfClassName'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothGetObjectIDFromArguments'>
+    <arg type='i'/>
+    <arg c_array_length_in_arg='0' type='^*' type_modifier='n'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothGetUniqueFileNameAndPath'>
+    <arg type='@'/>
+    <arg type='@'/>
+    <retval type='@'/>
+  </function>
+  <function name='IOBluetoothGetVersion'>
+    <arg type='^{NumVersion=CCCC}' type_modifier='o'/>
+    <arg type='^{BluetoothHCIVersionInfo=SCSCS}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothIsFileAppleDesignatedPIMData'>
+    <arg type='@'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelCloseChannel'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelCreateFromObjectID'>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelGetDevice'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelGetIncomingMTU'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelGetLocalChannelID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelGetObjectID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelGetOutgoingMTU'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelGetPSM'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelGetRemoteChannelID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelIsIncoming'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelRegisterForChannelCloseNotification'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelRegisterIncomingDataListener'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='S'/>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelRegisterIncomingEventListener'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='^{IOBluetoothL2CAPChannelEvent=i(?={IOBluetoothL2CAPChannelDataBlock=^vI}^v[32C])i}' type64='^{IOBluetoothL2CAPChannelEvent=i(?={IOBluetoothL2CAPChannelDataBlock=^vQ}^v[32C])i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelRequestRemoteMTU'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='S'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelWrite'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^v'/>
+    <arg type='S'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelWriteAsync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='S'/>
+    <arg type='^v' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothL2CAPChannelWriteSync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='S'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceAvailable'>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceGetDiscoverable'>
+    <arg type='^B' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceGetPowerState'>
+    <arg type='^i' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadAddress'>
+    <arg type='^{BluetoothDeviceAddress=[6C]}' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='l' type64='i'/>
+      <arg type='^{BluetoothDeviceAddress=[6C]}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadAuthenticationEnable'>
+    <arg type='*' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='C'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadClassOfDevice'>
+    <arg type='^I' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='L' type64='I'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadConnectionAcceptTimeout'>
+    <arg type='^S' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='S'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadEncryptionMode'>
+    <arg type='*' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='C'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadName'>
+    <arg type='*' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='l' type64='i'/>
+      <arg type='^[256C]'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadPageScanMode'>
+    <arg type='*' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='C'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadPageScanPeriodMode'>
+    <arg type='*' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='C'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadPageTimeout'>
+    <arg type='^S' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='S'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadScanEnable'>
+    <arg type='*' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='C'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadSupportedFeatures'>
+    <arg type='^{BluetoothHCISupportedFeatures=[8C]}' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='^{BluetoothHCISupportedFeatures=[8C]}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothLocalDeviceReadVersionInformation'>
+    <arg type='^{BluetoothHCIVersionInfo=SCSCS}' type_modifier='o'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='C'/>
+      <arg type='^{BluetoothHCIVersionInfo=SCSCS}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothNSStringFromDeviceAddress'>
+    <arg type='^{BluetoothDeviceAddress=[6C]}'/>
+    <retval type='@'/>
+  </function>
+  <function name='IOBluetoothNSStringToDeviceAddress'>
+    <arg type='@'/>
+    <arg type='^{BluetoothDeviceAddress=[6C]}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothNumberOfAvailableHIDDevices'>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothNumberOfKeyboardHIDDevices'>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothNumberOfPointingHIDDevices'>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothNumberOfTabletHIDDevices'>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothOBEXSessionCreateWithIOBluetoothDeviceRefAndChannelNumber'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='C'/>
+    <arg type='^^{OpaqueOBEXSessionRef}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothOBEXSessionCreateWithIOBluetoothSDPServiceRecordRef'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^^{OpaqueOBEXSessionRef}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothOBEXSessionCreateWithIncomingIOBluetoothRFCOMMChannel'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='^^{OpaqueOBEXSessionRef}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothOBEXSessionOpenTransportConnection'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueOBEXSessionRef=}'/>
+      <arg type='i'/>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothObjectRelease'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothObjectRetain'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothPackData' variadic='true'>
+    <arg type='^v' type_modifier='N'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothPackDataList'>
+    <arg type='^v'/>
+    <arg type='*'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothPairedDevices'>
+    <retval type='^{__CFArray=}'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelCloseChannel'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelCreateFromObjectID'>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelGetChannelID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelGetDevice'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelGetMTU'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='S'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelGetObjectID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelIsIncoming'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelIsOpen'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelIsTransmissionPaused'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelRegisterForChannelCloseNotification'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelRegisterIncomingDataListener'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='S'/>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelRegisterIncomingEventListener'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^v'/>
+      <arg type='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vI}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vI})i}' type64='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vQ}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vQ})i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelWrite'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^v'/>
+    <arg type='S'/>
+    <arg type='B'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelWriteAsync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='S'/>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelWriteSimple'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^v'/>
+    <arg type='S'/>
+    <arg type='B'/>
+    <arg type='^I'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMChannelWriteSync'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='S'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMSendRemoteLineStatus'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRFCOMMSetSerialParameters'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='C'/>
+    <arg type='i'/>
+    <arg type='C'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothRecentDevices'>
+    <arg type='L' type64='I'/>
+    <retval type='^{__CFArray=}'/>
+  </function>
+  <function name='IOBluetoothRegisterForDeviceConnectNotifications'>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRegisterForFilteredL2CAPChannelOpenNotifications'>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='S'/>
+    <arg type='i'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRegisterForFilteredRFCOMMChannelOpenNotifications'>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='C'/>
+    <arg type='i'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRegisterForL2CAPChannelOpenNotifications'>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRegisterForRFCOMMChannelOpenNotifications'>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothRemoveServiceWithRecordHandle'>
+    <arg type='L' type64='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementContainsDataElement'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetArrayValue'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFArray=}'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetDataValue'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFData=}'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetNumberValue'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFNumber=}'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetSize'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetSizeDescriptor'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetStringValue'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetTypeDescriptor'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementGetUUIDValue'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPDataElementIsEqualToDataElement'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordGetAttributeDataElement'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='S'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordGetAttributes'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFDictionary=}'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordGetDevice'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordGetL2CAPPSM'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^S' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordGetRFCOMMChannelID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='*' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordGetServiceName'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordGetServiceRecordHandle'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^I' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothSDPServiceRecordHasServiceFromArray'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^{__CFArray=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDCreateUUID16'>
+    <arg type='S'/>
+    <retval already_retained='true' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDCreateUUID32'>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDCreateWithBytes'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='C'/>
+    <retval already_retained='true' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDCreateWithData'>
+    <arg type='^{__CFData=}'/>
+    <retval already_retained='true' type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDGetBytes'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='^v'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDGetLength'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='C'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDGetUUIDWithLength'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='C'/>
+    <retval type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='IOBluetoothSDPUUIDIsEqualToUUID'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='IOBluetoothUnpackData' variadic='true'>
+    <arg type='L' type64='I'/>
+    <arg c_array_length_in_arg='0' type='^v' type_modifier='n'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothUnpackDataList'>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='*'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+    <retval type='i'/>
+  </function>
+  <function name='IOBluetoothUserNotificationUnregister'>
+    <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+  </function>
+  <function name='OBEXAddApplicationParameterHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddAuthorizationChallengeHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddAuthorizationResponseHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddBodyHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='B'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddByteSequenceHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddConnectionIDHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddCountHeader'>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddDescriptionHeader'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddHTTPHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddLengthHeader'>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddNameHeader'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddObjectClassHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddTargetHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddTime4ByteHeader'>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddTimeISOHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddTypeHeader'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddUserDefinedHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXAddWhoHeader'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXCreateVCard'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='5' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='7' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='9' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='11' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='13' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='15' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='17' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='19' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='21' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='23' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='25' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='27' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='@'/>
+  </function>
+  <function name='OBEXCreateVEvent'>
+    <arg c_array_length_in_arg='1' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='3' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='5' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='7' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='9' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='11' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='13' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='15' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <arg c_array_length_in_arg='17' type='*' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='@'/>
+  </function>
+  <function name='OBEXFileTransferServicesAbort'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesChangeCurrentFolderBackward'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesChangeCurrentFolderForward'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesChangeCurrentFolderToRoot'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesConnectToFTPService'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesConnectToObjectPushService'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesCopyRemoteFile'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesCreateFolder'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesCreateWithSession'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <retval already_retained='true' type='^{OpaqueFileTransferServicesRef=}'/>
+  </function>
+  <function name='OBEXFileTransferServicesCurrentPath'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='OBEXFileTransferServicesDelete'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+  </function>
+  <function name='OBEXFileTransferServicesDisconnect'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesGetDefaultVCard'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesGetUserRefCon'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^v'/>
+    <retval type='^v'/>
+  </function>
+  <function name='OBEXFileTransferServicesIsBusy'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='OBEXFileTransferServicesIsConnected'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='OBEXFileTransferServicesRemoveItem'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesRetrieveFolderListing'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesSendData'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^{__CFData=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesSendFile'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXFileTransferServicesSetAbortCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetConnectCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetCopyRemoteFileCompleteCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetCopyRemoteFileProgressCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='^{__CFDictionary=}'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetCreateFolderCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <arg type='^{__CFString=}'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetDisconnectCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetPathChangeCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <arg type='^{__CFString=}'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetRemoveItemCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <arg type='^{__CFString=}'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetRetrieveFolderListingCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <arg type='^{__CFArray=}'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetSendFileCompleteCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetSendFileProgressCallback'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{OpaqueFileTransferServicesRef=}'/>
+      <arg type='^{__CFDictionary=}'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='OBEXFileTransferServicesSetUserRefCon'>
+    <arg type='^{OpaqueFileTransferServicesRef=}'/>
+    <arg type='^v'/>
+  </function>
+  <function name='OBEXGetHeaders'>
+    <arg c_array_length_in_arg='1' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <retval type='^{__CFDictionary=}'/>
+  </function>
+  <function name='OBEXHeadersToBytes'>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='^{__CFData=}'/>
+  </function>
+  <function name='OBEXSessionAbort'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionAbortResponse'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionConnect'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg type='S'/>
+    <arg c_array_length_in_arg='4' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionConnectResponse'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg type='C'/>
+    <arg type='S'/>
+    <arg c_array_length_in_arg='5' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionDelete'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionDisconnect'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionDisconnectResponse'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionGet'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='B'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionGetAvailableCommandPayloadLength'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg type='^S' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionGetAvailableCommandResponsePayloadLength'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg type='^S' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionGetMaxPacketLength'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='^S' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionGetResponse'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionHasOpenOBEXConnection'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='^B' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionPut'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='B'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg c_array_length_in_arg='5' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionPutResponse'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionSetPath'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg type='C'/>
+    <arg c_array_length_in_arg='4' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionSetPathResponse'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg type='C'/>
+    <arg c_array_length_in_arg='3' type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='OBEXSessionSetServerCallback'>
+    <arg type='^{OpaqueOBEXSessionRef=}'/>
+    <arg function_pointer='true' type='^?' type_modifier='n'>
+      <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <class name='IOBluetoothDevice'>
+    <method selector='isConnected'>
+      <retval type='B'/>
+    </method>
+    <method selector='isEqual:'>
+      <retval type='B'/>
+    </method>
+    <method selector='isFavorite'>
+      <retval type='B'/>
+    </method>
+    <method selector='isIncoming'>
+      <retval type='B'/>
+    </method>
+    <method selector='isPaired'>
+      <retval type='B'/>
+    </method>
+    <method selector='openConnection:withPageTimeout:authenticationRequired:'>
+      <arg type='B' index='2'/>
+    </method>
+    <method selector='openL2CAPChannel:findExisting:newChannel:'>
+      <arg type='B' index='1'/>
+      <arg index='2' type_modifier='o'/>
+    </method>
+    <method selector='openL2CAPChannelAsync:withPSM:delegate:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='openL2CAPChannelSync:withPSM:delegate:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='openRFCOMMChannel:channel:'>
+      <arg index='1' type_modifier='o'/>
+    </method>
+    <method selector='openRFCOMMChannelAsync:withChannelID:delegate:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='openRFCOMMChannelSync:withChannelID:delegate:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method class_method='true' selector='registerForConnectNotifications:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method selector='registerForDisconnectNotification:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method selector='sendL2CAPEchoRequest:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method class_method='true' selector='withAddress:'>
+      <arg index='0' type_modifier='n'/>
+    </method>
+  </class>
+  <class name='IOBluetoothDeviceInquiry'>
+    <method selector='setUpdateNewDeviceNames:'>
+      <arg type='B' index='0'/>
+    </method>
+    <method selector='updateNewDeviceNames'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <class name='IOBluetoothL2CAPChannel'>
+    <method selector='isIncoming'>
+      <retval type='B'/>
+    </method>
+    <method selector='registerForChannelCloseNotification:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method class_method='true' selector='registerForChannelOpenNotifications:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method class_method='true' selector='registerForChannelOpenNotifications:selector:withPSM:direction:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method selector='registerIncomingDataListener:refCon:'>
+      <arg function_pointer='true' type='^?' index='0'>
+        <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+        <arg type='^v'/>
+        <arg type='S'/>
+        <arg type='^v'/>
+        <retval type='v'/>
+      </arg>
+    </method>
+    <method selector='writeAsync:length:refcon:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg index='2' type_modifier='n'/>
+    </method>
+    <method selector='writeSync:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+  </class>
+  <class name='IOBluetoothOBEXSession'>
+    <method selector='hasOpenTransportConnection'>
+      <retval type='B'/>
+    </method>
+    <method selector='initWithIncomingRFCOMMChannel:eventSelector:selectorTarget:refCon:'>
+      <arg sel_of_type='v12@0:4@8' index='1' sel_of_type64='v24@0:8@16'/>
+      <arg index='3' type_modifier='n'/>
+    </method>
+    <method selector='isSessionTargetAMac'>
+      <retval type='B'/>
+    </method>
+    <method selector='openTransportConnection:selectorTarget:refCon:'>
+      <arg sel_of_type='v16@0:4@8i12' index='0' sel_of_type64='v28@0:8@16i24'/>
+      <arg index='2' type_modifier='n'/>
+    </method>
+    <method selector='sendDataToTransport:dataLength:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='setOBEXSessionOpenConnectionCallback:refCon:'>
+      <arg function_pointer='true' type='^?' index='0' type_modifier='n'>
+        <arg type='^{OpaqueOBEXSessionRef=}'/>
+        <arg type='i'/>
+        <arg type='^v'/>
+        <retval type='v'/>
+      </arg>
+      <arg index='1' type_modifier='n'/>
+    </method>
+    <method selector='setOpenTransportConnectionAsyncSelector:target:refCon:'>
+      <arg sel_of_type='v16@0:4@8i12' index='0' sel_of_type64='v28@0:8@16i24'/>
+      <arg index='2' type_modifier='n'/>
+    </method>
+    <method class_method='true' selector='withIncomingRFCOMMChannel:eventSelector:selectorTarget:refCon:'>
+      <arg sel_of_type='v12@0:4@8' index='1' sel_of_type64='v24@0:8@16'/>
+      <arg index='3' type_modifier='n'/>
+    </method>
+  </class>
+  <class name='IOBluetoothRFCOMMChannel'>
+    <method selector='isIncoming'>
+      <retval type='B'/>
+    </method>
+    <method selector='isOpen'>
+      <retval type='B'/>
+    </method>
+    <method selector='isTransmissionPaused'>
+      <retval type='B'/>
+    </method>
+    <method selector='registerForChannelCloseNotification:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method class_method='true' selector='registerForChannelOpenNotifications:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method class_method='true' selector='registerForChannelOpenNotifications:selector:withChannelID:direction:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method selector='registerIncomingDataListener:refCon:'>
+      <arg function_pointer='true' type='^?' index='0' type_modifier='n'>
+        <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+        <arg type='^v'/>
+        <arg type='S'/>
+        <arg type='^v'/>
+        <retval type='v'/>
+      </arg>
+      <arg index='1' type_modifier='n'/>
+    </method>
+    <method selector='registerIncomingEventListener:refCon:'>
+      <arg function_pointer='true' type='^?' index='0' type_modifier='n'>
+        <arg type='^{OpaqueIOBluetoothObjectRef=}'/>
+        <arg type='^v'/>
+        <arg type='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vI}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vI})i}' type64='^{IOBluetoothRFCOMMChannelEvent=i(?={IOBluetoothRFCOMMDataBlock=^vQ}i^{OpaqueIOBluetoothObjectRef}^v[32C]{IOBluetoothRFCOMMDataBlock=^vQ})i}'/>
+        <retval type='v'/>
+      </arg>
+      <arg index='1' type_modifier='n'/>
+    </method>
+    <method selector='write:length:sleep:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg type='B' index='2'/>
+    </method>
+    <method selector='writeAsync:length:refcon:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg index='2' type_modifier='n'/>
+    </method>
+    <method selector='writeSimple:length:sleep:bytesSent:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg type='B' index='2'/>
+      <arg index='3' type_modifier='o'/>
+    </method>
+    <method selector='writeSync:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+  </class>
+  <class name='IOBluetoothSDPDataElement'>
+    <method selector='containsDataElement:'>
+      <retval type='B'/>
+    </method>
+    <method selector='containsValue:'>
+      <retval type='B'/>
+    </method>
+    <method selector='isEqual:'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <class name='IOBluetoothSDPServiceRecord'>
+    <method selector='getL2CAPPSM:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='getRFCOMMChannelID:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='getServiceRecordHandle:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='hasServiceFromArray:'>
+      <retval type='B'/>
+    </method>
+    <method selector='matchesSearchArray:'>
+      <retval type='B'/>
+    </method>
+    <method selector='matchesUUIDArray:'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <class name='IOBluetoothSDPUUID'>
+    <method selector='isEqualToData:'>
+      <retval type='B'/>
+    </method>
+    <method selector='isEqualToUUID:'>
+      <retval type='B'/>
+    </method>
+    <method class_method='true' selector='uuidWithBytes:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+  </class>
+  <class name='NSMutableDictionary'>
+    <method selector='addApplicationParameterHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addAuthorizationChallengeHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addAuthorizationResponseHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addBodyHeader:length:endOfBody:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg type='B' index='2'/>
+    </method>
+    <method selector='addByteSequenceHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addConnectionIDHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addHTTPHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addImageDescriptorHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addObjectClassHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addTargetHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addTimeISOHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addUserDefinedHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='addWhoHeader:length:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method class_method='true' selector='dictionaryWithOBEXHeadersData:headersDataSize:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method class_method='true' selector='withOBEXHeadersData:headersDataSize:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+  </class>
+  <class name='NSObject'>
+    <method selector='deviceInquiryComplete:error:aborted:'>
+      <arg type='B' index='2'/>
+    </method>
+    <method selector='l2capChannelData:data:length:'>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='o'/>
+    </method>
+    <method selector='l2capChannelWriteComplete:refcon:status:'>
+      <arg index='1' type_modifier='n'/>
+    </method>
+    <method selector='rfcommChannelData:data:length:'>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='o'/>
+    </method>
+    <method selector='rfcommChannelWriteComplete:refcon:status:'>
+      <arg index='1' type_modifier='o'/>
+    </method>
+  </class>
+  <class name='OBEXFileTransferServices'>
+    <method selector='isBusy'>
+      <retval type='B'/>
+    </method>
+    <method selector='isConnected'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <class name='OBEXSession'>
+    <method selector='OBEXAbort:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='2' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='4' type_modifier='n'/>
+    </method>
+    <method selector='OBEXAbortResponse:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='3' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='5' type_modifier='n'/>
+    </method>
+    <method selector='OBEXConnect:maxPacketLength:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='3' index='2' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='4' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='6' type_modifier='n'/>
+    </method>
+    <method selector='OBEXConnectResponse:flags:maxPacketLength:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='4' index='3' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='5' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='7' type_modifier='n'/>
+    </method>
+    <method selector='OBEXDisconnect:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='2' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='4' type_modifier='n'/>
+    </method>
+    <method selector='OBEXDisconnectResponse:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='3' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='5' type_modifier='n'/>
+    </method>
+    <method selector='OBEXGet:headers:headersLength:eventSelector:selectorTarget:refCon:'>
+      <arg type='B' index='0'/>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='3' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='5' type_modifier='n'/>
+    </method>
+    <method selector='OBEXGetResponse:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='3' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='5' type_modifier='n'/>
+    </method>
+    <method selector='OBEXPut:headersData:headersDataLength:bodyData:bodyDataLength:eventSelector:selectorTarget:refCon:'>
+      <arg type='B' index='0'/>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+      <arg c_array_length_in_arg='4' index='3' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='5' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='7' type_modifier='n'/>
+    </method>
+    <method selector='OBEXPutResponse:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='3' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='5' type_modifier='n'/>
+    </method>
+    <method selector='OBEXSetPath:constants:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='3' index='2' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='4' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='6' type_modifier='n'/>
+    </method>
+    <method selector='OBEXSetPathResponse:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:'>
+      <arg c_array_length_in_arg='2' index='1' type_modifier='n'/>
+      <arg sel_of_type='v12@0:4r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}8' index='3' sel_of_type64='v24@0:8r^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}16'/>
+      <arg index='5' type_modifier='n'/>
+    </method>
+    <method selector='clientHandleIncomingData:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='hasOpenOBEXConnection'>
+      <retval type='B'/>
+    </method>
+    <method selector='hasOpenTransportConnection'>
+      <retval type='B'/>
+    </method>
+    <method selector='openTransportConnection:selectorTarget:refCon:'>
+      <arg sel_of_type='v16@0:4@8i12' index='0' sel_of_type64='v28@0:8@16i24'/>
+      <arg index='2' type_modifier='n'/>
+    </method>
+    <method selector='sendDataToTransport:dataLength:'>
+      <arg c_array_length_in_arg='1' index='0' type_modifier='n'/>
+    </method>
+    <method selector='serverHandleIncomingData:'>
+      <arg index='0' type_modifier='o'/>
+    </method>
+    <method selector='setEventCallback:'>
+      <arg function_pointer='true' type='^?' index='0'>
+        <arg type='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vISCC}{OBEXDisconnectCommandResponseData=C^vI}{OBEXPutCommandResponseData=C^vI}{OBEXGetCommandResponseData=C^vI}{OBEXSetPathCommandResponseData=C^vICC}{OBEXAbortCommandResponseData=C^vI}{OBEXConnectCommandData=^vISCC}{OBEXDisconnectCommandData=^vI}{OBEXPutCommandData=^vII}{OBEXGetCommandData=^vI}{OBEXSetPathCommandData=^vICC}{OBEXAbortCommandData=^vI}{OBEXErrorData=i^vI})}' type64='^{OBEXSessionEvent=I^{OpaqueOBEXSessionRef}^vB^v^v(?={OBEXConnectCommandResponseData=C^vQSCC}{OBEXDisconnectCommandResponseData=C^vQ}{OBEXPutCommandResponseData=C^vQ}{OBEXGetCommandResponseData=C^vQ}{OBEXSetPathCommandResponseData=C^vQCC}{OBEXAbortCommandResponseData=C^vQ}{OBEXConnectCommandData=^vQSCC}{OBEXDisconnectCommandData=^vQ}{OBEXPutCommandData=^vQQ}{OBEXGetCommandData=^vQ}{OBEXSetPathCommandData=^vQCC}{OBEXAbortCommandData=^vQ}{OBEXErrorData=i^vQ})}'/>
+        <retval type='v'/>
+      </arg>
+    </method>
+    <method selector='setEventRefCon:'>
+      <arg index='0' type_modifier='n'/>
+    </method>
+    <method selector='setEventSelector:target:refCon:'>
+      <arg sel_of_type='v12@0:4@8' index='0' sel_of_type64='v24@0:8@16'/>
+    </method>
+  </class>
+  <informal_protocol name='IOBluetoothDeviceAsyncCallbacks'>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='connectionComplete:status:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='remoteNameRequestComplete:status:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='sdpQueryComplete:status:'/>
+  </informal_protocol>
+  <informal_protocol name='IOBluetoothDeviceInquiryDelegate'>
+    <method type='v20@0:4@8i12B16' type64='v32@0:8@16i24B28' selector='deviceInquiryComplete:error:aborted:'/>
+    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='deviceInquiryDeviceFound:device:'/>
+    <method type='v20@0:4@8@12i16' type64='v36@0:8@16@24i32' selector='deviceInquiryDeviceNameUpdated:device:devicesRemaining:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='deviceInquiryStarted:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='deviceInquiryUpdatingDeviceNamesStarted:devicesRemaining:'/>
+  </informal_protocol>
+  <informal_protocol name='IOBluetoothL2CAPChannelDelegate'>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='l2capChannelClosed:'/>
+    <method type='v20@0:4@8^v12L16' type64='v40@0:8@16^v24Q32' selector='l2capChannelData:data:length:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='l2capChannelOpenComplete:status:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='l2capChannelQueueSpaceAvailable:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='l2capChannelReconfigured:'/>
+    <method type='v20@0:4@8^v12i16' type64='v36@0:8@16^v24i32' selector='l2capChannelWriteComplete:refcon:status:'/>
+  </informal_protocol>
+  <informal_protocol name='IOBluetoothRFCOMMChannelDelegate'>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='rfcommChannelClosed:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='rfcommChannelControlSignalsChanged:'/>
+    <method type='v20@0:4@8^v12L16' type64='v40@0:8@16^v24Q32' selector='rfcommChannelData:data:length:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='rfcommChannelFlowControlChanged:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='rfcommChannelOpenComplete:status:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='rfcommChannelQueueSpaceAvailable:'/>
+    <method type='v20@0:4@8^v12i16' type64='v36@0:8@16^v24i32' selector='rfcommChannelWriteComplete:refcon:status:'/>
+  </informal_protocol>
+  <informal_protocol name='OBEXFileTransferServicesDelegate'>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='fileTransferServicesAbortComplete:error:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='fileTransferServicesConnectionComplete:error:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='fileTransferServicesCopyRemoteFileComplete:error:'/>
+    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='fileTransferServicesCopyRemoteFileProgress:transferProgress:'/>
+    <method type='v20@0:4@8i12@16' type64='v36@0:8@16i24@28' selector='fileTransferServicesCreateFolderComplete:error:folder:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='fileTransferServicesDisconnectionComplete:error:'/>
+    <method type='v20@0:4@8i12@16' type64='v36@0:8@16i24@28' selector='fileTransferServicesPathChangeComplete:error:finalPath:'/>
+    <method type='v20@0:4@8i12@16' type64='v36@0:8@16i24@28' selector='fileTransferServicesRemoveItemComplete:error:removedItem:'/>
+    <method type='v20@0:4@8i12@16' type64='v36@0:8@16i24@28' selector='fileTransferServicesRetrieveFolderListingComplete:error:listing:'/>
+    <method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='fileTransferServicesSendFileComplete:error:'/>
+    <method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='fileTransferServicesSendFileProgress:transferProgress:'/>
+  </informal_protocol>
+</signatures>

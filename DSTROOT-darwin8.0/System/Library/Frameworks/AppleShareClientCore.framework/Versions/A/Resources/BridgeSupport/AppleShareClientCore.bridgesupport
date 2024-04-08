@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/AppleTalk.framework'/>
+  <depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/Security.framework'/>
+  <depends_on path='/System/Library/Frameworks/Kerberos.framework'/>
+  <function name='AFPMountURL'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DisposeAFPURL'>
+    <arg type='*'/>
+  </function>
+  <function name='IsAFPURL'>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='NewAFPURL'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='ParseAFPURL'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+</signatures>

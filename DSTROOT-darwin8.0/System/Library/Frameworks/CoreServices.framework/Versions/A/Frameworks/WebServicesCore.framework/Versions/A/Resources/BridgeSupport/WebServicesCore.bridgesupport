@@ -1,0 +1,227 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CFNetwork.framework'/>
+  <struct name='WSClientContext' type='{WSClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
+  <cftype name='WSMethodInvocationRef' gettypeid_func='WSMethodInvocationGetTypeID' type='^{OpaqueWSMethodInvocationRef=}'/>
+  <cftype name='WSProtocolHandlerRef' gettypeid_func='WSProtocolHandlerGetTypeID' type='^{OpaqueWSProtocolHandlerRef=}'/>
+  <constant name='kWSDebugIncomingBody' type='^{__CFString=}'/>
+  <constant name='kWSDebugIncomingHeaders' type='^{__CFString=}'/>
+  <constant name='kWSDebugOutgoingBody' type='^{__CFString=}'/>
+  <constant name='kWSDebugOutgoingHeaders' type='^{__CFString=}'/>
+  <constant name='kWSFaultCode' type='^{__CFString=}'/>
+  <constant name='kWSFaultExtra' type='^{__CFString=}'/>
+  <constant name='kWSFaultString' type='^{__CFString=}'/>
+  <constant name='kWSHTTPExtraHeaders' type='^{__CFString=}'/>
+  <constant name='kWSHTTPFollowsRedirects' type='^{__CFString=}'/>
+  <constant name='kWSHTTPMessage' type='^{__CFString=}'/>
+  <constant name='kWSHTTPProxy' type='^{__CFString=}'/>
+  <constant name='kWSHTTPResponseMessage' type='^{__CFString=}'/>
+  <constant name='kWSHTTPVersion' type='^{__CFString=}'/>
+  <constant name='kWSMethodInvocationResult' type='^{__CFString=}'/>
+  <constant name='kWSMethodInvocationResultParameterName' type='^{__CFString=}'/>
+  <constant name='kWSMethodInvocationTimeoutValue' type='^{__CFString=}'/>
+  <constant name='kWSNetworkStreamFaultString' type='^{__CFString=}'/>
+  <constant name='kWSRecordNamespaceURI' type='^{__CFString=}'/>
+  <constant name='kWSRecordParameterOrder' type='^{__CFString=}'/>
+  <constant name='kWSRecordType' type='^{__CFString=}'/>
+  <constant name='kWSSOAP1999Protocol' type='^{__CFString=}'/>
+  <constant name='kWSSOAP2001Protocol' type='^{__CFString=}'/>
+  <constant name='kWSSOAPBodyEncodingStyle' type='^{__CFString=}'/>
+  <constant name='kWSSOAPMessageHeaders' type='^{__CFString=}'/>
+  <constant name='kWSSOAPMethodNamespaceURI' type='^{__CFString=}'/>
+  <constant name='kWSSOAPStyleDoc' type='^{__CFString=}'/>
+  <constant name='kWSSOAPStyleRPC' type='^{__CFString=}'/>
+  <constant name='kWSStreamErrorDomain' type='^{__CFString=}'/>
+  <constant name='kWSStreamErrorError' type='^{__CFString=}'/>
+  <constant name='kWSStreamErrorMessage' type='^{__CFString=}'/>
+  <constant name='kWSXMLRPCProtocol' type='^{__CFString=}'/>
+  <string_constant name='kWSMethodName' nsstring='true' value='/WSMethodName'/>
+  <string_constant name='kWSMethodParameterOrder' nsstring='true' value='/WSMethodParameterOrder'/>
+  <string_constant name='kWSMethodParameters' nsstring='true' value='/WSMethodParameters'/>
+  <enum name='eWSArrayType' value='8'/>
+  <enum name='eWSBooleanType' value='2'/>
+  <enum name='eWSDataType' value='7'/>
+  <enum name='eWSDateType' value='6'/>
+  <enum name='eWSDictionaryType' value='9'/>
+  <enum name='eWSDoubleType' value='4'/>
+  <enum name='eWSIntegerType' value='3'/>
+  <enum name='eWSNullType' value='1'/>
+  <enum name='eWSStringType' value='5'/>
+  <enum name='eWSUnknownType' value='0'/>
+  <enum name='errWSInternalError' value='-65793'/>
+  <enum name='errWSParseError' value='-65795'/>
+  <enum name='errWSTimeoutError' value='-65796'/>
+  <enum name='errWSTransportError' value='-65794'/>
+  <function name='WSGetCFTypeIDFromWSTypeID'>
+    <arg type='i'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='WSGetWSTypeIDFromCFType'>
+    <arg type='@'/>
+    <retval type='i'/>
+  </function>
+  <function name='WSMethodInvocationAddDeserializationOverride'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+      <arg type='^{__CFTree=}'/>
+      <arg type='^{__CFTree=}'/>
+      <arg type='^v'/>
+      <retval type='@'/>
+    </arg>
+    <arg type='^{WSClientContext=i^v^?^?^?}'/>
+  </function>
+  <function name='WSMethodInvocationAddSerializationOverride'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+      <arg type='@'/>
+      <arg type='^v'/>
+      <retval type='^{__CFString=}'/>
+    </arg>
+    <arg type='^{WSClientContext=i^v^?^?^?}'/>
+  </function>
+  <function name='WSMethodInvocationCopyParameters'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='WSMethodInvocationCopyProperty'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='@'/>
+  </function>
+  <function name='WSMethodInvocationCopySerialization'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <retval already_retained='true' type='^{__CFData=}'/>
+  </function>
+  <function name='WSMethodInvocationCreate'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{OpaqueWSMethodInvocationRef=}'/>
+  </function>
+  <function name='WSMethodInvocationCreateFromSerialization'>
+    <arg type='^{__CFData=}'/>
+    <retval already_retained='true' type='^{OpaqueWSMethodInvocationRef=}'/>
+  </function>
+  <function name='WSMethodInvocationGetTypeID'>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='WSMethodInvocationInvoke'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <retval type='^{__CFDictionary=}'/>
+  </function>
+  <function name='WSMethodInvocationScheduleWithRunLoop'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='^{__CFRunLoop=}'/>
+    <arg type='^{__CFString=}'/>
+  </function>
+  <function name='WSMethodInvocationSetCallBack'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+      <arg type='^v'/>
+      <arg type='^{__CFDictionary=}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^{WSClientContext=i^v^?^?^?}'/>
+  </function>
+  <function name='WSMethodInvocationSetParameters'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <arg type='^{__CFArray=}'/>
+  </function>
+  <function name='WSMethodInvocationSetProperty'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+  </function>
+  <function name='WSMethodInvocationUnscheduleFromRunLoop'>
+    <arg type='^{OpaqueWSMethodInvocationRef=}'/>
+    <arg type='^{__CFRunLoop=}'/>
+    <arg type='^{__CFString=}'/>
+  </function>
+  <function name='WSMethodResultIsFault'>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='WSProtocolHandlerCopyFaultDocument'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval already_retained='true' type='^{__CFData=}'/>
+  </function>
+  <function name='WSProtocolHandlerCopyProperty'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='@'/>
+  </function>
+  <function name='WSProtocolHandlerCopyReplyDictionary'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFData=}'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='WSProtocolHandlerCopyReplyDocument'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <arg type='@'/>
+    <retval already_retained='true' type='^{__CFData=}'/>
+  </function>
+  <function name='WSProtocolHandlerCopyRequestDictionary'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFData=}'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='WSProtocolHandlerCopyRequestDocument'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <arg type='^{__CFArray=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval already_retained='true' type='^{__CFData=}'/>
+  </function>
+  <function name='WSProtocolHandlerCreate'>
+    <arg type='^{__CFAllocator=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{OpaqueWSProtocolHandlerRef=}'/>
+  </function>
+  <function name='WSProtocolHandlerGetTypeID'>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='WSProtocolHandlerSetDeserializationOverride'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+      <arg type='^{__CFTree=}'/>
+      <arg type='^{__CFTree=}'/>
+      <arg type='^v'/>
+      <retval type='@'/>
+    </arg>
+    <arg type='^{WSClientContext=i^v^?^?^?}'/>
+  </function>
+  <function name='WSProtocolHandlerSetProperty'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+  </function>
+  <function name='WSProtocolHandlerSetSerializationOverride'>
+    <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{OpaqueWSProtocolHandlerRef=}'/>
+      <arg type='@'/>
+      <arg type='^v'/>
+      <retval type='^{__CFString=}'/>
+    </arg>
+    <arg type='^{WSClientContext=i^v^?^?^?}'/>
+  </function>
+</signatures>

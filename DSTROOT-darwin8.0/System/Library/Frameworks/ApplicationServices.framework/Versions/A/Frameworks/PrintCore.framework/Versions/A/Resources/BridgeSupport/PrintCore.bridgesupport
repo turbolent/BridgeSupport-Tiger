@@ -1,0 +1,2850 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework'/>
+  <depends_on path='/System/Library/Frameworks/Security.framework'/>
+  <struct name='CStrList' type='{CStrList=&quot;count&quot;i&quot;strArray&quot;^*}'/>
+  <struct name='ConstCStrList' type='{CStrList=&quot;count&quot;i&quot;strArray&quot;^*}'/>
+  <struct name='ConstPMRectList' type='{PMRectList=&quot;count&quot;i&quot;pmRectArray&quot;^^{PMRect}}'/>
+  <struct name='ConstSInt32List' type='{SInt32List=&quot;count&quot;i&quot;sInt32Array&quot;^i}'/>
+  <struct name='IOMInterface' type='{_IOMInterface=&quot;vtable&quot;^{IOMProcs}}'/>
+  <struct name='IOMProcs' type='{IOMProcs=&quot;pluginHeader&quot;{PMPlugInHeader=&quot;Retain&quot;^?&quot;Release&quot;^?&quot;GetAPIVersion&quot;^?}&quot;GetConnectionInfo&quot;^?&quot;Initialize&quot;^?&quot;Open&quot;^?&quot;Read&quot;^?&quot;Write&quot;^?&quot;Status&quot;^?&quot;GetAttribute&quot;^?&quot;SetAttribute&quot;^?&quot;Close&quot;^?&quot;Terminate&quot;^?}'/>
+  <struct name='InvocationLocator' type='{InvocationLocator=&quot;order&quot;i&quot;orderSection&quot;s&quot;invocationType&quot;s&quot;invocationLoc&quot;l&quot;invocationSize&quot;l}' type64='{InvocationLocator=&quot;order&quot;i&quot;orderSection&quot;s&quot;invocationType&quot;s&quot;invocationLoc&quot;q&quot;invocationSize&quot;q}'/>
+  <struct name='LAxis' type='{LAxis=&quot;llx&quot;i&quot;lly&quot;i&quot;urx&quot;i&quot;ury&quot;i}'/>
+  <struct name='LPaper' type='{LPaper=&quot;width&quot;i&quot;height&quot;i}'/>
+  <struct name='PMIOProcs' type='{PMIOProcs=&quot;version&quot;i&quot;GetConnInfoProc&quot;^?&quot;PMIOOpenProc&quot;^?&quot;PMIOReadProc&quot;^?&quot;PMIOWriteProc&quot;^?&quot;PMIOStatusProc&quot;^?&quot;PMIOGetAttributeProc&quot;^?&quot;PMIOSetAttributeProc&quot;^?&quot;PMIOCloseProc&quot;^?}'/>
+  <struct name='PMInterface' type='{PMInterface=&quot;vtable&quot;^{PMProcs}}'/>
+  <struct name='PMJobStreamProcs' type='{PMJobStreamProcs=&quot;version&quot;i&quot;PMJobStreamOpenProc&quot;^?&quot;PMJobStreamReadProc&quot;^?&quot;PMJobStreamWriteProc&quot;^?&quot;PMJobStreamGetPosProc&quot;^?&quot;PMJobStreamSetPosProc&quot;^?&quot;PMJobStreamGetEOFProc&quot;^?}'/>
+  <struct name='PMLanguageInfo' type='{PMLanguageInfo=&quot;level&quot;[33C]&quot;version&quot;[33C]&quot;release&quot;[33C]}'/>
+  <struct name='PMPaperMargins' type='{PMRect=&quot;top&quot;d&quot;left&quot;d&quot;bottom&quot;d&quot;right&quot;d}'/>
+  <struct name='PMPlugInAPIVersion' type='{PMPlugInAPIVersion=&quot;buildVersionMajor&quot;I&quot;buildVersionMinor&quot;I&quot;baseVersionMajor&quot;I&quot;baseVersionMinor&quot;I}'/>
+  <struct name='PMPlugInHeader' type='{PMPlugInHeader=&quot;Retain&quot;^?&quot;Release&quot;^?&quot;GetAPIVersion&quot;^?}'/>
+  <struct name='PMPlugInHeaderInterface' type='{PMPlugInHeaderInterface=&quot;vtable&quot;^{PMPlugInHeader}}'/>
+  <struct name='PMProcs' type='{PMProcs=&quot;pluginHeader&quot;{PMPlugInHeader=&quot;Retain&quot;^?&quot;Release&quot;^?&quot;GetAPIVersion&quot;^?}&quot;CreatePrinterBrowserModuleInfo&quot;^?&quot;Initialize&quot;^?&quot;CreatePrintingDialogExtensionsPaths&quot;^?&quot;CreatePrinterTickets&quot;^?&quot;BeginJob&quot;^?&quot;PrintJob&quot;^?&quot;PrintPage&quot;^?&quot;ImageAccess&quot;^?&quot;CancelJob&quot;^?&quot;EndJob&quot;^?&quot;Terminate&quot;^?}'/>
+  <struct name='PMRasterBand' type='{PMRasterBand=&quot;baseAddress&quot;*&quot;size&quot;I&quot;yOffset&quot;I&quot;height&quot;I&quot;depth&quot;I&quot;order&quot;I}'/>
+  <struct name='PMRect' type='{PMRect=&quot;top&quot;d&quot;left&quot;d&quot;bottom&quot;d&quot;right&quot;d}'/>
+  <struct name='PMRectList' type='{PMRectList=&quot;count&quot;i&quot;pmRectArray&quot;^^{PMRect}}'/>
+  <struct name='PMResolution' type='{PMResolution=&quot;hRes&quot;d&quot;vRes&quot;d}'/>
+  <struct name='PMTicketItemStruct' type='{PMTicketItemStruct=&quot;key&quot;*&quot;itemType&quot;S&quot;locked&quot;B&quot;value&quot;(?=&quot;GenericData&quot;^v&quot;cString&quot;*&quot;sInt32&quot;i&quot;boolean&quot;I&quot;cStrlist&quot;^{CStrList}&quot;rect&quot;^{PMRect}&quot;sInt32List&quot;^{SInt32List}&quot;pmRectList&quot;^{PMRectList})}'/>
+  <struct name='PPDFileSpec' type='{PPDFileSpec=&quot;fs&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;refNum&quot;s&quot;lastModDate&quot;l&quot;volumeName&quot;[64C]&quot;alias&quot;^^{AliasRecord}}' type64='{PPDFileSpec=&quot;fs&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;refNum&quot;s&quot;lastModDate&quot;q&quot;volumeName&quot;[64C]&quot;alias&quot;^^{AliasRecord}}'/>
+  <struct name='PPDMatch' type='{_PPDMatch=&quot;count&quot;S&quot;file&quot;[1{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}]}' type64='{_PPDMatch=&quot;count&quot;S&quot;file&quot;[1{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}]}'/>
+  <struct name='PPDMatchPtr' type='{_PPDMatchPtr=&quot;count&quot;S&quot;file&quot;[1{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}]}' type64='{_PPDMatchPtr=&quot;count&quot;S&quot;file&quot;[1{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}]}'/>
+  <struct name='PPDParseErr' type='{_PPDParseErr=&quot;msg&quot;[256C]&quot;file&quot;[256C]&quot;line&quot;l}' type64='{_PPDParseErr=&quot;msg&quot;[256C]&quot;file&quot;[256C]&quot;line&quot;q}'/>
+  <struct name='PPDPrinterDesc' type='{PPDPrinterDesc=&quot;product&quot;*&quot;version&quot;*&quot;revision&quot;*&quot;matchModel&quot;B}'/>
+  <struct name='SInt32List' type='{SInt32List=&quot;count&quot;i&quot;sInt32Array&quot;^i}'/>
+  <struct name='StrList' type='{StrList=&quot;numStrings&quot;s&quot;str&quot;[1C]}'/>
+  <struct name='StrListPtr' type='{StrList=&quot;numStrings&quot;s&quot;str&quot;[1C]}'/>
+  <struct name='UIConstraint' type='{UIConstraint=&quot;mainKeyIndex&quot;s&quot;optionKeyIndex&quot;s&quot;invalMainKeyIndex&quot;s&quot;invalOptionKeyIndex&quot;s}'/>
+  <struct name='UIConstraintList' type='{UIConstraintList=&quot;numConstraints&quot;s&quot;constraint&quot;[1{UIConstraint=&quot;mainKeyIndex&quot;s&quot;optionKeyIndex&quot;s&quot;invalMainKeyIndex&quot;s&quot;invalOptionKeyIndex&quot;s}]}'/>
+  <struct name='UIConstraintListP' type='{UIConstraintList=&quot;numConstraints&quot;s&quot;constraint&quot;[1{UIConstraint=&quot;mainKeyIndex&quot;s&quot;optionKeyIndex&quot;s&quot;invalMainKeyIndex&quot;s&quot;invalOptionKeyIndex&quot;s}]}'/>
+  <struct name='UIConstraintP' type='{UIConstraint=&quot;mainKeyIndex&quot;s&quot;optionKeyIndex&quot;s&quot;invalMainKeyIndex&quot;s&quot;invalOptionKeyIndex&quot;s}'/>
+  <struct name='xUIHeader' type='{xUIHeader=&quot;version&quot;l&quot;mainKeyIndex&quot;s&quot;mainKeyTranslation&quot;s&quot;groupKeyIndex&quot;s&quot;queryInvocation&quot;s&quot;defaultOption&quot;s&quot;pickConstraint&quot;s&quot;numOptions&quot;s}' type64='{xUIHeader=&quot;version&quot;q&quot;mainKeyIndex&quot;s&quot;mainKeyTranslation&quot;s&quot;groupKeyIndex&quot;s&quot;queryInvocation&quot;s&quot;defaultOption&quot;s&quot;pickConstraint&quot;s&quot;numOptions&quot;s}'/>
+  <struct name='xUIHeaderP' type='{xUIHeader=&quot;version&quot;l&quot;mainKeyIndex&quot;s&quot;mainKeyTranslation&quot;s&quot;groupKeyIndex&quot;s&quot;queryInvocation&quot;s&quot;defaultOption&quot;s&quot;pickConstraint&quot;s&quot;numOptions&quot;s}' type64='{xUIHeader=&quot;version&quot;q&quot;mainKeyIndex&quot;s&quot;mainKeyTranslation&quot;s&quot;groupKeyIndex&quot;s&quot;queryInvocation&quot;s&quot;defaultOption&quot;s&quot;pickConstraint&quot;s&quot;numOptions&quot;s}'/>
+  <struct name='xUIOption' type='{xUIOption=&quot;version&quot;l&quot;optionKeyIndex&quot;s&quot;optionTranslation&quot;s&quot;forbidden&quot;B&quot;chosen&quot;B&quot;invocation&quot;{InvocationLocator=&quot;order&quot;i&quot;orderSection&quot;s&quot;invocationType&quot;s&quot;invocationLoc&quot;l&quot;invocationSize&quot;l}}' type64='{xUIOption=&quot;version&quot;q&quot;optionKeyIndex&quot;s&quot;optionTranslation&quot;s&quot;forbidden&quot;B&quot;chosen&quot;B&quot;invocation&quot;{InvocationLocator=&quot;order&quot;i&quot;orderSection&quot;s&quot;invocationType&quot;s&quot;invocationLoc&quot;q&quot;invocationSize&quot;q}}'/>
+  <struct name='xUIOptionP' type='{xUIOption=&quot;version&quot;l&quot;optionKeyIndex&quot;s&quot;optionTranslation&quot;s&quot;forbidden&quot;B&quot;chosen&quot;B&quot;invocation&quot;{InvocationLocator=&quot;order&quot;i&quot;orderSection&quot;s&quot;invocationType&quot;s&quot;invocationLoc&quot;l&quot;invocationSize&quot;l}}' type64='{xUIOption=&quot;version&quot;q&quot;optionKeyIndex&quot;s&quot;optionTranslation&quot;s&quot;forbidden&quot;B&quot;chosen&quot;B&quot;invocation&quot;{InvocationLocator=&quot;order&quot;i&quot;orderSection&quot;s&quot;invocationType&quot;s&quot;invocationLoc&quot;q&quot;invocationSize&quot;q}}'/>
+  <cftype name='IOMInterfaceRef' type='^{?=^{IOMProcs}}'/>
+  <cftype name='PMImageRef' type='^v'/>
+  <cftype name='PMInterfaceRef' type='^{PMInterface=^{PMProcs}}'/>
+  <cftype name='PMTemplateRef' type='^{OpaquePMTemplateRef=}'/>
+  <cftype name='PMTicketRef' type='^{OpaquePMTicketRef=}'/>
+  <opaque name='IOMContext' type='^{OpaqueIOMContext=}'/>
+  <opaque name='PMContext' type='^{OpaquePMContext=}'/>
+  <opaque name='PMDialog' type='^{OpaquePMDialog=}'/>
+  <opaque name='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+  <opaque name='PMPaper' type='^{OpaquePMPaper=}'/>
+  <opaque name='PMPreset' type='^{OpaquePMPreset=}'/>
+  <opaque name='PMPrintContext' type='^{OpaquePMPrintContext=}'/>
+  <opaque name='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+  <opaque name='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+  <opaque name='PMPrinter' type='^{OpaquePMPrinter=}'/>
+  <opaque name='PMServer' type='^{OpaquePMServer=}'/>
+  <opaque name='PPDContext' type='^{PPDContextViel=}'/>
+  <string_constant name='A0' nsstring='true' value='iso-a0'/>
+  <string_constant name='A1' nsstring='true' value='iso-a1'/>
+  <string_constant name='A2' nsstring='true' value='iso-a2'/>
+  <string_constant name='A3' nsstring='true' value='iso-a3'/>
+  <string_constant name='A4' nsstring='true' value='iso-a4'/>
+  <string_constant name='A5' nsstring='true' value='iso-a5'/>
+  <string_constant name='A6' nsstring='true' value='iso-a6'/>
+  <string_constant name='A7' nsstring='true' value='iso-a7'/>
+  <string_constant name='A8' nsstring='true' value='iso-a8'/>
+  <string_constant name='A9' nsstring='true' value='iso-a9'/>
+  <string_constant name='ASize' nsstring='true' value='a'/>
+  <string_constant name='B0' nsstring='true' value='iso-b0'/>
+  <string_constant name='B1' nsstring='true' value='iso-b1'/>
+  <string_constant name='B10' nsstring='true' value='iso-b10'/>
+  <string_constant name='B2' nsstring='true' value='iso-b2'/>
+  <string_constant name='B3' nsstring='true' value='iso-b3'/>
+  <string_constant name='B4' nsstring='true' value='iso-b4'/>
+  <string_constant name='B5' nsstring='true' value='iso-b5'/>
+  <string_constant name='B6' nsstring='true' value='iso-b6'/>
+  <string_constant name='B7' nsstring='true' value='iso-b7'/>
+  <string_constant name='B8' nsstring='true' value='iso-b8'/>
+  <string_constant name='B9' nsstring='true' value='iso-b9'/>
+  <string_constant name='BSize' nsstring='true' value='b'/>
+  <string_constant name='CSize' nsstring='true' value='c'/>
+  <string_constant name='DSize' nsstring='true' value='d'/>
+  <string_constant name='DefaultPaper' nsstring='true' value='DefaultPaperSize'/>
+  <string_constant name='ESize' nsstring='true' value='e'/>
+  <string_constant name='Envelope10' nsstring='true' value='na-number-10-envelope'/>
+  <string_constant name='Envelope10x13' nsstring='true' value='na-10x13-envelope'/>
+  <string_constant name='Envelope10x14' nsstring='true' value='na-10x14-envelope'/>
+  <string_constant name='Envelope10x15' nsstring='true' value='na-10x15-envelope'/>
+  <string_constant name='Envelope6x9' nsstring='true' value='na-6x9-envelope'/>
+  <string_constant name='Envelope7x9' nsstring='true' value='na-7x9-envelope'/>
+  <string_constant name='Envelope9' nsstring='true' value='na-number-9-envelope'/>
+  <string_constant name='Envelope9x11' nsstring='true' value='na-9x11-envelope'/>
+  <string_constant name='Envelope9x12' nsstring='true' value='na-9x12-envelope'/>
+  <string_constant name='EnvelopeB4' nsstring='true' value='iso-b4-envelope'/>
+  <string_constant name='EnvelopeB5' nsstring='true' value='iso-b5-envelope'/>
+  <string_constant name='EnvelopeC3' nsstring='true' value='iso-c3-envelope'/>
+  <string_constant name='EnvelopeC4' nsstring='true' value='iso-c4-envelope'/>
+  <string_constant name='EnvelopeC5' nsstring='true' value='iso-c5-envelope'/>
+  <string_constant name='EnvelopeC6' nsstring='true' value='iso-c6-envelope'/>
+  <string_constant name='EnvelopeLong' nsstring='true' value='iso-designated-long-envelope'/>
+  <string_constant name='EnvelopeMonarch' nsstring='true' value='monarch-envelope'/>
+  <string_constant name='Folio' nsstring='true' value='folio'/>
+  <string_constant name='Invoice' nsstring='true' value='invoice'/>
+  <string_constant name='JISB0' nsstring='true' value='jis-b0'/>
+  <string_constant name='JISB1' nsstring='true' value='jis-b1'/>
+  <string_constant name='JISB10' nsstring='true' value='jis-b10'/>
+  <string_constant name='JISB2' nsstring='true' value='jis-b2'/>
+  <string_constant name='JISB3' nsstring='true' value='jis-b3'/>
+  <string_constant name='JISB4' nsstring='true' value='jis-b4'/>
+  <string_constant name='JISB5' nsstring='true' value='jis-b5'/>
+  <string_constant name='JISB7' nsstring='true' value='jis-b7'/>
+  <string_constant name='JISB8' nsstring='true' value='jis-b8'/>
+  <string_constant name='JISB9' nsstring='true' value='jis-b9'/>
+  <string_constant name='Ledger' nsstring='true' value='ledger'/>
+  <string_constant name='Quarto' nsstring='true' value='quarto'/>
+  <string_constant name='Tabloid' nsstring='true' value='tabloid'/>
+  <string_constant name='USExecutiveEnvelope' nsstring='true' value='Executive'/>
+  <string_constant name='USLegal' nsstring='true' value='na-legal'/>
+  <string_constant name='USLetter' nsstring='true' value='na-letter'/>
+  <string_constant name='iso10' nsstring='true' value='iso-10'/>
+  <string_constant name='kIOModuleIntfIDStr' value='F4F7510C-C2DD-11D3-93A5-00050209D9C1'/>
+  <string_constant name='kIOModuleTypeIDStr' value='EE5A5E5C-C2DD-11D3-84B5-00050209D9C1'/>
+  <string_constant name='kPDFWorkFlowItemURLKey' nsstring='true' value='itemURL'/>
+  <string_constant name='kPDFWorkflowDisplayNameKey' nsstring='true' value='displayName'/>
+  <string_constant name='kPDFWorkflowForlderURLKey' nsstring='true' value='folderURL'/>
+  <string_constant name='kPDFWorkflowItemsKey' nsstring='true' value='items'/>
+  <string_constant name='kPM8BitChannelAttr' nsstring='true' value='Supports 8-bit Channel'/>
+  <string_constant name='kPM8BitCommKey' nsstring='true' value='com.apple.print.PrinterInfo.PM8BitComm'/>
+  <string_constant name='kPM8BitCommStr' value='com.apple.print.PrinterInfo.PM8BitComm'/>
+  <string_constant name='kPMAdjustedPageRectKey' nsstring='true' value='com.apple.print.PageFormat.PMAdjustedPageRect'/>
+  <string_constant name='kPMAdjustedPageRectStr' value='com.apple.print.PageFormat.PMAdjustedPageRect'/>
+  <string_constant name='kPMAdjustedPaperRectKey' nsstring='true' value='com.apple.print.PageFormat.PMAdjustedPaperRect'/>
+  <string_constant name='kPMAdjustedPaperRectStr' value='com.apple.print.PageFormat.PMAdjustedPaperRect'/>
+  <string_constant name='kPMAppleTalkConnection' nsstring='true' value='AppleTalk'/>
+  <string_constant name='kPMApplicationColorMatching' nsstring='true' value='AP_ApplicationColorMatching'/>
+  <string_constant name='kPMApplicationColorMatchingStr' value='AP_ApplicationColorMatching'/>
+  <string_constant name='kPMApplicationNameKey' nsstring='true' value='com.apple.print.JobInfo.PMApplicationName'/>
+  <string_constant name='kPMApplicationNameStr' value='com.apple.print.JobInfo.PMApplicationName'/>
+  <string_constant name='kPMBandingRequestedKey' nsstring='true' value='com.apple.print.ConverterSetup.PMBandingRequested'/>
+  <string_constant name='kPMBandingRequestedStr' value='com.apple.print.ConverterSetup.PMBandingRequested'/>
+  <string_constant name='kPMBiDiAttr' nsstring='true' value='Supports BiDirectional Communication'/>
+  <string_constant name='kPMBluetoothConnection' nsstring='true' value='Bluetooth'/>
+  <string_constant name='kPMBorderKey' nsstring='true' value='com.apple.print.PrintSettings.PMBorder'/>
+  <string_constant name='kPMBorderStr' value='com.apple.print.PrintSettings.PMBorder'/>
+  <string_constant name='kPMBorderTypeKey' nsstring='true' value='com.apple.print.PrintSettings.PMBorderType'/>
+  <string_constant name='kPMBorderTypeStr' value='com.apple.print.PrintSettings.PMBorderType'/>
+  <string_constant name='kPMCVColorSyncProfileIDKey' nsstring='true' value='com.apple.print.ConverterSetup.PMProfileID'/>
+  <string_constant name='kPMCVColorSyncProfileIDStr' value='com.apple.print.ConverterSetup.PMProfileID'/>
+  <string_constant name='kPMCollateAEProp' value='collating'/>
+  <string_constant name='kPMColorDeviceIDKey' nsstring='true' value='com.apple.print.PrinterInfo.PMColorDeviceID'/>
+  <string_constant name='kPMColorDeviceIDStr' value='com.apple.print.PrinterInfo.PMColorDeviceID'/>
+  <string_constant name='kPMColorMatchingModeKey' nsstring='true' value='AP_ColorMatchingMode'/>
+  <string_constant name='kPMColorMatchingModeStr' value='AP_ColorMatchingMode'/>
+  <string_constant name='kPMColorModeKey' nsstring='true' value='com.apple.print.PrintSettings.PMColorMode'/>
+  <string_constant name='kPMColorModeStr' value='com.apple.print.PrintSettings.PMColorMode'/>
+  <string_constant name='kPMColorSpaceModelKey' nsstring='true' value='com.apple.print.PrintSettings.PMColorSpaceModel'/>
+  <string_constant name='kPMColorSpaceModelStr' value='com.apple.print.PrintSettings.PMColorSpaceModel'/>
+  <string_constant name='kPMColorSyncMatching' nsstring='true' value='AP_ColorSyncColorMatching'/>
+  <string_constant name='kPMColorSyncMatchingStr' value='AP_ColorSyncColorMatching'/>
+  <string_constant name='kPMColorSyncProfileIDKey' nsstring='true' value='com.apple.print.PrintSettings.PMColorSyncProfileID'/>
+  <string_constant name='kPMColorSyncProfileIDStr' value='com.apple.print.PrintSettings.PMColorSyncProfileID'/>
+  <string_constant name='kPMColorSyncProfilesKey' nsstring='true' value='com.apple.print.PrinterInfo.PMColorSyncProfiles'/>
+  <string_constant name='kPMColorSyncProfilesStr' value='com.apple.print.PrinterInfo.PMColorSyncProfiles'/>
+  <string_constant name='kPMCompiledPPDKey' nsstring='true' value='com.apple.print.PrinterInfo.PMCompiledPPD'/>
+  <string_constant name='kPMCompiledPPDStr' value='com.apple.print.PrinterInfo.PMCompiledPPD'/>
+  <string_constant name='kPMConstrainedPaperKey' nsstring='true' value='com.apple.print.PaperInfo.PMConstrainedPaper'/>
+  <string_constant name='kPMConstrainedPaperStr' value='com.apple.print.PaperInfo.PMConstrainedPaper'/>
+  <string_constant name='kPMConverterResHorizontalKey' nsstring='true' value='com.apple.print.ConverterSetup.PMConversionResHorizontal'/>
+  <string_constant name='kPMConverterResHorizontalStr' value='com.apple.print.ConverterSetup.PMConversionResHorizontal'/>
+  <string_constant name='kPMConverterResVerticalKey' nsstring='true' value='com.apple.print.ConverterSetup.PMConversionResVertcial'/>
+  <string_constant name='kPMConverterResVerticalStr' value='com.apple.print.ConverterSetup.PMConversionResVertcial'/>
+  <string_constant name='kPMConverterSetupPrelude' value='com.apple.print.ConverterSetup.'/>
+  <string_constant name='kPMConverterSetupTicket' nsstring='true' value='com.apple.print.ConverterSetupTicket'/>
+  <string_constant name='kPMCopiesAEProp' value='copies'/>
+  <string_constant name='kPMCopiesKey' nsstring='true' value='com.apple.print.PrintSettings.PMCopies'/>
+  <string_constant name='kPMCopiesStr' value='com.apple.print.PrintSettings.PMCopies'/>
+  <string_constant name='kPMCopyCollateKey' nsstring='true' value='com.apple.print.PrintSettings.PMCopyCollate'/>
+  <string_constant name='kPMCopyCollateStr' value='com.apple.print.PrintSettings.PMCopyCollate'/>
+  <string_constant name='kPMCoverPageKey' nsstring='true' value='com.apple.print.PrintSettings.PMCoverPage'/>
+  <string_constant name='kPMCoverPageSourceKey' nsstring='true' value='com.apple.print.PrintSettings.PMCoverPageSource'/>
+  <string_constant name='kPMCoverPageSourceStr' value='com.apple.print.PrintSettings.PMCoverPageSource'/>
+  <string_constant name='kPMCoverPageStr' value='com.apple.print.PrintSettings.PMCoverPage'/>
+  <string_constant name='kPMCustomPageHeightKey' nsstring='true' value='com.apple.print.TemplateSpecific.CustomPaperHeight'/>
+  <string_constant name='kPMCustomPageHeightStr' value='com.apple.print.TemplateSpecific.CustomPaperHeight'/>
+  <string_constant name='kPMCustomPageMarginsKey' nsstring='true' value='com.apple.print.TemplateSpecific.PMCustomPageMargins'/>
+  <string_constant name='kPMCustomPageMarginsStr' value='com.apple.print.TemplateSpecific.PMCustomPageMargins'/>
+  <string_constant name='kPMCustomPageWidthKey' nsstring='true' value='com.apple.print.TemplateSpecific.CustomPaperWidth'/>
+  <string_constant name='kPMCustomPageWidthStr' value='com.apple.print.TemplateSpecific.CustomPaperWidth'/>
+  <string_constant name='kPMCustomPaperKey' nsstring='true' value='com.apple.print.PaperInfo.PMCustomPaper'/>
+  <string_constant name='kPMCustomPaperStr' value='com.apple.print.PaperInfo.PMCustomPaper'/>
+  <string_constant name='kPMDNSSDConnection' nsstring='true' value='DNSSD'/>
+  <string_constant name='kPMDataFormatRaster' nsstring='true' value='application/vnd.apple.printing-raster'/>
+  <string_constant name='kPMDefaultReverseOutputOrderKey' nsstring='true' value='com.apple.print.TemplateSpecific.PMDefaultReverseOutputOrder'/>
+  <string_constant name='kPMDefaultReverseOutputOrderStr' value='com.apple.print.TemplateSpecific.PMDefaultReverseOutputOrder'/>
+  <string_constant name='kPMDepthSwitchingEnabledKey' nsstring='true' value='com.apple.print.ConverterSetup.PMDepthSwitching'/>
+  <string_constant name='kPMDepthSwitchingEnabledStr' value='com.apple.print.ConverterSetup.PMDepthSwitching'/>
+  <string_constant name='kPMDescriptionFileKey' nsstring='true' value='com.apple.print.PrinterInfo.PMDescriptionFile'/>
+  <string_constant name='kPMDescriptionFileStr' value='com.apple.print.PrinterInfo.PMDescriptionFile'/>
+  <string_constant name='kPMDestinationPrinterIDKey' nsstring='true' value='DestinationPrinterID'/>
+  <string_constant name='kPMDestinationPrinterIDStr' value='DestinationPrinterID'/>
+  <string_constant name='kPMDestinationTicket' nsstring='true' value='com.apple.print.DestinationTicket'/>
+  <string_constant name='kPMDestinationTypeKey' nsstring='true' value='com.apple.print.PrintSettings.PMDestinationType'/>
+  <string_constant name='kPMDestinationTypeStr' value='com.apple.print.PrintSettings.PMDestinationType'/>
+  <string_constant name='kPMDirServicesConnection' nsstring='true' value='Directory Services'/>
+  <string_constant name='kPMDocumentFormatDefault' nsstring='true' value='com.apple.documentformat.default'/>
+  <string_constant name='kPMDocumentFormatPDF' nsstring='true' value='application/pdf'/>
+  <string_constant name='kPMDocumentFormatPICT' nsstring='true' value='application/vnd.apple.printing-pict'/>
+  <string_constant name='kPMDocumentFormatPICTPS' nsstring='true' value='application/vnd.apple.printing-pict-ps'/>
+  <string_constant name='kPMDocumentFormatPICTPSwPSNormalizer' nsstring='true' value='application/vnd.apple.printing-pict-ps-viapsnormalizer'/>
+  <string_constant name='kPMDocumentFormatPostScript' nsstring='true' value='application/postscript'/>
+  <string_constant name='kPMDocumentTicket' nsstring='true' value='com.apple.print.DocumentTicket'/>
+  <string_constant name='kPMDocumentTicketPrelude' value='com.apple.print.DocumentTicket.'/>
+  <string_constant name='kPMDoesCopiesKey' nsstring='true' value='com.apple.print.PrinterInfo.PMDoesCopies'/>
+  <string_constant name='kPMDoesCopiesStr' value='com.apple.print.PrinterInfo.PMDoesCopies'/>
+  <string_constant name='kPMDoesCopyCollateKey' nsstring='true' value='com.apple.print.PrinterInfo.PMDoesCopyCollate'/>
+  <string_constant name='kPMDoesCopyCollateStr' value='com.apple.print.PrinterInfo.PMDoesCopyCollate'/>
+  <string_constant name='kPMDoesReverseOrderKey' nsstring='true' value='com.apple.print.PrinterInfo.PMDoesReverseOrder'/>
+  <string_constant name='kPMDoesReverseOrderStr' value='com.apple.print.PrinterInfo.PMDoesReverseOrder'/>
+  <string_constant name='kPMDrawingResHorizontalKey' nsstring='true' value='com.apple.print.PageFormat.PMHorizontalRes'/>
+  <string_constant name='kPMDrawingResHorizontalStr' value='com.apple.print.PageFormat.PMHorizontalRes'/>
+  <string_constant name='kPMDrawingResVerticalKey' nsstring='true' value='com.apple.print.PageFormat.PMVerticalRes'/>
+  <string_constant name='kPMDrawingResVerticalStr' value='com.apple.print.PageFormat.PMVerticalRes'/>
+  <string_constant name='kPMDriverCreatorKey' nsstring='true' value='com.apple.print.PrinterInfo.PMDriverCreator'/>
+  <string_constant name='kPMDriverCreatorStr' value='com.apple.print.PrinterInfo.PMDriverCreator'/>
+  <string_constant name='kPMDuplexingKey' nsstring='true' value='com.apple.print.PrintSettings.PMDuplexing'/>
+  <string_constant name='kPMDuplexingRequiresFlippedMarginAdjustKey' nsstring='true' value='com.apple.print.PrintSettings.PMDuplexingRequiresFlippedMargins'/>
+  <string_constant name='kPMDuplexingRequiresFlippedMarginAdjustStr' value='com.apple.print.PrintSettings.PMDuplexingRequiresFlippedMargins'/>
+  <string_constant name='kPMDuplexingStr' value='com.apple.print.PrintSettings.PMDuplexing'/>
+  <string_constant name='kPMErrorCodeKey' nsstring='true' value='com.apple.printing.ErrorCode'/>
+  <string_constant name='kPMErrorExplanationKey' nsstring='true' value='com.apple.printing.ErrorExplanation'/>
+  <string_constant name='kPMErrorHandlingAEProp' value='error handling'/>
+  <string_constant name='kPMErrorTextKey' nsstring='true' value='com.apple.printing.ErrorText'/>
+  <string_constant name='kPMEventCodeKey' nsstring='true' value='com.apple.printing.EventCode'/>
+  <string_constant name='kPMEventContextKey' nsstring='true' value='com.apple.printing.EventContext'/>
+  <string_constant name='kPMFaxCoverSheetKey' nsstring='true' value='faxCoverSheet'/>
+  <string_constant name='kPMFaxCoverSheetMessageKey' nsstring='true' value='faxCoverSheetMessage'/>
+  <string_constant name='kPMFaxCoverSheetMessageStr' value='faxCoverSheetMessage'/>
+  <string_constant name='kPMFaxCoverSheetStr' value='faxCoverSheet'/>
+  <string_constant name='kPMFaxDateLabelKey' nsstring='true' value='faxDateLabel'/>
+  <string_constant name='kPMFaxDateLabelStr' value='faxDateLabel'/>
+  <string_constant name='kPMFaxFromLabelKey' nsstring='true' value='faxFromLabel'/>
+  <string_constant name='kPMFaxFromLabelStr' value='faxFromLabel'/>
+  <string_constant name='kPMFaxNumberAEProp' value='fax number'/>
+  <string_constant name='kPMFaxNumberKey' nsstring='true' value='phone'/>
+  <string_constant name='kPMFaxNumberStr' value='phone'/>
+  <string_constant name='kPMFaxPrefixKey' nsstring='true' value='faxPrefix'/>
+  <string_constant name='kPMFaxPrefixStr' value='faxPrefix'/>
+  <string_constant name='kPMFaxSheetsLabelKey' nsstring='true' value='faxSheetsLabel'/>
+  <string_constant name='kPMFaxSheetsLabelStr' value='faxSheetsLabel'/>
+  <string_constant name='kPMFaxSubjectKey' nsstring='true' value='faxSubject'/>
+  <string_constant name='kPMFaxSubjectLabelKey' nsstring='true' value='faxSubjectLabel'/>
+  <string_constant name='kPMFaxSubjectLabelStr' value='faxSubjectLabel'/>
+  <string_constant name='kPMFaxSubjectStr' value='faxSubject'/>
+  <string_constant name='kPMFaxToKey' nsstring='true' value='faxTo'/>
+  <string_constant name='kPMFaxToLabelKey' nsstring='true' value='faxToLabel'/>
+  <string_constant name='kPMFaxToLabelStr' value='faxToLabel'/>
+  <string_constant name='kPMFaxToStr' value='faxTo'/>
+  <string_constant name='kPMFaxToneDialingKey' nsstring='true' value='faxToneDialing'/>
+  <string_constant name='kPMFaxToneDialingStr' value='faxToneDialing'/>
+  <string_constant name='kPMFaxUseSoundKey' nsstring='true' value='faxUseSound'/>
+  <string_constant name='kPMFaxUseSoundStr' value='faxUseSound'/>
+  <string_constant name='kPMFaxWaitForDialToneKey' nsstring='true' value='faxWaitForDialTone'/>
+  <string_constant name='kPMFaxWaitForDialToneStr' value='faxWaitForDialTone'/>
+  <string_constant name='kPMFeatureAEProp' value='printer features'/>
+  <string_constant name='kPMFirstPageAEProp' value='starting page'/>
+  <string_constant name='kPMFirstPageKey' nsstring='true' value='com.apple.print.PrintSettings.PMFirstPage'/>
+  <string_constant name='kPMFirstPageStr' value='com.apple.print.PrintSettings.PMFirstPage'/>
+  <string_constant name='kPMFormattingPrinterKey' nsstring='true' value='com.apple.print.PageFormat.FormattingPrinter'/>
+  <string_constant name='kPMFormattingPrinterStr' value='com.apple.print.PageFormat.FormattingPrinter'/>
+  <string_constant name='kPMGraphicsContextCoreGraphics' nsstring='true' value='com.apple.graphicscontext.coregraphics'/>
+  <string_constant name='kPMGraphicsContextDefault' nsstring='true' value='com.apple.graphicscontext.default'/>
+  <string_constant name='kPMGraphicsContextQuickdraw' nsstring='true' value='com.apple.graphicscontext.quickdraw'/>
+  <string_constant name='kPMHasCustomDuplexPDEKey' nsstring='true' value='com.apple.print.PrintSettings.HasCustomDuplexPDE'/>
+  <string_constant name='kPMHasCustomDuplexPDEStr' value='com.apple.print.PrintSettings.HasCustomDuplexPDE'/>
+  <string_constant name='kPMInputFileTypeListKey' nsstring='true' value='com.apple.print.PrinterInfo.PMInputFileTypeList'/>
+  <string_constant name='kPMInputFileTypeListStr' value='com.apple.print.PrinterInfo.PMInputFileTypeList'/>
+  <string_constant name='kPMInstallableOptionKey' nsstring='true' value='com.apple.print.PrinterInfo.PMInstallableOption'/>
+  <string_constant name='kPMInstallableOptionStr' value='com.apple.print.PrinterInfo.PMInstallableOption'/>
+  <string_constant name='kPMIsBinaryOKKey' nsstring='true' value='com.apple.print.PrinterInfo.PMIsBinaryOK'/>
+  <string_constant name='kPMIsBinaryOKStr' value='com.apple.print.PrinterInfo.PMIsBinaryOK'/>
+  <string_constant name='kPMJobHoldUntilTimeKey' nsstring='true' value='com.apple.print.PrintSettings.PMJobHoldUntilTime'/>
+  <string_constant name='kPMJobHoldUntilTimeStr' value='com.apple.print.PrintSettings.PMJobHoldUntilTime'/>
+  <string_constant name='kPMJobIDAttr' nsstring='true' value='Supports JobID'/>
+  <string_constant name='kPMJobNameKey' nsstring='true' value='com.apple.print.JobInfo.PMJobName'/>
+  <string_constant name='kPMJobNameStr' value='com.apple.print.JobInfo.PMJobName'/>
+  <string_constant name='kPMJobOwnerKey' nsstring='true' value='com.apple.print.JobInfo.PMJobOwner'/>
+  <string_constant name='kPMJobOwnerStr' value='com.apple.print.JobInfo.PMJobOwner'/>
+  <string_constant name='kPMJobPriorityKey' nsstring='true' value='com.apple.print.PrintSettings.PMJobPriority'/>
+  <string_constant name='kPMJobPriorityStr' value='com.apple.print.PrintSettings.PMJobPriority'/>
+  <string_constant name='kPMJobStateKey' nsstring='true' value='com.apple.print.PrintSettings.PMJobState'/>
+  <string_constant name='kPMJobStateStr' value='com.apple.print.PrintSettings.PMJobState'/>
+  <string_constant name='kPMJobTemplateKey' nsstring='true' value='com.apple.print.JobInfo.PMJobTemplate'/>
+  <string_constant name='kPMJobTemplateStr' value='com.apple.print.JobInfo.PMJobTemplate'/>
+  <string_constant name='kPMJobTicket' nsstring='true' value='com.apple.print.JobTicket'/>
+  <string_constant name='kPMJobTicketPrelude' value='com.apple.print.JobInfo.'/>
+  <string_constant name='kPMLPRConnection' nsstring='true' value='LPR'/>
+  <string_constant name='kPMLastErrorStrAttr' nsstring='true' value='Last Error'/>
+  <string_constant name='kPMLastPageAEProp' value='ending page'/>
+  <string_constant name='kPMLastPageKey' nsstring='true' value='com.apple.print.PrintSettings.PMLastPage'/>
+  <string_constant name='kPMLastPageStr' value='com.apple.print.PrintSettings.PMLastPage'/>
+  <string_constant name='kPMLayoutAcrossAEProp' value='pages across'/>
+  <string_constant name='kPMLayoutColumnsKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutColumns'/>
+  <string_constant name='kPMLayoutColumnsStr' value='com.apple.print.PrintSettings.PMLayoutColumns'/>
+  <string_constant name='kPMLayoutDirectionKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutDirection'/>
+  <string_constant name='kPMLayoutDirectionStr' value='com.apple.print.PrintSettings.PMLayoutDirection'/>
+  <string_constant name='kPMLayoutDownAEProp' value='pages down'/>
+  <string_constant name='kPMLayoutNUpKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutNUp'/>
+  <string_constant name='kPMLayoutNUpStr' value='com.apple.print.PrintSettings.PMLayoutNUp'/>
+  <string_constant name='kPMLayoutRowsKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutRows'/>
+  <string_constant name='kPMLayoutRowsStr' value='com.apple.print.PrintSettings.PMLayoutRows'/>
+  <string_constant name='kPMLayoutTileOrientationKey' nsstring='true' value='com.apple.print.PrintSettings.PMLayoutTileOrientation'/>
+  <string_constant name='kPMLayoutTileOrientationStr' value='com.apple.print.PrintSettings.PMLayoutTileOrientation'/>
+  <string_constant name='kPMMakeAndModelNameKey' nsstring='true' value='com.apple.print.PrinterInfo.PMMakeAndModelName'/>
+  <string_constant name='kPMMakeAndModelNameStr' value='com.apple.print.PrinterInfo.PMMakeAndModelName'/>
+  <string_constant name='kPMMatchPaperKey' nsstring='true' value='com.apple.print.PaperInfo.PMMatchPaper'/>
+  <string_constant name='kPMMatchPaperStr' value='com.apple.print.PaperInfo.PMMatchPaper'/>
+  <string_constant name='kPMModuleInfoTicket' nsstring='true' value='com.apple.print.ModuleInfoTicket'/>
+  <string_constant name='kPMOutputFilenameKey' nsstring='true' value='com.apple.print.PrintSettings.PMOutputFilename'/>
+  <string_constant name='kPMOutputFilenameStr' value='com.apple.print.PrintSettings.PMOutputFilename'/>
+  <string_constant name='kPMOutputOrderKey' nsstring='true' value='OutputOrder'/>
+  <string_constant name='kPMOutputOrderStr' value='OutputOrder'/>
+  <string_constant name='kPMOutputTypeKey' nsstring='true' value='com.apple.print.JobInfo.PMOutputType'/>
+  <string_constant name='kPMOutputTypeListKey' nsstring='true' value='com.apple.print.PrinterInfo.PMOutputTypeList'/>
+  <string_constant name='kPMOutputTypeListStr' value='com.apple.print.PrinterInfo.PMOutputTypeList'/>
+  <string_constant name='kPMOutputTypeStr' value='com.apple.print.JobInfo.PMOutputType'/>
+  <string_constant name='kPMPPDDescriptionType' nsstring='true' value='PMPPDDescriptionType'/>
+  <string_constant name='kPMPPDNameKey' nsstring='true' value='com.apple.print.PrinterInfo.PPD'/>
+  <string_constant name='kPMPPDNameStr' value='com.apple.print.PrinterInfo.PPD'/>
+  <string_constant name='kPMPPDPaperNameKey' nsstring='true' value='com.apple.print.PaperInfo.ppd.PMPaperName'/>
+  <string_constant name='kPMPPDPaperNameStr' value='com.apple.print.PaperInfo.ppd.PMPaperName'/>
+  <string_constant name='kPMPSErrorHandlerKey' nsstring='true' value='com.apple.print.PrintSettings.PMPSErrorHandler'/>
+  <string_constant name='kPMPSErrorHandlerStr' value='com.apple.print.PrintSettings.PMPSErrorHandler'/>
+  <string_constant name='kPMPSErrorOnScreenKey' nsstring='true' value='com.apple.print.PrintSettings.PMPSErrorOnScreen'/>
+  <string_constant name='kPMPSErrorOnScreenStr' value='com.apple.print.PrintSettings.PMPSErrorOnScreen'/>
+  <string_constant name='kPMPSTraySwitchKey' nsstring='true' value='com.apple.print.PrintSettings.PMPSTraySwitch'/>
+  <string_constant name='kPMPSTraySwitchStr' value='com.apple.print.PrintSettings.PMPSTraySwitch'/>
+  <string_constant name='kPMPageBackupRecordDataKey' nsstring='true' value='com.apple.print.PageFormat.BackupPrintRecord'/>
+  <string_constant name='kPMPageBackupRecordDataStr' value='com.apple.print.PageFormat.BackupPrintRecord'/>
+  <string_constant name='kPMPageBackupRecordHdlKey' nsstring='true' value='com.apple.print.PageFormat.BackupPrintRecordHandle'/>
+  <string_constant name='kPMPageBackupRecordHdlStr' value='com.apple.print.PageFormat.BackupPrintRecordHandle'/>
+  <string_constant name='kPMPageCustomDialogHdlKey' nsstring='true' value='com.apple.print.PageFormat.CustomDialogRecord'/>
+  <string_constant name='kPMPageCustomDialogHdlStr' value='com.apple.print.PageFormat.CustomDialogRecord'/>
+  <string_constant name='kPMPageFormatPrelude' value='com.apple.print.PageFormat.'/>
+  <string_constant name='kPMPageFormatTicket' nsstring='true' value='com.apple.print.PageFormatTicket'/>
+  <string_constant name='kPMPageOrientationKey' nsstring='true' value='com.apple.print.PageFormat.PMOrientation'/>
+  <string_constant name='kPMPageOrientationStr' value='com.apple.print.PageFormat.PMOrientation'/>
+  <string_constant name='kPMPageRangeKey' nsstring='true' value='com.apple.print.PrintSettings.PMPageRange'/>
+  <string_constant name='kPMPageRangeStr' value='com.apple.print.PrintSettings.PMPageRange'/>
+  <string_constant name='kPMPageScalingHorizontalKey' nsstring='true' value='com.apple.print.PageFormat.PMScaling'/>
+  <string_constant name='kPMPageScalingHorizontalStr' value='com.apple.print.PageFormat.PMScaling'/>
+  <string_constant name='kPMPageScalingVerticalKey' nsstring='true' value='com.apple.print.PageFormat.PMVerticalScaling'/>
+  <string_constant name='kPMPageScalingVerticalStr' value='com.apple.print.PageFormat.PMVerticalScaling'/>
+  <string_constant name='kPMPageSetKey' nsstring='true' value='page-set'/>
+  <string_constant name='kPMPageSetStr' value='page-set'/>
+  <string_constant name='kPMPageTicket' nsstring='true' value='com.apple.print.PageTicket'/>
+  <string_constant name='kPMPageTicketPrelude' value='com.apple.print.PageTicket.'/>
+  <string_constant name='kPMPageToPaperMappingAllowScalingUpKey' nsstring='true' value='com.apple.print.PageToPaperMappingAllowScalingUp'/>
+  <string_constant name='kPMPageToPaperMappingAllowScalingUpStr' value='com.apple.print.PageToPaperMappingAllowScalingUp'/>
+  <string_constant name='kPMPageToPaperMappingTypeKey' nsstring='true' value='com.apple.print.PageToPaperMappingType'/>
+  <string_constant name='kPMPageToPaperMappingTypeStr' value='com.apple.print.PageToPaperMappingType'/>
+  <string_constant name='kPMPageToPaperMediaNameKey' nsstring='true' value='com.apple.print.PageToPaperMappingMediaName'/>
+  <string_constant name='kPMPageToPaperMediaNameStr' value='com.apple.print.PageToPaperMappingMediaName'/>
+  <string_constant name='kPMPaperInfoList' nsstring='true' value='com.apple.print.TemplateSpecific.PMTemplatePaperInfoTicket'/>
+  <string_constant name='kPMPaperInfoListStr' value='com.apple.print.TemplateSpecific.PMTemplatePaperInfoTicket'/>
+  <string_constant name='kPMPaperInfoPrelude' value='com.apple.print.PaperInfo.'/>
+  <string_constant name='kPMPaperInfoTicket' nsstring='true' value='com.apple.print.PaperInfoTicket'/>
+  <string_constant name='kPMPaperNameKey' nsstring='true' value='com.apple.print.PaperInfo.PMPaperName'/>
+  <string_constant name='kPMPaperNameStr' value='com.apple.print.PaperInfo.PMPaperName'/>
+  <string_constant name='kPMPaperSourceKey' nsstring='true' value='com.apple.print.PrintSettings.PMPaperSource'/>
+  <string_constant name='kPMPaperSourceStr' value='com.apple.print.PrintSettings.PMPaperSource'/>
+  <string_constant name='kPMPaperTypeKey' nsstring='true' value='com.apple.print.PrintSettings.PMPaperType'/>
+  <string_constant name='kPMPaperTypeStr' value='com.apple.print.PrintSettings.PMPaperType'/>
+  <string_constant name='kPMPhaseKey' nsstring='true' value='com.apple.print.JobInfo.PMPrintingPhase'/>
+  <string_constant name='kPMPhaseStr' value='com.apple.print.JobInfo.PMPrintingPhase'/>
+  <string_constant name='kPMPostScriptLevelKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPostScriptLevel'/>
+  <string_constant name='kPMPostScriptLevelStr' value='com.apple.print.PrinterInfo.PMPostScriptLevel'/>
+  <string_constant name='kPMPostScriptRevisionKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPSRevision'/>
+  <string_constant name='kPMPostScriptRevisionStr' value='com.apple.print.PrinterInfo.PMPSRevision'/>
+  <string_constant name='kPMPostScriptTrueTypeFontRasterizerKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPSTTRasterizer'/>
+  <string_constant name='kPMPostScriptTrueTypeFontRasterizerStr' value='com.apple.print.PrinterInfo.PMPSTTRasterizer'/>
+  <string_constant name='kPMPostScriptVersionKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPSVersion'/>
+  <string_constant name='kPMPostScriptVersionStr' value='com.apple.print.PrinterInfo.PMPSVersion'/>
+  <string_constant name='kPMPreviewKey' nsstring='true' value='com.apple.print.PrintSettings.PMPreview'/>
+  <string_constant name='kPMPreviewStr' value='com.apple.print.PrintSettings.PMPreview'/>
+  <string_constant name='kPMPrimaryPaperFeedKey' nsstring='true' value='com.apple.print.PrintSettings.PMPrimaryPaperFeed'/>
+  <string_constant name='kPMPrimaryPaperFeedStr' value='com.apple.print.PrintSettings.PMPrimaryPaperFeed'/>
+  <string_constant name='kPMPrintBackupRecordDataKey' nsstring='true' value='com.apple.print.PrintSettings.BackupPrintRecord'/>
+  <string_constant name='kPMPrintBackupRecordDataStr' value='com.apple.print.PrintSettings.BackupPrintRecord'/>
+  <string_constant name='kPMPrintBackupRecordHdlKey' nsstring='true' value='com.apple.print.PrintSettings.BackupPrintRecordHandle'/>
+  <string_constant name='kPMPrintBackupRecordHdlStr' value='com.apple.print.PrintSettings.BackupPrintRecordHandle'/>
+  <string_constant name='kPMPrintCustomDialogHdlKey' nsstring='true' value='com.apple.print.PrintSettings.CustomDialogRecord'/>
+  <string_constant name='kPMPrintCustomDialogHdlStr' value='com.apple.print.PrintSettings.CustomDialogRecord'/>
+  <string_constant name='kPMPrintOrientationKey' nsstring='true' value='com.apple.print.PrintSettings.PMOrientation'/>
+  <string_constant name='kPMPrintOrientationStr' value='com.apple.print.PrintSettings.PMOrientation'/>
+  <string_constant name='kPMPrintScalingAlignmentKey' nsstring='true' value='com.apple.print.PrintSettings.PMScalingAlignment'/>
+  <string_constant name='kPMPrintScalingAlignmentStr' value='com.apple.print.PrintSettings.PMScalingAlignment'/>
+  <string_constant name='kPMPrintScalingHorizontalKey' nsstring='true' value='com.apple.print.PrintSettings.PMScaling'/>
+  <string_constant name='kPMPrintScalingHorizontalStr' value='com.apple.print.PrintSettings.PMScaling'/>
+  <string_constant name='kPMPrintScalingVerticalKey' nsstring='true' value='com.apple.print.PrintSettings.PMVerticalScaling'/>
+  <string_constant name='kPMPrintScalingVerticalStr' value='com.apple.print.PrintSettings.PMVerticalScaling'/>
+  <string_constant name='kPMPrintSettingsPrelude' value='com.apple.print.PrintSettings.'/>
+  <string_constant name='kPMPrintSettingsTicket' nsstring='true' value='com.apple.print.PrintSettingsTicket'/>
+  <string_constant name='kPMPrintTimeAEProp' value='requested print time'/>
+  <string_constant name='kPMPrinterAddressKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPrinterAddress'/>
+  <string_constant name='kPMPrinterAddressStr' value='com.apple.print.PrinterInfo.PMPrinterAddress'/>
+  <string_constant name='kPMPrinterBrowserDeviceIDKey' nsstring='true' value='Printer Browser DeviceID'/>
+  <string_constant name='kPMPrinterBrowserIconsKey' nsstring='true' value='Printer Browser Icons'/>
+  <string_constant name='kPMPrinterBrowserInfoKey' nsstring='true' value='Printer Browser Info'/>
+  <string_constant name='kPMPrinterBrowserKindKey' nsstring='true' value='Printer Browser Kind'/>
+  <string_constant name='kPMPrinterFontKey' nsstring='true' value='com.apple.print.PrinterInfo.Printer Fonts'/>
+  <string_constant name='kPMPrinterFontStr' value='com.apple.print.PrinterInfo.Printer Fonts'/>
+  <string_constant name='kPMPrinterInfoPrelude' value='com.apple.print.PrinterInfo.'/>
+  <string_constant name='kPMPrinterInfoTicket' nsstring='true' value='com.apple.print.PrinterInfoTicket'/>
+  <string_constant name='kPMPrinterIsPostScriptDriverKey' nsstring='true' value='com.apple.print.PrinterInfo.PMIsPostScriptDriver'/>
+  <string_constant name='kPMPrinterIsPostScriptDriverStr' value='com.apple.print.PrinterInfo.PMIsPostScriptDriver'/>
+  <string_constant name='kPMPrinterLongNameKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPrinterLongName'/>
+  <string_constant name='kPMPrinterLongNameStr' value='com.apple.print.PrinterInfo.PMPrinterLongName'/>
+  <string_constant name='kPMPrinterMaxResKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPrinterMaxRes'/>
+  <string_constant name='kPMPrinterMaxResStr' value='com.apple.print.PrinterInfo.PMPrinterMaxRes'/>
+  <string_constant name='kPMPrinterMinResKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPrinterMinRes'/>
+  <string_constant name='kPMPrinterMinResStr' value='com.apple.print.PrinterInfo.PMPrinterMinRes'/>
+  <string_constant name='kPMPrinterModuleFormatKey' nsstring='true' value='com.apple.print.DocumentTicket.PMDocPMInputFormat'/>
+  <string_constant name='kPMPrinterModuleFormatStr' value='com.apple.print.DocumentTicket.PMDocPMInputFormat'/>
+  <string_constant name='kPMPrinterShortNameKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPrinterShortName'/>
+  <string_constant name='kPMPrinterShortNameStr' value='com.apple.print.PrinterInfo.PMPrinterShortName'/>
+  <string_constant name='kPMPrinterSuggestedResKey' nsstring='true' value='com.apple.print.PrinterInfo.PMPrinterSuggestedRes'/>
+  <string_constant name='kPMPrinterSuggestedResStr' value='com.apple.print.PrinterInfo.PMPrinterSuggestedRes'/>
+  <string_constant name='kPMPrinterURI' nsstring='true' value='Printer URI'/>
+  <string_constant name='kPMQualityKey' nsstring='true' value='com.apple.print.PrintSettings.PMQuality'/>
+  <string_constant name='kPMQualityStr' value='com.apple.print.PrintSettings.PMQuality'/>
+  <string_constant name='kPMRequestedPixelFormatKey' nsstring='true' value='com.apple.print.ConverterSetup.PMPixelFormat'/>
+  <string_constant name='kPMRequestedPixelFormatStr' value='com.apple.print.ConverterSetup.PMPixelFormat'/>
+  <string_constant name='kPMRequestedPixelLayoutKey' nsstring='true' value='com.apple.print.ConverterSetup.PMPixelLayout'/>
+  <string_constant name='kPMRequestedPixelLayoutStr' value='com.apple.print.ConverterSetup.PMPixelLayout'/>
+  <string_constant name='kPMRequiredBandHeightKey' nsstring='true' value='com.apple.print.ConverterSetup.PMRequiredBandHeight'/>
+  <string_constant name='kPMRequiredBandHeightStr' value='com.apple.print.ConverterSetup.PMRequiredBandHeight'/>
+  <string_constant name='kPMSecondaryPaperFeedKey' nsstring='true' value='com.apple.print.PrintSettings.PMSecondaryPaperFeed'/>
+  <string_constant name='kPMSecondaryPaperFeedStr' value='com.apple.print.PrintSettings.PMSecondaryPaperFeed'/>
+  <string_constant name='kPMSpoolFormatKey' nsstring='true' value='com.apple.print.DocumentTicket.PMSpoolFormat'/>
+  <string_constant name='kPMSpoolFormatStr' value='com.apple.print.DocumentTicket.PMSpoolFormat'/>
+  <string_constant name='kPMSupportsColorKey' nsstring='true' value='com.apple.print.PrinterInfo.PMSupportsColor'/>
+  <string_constant name='kPMSupportsColorStr' value='com.apple.print.PrinterInfo.PMSupportsColor'/>
+  <string_constant name='kPMSupportsVendorMatchingModeKey' nsstring='true' value='APSupportsCustomColorMatching'/>
+  <string_constant name='kPMSupportsVendorMatchingModeStr' value='APSupportsCustomColorMatching'/>
+  <string_constant name='kPMTStatusAttr' nsstring='true' value='Supports T Status Request'/>
+  <string_constant name='kPMTargetPrinterAEProp' value='target printer'/>
+  <string_constant name='kPMTemplatePrelude' value='com.apple.print.TemplateSpecific.'/>
+  <string_constant name='kPMTicketList' nsstring='true' value='com.apple.print.TicketList'/>
+  <string_constant name='kPMTicketListPrelude' value='com.apple.print.TicketList.'/>
+  <string_constant name='kPMTimeoutAttr' nsstring='true' value='Supports Timeout'/>
+  <string_constant name='kPMTotalBeginPagesKey' nsstring='true' value='com.apple.print.PrintSettings.PMTotalBeginPages'/>
+  <string_constant name='kPMTotalBeginPagesStr' value='com.apple.print.PrintSettings.PMTotalBeginPages'/>
+  <string_constant name='kPMTotalMemAvailableKey' nsstring='true' value='com.apple.print.PrinterInfo.PMTotalMemAvailable'/>
+  <string_constant name='kPMTotalMemAvailableStr' value='com.apple.print.PrinterInfo.PMTotalMemAvailable'/>
+  <string_constant name='kPMTotalMemInstalledKey' nsstring='true' value='com.apple.print.PrinterInfo.PMTotalMemInstalled'/>
+  <string_constant name='kPMTotalMemInstalledStr' value='com.apple.print.PrinterInfo.PMTotalMemInstalled'/>
+  <string_constant name='kPMTotalSidesImagedKey' nsstring='true' value='com.apple.print.PrintSettings.PMTotalSidesImaged'/>
+  <string_constant name='kPMTotalSidesImagedStr' value='com.apple.print.PrintSettings.PMTotalSidesImaged'/>
+  <string_constant name='kPMTransparentByteRange' nsstring='true' value='Supports Transparent Byte Range'/>
+  <string_constant name='kPMTransparentCommKey' nsstring='true' value='com.apple.print.PrinterInfo.PMTransparentComm'/>
+  <string_constant name='kPMTransparentCommStr' value='com.apple.print.PrinterInfo.PMTransparentComm'/>
+  <string_constant name='kPMUSBConnection' nsstring='true' value='USB'/>
+  <string_constant name='kPMUnadjustedPageRectKey' nsstring='true' value='com.apple.print.PaperInfo.PMUnadjustedPageRect'/>
+  <string_constant name='kPMUnadjustedPageRectStr' value='com.apple.print.PaperInfo.PMUnadjustedPageRect'/>
+  <string_constant name='kPMUnadjustedPaperRectKey' nsstring='true' value='com.apple.print.PaperInfo.PMUnadjustedPaperRect'/>
+  <string_constant name='kPMUnadjustedPaperRectStr' value='com.apple.print.PaperInfo.PMUnadjustedPaperRect'/>
+  <string_constant name='kPMUserLanguageKey' nsstring='true' value='com.apple.print.JobInfo.PMUserLanguage'/>
+  <string_constant name='kPMUserLanguageStr' value='com.apple.print.JobInfo.PMUserLanguage'/>
+  <string_constant name='kPMVendorColorMatching' nsstring='true' value='AP_VendorColorMatching'/>
+  <string_constant name='kPMVendorColorMatchingStr' value='AP_VendorColorMatching'/>
+  <string_constant name='kPMWhiteSkippingEnabledKey' nsstring='true' value='com.apple.print.ConverterSetup.PMWhiteSpaceSkipping'/>
+  <string_constant name='kPMWhiteSkippingEnabledStr' value='com.apple.print.ConverterSetup.PMWhiteSpaceSkipping'/>
+  <string_constant name='kPModuleIntfIDStr' value='5EDEC4FA-D5B5-11D3-AAF2-00050209D9C1'/>
+  <string_constant name='kPModuleTypeIDStr' value='5D69ED5E-D5B5-11D3-9EFF-00050209D9C1'/>
+  <string_constant name='kPSInjectionPageKey' nsstring='true' value='page'/>
+  <string_constant name='kPSInjectionPlacementKey' nsstring='true' value='place'/>
+  <string_constant name='kPSInjectionPostScriptKey' nsstring='true' value='psdata'/>
+  <string_constant name='kPSInjectionSectionKey' nsstring='true' value='section'/>
+  <string_constant name='kPSInjectionSubSectionKey' nsstring='true' value='subsection'/>
+  <enum name='PM_USE_SESSION_APIS' value='1'/>
+  <enum name='kAllPPDDomains' value='1'/>
+  <enum name='kCUPSPPDDomain' value='6'/>
+  <enum name='kDoManual' value='4051'/>
+  <enum name='kIOMBaseVersionMajor' value='1'/>
+  <enum name='kIOMBaseVersionMinor' value='0'/>
+  <enum name='kIOMBuildVersionMajor' value='1'/>
+  <enum name='kIOMBuildVersionMinor' value='0'/>
+  <enum name='kInjectionSectCoverPage' value='2'/>
+  <enum name='kInjectionSectJob' value='1'/>
+  <enum name='kInjectionSubBeginDefaults' value='12'/>
+  <enum name='kInjectionSubBeginFont' value='25'/>
+  <enum name='kInjectionSubBeginPageSetup' value='30'/>
+  <enum name='kInjectionSubBeginProlog' value='8'/>
+  <enum name='kInjectionSubBeginResource' value='27'/>
+  <enum name='kInjectionSubBeginSetup' value='10'/>
+  <enum name='kInjectionSubBoundingBox' value='3'/>
+  <enum name='kInjectionSubDocCustomColors' value='19'/>
+  <enum name='kInjectionSubDocFonts' value='14'/>
+  <enum name='kInjectionSubDocNeededFonts' value='15'/>
+  <enum name='kInjectionSubDocNeededRes' value='17'/>
+  <enum name='kInjectionSubDocProcessColors' value='20'/>
+  <enum name='kInjectionSubDocSuppliedFonts' value='16'/>
+  <enum name='kInjectionSubDocSuppliedRes' value='18'/>
+  <enum name='kInjectionSubEOF' value='24'/>
+  <enum name='kInjectionSubEndComments' value='4'/>
+  <enum name='kInjectionSubEndDefaults' value='13'/>
+  <enum name='kInjectionSubEndFont' value='26'/>
+  <enum name='kInjectionSubEndPageSetup' value='31'/>
+  <enum name='kInjectionSubEndProlog' value='9'/>
+  <enum name='kInjectionSubEndResource' value='28'/>
+  <enum name='kInjectionSubEndSetup' value='11'/>
+  <enum name='kInjectionSubOrientation' value='5'/>
+  <enum name='kInjectionSubPSAdobe' value='1'/>
+  <enum name='kInjectionSubPSAdobeEPS' value='2'/>
+  <enum name='kInjectionSubPage' value='29'/>
+  <enum name='kInjectionSubPageOrder' value='7'/>
+  <enum name='kInjectionSubPageTrailer' value='22'/>
+  <enum name='kInjectionSubPages' value='6'/>
+  <enum name='kInjectionSubPlateColor' value='21'/>
+  <enum name='kInjectionSubTrailer' value='23'/>
+  <enum name='kLocalPPDDomain' value='3'/>
+  <enum name='kNetworkPPDDomain' value='4'/>
+  <enum name='kPMAllocationFailure' value='-108'/>
+  <enum name='kPMBaseVersionMajor' value='1'/>
+  <enum name='kPMBaseVersionMinor' value='0'/>
+  <enum name='kPMBlackAndWhite' value='1'/>
+  <enum name='kPMBorderDoubleHairline' value='2'/>
+  <enum name='kPMBorderDoubleThickline' value='4'/>
+  <enum name='kPMBorderSingleHairline' value='1'/>
+  <enum name='kPMBorderSingleThickline' value='3'/>
+  <enum name='kPMBrowserInfoNumValues' value='4'/>
+  <enum name='kPMBuildVersionMajor' value='1'/>
+  <enum name='kPMBuildVersionMinor' value='0'/>
+  <enum name='kPMCMYKColorSpaceModel' value='3'/>
+  <enum name='kPMCMYK_32' value='128'/>
+  <enum name='kPMCVMSymbolNotFound' value='-9662'/>
+  <enum name='kPMCancel' value='128'/>
+  <enum name='kPMCloseFailed' value='-9785'/>
+  <enum name='kPMCollateAEKey' value='1819763564'/>
+  <enum name='kPMCollateAEType' value='1651470188'/>
+  <enum name='kPMColor' value='3'/>
+  <enum name='kPMColorIntentAbsColor' value='16'/>
+  <enum name='kPMColorIntentAutomatic' value='1'/>
+  <enum name='kPMColorIntentBusiness' value='4'/>
+  <enum name='kPMColorIntentPhoto' value='2'/>
+  <enum name='kPMColorIntentRelColor' value='8'/>
+  <enum name='kPMColorIntentUndefined' value='0'/>
+  <enum name='kPMColorIntentUnused' value='65504'/>
+  <enum name='kPMColorModeDuotone' value='4'/>
+  <enum name='kPMColorModeSpecialColor' value='5'/>
+  <enum name='kPMColorSpaceModelCount' value='4'/>
+  <enum name='kPMConstraintList' value='2'/>
+  <enum name='kPMConstraintPrivate' value='3'/>
+  <enum name='kPMConstraintRange' value='1'/>
+  <enum name='kPMConstraintUndefined' value='0'/>
+  <enum name='kPMConverterSetupTicketType' value='8'/>
+  <enum name='kPMCopieAEType' value='1819242087'/>
+  <enum name='kPMCopiesAEKey' value='1819763568'/>
+  <enum name='kPMCopyCollateDefault' value='1'/>
+  <enum name='kPMCoverPageAfter' value='3'/>
+  <enum name='kPMCoverPageBefore' value='2'/>
+  <enum name='kPMCoverPageDefault' value='1'/>
+  <enum name='kPMCoverPageNone' value='1'/>
+  <enum name='kPMCreateMessageFailed' value='-9620'/>
+  <enum name='kPMCurrentValue' value='1668641394'/>
+  <enum name='kPMDataChunky' value='2'/>
+  <enum name='kPMDataPlanar' value='1'/>
+  <enum name='kPMDataUnused' value='65532'/>
+  <enum name='kPMDefaultResolution' value='1684436082'/>
+  <enum name='kPMDefaultValue' value='1684434036'/>
+  <enum name='kPMDeleteSubTicketFailed' value='-9585'/>
+  <enum name='kPMDestinationFax' value='3'/>
+  <enum name='kPMDestinationFile' value='2'/>
+  <enum name='kPMDestinationInvalid' value='0'/>
+  <enum name='kPMDestinationPreview' value='4'/>
+  <enum name='kPMDestinationPrinter' value='1'/>
+  <enum name='kPMDestinationProcessPDF' value='5'/>
+  <enum name='kPMDestinationTicketType' value='7'/>
+  <enum name='kPMDestinationTypeDefault' value='1'/>
+  <enum name='kPMDevNColorSpaceModel' value='4'/>
+  <enum name='kPMDocumentNotFound' value='-9644'/>
+  <enum name='kPMDocumentTicketType' value='2'/>
+  <enum name='kPMDontSwitchPDEError' value='-9531'/>
+  <enum name='kPMDuplexBindingLeftRight' value='1'/>
+  <enum name='kPMDuplexBindingTopDown' value='2'/>
+  <enum name='kPMDuplexDefault' value='1'/>
+  <enum name='kPMDuplexNoTumble' value='2'/>
+  <enum name='kPMDuplexNone' value='1'/>
+  <enum name='kPMDuplexTumble' value='3'/>
+  <enum name='kPMEditRequestFailed' value='-9544'/>
+  <enum name='kPMErrorHandlingAEKey' value='1819764072'/>
+  <enum name='kPMErrorHandlingAEType' value='1701737837'/>
+  <enum name='kPMErrorHandlingDetailedEnum' value='1819763828'/>
+  <enum name='kPMErrorHandlingStandardEnum' value='1819767668'/>
+  <enum name='kPMEventErrorOccurred' value='4001'/>
+  <enum name='kPMEventPrinterStatus' value='4000'/>
+  <enum name='kPMEventRecoverableErrorCleared' value='4003'/>
+  <enum name='kPMEventRecoverableErrorOccurred' value='4002'/>
+  <enum name='kPMFaxNumberAEKey' value='1717663854'/>
+  <enum name='kPMFaxNumberAEType' value='1413830740'/>
+  <enum name='kPMFeatureAEKey' value='1819766886'/>
+  <enum name='kPMFeatureAEType' value='1818850164'/>
+  <enum name='kPMFeatureNotInstalled' value='-9533'/>
+  <enum name='kPMFileOrDirOperationFailed' value='-9634'/>
+  <enum name='kPMFirstBand' value='0'/>
+  <enum name='kPMFirstPageAEKey' value='1819764336'/>
+  <enum name='kPMFirstPageAEType' value='1819242087'/>
+  <enum name='kPMFontNameTooLong' value='-9704'/>
+  <enum name='kPMFontNotFound' value='-9703'/>
+  <enum name='kPMGeneralCGError' value='-9705'/>
+  <enum name='kPMGeneralError' value='-30870'/>
+  <enum name='kPMGray' value='2'/>
+  <enum name='kPMGrayColorSpaceModel' value='1'/>
+  <enum name='kPMGray_1' value='1'/>
+  <enum name='kPMGray_8' value='2'/>
+  <enum name='kPMIOAttrNotAvailable' value='-9787'/>
+  <enum name='kPMIOMSymbolNotFound' value='-9661'/>
+  <enum name='kPMInternalError' value='-30870'/>
+  <enum name='kPMInvalidAllocator' value='-30890'/>
+  <enum name='kPMInvalidCVMContext' value='-9665'/>
+  <enum name='kPMInvalidCalibrationTarget' value='-30898'/>
+  <enum name='kPMInvalidConnection' value='-30887'/>
+  <enum name='kPMInvalidFileType' value='-30895'/>
+  <enum name='kPMInvalidIOMContext' value='-9664'/>
+  <enum name='kPMInvalidIndex' value='-30882'/>
+  <enum name='kPMInvalidItem' value='-30892'/>
+  <enum name='kPMInvalidJobID' value='-9666'/>
+  <enum name='kPMInvalidJobTemplate' value='-30885'/>
+  <enum name='kPMInvalidKey' value='-30888'/>
+  <enum name='kPMInvalidLookupSpec' value='-9542'/>
+  <enum name='kPMInvalidObject' value='-30896'/>
+  <enum name='kPMInvalidPBMRef' value='-9540'/>
+  <enum name='kPMInvalidPDEContext' value='-9530'/>
+  <enum name='kPMInvalidPMContext' value='-9663'/>
+  <enum name='kPMInvalidPageFormat' value='-30876'/>
+  <enum name='kPMInvalidPaper' value='-30897'/>
+  <enum name='kPMInvalidParameter' value='-50'/>
+  <enum name='kPMInvalidPreset' value='-30882'/>
+  <enum name='kPMInvalidPrintSession' value='-30879'/>
+  <enum name='kPMInvalidPrintSettings' value='-30875'/>
+  <enum name='kPMInvalidPrinter' value='-30880'/>
+  <enum name='kPMInvalidPrinterAddress' value='-9780'/>
+  <enum name='kPMInvalidPrinterInfo' value='-30886'/>
+  <enum name='kPMInvalidReply' value='-30894'/>
+  <enum name='kPMInvalidState' value='-9706'/>
+  <enum name='kPMInvalidSubTicket' value='-9584'/>
+  <enum name='kPMInvalidTicket' value='-30891'/>
+  <enum name='kPMInvalidType' value='-30893'/>
+  <enum name='kPMInvalidValue' value='-30889'/>
+  <enum name='kPMItemBooleanType' value='3'/>
+  <enum name='kPMItemCStrListType' value='4'/>
+  <enum name='kPMItemCStringType' value='1'/>
+  <enum name='kPMItemInvalidType' value='0'/>
+  <enum name='kPMItemIsLocked' value='-9586'/>
+  <enum name='kPMItemPMRectListType' value='7'/>
+  <enum name='kPMItemPMRectType' value='5'/>
+  <enum name='kPMItemSInt32ListType' value='6'/>
+  <enum name='kPMItemSInt32Type' value='2'/>
+  <enum name='kPMJobBusy' value='-9642'/>
+  <enum name='kPMJobCanceled' value='-9643'/>
+  <enum name='kPMJobGetTicketBadFormatError' value='-9672'/>
+  <enum name='kPMJobGetTicketReadError' value='-9673'/>
+  <enum name='kPMJobManagerAborted' value='-9671'/>
+  <enum name='kPMJobNotFound' value='-9641'/>
+  <enum name='kPMJobStreamEndError' value='-9670'/>
+  <enum name='kPMJobStreamOpenFailed' value='-9668'/>
+  <enum name='kPMJobStreamReadFailed' value='-9669'/>
+  <enum name='kPMJobTicketType' value='1'/>
+  <enum name='kPMKeyNotFound' value='-9589'/>
+  <enum name='kPMKeyNotUnique' value='-9590'/>
+  <enum name='kPMKeyOrValueNotFound' value='-9623'/>
+  <enum name='kPMLandscape' value='2'/>
+  <enum name='kPMLastBand' value='2'/>
+  <enum name='kPMLastErrorCodeToMakeMaintenanceOfThisListEasier' value='-9799'/>
+  <enum name='kPMLastPageAEKey' value='1819765872'/>
+  <enum name='kPMLastPageAEType' value='1819242087'/>
+  <enum name='kPMLayoutAcrossAEKey' value='1819765857'/>
+  <enum name='kPMLayoutAcrossAEType' value='1819242087'/>
+  <enum name='kPMLayoutBottomTopLeftRight' value='7'/>
+  <enum name='kPMLayoutBottomTopRightLeft' value='8'/>
+  <enum name='kPMLayoutDownAEKey' value='1819765860'/>
+  <enum name='kPMLayoutDownAEType' value='1819242087'/>
+  <enum name='kPMLayoutLeftRightBottomTop' value='2'/>
+  <enum name='kPMLayoutLeftRightTopBottom' value='1'/>
+  <enum name='kPMLayoutRightLeftBottomTop' value='4'/>
+  <enum name='kPMLayoutRightLeftTopBottom' value='3'/>
+  <enum name='kPMLayoutTopBottomLeftRight' value='5'/>
+  <enum name='kPMLayoutTopBottomRightLeft' value='6'/>
+  <enum name='kPMLockIgnored' value='-30878'/>
+  <enum name='kPMLocked' value='1'/>
+  <enum name='kPMLoneBand' value='3'/>
+  <enum name='kPMMaxRange' value='1836610151'/>
+  <enum name='kPMMaxSquareResolution' value='1835104371'/>
+  <enum name='kPMMaximumValue' value='1835104374'/>
+  <enum name='kPMMessagingError' value='-9624'/>
+  <enum name='kPMMiddleBand' value='1'/>
+  <enum name='kPMMinRange' value='1835954791'/>
+  <enum name='kPMMinSquareResolution' value='1835626099'/>
+  <enum name='kPMMinimumValue' value='1835626102'/>
+  <enum name='kPMModuleInfoTicketType' value='9'/>
+  <enum name='kPMNoDefaultItem' value='-9500'/>
+  <enum name='kPMNoDefaultPrinter' value='-30872'/>
+  <enum name='kPMNoDefaultSettings' value='-9501'/>
+  <enum name='kPMNoError' value='0'/>
+  <enum name='kPMNoPrinterJobID' value='-9667'/>
+  <enum name='kPMNoSelectedPrinters' value='-9541'/>
+  <enum name='kPMNoSuchEntry' value='-30874'/>
+  <enum name='kPMNotImplemented' value='-30873'/>
+  <enum name='kPMObjectInUse' value='-30881'/>
+  <enum name='kPMOpenFailed' value='-9781'/>
+  <enum name='kPMOutOfScope' value='-30871'/>
+  <enum name='kPMPMSymbolNotFound' value='-9660'/>
+  <enum name='kPMPSTTRasterizerAccept68K' value='2'/>
+  <enum name='kPMPSTTRasterizerNone' value='1'/>
+  <enum name='kPMPSTTRasterizerType42' value='3'/>
+  <enum name='kPMPSTTRasterizerUnknown' value='0'/>
+  <enum name='kPMPSTargetLanguageLevel1' value='1'/>
+  <enum name='kPMPSTargetLanguageLevel1and2' value='-2'/>
+  <enum name='kPMPSTargetLanguageLevel2' value='2'/>
+  <enum name='kPMPSTargetLanguageLevel2and3' value='-3'/>
+  <enum name='kPMPSTargetLanguageLevel3' value='3'/>
+  <enum name='kPMPSTargetLanguageLevelDefault' value='-1'/>
+  <enum name='kPMPSTargetLanguageLevelUnknown' value='-1'/>
+  <enum name='kPMPageFormatTicketType' value='4'/>
+  <enum name='kPMPageTicketType' value='3'/>
+  <enum name='kPMPageToPaperMappingNone' value='1'/>
+  <enum name='kPMPageToPaperMappingScaleToFit' value='2'/>
+  <enum name='kPMPaperInfoTicketType' value='11'/>
+  <enum name='kPMPaperTypeCoated' value='2'/>
+  <enum name='kPMPaperTypeGlossy' value='4'/>
+  <enum name='kPMPaperTypePlain' value='1'/>
+  <enum name='kPMPaperTypePremium' value='3'/>
+  <enum name='kPMPaperTypeTShirt' value='6'/>
+  <enum name='kPMPaperTypeTransparency' value='5'/>
+  <enum name='kPMPaperTypeUnknown' value='0'/>
+  <enum name='kPMPermissionError' value='-9636'/>
+  <enum name='kPMPhaseAppDrawing' value='5'/>
+  <enum name='kPMPhaseConverting' value='8'/>
+  <enum name='kPMPhaseDialogsUp' value='2'/>
+  <enum name='kPMPhasePostAppDrawing' value='6'/>
+  <enum name='kPMPhasePostConversion' value='9'/>
+  <enum name='kPMPhasePostDialogs' value='3'/>
+  <enum name='kPMPhasePreAppDrawing' value='4'/>
+  <enum name='kPMPhasePreConversion' value='7'/>
+  <enum name='kPMPhasePreDialog' value='1'/>
+  <enum name='kPMPhasePrinting' value='10'/>
+  <enum name='kPMPhaseUnknown' value='0'/>
+  <enum name='kPMPluginNotFound' value='-9701'/>
+  <enum name='kPMPluginRegisterationFailed' value='-9702'/>
+  <enum name='kPMPortrait' value='1'/>
+  <enum name='kPMPrBrowserNoUI' value='-9545'/>
+  <enum name='kPMPrintAllPages' value='-1'/>
+  <enum name='kPMPrintSettingsAEType' value='1886610804'/>
+  <enum name='kPMPrintSettingsTicketType' value='5'/>
+  <enum name='kPMPrintTimeAEKey' value='1819767156'/>
+  <enum name='kPMPrintTimeAEType' value='1818522656'/>
+  <enum name='kPMPrinterAEType' value='1953656946'/>
+  <enum name='kPMPrinterIdle' value='3'/>
+  <enum name='kPMPrinterInfoTicketType' value='6'/>
+  <enum name='kPMPrinterProcessing' value='4'/>
+  <enum name='kPMPrinterStopped' value='5'/>
+  <enum name='kPMQualityBest' value='13'/>
+  <enum name='kPMQualityDraft' value='4'/>
+  <enum name='kPMQualityHighest' value='15'/>
+  <enum name='kPMQualityInkSaver' value='1'/>
+  <enum name='kPMQualityLowest' value='0'/>
+  <enum name='kPMQualityNormal' value='8'/>
+  <enum name='kPMQualityPhoto' value='11'/>
+  <enum name='kPMQueueAlreadyExists' value='-9639'/>
+  <enum name='kPMQueueJobFailed' value='-9640'/>
+  <enum name='kPMQueueNotFound' value='-9638'/>
+  <enum name='kPMRGBColorSpaceModel' value='2'/>
+  <enum name='kPMRGBX_32' value='32'/>
+  <enum name='kPMRGBX_32_Sep_Gray_8' value='64'/>
+  <enum name='kPMRGB_16' value='4'/>
+  <enum name='kPMRGB_24' value='8'/>
+  <enum name='kPMReadFailed' value='-9782'/>
+  <enum name='kPMReadGotZeroData' value='-9788'/>
+  <enum name='kPMReverseLandscape' value='4'/>
+  <enum name='kPMReversePortrait' value='3'/>
+  <enum name='kPMScalingCenterOnImgArea' value='6'/>
+  <enum name='kPMScalingCenterOnPaper' value='5'/>
+  <enum name='kPMScalingPinBottomLeft' value='3'/>
+  <enum name='kPMScalingPinBottomRight' value='4'/>
+  <enum name='kPMScalingPinTopLeft' value='1'/>
+  <enum name='kPMScalingPinTopRight' value='2'/>
+  <enum name='kPMServerAlreadyRunning' value='-9631'/>
+  <enum name='kPMServerAttributeRestricted' value='-9633'/>
+  <enum name='kPMServerCommunicationFailed' value='-9621'/>
+  <enum name='kPMServerNotFound' value='-9630'/>
+  <enum name='kPMServerSuspended' value='-9632'/>
+  <enum name='kPMShowPrintDialogAEType' value='1885629543'/>
+  <enum name='kPMSimplexTumble' value='4'/>
+  <enum name='kPMSourceProfile' value='1936876400'/>
+  <enum name='kPMStatusFailed' value='-9784'/>
+  <enum name='kPMStringConversionFailure' value='-30883'/>
+  <enum name='kPMSubTicketNotFound' value='-9583'/>
+  <enum name='kPMSyncRequestFailed' value='-9543'/>
+  <enum name='kPMTargetPrinterAEKey' value='1953656946'/>
+  <enum name='kPMTargetPrinterAEType' value='1413830740'/>
+  <enum name='kPMTemplateIsLocked' value='-9588'/>
+  <enum name='kPMTicketIsLocked' value='-9587'/>
+  <enum name='kPMTicketListType' value='10'/>
+  <enum name='kPMTicketTypeNotFound' value='-9580'/>
+  <enum name='kPMTicketTypeUnknown' value='-1'/>
+  <enum name='kPMTopLevel' value='0'/>
+  <enum name='kPMUnableToFindProcess' value='-9532'/>
+  <enum name='kPMUnknownColorSpaceModel' value='0'/>
+  <enum name='kPMUnknownDataType' value='-9591'/>
+  <enum name='kPMUnknownMessage' value='-9637'/>
+  <enum name='kPMUnlocked' value='0'/>
+  <enum name='kPMUnsupportedConnection' value='-9786'/>
+  <enum name='kPMUnused' value='65280'/>
+  <enum name='kPMUpdateTicketFailed' value='-9581'/>
+  <enum name='kPMUserOrGroupNotFound' value='-9635'/>
+  <enum name='kPMValidateTicketFailed' value='-9582'/>
+  <enum name='kPMValueArray' value='12'/>
+  <enum name='kPMValueBoolean' value='1'/>
+  <enum name='kPMValueData' value='2'/>
+  <enum name='kPMValueDate' value='11'/>
+  <enum name='kPMValueDict' value='13'/>
+  <enum name='kPMValueDouble' value='8'/>
+  <enum name='kPMValueDoubleRange' value='9'/>
+  <enum name='kPMValueOutOfRange' value='-30877'/>
+  <enum name='kPMValuePMRect' value='10'/>
+  <enum name='kPMValueSInt32' value='4'/>
+  <enum name='kPMValueSInt32Range' value='5'/>
+  <enum name='kPMValueString' value='3'/>
+  <enum name='kPMValueTicket' value='14'/>
+  <enum name='kPMValueUInt32' value='6'/>
+  <enum name='kPMValueUInt32Range' value='7'/>
+  <enum name='kPMValueUndefined' value='0'/>
+  <enum name='kPMWriteFailed' value='-9783'/>
+  <enum name='kPMXMLParseError' value='-30884'/>
+  <enum name='kPMXRGB_32' value='16'/>
+  <enum name='kPPDInvalidIndex' value='0'/>
+  <enum name='kPSErrorHandler' value='1'/>
+  <enum name='kPSInjectionAfterSubsection' value='2'/>
+  <enum name='kPSInjectionBeforeSubsection' value='1'/>
+  <enum name='kPSInjectionMaxDictSize' value='5'/>
+  <enum name='kPSInjectionReplaceSubsection' value='3'/>
+  <enum name='kPSNoErrorHandler' value='0'/>
+  <enum name='kPSPageInjectAllPages' value='-1'/>
+  <enum name='kSizeOfTPrint' value='120'/>
+  <enum name='kSystemPPDDomain' value='2'/>
+  <enum name='kUIHeaderVersion' value='1'/>
+  <enum name='kUIOptionVersion' value='1'/>
+  <enum name='kUserPPDDomain' value='5'/>
+  <enum name='ppdErrForbidden' value='-2'/>
+  <enum name='ppdErrNotFound' value='-1'/>
+  <function name='DisposePMIdleUPP'>
+    <arg function_pointer='true' type='^?'>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='InvokePMIdleUPP'>
+    <arg function_pointer='true' type='^?'>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='NewPMIdleUPP'>
+    <arg function_pointer='true' type='^?'>
+      <retval type='v'/>
+    </arg>
+    <retval function_pointer='true' type='^?'>
+      <retval type='v'/>
+    </retval>
+  </function>
+  <function name='PMCGImageCreateWithEPSDataProvider'>
+    <arg type='^{CGDataProvider=}'/>
+    <arg type='^{CGImage=}'/>
+    <retval already_retained='true' type='^{CGImage=}'/>
+  </function>
+  <function name='PMCopyAvailablePPDs'>
+    <arg type='S'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCopyLocalizedPPD'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCopyPPDData'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCopyPageFormat'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCopyPrintSettings'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCreatePageFormat'>
+    <arg type='^^{OpaquePMPageFormat}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCreatePageFormatWithPMPaper'>
+    <arg type='^^{OpaquePMPageFormat}'/>
+    <arg type='^{OpaquePMPaper=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCreatePrintSettings'>
+    <arg type='^^{OpaquePMPrintSettings}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMCreateSession'>
+    <arg type='^^{OpaquePMPrintSession}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMFlattenPageFormat'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^^*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMFlattenPageFormatToCFData'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMFlattenPageFormatToURL'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{__CFURL=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMFlattenPrintSettings'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^^*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMFlattenPrintSettingsToCFData'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMFlattenPrintSettingsToURL'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{__CFURL=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetAdjustedPageRect'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetAdjustedPaperRect'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetCollate'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetColorMode'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^S'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetCopies'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetDestination'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^S'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetDuplex'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetFirstPage'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetJobName'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetJobNameCFString'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetLastPage'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetOrientation'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^S'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetPageFormatExtendedData'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetPageFormatPaper'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^^{OpaquePMPaper}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetPageRange'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^I'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetPhysicalPageSize'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetPhysicalPaperSize'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetPrintSettingsExtendedData'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetResolution'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMResolution=dd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetScale'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetUnadjustedPageRect'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMGetUnadjustedPaperRect'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPaperCreate'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <arg type='^{PMRect=dddd}'/>
+    <arg type='^^{OpaquePMPaper}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPaperGetHeight'>
+    <arg type='^{OpaquePMPaper=}'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPaperGetID'>
+    <arg type='^{OpaquePMPaper=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPaperGetMargins'>
+    <arg type='^{OpaquePMPaper=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPaperGetName'>
+    <arg type='^{OpaquePMPaper=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPaperGetWidth'>
+    <arg type='^{OpaquePMPaper=}'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPresetCopyName'>
+    <arg type='^{OpaquePMPreset=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPresetCreatePrintSettings'>
+    <arg type='^{OpaquePMPreset=}'/>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^^{OpaquePMPrintSettings}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPresetGetAttributes'>
+    <arg type='^{OpaquePMPreset=}'/>
+    <arg type='^^{__CFDictionary}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrintSettingsGetJobName'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrintSettingsGetValue'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrintSettingsSetJobName'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrintSettingsSetValue'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrintSettingsToOptions'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterCopyDescriptionURL'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterCopyDeviceURI'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterCopyHostName'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterCopyPresets'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterCreateFromPrinterID'>
+    <arg type='^{__CFString=}'/>
+    <retval type='^{OpaquePMPrinter=}'/>
+  </function>
+  <function name='PMPrinterGetCommInfo'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^B'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetDescriptionURL'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetDeviceURI'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetDriverCreator'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetDriverReleaseInfo'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{VersRec={NumVersion=CCCC}s[256C][256C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetID'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='PMPrinterGetIndexedPrinterResolution'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{PMResolution=dd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetLanguageInfo'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{PMLanguageInfo=[33C][33C][33C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetLocation'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='PMPrinterGetMakeAndModelName'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetMimeTypes'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetName'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <retval type='^{__CFString=}'/>
+  </function>
+  <function name='PMPrinterGetPaperList'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetPrinterResolution'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{PMResolution=dd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetPrinterResolutionCount'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterGetState'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^S'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterIsDefault'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='PMPrinterIsFavorite'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='PMPrinterIsPostScriptCapable'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='PMPrinterIsRemote'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterPrintWithFile'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFURL=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMPrinterPrintWithProvider'>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{CGDataProvider=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMRelease'>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMRetain'>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMServerCreatePrinterList'>
+    <arg type='^{OpaquePMServer=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionBeginCGDocumentNoDialog'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionBeginDocumentNoDialog'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionBeginPageNoDialog'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionConvertOldPrintRecord'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^*'/>
+    <arg type='^^{OpaquePMPrintSettings}'/>
+    <arg type='^^{OpaquePMPageFormat}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionCopyDestinationFormat'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionCopyDestinationLocation'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionCopyOutputFormatList'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='S'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionCreatePageFormatList'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionCreatePrinterList'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^^{__CFArray}'/>
+    <arg type='^i'/>
+    <arg type='^^{OpaquePMPrinter}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionDefaultPageFormat'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionDefaultPrintSettings'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionDisableColorSync'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionEnableColorSync'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionEndDocumentNoDialog'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionEndPageNoDialog'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionError'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGeneral'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetCGGraphicsContext'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^^{CGContext}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetCurrentPrinter'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^^{OpaquePMPrinter}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetDataFromSession'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetDestinationType'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^S'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetDocumentFormatGeneration'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetDocumentFormatSupported'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^^{__CFArray}'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetGraphicsContext'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetTemplateFromSession'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{OpaquePMTemplateRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionGetTicketFromSession'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionIsDocumentFormatSupported'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionMakeOldPrintRecord'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^^*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionPostScriptBegin'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionPostScriptData'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='*'/>
+    <arg type='l' type64='q'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionPostScriptEnd'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionPostScriptFile'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionPostScriptHandle'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetCurrentPMPrinter'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrinter=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetCurrentPrinter'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetDataInSession'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetDestination'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='S'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFURL=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetDocumentFormatGeneration'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFArray=}'/>
+    <arg type='@'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetError'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetIdleProc'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg function_pointer='true' type='^?'>
+      <retval type='v'/>
+    </arg>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionSetPSInjectionData'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{__CFArray=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionValidatePageFormat'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSessionValidatePrintSettings'>
+    <arg type='^{OpaquePMPrintSession=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetAdjustedPageRect'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetCollate'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetColorMode'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='S'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetCopies'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetDuplex'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetFirstPage'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetJobName'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetJobNameCFString'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetLastPage'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetOrientation'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='S'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetPageFormatExtendedData'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetPageRange'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetPhysicalPaperSize'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetPrintSettingsExtendedData'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetProfile'>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=sl[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=sq[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetResolution'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMResolution=dd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetScale'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMSetUnadjustedPaperRect'>
+    <arg type='^{OpaquePMPageFormat=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateCreate'>
+    <arg type='^^{OpaquePMTemplateRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateCreateXML'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateDelete'>
+    <arg type='^^{OpaquePMTemplateRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetBooleanDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetCFArrayConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetCFDataDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetCFDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetCFRangeConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetConstraintType'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetDoubleDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetDoubleListConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetDoubleRangeConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^d'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetDoubleRangeDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^d'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetDoubleRangesConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^d'/>
+    <arg type='^d'/>
+    <arg type='^d'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetListTicketConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetPMRectDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetPMRectListConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetPMTicketDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetSInt32DefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetSInt32ListConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetSInt32RangeConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetSInt32RangeDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetSInt32RangesConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateGetValueType'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateIsLocked'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateLoadFromXML'>
+    <arg type='^{__CFData=}'/>
+    <arg type='^^{OpaquePMTemplateRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateMakeEntry'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='l' type64='i'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateMakeFullEntry'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='l' type64='i'/>
+    <arg type='l' type64='i'/>
+    <arg type='@'/>
+    <arg type='@'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateMergeTemplates'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateRemoveEntry'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetBooleanDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetCFArrayConstraintValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFArray=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetCFDataDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFData=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetCFDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetCFRangeConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+    <arg type='@'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetDoubleDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetDoubleListConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='i'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetDoubleRangeConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetDoubleRangeDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetDoubleRangesConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetPMRectDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetPMRectListConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='i'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetPMTicketDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetPMTicketListConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetSInt32DefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetSInt32ListConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetSInt32RangeConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='l' type64='i'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetSInt32RangeDefaultValue'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='l' type64='i'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateSetSInt32RangesConstraint'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='l' type64='i'/>
+    <arg type='l' type64='i'/>
+    <arg type='l' type64='i'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateValidateItem'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTemplateWriteXML'>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketConfirmTicket'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketContainsItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='PMTicketContainsTicket'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketCopy'>
+    <arg type='^{__CFAllocator=}'/>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketCopyItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketCreate'>
+    <arg type='^{__CFAllocator=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketCreateDict'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='PMTicketCreateTemplate'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{OpaquePMTemplateRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketDeleteItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketFillFromArray'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMTicketItemStruct=*SB(?=^v*iI^{CStrList}^{PMRect}^{SInt32List}^{PMRectList})}'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetAPIVersion'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetAllocator'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^^{__CFAllocator}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetBoolean'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetBytes'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='*'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCFArray'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCFBoolean'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFBoolean}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCFData'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCFDate'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFDate}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCFDictionary'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFDictionary}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCFNumber'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFNumber}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCFString'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetCString'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetDouble'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^d'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetEnumType'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^s'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetIndexPMResolution'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{PMResolution=dd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetLockedState'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetMetaItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetPMRect'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetPMResolution'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMResolution=dd}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetPPDDict'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^^{__CFDictionary}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetPString'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetRetainCount'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetSInt32'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetTicket'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetType'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketGetUInt32'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketHasEqualValues'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='PMTicketIsItemLocked'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketLockItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketReadXMLFromFile'>
+    <arg type='^{__CFAllocator=}'/>
+    <arg type='*'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketRelease'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketReleaseAndClear'>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketReleaseItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketRemoveTicket'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketRetain'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetBoolean'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='B'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetBytes'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='*'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCFArray'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFArray=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCFBoolean'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFBoolean=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCFData'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFData=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCFDate'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFDate=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCFDictionary'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCFNumber'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFNumber=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCFString'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCString'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='*'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetCStringArray'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^*'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetDouble'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='d'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetDoubleArray'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^d'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetMetaItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetPMRect'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetPMRectArray'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMRect=dddd}'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetPMResolution'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMResolution=dd}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetPMResolutionArray'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{PMResolution=dd}'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetPString'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='*'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetSInt32'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='l' type64='i'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetSInt32Array'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^i'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetTemplate'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetTicket'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetUInt32'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketSetUInt32Array'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^I'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketToXML'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketToXMLURL'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFURL=}'/>
+    <arg type='i'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketUnlockItem'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketValidate'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{OpaquePMTemplateRef=}'/>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketWriteXML'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMTicketWriteXMLToFile'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMUnflattenPageFormat'>
+    <arg type='^*'/>
+    <arg type='^^{OpaquePMPageFormat}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMUnflattenPageFormatWithCFData'>
+    <arg type='^{__CFData=}'/>
+    <arg type='^^{OpaquePMPageFormat}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMUnflattenPageFormatWithURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{OpaquePMPageFormat}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMUnflattenPrintSettings'>
+    <arg type='^*'/>
+    <arg type='^^{OpaquePMPrintSettings}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMUnflattenPrintSettingsWithCFData'>
+    <arg type='^{__CFData=}'/>
+    <arg type='^^{OpaquePMPrintSettings}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMUnflattenPrintSettingsWithURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{OpaquePMPrintSettings}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMWorkflowCopyItems'>
+    <arg type='^^{__CFArray}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMWorkflowSubmitPDFWithOptions'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='*'/>
+    <arg type='^{__CFURL=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMWorkflowSubmitPDFWithSettings'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^{OpaquePMPrintSettings=}'/>
+    <arg type='^{__CFURL=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMXMLToTicket'>
+    <arg type='^{__CFAllocator=}'/>
+    <arg type='^{__CFData=}'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PMXMLURLToTicket'>
+    <arg type='^{__CFAllocator=}'/>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{OpaquePMTicketRef}'/>
+    <arg type='^i'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PPDAddFeatureEntries'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='PPDAddFeatureEntriesFromPPDContext'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='^{__CFDictionary=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='getUIConstraintListH'>
+    <arg type='^{PPDContextViel=}'/>
+    <retval type='^^{UIConstraintList}'/>
+  </function>
+  <function name='ppdApplyConstraints'>
+    <arg type='^{PPDContextViel=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdCheckConstraints'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='^s'/>
+    <arg type='^s'/>
+    <arg type='^s'/>
+    <arg type='^s'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdCheckDates'>
+    <arg type='^{PPDContextViel=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='ppdClearOptions'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+  </function>
+  <function name='ppdCloseCompiledPPDFromTicket'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='ppdCloseContext'>
+    <arg type='^{PPDContextViel=}'/>
+  </function>
+  <function name='ppdCountUIHeaders'>
+    <arg type='^{PPDContextViel=}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdCountUIOptions'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdCreateInstallableOptionsData'>
+    <arg type='{FSSpec=sl[64C]}' type64='{FSSpec=sq[64C]}'/>
+    <arg type='^*'/>
+    <arg type='^{__CFArray=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='ppdFindFile'>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='*'/>
+    <arg type='B'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetAllOptions'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{PPDContextViel=}'/>
+      <arg type='s'/>
+      <arg type='s'/>
+      <arg type='l' type64='q'/>
+      <retval type='s'/>
+    </arg>
+    <arg type='l' type64='q'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetCompiledPPDData'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^^{__CFData}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='ppdGetFolder'>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetGenericPPDName'>
+    <arg type='*'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetGroupAlias'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetIndUIHeader'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='^{xUIHeader=lsssssss}' type64='^{xUIHeader=qsssssss}'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetIndUIOption'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='^{xUIOption=lssBB{InvocationLocator=issll}}' type64='^{xUIOption=qssBB{InvocationLocator=issqq}}'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetInvocation'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='^{InvocationLocator=issll}' type64='^{InvocationLocator=issqq}'/>
+    <arg type='^l' type64='^q'/>
+    <arg type='^l' type64='^q'/>
+    <arg type='*'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetInvocationFile'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='^{PPDFileSpec={FSSpec=sl[64C]}sl[64C]^^{AliasRecord}}' type64='^{PPDFileSpec={FSSpec=sq[64C]}sq[64C]^^{AliasRecord}}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetInvocationLocator'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='^{InvocationLocator=issll}' type64='^{InvocationLocator=issqq}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetInvocationString'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='*'/>
+    <arg type='s'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetInvocationStruct'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='^v'/>
+    <arg type='s'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetMainAlias'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetMainIndex'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='*'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetMainString'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetMessageTranslateList'>
+    <arg type='^{PPDContextViel=}'/>
+    <retval type='^^{StrList}'/>
+  </function>
+  <function name='ppdGetOptionAlias'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetOptionIndex'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='*'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetOptionString'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetParseFolder'>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetUIHeader'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='^{xUIHeader=lsssssss}' type64='^{xUIHeader=qsssssss}'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdGetUIKeyType'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdGetUIOption'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='^{xUIOption=lssBB{InvocationLocator=issll}}' type64='^{xUIOption=qssBB{InvocationLocator=issqq}}'/>
+    <retval type='B'/>
+  </function>
+  <function name='ppdMatchPrinter'>
+    <arg type='^{PPDPrinterDesc=***B}'/>
+    <arg type='^^^{?}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdOpenAndParsePPDAutoSetup'>
+    <arg type='^{OpaqueCollection=}'/>
+    <arg type='^^{PPDContextViel}'/>
+    <arg type='^s'/>
+    <arg type='^{_PPDParseErr=[256C][256C]l}' type64='^{_PPDParseErr=[256C][256C]q}'/>
+    <arg type='^i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='ppdOpenCompiledPPDFromTicket'>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <arg type='^^{PPDContextViel}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='ppdOpenContext'>
+    <arg type='s'/>
+    <arg type='^^{PPDContextViel}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdParseFile'>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='^{_PPDParseErr=[256C][256C]l}' type64='^{_PPDParseErr=[256C][256C]q}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdParseHandle'>
+    <arg type='^*'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='^{_PPDParseErr=[256C][256C]l}' type64='^{_PPDParseErr=[256C][256C]q}'/>
+    <retval type='s'/>
+  </function>
+  <function name='ppdSetDefaultOptions'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+  </function>
+  <function name='ppdSetSelection'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='s'/>
+    <arg type='s'/>
+    <arg type='B'/>
+    <retval type='s'/>
+  </function>
+  <function name='setInstallableOptions'>
+    <arg type='^{PPDContextViel=}'/>
+    <arg type='^{OpaquePMTicketRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+</signatures>

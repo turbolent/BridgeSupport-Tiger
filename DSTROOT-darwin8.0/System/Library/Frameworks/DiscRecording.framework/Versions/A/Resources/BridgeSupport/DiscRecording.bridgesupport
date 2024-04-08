@@ -1,0 +1,155 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/DiscRecording.framework/Versions/A/Frameworks/DiscRecordingEngine.framework'/>
+  <depends_on path='/System/Library/Frameworks/DiscRecording.framework/Versions/A/Frameworks/DiscRecordingContent.framework'/>
+  <constant name='DRDeviceAppearedNotification' type='@'/>
+  <constant name='DRDeviceBurnSpeedCD1x' type='f'/>
+  <constant name='DRDeviceBurnSpeedDVD1x' type='f'/>
+  <constant name='DRDeviceBurnSpeedMax' type='f'/>
+  <constant name='DRDeviceBurnSpeedsKey' type='@'/>
+  <constant name='DRDeviceCanTestWriteCDKey' type='@'/>
+  <constant name='DRDeviceCanTestWriteDVDKey' type='@'/>
+  <constant name='DRDeviceCanUnderrunProtectCDKey' type='@'/>
+  <constant name='DRDeviceCanUnderrunProtectDVDKey' type='@'/>
+  <constant name='DRDeviceCanWriteCDKey' type='@'/>
+  <constant name='DRDeviceCanWriteCDRKey' type='@'/>
+  <constant name='DRDeviceCanWriteCDRWKey' type='@'/>
+  <constant name='DRDeviceCanWriteCDRawKey' type='@'/>
+  <constant name='DRDeviceCanWriteCDSAOKey' type='@'/>
+  <constant name='DRDeviceCanWriteCDTAOKey' type='@'/>
+  <constant name='DRDeviceCanWriteCDTextKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDDAOKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDPlusRDoubleLayerKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDPlusRKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDPlusRWKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDRAMKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDRKey' type='@'/>
+  <constant name='DRDeviceCanWriteDVDRWKey' type='@'/>
+  <constant name='DRDeviceCanWriteISRCKey' type='@'/>
+  <constant name='DRDeviceCanWriteIndexPointsKey' type='@'/>
+  <constant name='DRDeviceCanWriteKey' type='@'/>
+  <constant name='DRDeviceCurrentWriteSpeedKey' type='@'/>
+  <constant name='DRDeviceDisappearedNotification' type='@'/>
+  <constant name='DRDeviceFirmwareRevisionKey' type='@'/>
+  <constant name='DRDeviceIORegistryEntryPathKey' type='@'/>
+  <constant name='DRDeviceIsBusyKey' type='@'/>
+  <constant name='DRDeviceIsTrayOpenKey' type='@'/>
+  <constant name='DRDeviceLoadingMechanismCanEjectKey' type='@'/>
+  <constant name='DRDeviceLoadingMechanismCanInjectKey' type='@'/>
+  <constant name='DRDeviceLoadingMechanismCanOpenKey' type='@'/>
+  <constant name='DRDeviceMaximumWriteSpeedKey' type='@'/>
+  <constant name='DRDeviceMediaBSDNameKey' type='@'/>
+  <constant name='DRDeviceMediaBlocksFreeKey' type='@'/>
+  <constant name='DRDeviceMediaBlocksOverwritableKey' type='@'/>
+  <constant name='DRDeviceMediaBlocksUsedKey' type='@'/>
+  <constant name='DRDeviceMediaClassCD' type='@'/>
+  <constant name='DRDeviceMediaClassDVD' type='@'/>
+  <constant name='DRDeviceMediaClassKey' type='@'/>
+  <constant name='DRDeviceMediaClassUnknown' type='@'/>
+  <constant name='DRDeviceMediaDoubleLayerL0DataZoneBlocksKey' type='@'/>
+  <constant name='DRDeviceMediaFreeSpaceKey' type='@'/>
+  <constant name='DRDeviceMediaInfoKey' type='@'/>
+  <constant name='DRDeviceMediaIsAppendableKey' type='@'/>
+  <constant name='DRDeviceMediaIsBlankKey' type='@'/>
+  <constant name='DRDeviceMediaIsErasableKey' type='@'/>
+  <constant name='DRDeviceMediaIsOverwritableKey' type='@'/>
+  <constant name='DRDeviceMediaIsReservedKey' type='@'/>
+  <constant name='DRDeviceMediaOverwritableSpaceKey' type='@'/>
+  <constant name='DRDeviceMediaSessionCountKey' type='@'/>
+  <constant name='DRDeviceMediaStateInTransition' type='@'/>
+  <constant name='DRDeviceMediaStateKey' type='@'/>
+  <constant name='DRDeviceMediaStateMediaPresent' type='@'/>
+  <constant name='DRDeviceMediaStateNone' type='@'/>
+  <constant name='DRDeviceMediaTrackCountKey' type='@'/>
+  <constant name='DRDeviceMediaTypeCDR' type='@'/>
+  <constant name='DRDeviceMediaTypeCDROM' type='@'/>
+  <constant name='DRDeviceMediaTypeCDRW' type='@'/>
+  <constant name='DRDeviceMediaTypeDVDPlusR' type='@'/>
+  <constant name='DRDeviceMediaTypeDVDPlusRDoubleLayer' type='@'/>
+  <constant name='DRDeviceMediaTypeDVDPlusRW' type='@'/>
+  <constant name='DRDeviceMediaTypeDVDR' type='@'/>
+  <constant name='DRDeviceMediaTypeDVDRAM' type='@'/>
+  <constant name='DRDeviceMediaTypeDVDROM' type='@'/>
+  <constant name='DRDeviceMediaTypeDVDRW' type='@'/>
+  <constant name='DRDeviceMediaTypeKey' type='@'/>
+  <constant name='DRDeviceMediaTypeUnknown' type='@'/>
+  <constant name='DRDeviceMediaUsedSpaceKey' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectATAPI' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectFibreChannel' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectFireWire' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectKey' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectLocationExternal' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectLocationInternal' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectLocationKey' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectLocationUnknown' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectSCSI' type='@'/>
+  <constant name='DRDevicePhysicalInterconnectUSB' type='@'/>
+  <constant name='DRDeviceProductNameKey' type='@'/>
+  <constant name='DRDeviceStatusChangedNotification' type='@'/>
+  <constant name='DRDeviceSupportLevelAppleShipping' type='@'/>
+  <constant name='DRDeviceSupportLevelAppleSupported' type='@'/>
+  <constant name='DRDeviceSupportLevelKey' type='@'/>
+  <constant name='DRDeviceSupportLevelNone' type='@'/>
+  <constant name='DRDeviceSupportLevelUnsupported' type='@'/>
+  <constant name='DRDeviceSupportLevelVendorSupported' type='@'/>
+  <constant name='DRDeviceTrackInfoKey' type='@'/>
+  <constant name='DRDeviceTrackRefsKey' type='@'/>
+  <constant name='DRDeviceVendorNameKey' type='@'/>
+  <constant name='DRDeviceWriteBufferSizeKey' type='@'/>
+  <constant name='DRDeviceWriteCapabilitiesKey' type='@'/>
+  <class name='DRDevice'>
+    <method selector='acquireExclusiveAccess'>
+      <retval type='B'/>
+    </method>
+    <method selector='closeTray'>
+      <retval type='B'/>
+    </method>
+    <method selector='ejectMedia'>
+      <retval type='B'/>
+    </method>
+    <method selector='isEqualToDevice:'>
+      <retval type='B'/>
+    </method>
+    <method selector='isValid'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsAppendable'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsBlank'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsBusy'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsErasable'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsOverwritable'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsPresent'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsReserved'>
+      <retval type='B'/>
+    </method>
+    <method selector='mediaIsTransitioning'>
+      <retval type='B'/>
+    </method>
+    <method selector='openTray'>
+      <retval type='B'/>
+    </method>
+    <method selector='trayIsOpen'>
+      <retval type='B'/>
+    </method>
+    <method selector='writesCD'>
+      <retval type='B'/>
+    </method>
+    <method selector='writesDVD'>
+      <retval type='B'/>
+    </method>
+  </class>
+</signatures>

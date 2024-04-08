@@ -1,0 +1,456 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+  <struct name='LSApplicationParameters' type='{LSApplicationParameters=&quot;version&quot;i&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}'/>
+  <struct name='LSItemInfoRecord' type='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}&quot;iconFileName&quot;^{__CFString}&quot;kindID&quot;I}'/>
+  <struct name='LSLaunchFSRefSpec' type='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;I&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'/>
+  <struct name='LSLaunchURLSpec' type='{LSLaunchURLSpec=&quot;appURL&quot;^{__CFURL}&quot;itemURLs&quot;^{__CFArray}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'/>
+  <constant name='kLSItemContentType' type='^{__CFString=}'/>
+  <constant name='kLSItemDisplayKind' type='^{__CFString=}'/>
+  <constant name='kLSItemDisplayName' type='^{__CFString=}'/>
+  <constant name='kLSItemExtension' type='^{__CFString=}'/>
+  <constant name='kLSItemExtensionIsHidden' type='^{__CFString=}'/>
+  <constant name='kLSItemFileCreator' type='^{__CFString=}'/>
+  <constant name='kLSItemFileType' type='^{__CFString=}'/>
+  <constant name='kLSItemIsInvisible' type='^{__CFString=}'/>
+  <constant name='kLSItemRoleHandlerDisplayName' type='^{__CFString=}'/>
+  <constant name='kUTExportedTypeDeclarationsKey' type='^{__CFString=}'/>
+  <constant name='kUTImportedTypeDeclarationsKey' type='^{__CFString=}'/>
+  <constant name='kUTTagClassFilenameExtension' type='^{__CFString=}'/>
+  <constant name='kUTTagClassMIMEType' type='^{__CFString=}'/>
+  <constant name='kUTTagClassNSPboardType' type='^{__CFString=}'/>
+  <constant name='kUTTagClassOSType' type='^{__CFString=}'/>
+  <constant name='kUTTypeAliasFile' type='^{__CFString=}'/>
+  <constant name='kUTTypeAliasRecord' type='^{__CFString=}'/>
+  <constant name='kUTTypeAppleICNS' type='^{__CFString=}'/>
+  <constant name='kUTTypeAppleProtectedMPEG4Audio' type='^{__CFString=}'/>
+  <constant name='kUTTypeApplication' type='^{__CFString=}'/>
+  <constant name='kUTTypeApplicationBundle' type='^{__CFString=}'/>
+  <constant name='kUTTypeApplicationFile' type='^{__CFString=}'/>
+  <constant name='kUTTypeArchive' type='^{__CFString=}'/>
+  <constant name='kUTTypeAudio' type='^{__CFString=}'/>
+  <constant name='kUTTypeAudiovisualContent' type='^{__CFString=}'/>
+  <constant name='kUTTypeBMP' type='^{__CFString=}'/>
+  <constant name='kUTTypeBundle' type='^{__CFString=}'/>
+  <constant name='kUTTypeCHeader' type='^{__CFString=}'/>
+  <constant name='kUTTypeCPlusPlusHeader' type='^{__CFString=}'/>
+  <constant name='kUTTypeCPlusPlusSource' type='^{__CFString=}'/>
+  <constant name='kUTTypeCSource' type='^{__CFString=}'/>
+  <constant name='kUTTypeCompositeContent' type='^{__CFString=}'/>
+  <constant name='kUTTypeConformsToKey' type='^{__CFString=}'/>
+  <constant name='kUTTypeContact' type='^{__CFString=}'/>
+  <constant name='kUTTypeContent' type='^{__CFString=}'/>
+  <constant name='kUTTypeData' type='^{__CFString=}'/>
+  <constant name='kUTTypeDescriptionKey' type='^{__CFString=}'/>
+  <constant name='kUTTypeDirectory' type='^{__CFString=}'/>
+  <constant name='kUTTypeDiskImage' type='^{__CFString=}'/>
+  <constant name='kUTTypeFileURL' type='^{__CFString=}'/>
+  <constant name='kUTTypeFlatRTFD' type='^{__CFString=}'/>
+  <constant name='kUTTypeFolder' type='^{__CFString=}'/>
+  <constant name='kUTTypeFramework' type='^{__CFString=}'/>
+  <constant name='kUTTypeGIF' type='^{__CFString=}'/>
+  <constant name='kUTTypeHTML' type='^{__CFString=}'/>
+  <constant name='kUTTypeICO' type='^{__CFString=}'/>
+  <constant name='kUTTypeIconFileKey' type='^{__CFString=}'/>
+  <constant name='kUTTypeIdentifierKey' type='^{__CFString=}'/>
+  <constant name='kUTTypeImage' type='^{__CFString=}'/>
+  <constant name='kUTTypeInkText' type='^{__CFString=}'/>
+  <constant name='kUTTypeItem' type='^{__CFString=}'/>
+  <constant name='kUTTypeJPEG' type='^{__CFString=}'/>
+  <constant name='kUTTypeJPEG2000' type='^{__CFString=}'/>
+  <constant name='kUTTypeJavaSource' type='^{__CFString=}'/>
+  <constant name='kUTTypeMP3' type='^{__CFString=}'/>
+  <constant name='kUTTypeMPEG' type='^{__CFString=}'/>
+  <constant name='kUTTypeMPEG4' type='^{__CFString=}'/>
+  <constant name='kUTTypeMPEG4Audio' type='^{__CFString=}'/>
+  <constant name='kUTTypeMessage' type='^{__CFString=}'/>
+  <constant name='kUTTypeMountPoint' type='^{__CFString=}'/>
+  <constant name='kUTTypeMovie' type='^{__CFString=}'/>
+  <constant name='kUTTypeObjectiveCPlusPlusSource' type='^{__CFString=}'/>
+  <constant name='kUTTypeObjectiveCSource' type='^{__CFString=}'/>
+  <constant name='kUTTypePDF' type='^{__CFString=}'/>
+  <constant name='kUTTypePICT' type='^{__CFString=}'/>
+  <constant name='kUTTypePNG' type='^{__CFString=}'/>
+  <constant name='kUTTypePackage' type='^{__CFString=}'/>
+  <constant name='kUTTypePlainText' type='^{__CFString=}'/>
+  <constant name='kUTTypeQuickTimeImage' type='^{__CFString=}'/>
+  <constant name='kUTTypeQuickTimeMovie' type='^{__CFString=}'/>
+  <constant name='kUTTypeRTF' type='^{__CFString=}'/>
+  <constant name='kUTTypeRTFD' type='^{__CFString=}'/>
+  <constant name='kUTTypeReferenceURLKey' type='^{__CFString=}'/>
+  <constant name='kUTTypeResolvable' type='^{__CFString=}'/>
+  <constant name='kUTTypeSourceCode' type='^{__CFString=}'/>
+  <constant name='kUTTypeSymLink' type='^{__CFString=}'/>
+  <constant name='kUTTypeTIFF' type='^{__CFString=}'/>
+  <constant name='kUTTypeTXNTextAndMultimediaData' type='^{__CFString=}'/>
+  <constant name='kUTTypeTagSpecificationKey' type='^{__CFString=}'/>
+  <constant name='kUTTypeText' type='^{__CFString=}'/>
+  <constant name='kUTTypeURL' type='^{__CFString=}'/>
+  <constant name='kUTTypeUTF16ExternalPlainText' type='^{__CFString=}'/>
+  <constant name='kUTTypeUTF16PlainText' type='^{__CFString=}'/>
+  <constant name='kUTTypeUTF8PlainText' type='^{__CFString=}'/>
+  <constant name='kUTTypeVCard' type='^{__CFString=}'/>
+  <constant name='kUTTypeVersionKey' type='^{__CFString=}'/>
+  <constant name='kUTTypeVideo' type='^{__CFString=}'/>
+  <constant name='kUTTypeVolume' type='^{__CFString=}'/>
+  <constant name='kUTTypeWebArchive' type='^{__CFString=}'/>
+  <constant name='kUTTypeXML' type='^{__CFString=}'/>
+  <enum name='kLSAcceptAllowLoginUI' value='2'/>
+  <enum name='kLSAcceptDefault' value='1'/>
+  <enum name='kLSAppDoesNotClaimTypeErr' value='-10820'/>
+  <enum name='kLSAppDoesNotSupportSchemeWarning' value='-10821'/>
+  <enum name='kLSAppInTrashErr' value='-10660'/>
+  <enum name='kLSApplicationNotFoundErr' value='-10814'/>
+  <enum name='kLSCannotSetInfoErr' value='-10823'/>
+  <enum name='kLSDataErr' value='-10817'/>
+  <enum name='kLSDataTooOldErr' value='-10816'/>
+  <enum name='kLSDataUnavailableErr' value='-10813'/>
+  <enum name='kLSExecutableIncorrectFormat' value='-10661'/>
+  <enum name='kLSHandlerOptionsDefault' value='0'/>
+  <enum name='kLSHandlerOptionsIgnoreCreator' value='1'/>
+  <enum name='kLSIncompatibleSystemVersionErr' value='-10825'/>
+  <enum name='kLSInitializeDefaults' value='1'/>
+  <enum name='kLSInvalidExtensionIndex' value='4294967295'/>
+  <enum name='kLSItemInfoAppIsScriptable' value='2048'/>
+  <enum name='kLSItemInfoAppPrefersClassic' value='1024'/>
+  <enum name='kLSItemInfoAppPrefersNative' value='512'/>
+  <enum name='kLSItemInfoExtensionIsHidden' value='1048576'/>
+  <enum name='kLSItemInfoIsAliasFile' value='16'/>
+  <enum name='kLSItemInfoIsApplication' value='4'/>
+  <enum name='kLSItemInfoIsClassicApp' value='256'/>
+  <enum name='kLSItemInfoIsContainer' value='8'/>
+  <enum name='kLSItemInfoIsInvisible' value='64'/>
+  <enum name='kLSItemInfoIsNativeApp' value='128'/>
+  <enum name='kLSItemInfoIsPackage' value='2'/>
+  <enum name='kLSItemInfoIsPlainFile' value='1'/>
+  <enum name='kLSItemInfoIsSymlink' value='32'/>
+  <enum name='kLSItemInfoIsVolume' value='4096'/>
+  <enum name='kLSLaunchAndDisplayErrors' value='64'/>
+  <enum name='kLSLaunchAndHide' value='1048576'/>
+  <enum name='kLSLaunchAndHideOthers' value='2097152'/>
+  <enum name='kLSLaunchAndPrint' value='2'/>
+  <enum name='kLSLaunchAsync' value='65536'/>
+  <enum name='kLSLaunchDefaults' value='1'/>
+  <enum name='kLSLaunchDontAddToRecents' value='256'/>
+  <enum name='kLSLaunchDontSwitch' value='512'/>
+  <enum name='kLSLaunchHasUntrustedContents' value='4194304'/>
+  <enum name='kLSLaunchInClassic' value='262144'/>
+  <enum name='kLSLaunchInProgressErr' value='-10818'/>
+  <enum name='kLSLaunchInhibitBGOnly' value='128'/>
+  <enum name='kLSLaunchNewInstance' value='524288'/>
+  <enum name='kLSLaunchNoParams' value='2048'/>
+  <enum name='kLSLaunchReserved2' value='4'/>
+  <enum name='kLSLaunchReserved3' value='8'/>
+  <enum name='kLSLaunchReserved4' value='16'/>
+  <enum name='kLSLaunchReserved5' value='32'/>
+  <enum name='kLSLaunchStartClassic' value='131072'/>
+  <enum name='kLSMinCatInfoBitmap' value='6154'/>
+  <enum name='kLSMultipleSessionsNotSupportedErr' value='-10829'/>
+  <enum name='kLSNoClassicEnvironmentErr' value='-10828'/>
+  <enum name='kLSNoExecutableErr' value='-10827'/>
+  <enum name='kLSNoLaunchPermissionErr' value='-10826'/>
+  <enum name='kLSNoRegistrationInfoErr' value='-10824'/>
+  <enum name='kLSNotAnApplicationErr' value='-10811'/>
+  <enum name='kLSNotInitializedErr' value='-10812'/>
+  <enum name='kLSNotRegisteredErr' value='-10819'/>
+  <enum name='kLSRequestAllFlags' value='16'/>
+  <enum name='kLSRequestAllInfo' value='4294967295'/>
+  <enum name='kLSRequestAppTypeFlags' value='8'/>
+  <enum name='kLSRequestBasicFlagsOnly' value='4'/>
+  <enum name='kLSRequestExtension' value='1'/>
+  <enum name='kLSRequestExtensionFlagsOnly' value='64'/>
+  <enum name='kLSRequestIconAndKind' value='32'/>
+  <enum name='kLSRequestTypeCreator' value='2'/>
+  <enum name='kLSRolesAll' value='4294967295'/>
+  <enum name='kLSRolesEditor' value='4'/>
+  <enum name='kLSRolesNone' value='1'/>
+  <enum name='kLSRolesShell' value='8'/>
+  <enum name='kLSRolesViewer' value='2'/>
+  <enum name='kLSServerCommunicationErr' value='-10822'/>
+  <enum name='kLSUnknownCreator' value='0'/>
+  <enum name='kLSUnknownErr' value='-10810'/>
+  <enum name='kLSUnknownKindID' value='0'/>
+  <enum name='kLSUnknownType' value='0'/>
+  <enum name='kLSUnknownTypeErr' value='-10815'/>
+  <function name='LSCanRefAcceptItem'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCanURLAcceptURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^{__CFURL=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyAllHandlersForURLScheme'>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFArray=}'/>
+  </function>
+  <function name='LSCopyAllRoleHandlersForContentType'>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{__CFArray=}'/>
+  </function>
+  <function name='LSCopyApplicationForMIMEType'>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyApplicationURLsForURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{__CFArray=}'/>
+  </function>
+  <function name='LSCopyDefaultHandlerForURLScheme'>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='LSCopyDefaultRoleHandlerForContentType'>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='LSCopyDisplayNameForRef'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyDisplayNameForURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyItemAttribute'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyItemAttributes'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFArray=}'/>
+    <arg type='^^{__CFDictionary}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyItemInfoForRef'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyItemInfoForURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyKindStringForMIMEType'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyKindStringForRef'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyKindStringForTypeInfo'>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSCopyKindStringForURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{__CFString}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSFindApplicationForInfo'>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSGetApplicationForInfo'>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSGetApplicationForItem'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSGetApplicationForURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSGetExtensionInfo'>
+    <arg type='L' type64='I'/>
+    <arg type='^S'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSGetHandlerOptionsForContentType'>
+    <arg type='^{__CFString=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='LSInit'>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSOpenApplication'>
+    <arg type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+    <arg type='^{ProcessSerialNumber=II}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSOpenCFURLRef'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSOpenFSRef'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='^{FSRef=[80C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSOpenFromRefSpec'>
+    <arg type='^{LSLaunchFSRefSpec=^{FSRef}I^{FSRef}^{AEDesc}I^v}'/>
+    <arg type='^{FSRef=[80C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSOpenFromURLSpec'>
+    <arg type='^{LSLaunchURLSpec=^{__CFURL}^{__CFArray}^{AEDesc}I^v}'/>
+    <arg type='^^{__CFURL}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSOpenItemsWithRole'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='l' type64='i'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
+    <arg type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+    <arg type='^{ProcessSerialNumber=II}'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSOpenURLsWithRole'>
+    <arg type='^{__CFArray=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
+    <arg type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+    <arg type='^{ProcessSerialNumber=II}'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSRegisterFSRef'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSRegisterURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSSetDefaultHandlerForURLScheme'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSSetDefaultRoleHandlerForContentType'>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSSetExtensionHiddenForRef'>
+    <arg type='^{FSRef=[80C]}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSSetExtensionHiddenForURL'>
+    <arg type='^{__CFURL=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSSetHandlerOptionsForContentType'>
+    <arg type='^{__CFString=}'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LSTerm'>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='UTCreateStringForOSType'>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='UTGetOSTypeFromString'>
+    <arg type='^{__CFString=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='UTTypeConformsTo'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='B'/>
+  </function>
+  <function name='UTTypeCopyDeclaration'>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='UTTypeCopyDeclaringBundleURL'>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFURL=}'/>
+  </function>
+  <function name='UTTypeCopyDescription'>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='UTTypeCopyPreferredTagWithClass'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='UTTypeCreateAllIdentifiersForTag'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFArray=}'/>
+  </function>
+  <function name='UTTypeCreatePreferredIdentifierForTag'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='UTTypeEqual'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <retval type='B'/>
+  </function>
+</signatures>

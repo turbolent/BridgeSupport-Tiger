@@ -1,0 +1,2994 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <struct name='TclPlatStubs' type='{TclPlatStubs=&quot;magic&quot;i&quot;hooks&quot;^{TclPlatStubHooks}}'/>
+  <struct name='TclStubHooks' type='{TclStubHooks=&quot;tclPlatStubs&quot;^{TclPlatStubs}&quot;tclIntStubs&quot;^{TclIntStubs}&quot;tclIntPlatStubs&quot;^{TclIntPlatStubs}}'/>
+  <struct name='TclStubs' type='{TclStubs=&quot;magic&quot;i&quot;hooks&quot;^{TclStubHooks}&quot;tcl_PkgProvideEx&quot;^?&quot;tcl_PkgRequireEx&quot;^?&quot;tcl_Panic&quot;^?&quot;tcl_Alloc&quot;^?&quot;tcl_Free&quot;^?&quot;tcl_Realloc&quot;^?&quot;tcl_DbCkalloc&quot;^?&quot;tcl_DbCkfree&quot;^?&quot;tcl_DbCkrealloc&quot;^?&quot;tcl_CreateFileHandler&quot;^?&quot;tcl_DeleteFileHandler&quot;^?&quot;tcl_SetTimer&quot;^?&quot;tcl_Sleep&quot;^?&quot;tcl_WaitForEvent&quot;^?&quot;tcl_AppendAllObjTypes&quot;^?&quot;tcl_AppendStringsToObj&quot;^?&quot;tcl_AppendToObj&quot;^?&quot;tcl_ConcatObj&quot;^?&quot;tcl_ConvertToType&quot;^?&quot;tcl_DbDecrRefCount&quot;^?&quot;tcl_DbIncrRefCount&quot;^?&quot;tcl_DbIsShared&quot;^?&quot;tcl_DbNewBooleanObj&quot;^?&quot;tcl_DbNewByteArrayObj&quot;^?&quot;tcl_DbNewDoubleObj&quot;^?&quot;tcl_DbNewListObj&quot;^?&quot;tcl_DbNewLongObj&quot;^?&quot;tcl_DbNewObj&quot;^?&quot;tcl_DbNewStringObj&quot;^?&quot;tcl_DuplicateObj&quot;^?&quot;tclFreeObj&quot;^?&quot;tcl_GetBoolean&quot;^?&quot;tcl_GetBooleanFromObj&quot;^?&quot;tcl_GetByteArrayFromObj&quot;^?&quot;tcl_GetDouble&quot;^?&quot;tcl_GetDoubleFromObj&quot;^?&quot;tcl_GetIndexFromObj&quot;^?&quot;tcl_GetInt&quot;^?&quot;tcl_GetIntFromObj&quot;^?&quot;tcl_GetLongFromObj&quot;^?&quot;tcl_GetObjType&quot;^?&quot;tcl_GetStringFromObj&quot;^?&quot;tcl_InvalidateStringRep&quot;^?&quot;tcl_ListObjAppendList&quot;^?&quot;tcl_ListObjAppendElement&quot;^?&quot;tcl_ListObjGetElements&quot;^?&quot;tcl_ListObjIndex&quot;^?&quot;tcl_ListObjLength&quot;^?&quot;tcl_ListObjReplace&quot;^?&quot;tcl_NewBooleanObj&quot;^?&quot;tcl_NewByteArrayObj&quot;^?&quot;tcl_NewDoubleObj&quot;^?&quot;tcl_NewIntObj&quot;^?&quot;tcl_NewListObj&quot;^?&quot;tcl_NewLongObj&quot;^?&quot;tcl_NewObj&quot;^?&quot;tcl_NewStringObj&quot;^?&quot;tcl_SetBooleanObj&quot;^?&quot;tcl_SetByteArrayLength&quot;^?&quot;tcl_SetByteArrayObj&quot;^?&quot;tcl_SetDoubleObj&quot;^?&quot;tcl_SetIntObj&quot;^?&quot;tcl_SetListObj&quot;^?&quot;tcl_SetLongObj&quot;^?&quot;tcl_SetObjLength&quot;^?&quot;tcl_SetStringObj&quot;^?&quot;tcl_AddErrorInfo&quot;^?&quot;tcl_AddObjErrorInfo&quot;^?&quot;tcl_AllowExceptions&quot;^?&quot;tcl_AppendElement&quot;^?&quot;tcl_AppendResult&quot;^?&quot;tcl_AsyncCreate&quot;^?&quot;tcl_AsyncDelete&quot;^?&quot;tcl_AsyncInvoke&quot;^?&quot;tcl_AsyncMark&quot;^?&quot;tcl_AsyncReady&quot;^?&quot;tcl_BackgroundError&quot;^?&quot;tcl_Backslash&quot;^?&quot;tcl_BadChannelOption&quot;^?&quot;tcl_CallWhenDeleted&quot;^?&quot;tcl_CancelIdleCall&quot;^?&quot;tcl_Close&quot;^?&quot;tcl_CommandComplete&quot;^?&quot;tcl_Concat&quot;^?&quot;tcl_ConvertElement&quot;^?&quot;tcl_ConvertCountedElement&quot;^?&quot;tcl_CreateAlias&quot;^?&quot;tcl_CreateAliasObj&quot;^?&quot;tcl_CreateChannel&quot;^?&quot;tcl_CreateChannelHandler&quot;^?&quot;tcl_CreateCloseHandler&quot;^?&quot;tcl_CreateCommand&quot;^?&quot;tcl_CreateEventSource&quot;^?&quot;tcl_CreateExitHandler&quot;^?&quot;tcl_CreateInterp&quot;^?&quot;tcl_CreateMathFunc&quot;^?&quot;tcl_CreateObjCommand&quot;^?&quot;tcl_CreateSlave&quot;^?&quot;tcl_CreateTimerHandler&quot;^?&quot;tcl_CreateTrace&quot;^?&quot;tcl_DeleteAssocData&quot;^?&quot;tcl_DeleteChannelHandler&quot;^?&quot;tcl_DeleteCloseHandler&quot;^?&quot;tcl_DeleteCommand&quot;^?&quot;tcl_DeleteCommandFromToken&quot;^?&quot;tcl_DeleteEvents&quot;^?&quot;tcl_DeleteEventSource&quot;^?&quot;tcl_DeleteExitHandler&quot;^?&quot;tcl_DeleteHashEntry&quot;^?&quot;tcl_DeleteHashTable&quot;^?&quot;tcl_DeleteInterp&quot;^?&quot;tcl_DetachPids&quot;^?&quot;tcl_DeleteTimerHandler&quot;^?&quot;tcl_DeleteTrace&quot;^?&quot;tcl_DontCallWhenDeleted&quot;^?&quot;tcl_DoOneEvent&quot;^?&quot;tcl_DoWhenIdle&quot;^?&quot;tcl_DStringAppend&quot;^?&quot;tcl_DStringAppendElement&quot;^?&quot;tcl_DStringEndSublist&quot;^?&quot;tcl_DStringFree&quot;^?&quot;tcl_DStringGetResult&quot;^?&quot;tcl_DStringInit&quot;^?&quot;tcl_DStringResult&quot;^?&quot;tcl_DStringSetLength&quot;^?&quot;tcl_DStringStartSublist&quot;^?&quot;tcl_Eof&quot;^?&quot;tcl_ErrnoId&quot;^?&quot;tcl_ErrnoMsg&quot;^?&quot;tcl_Eval&quot;^?&quot;tcl_EvalFile&quot;^?&quot;tcl_EvalObj&quot;^?&quot;tcl_EventuallyFree&quot;^?&quot;tcl_Exit&quot;^?&quot;tcl_ExposeCommand&quot;^?&quot;tcl_ExprBoolean&quot;^?&quot;tcl_ExprBooleanObj&quot;^?&quot;tcl_ExprDouble&quot;^?&quot;tcl_ExprDoubleObj&quot;^?&quot;tcl_ExprLong&quot;^?&quot;tcl_ExprLongObj&quot;^?&quot;tcl_ExprObj&quot;^?&quot;tcl_ExprString&quot;^?&quot;tcl_Finalize&quot;^?&quot;tcl_FindExecutable&quot;^?&quot;tcl_FirstHashEntry&quot;^?&quot;tcl_Flush&quot;^?&quot;tcl_FreeResult&quot;^?&quot;tcl_GetAlias&quot;^?&quot;tcl_GetAliasObj&quot;^?&quot;tcl_GetAssocData&quot;^?&quot;tcl_GetChannel&quot;^?&quot;tcl_GetChannelBufferSize&quot;^?&quot;tcl_GetChannelHandle&quot;^?&quot;tcl_GetChannelInstanceData&quot;^?&quot;tcl_GetChannelMode&quot;^?&quot;tcl_GetChannelName&quot;^?&quot;tcl_GetChannelOption&quot;^?&quot;tcl_GetChannelType&quot;^?&quot;tcl_GetCommandInfo&quot;^?&quot;tcl_GetCommandName&quot;^?&quot;tcl_GetErrno&quot;^?&quot;tcl_GetHostName&quot;^?&quot;tcl_GetInterpPath&quot;^?&quot;tcl_GetMaster&quot;^?&quot;tcl_GetNameOfExecutable&quot;^?&quot;tcl_GetObjResult&quot;^?&quot;tcl_GetOpenFile&quot;^?&quot;tcl_GetPathType&quot;^?&quot;tcl_Gets&quot;^?&quot;tcl_GetsObj&quot;^?&quot;tcl_GetServiceMode&quot;^?&quot;tcl_GetSlave&quot;^?&quot;tcl_GetStdChannel&quot;^?&quot;tcl_GetStringResult&quot;^?&quot;tcl_GetVar&quot;^?&quot;tcl_GetVar2&quot;^?&quot;tcl_GlobalEval&quot;^?&quot;tcl_GlobalEvalObj&quot;^?&quot;tcl_HideCommand&quot;^?&quot;tcl_Init&quot;^?&quot;tcl_InitHashTable&quot;^?&quot;tcl_InputBlocked&quot;^?&quot;tcl_InputBuffered&quot;^?&quot;tcl_InterpDeleted&quot;^?&quot;tcl_IsSafe&quot;^?&quot;tcl_JoinPath&quot;^?&quot;tcl_LinkVar&quot;^?&quot;reserved188&quot;^v&quot;tcl_MakeFileChannel&quot;^?&quot;tcl_MakeSafe&quot;^?&quot;tcl_MakeTcpClientChannel&quot;^?&quot;tcl_Merge&quot;^?&quot;tcl_NextHashEntry&quot;^?&quot;tcl_NotifyChannel&quot;^?&quot;tcl_ObjGetVar2&quot;^?&quot;tcl_ObjSetVar2&quot;^?&quot;tcl_OpenCommandChannel&quot;^?&quot;tcl_OpenFileChannel&quot;^?&quot;tcl_OpenTcpClient&quot;^?&quot;tcl_OpenTcpServer&quot;^?&quot;tcl_Preserve&quot;^?&quot;tcl_PrintDouble&quot;^?&quot;tcl_PutEnv&quot;^?&quot;tcl_PosixError&quot;^?&quot;tcl_QueueEvent&quot;^?&quot;tcl_Read&quot;^?&quot;tcl_ReapDetachedProcs&quot;^?&quot;tcl_RecordAndEval&quot;^?&quot;tcl_RecordAndEvalObj&quot;^?&quot;tcl_RegisterChannel&quot;^?&quot;tcl_RegisterObjType&quot;^?&quot;tcl_RegExpCompile&quot;^?&quot;tcl_RegExpExec&quot;^?&quot;tcl_RegExpMatch&quot;^?&quot;tcl_RegExpRange&quot;^?&quot;tcl_Release&quot;^?&quot;tcl_ResetResult&quot;^?&quot;tcl_ScanElement&quot;^?&quot;tcl_ScanCountedElement&quot;^?&quot;tcl_SeekOld&quot;^?&quot;tcl_ServiceAll&quot;^?&quot;tcl_ServiceEvent&quot;^?&quot;tcl_SetAssocData&quot;^?&quot;tcl_SetChannelBufferSize&quot;^?&quot;tcl_SetChannelOption&quot;^?&quot;tcl_SetCommandInfo&quot;^?&quot;tcl_SetErrno&quot;^?&quot;tcl_SetErrorCode&quot;^?&quot;tcl_SetMaxBlockTime&quot;^?&quot;tcl_SetPanicProc&quot;^?&quot;tcl_SetRecursionLimit&quot;^?&quot;tcl_SetResult&quot;^?&quot;tcl_SetServiceMode&quot;^?&quot;tcl_SetObjErrorCode&quot;^?&quot;tcl_SetObjResult&quot;^?&quot;tcl_SetStdChannel&quot;^?&quot;tcl_SetVar&quot;^?&quot;tcl_SetVar2&quot;^?&quot;tcl_SignalId&quot;^?&quot;tcl_SignalMsg&quot;^?&quot;tcl_SourceRCFile&quot;^?&quot;tcl_SplitList&quot;^?&quot;tcl_SplitPath&quot;^?&quot;tcl_StaticPackage&quot;^?&quot;tcl_StringMatch&quot;^?&quot;tcl_TellOld&quot;^?&quot;tcl_TraceVar&quot;^?&quot;tcl_TraceVar2&quot;^?&quot;tcl_TranslateFileName&quot;^?&quot;tcl_Ungets&quot;^?&quot;tcl_UnlinkVar&quot;^?&quot;tcl_UnregisterChannel&quot;^?&quot;tcl_UnsetVar&quot;^?&quot;tcl_UnsetVar2&quot;^?&quot;tcl_UntraceVar&quot;^?&quot;tcl_UntraceVar2&quot;^?&quot;tcl_UpdateLinkedVar&quot;^?&quot;tcl_UpVar&quot;^?&quot;tcl_UpVar2&quot;^?&quot;tcl_VarEval&quot;^?&quot;tcl_VarTraceInfo&quot;^?&quot;tcl_VarTraceInfo2&quot;^?&quot;tcl_Write&quot;^?&quot;tcl_WrongNumArgs&quot;^?&quot;tcl_DumpActiveMemory&quot;^?&quot;tcl_ValidateAllMemory&quot;^?&quot;tcl_AppendResultVA&quot;^?&quot;tcl_AppendStringsToObjVA&quot;^?&quot;tcl_HashStats&quot;^?&quot;tcl_ParseVar&quot;^?&quot;tcl_PkgPresent&quot;^?&quot;tcl_PkgPresentEx&quot;^?&quot;tcl_PkgProvide&quot;^?&quot;tcl_PkgRequire&quot;^?&quot;tcl_SetErrorCodeVA&quot;^?&quot;tcl_VarEvalVA&quot;^?&quot;tcl_WaitPid&quot;^?&quot;tcl_PanicVA&quot;^?&quot;tcl_GetVersion&quot;^?&quot;tcl_InitMemory&quot;^?&quot;tcl_StackChannel&quot;^?&quot;tcl_UnstackChannel&quot;^?&quot;tcl_GetStackedChannel&quot;^?&quot;tcl_SetMainLoop&quot;^?&quot;reserved285&quot;^v&quot;tcl_AppendObjToObj&quot;^?&quot;tcl_CreateEncoding&quot;^?&quot;tcl_CreateThreadExitHandler&quot;^?&quot;tcl_DeleteThreadExitHandler&quot;^?&quot;tcl_DiscardResult&quot;^?&quot;tcl_EvalEx&quot;^?&quot;tcl_EvalObjv&quot;^?&quot;tcl_EvalObjEx&quot;^?&quot;tcl_ExitThread&quot;^?&quot;tcl_ExternalToUtf&quot;^?&quot;tcl_ExternalToUtfDString&quot;^?&quot;tcl_FinalizeThread&quot;^?&quot;tcl_FinalizeNotifier&quot;^?&quot;tcl_FreeEncoding&quot;^?&quot;tcl_GetCurrentThread&quot;^?&quot;tcl_GetEncoding&quot;^?&quot;tcl_GetEncodingName&quot;^?&quot;tcl_GetEncodingNames&quot;^?&quot;tcl_GetIndexFromObjStruct&quot;^?&quot;tcl_GetThreadData&quot;^?&quot;tcl_GetVar2Ex&quot;^?&quot;tcl_InitNotifier&quot;^?&quot;tcl_MutexLock&quot;^?&quot;tcl_MutexUnlock&quot;^?&quot;tcl_ConditionNotify&quot;^?&quot;tcl_ConditionWait&quot;^?&quot;tcl_NumUtfChars&quot;^?&quot;tcl_ReadChars&quot;^?&quot;tcl_RestoreResult&quot;^?&quot;tcl_SaveResult&quot;^?&quot;tcl_SetSystemEncoding&quot;^?&quot;tcl_SetVar2Ex&quot;^?&quot;tcl_ThreadAlert&quot;^?&quot;tcl_ThreadQueueEvent&quot;^?&quot;tcl_UniCharAtIndex&quot;^?&quot;tcl_UniCharToLower&quot;^?&quot;tcl_UniCharToTitle&quot;^?&quot;tcl_UniCharToUpper&quot;^?&quot;tcl_UniCharToUtf&quot;^?&quot;tcl_UtfAtIndex&quot;^?&quot;tcl_UtfCharComplete&quot;^?&quot;tcl_UtfBackslash&quot;^?&quot;tcl_UtfFindFirst&quot;^?&quot;tcl_UtfFindLast&quot;^?&quot;tcl_UtfNext&quot;^?&quot;tcl_UtfPrev&quot;^?&quot;tcl_UtfToExternal&quot;^?&quot;tcl_UtfToExternalDString&quot;^?&quot;tcl_UtfToLower&quot;^?&quot;tcl_UtfToTitle&quot;^?&quot;tcl_UtfToUniChar&quot;^?&quot;tcl_UtfToUpper&quot;^?&quot;tcl_WriteChars&quot;^?&quot;tcl_WriteObj&quot;^?&quot;tcl_GetString&quot;^?&quot;tcl_GetDefaultEncodingDir&quot;^?&quot;tcl_SetDefaultEncodingDir&quot;^?&quot;tcl_AlertNotifier&quot;^?&quot;tcl_ServiceModeHook&quot;^?&quot;tcl_UniCharIsAlnum&quot;^?&quot;tcl_UniCharIsAlpha&quot;^?&quot;tcl_UniCharIsDigit&quot;^?&quot;tcl_UniCharIsLower&quot;^?&quot;tcl_UniCharIsSpace&quot;^?&quot;tcl_UniCharIsUpper&quot;^?&quot;tcl_UniCharIsWordChar&quot;^?&quot;tcl_UniCharLen&quot;^?&quot;tcl_UniCharNcmp&quot;^?&quot;tcl_UniCharToUtfDString&quot;^?&quot;tcl_UtfToUniCharDString&quot;^?&quot;tcl_GetRegExpFromObj&quot;^?&quot;tcl_EvalTokens&quot;^?&quot;tcl_FreeParse&quot;^?&quot;tcl_LogCommandInfo&quot;^?&quot;tcl_ParseBraces&quot;^?&quot;tcl_ParseCommand&quot;^?&quot;tcl_ParseExpr&quot;^?&quot;tcl_ParseQuotedString&quot;^?&quot;tcl_ParseVarName&quot;^?&quot;tcl_GetCwd&quot;^?&quot;tcl_Chdir&quot;^?&quot;tcl_Access&quot;^?&quot;tcl_Stat&quot;^?&quot;tcl_UtfNcmp&quot;^?&quot;tcl_UtfNcasecmp&quot;^?&quot;tcl_StringCaseMatch&quot;^?&quot;tcl_UniCharIsControl&quot;^?&quot;tcl_UniCharIsGraph&quot;^?&quot;tcl_UniCharIsPrint&quot;^?&quot;tcl_UniCharIsPunct&quot;^?&quot;tcl_RegExpExecObj&quot;^?&quot;tcl_RegExpGetInfo&quot;^?&quot;tcl_NewUnicodeObj&quot;^?&quot;tcl_SetUnicodeObj&quot;^?&quot;tcl_GetCharLength&quot;^?&quot;tcl_GetUniChar&quot;^?&quot;tcl_GetUnicode&quot;^?&quot;tcl_GetRange&quot;^?&quot;tcl_AppendUnicodeToObj&quot;^?&quot;tcl_RegExpMatchObj&quot;^?&quot;tcl_SetNotifier&quot;^?&quot;tcl_GetAllocMutex&quot;^?&quot;tcl_GetChannelNames&quot;^?&quot;tcl_GetChannelNamesEx&quot;^?&quot;tcl_ProcObjCmd&quot;^?&quot;tcl_ConditionFinalize&quot;^?&quot;tcl_MutexFinalize&quot;^?&quot;tcl_CreateThread&quot;^?&quot;tcl_ReadRaw&quot;^?&quot;tcl_WriteRaw&quot;^?&quot;tcl_GetTopChannel&quot;^?&quot;tcl_ChannelBuffered&quot;^?&quot;tcl_ChannelName&quot;^?&quot;tcl_ChannelVersion&quot;^?&quot;tcl_ChannelBlockModeProc&quot;^?&quot;tcl_ChannelCloseProc&quot;^?&quot;tcl_ChannelClose2Proc&quot;^?&quot;tcl_ChannelInputProc&quot;^?&quot;tcl_ChannelOutputProc&quot;^?&quot;tcl_ChannelSeekProc&quot;^?&quot;tcl_ChannelSetOptionProc&quot;^?&quot;tcl_ChannelGetOptionProc&quot;^?&quot;tcl_ChannelWatchProc&quot;^?&quot;tcl_ChannelGetHandleProc&quot;^?&quot;tcl_ChannelFlushProc&quot;^?&quot;tcl_ChannelHandlerProc&quot;^?&quot;tcl_JoinThread&quot;^?&quot;tcl_IsChannelShared&quot;^?&quot;tcl_IsChannelRegistered&quot;^?&quot;tcl_CutChannel&quot;^?&quot;tcl_SpliceChannel&quot;^?&quot;tcl_ClearChannelHandlers&quot;^?&quot;tcl_IsChannelExisting&quot;^?&quot;tcl_UniCharNcasecmp&quot;^?&quot;tcl_UniCharCaseMatch&quot;^?&quot;tcl_FindHashEntry&quot;^?&quot;tcl_CreateHashEntry&quot;^?&quot;tcl_InitCustomHashTable&quot;^?&quot;tcl_InitObjHashTable&quot;^?&quot;tcl_CommandTraceInfo&quot;^?&quot;tcl_TraceCommand&quot;^?&quot;tcl_UntraceCommand&quot;^?&quot;tcl_AttemptAlloc&quot;^?&quot;tcl_AttemptDbCkalloc&quot;^?&quot;tcl_AttemptRealloc&quot;^?&quot;tcl_AttemptDbCkrealloc&quot;^?&quot;tcl_AttemptSetObjLength&quot;^?&quot;tcl_GetChannelThread&quot;^?&quot;tcl_GetUnicodeFromObj&quot;^?&quot;tcl_GetMathFuncInfo&quot;^?&quot;tcl_ListMathFuncs&quot;^?&quot;tcl_SubstObj&quot;^?&quot;tcl_DetachChannel&quot;^?&quot;tcl_IsStandardChannel&quot;^?&quot;tcl_FSCopyFile&quot;^?&quot;tcl_FSCopyDirectory&quot;^?&quot;tcl_FSCreateDirectory&quot;^?&quot;tcl_FSDeleteFile&quot;^?&quot;tcl_FSLoadFile&quot;^?&quot;tcl_FSMatchInDirectory&quot;^?&quot;tcl_FSLink&quot;^?&quot;tcl_FSRemoveDirectory&quot;^?&quot;tcl_FSRenameFile&quot;^?&quot;tcl_FSLstat&quot;^?&quot;tcl_FSUtime&quot;^?&quot;tcl_FSFileAttrsGet&quot;^?&quot;tcl_FSFileAttrsSet&quot;^?&quot;tcl_FSFileAttrStrings&quot;^?&quot;tcl_FSStat&quot;^?&quot;tcl_FSAccess&quot;^?&quot;tcl_FSOpenFileChannel&quot;^?&quot;tcl_FSGetCwd&quot;^?&quot;tcl_FSChdir&quot;^?&quot;tcl_FSConvertToPathType&quot;^?&quot;tcl_FSJoinPath&quot;^?&quot;tcl_FSSplitPath&quot;^?&quot;tcl_FSEqualPaths&quot;^?&quot;tcl_FSGetNormalizedPath&quot;^?&quot;tcl_FSJoinToPath&quot;^?&quot;tcl_FSGetInternalRep&quot;^?&quot;tcl_FSGetTranslatedPath&quot;^?&quot;tcl_FSEvalFile&quot;^?&quot;tcl_FSNewNativePath&quot;^?&quot;tcl_FSGetNativePath&quot;^?&quot;tcl_FSFileSystemInfo&quot;^?&quot;tcl_FSPathSeparator&quot;^?&quot;tcl_FSListVolumes&quot;^?&quot;tcl_FSRegister&quot;^?&quot;tcl_FSUnregister&quot;^?&quot;tcl_FSData&quot;^?&quot;tcl_FSGetTranslatedStringPath&quot;^?&quot;tcl_FSGetFileSystemForPath&quot;^?&quot;tcl_FSGetPathType&quot;^?&quot;tcl_OutputBuffered&quot;^?&quot;tcl_FSMountsChanged&quot;^?&quot;tcl_EvalTokensStandard&quot;^?&quot;tcl_GetTime&quot;^?&quot;tcl_CreateObjTrace&quot;^?&quot;tcl_GetCommandInfoFromToken&quot;^?&quot;tcl_SetCommandInfoFromToken&quot;^?&quot;tcl_DbNewWideIntObj&quot;^?&quot;tcl_GetWideIntFromObj&quot;^?&quot;tcl_NewWideIntObj&quot;^?&quot;tcl_SetWideIntObj&quot;^?&quot;tcl_AllocStatBuf&quot;^?&quot;tcl_Seek&quot;^?&quot;tcl_Tell&quot;^?&quot;tcl_ChannelWideSeekProc&quot;^?}'/>
+  <struct name='Tcl_CallFrame' type='{Tcl_CallFrame=&quot;nsPtr&quot;^{Tcl_Namespace}&quot;dummy1&quot;i&quot;dummy2&quot;i&quot;dummy3&quot;*&quot;dummy4&quot;*&quot;dummy5&quot;*&quot;dummy6&quot;i&quot;dummy7&quot;*&quot;dummy8&quot;*&quot;dummy9&quot;i&quot;dummy10&quot;*}'/>
+  <struct name='Tcl_ChannelType' type='{Tcl_ChannelType=&quot;typeName&quot;*&quot;version&quot;^{Tcl_ChannelTypeVersion_}&quot;closeProc&quot;^?&quot;inputProc&quot;^?&quot;outputProc&quot;^?&quot;seekProc&quot;^?&quot;setOptionProc&quot;^?&quot;getOptionProc&quot;^?&quot;watchProc&quot;^?&quot;getHandleProc&quot;^?&quot;close2Proc&quot;^?&quot;blockModeProc&quot;^?&quot;flushProc&quot;^?&quot;handlerProc&quot;^?&quot;wideSeekProc&quot;^?}'/>
+  <struct name='Tcl_CmdInfo' type='{Tcl_CmdInfo=&quot;isNativeObjectProc&quot;i&quot;objProc&quot;^?&quot;objClientData&quot;^v&quot;proc&quot;^?&quot;clientData&quot;^v&quot;deleteProc&quot;^?&quot;deleteData&quot;^v&quot;namespacePtr&quot;^{Tcl_Namespace}}'/>
+  <struct name='Tcl_DString' type='{Tcl_DString=&quot;string&quot;*&quot;length&quot;i&quot;spaceAvl&quot;i&quot;staticSpace&quot;[200c]}'/>
+  <struct name='Tcl_EncodingType' type='{Tcl_EncodingType=&quot;encodingName&quot;*&quot;toUtfProc&quot;^?&quot;fromUtfProc&quot;^?&quot;freeProc&quot;^?&quot;clientData&quot;^v&quot;nullSize&quot;i}'/>
+  <struct name='Tcl_Event' type='{Tcl_Event=&quot;proc&quot;^?&quot;nextPtr&quot;^{Tcl_Event}}'/>
+  <struct name='Tcl_Filesystem' type='{Tcl_Filesystem=&quot;typeName&quot;*&quot;structureLength&quot;i&quot;version&quot;^{Tcl_FSVersion_}&quot;pathInFilesystemProc&quot;^?&quot;dupInternalRepProc&quot;^?&quot;freeInternalRepProc&quot;^?&quot;internalToNormalizedProc&quot;^?&quot;createInternalRepProc&quot;^?&quot;normalizePathProc&quot;^?&quot;filesystemPathTypeProc&quot;^?&quot;filesystemSeparatorProc&quot;^?&quot;statProc&quot;^?&quot;accessProc&quot;^?&quot;openFileChannelProc&quot;^?&quot;matchInDirectoryProc&quot;^?&quot;utimeProc&quot;^?&quot;linkProc&quot;^?&quot;listVolumesProc&quot;^?&quot;fileAttrStringsProc&quot;^?&quot;fileAttrsGetProc&quot;^?&quot;fileAttrsSetProc&quot;^?&quot;createDirectoryProc&quot;^?&quot;removeDirectoryProc&quot;^?&quot;deleteFileProc&quot;^?&quot;copyFileProc&quot;^?&quot;renameFileProc&quot;^?&quot;copyDirectoryProc&quot;^?&quot;lstatProc&quot;^?&quot;loadFileProc&quot;^?&quot;getCwdProc&quot;^?&quot;chdirProc&quot;^?}'/>
+  <struct name='Tcl_GlobTypeData' type='{Tcl_GlobTypeData=&quot;type&quot;i&quot;perm&quot;i&quot;macType&quot;^{Tcl_Obj}&quot;macCreator&quot;^{Tcl_Obj}}'/>
+  <struct name='Tcl_HashEntry' type='{Tcl_HashEntry=&quot;nextPtr&quot;^{Tcl_HashEntry}&quot;tablePtr&quot;^{Tcl_HashTable}&quot;hash&quot;^v&quot;clientData&quot;^v&quot;key&quot;(?=&quot;oneWordValue&quot;*&quot;objPtr&quot;^{Tcl_Obj}&quot;words&quot;[1i]&quot;string&quot;[4c])}'/>
+  <struct name='Tcl_HashKeyType' type='{Tcl_HashKeyType=&quot;version&quot;i&quot;flags&quot;i&quot;hashKeyProc&quot;^?&quot;compareKeysProc&quot;^?&quot;allocEntryProc&quot;^?&quot;freeEntryProc&quot;^?}'/>
+  <struct name='Tcl_HashSearch' type='{Tcl_HashSearch=&quot;tablePtr&quot;^{Tcl_HashTable}&quot;nextIndex&quot;i&quot;nextEntryPtr&quot;^{Tcl_HashEntry}}'/>
+  <struct name='Tcl_HashTable' type='{Tcl_HashTable=&quot;buckets&quot;^^{Tcl_HashEntry}&quot;staticBuckets&quot;[4^{Tcl_HashEntry}]&quot;numBuckets&quot;i&quot;numEntries&quot;i&quot;rebuildSize&quot;i&quot;downShift&quot;i&quot;mask&quot;i&quot;keyType&quot;i&quot;findProc&quot;^?&quot;createProc&quot;^?&quot;typePtr&quot;^{Tcl_HashKeyType}}'/>
+  <struct name='Tcl_Interp' type='{Tcl_Interp=&quot;result&quot;*&quot;freeProc&quot;^?&quot;errorLine&quot;i}'/>
+  <struct name='Tcl_Namespace' type='{Tcl_Namespace=&quot;name&quot;*&quot;fullName&quot;*&quot;clientData&quot;^v&quot;deleteProc&quot;^?&quot;parentPtr&quot;^{Tcl_Namespace}}'/>
+  <struct name='Tcl_NotifierProcs' type='{Tcl_NotifierProcs=&quot;setTimerProc&quot;^?&quot;waitForEventProc&quot;^?&quot;createFileHandlerProc&quot;^?&quot;deleteFileHandlerProc&quot;^?&quot;initNotifierProc&quot;^?&quot;finalizeNotifierProc&quot;^?&quot;alertNotifierProc&quot;^?&quot;serviceModeHookProc&quot;^?}'/>
+  <struct name='Tcl_Obj' type='{Tcl_Obj=&quot;refCount&quot;i&quot;bytes&quot;*&quot;length&quot;i&quot;typePtr&quot;^{Tcl_ObjType=&quot;name&quot;*&quot;freeIntRepProc&quot;^?&quot;dupIntRepProc&quot;^?&quot;updateStringProc&quot;^?&quot;setFromAnyProc&quot;^?}&quot;internalRep&quot;(?=&quot;longValue&quot;l&quot;doubleValue&quot;d&quot;otherValuePtr&quot;^v&quot;wideValue&quot;q&quot;twoPtrValue&quot;{?=&quot;ptr1&quot;^v&quot;ptr2&quot;^v})}' type64='{Tcl_Obj=&quot;refCount&quot;i&quot;bytes&quot;*&quot;length&quot;i&quot;typePtr&quot;^{Tcl_ObjType=&quot;name&quot;*&quot;freeIntRepProc&quot;^?&quot;dupIntRepProc&quot;^?&quot;updateStringProc&quot;^?&quot;setFromAnyProc&quot;^?}&quot;internalRep&quot;(?=&quot;longValue&quot;q&quot;doubleValue&quot;d&quot;otherValuePtr&quot;^v&quot;wideValue&quot;q&quot;twoPtrValue&quot;{?=&quot;ptr1&quot;^v&quot;ptr2&quot;^v})}'/>
+  <struct name='Tcl_ObjType' type='{Tcl_ObjType=&quot;name&quot;*&quot;freeIntRepProc&quot;^?&quot;dupIntRepProc&quot;^?&quot;updateStringProc&quot;^?&quot;setFromAnyProc&quot;^?}'/>
+  <struct name='Tcl_Parse' type='{Tcl_Parse=&quot;commentStart&quot;*&quot;commentSize&quot;i&quot;commandStart&quot;*&quot;commandSize&quot;i&quot;numWords&quot;i&quot;tokenPtr&quot;^{Tcl_Token}&quot;numTokens&quot;i&quot;tokensAvailable&quot;i&quot;errorType&quot;i&quot;string&quot;*&quot;end&quot;*&quot;interp&quot;^{Tcl_Interp}&quot;term&quot;*&quot;incomplete&quot;i&quot;staticTokens&quot;[20{Tcl_Token=&quot;type&quot;i&quot;start&quot;*&quot;size&quot;i&quot;numComponents&quot;i}]}'/>
+  <struct name='Tcl_RegExpIndices' type='{Tcl_RegExpIndices=&quot;start&quot;l&quot;end&quot;l}' type64='{Tcl_RegExpIndices=&quot;start&quot;q&quot;end&quot;q}'/>
+  <struct name='Tcl_RegExpInfo' type='{Tcl_RegExpInfo=&quot;nsubs&quot;i&quot;matches&quot;^{Tcl_RegExpIndices}&quot;extendStart&quot;l&quot;reserved&quot;l}' type64='{Tcl_RegExpInfo=&quot;nsubs&quot;i&quot;matches&quot;^{Tcl_RegExpIndices}&quot;extendStart&quot;q&quot;reserved&quot;q}'/>
+  <struct name='Tcl_SavedResult' type='{Tcl_SavedResult=&quot;result&quot;*&quot;freeProc&quot;^?&quot;objResultPtr&quot;^{Tcl_Obj}&quot;appendResult&quot;*&quot;appendAvl&quot;i&quot;appendUsed&quot;i&quot;resultSpace&quot;[201c]}'/>
+  <struct name='Tcl_Time' type='{Tcl_Time=&quot;sec&quot;l&quot;usec&quot;l}' type64='{Tcl_Time=&quot;sec&quot;q&quot;usec&quot;q}'/>
+  <struct name='Tcl_Token' type='{Tcl_Token=&quot;type&quot;i&quot;start&quot;*&quot;size&quot;i&quot;numComponents&quot;i}'/>
+  <struct name='Tcl_Value' type='{Tcl_Value=&quot;type&quot;i&quot;intValue&quot;l&quot;doubleValue&quot;d&quot;wideValue&quot;q}' type64='{Tcl_Value=&quot;type&quot;i&quot;intValue&quot;q&quot;doubleValue&quot;d&quot;wideValue&quot;q}'/>
+  <opaque name='Tcl_AsyncHandler' type='^{Tcl_AsyncHandler_=}'/>
+  <opaque name='Tcl_Channel' type='^{Tcl_Channel_=}'/>
+  <opaque name='Tcl_ChannelTypeVersion' type='^{Tcl_ChannelTypeVersion_=}'/>
+  <opaque name='Tcl_Command' type='^{Tcl_Command_=}'/>
+  <opaque name='Tcl_Condition' type='^{Tcl_Condition_=}'/>
+  <opaque name='Tcl_Encoding' type='^{Tcl_Encoding_=}'/>
+  <opaque name='Tcl_EncodingState' type='^{Tcl_EncodingState_=}'/>
+  <opaque name='Tcl_FSVersion' type='^{Tcl_FSVersion_=}'/>
+  <opaque name='Tcl_LoadHandle' type='^{Tcl_LoadHandle_=}'/>
+  <opaque name='Tcl_Mutex' type='^{Tcl_Mutex_=}'/>
+  <opaque name='Tcl_OldStat_' type='^{stat=}'/>
+  <opaque name='Tcl_Pid' type='^{Tcl_Pid_=}'/>
+  <opaque name='Tcl_RegExp' type='^{Tcl_RegExp_=}'/>
+  <opaque name='Tcl_StatBuf' type='^{stat=}'/>
+  <opaque name='Tcl_ThreadDataKey' type='^{Tcl_ThreadDataKey_=}'/>
+  <opaque name='Tcl_ThreadId' type='^{Tcl_ThreadId_=}'/>
+  <opaque name='Tcl_TimerToken' type='^{Tcl_TimerToken_=}'/>
+  <opaque name='Tcl_Trace' type='^{Tcl_Trace_=}'/>
+  <opaque name='Tcl_Var' type='^{Tcl_Var_=}'/>
+  <constant name='tclPlatStubsPtr' type='^{TclPlatStubs=i^{TclPlatStubHooks}}'/>
+  <constant name='tclStubsPtr' type='^{TclStubs=i^{TclStubHooks}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+  <string_constant name='TCL_LL_MODIFIER' value='L'/>
+  <string_constant name='TCL_PATCH_LEVEL' value='8.4.7'/>
+  <string_constant name='TCL_VERSION' value='8.4'/>
+  <enum name='NUM_STATIC_TOKENS' value='20'/>
+  <enum name='TCL_ALLOW_INLINE_COMPILATION' value='131072'/>
+  <enum name='TCL_ALL_EVENTS' value='-3'/>
+  <enum name='TCL_ALPHA_RELEASE' value='0'/>
+  <enum name='TCL_APPEND_VALUE' value='4'/>
+  <enum name='TCL_BETA_RELEASE' value='1'/>
+  <enum name='TCL_BREAK' value='3'/>
+  <enum name='TCL_CLOSE_READ' value='2'/>
+  <enum name='TCL_CLOSE_WRITE' value='4'/>
+  <enum name='TCL_CONTINUE' value='4'/>
+  <enum name='TCL_CONVERT_MULTIBYTE' value='-1'/>
+  <enum name='TCL_CONVERT_NOSPACE' value='-4'/>
+  <enum name='TCL_CONVERT_SYNTAX' value='-2'/>
+  <enum name='TCL_CONVERT_UNKNOWN' value='-3'/>
+  <enum name='TCL_CREATE_HARD_LINK' value='2'/>
+  <enum name='TCL_CREATE_SYMBOLIC_LINK' value='1'/>
+  <enum name='TCL_CUSTOM_PTR_KEYS' value='-1'/>
+  <enum name='TCL_CUSTOM_TYPE_KEYS' value='-2'/>
+  <enum name='TCL_DONT_USE_BRACES' value='1'/>
+  <enum name='TCL_DONT_WAIT' value='2'/>
+  <enum name='TCL_DOUBLE' value='1'/>
+  <enum name='TCL_DOUBLE_SPACE' value='27'/>
+  <enum name='TCL_DSTRING_STATIC_SIZE' value='200'/>
+  <enum name='TCL_EITHER' value='2'/>
+  <enum name='TCL_ENCODING_END' value='2'/>
+  <enum name='TCL_ENCODING_START' value='1'/>
+  <enum name='TCL_ENCODING_STOPONERROR' value='4'/>
+  <enum name='TCL_ENFORCE_MODE' value='16'/>
+  <enum name='TCL_ERROR' value='1'/>
+  <enum name='TCL_EVAL_DIRECT' value='262144'/>
+  <enum name='TCL_EVAL_GLOBAL' value='131072'/>
+  <enum name='TCL_EVAL_INVOKE' value='524288'/>
+  <enum name='TCL_EXACT' value='1'/>
+  <enum name='TCL_EXCEPTION' value='8'/>
+  <enum name='TCL_FILE_EVENTS' value='8'/>
+  <enum name='TCL_FINAL_RELEASE' value='2'/>
+  <enum name='TCL_GLOBAL_ONLY' value='1'/>
+  <enum name='TCL_GLOB_PERM_HIDDEN' value='2'/>
+  <enum name='TCL_GLOB_PERM_R' value='4'/>
+  <enum name='TCL_GLOB_PERM_RONLY' value='1'/>
+  <enum name='TCL_GLOB_PERM_W' value='8'/>
+  <enum name='TCL_GLOB_PERM_X' value='16'/>
+  <enum name='TCL_GLOB_TYPE_BLOCK' value='1'/>
+  <enum name='TCL_GLOB_TYPE_CHAR' value='2'/>
+  <enum name='TCL_GLOB_TYPE_DIR' value='4'/>
+  <enum name='TCL_GLOB_TYPE_FILE' value='16'/>
+  <enum name='TCL_GLOB_TYPE_LINK' value='32'/>
+  <enum name='TCL_GLOB_TYPE_MOUNT' value='128'/>
+  <enum name='TCL_GLOB_TYPE_PIPE' value='8'/>
+  <enum name='TCL_GLOB_TYPE_SOCK' value='64'/>
+  <enum name='TCL_HASH_KEY_RANDOMIZE_HASH' value='1'/>
+  <enum name='TCL_HASH_KEY_STORE_HASH' value='1'/>
+  <enum name='TCL_HASH_KEY_TYPE_VERSION' value='1'/>
+  <enum name='TCL_IDLE_EVENTS' value='32'/>
+  <enum name='TCL_INT' value='0'/>
+  <enum name='TCL_INTEGER_SPACE' value='24'/>
+  <enum name='TCL_INTERP_DESTROYED' value='256'/>
+  <enum name='TCL_LEAVE_ERR_MSG' value='512'/>
+  <enum name='TCL_LINK_BOOLEAN' value='3'/>
+  <enum name='TCL_LINK_DOUBLE' value='2'/>
+  <enum name='TCL_LINK_INT' value='1'/>
+  <enum name='TCL_LINK_READ_ONLY' value='128'/>
+  <enum name='TCL_LINK_STRING' value='4'/>
+  <enum name='TCL_LINK_WIDE_INT' value='5'/>
+  <enum name='TCL_LIST_ELEMENT' value='8'/>
+  <enum name='TCL_LL_MODIFIER_SIZE' value='1'/>
+  <enum name='TCL_MAJOR_VERSION' value='8'/>
+  <enum name='TCL_MAX_PREC' value='17'/>
+  <enum name='TCL_MINOR_VERSION' value='4'/>
+  <enum name='TCL_MODE_BLOCKING' value='0'/>
+  <enum name='TCL_MODE_NONBLOCKING' value='1'/>
+  <enum name='TCL_NAMESPACE_ONLY' value='2'/>
+  <enum name='TCL_NO_EVAL' value='65536'/>
+  <enum name='TCL_OK' value='0'/>
+  <enum name='TCL_ONE_WORD_KEYS' value='1'/>
+  <enum name='TCL_PARSE_BAD_NUMBER' value='9'/>
+  <enum name='TCL_PARSE_BRACE_EXTRA' value='2'/>
+  <enum name='TCL_PARSE_MISSING_BRACE' value='3'/>
+  <enum name='TCL_PARSE_MISSING_BRACKET' value='4'/>
+  <enum name='TCL_PARSE_MISSING_PAREN' value='5'/>
+  <enum name='TCL_PARSE_MISSING_QUOTE' value='6'/>
+  <enum name='TCL_PARSE_MISSING_VAR_BRACE' value='7'/>
+  <enum name='TCL_PARSE_PART1' value='1024'/>
+  <enum name='TCL_PARSE_QUOTE_EXTRA' value='1'/>
+  <enum name='TCL_PARSE_SUCCESS' value='0'/>
+  <enum name='TCL_PARSE_SYNTAX' value='8'/>
+  <enum name='TCL_PATH_ABSOLUTE' value='0'/>
+  <enum name='TCL_PATH_RELATIVE' value='1'/>
+  <enum name='TCL_PATH_VOLUME_RELATIVE' value='2'/>
+  <enum name='TCL_PRESERVE_BINARY_COMPATABILITY' value='1'/>
+  <enum name='TCL_QUEUE_HEAD' value='1'/>
+  <enum name='TCL_QUEUE_MARK' value='2'/>
+  <enum name='TCL_QUEUE_TAIL' value='0'/>
+  <enum name='TCL_READABLE' value='2'/>
+  <enum name='TCL_REG_ADVANCED' value='3'/>
+  <enum name='TCL_REG_ADVF' value='2'/>
+  <enum name='TCL_REG_BASIC' value='0'/>
+  <enum name='TCL_REG_BOSONLY' value='1024'/>
+  <enum name='TCL_REG_CANMATCH' value='512'/>
+  <enum name='TCL_REG_EXPANDED' value='32'/>
+  <enum name='TCL_REG_EXTENDED' value='1'/>
+  <enum name='TCL_REG_NEWLINE' value='192'/>
+  <enum name='TCL_REG_NLANCH' value='128'/>
+  <enum name='TCL_REG_NLSTOP' value='64'/>
+  <enum name='TCL_REG_NOCASE' value='8'/>
+  <enum name='TCL_REG_NOSUB' value='16'/>
+  <enum name='TCL_REG_NOTBOL' value='1'/>
+  <enum name='TCL_REG_NOTEOL' value='2'/>
+  <enum name='TCL_REG_QUOTE' value='4'/>
+  <enum name='TCL_RELEASE_LEVEL' value='2'/>
+  <enum name='TCL_RELEASE_SERIAL' value='7'/>
+  <enum name='TCL_RESULT_SIZE' value='200'/>
+  <enum name='TCL_RETURN' value='2'/>
+  <enum name='TCL_SERVICE_ALL' value='1'/>
+  <enum name='TCL_SERVICE_NONE' value='0'/>
+  <enum name='TCL_SMALL_HASH_TABLE' value='4'/>
+  <enum name='TCL_STDERR' value='8'/>
+  <enum name='TCL_STDIN' value='2'/>
+  <enum name='TCL_STDOUT' value='4'/>
+  <enum name='TCL_STRING_KEYS' value='0'/>
+  <enum name='TCL_STUB_MAGIC' value='-56378673'/>
+  <enum name='TCL_SUBST_ALL' value='7'/>
+  <enum name='TCL_SUBST_BACKSLASHES' value='4'/>
+  <enum name='TCL_SUBST_COMMANDS' value='1'/>
+  <enum name='TCL_SUBST_VARIABLES' value='2'/>
+  <enum name='TCL_THREAD_JOINABLE' value='1'/>
+  <enum name='TCL_THREAD_NOFLAGS' value='0'/>
+  <enum name='TCL_THREAD_STACK_DEFAULT' value='0'/>
+  <enum name='TCL_TIMER_EVENTS' value='16'/>
+  <enum name='TCL_TOKEN_BS' value='8'/>
+  <enum name='TCL_TOKEN_COMMAND' value='16'/>
+  <enum name='TCL_TOKEN_OPERATOR' value='128'/>
+  <enum name='TCL_TOKEN_SIMPLE_WORD' value='2'/>
+  <enum name='TCL_TOKEN_SUB_EXPR' value='64'/>
+  <enum name='TCL_TOKEN_TEXT' value='4'/>
+  <enum name='TCL_TOKEN_VARIABLE' value='32'/>
+  <enum name='TCL_TOKEN_WORD' value='1'/>
+  <enum name='TCL_TRACE_ARRAY' value='2048'/>
+  <enum name='TCL_TRACE_DELETE' value='16384'/>
+  <enum name='TCL_TRACE_DESTROYED' value='128'/>
+  <enum name='TCL_TRACE_ENTER_EXEC' value='1'/>
+  <enum name='TCL_TRACE_LEAVE_EXEC' value='2'/>
+  <enum name='TCL_TRACE_OLD_STYLE' value='4096'/>
+  <enum name='TCL_TRACE_READS' value='16'/>
+  <enum name='TCL_TRACE_RENAME' value='8192'/>
+  <enum name='TCL_TRACE_RESULT_DYNAMIC' value='32768'/>
+  <enum name='TCL_TRACE_RESULT_OBJECT' value='65536'/>
+  <enum name='TCL_TRACE_UNSETS' value='64'/>
+  <enum name='TCL_TRACE_WRITES' value='32'/>
+  <enum name='TCL_UTF_MAX' value='3'/>
+  <enum name='TCL_WIDE_INT' value='3'/>
+  <enum name='TCL_WINDOW_EVENTS' value='4'/>
+  <enum name='TCL_WRITABLE' value='4'/>
+  <function name='TclFreeObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_Access'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_AddErrorInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_AddObjErrorInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_AlertNotifier'>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_Alloc'>
+    <arg type='I'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_AllocStatBuf'>
+    <retval type='^{stat=}'/>
+  </function>
+  <function name='Tcl_AllowExceptions'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_AppInit'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_AppendAllObjTypes'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_AppendElement'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_AppendObjToObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_AppendResult' variadic='true'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_AppendResultVA'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+  </function>
+  <function name='Tcl_AppendStringsToObj' variadic='true'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_AppendStringsToObjVA'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+  </function>
+  <function name='Tcl_AppendToObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_AppendUnicodeToObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^S'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_AsyncCreate'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='i'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^{Tcl_AsyncHandler_=}'/>
+  </function>
+  <function name='Tcl_AsyncDelete'>
+    <arg type='^{Tcl_AsyncHandler_=}'/>
+  </function>
+  <function name='Tcl_AsyncInvoke'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_AsyncMark'>
+    <arg type='^{Tcl_AsyncHandler_=}'/>
+  </function>
+  <function name='Tcl_AsyncReady'>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_AttemptAlloc'>
+    <arg type='I'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_AttemptDbCkalloc'>
+    <arg type='I'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_AttemptDbCkrealloc'>
+    <arg type='*'/>
+    <arg type='I'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_AttemptRealloc'>
+    <arg type='*'/>
+    <arg type='I'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_AttemptSetObjLength'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_BackgroundError'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_Backslash'>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='c'/>
+  </function>
+  <function name='Tcl_BadChannelOption'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_CallWhenDeleted'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CancelIdleCall'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_ChannelBlockModeProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelBuffered'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ChannelClose2Proc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='i'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelCloseProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelFlushProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelGetHandleProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <arg type='^^v'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelGetOptionProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='^{Tcl_DString=*ii[200c]}'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelHandlerProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelInputProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <arg type='^i'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelName'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_ChannelOutputProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <arg type='^i'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelSeekProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='l' type64='q'/>
+      <arg type='i'/>
+      <arg type='^i'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelSetOptionProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelVersion'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval type='^{Tcl_ChannelTypeVersion_=}'/>
+  </function>
+  <function name='Tcl_ChannelWatchProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </retval>
+  </function>
+  <function name='Tcl_ChannelWideSeekProc'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='q'/>
+      <arg type='i'/>
+      <arg type='^i'/>
+      <retval type='q'/>
+    </retval>
+  </function>
+  <function name='Tcl_Chdir'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ClearChannelHandlers'>
+    <arg type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_Close'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_CommandComplete'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_CommandTraceInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_Concat'>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_ConcatObj'>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_ConditionFinalize'>
+    <arg type='^^{Tcl_Condition_}'/>
+  </function>
+  <function name='Tcl_ConditionNotify'>
+    <arg type='^^{Tcl_Condition_}'/>
+  </function>
+  <function name='Tcl_ConditionWait'>
+    <arg type='^^{Tcl_Condition_}'/>
+    <arg type='^^{Tcl_Mutex_}'/>
+    <arg type='^{Tcl_Time=ll}' type64='^{Tcl_Time=qq}'/>
+  </function>
+  <function name='Tcl_ConvertCountedElement'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ConvertElement'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ConvertToType'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_ObjType=*^?^?^?^?}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_CreateAlias'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_CreateAliasObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_CreateChannel'>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <arg type='*'/>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_CreateChannelHandler'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CreateCloseHandler'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CreateCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='i'/>
+      <arg type='^*'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='^{Tcl_Command_=}'/>
+  </function>
+  <function name='Tcl_CreateEncoding'>
+    <arg type='^{Tcl_EncodingType=*^?^?^?^vi}'/>
+    <retval type='^{Tcl_Encoding_=}'/>
+  </function>
+  <function name='Tcl_CreateEventSource'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CreateExitHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CreateFileHandler'>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CreateHashEntry'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='^{Tcl_HashEntry=^{Tcl_HashEntry}^{Tcl_HashTable}^v^v(?=*^{Tcl_Obj}[1i][4c])}'/>
+  </function>
+  <function name='Tcl_CreateInterp'>
+    <retval type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_CreateMathFunc'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='^{Tcl_Value=ildq}' type64='^{Tcl_Value=iqdq}'/>
+      <arg type='^{Tcl_Value=ildq}' type64='^{Tcl_Value=iqdq}'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CreateObjCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='i'/>
+      <arg type='^^{Tcl_Obj}'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='^{Tcl_Command_=}'/>
+  </function>
+  <function name='Tcl_CreateObjTrace'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='i'/>
+      <arg type='*'/>
+      <arg type='^{Tcl_Command_=}'/>
+      <arg type='i'/>
+      <arg type='^^{Tcl_Obj}'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='^{Tcl_Trace_=}'/>
+  </function>
+  <function name='Tcl_CreateSlave'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_CreateThread'>
+    <arg type='^^{Tcl_ThreadId_}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_CreateThreadExitHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_CreateTimerHandler'>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^{Tcl_TimerToken_=}'/>
+  </function>
+  <function name='Tcl_CreateTrace'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='i'/>
+      <arg type='*'/>
+      <arg type='^?'/>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <arg type='^*'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^{Tcl_Trace_=}'/>
+  </function>
+  <function name='Tcl_CutChannel'>
+    <arg type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_DStringAppend'>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_DStringAppendElement'>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_DStringEndSublist'>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+  </function>
+  <function name='Tcl_DStringFree'>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+  </function>
+  <function name='Tcl_DStringGetResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+  </function>
+  <function name='Tcl_DStringInit'>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+  </function>
+  <function name='Tcl_DStringResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+  </function>
+  <function name='Tcl_DStringSetLength'>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_DStringStartSublist'>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+  </function>
+  <function name='Tcl_DbCkalloc'>
+    <arg type='I'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_DbCkfree'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_DbCkrealloc'>
+    <arg type='*'/>
+    <arg type='I'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_DbDecrRefCount'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_DbIncrRefCount'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_DbIsShared'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_DbNewBooleanObj'>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DbNewByteArrayObj'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DbNewDoubleObj'>
+    <arg type='d'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DbNewListObj'>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DbNewLongObj'>
+    <arg type='l' type64='q'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DbNewObj'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DbNewStringObj'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DbNewWideIntObj'>
+    <arg type='q'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DecrRefCount'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_DeleteAssocData'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_DeleteChannelHandler'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DeleteCloseHandler'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DeleteCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_DeleteCommandFromToken'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Command_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_DeleteEventSource'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DeleteEvents'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{Tcl_Event=^?^{Tcl_Event}}'/>
+      <arg type='^v'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DeleteExitHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DeleteFileHandler'>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_DeleteHashEntry'>
+    <arg type='^{Tcl_HashEntry=^{Tcl_HashEntry}^{Tcl_HashTable}^v^v(?=*^{Tcl_Obj}[1i][4c])}'/>
+  </function>
+  <function name='Tcl_DeleteHashTable'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+  </function>
+  <function name='Tcl_DeleteInterp'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_DeleteThreadExitHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DeleteTimerHandler'>
+    <arg type='^{Tcl_TimerToken_=}'/>
+  </function>
+  <function name='Tcl_DeleteTrace'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Trace_=}'/>
+  </function>
+  <function name='Tcl_DetachChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_DetachPids'>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Pid_}'/>
+  </function>
+  <function name='Tcl_DiscardResult'>
+    <arg type='^{Tcl_SavedResult=*^?^{Tcl_Obj}*ii[201c]}'/>
+  </function>
+  <function name='Tcl_DoOneEvent'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_DoWhenIdle'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DontCallWhenDeleted'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_DumpActiveMemory'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_DuplicateObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_Eof'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ErrnoId'>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_ErrnoMsg'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_Eval'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_EvalEx'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_EvalFile'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_EvalObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_EvalObjEx'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_EvalObjv'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_EvalTokens'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Token=i*ii}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_EvalTokensStandard'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Token=i*ii}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_EventuallyFree'>
+    <arg type='^v'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='*'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='Tcl_Exit'>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_ExitThread'>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_ExposeCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprBoolean'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprBooleanObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprDouble'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprDoubleObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprLong'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^l' type64='^q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprLongObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^l' type64='^q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExprString'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExternalToUtf'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Encoding_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_EncodingState_}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ExternalToUtfDString'>
+    <arg type='^{Tcl_Encoding_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_FSAccess'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSChdir'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSConvertToPathType'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSCopyDirectory'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSCopyFile'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSCreateDirectory'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSData'>
+    <arg type='^{Tcl_Filesystem=*i^{Tcl_FSVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_FSDeleteFile'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSEqualPaths'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSEvalFile'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSFileAttrStrings'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='^*'/>
+  </function>
+  <function name='Tcl_FSFileAttrsGet'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSFileAttrsSet'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSFileSystemInfo'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSGetCwd'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSGetFileSystemForPath'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tcl_Filesystem=*i^{Tcl_FSVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+  </function>
+  <function name='Tcl_FSGetInternalRep'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Filesystem=*i^{Tcl_FSVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_FSGetNativePath'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_FSGetNormalizedPath'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSGetPathType'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSGetTranslatedPath'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSGetTranslatedStringPath'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_FSJoinPath'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSJoinToPath'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSLink'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSListVolumes'>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSLoadFile'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='^^?'/>
+    <arg type='^^?'/>
+    <arg type='^^{Tcl_LoadHandle_}'/>
+    <arg type='^^?'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSLstat'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{stat=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSMatchInDirectory'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_GlobTypeData=ii^{Tcl_Obj}^{Tcl_Obj}}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSMountsChanged'>
+    <arg type='^{Tcl_Filesystem=*i^{Tcl_FSVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+  </function>
+  <function name='Tcl_FSNewNativePath'>
+    <arg type='^{Tcl_Filesystem=*i^{Tcl_FSVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <arg type='^v'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSOpenFileChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_FSPathSeparator'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSRegister'>
+    <arg type='^v'/>
+    <arg type='^{Tcl_Filesystem=*i^{Tcl_FSVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSRemoveDirectory'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSRenameFile'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSSplitPath'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_FSStat'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{stat=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSUnregister'>
+    <arg type='^{Tcl_Filesystem=*i^{Tcl_FSVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_FSUtime'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{utimbuf=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_Finalize'/>
+  <function name='Tcl_FinalizeNotifier'>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_FinalizeThread'/>
+  <function name='Tcl_FindExecutable'>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_FindHashEntry'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+    <arg type='*'/>
+    <retval type='^{Tcl_HashEntry=^{Tcl_HashEntry}^{Tcl_HashTable}^v^v(?=*^{Tcl_Obj}[1i][4c])}'/>
+  </function>
+  <function name='Tcl_FirstHashEntry'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+    <arg type='^{Tcl_HashSearch=^{Tcl_HashTable}i^{Tcl_HashEntry}}'/>
+    <retval type='^{Tcl_HashEntry=^{Tcl_HashEntry}^{Tcl_HashTable}^v^v(?=*^{Tcl_Obj}[1i][4c])}'/>
+  </function>
+  <function name='Tcl_Flush'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_Free'>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_FreeEncoding'>
+    <arg type='^{Tcl_Encoding_=}'/>
+  </function>
+  <function name='Tcl_FreeParse'>
+    <arg type='^{Tcl_Parse=*i*ii^{Tcl_Token}iii**^{Tcl_Interp}*i[20{Tcl_Token=i*ii}]}'/>
+  </function>
+  <function name='Tcl_FreeResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_GetAlias'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^^{Tcl_Interp}'/>
+    <arg type='^*'/>
+    <arg type='^i'/>
+    <arg type='^^*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetAliasObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^^{Tcl_Interp}'/>
+    <arg type='^*'/>
+    <arg type='^i'/>
+    <arg type='^^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetAllocMutex'>
+    <retval type='^^{Tcl_Mutex_}'/>
+  </function>
+  <function name='Tcl_GetAssocData'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^^?'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_GetBoolean'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetBooleanFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetByteArrayFromObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_GetChannelBufferSize'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetChannelHandle'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='i'/>
+    <arg type='^^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetChannelInstanceData'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_GetChannelMode'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetChannelName'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetChannelNames'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetChannelNamesEx'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetChannelOption'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetChannelThread'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='^{Tcl_ThreadId_=}'/>
+  </function>
+  <function name='Tcl_GetChannelType'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+  </function>
+  <function name='Tcl_GetCharLength'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetCommandInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_CmdInfo=i^?^v^?^v^?^v^{Tcl_Namespace}}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetCommandInfoFromToken'>
+    <arg type='^{Tcl_Command_=}'/>
+    <arg type='^{Tcl_CmdInfo=i^?^v^?^v^?^v^{Tcl_Namespace}}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetCommandName'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Command_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetCurrentThread'>
+    <retval type='^{Tcl_ThreadId_=}'/>
+  </function>
+  <function name='Tcl_GetCwd'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetDefaultEncodingDir'>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetDouble'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetDoubleFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetEncoding'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='^{Tcl_Encoding_=}'/>
+  </function>
+  <function name='Tcl_GetEncodingName'>
+    <arg type='^{Tcl_Encoding_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetEncodingNames'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_GetErrno'>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetHostName'>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetIndexFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetIndexFromObjStruct'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetInt'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetIntFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetInterpPath'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetLongFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^l' type64='^q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetMaster'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_GetMathFuncInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <arg type='^^i'/>
+    <arg type='^^?'/>
+    <arg type='^^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetNameOfExecutable'>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetObjResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_GetObjType'>
+    <arg type='*'/>
+    <retval type='^{Tcl_ObjType=*^?^?^?^?}'/>
+  </function>
+  <function name='Tcl_GetOpenFile'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetPathType'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetRange'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_GetRegExpFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_RegExp_=}'/>
+  </function>
+  <function name='Tcl_GetServiceMode'>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetSlave'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_GetStackedChannel'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_GetStdChannel'>
+    <arg type='i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_GetString'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetStringFromObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetStringResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetThreadData'>
+    <arg type='^^{Tcl_ThreadDataKey_}'/>
+    <arg type='i'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_GetTime'>
+    <arg type='^{Tcl_Time=ll}' type64='^{Tcl_Time=qq}'/>
+  </function>
+  <function name='Tcl_GetTopChannel'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_GetUniChar'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='S'/>
+  </function>
+  <function name='Tcl_GetUnicode'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^S'/>
+  </function>
+  <function name='Tcl_GetUnicodeFromObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='^S'/>
+  </function>
+  <function name='Tcl_GetVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_GetVar2Ex'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_GetVersion'>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tcl_GetWideIntFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_Gets'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GetsObj'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GlobalEval'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_GlobalEvalObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_HashStats'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_HideCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_IncrRefCount'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_Init'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_InitCustomHashTable'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_HashKeyType=ii^?^?^?^?}'/>
+  </function>
+  <function name='Tcl_InitHashTable'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_InitMemory'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_InitNotifier'>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_InitObjHashTable'>
+    <arg type='^{Tcl_HashTable=^^{Tcl_HashEntry}[4^{Tcl_HashEntry}]iiiiii^?^?^{Tcl_HashKeyType}}'/>
+  </function>
+  <function name='Tcl_InitStubs'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_InputBlocked'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_InputBuffered'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_InterpDeleted'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_InvalidateStringRep'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_IsChannelExisting'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_IsChannelRegistered'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_IsChannelShared'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_IsSafe'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_IsShared'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_IsStandardChannel'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_JoinPath'>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_JoinThread'>
+    <arg type='^{Tcl_ThreadId_=}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_LinkVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ListMathFuncs'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_ListObjAppendElement'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ListObjAppendList'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ListObjGetElements'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <arg type='^^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ListObjIndex'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ListObjLength'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ListObjReplace'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_LogCommandInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_Main'>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='i'/>
+    </arg>
+  </function>
+  <function name='Tcl_MakeFileChannel'>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_MakeSafe'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_MakeTcpClientChannel'>
+    <arg type='^v'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_Merge'>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_MutexFinalize'>
+    <arg type='^^{Tcl_Mutex_}'/>
+  </function>
+  <function name='Tcl_MutexLock'>
+    <arg type='^^{Tcl_Mutex_}'/>
+  </function>
+  <function name='Tcl_MutexUnlock'>
+    <arg type='^^{Tcl_Mutex_}'/>
+  </function>
+  <function name='Tcl_NewBooleanObj'>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewByteArrayObj'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewDoubleObj'>
+    <arg type='d'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewIntObj'>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewListObj'>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewLongObj'>
+    <arg type='l' type64='q'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewObj'>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewStringObj'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewUnicodeObj'>
+    <arg type='^S'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NewWideIntObj'>
+    <arg type='q'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_NextHashEntry'>
+    <arg type='^{Tcl_HashSearch=^{Tcl_HashTable}i^{Tcl_HashEntry}}'/>
+    <retval type='^{Tcl_HashEntry=^{Tcl_HashEntry}^{Tcl_HashTable}^v^v(?=*^{Tcl_Obj}[1i][4c])}'/>
+  </function>
+  <function name='Tcl_NotifyChannel'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_NumUtfChars'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ObjGetVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_ObjSetVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_OpenCommandChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_OpenFileChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_OpenTcpClient'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_OpenTcpServer'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Channel_=}'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_OutputBuffered'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_Panic' variadic='true'>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_PanicVA'>
+    <arg type='*'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+  </function>
+  <function name='Tcl_ParseBraces'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Parse=*i*ii^{Tcl_Token}iii**^{Tcl_Interp}*i[20{Tcl_Token=i*ii}]}'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ParseCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Parse=*i*ii^{Tcl_Token}iii**^{Tcl_Interp}*i[20{Tcl_Token=i*ii}]}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ParseExpr'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Parse=*i*ii^{Tcl_Token}iii**^{Tcl_Interp}*i[20{Tcl_Token=i*ii}]}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ParseQuotedString'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Parse=*i*ii^{Tcl_Token}iii**^{Tcl_Interp}*i[20{Tcl_Token=i*ii}]}'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ParseVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_ParseVarName'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Parse=*i*ii^{Tcl_Token}iii**^{Tcl_Interp}*i[20{Tcl_Token=i*ii}]}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_PkgPresent'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_PkgPresentEx'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^^v'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_PkgProvide'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_PkgProvideEx'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_PkgRequire'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_PkgRequireEx'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^^v'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_PosixError'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_Preserve'>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_PrintDouble'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='d'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_ProcObjCmd'>
+    <arg type='^v'/>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_PutEnv'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_QueueEvent'>
+    <arg type='^{Tcl_Event=^?^{Tcl_Event}}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_Read'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ReadChars'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ReadRaw'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_Realloc'>
+    <arg type='*'/>
+    <arg type='I'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_ReapDetachedProcs'/>
+  <function name='Tcl_RecordAndEval'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_RecordAndEvalObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_RegExpCompile'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='^{Tcl_RegExp_=}'/>
+  </function>
+  <function name='Tcl_RegExpExec'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_RegExp_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_RegExpExecObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_RegExp_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_RegExpGetInfo'>
+    <arg type='^{Tcl_RegExp_=}'/>
+    <arg type='^{Tcl_RegExpInfo=i^{Tcl_RegExpIndices}ll}' type64='^{Tcl_RegExpInfo=i^{Tcl_RegExpIndices}qq}'/>
+  </function>
+  <function name='Tcl_RegExpMatch'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_RegExpMatchObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_RegExpRange'>
+    <arg type='^{Tcl_RegExp_=}'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <arg type='^*'/>
+  </function>
+  <function name='Tcl_RegisterChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_RegisterObjType'>
+    <arg type='^{Tcl_ObjType=*^?^?^?^?}'/>
+  </function>
+  <function name='Tcl_Release'>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_ResetResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_RestoreResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_SavedResult=*^?^{Tcl_Obj}*ii[201c]}'/>
+  </function>
+  <function name='Tcl_SaveResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_SavedResult=*^?^{Tcl_Obj}*ii[201c]}'/>
+  </function>
+  <function name='Tcl_ScanCountedElement'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ScanElement'>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_Seek'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='q'/>
+    <arg type='i'/>
+    <retval type='q'/>
+  </function>
+  <function name='Tcl_SeekOld'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ServiceAll'>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ServiceEvent'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ServiceModeHook'>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetAssocData'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_SetBooleanObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetByteArrayLength'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_SetByteArrayObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetChannelBufferSize'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetChannelOption'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SetCommandInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_CmdInfo=i^?^v^?^v^?^v^{Tcl_Namespace}}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SetCommandInfoFromToken'>
+    <arg type='^{Tcl_Command_=}'/>
+    <arg type='^{Tcl_CmdInfo=i^?^v^?^v^?^v^{Tcl_Namespace}}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SetDefaultEncodingDir'>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_SetDoubleObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='d'/>
+  </function>
+  <function name='Tcl_SetErrno'>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetErrorCode' variadic='true'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_SetErrorCodeVA'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+  </function>
+  <function name='Tcl_SetIntObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetListObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+  </function>
+  <function name='Tcl_SetLongObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='l' type64='q'/>
+  </function>
+  <function name='Tcl_SetMainLoop'>
+    <arg function_pointer='true' type='^?'>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='Tcl_SetMaxBlockTime'>
+    <arg type='^{Tcl_Time=ll}' type64='^{Tcl_Time=qq}'/>
+  </function>
+  <function name='Tcl_SetNotifier'>
+    <arg type='^{Tcl_NotifierProcs=^?^?^?^?^?^?^?^?}'/>
+  </function>
+  <function name='Tcl_SetObjErrorCode'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_SetObjLength'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetObjResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_SetPanicProc'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='*'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='Tcl_SetRecursionLimit'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SetResult'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='*'/>
+      <retval type='v'/>
+    </arg>
+  </function>
+  <function name='Tcl_SetServiceMode'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SetStdChannel'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetStringObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetSystemEncoding'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SetTimer'>
+    <arg type='^{Tcl_Time=ll}' type64='^{Tcl_Time=qq}'/>
+  </function>
+  <function name='Tcl_SetUnicodeObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^S'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SetVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_SetVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_SetVar2Ex'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_SetWideIntObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='q'/>
+  </function>
+  <function name='Tcl_SignalId'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_SignalMsg'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_Sleep'>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_SourceRCFile'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tcl_SpliceChannel'>
+    <arg type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_SplitList'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <arg type='^^*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SplitPath'>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <arg type='^^*'/>
+  </function>
+  <function name='Tcl_StackChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_ChannelType=*^{Tcl_ChannelTypeVersion_}^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='^{Tcl_Channel_=}'/>
+  </function>
+  <function name='Tcl_Stat'>
+    <arg type='*'/>
+    <arg type='^{stat=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_StaticPackage'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='i'/>
+    </arg>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='i'/>
+    </arg>
+  </function>
+  <function name='Tcl_StringCaseMatch'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_StringMatch'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_SubstObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tcl_Tell'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='q'/>
+  </function>
+  <function name='Tcl_TellOld'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ThreadAlert'>
+    <arg type='^{Tcl_ThreadId_=}'/>
+  </function>
+  <function name='Tcl_ThreadQueueEvent'>
+    <arg type='^{Tcl_ThreadId_=}'/>
+    <arg type='^{Tcl_Event=^?^{Tcl_Event}}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_TraceCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_TraceVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='*'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_TraceVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='*'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_TranslateFileName'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_Ungets'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharAtIndex'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='S'/>
+  </function>
+  <function name='Tcl_UniCharCaseMatch'>
+    <arg type='^S'/>
+    <arg type='^S'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsAlnum'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsAlpha'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsControl'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsDigit'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsGraph'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsLower'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsPrint'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsPunct'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsSpace'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsUpper'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharIsWordChar'>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharLen'>
+    <arg type='^S'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharNcasecmp'>
+    <arg type='^S'/>
+    <arg type='^S'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharNcmp'>
+    <arg type='^S'/>
+    <arg type='^S'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharToLower'>
+    <arg type='i'/>
+    <retval type='S'/>
+  </function>
+  <function name='Tcl_UniCharToTitle'>
+    <arg type='i'/>
+    <retval type='S'/>
+  </function>
+  <function name='Tcl_UniCharToUpper'>
+    <arg type='i'/>
+    <retval type='S'/>
+  </function>
+  <function name='Tcl_UniCharToUtf'>
+    <arg type='i'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UniCharToUtfDString'>
+    <arg type='^S'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_UnlinkVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_UnregisterChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UnsetVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UnsetVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UnstackChannel'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Channel_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UntraceCommand'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_UntraceVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='*'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_UntraceVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='*'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tcl_UpVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UpVar2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UpdateLinkedVar'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tcl_UtfAtIndex'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_UtfBackslash'>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfCharComplete'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfFindFirst'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_UtfFindLast'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_UtfNcasecmp'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfNcmp'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfNext'>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_UtfPrev'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_UtfToExternal'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Encoding_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_EncodingState_}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfToExternalDString'>
+    <arg type='^{Tcl_Encoding_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tcl_UtfToLower'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfToTitle'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfToUniChar'>
+    <arg type='*'/>
+    <arg type='^S'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_UtfToUniCharDString'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='^S'/>
+  </function>
+  <function name='Tcl_UtfToUpper'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_ValidateAllMemory'>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tcl_VarEval' variadic='true'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_VarEvalVA'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_VarTraceInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='*'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_VarTraceInfo2'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='*'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tcl_WaitForEvent'>
+    <arg type='^{Tcl_Time=ll}' type64='^{Tcl_Time=qq}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_WaitPid'>
+    <arg type='^{Tcl_Pid_=}'/>
+    <arg type='^i'/>
+    <arg type='i'/>
+    <retval type='^{Tcl_Pid_=}'/>
+  </function>
+  <function name='Tcl_Write'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_WriteChars'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_WriteObj'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType=*^?^?^?^?}(?=qd^vq{?=^v^v})}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_WriteRaw'>
+    <arg type='^{Tcl_Channel_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tcl_WrongNumArgs'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <arg type='*'/>
+  </function>
+  <function_alias name='Tcl_Ckalloc' original='Tcl_Alloc'/>
+  <function_alias name='Tcl_Ckfree' original='Tcl_Free'/>
+  <function_alias name='Tcl_Ckrealloc' original='Tcl_Realloc'/>
+  <function_alias name='Tcl_DStringTrunc' original='Tcl_DStringSetLength'/>
+  <function_alias name='Tcl_Return' original='Tcl_SetResult'/>
+  <function_alias name='Tcl_TildeSubst' original='Tcl_TranslateFileName'/>
+  <function_alias name='panic' original='Tcl_Panic'/>
+  <function_alias name='panicVA' original='Tcl_PanicVA'/>
+</signatures>

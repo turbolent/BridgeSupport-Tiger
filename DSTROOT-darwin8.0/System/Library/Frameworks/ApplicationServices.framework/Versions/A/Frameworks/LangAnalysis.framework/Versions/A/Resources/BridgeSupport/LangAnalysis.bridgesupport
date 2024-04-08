@@ -1,0 +1,608 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework'/>
+  <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+  <struct name='DCMDictionaryHeader' type='{DCMDictionaryHeader=&quot;headerSignature&quot;I&quot;headerVersion&quot;I&quot;headerSize&quot;I&quot;accessMethod&quot;[64C]}'/>
+  <struct name='DictionaryAttributeTable' type='{DictionaryAttributeTable=&quot;datSize&quot;C&quot;datTable&quot;[1c]}'/>
+  <struct name='DictionaryInformation' type='{DictionaryInformation=&quot;dictionaryFSSpec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;l&quot;name&quot;[64C]}&quot;numberOfRecords&quot;i&quot;currentGarbageSize&quot;i&quot;script&quot;s&quot;maximumKeyLength&quot;s&quot;keyAttributes&quot;c}' type64='{DictionaryInformation=&quot;dictionaryFSSpec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;q&quot;name&quot;[64C]}&quot;numberOfRecords&quot;i&quot;currentGarbageSize&quot;i&quot;script&quot;s&quot;maximumKeyLength&quot;s&quot;keyAttributes&quot;c}'/>
+  <struct name='HomographDicInfoRec' type='{HomographDicInfoRec=&quot;dictionaryID&quot;^{OpaqueDCMObjectID}&quot;uniqueID&quot;I}'/>
+  <struct name='LAHomograph' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
+  <struct name='LAMorpheme' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
+  <struct name='LAMorphemeBundle' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
+  <struct name='LAMorphemePath' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
+  <struct name='LAMorphemeRec' type='{LAMorphemeRec=&quot;sourceTextLength&quot;I&quot;sourceTextPtr&quot;^v&quot;morphemeTextLength&quot;I&quot;morphemeTextPtr&quot;^v&quot;partOfSpeech&quot;I}'/>
+  <struct name='LAMorphemesArray' type='{LAMorphemesArray=&quot;morphemesCount&quot;I&quot;processedTextLength&quot;I&quot;morphemesTextLength&quot;I&quot;morphemes&quot;[1{LAMorphemeRec=&quot;sourceTextLength&quot;I&quot;sourceTextPtr&quot;^v&quot;morphemeTextLength&quot;I&quot;morphemeTextPtr&quot;^v&quot;partOfSpeech&quot;I}]}'/>
+  <struct name='MorphemeTextRange' type='{MorphemeTextRange=&quot;sourceOffset&quot;I&quot;length&quot;I}'/>
+  <cftype name='DCMObjectRef' type='^{OpaqueDCMObjectRef=}'/>
+  <cftype name='LAContextRef' type='^{OpaqueLAContextRef=}'/>
+  <cftype name='LAEnvironmentRef' type='^{OpaqueLAEnvironmentRef=}'/>
+  <opaque name='DCMFoundRecordIterator' type='^{OpaqueDCMFoundRecordIterator=}'/>
+  <opaque name='DCMObjectID' type='^{OpaqueDCMObjectID=}'/>
+  <opaque name='DCMObjectIterator' type='^{OpaqueDCMObjectIterator=}'/>
+  <string_constant name='kAppleJapaneseDefaultAccessMethodName' value='pDAM:Apple Backward Trie Access Method'/>
+  <string_constant name='kLAJapaneseKanaKanjiEnvironment' value='pKanaKanjiConversion'/>
+  <string_constant name='kLAJapaneseMorphemeAnalysisEnvironment' value='pJapaneseMorphemeAnalysis'/>
+  <string_constant name='kLAJapaneseTTSEnvironment' value='pJapaneseTextToSpeech'/>
+  <enum name='kAdjective' value='-3'/>
+  <enum name='kAdverb' value='-4'/>
+  <enum name='kAppleJapaneseDictionarySignature' value='1785487726'/>
+  <enum name='kDCMAllowListing' value='0'/>
+  <enum name='kDCMAnyFieldTag' value='707406378'/>
+  <enum name='kDCMAnyFieldType' value='707406378'/>
+  <enum name='kDCMBasicDictionaryClass' value='2'/>
+  <enum name='kDCMCanAddDictionaryFieldMask' value='64'/>
+  <enum name='kDCMCanCreateDictionaryMask' value='32'/>
+  <enum name='kDCMCanHaveMultipleIndexMask' value='8'/>
+  <enum name='kDCMCanModifyDictionaryMask' value='16'/>
+  <enum name='kDCMCanStreamDictionaryMask' value='4'/>
+  <enum name='kDCMCanUseFileDictionaryMask' value='1'/>
+  <enum name='kDCMCanUseMemoryDictionaryMask' value='2'/>
+  <enum name='kDCMCanUseTransactionMask' value='128'/>
+  <enum name='kDCMDictionaryHeaderSignature' value='1684628340'/>
+  <enum name='kDCMDictionaryHeaderVersion' value='2'/>
+  <enum name='kDCMFindMethodBackwardTrie' value='1651798633'/>
+  <enum name='kDCMFindMethodBeginningMatch' value='1650947956'/>
+  <enum name='kDCMFindMethodContainsMatch' value='1668247156'/>
+  <enum name='kDCMFindMethodEndingMatch' value='1701733491'/>
+  <enum name='kDCMFindMethodExactMatch' value='1025515552'/>
+  <enum name='kDCMFindMethodForwardTrie' value='1718907497'/>
+  <enum name='kDCMFixedSizeFieldMask' value='8'/>
+  <enum name='kDCMHiddenFieldMask' value64='2147483648' value='-2147483648'/>
+  <enum name='kDCMIdentifyFieldMask' value='4'/>
+  <enum name='kDCMIndexedFieldMask' value='1'/>
+  <enum name='kDCMJapaneseAccentTag' value='1633906292'/>
+  <enum name='kDCMJapaneseAccentType' value='1652126821'/>
+  <enum name='kDCMJapaneseFukugouInfoTag' value='1718971253'/>
+  <enum name='kDCMJapaneseFukugouInfoType' value='1718971253'/>
+  <enum name='kDCMJapaneseHinshiTag' value='1751740019'/>
+  <enum name='kDCMJapaneseHinshiType' value='1751740019'/>
+  <enum name='kDCMJapaneseHyokiTag' value='1752788843'/>
+  <enum name='kDCMJapaneseHyokiType' value='1970567284'/>
+  <enum name='kDCMJapaneseOnKunReadingTag' value='1332628334'/>
+  <enum name='kDCMJapaneseOnKunReadingType' value='1970567284'/>
+  <enum name='kDCMJapanesePhoneticTag' value='1752461166'/>
+  <enum name='kDCMJapanesePhoneticType' value='1970567284'/>
+  <enum name='kDCMJapaneseWeightTag' value='1751740004'/>
+  <enum name='kDCMJapaneseWeightType' value='1936224114'/>
+  <enum name='kDCMJapaneseYomiTag' value='2037345641'/>
+  <enum name='kDCMJapaneseYomiType' value='1970567284'/>
+  <enum name='kDCMProhibitListing' value='1'/>
+  <enum name='kDCMReadOnlyDictionary' value='0'/>
+  <enum name='kDCMReadWriteDictionary' value='1'/>
+  <enum name='kDCMRequiredFieldMask' value='2'/>
+  <enum name='kDCMSpecificDictionaryClass' value='1'/>
+  <enum name='kDCMUserDictionaryClass' value='0'/>
+  <enum name='kDictionaryFileType' value='1684628340'/>
+  <enum name='kInsert' value='0'/>
+  <enum name='kInsertOrReplace' value='2'/>
+  <enum name='kIsCaseSensitive' value='16'/>
+  <enum name='kIsNotDiacriticalSensitive' value='32'/>
+  <enum name='kLAAllMorphemes' value='0'/>
+  <enum name='kLADefaultEdge' value='0'/>
+  <enum name='kLAEndOfSourceTextMask' value='1'/>
+  <enum name='kLAFreeEdge' value='1'/>
+  <enum name='kLAIncompleteEdge' value='2'/>
+  <enum name='kLAMorphemesArrayVersion' value='0'/>
+  <enum name='kLASpeechBagyouGodan' value='20608'/>
+  <enum name='kLASpeechChimei' value='512'/>
+  <enum name='kLASpeechChimeiSetsubigo' value='37376'/>
+  <enum name='kLASpeechDokuritsugo' value='41728'/>
+  <enum name='kLASpeechDoushi' value='20480'/>
+  <enum name='kLASpeechFukushi' value='8192'/>
+  <enum name='kLASpeechFutsuuMeishi' value='0'/>
+  <enum name='kLASpeechGagyouGodan' value='20592'/>
+  <enum name='kLASpeechGodanDoushi' value='20480'/>
+  <enum name='kLASpeechIchidanDoushi' value='20736'/>
+  <enum name='kLASpeechJinmei' value='256'/>
+  <enum name='kLASpeechJinmeiMei' value='288'/>
+  <enum name='kLASpeechJinmeiSei' value='272'/>
+  <enum name='kLASpeechJinmeiSetsubigo' value='37120'/>
+  <enum name='kLASpeechJodoushi' value='45056'/>
+  <enum name='kLASpeechJoshi' value='49152'/>
+  <enum name='kLASpeechKagyouGodan' value='20480'/>
+  <enum name='kLASpeechKahenDoushi' value='20992'/>
+  <enum name='kLASpeechKandoushi' value='16384'/>
+  <enum name='kLASpeechKatsuyouGokan' value='1'/>
+  <enum name='kLASpeechKatsuyouKatei' value='6'/>
+  <enum name='kLASpeechKatsuyouMask' value='15'/>
+  <enum name='kLASpeechKatsuyouMeirei' value='7'/>
+  <enum name='kLASpeechKatsuyouMizen' value='2'/>
+  <enum name='kLASpeechKatsuyouRentai' value='5'/>
+  <enum name='kLASpeechKatsuyouRenyou' value='3'/>
+  <enum name='kLASpeechKatsuyouSyuushi' value='4'/>
+  <enum name='kLASpeechKeidouMeishi' value='1536'/>
+  <enum name='kLASpeechKeiyoudoushi' value='28672'/>
+  <enum name='kLASpeechKeiyoushi' value='24576'/>
+  <enum name='kLASpeechKigou' value='41216'/>
+  <enum name='kLASpeechKoyuuMeishi' value='1024'/>
+  <enum name='kLASpeechKuten' value='41232'/>
+  <enum name='kLASpeechMagyouGodan' value='20544'/>
+  <enum name='kLASpeechMediumClassMask' value='65280'/>
+  <enum name='kLASpeechMeishi' value='0'/>
+  <enum name='kLASpeechMuhinshi' value='40960'/>
+  <enum name='kLASpeechNagyouGodan' value='20528'/>
+  <enum name='kLASpeechRagyouGodan' value='20560'/>
+  <enum name='kLASpeechRentaishi' value='4096'/>
+  <enum name='kLASpeechRoughClassMask' value='61440'/>
+  <enum name='kLASpeechSagyouGodan' value='20496'/>
+  <enum name='kLASpeechSahenDoushi' value='21248'/>
+  <enum name='kLASpeechSahenMeishi' value='1280'/>
+  <enum name='kLASpeechSeiku' value='41984'/>
+  <enum name='kLASpeechSetsubiChimei' value='528'/>
+  <enum name='kLASpeechSetsubigo' value='36864'/>
+  <enum name='kLASpeechSetsuzokushi' value='12288'/>
+  <enum name='kLASpeechSettougo' value='32768'/>
+  <enum name='kLASpeechSoshikimei' value='768'/>
+  <enum name='kLASpeechSoshikimeiSetsubigo' value='37632'/>
+  <enum name='kLASpeechStrictClassMask' value='65520'/>
+  <enum name='kLASpeechSuujiSetsubigo' value='37888'/>
+  <enum name='kLASpeechSuujiSettougo' value='33024'/>
+  <enum name='kLASpeechSuushi' value='41472'/>
+  <enum name='kLASpeechTagyouGodan' value='20512'/>
+  <enum name='kLASpeechTankanji' value='40960'/>
+  <enum name='kLASpeechTouten' value='41248'/>
+  <enum name='kLASpeechWagyouGodan' value='20576'/>
+  <enum name='kLASpeechZahenDoushi' value='21504'/>
+  <enum name='kMaxInputLengthOfAppleJapaneseEngine' value='200'/>
+  <enum name='kMaxKanjiLengthInAppleJapaneseDictionary' value='64'/>
+  <enum name='kMaxYomiLengthInAppleJapaneseDictionary' value='40'/>
+  <enum name='kNoun' value='-1'/>
+  <enum name='kReplace' value='1'/>
+  <enum name='kVerb' value='-2'/>
+  <enum name='keyAEHomographAccent' value='1818323041'/>
+  <enum name='keyAEHomographDicInfo' value='1818323044'/>
+  <enum name='keyAEHomographWeight' value='1818323063'/>
+  <enum name='keyAELAHomograph' value='1819108968'/>
+  <enum name='keyAELAMorpheme' value='1819108974'/>
+  <enum name='keyAELAMorphemeBundle' value='1819108962'/>
+  <enum name='keyAELAMorphemePath' value='1819108976'/>
+  <enum name='keyAEMorphemePartOfSpeechCode' value='1818324323'/>
+  <enum name='keyAEMorphemeTextRange' value='1818324340'/>
+  <enum name='keyDCMFieldAttributes' value='1717662834'/>
+  <enum name='keyDCMFieldDefaultData' value='1717855590'/>
+  <enum name='keyDCMFieldFindMethods' value='1717988964'/>
+  <enum name='keyDCMFieldName' value='1718509933'/>
+  <enum name='keyDCMFieldTag' value='1718903143'/>
+  <enum name='keyDCMFieldType' value='1718909296'/>
+  <enum name='keyDCMMaxRecordSize' value='1836217210'/>
+  <enum name='pDCMAccessMethod' value='1634563172'/>
+  <enum name='pDCMClass' value='1885564019'/>
+  <enum name='pDCMCopyright' value='1768842863'/>
+  <enum name='pDCMListing' value='1818850164'/>
+  <enum name='pDCMLocale' value='1819239276'/>
+  <enum name='pDCMMaintenance' value='1836346979'/>
+  <enum name='pDCMPermission' value='1885696621'/>
+  <enum name='typeAEHomographAccent' value='1818323041'/>
+  <enum name='typeAEHomographDicInfo' value='1818323044'/>
+  <enum name='typeAEHomographWeight' value='1936224114'/>
+  <enum name='typeAEMorphemePartOfSpeechCode' value='1818324323'/>
+  <enum name='typeAEMorphemeTextRange' value='1818324340'/>
+  <enum name='typeDCMFieldAttributes' value='1717662834'/>
+  <enum name='typeDCMFindMethod' value='1718449256'/>
+  <enum name='typeLAHomograph' value='1818850164'/>
+  <enum name='typeLAMorpheme' value='1818850164'/>
+  <enum name='typeLAMorphemeBundle' value='1919247215'/>
+  <enum name='typeLAMorphemePath' value='1919247215'/>
+  <function name='DCMAddRecord'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='B'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMCloseDictionary'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMCompactDictionary'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='B'/>
+      <arg type='S'/>
+      <arg type='L' type64='I'/>
+      <retval type='B'/>
+    </arg>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMCountObjectIterator'>
+    <arg type='^{OpaqueDCMObjectIterator=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='DCMCountRecord'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMCountRecordIterator'>
+    <arg type='^{OpaqueDCMFoundRecordIterator=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='DCMCreateAccessMethodIterator'>
+    <arg type='^^{OpaqueDCMObjectIterator}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMCreateDictionaryIterator'>
+    <arg type='^^{OpaqueDCMObjectIterator}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMCreateFieldInfoRecord'>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMDeleteDictionary'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMDeleteRecord'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMDeriveNewDictionary'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='s'/>
+    <arg type='B'/>
+    <arg type='L' type64='I'/>
+    <arg type='^^{OpaqueDCMObjectID}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMDisposeObjectIterator'>
+    <arg type='^{OpaqueDCMObjectIterator=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMDisposeRecordIterator'>
+    <arg type='^{OpaqueDCMFoundRecordIterator=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMFindRecords'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^^{OpaqueDCMFoundRecordIterator}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetAccessMethodIDFromName'>
+    <arg type='*'/>
+    <arg type='^^{OpaqueDCMObjectID}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetDictionaryFieldInfo'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetDictionaryIDFromFile'>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='^^{OpaqueDCMObjectID}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetDictionaryIDFromRef'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <retval type='^{OpaqueDCMObjectID=}'/>
+  </function>
+  <function name='DCMGetDictionaryProperty'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetDictionaryPropertyList'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetDictionaryWriteAccess'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='l' type64='i'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetFieldAttributes'>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetFieldData'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetFieldDefaultData'>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetFieldFindMethods'>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetFieldMaxRecordSize'>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetFieldTagAndType'>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^I'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetFileFromDictionaryID'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetNextRecord'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^v'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetNthRecord'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^v'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetPrevRecord'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^v'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMGetRecordSequenceNumber'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMIterateFoundRecord'>
+    <arg type='^{OpaqueDCMFoundRecordIterator=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^v'/>
+    <arg type='^I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMIterateObject'>
+    <arg type='^{OpaqueDCMObjectIterator=}'/>
+    <arg type='^^{OpaqueDCMObjectID}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMLibraryVersion'>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='DCMNewDictionary'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='s'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='B'/>
+    <arg type='L' type64='I'/>
+    <arg type='^^{OpaqueDCMObjectID}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMOpenDictionary'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='^^{OpaqueDCMObjectRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMRegisterDictionaryFile'>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='^^{OpaqueDCMObjectID}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMReleaseDictionaryWriteAccess'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMReorganizeDictionary'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='L' type64='I'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='B'/>
+      <arg type='S'/>
+      <arg type='L' type64='I'/>
+      <retval type='B'/>
+    </arg>
+    <arg type='L' type64='I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMResetObjectIterator'>
+    <arg type='^{OpaqueDCMObjectIterator=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMSetDictionaryProperty'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMSetFieldData'>
+    <arg type='^{OpaqueDCMObjectRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='DCMUnregisterDictionary'>
+    <arg type='^{OpaqueDCMObjectID=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAAddNewWord'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LACloseAnalysisContext'>
+    <arg type='^{OpaqueLAContextRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LACloseDictionary'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAContinuousMorphemeAnalysis'>
+    <arg type='^{OpaqueLAContextRef=}'/>
+    <arg type='^S'/>
+    <arg type='L' type64='I'/>
+    <arg type='B'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LACreateCustomEnvironment'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg type='*'/>
+    <arg type='B'/>
+    <arg type='^^{OpaqueLAEnvironmentRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LADeleteCustomEnvironment'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAGetEnvironmentList'>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^^{OpaqueLAEnvironmentRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAGetEnvironmentName'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg type='*'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAGetEnvironmentRef'>
+    <arg type='*'/>
+    <arg type='^^{OpaqueLAEnvironmentRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAGetMorphemes'>
+    <arg type='^{OpaqueLAContextRef=}'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LALibraryVersion'>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='LAListAvailableDictionaries'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <arg type='^B'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAMorphemeAnalysis'>
+    <arg type='^{OpaqueLAContextRef=}'/>
+    <arg type='^S'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAOpenAnalysisContext'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg type='^^{OpaqueLAContextRef}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAOpenDictionary'>
+    <arg type='^{OpaqueLAEnvironmentRef=}'/>
+    <arg type='^{FSSpec=sl[64C]}' type64='^{FSSpec=sq[64C]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAResetAnalysis'>
+    <arg type='^{OpaqueLAContextRef=}'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LAShiftMorphemes'>
+    <arg type='^{OpaqueLAContextRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+    <arg type='^I'/>
+    <retval type='l' type64='i'/>
+  </function>
+  <function name='LATextToMorphemes'>
+    <arg type='^{OpaqueLAContextRef=}'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <arg type='^I'/>
+    <arg type='^{LAMorphemesArray=III[1{LAMorphemeRec=I^vI^vI}]}'/>
+    <retval type='l' type64='i'/>
+  </function>
+</signatures>

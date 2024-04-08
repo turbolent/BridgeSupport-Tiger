@@ -1,0 +1,3002 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+  <struct name='TkIntXlibStubs' type='{TkIntXlibStubs=&quot;magic&quot;i&quot;hooks&quot;^{TkIntXlibStubHooks}}'/>
+  <struct name='TkPlatStubs' type='{TkPlatStubs=&quot;magic&quot;i&quot;hooks&quot;^{TkPlatStubHooks}}'/>
+  <struct name='TkStubHooks' type='{TkStubHooks=&quot;tkPlatStubs&quot;^{TkPlatStubs}&quot;tkIntStubs&quot;^{TkIntStubs}&quot;tkIntPlatStubs&quot;^{TkIntPlatStubs}&quot;tkIntXlibStubs&quot;^{TkIntXlibStubs}}'/>
+  <struct name='TkStubs' type='{TkStubs=&quot;magic&quot;i&quot;hooks&quot;^{TkStubHooks}&quot;tk_MainLoop&quot;^?&quot;tk_3DBorderColor&quot;^?&quot;tk_3DBorderGC&quot;^?&quot;tk_3DHorizontalBevel&quot;^?&quot;tk_3DVerticalBevel&quot;^?&quot;tk_AddOption&quot;^?&quot;tk_BindEvent&quot;^?&quot;tk_CanvasDrawableCoords&quot;^?&quot;tk_CanvasEventuallyRedraw&quot;^?&quot;tk_CanvasGetCoord&quot;^?&quot;tk_CanvasGetTextInfo&quot;^?&quot;tk_CanvasPsBitmap&quot;^?&quot;tk_CanvasPsColor&quot;^?&quot;tk_CanvasPsFont&quot;^?&quot;tk_CanvasPsPath&quot;^?&quot;tk_CanvasPsStipple&quot;^?&quot;tk_CanvasPsY&quot;^?&quot;tk_CanvasSetStippleOrigin&quot;^?&quot;tk_CanvasTagsParseProc&quot;^?&quot;tk_CanvasTagsPrintProc&quot;^?&quot;tk_CanvasTkwin&quot;^?&quot;tk_CanvasWindowCoords&quot;^?&quot;tk_ChangeWindowAttributes&quot;^?&quot;tk_CharBbox&quot;^?&quot;tk_ClearSelection&quot;^?&quot;tk_ClipboardAppend&quot;^?&quot;tk_ClipboardClear&quot;^?&quot;tk_ConfigureInfo&quot;^?&quot;tk_ConfigureValue&quot;^?&quot;tk_ConfigureWidget&quot;^?&quot;tk_ConfigureWindow&quot;^?&quot;tk_ComputeTextLayout&quot;^?&quot;tk_CoordsToWindow&quot;^?&quot;tk_CreateBinding&quot;^?&quot;tk_CreateBindingTable&quot;^?&quot;tk_CreateErrorHandler&quot;^?&quot;tk_CreateEventHandler&quot;^?&quot;tk_CreateGenericHandler&quot;^?&quot;tk_CreateImageType&quot;^?&quot;tk_CreateItemType&quot;^?&quot;tk_CreatePhotoImageFormat&quot;^?&quot;tk_CreateSelHandler&quot;^?&quot;tk_CreateWindow&quot;^?&quot;tk_CreateWindowFromPath&quot;^?&quot;tk_DefineBitmap&quot;^?&quot;tk_DefineCursor&quot;^?&quot;tk_DeleteAllBindings&quot;^?&quot;tk_DeleteBinding&quot;^?&quot;tk_DeleteBindingTable&quot;^?&quot;tk_DeleteErrorHandler&quot;^?&quot;tk_DeleteEventHandler&quot;^?&quot;tk_DeleteGenericHandler&quot;^?&quot;tk_DeleteImage&quot;^?&quot;tk_DeleteSelHandler&quot;^?&quot;tk_DestroyWindow&quot;^?&quot;tk_DisplayName&quot;^?&quot;tk_DistanceToTextLayout&quot;^?&quot;tk_Draw3DPolygon&quot;^?&quot;tk_Draw3DRectangle&quot;^?&quot;tk_DrawChars&quot;^?&quot;tk_DrawFocusHighlight&quot;^?&quot;tk_DrawTextLayout&quot;^?&quot;tk_Fill3DPolygon&quot;^?&quot;tk_Fill3DRectangle&quot;^?&quot;tk_FindPhoto&quot;^?&quot;tk_FontId&quot;^?&quot;tk_Free3DBorder&quot;^?&quot;tk_FreeBitmap&quot;^?&quot;tk_FreeColor&quot;^?&quot;tk_FreeColormap&quot;^?&quot;tk_FreeCursor&quot;^?&quot;tk_FreeFont&quot;^?&quot;tk_FreeGC&quot;^?&quot;tk_FreeImage&quot;^?&quot;tk_FreeOptions&quot;^?&quot;tk_FreePixmap&quot;^?&quot;tk_FreeTextLayout&quot;^?&quot;tk_FreeXId&quot;^?&quot;tk_GCForColor&quot;^?&quot;tk_GeometryRequest&quot;^?&quot;tk_Get3DBorder&quot;^?&quot;tk_GetAllBindings&quot;^?&quot;tk_GetAnchor&quot;^?&quot;tk_GetAtomName&quot;^?&quot;tk_GetBinding&quot;^?&quot;tk_GetBitmap&quot;^?&quot;tk_GetBitmapFromData&quot;^?&quot;tk_GetCapStyle&quot;^?&quot;tk_GetColor&quot;^?&quot;tk_GetColorByValue&quot;^?&quot;tk_GetColormap&quot;^?&quot;tk_GetCursor&quot;^?&quot;tk_GetCursorFromData&quot;^?&quot;tk_GetFont&quot;^?&quot;tk_GetFontFromObj&quot;^?&quot;tk_GetFontMetrics&quot;^?&quot;tk_GetGC&quot;^?&quot;tk_GetImage&quot;^?&quot;tk_GetImageMasterData&quot;^?&quot;tk_GetItemTypes&quot;^?&quot;tk_GetJoinStyle&quot;^?&quot;tk_GetJustify&quot;^?&quot;tk_GetNumMainWindows&quot;^?&quot;tk_GetOption&quot;^?&quot;tk_GetPixels&quot;^?&quot;tk_GetPixmap&quot;^?&quot;tk_GetRelief&quot;^?&quot;tk_GetRootCoords&quot;^?&quot;tk_GetScrollInfo&quot;^?&quot;tk_GetScreenMM&quot;^?&quot;tk_GetSelection&quot;^?&quot;tk_GetUid&quot;^?&quot;tk_GetVisual&quot;^?&quot;tk_GetVRootGeometry&quot;^?&quot;tk_Grab&quot;^?&quot;tk_HandleEvent&quot;^?&quot;tk_IdToWindow&quot;^?&quot;tk_ImageChanged&quot;^?&quot;tk_Init&quot;^?&quot;tk_InternAtom&quot;^?&quot;tk_IntersectTextLayout&quot;^?&quot;tk_MaintainGeometry&quot;^?&quot;tk_MainWindow&quot;^?&quot;tk_MakeWindowExist&quot;^?&quot;tk_ManageGeometry&quot;^?&quot;tk_MapWindow&quot;^?&quot;tk_MeasureChars&quot;^?&quot;tk_MoveResizeWindow&quot;^?&quot;tk_MoveWindow&quot;^?&quot;tk_MoveToplevelWindow&quot;^?&quot;tk_NameOf3DBorder&quot;^?&quot;tk_NameOfAnchor&quot;^?&quot;tk_NameOfBitmap&quot;^?&quot;tk_NameOfCapStyle&quot;^?&quot;tk_NameOfColor&quot;^?&quot;tk_NameOfCursor&quot;^?&quot;tk_NameOfFont&quot;^?&quot;tk_NameOfImage&quot;^?&quot;tk_NameOfJoinStyle&quot;^?&quot;tk_NameOfJustify&quot;^?&quot;tk_NameOfRelief&quot;^?&quot;tk_NameToWindow&quot;^?&quot;tk_OwnSelection&quot;^?&quot;tk_ParseArgv&quot;^?&quot;tk_PhotoPutBlock_NoComposite&quot;^?&quot;tk_PhotoPutZoomedBlock_NoComposite&quot;^?&quot;tk_PhotoGetImage&quot;^?&quot;tk_PhotoBlank&quot;^?&quot;tk_PhotoExpand&quot;^?&quot;tk_PhotoGetSize&quot;^?&quot;tk_PhotoSetSize&quot;^?&quot;tk_PointToChar&quot;^?&quot;tk_PostscriptFontName&quot;^?&quot;tk_PreserveColormap&quot;^?&quot;tk_QueueWindowEvent&quot;^?&quot;tk_RedrawImage&quot;^?&quot;tk_ResizeWindow&quot;^?&quot;tk_RestackWindow&quot;^?&quot;tk_RestrictEvents&quot;^?&quot;tk_SafeInit&quot;^?&quot;tk_SetAppName&quot;^?&quot;tk_SetBackgroundFromBorder&quot;^?&quot;tk_SetClass&quot;^?&quot;tk_SetGrid&quot;^?&quot;tk_SetInternalBorder&quot;^?&quot;tk_SetWindowBackground&quot;^?&quot;tk_SetWindowBackgroundPixmap&quot;^?&quot;tk_SetWindowBorder&quot;^?&quot;tk_SetWindowBorderWidth&quot;^?&quot;tk_SetWindowBorderPixmap&quot;^?&quot;tk_SetWindowColormap&quot;^?&quot;tk_SetWindowVisual&quot;^?&quot;tk_SizeOfBitmap&quot;^?&quot;tk_SizeOfImage&quot;^?&quot;tk_StrictMotif&quot;^?&quot;tk_TextLayoutToPostscript&quot;^?&quot;tk_TextWidth&quot;^?&quot;tk_UndefineCursor&quot;^?&quot;tk_UnderlineChars&quot;^?&quot;tk_UnderlineTextLayout&quot;^?&quot;tk_Ungrab&quot;^?&quot;tk_UnmaintainGeometry&quot;^?&quot;tk_UnmapWindow&quot;^?&quot;tk_UnsetGrid&quot;^?&quot;tk_UpdatePointer&quot;^?&quot;tk_AllocBitmapFromObj&quot;^?&quot;tk_Alloc3DBorderFromObj&quot;^?&quot;tk_AllocColorFromObj&quot;^?&quot;tk_AllocCursorFromObj&quot;^?&quot;tk_AllocFontFromObj&quot;^?&quot;tk_CreateOptionTable&quot;^?&quot;tk_DeleteOptionTable&quot;^?&quot;tk_Free3DBorderFromObj&quot;^?&quot;tk_FreeBitmapFromObj&quot;^?&quot;tk_FreeColorFromObj&quot;^?&quot;tk_FreeConfigOptions&quot;^?&quot;tk_FreeSavedOptions&quot;^?&quot;tk_FreeCursorFromObj&quot;^?&quot;tk_FreeFontFromObj&quot;^?&quot;tk_Get3DBorderFromObj&quot;^?&quot;tk_GetAnchorFromObj&quot;^?&quot;tk_GetBitmapFromObj&quot;^?&quot;tk_GetColorFromObj&quot;^?&quot;tk_GetCursorFromObj&quot;^?&quot;tk_GetOptionInfo&quot;^?&quot;tk_GetOptionValue&quot;^?&quot;tk_GetJustifyFromObj&quot;^?&quot;tk_GetMMFromObj&quot;^?&quot;tk_GetPixelsFromObj&quot;^?&quot;tk_GetReliefFromObj&quot;^?&quot;tk_GetScrollInfoObj&quot;^?&quot;tk_InitOptions&quot;^?&quot;tk_MainEx&quot;^?&quot;tk_RestoreSavedOptions&quot;^?&quot;tk_SetOptions&quot;^?&quot;tk_InitConsoleChannels&quot;^?&quot;tk_CreateConsoleWindow&quot;^?&quot;tk_CreateSmoothMethod&quot;^?&quot;reserved218&quot;^v&quot;reserved219&quot;^v&quot;tk_GetDash&quot;^?&quot;tk_CreateOutline&quot;^?&quot;tk_DeleteOutline&quot;^?&quot;tk_ConfigOutlineGC&quot;^?&quot;tk_ChangeOutlineGC&quot;^?&quot;tk_ResetOutlineGC&quot;^?&quot;tk_CanvasPsOutline&quot;^?&quot;tk_SetTSOrigin&quot;^?&quot;tk_CanvasGetCoordFromObj&quot;^?&quot;tk_CanvasSetOffset&quot;^?&quot;tk_DitherPhoto&quot;^?&quot;tk_PostscriptBitmap&quot;^?&quot;tk_PostscriptColor&quot;^?&quot;tk_PostscriptFont&quot;^?&quot;tk_PostscriptImage&quot;^?&quot;tk_PostscriptPath&quot;^?&quot;tk_PostscriptStipple&quot;^?&quot;tk_PostscriptY&quot;^?&quot;tk_PostscriptPhoto&quot;^?&quot;tk_CreateClientMessageHandler&quot;^?&quot;tk_DeleteClientMessageHandler&quot;^?&quot;tk_CreateAnonymousWindow&quot;^?&quot;tk_SetClassProcs&quot;^?&quot;tk_SetInternalBorderEx&quot;^?&quot;tk_SetMinimumRequestSize&quot;^?&quot;tk_SetCaretPos&quot;^?&quot;tk_PhotoPutBlock&quot;^?&quot;tk_PhotoPutZoomedBlock&quot;^?&quot;tk_CollapseMotionEvents&quot;^?&quot;tk_RegisterStyleEngine&quot;^?&quot;tk_GetStyleEngine&quot;^?&quot;tk_RegisterStyledElement&quot;^?&quot;tk_GetElementId&quot;^?&quot;tk_CreateStyle&quot;^?&quot;tk_GetStyle&quot;^?&quot;tk_FreeStyle&quot;^?&quot;tk_NameOfStyle&quot;^?&quot;tk_AllocStyleFromObj&quot;^?&quot;tk_GetStyleFromObj&quot;^?&quot;tk_FreeStyleFromObj&quot;^?&quot;tk_GetStyledElement&quot;^?&quot;tk_GetElementSize&quot;^?&quot;tk_GetElementBox&quot;^?&quot;tk_GetElementBorderWidth&quot;^?&quot;tk_DrawElement&quot;^?}'/>
+  <struct name='Tk_ArgvInfo' type='{_Tk_ArgvInfo=&quot;key&quot;*&quot;type&quot;i&quot;src&quot;*&quot;dst&quot;*&quot;help&quot;*}'/>
+  <struct name='Tk_CanvasTextInfo' type='{Tk_CanvasTextInfo=&quot;selBorder&quot;^{Tk_3DBorder_}&quot;selBorderWidth&quot;i&quot;selFgColorPtr&quot;^{?}&quot;selItemPtr&quot;^{Tk_Item=&quot;id&quot;i&quot;nextPtr&quot;^{Tk_Item}&quot;staticTagSpace&quot;[3*]&quot;tagPtr&quot;^*&quot;tagSpace&quot;i&quot;numTags&quot;i&quot;typePtr&quot;^{Tk_ItemType}&quot;x1&quot;i&quot;y1&quot;i&quot;x2&quot;i&quot;y2&quot;i&quot;prevPtr&quot;^{Tk_Item}&quot;state&quot;i&quot;reserved1&quot;*&quot;redraw_flags&quot;i}&quot;selectFirst&quot;i&quot;selectLast&quot;i&quot;anchorItemPtr&quot;^{Tk_Item=&quot;id&quot;i&quot;nextPtr&quot;^{Tk_Item}&quot;staticTagSpace&quot;[3*]&quot;tagPtr&quot;^*&quot;tagSpace&quot;i&quot;numTags&quot;i&quot;typePtr&quot;^{Tk_ItemType}&quot;x1&quot;i&quot;y1&quot;i&quot;x2&quot;i&quot;y2&quot;i&quot;prevPtr&quot;^{Tk_Item}&quot;state&quot;i&quot;reserved1&quot;*&quot;redraw_flags&quot;i}&quot;selectAnchor&quot;i&quot;insertBorder&quot;^{Tk_3DBorder_}&quot;insertWidth&quot;i&quot;insertBorderWidth&quot;i&quot;focusItemPtr&quot;^{Tk_Item=&quot;id&quot;i&quot;nextPtr&quot;^{Tk_Item}&quot;staticTagSpace&quot;[3*]&quot;tagPtr&quot;^*&quot;tagSpace&quot;i&quot;numTags&quot;i&quot;typePtr&quot;^{Tk_ItemType}&quot;x1&quot;i&quot;y1&quot;i&quot;x2&quot;i&quot;y2&quot;i&quot;prevPtr&quot;^{Tk_Item}&quot;state&quot;i&quot;reserved1&quot;*&quot;redraw_flags&quot;i}&quot;gotFocus&quot;i&quot;cursorOn&quot;i}'/>
+  <struct name='Tk_ClassProcs' type='{Tk_ClassProcs=&quot;size&quot;I&quot;worldChangedProc&quot;^?&quot;createProc&quot;^?&quot;modalProc&quot;^?}'/>
+  <struct name='Tk_ConfigSpec' type='{Tk_ConfigSpec=&quot;type&quot;i&quot;argvName&quot;*&quot;dbName&quot;*&quot;dbClass&quot;*&quot;defValue&quot;*&quot;offset&quot;i&quot;specFlags&quot;i&quot;customPtr&quot;^{Tk_CustomOption}}'/>
+  <struct name='Tk_CustomOption' type='{Tk_CustomOption=&quot;parseProc&quot;^?&quot;printProc&quot;^?&quot;clientData&quot;^v}'/>
+  <struct name='Tk_Dash' type='{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[4c])}' type64='{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[8c])}'/>
+  <struct name='Tk_ElementOptionSpec' type='{Tk_ElementOptionSpec=&quot;name&quot;*&quot;type&quot;i}'/>
+  <struct name='Tk_ElementSpec' type='{Tk_ElementSpec=&quot;version&quot;i&quot;name&quot;*&quot;options&quot;^{Tk_ElementOptionSpec}&quot;getSize&quot;^?&quot;getBox&quot;^?&quot;getBorderWidth&quot;^?&quot;draw&quot;^?}'/>
+  <struct name='Tk_FakeWin' type='{Tk_FakeWin=&quot;display&quot;^{_XDisplay}&quot;dummy1&quot;*&quot;screenNum&quot;i&quot;visual&quot;^{?}&quot;depth&quot;i&quot;window&quot;I&quot;dummy2&quot;*&quot;dummy3&quot;*&quot;parentPtr&quot;^{Tk_Window_}&quot;dummy4&quot;*&quot;dummy5&quot;*&quot;pathName&quot;*&quot;nameUid&quot;*&quot;classUid&quot;*&quot;changes&quot;{?=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i&quot;border_width&quot;i&quot;sibling&quot;I&quot;stack_mode&quot;i}&quot;dummy6&quot;I&quot;atts&quot;{?=&quot;background_pixmap&quot;I&quot;background_pixel&quot;L&quot;border_pixmap&quot;I&quot;border_pixel&quot;L&quot;bit_gravity&quot;i&quot;win_gravity&quot;i&quot;backing_store&quot;i&quot;backing_planes&quot;L&quot;backing_pixel&quot;L&quot;save_under&quot;i&quot;event_mask&quot;l&quot;do_not_propagate_mask&quot;l&quot;override_redirect&quot;i&quot;colormap&quot;I&quot;cursor&quot;{Cursor=&quot;data&quot;[16s]&quot;mask&quot;[16s]&quot;hotSpot&quot;{Point=&quot;v&quot;s&quot;h&quot;s}}}&quot;dummy7&quot;L&quot;flags&quot;I&quot;dummy8&quot;*&quot;dummy9&quot;^{_XIC}&quot;dummy10&quot;^^v&quot;dummy11&quot;i&quot;dummy12&quot;i&quot;dummy13&quot;*&quot;dummy14&quot;*&quot;dummy15&quot;^v&quot;reqWidth&quot;i&quot;reqHeight&quot;i&quot;internalBorderLeft&quot;i&quot;dummy16&quot;*&quot;dummy17&quot;*&quot;dummy18&quot;^v&quot;dummy19&quot;*&quot;internalBorderRight&quot;i&quot;internalBorderTop&quot;i&quot;internalBorderBottom&quot;i&quot;minReqWidth&quot;i&quot;minReqHeight&quot;i}' type64='{Tk_FakeWin=&quot;display&quot;^{_XDisplay}&quot;dummy1&quot;*&quot;screenNum&quot;i&quot;visual&quot;^{?}&quot;depth&quot;i&quot;window&quot;Q&quot;dummy2&quot;*&quot;dummy3&quot;*&quot;parentPtr&quot;^{Tk_Window_}&quot;dummy4&quot;*&quot;dummy5&quot;*&quot;pathName&quot;*&quot;nameUid&quot;*&quot;classUid&quot;*&quot;changes&quot;{?=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i&quot;border_width&quot;i&quot;sibling&quot;Q&quot;stack_mode&quot;i}&quot;dummy6&quot;I&quot;atts&quot;{?=&quot;background_pixmap&quot;Q&quot;background_pixel&quot;Q&quot;border_pixmap&quot;Q&quot;border_pixel&quot;Q&quot;bit_gravity&quot;i&quot;win_gravity&quot;i&quot;backing_store&quot;i&quot;backing_planes&quot;Q&quot;backing_pixel&quot;Q&quot;save_under&quot;i&quot;event_mask&quot;q&quot;do_not_propagate_mask&quot;q&quot;override_redirect&quot;i&quot;colormap&quot;Q&quot;cursor&quot;{Cursor=&quot;data&quot;[16s]&quot;mask&quot;[16s]&quot;hotSpot&quot;{Point=&quot;v&quot;s&quot;h&quot;s}}}&quot;dummy7&quot;Q&quot;flags&quot;I&quot;dummy8&quot;*&quot;dummy9&quot;^{_XIC}&quot;dummy10&quot;^^v&quot;dummy11&quot;i&quot;dummy12&quot;i&quot;dummy13&quot;*&quot;dummy14&quot;*&quot;dummy15&quot;^v&quot;reqWidth&quot;i&quot;reqHeight&quot;i&quot;internalBorderLeft&quot;i&quot;dummy16&quot;*&quot;dummy17&quot;*&quot;dummy18&quot;^v&quot;dummy19&quot;*&quot;internalBorderRight&quot;i&quot;internalBorderTop&quot;i&quot;internalBorderBottom&quot;i&quot;minReqWidth&quot;i&quot;minReqHeight&quot;i}'/>
+  <struct name='Tk_FontMetrics' type='{Tk_FontMetrics=&quot;ascent&quot;i&quot;descent&quot;i&quot;linespace&quot;i}'/>
+  <struct name='Tk_GeomMgr' type='{Tk_GeomMgr=&quot;name&quot;*&quot;requestProc&quot;^?&quot;lostSlaveProc&quot;^?}'/>
+  <struct name='Tk_ImageType' type='{Tk_ImageType=&quot;name&quot;*&quot;createProc&quot;^?&quot;getProc&quot;^?&quot;displayProc&quot;^?&quot;freeProc&quot;^?&quot;deleteProc&quot;^?&quot;postscriptProc&quot;^?&quot;nextPtr&quot;^{Tk_ImageType}&quot;reserved&quot;*}'/>
+  <struct name='Tk_Item' type='{Tk_Item=&quot;id&quot;i&quot;nextPtr&quot;^{Tk_Item}&quot;staticTagSpace&quot;[3*]&quot;tagPtr&quot;^*&quot;tagSpace&quot;i&quot;numTags&quot;i&quot;typePtr&quot;^{Tk_ItemType}&quot;x1&quot;i&quot;y1&quot;i&quot;x2&quot;i&quot;y2&quot;i&quot;prevPtr&quot;^{Tk_Item}&quot;state&quot;i&quot;reserved1&quot;*&quot;redraw_flags&quot;i}'/>
+  <struct name='Tk_ItemType' type='{Tk_ItemType=&quot;name&quot;*&quot;itemSize&quot;i&quot;createProc&quot;^?&quot;configSpecs&quot;^{Tk_ConfigSpec}&quot;configProc&quot;^?&quot;coordProc&quot;^?&quot;deleteProc&quot;^?&quot;displayProc&quot;^?&quot;alwaysRedraw&quot;i&quot;pointProc&quot;^?&quot;areaProc&quot;^?&quot;postscriptProc&quot;^?&quot;scaleProc&quot;^?&quot;translateProc&quot;^?&quot;indexProc&quot;^?&quot;icursorProc&quot;^?&quot;selectionProc&quot;^?&quot;insertProc&quot;^?&quot;dCharsProc&quot;^?&quot;nextPtr&quot;^{Tk_ItemType}&quot;reserved1&quot;*&quot;reserved2&quot;i&quot;reserved3&quot;*&quot;reserved4&quot;*}'/>
+  <struct name='Tk_ObjCustomOption' type='{Tk_ObjCustomOption=&quot;name&quot;*&quot;setProc&quot;^?&quot;getProc&quot;^?&quot;restoreProc&quot;^?&quot;freeProc&quot;^?&quot;clientData&quot;^v}'/>
+  <struct name='Tk_OptionSpec' type='{Tk_OptionSpec=&quot;type&quot;i&quot;optionName&quot;*&quot;dbName&quot;*&quot;dbClass&quot;*&quot;defValue&quot;*&quot;objOffset&quot;i&quot;internalOffset&quot;i&quot;flags&quot;i&quot;clientData&quot;^v&quot;typeMask&quot;i}'/>
+  <struct name='Tk_Outline' type='{Tk_Outline=&quot;gc&quot;^{_XGC}&quot;width&quot;d&quot;activeWidth&quot;d&quot;disabledWidth&quot;d&quot;offset&quot;i&quot;dash&quot;{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[4c])}&quot;activeDash&quot;{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[4c])}&quot;disabledDash&quot;{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[4c])}&quot;reserved1&quot;^v&quot;reserved2&quot;^v&quot;reserved3&quot;^v&quot;tsoffset&quot;{Tk_TSOffset=&quot;flags&quot;i&quot;xoffset&quot;i&quot;yoffset&quot;i}&quot;color&quot;^{?}&quot;activeColor&quot;^{?}&quot;disabledColor&quot;^{?}&quot;stipple&quot;I&quot;activeStipple&quot;I&quot;disabledStipple&quot;I}' type64='{Tk_Outline=&quot;gc&quot;^{_XGC}&quot;width&quot;d&quot;activeWidth&quot;d&quot;disabledWidth&quot;d&quot;offset&quot;i&quot;dash&quot;{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[8c])}&quot;activeDash&quot;{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[8c])}&quot;disabledDash&quot;{Tk_Dash=&quot;number&quot;i&quot;pattern&quot;(?=&quot;pt&quot;*&quot;array&quot;[8c])}&quot;reserved1&quot;^v&quot;reserved2&quot;^v&quot;reserved3&quot;^v&quot;tsoffset&quot;{Tk_TSOffset=&quot;flags&quot;i&quot;xoffset&quot;i&quot;yoffset&quot;i}&quot;color&quot;^{?}&quot;activeColor&quot;^{?}&quot;disabledColor&quot;^{?}&quot;stipple&quot;Q&quot;activeStipple&quot;Q&quot;disabledStipple&quot;Q}'/>
+  <struct name='Tk_PhotoImageBlock' type='{Tk_PhotoImageBlock=&quot;pixelPtr&quot;*&quot;width&quot;i&quot;height&quot;i&quot;pitch&quot;i&quot;pixelSize&quot;i&quot;offset&quot;[4i]}'/>
+  <struct name='Tk_PhotoImageFormat' type='{Tk_PhotoImageFormat=&quot;name&quot;*&quot;fileMatchProc&quot;^?&quot;stringMatchProc&quot;^?&quot;fileReadProc&quot;^?&quot;stringReadProc&quot;^?&quot;fileWriteProc&quot;^?&quot;stringWriteProc&quot;^?&quot;nextPtr&quot;^{Tk_PhotoImageFormat}}'/>
+  <struct name='Tk_SavedOption' type='{Tk_SavedOption=&quot;optionPtr&quot;^{TkOption}&quot;valuePtr&quot;^{Tcl_Obj}&quot;internalForm&quot;d}'/>
+  <struct name='Tk_SavedOptions' type='{Tk_SavedOptions=&quot;recordPtr&quot;*&quot;tkwin&quot;^{Tk_Window_}&quot;numItems&quot;i&quot;items&quot;[20{Tk_SavedOption=&quot;optionPtr&quot;^{TkOption}&quot;valuePtr&quot;^{Tcl_Obj}&quot;internalForm&quot;d}]&quot;nextPtr&quot;^{Tk_SavedOptions}}'/>
+  <struct name='Tk_SmoothMethod' type='{Tk_SmoothMethod=&quot;name&quot;*&quot;coordProc&quot;^?&quot;postscriptProc&quot;^?}'/>
+  <struct name='Tk_TSOffset' type='{Tk_TSOffset=&quot;flags&quot;i&quot;xoffset&quot;i&quot;yoffset&quot;i}'/>
+  <struct name='XActivateDeactivateEvent' type='{_XActivateDeactivateEvent=&quot;type&quot;i&quot;serial&quot;L&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;window&quot;I}' type64='{_XActivateDeactivateEvent=&quot;type&quot;i&quot;serial&quot;Q&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;window&quot;Q}'/>
+  <struct name='XActivateEvent' type='{_XActivateEvent=&quot;type&quot;i&quot;serial&quot;L&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;window&quot;I}' type64='{_XActivateEvent=&quot;type&quot;i&quot;serial&quot;Q&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;window&quot;Q}'/>
+  <struct name='XClassHint' type='{_XClassHint=&quot;res_name&quot;*&quot;res_class&quot;*}'/>
+  <struct name='XComposeStatus' type='{_XComposeStatus=&quot;compose_ptr&quot;*&quot;chars_matched&quot;i}'/>
+  <struct name='XDeactivateEvent' type='{_XDeactivateEvent=&quot;type&quot;i&quot;serial&quot;L&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;window&quot;I}' type64='{_XDeactivateEvent=&quot;type&quot;i&quot;serial&quot;Q&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;window&quot;Q}'/>
+  <struct name='XIconSize' type='{_XIconSize=&quot;min_width&quot;i&quot;min_height&quot;i&quot;max_width&quot;i&quot;max_height&quot;i&quot;width_inc&quot;i&quot;height_inc&quot;i}'/>
+  <struct name='XSizeHints' type='{_XSizeHints=&quot;flags&quot;l&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i&quot;min_width&quot;i&quot;min_height&quot;i&quot;max_width&quot;i&quot;max_height&quot;i&quot;width_inc&quot;i&quot;height_inc&quot;i&quot;min_aspect&quot;{?=&quot;x&quot;i&quot;y&quot;i}&quot;max_aspect&quot;{?=&quot;x&quot;i&quot;y&quot;i}&quot;base_width&quot;i&quot;base_height&quot;i&quot;win_gravity&quot;i}' type64='{_XSizeHints=&quot;flags&quot;q&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i&quot;min_width&quot;i&quot;min_height&quot;i&quot;max_width&quot;i&quot;max_height&quot;i&quot;width_inc&quot;i&quot;height_inc&quot;i&quot;min_aspect&quot;{?=&quot;x&quot;i&quot;y&quot;i}&quot;max_aspect&quot;{?=&quot;x&quot;i&quot;y&quot;i}&quot;base_width&quot;i&quot;base_height&quot;i&quot;win_gravity&quot;i}'/>
+  <struct name='XStandardColormap' type='{_XStandardColormap=&quot;colormap&quot;I&quot;red_max&quot;L&quot;red_mult&quot;L&quot;green_max&quot;L&quot;green_mult&quot;L&quot;blue_max&quot;L&quot;blue_mult&quot;L&quot;base_pixel&quot;L&quot;visualid&quot;I&quot;killid&quot;I}' type64='{_XStandardColormap=&quot;colormap&quot;Q&quot;red_max&quot;Q&quot;red_mult&quot;Q&quot;green_max&quot;Q&quot;green_mult&quot;Q&quot;blue_max&quot;Q&quot;blue_mult&quot;Q&quot;base_pixel&quot;Q&quot;visualid&quot;Q&quot;killid&quot;Q}'/>
+  <struct name='XTextProperty' type='{_XTextProperty=&quot;value&quot;*&quot;encoding&quot;I&quot;format&quot;i&quot;nitems&quot;L}' type64='{_XTextProperty=&quot;value&quot;*&quot;encoding&quot;Q&quot;format&quot;i&quot;nitems&quot;Q}'/>
+  <struct name='XVirtualEvent' type='{_XVirtualEvent=&quot;type&quot;i&quot;serial&quot;L&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;event&quot;I&quot;root&quot;I&quot;subwindow&quot;I&quot;time&quot;I&quot;x&quot;i&quot;y&quot;i&quot;x_root&quot;i&quot;y_root&quot;i&quot;state&quot;I&quot;name&quot;*&quot;same_screen&quot;i}' type64='{_XVirtualEvent=&quot;type&quot;i&quot;serial&quot;Q&quot;send_event&quot;i&quot;display&quot;^{_XDisplay}&quot;event&quot;Q&quot;root&quot;Q&quot;subwindow&quot;Q&quot;time&quot;Q&quot;x&quot;i&quot;y&quot;i&quot;x_root&quot;i&quot;y_root&quot;i&quot;state&quot;I&quot;name&quot;*&quot;same_screen&quot;i}'/>
+  <struct name='XVisualInfo' type='{_XVisualInfo=&quot;visual&quot;^{?}&quot;visualid&quot;I&quot;screen&quot;i&quot;depth&quot;i&quot;class&quot;i&quot;red_mask&quot;L&quot;green_mask&quot;L&quot;blue_mask&quot;L&quot;colormap_size&quot;i&quot;bits_per_rgb&quot;i}' type64='{_XVisualInfo=&quot;visual&quot;^{?}&quot;visualid&quot;Q&quot;screen&quot;i&quot;depth&quot;i&quot;class&quot;i&quot;red_mask&quot;Q&quot;green_mask&quot;Q&quot;blue_mask&quot;Q&quot;colormap_size&quot;i&quot;bits_per_rgb&quot;i}'/>
+  <struct name='XWMHints' type='{_XWMHints=&quot;flags&quot;l&quot;input&quot;i&quot;initial_state&quot;i&quot;icon_pixmap&quot;I&quot;icon_window&quot;I&quot;icon_x&quot;i&quot;icon_y&quot;i&quot;icon_mask&quot;I&quot;window_group&quot;I}' type64='{_XWMHints=&quot;flags&quot;q&quot;input&quot;i&quot;initial_state&quot;i&quot;icon_pixmap&quot;Q&quot;icon_window&quot;Q&quot;icon_x&quot;i&quot;icon_y&quot;i&quot;icon_mask&quot;Q&quot;window_group&quot;Q}'/>
+  <opaque name='Region' type='^{_XRegion=}'/>
+  <opaque name='Tk_3DBorder' type='^{Tk_3DBorder_=}'/>
+  <opaque name='Tk_BindingTable' type='^{Tk_BindingTable_=}'/>
+  <opaque name='Tk_Canvas' type='^{Tk_Canvas_=}'/>
+  <opaque name='Tk_Cursor' type='^{Tk_Cursor_=}'/>
+  <opaque name='Tk_ErrorHandler' type='^{Tk_ErrorHandler_=}'/>
+  <opaque name='Tk_Font' type='^{Tk_Font_=}'/>
+  <opaque name='Tk_Image' type='^{Tk_Image__=}'/>
+  <opaque name='Tk_ImageMaster' type='^{Tk_ImageMaster_=}'/>
+  <opaque name='Tk_OptionTable' type='^{Tk_OptionTable_=}'/>
+  <opaque name='Tk_PostscriptInfo' type='^{Tk_PostscriptInfo_=}'/>
+  <opaque name='Tk_Style' type='^{Tk_Style_=}'/>
+  <opaque name='Tk_StyleEngine' type='^{Tk_StyleEngine_=}'/>
+  <opaque name='Tk_StyledElement' type='^{Tk_StyledElement_=}'/>
+  <opaque name='Tk_TextLayout' type='^{Tk_TextLayout_=}'/>
+  <opaque name='Tk_Window' type='^{Tk_Window_=}'/>
+  <constant name='tkIntXlibStubsPtr' type='^{TkIntXlibStubs=i^{TkIntXlibStubHooks}}'/>
+  <constant name='tkPlatStubsPtr' type='^{TkPlatStubs=i^{TkPlatStubHooks}}'/>
+  <constant name='tkStubsPtr' type='^{TkStubs=i^{TkStubHooks}^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^v^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+  <constant name='xBitReverseTable' type='[256C]'/>
+  <string_constant name='TK_PATCH_LEVEL' value='8.4.7'/>
+  <string_constant name='TK_VERSION' value='8.4'/>
+  <enum name='ActivateMask' value='536870912'/>
+  <enum name='ActivateNotify' value='36'/>
+  <enum name='AllHints' value='127'/>
+  <enum name='AllValues' value='15'/>
+  <enum name='BitmapFileInvalid' value='2'/>
+  <enum name='BitmapNoMemory' value='3'/>
+  <enum name='BitmapOpenFailed' value='1'/>
+  <enum name='BitmapSuccess' value='0'/>
+  <enum name='DeactivateNotify' value='37'/>
+  <enum name='DontCareState' value='0'/>
+  <enum name='HeightValue' value='8'/>
+  <enum name='IconMaskHint' value='32'/>
+  <enum name='IconPixmapHint' value='4'/>
+  <enum name='IconPositionHint' value='16'/>
+  <enum name='IconWindowHint' value='8'/>
+  <enum name='IconicState' value='3'/>
+  <enum name='InactiveState' value='4'/>
+  <enum name='InputHint' value='1'/>
+  <enum name='MouseWheelEvent' value='38'/>
+  <enum name='MouseWheelMask' value='268435456'/>
+  <enum name='NoValue' value='0'/>
+  <enum name='NormalState' value='1'/>
+  <enum name='PAllHints' value='252'/>
+  <enum name='PAspect' value='128'/>
+  <enum name='PBaseSize' value='256'/>
+  <enum name='PMaxSize' value='32'/>
+  <enum name='PMinSize' value='16'/>
+  <enum name='PPosition' value='4'/>
+  <enum name='PResizeInc' value='64'/>
+  <enum name='PSize' value='8'/>
+  <enum name='PWinGravity' value='512'/>
+  <enum name='RectangleIn' value='1'/>
+  <enum name='RectangleOut' value='0'/>
+  <enum name='RectanglePart' value='2'/>
+  <enum name='ReleaseByFreeingColormap' value='1'/>
+  <enum name='StateHint' value='2'/>
+  <enum name='TK_3D_DARK_GC' value='3'/>
+  <enum name='TK_3D_FLAT_GC' value='1'/>
+  <enum name='TK_3D_LIGHT_GC' value='2'/>
+  <enum name='TK_ALL_EVENTS' value='-3'/>
+  <enum name='TK_ALREADY_DEAD' value='4'/>
+  <enum name='TK_ANCHOR_CENTER' value='8'/>
+  <enum name='TK_ANCHOR_E' value='2'/>
+  <enum name='TK_ANCHOR_N' value='0'/>
+  <enum name='TK_ANCHOR_NE' value='1'/>
+  <enum name='TK_ANCHOR_NW' value='7'/>
+  <enum name='TK_ANCHOR_S' value='4'/>
+  <enum name='TK_ANCHOR_SE' value='3'/>
+  <enum name='TK_ANCHOR_SW' value='5'/>
+  <enum name='TK_ANCHOR_W' value='6'/>
+  <enum name='TK_ANONYMOUS_WINDOW' value='16384'/>
+  <enum name='TK_ARGV_CONSTANT' value='15'/>
+  <enum name='TK_ARGV_CONST_OPTION' value='24'/>
+  <enum name='TK_ARGV_DONT_SKIP_FIRST_ARG' value='8'/>
+  <enum name='TK_ARGV_END' value='27'/>
+  <enum name='TK_ARGV_FLOAT' value='20'/>
+  <enum name='TK_ARGV_FUNC' value='21'/>
+  <enum name='TK_ARGV_GENFUNC' value='22'/>
+  <enum name='TK_ARGV_HELP' value='23'/>
+  <enum name='TK_ARGV_INT' value='16'/>
+  <enum name='TK_ARGV_NO_ABBREV' value='4'/>
+  <enum name='TK_ARGV_NO_DEFAULTS' value='1'/>
+  <enum name='TK_ARGV_NO_LEFTOVERS' value='2'/>
+  <enum name='TK_ARGV_OPTION_NAME_VALUE' value='26'/>
+  <enum name='TK_ARGV_OPTION_VALUE' value='25'/>
+  <enum name='TK_ARGV_REST' value='19'/>
+  <enum name='TK_ARGV_STRING' value='17'/>
+  <enum name='TK_ARGV_UID' value='18'/>
+  <enum name='TK_AT_LEAST_ONE' value='2'/>
+  <enum name='TK_BOTH_HALVES' value='1024'/>
+  <enum name='TK_CHECKED_IC' value='32'/>
+  <enum name='TK_CONFIG_ACTIVE_CURSOR' value='11'/>
+  <enum name='TK_CONFIG_ANCHOR' value='13'/>
+  <enum name='TK_CONFIG_ARGV_ONLY' value='1'/>
+  <enum name='TK_CONFIG_BITMAP' value='7'/>
+  <enum name='TK_CONFIG_BOOLEAN' value='0'/>
+  <enum name='TK_CONFIG_BORDER' value='8'/>
+  <enum name='TK_CONFIG_CAP_STYLE' value='15'/>
+  <enum name='TK_CONFIG_COLOR' value='5'/>
+  <enum name='TK_CONFIG_COLOR_ONLY' value='2'/>
+  <enum name='TK_CONFIG_CURSOR' value='10'/>
+  <enum name='TK_CONFIG_CUSTOM' value='20'/>
+  <enum name='TK_CONFIG_DONT_SET_DEFAULT' value='8'/>
+  <enum name='TK_CONFIG_DOUBLE' value='2'/>
+  <enum name='TK_CONFIG_END' value='21'/>
+  <enum name='TK_CONFIG_FONT' value='6'/>
+  <enum name='TK_CONFIG_INT' value='1'/>
+  <enum name='TK_CONFIG_JOIN_STYLE' value='16'/>
+  <enum name='TK_CONFIG_JUSTIFY' value='12'/>
+  <enum name='TK_CONFIG_MM' value='18'/>
+  <enum name='TK_CONFIG_MONO_ONLY' value='4'/>
+  <enum name='TK_CONFIG_NULL_OK' value='1'/>
+  <enum name='TK_CONFIG_OBJS' value='128'/>
+  <enum name='TK_CONFIG_OPTION_SPECIFIED' value='16'/>
+  <enum name='TK_CONFIG_PIXELS' value='17'/>
+  <enum name='TK_CONFIG_RELIEF' value='9'/>
+  <enum name='TK_CONFIG_STRING' value='3'/>
+  <enum name='TK_CONFIG_SYNONYM' value='14'/>
+  <enum name='TK_CONFIG_UID' value='4'/>
+  <enum name='TK_CONFIG_USER_BIT' value='256'/>
+  <enum name='TK_CONFIG_WINDOW' value='19'/>
+  <enum name='TK_CONTAINER' value='512'/>
+  <enum name='TK_DEFER_EVENT' value='0'/>
+  <enum name='TK_DEFER_MODAL' value='2048'/>
+  <enum name='TK_DISCARD_EVENT' value='2'/>
+  <enum name='TK_DONT_DESTROY_WINDOW' value='64'/>
+  <enum name='TK_DONT_WAIT' value='2'/>
+  <enum name='TK_ELEMENT_STATE_ACTIVE' value='1'/>
+  <enum name='TK_ELEMENT_STATE_DISABLED' value='2'/>
+  <enum name='TK_ELEMENT_STATE_FOCUS' value='4'/>
+  <enum name='TK_ELEMENT_STATE_PRESSED' value='8'/>
+  <enum name='TK_EMBEDDED' value='256'/>
+  <enum name='TK_EXCEPTION' value='8'/>
+  <enum name='TK_FILE_EVENTS' value='8'/>
+  <enum name='TK_GRAB_FLAG' value='16'/>
+  <enum name='TK_HAS_WRAPPER' value='32768'/>
+  <enum name='TK_IDLE_EVENTS' value='32'/>
+  <enum name='TK_IGNORE_NEWLINES' value='16'/>
+  <enum name='TK_IGNORE_TABS' value='8'/>
+  <enum name='TK_INTERACTIVE_PRIO' value='80'/>
+  <enum name='TK_ITEM_DONT_REDRAW' value='2'/>
+  <enum name='TK_ITEM_STATE_DEPENDANT' value='1'/>
+  <enum name='TK_JUSTIFY_CENTER' value='2'/>
+  <enum name='TK_JUSTIFY_LEFT' value='0'/>
+  <enum name='TK_JUSTIFY_RIGHT' value='1'/>
+  <enum name='TK_LASTEVENT' value='39'/>
+  <enum name='TK_MAJOR_VERSION' value='8'/>
+  <enum name='TK_MAPPED' value='1'/>
+  <enum name='TK_MAX_PRIO' value='100'/>
+  <enum name='TK_MINOR_VERSION' value='4'/>
+  <enum name='TK_NEED_CONFIG_NOTIFY' value='8'/>
+  <enum name='TK_NOTIFY_SHARE' value='20'/>
+  <enum name='TK_NUM_SAVED_OPTIONS' value='20'/>
+  <enum name='TK_OFFSET_BOTTOM' value='128'/>
+  <enum name='TK_OFFSET_CENTER' value='8'/>
+  <enum name='TK_OFFSET_INDEX' value='1'/>
+  <enum name='TK_OFFSET_LEFT' value='4'/>
+  <enum name='TK_OFFSET_MIDDLE' value='64'/>
+  <enum name='TK_OFFSET_RELATIVE' value='2'/>
+  <enum name='TK_OFFSET_RIGHT' value='16'/>
+  <enum name='TK_OFFSET_TOP' value='32'/>
+  <enum name='TK_OPTION_ANCHOR' value='12'/>
+  <enum name='TK_OPTION_BITMAP' value='7'/>
+  <enum name='TK_OPTION_BOOLEAN' value='0'/>
+  <enum name='TK_OPTION_BORDER' value='8'/>
+  <enum name='TK_OPTION_COLOR' value='5'/>
+  <enum name='TK_OPTION_CURSOR' value='10'/>
+  <enum name='TK_OPTION_CUSTOM' value='17'/>
+  <enum name='TK_OPTION_DONT_SET_DEFAULT' value='8'/>
+  <enum name='TK_OPTION_DOUBLE' value='2'/>
+  <enum name='TK_OPTION_END' value='16'/>
+  <enum name='TK_OPTION_FONT' value='6'/>
+  <enum name='TK_OPTION_INT' value='1'/>
+  <enum name='TK_OPTION_JUSTIFY' value='11'/>
+  <enum name='TK_OPTION_NULL_OK' value='1'/>
+  <enum name='TK_OPTION_PIXELS' value='14'/>
+  <enum name='TK_OPTION_RELIEF' value='9'/>
+  <enum name='TK_OPTION_STRING' value='3'/>
+  <enum name='TK_OPTION_STRING_TABLE' value='4'/>
+  <enum name='TK_OPTION_STYLE' value='18'/>
+  <enum name='TK_OPTION_SYNONYM' value='13'/>
+  <enum name='TK_OPTION_WINDOW' value='15'/>
+  <enum name='TK_PARTIAL_OK' value='4'/>
+  <enum name='TK_PHOTO_COMPOSITE_OVERLAY' value='0'/>
+  <enum name='TK_PHOTO_COMPOSITE_SET' value='1'/>
+  <enum name='TK_PROCESS_EVENT' value='1'/>
+  <enum name='TK_PROP_PROPCHANGE' value='262144'/>
+  <enum name='TK_READABLE' value='2'/>
+  <enum name='TK_RELEASE_LEVEL' value='2'/>
+  <enum name='TK_RELEASE_SERIAL' value='7'/>
+  <enum name='TK_RELIEF_FLAT' value='0'/>
+  <enum name='TK_RELIEF_GROOVE' value='1'/>
+  <enum name='TK_RELIEF_NULL' value='-1'/>
+  <enum name='TK_RELIEF_RAISED' value='2'/>
+  <enum name='TK_RELIEF_RIDGE' value='3'/>
+  <enum name='TK_RELIEF_SOLID' value='4'/>
+  <enum name='TK_RELIEF_SUNKEN' value='5'/>
+  <enum name='TK_REPARENTED' value='8192'/>
+  <enum name='TK_SCROLL_ERROR' value='4'/>
+  <enum name='TK_SCROLL_MOVETO' value='1'/>
+  <enum name='TK_SCROLL_PAGES' value='2'/>
+  <enum name='TK_SCROLL_UNITS' value='3'/>
+  <enum name='TK_STARTUP_FILE_PRIO' value='40'/>
+  <enum name='TK_STATE_ACTIVE' value='0'/>
+  <enum name='TK_STATE_DISABLED' value='1'/>
+  <enum name='TK_STATE_HIDDEN' value='3'/>
+  <enum name='TK_STATE_NORMAL' value='2'/>
+  <enum name='TK_STATE_NULL' value='-1'/>
+  <enum name='TK_STYLE_VERSION' value='1'/>
+  <enum name='TK_STYLE_VERSION_1' value='1'/>
+  <enum name='TK_TAG_SPACE' value='3'/>
+  <enum name='TK_TIMER_EVENTS' value='16'/>
+  <enum name='TK_TOP_HIERARCHY' value='131072'/>
+  <enum name='TK_TOP_LEVEL' value='2'/>
+  <enum name='TK_USER_DEFAULT_PRIO' value='60'/>
+  <enum name='TK_WHOLE_WORDS' value='1'/>
+  <enum name='TK_WIDGET_DEFAULT_PRIO' value='20'/>
+  <enum name='TK_WINDOW_EVENTS' value='4'/>
+  <enum name='TK_WIN_MANAGED' value='65536'/>
+  <enum name='TK_WM_COLORMAP_WINDOW' value='128'/>
+  <enum name='TK_WRAPPER' value='4096'/>
+  <enum name='TK_WRITABLE' value='4'/>
+  <enum name='TK_X_EVENTS' value='4'/>
+  <enum name='USPosition' value='1'/>
+  <enum name='USSize' value='2'/>
+  <enum name='VirtualEvent' value='35'/>
+  <enum name='VirtualEventMask' value='1073741824'/>
+  <enum name='VisualAllMask' value='511'/>
+  <enum name='VisualBitsPerRGBMask' value='256'/>
+  <enum name='VisualBlueMaskMask' value='64'/>
+  <enum name='VisualClassMask' value='8'/>
+  <enum name='VisualColormapSizeMask' value='128'/>
+  <enum name='VisualDepthMask' value='4'/>
+  <enum name='VisualGreenMaskMask' value='32'/>
+  <enum name='VisualIDMask' value='1'/>
+  <enum name='VisualNoMask' value='0'/>
+  <enum name='VisualRedMaskMask' value='16'/>
+  <enum name='VisualScreenMask' value='2'/>
+  <enum name='WidthValue' value='4'/>
+  <enum name='WindowGroupHint' value='64'/>
+  <enum name='WithdrawnState' value='0'/>
+  <enum name='XATOM_H' value='1'/>
+  <enum name='XA_ARC' value='3'/>
+  <enum name='XA_ATOM' value='4'/>
+  <enum name='XA_BITMAP' value='5'/>
+  <enum name='XA_CAP_HEIGHT' value='66'/>
+  <enum name='XA_CARDINAL' value='6'/>
+  <enum name='XA_COLORMAP' value='7'/>
+  <enum name='XA_COPYRIGHT' value='61'/>
+  <enum name='XA_CURSOR' value='8'/>
+  <enum name='XA_CUT_BUFFER0' value='9'/>
+  <enum name='XA_CUT_BUFFER1' value='10'/>
+  <enum name='XA_CUT_BUFFER2' value='11'/>
+  <enum name='XA_CUT_BUFFER3' value='12'/>
+  <enum name='XA_CUT_BUFFER4' value='13'/>
+  <enum name='XA_CUT_BUFFER5' value='14'/>
+  <enum name='XA_CUT_BUFFER6' value='15'/>
+  <enum name='XA_CUT_BUFFER7' value='16'/>
+  <enum name='XA_DRAWABLE' value='17'/>
+  <enum name='XA_END_SPACE' value='46'/>
+  <enum name='XA_FAMILY_NAME' value='64'/>
+  <enum name='XA_FONT' value='18'/>
+  <enum name='XA_FONT_NAME' value='63'/>
+  <enum name='XA_FULL_NAME' value='65'/>
+  <enum name='XA_INTEGER' value='19'/>
+  <enum name='XA_ITALIC_ANGLE' value='55'/>
+  <enum name='XA_LAST_PREDEFINED' value='68'/>
+  <enum name='XA_MAX_SPACE' value='45'/>
+  <enum name='XA_MIN_SPACE' value='43'/>
+  <enum name='XA_NORM_SPACE' value='44'/>
+  <enum name='XA_NOTICE' value='62'/>
+  <enum name='XA_PIXMAP' value='20'/>
+  <enum name='XA_POINT' value='21'/>
+  <enum name='XA_POINT_SIZE' value='59'/>
+  <enum name='XA_PRIMARY' value='1'/>
+  <enum name='XA_QUAD_WIDTH' value='57'/>
+  <enum name='XA_RECTANGLE' value='22'/>
+  <enum name='XA_RESOLUTION' value='60'/>
+  <enum name='XA_RESOURCE_MANAGER' value='23'/>
+  <enum name='XA_RGB_BEST_MAP' value='25'/>
+  <enum name='XA_RGB_BLUE_MAP' value='26'/>
+  <enum name='XA_RGB_COLOR_MAP' value='24'/>
+  <enum name='XA_RGB_DEFAULT_MAP' value='27'/>
+  <enum name='XA_RGB_GRAY_MAP' value='28'/>
+  <enum name='XA_RGB_GREEN_MAP' value='29'/>
+  <enum name='XA_RGB_RED_MAP' value='30'/>
+  <enum name='XA_SECONDARY' value='2'/>
+  <enum name='XA_STRIKEOUT_ASCENT' value='53'/>
+  <enum name='XA_STRIKEOUT_DESCENT' value='54'/>
+  <enum name='XA_STRING' value='31'/>
+  <enum name='XA_SUBSCRIPT_X' value='49'/>
+  <enum name='XA_SUBSCRIPT_Y' value='50'/>
+  <enum name='XA_SUPERSCRIPT_X' value='47'/>
+  <enum name='XA_SUPERSCRIPT_Y' value='48'/>
+  <enum name='XA_UNDERLINE_POSITION' value='51'/>
+  <enum name='XA_UNDERLINE_THICKNESS' value='52'/>
+  <enum name='XA_VISUALID' value='32'/>
+  <enum name='XA_WEIGHT' value='58'/>
+  <enum name='XA_WINDOW' value='33'/>
+  <enum name='XA_WM_CLASS' value='67'/>
+  <enum name='XA_WM_CLIENT_MACHINE' value='36'/>
+  <enum name='XA_WM_COMMAND' value='34'/>
+  <enum name='XA_WM_HINTS' value='35'/>
+  <enum name='XA_WM_ICON_NAME' value='37'/>
+  <enum name='XA_WM_ICON_SIZE' value='38'/>
+  <enum name='XA_WM_NAME' value='39'/>
+  <enum name='XA_WM_NORMAL_HINTS' value='40'/>
+  <enum name='XA_WM_SIZE_HINTS' value='41'/>
+  <enum name='XA_WM_TRANSIENT_FOR' value='68'/>
+  <enum name='XA_WM_ZOOM_HINTS' value='42'/>
+  <enum name='XA_X_HEIGHT' value='56'/>
+  <enum name='XCNOENT' value='2'/>
+  <enum name='XCNOMEM' value='1'/>
+  <enum name='XCSUCCESS' value='0'/>
+  <enum name='XC_X_cursor' value='0'/>
+  <enum name='XC_arrow' value='2'/>
+  <enum name='XC_based_arrow_down' value='4'/>
+  <enum name='XC_based_arrow_up' value='6'/>
+  <enum name='XC_boat' value='8'/>
+  <enum name='XC_bogosity' value='10'/>
+  <enum name='XC_bottom_left_corner' value='12'/>
+  <enum name='XC_bottom_right_corner' value='14'/>
+  <enum name='XC_bottom_side' value='16'/>
+  <enum name='XC_bottom_tee' value='18'/>
+  <enum name='XC_box_spiral' value='20'/>
+  <enum name='XC_center_ptr' value='22'/>
+  <enum name='XC_circle' value='24'/>
+  <enum name='XC_clock' value='26'/>
+  <enum name='XC_coffee_mug' value='28'/>
+  <enum name='XC_cross' value='30'/>
+  <enum name='XC_cross_reverse' value='32'/>
+  <enum name='XC_crosshair' value='34'/>
+  <enum name='XC_diamond_cross' value='36'/>
+  <enum name='XC_dot' value='38'/>
+  <enum name='XC_dotbox' value='40'/>
+  <enum name='XC_double_arrow' value='42'/>
+  <enum name='XC_draft_large' value='44'/>
+  <enum name='XC_draft_small' value='46'/>
+  <enum name='XC_draped_box' value='48'/>
+  <enum name='XC_exchange' value='50'/>
+  <enum name='XC_fleur' value='52'/>
+  <enum name='XC_gobbler' value='54'/>
+  <enum name='XC_gumby' value='56'/>
+  <enum name='XC_hand1' value='58'/>
+  <enum name='XC_hand2' value='60'/>
+  <enum name='XC_heart' value='62'/>
+  <enum name='XC_icon' value='64'/>
+  <enum name='XC_iron_cross' value='66'/>
+  <enum name='XC_left_ptr' value='68'/>
+  <enum name='XC_left_side' value='70'/>
+  <enum name='XC_left_tee' value='72'/>
+  <enum name='XC_leftbutton' value='74'/>
+  <enum name='XC_ll_angle' value='76'/>
+  <enum name='XC_lr_angle' value='78'/>
+  <enum name='XC_man' value='80'/>
+  <enum name='XC_middlebutton' value='82'/>
+  <enum name='XC_mouse' value='84'/>
+  <enum name='XC_num_glyphs' value='154'/>
+  <enum name='XC_pencil' value='86'/>
+  <enum name='XC_pirate' value='88'/>
+  <enum name='XC_plus' value='90'/>
+  <enum name='XC_question_arrow' value='92'/>
+  <enum name='XC_right_ptr' value='94'/>
+  <enum name='XC_right_side' value='96'/>
+  <enum name='XC_right_tee' value='98'/>
+  <enum name='XC_rightbutton' value='100'/>
+  <enum name='XC_rtl_logo' value='102'/>
+  <enum name='XC_sailboat' value='104'/>
+  <enum name='XC_sb_down_arrow' value='106'/>
+  <enum name='XC_sb_h_double_arrow' value='108'/>
+  <enum name='XC_sb_left_arrow' value='110'/>
+  <enum name='XC_sb_right_arrow' value='112'/>
+  <enum name='XC_sb_up_arrow' value='114'/>
+  <enum name='XC_sb_v_double_arrow' value='116'/>
+  <enum name='XC_shuttle' value='118'/>
+  <enum name='XC_sizing' value='120'/>
+  <enum name='XC_spider' value='122'/>
+  <enum name='XC_spraycan' value='124'/>
+  <enum name='XC_star' value='126'/>
+  <enum name='XC_target' value='128'/>
+  <enum name='XC_tcross' value='130'/>
+  <enum name='XC_top_left_arrow' value='132'/>
+  <enum name='XC_top_left_corner' value='134'/>
+  <enum name='XC_top_right_corner' value='136'/>
+  <enum name='XC_top_side' value='138'/>
+  <enum name='XC_top_tee' value='140'/>
+  <enum name='XC_trek' value='142'/>
+  <enum name='XC_ul_angle' value='144'/>
+  <enum name='XC_umbrella' value='146'/>
+  <enum name='XC_ur_angle' value='148'/>
+  <enum name='XC_watch' value='150'/>
+  <enum name='XC_xterm' value='152'/>
+  <enum name='XCompoundTextStyle' value='1'/>
+  <enum name='XConverterNotFound' value='-3'/>
+  <enum name='XK_0' value='48'/>
+  <enum name='XK_1' value='49'/>
+  <enum name='XK_2' value='50'/>
+  <enum name='XK_3' value='51'/>
+  <enum name='XK_4' value='52'/>
+  <enum name='XK_5' value='53'/>
+  <enum name='XK_6' value='54'/>
+  <enum name='XK_7' value='55'/>
+  <enum name='XK_8' value='56'/>
+  <enum name='XK_9' value='57'/>
+  <enum name='XK_A' value='65'/>
+  <enum name='XK_AE' value='198'/>
+  <enum name='XK_Aacute' value='193'/>
+  <enum name='XK_Abreve' value='451'/>
+  <enum name='XK_Acircumflex' value='194'/>
+  <enum name='XK_Adiaeresis' value='196'/>
+  <enum name='XK_Agrave' value='192'/>
+  <enum name='XK_Alt_L' value='65513'/>
+  <enum name='XK_Alt_R' value='65514'/>
+  <enum name='XK_Amacron' value='960'/>
+  <enum name='XK_Aogonek' value='417'/>
+  <enum name='XK_App' value='65373'/>
+  <enum name='XK_Aring' value='197'/>
+  <enum name='XK_Atilde' value='195'/>
+  <enum name='XK_B' value='66'/>
+  <enum name='XK_BackSpace' value='65288'/>
+  <enum name='XK_Begin' value='65368'/>
+  <enum name='XK_Break' value='65387'/>
+  <enum name='XK_C' value='67'/>
+  <enum name='XK_Cabovedot' value='709'/>
+  <enum name='XK_Cacute' value='454'/>
+  <enum name='XK_Cancel' value='65385'/>
+  <enum name='XK_Caps_Lock' value='65509'/>
+  <enum name='XK_Ccaron' value='456'/>
+  <enum name='XK_Ccedilla' value='199'/>
+  <enum name='XK_Ccircumflex' value='710'/>
+  <enum name='XK_Clear' value='65291'/>
+  <enum name='XK_Control_L' value='65507'/>
+  <enum name='XK_Control_R' value='65508'/>
+  <enum name='XK_D' value='68'/>
+  <enum name='XK_Dcaron' value='463'/>
+  <enum name='XK_Delete' value='65535'/>
+  <enum name='XK_Down' value='65364'/>
+  <enum name='XK_Dstroke' value='464'/>
+  <enum name='XK_E' value='69'/>
+  <enum name='XK_ENG' value='957'/>
+  <enum name='XK_ETH' value='208'/>
+  <enum name='XK_Eabovedot' value='972'/>
+  <enum name='XK_Eacute' value='201'/>
+  <enum name='XK_Ecaron' value='460'/>
+  <enum name='XK_Ecircumflex' value='202'/>
+  <enum name='XK_Ediaeresis' value='203'/>
+  <enum name='XK_Egrave' value='200'/>
+  <enum name='XK_Eisu_Shift' value='65327'/>
+  <enum name='XK_Eisu_toggle' value='65328'/>
+  <enum name='XK_Emacron' value='938'/>
+  <enum name='XK_End' value='65367'/>
+  <enum name='XK_Eogonek' value='458'/>
+  <enum name='XK_Escape' value='65307'/>
+  <enum name='XK_Eth' value='208'/>
+  <enum name='XK_Execute' value='65378'/>
+  <enum name='XK_F' value='70'/>
+  <enum name='XK_F1' value='65470'/>
+  <enum name='XK_F10' value='65479'/>
+  <enum name='XK_F11' value='65480'/>
+  <enum name='XK_F12' value='65481'/>
+  <enum name='XK_F13' value='65482'/>
+  <enum name='XK_F14' value='65483'/>
+  <enum name='XK_F15' value='65484'/>
+  <enum name='XK_F16' value='65485'/>
+  <enum name='XK_F17' value='65486'/>
+  <enum name='XK_F18' value='65487'/>
+  <enum name='XK_F19' value='65488'/>
+  <enum name='XK_F2' value='65471'/>
+  <enum name='XK_F20' value='65489'/>
+  <enum name='XK_F21' value='65490'/>
+  <enum name='XK_F22' value='65491'/>
+  <enum name='XK_F23' value='65492'/>
+  <enum name='XK_F24' value='65493'/>
+  <enum name='XK_F25' value='65494'/>
+  <enum name='XK_F26' value='65495'/>
+  <enum name='XK_F27' value='65496'/>
+  <enum name='XK_F28' value='65497'/>
+  <enum name='XK_F29' value='65498'/>
+  <enum name='XK_F3' value='65472'/>
+  <enum name='XK_F30' value='65499'/>
+  <enum name='XK_F31' value='65500'/>
+  <enum name='XK_F32' value='65501'/>
+  <enum name='XK_F33' value='65502'/>
+  <enum name='XK_F34' value='65503'/>
+  <enum name='XK_F35' value='65504'/>
+  <enum name='XK_F4' value='65473'/>
+  <enum name='XK_F5' value='65474'/>
+  <enum name='XK_F6' value='65475'/>
+  <enum name='XK_F7' value='65476'/>
+  <enum name='XK_F8' value='65477'/>
+  <enum name='XK_F9' value='65478'/>
+  <enum name='XK_Find' value='65384'/>
+  <enum name='XK_G' value='71'/>
+  <enum name='XK_Gabovedot' value='725'/>
+  <enum name='XK_Gbreve' value='683'/>
+  <enum name='XK_Gcedilla' value='939'/>
+  <enum name='XK_Gcircumflex' value='728'/>
+  <enum name='XK_Greek_ALPHA' value='1985'/>
+  <enum name='XK_Greek_ALPHAaccent' value='1953'/>
+  <enum name='XK_Greek_BETA' value='1986'/>
+  <enum name='XK_Greek_CHI' value='2007'/>
+  <enum name='XK_Greek_DELTA' value='1988'/>
+  <enum name='XK_Greek_EPSILON' value='1989'/>
+  <enum name='XK_Greek_EPSILONaccent' value='1954'/>
+  <enum name='XK_Greek_ETA' value='1991'/>
+  <enum name='XK_Greek_ETAaccent' value='1955'/>
+  <enum name='XK_Greek_GAMMA' value='1987'/>
+  <enum name='XK_Greek_IOTA' value='1993'/>
+  <enum name='XK_Greek_IOTAaccent' value='1956'/>
+  <enum name='XK_Greek_IOTAdiaeresis' value='1957'/>
+  <enum name='XK_Greek_KAPPA' value='1994'/>
+  <enum name='XK_Greek_LAMBDA' value='1995'/>
+  <enum name='XK_Greek_LAMDA' value='1995'/>
+  <enum name='XK_Greek_MU' value='1996'/>
+  <enum name='XK_Greek_NU' value='1997'/>
+  <enum name='XK_Greek_OMEGA' value='2009'/>
+  <enum name='XK_Greek_OMEGAaccent' value='1963'/>
+  <enum name='XK_Greek_OMICRON' value='1999'/>
+  <enum name='XK_Greek_OMICRONaccent' value='1959'/>
+  <enum name='XK_Greek_PHI' value='2006'/>
+  <enum name='XK_Greek_PI' value='2000'/>
+  <enum name='XK_Greek_PSI' value='2008'/>
+  <enum name='XK_Greek_RHO' value='2001'/>
+  <enum name='XK_Greek_SIGMA' value='2002'/>
+  <enum name='XK_Greek_TAU' value='2004'/>
+  <enum name='XK_Greek_THETA' value='1992'/>
+  <enum name='XK_Greek_UPSILON' value='2005'/>
+  <enum name='XK_Greek_UPSILONaccent' value='1960'/>
+  <enum name='XK_Greek_UPSILONdieresis' value='1961'/>
+  <enum name='XK_Greek_XI' value='1998'/>
+  <enum name='XK_Greek_ZETA' value='1990'/>
+  <enum name='XK_Greek_accentdieresis' value='1966'/>
+  <enum name='XK_Greek_alpha' value='2017'/>
+  <enum name='XK_Greek_alphaaccent' value='1969'/>
+  <enum name='XK_Greek_beta' value='2018'/>
+  <enum name='XK_Greek_chi' value='2039'/>
+  <enum name='XK_Greek_delta' value='2020'/>
+  <enum name='XK_Greek_epsilon' value='2021'/>
+  <enum name='XK_Greek_epsilonaccent' value='1970'/>
+  <enum name='XK_Greek_eta' value='2023'/>
+  <enum name='XK_Greek_etaaccent' value='1971'/>
+  <enum name='XK_Greek_finalsmallsigma' value='2035'/>
+  <enum name='XK_Greek_gamma' value='2019'/>
+  <enum name='XK_Greek_horizbar' value='1967'/>
+  <enum name='XK_Greek_iota' value='2025'/>
+  <enum name='XK_Greek_iotaaccent' value='1972'/>
+  <enum name='XK_Greek_iotaaccentdieresis' value='1974'/>
+  <enum name='XK_Greek_iotadieresis' value='1973'/>
+  <enum name='XK_Greek_kappa' value='2026'/>
+  <enum name='XK_Greek_lambda' value='2027'/>
+  <enum name='XK_Greek_lamda' value='2027'/>
+  <enum name='XK_Greek_mu' value='2028'/>
+  <enum name='XK_Greek_nu' value='2029'/>
+  <enum name='XK_Greek_omega' value='2041'/>
+  <enum name='XK_Greek_omegaaccent' value='1979'/>
+  <enum name='XK_Greek_omicron' value='2031'/>
+  <enum name='XK_Greek_omicronaccent' value='1975'/>
+  <enum name='XK_Greek_phi' value='2038'/>
+  <enum name='XK_Greek_pi' value='2032'/>
+  <enum name='XK_Greek_psi' value='2040'/>
+  <enum name='XK_Greek_rho' value='2033'/>
+  <enum name='XK_Greek_sigma' value='2034'/>
+  <enum name='XK_Greek_switch' value='65406'/>
+  <enum name='XK_Greek_tau' value='2036'/>
+  <enum name='XK_Greek_theta' value='2024'/>
+  <enum name='XK_Greek_upsilon' value='2037'/>
+  <enum name='XK_Greek_upsilonaccent' value='1976'/>
+  <enum name='XK_Greek_upsilonaccentdieresis' value='1978'/>
+  <enum name='XK_Greek_upsilondieresis' value='1977'/>
+  <enum name='XK_Greek_xi' value='2030'/>
+  <enum name='XK_Greek_zeta' value='2022'/>
+  <enum name='XK_H' value='72'/>
+  <enum name='XK_Hankaku' value='65321'/>
+  <enum name='XK_Hcircumflex' value='678'/>
+  <enum name='XK_Help' value='65386'/>
+  <enum name='XK_Henkan' value='65315'/>
+  <enum name='XK_Henkan_Mode' value='65315'/>
+  <enum name='XK_Hiragana' value='65317'/>
+  <enum name='XK_Hiragana_Katakana' value='65319'/>
+  <enum name='XK_Home' value='65360'/>
+  <enum name='XK_Hstroke' value='673'/>
+  <enum name='XK_Hyper_L' value='65517'/>
+  <enum name='XK_Hyper_R' value='65518'/>
+  <enum name='XK_I' value='73'/>
+  <enum name='XK_Iabovedot' value='681'/>
+  <enum name='XK_Iacute' value='205'/>
+  <enum name='XK_Icircumflex' value='206'/>
+  <enum name='XK_Idiaeresis' value='207'/>
+  <enum name='XK_Igrave' value='204'/>
+  <enum name='XK_Imacron' value='975'/>
+  <enum name='XK_Insert' value='65379'/>
+  <enum name='XK_Iogonek' value='967'/>
+  <enum name='XK_Itilde' value='933'/>
+  <enum name='XK_J' value='74'/>
+  <enum name='XK_Jcircumflex' value='684'/>
+  <enum name='XK_K' value='75'/>
+  <enum name='XK_KP_0' value='65456'/>
+  <enum name='XK_KP_1' value='65457'/>
+  <enum name='XK_KP_2' value='65458'/>
+  <enum name='XK_KP_3' value='65459'/>
+  <enum name='XK_KP_4' value='65460'/>
+  <enum name='XK_KP_5' value='65461'/>
+  <enum name='XK_KP_6' value='65462'/>
+  <enum name='XK_KP_7' value='65463'/>
+  <enum name='XK_KP_8' value='65464'/>
+  <enum name='XK_KP_9' value='65465'/>
+  <enum name='XK_KP_Add' value='65451'/>
+  <enum name='XK_KP_Begin' value='65437'/>
+  <enum name='XK_KP_Decimal' value='65454'/>
+  <enum name='XK_KP_Delete' value='65439'/>
+  <enum name='XK_KP_Divide' value='65455'/>
+  <enum name='XK_KP_Down' value='65433'/>
+  <enum name='XK_KP_End' value='65436'/>
+  <enum name='XK_KP_Enter' value='65421'/>
+  <enum name='XK_KP_Equal' value='65469'/>
+  <enum name='XK_KP_F1' value='65425'/>
+  <enum name='XK_KP_F2' value='65426'/>
+  <enum name='XK_KP_F3' value='65427'/>
+  <enum name='XK_KP_F4' value='65428'/>
+  <enum name='XK_KP_Home' value='65429'/>
+  <enum name='XK_KP_Insert' value='65438'/>
+  <enum name='XK_KP_Left' value='65430'/>
+  <enum name='XK_KP_Multiply' value='65450'/>
+  <enum name='XK_KP_Next' value='65435'/>
+  <enum name='XK_KP_Page_Down' value='65435'/>
+  <enum name='XK_KP_Page_Up' value='65434'/>
+  <enum name='XK_KP_Prior' value='65434'/>
+  <enum name='XK_KP_Right' value='65432'/>
+  <enum name='XK_KP_Separator' value='65452'/>
+  <enum name='XK_KP_Space' value='65408'/>
+  <enum name='XK_KP_Subtract' value='65453'/>
+  <enum name='XK_KP_Tab' value='65417'/>
+  <enum name='XK_KP_Up' value='65431'/>
+  <enum name='XK_Kana_Lock' value='65325'/>
+  <enum name='XK_Kana_Shift' value='65326'/>
+  <enum name='XK_Kanji' value='65313'/>
+  <enum name='XK_Katakana' value='65318'/>
+  <enum name='XK_Kcedilla' value='979'/>
+  <enum name='XK_L' value='76'/>
+  <enum name='XK_L1' value='65480'/>
+  <enum name='XK_L10' value='65489'/>
+  <enum name='XK_L2' value='65481'/>
+  <enum name='XK_L3' value='65482'/>
+  <enum name='XK_L4' value='65483'/>
+  <enum name='XK_L5' value='65484'/>
+  <enum name='XK_L6' value='65485'/>
+  <enum name='XK_L7' value='65486'/>
+  <enum name='XK_L8' value='65487'/>
+  <enum name='XK_L9' value='65488'/>
+  <enum name='XK_Lacute' value='453'/>
+  <enum name='XK_Lcaron' value='421'/>
+  <enum name='XK_Lcedilla' value='934'/>
+  <enum name='XK_Left' value='65361'/>
+  <enum name='XK_Linefeed' value='65290'/>
+  <enum name='XK_Lstroke' value='419'/>
+  <enum name='XK_M' value='77'/>
+  <enum name='XK_Massyo' value='65324'/>
+  <enum name='XK_Menu' value='65383'/>
+  <enum name='XK_Meta_L' value='65511'/>
+  <enum name='XK_Meta_R' value='65512'/>
+  <enum name='XK_Mode_switch' value='65406'/>
+  <enum name='XK_Muhenkan' value='65314'/>
+  <enum name='XK_Multi_key' value='65312'/>
+  <enum name='XK_N' value='78'/>
+  <enum name='XK_Nacute' value='465'/>
+  <enum name='XK_Ncaron' value='466'/>
+  <enum name='XK_Ncedilla' value='977'/>
+  <enum name='XK_Next' value='65366'/>
+  <enum name='XK_Ntilde' value='209'/>
+  <enum name='XK_Num_Lock' value='65407'/>
+  <enum name='XK_O' value='79'/>
+  <enum name='XK_Oacute' value='211'/>
+  <enum name='XK_Ocircumflex' value='212'/>
+  <enum name='XK_Odiaeresis' value='214'/>
+  <enum name='XK_Odoubleacute' value='469'/>
+  <enum name='XK_Ograve' value='210'/>
+  <enum name='XK_Omacron' value='978'/>
+  <enum name='XK_Ooblique' value='216'/>
+  <enum name='XK_Otilde' value='213'/>
+  <enum name='XK_P' value='80'/>
+  <enum name='XK_Page_Down' value='65366'/>
+  <enum name='XK_Page_Up' value='65365'/>
+  <enum name='XK_Pause' value='65299'/>
+  <enum name='XK_Print' value='65377'/>
+  <enum name='XK_Prior' value='65365'/>
+  <enum name='XK_Q' value='81'/>
+  <enum name='XK_R' value='82'/>
+  <enum name='XK_R1' value='65490'/>
+  <enum name='XK_R10' value='65499'/>
+  <enum name='XK_R11' value='65500'/>
+  <enum name='XK_R12' value='65501'/>
+  <enum name='XK_R13' value='65502'/>
+  <enum name='XK_R14' value='65503'/>
+  <enum name='XK_R15' value='65504'/>
+  <enum name='XK_R2' value='65491'/>
+  <enum name='XK_R3' value='65492'/>
+  <enum name='XK_R4' value='65493'/>
+  <enum name='XK_R5' value='65494'/>
+  <enum name='XK_R6' value='65495'/>
+  <enum name='XK_R7' value='65496'/>
+  <enum name='XK_R8' value='65497'/>
+  <enum name='XK_R9' value='65498'/>
+  <enum name='XK_Racute' value='448'/>
+  <enum name='XK_Rcaron' value='472'/>
+  <enum name='XK_Rcedilla' value='931'/>
+  <enum name='XK_Redo' value='65382'/>
+  <enum name='XK_Return' value='65293'/>
+  <enum name='XK_Right' value='65363'/>
+  <enum name='XK_Romaji' value='65316'/>
+  <enum name='XK_S' value='83'/>
+  <enum name='XK_Sacute' value='422'/>
+  <enum name='XK_Scaron' value='425'/>
+  <enum name='XK_Scedilla' value='426'/>
+  <enum name='XK_Scircumflex' value='734'/>
+  <enum name='XK_Scroll_Lock' value='65300'/>
+  <enum name='XK_Select' value='65376'/>
+  <enum name='XK_Shift_L' value='65505'/>
+  <enum name='XK_Shift_Lock' value='65510'/>
+  <enum name='XK_Shift_R' value='65506'/>
+  <enum name='XK_Super_L' value='65515'/>
+  <enum name='XK_Super_R' value='65516'/>
+  <enum name='XK_Sys_Req' value='65301'/>
+  <enum name='XK_T' value='84'/>
+  <enum name='XK_THORN' value='222'/>
+  <enum name='XK_Tab' value='65289'/>
+  <enum name='XK_Tcaron' value='427'/>
+  <enum name='XK_Tcedilla' value='478'/>
+  <enum name='XK_Thorn' value='222'/>
+  <enum name='XK_Touroku' value='65323'/>
+  <enum name='XK_Tslash' value='940'/>
+  <enum name='XK_U' value='85'/>
+  <enum name='XK_Uacute' value='218'/>
+  <enum name='XK_Ubreve' value='733'/>
+  <enum name='XK_Ucircumflex' value='219'/>
+  <enum name='XK_Udiaeresis' value='220'/>
+  <enum name='XK_Udoubleacute' value='475'/>
+  <enum name='XK_Ugrave' value='217'/>
+  <enum name='XK_Umacron' value='990'/>
+  <enum name='XK_Undo' value='65381'/>
+  <enum name='XK_Uogonek' value='985'/>
+  <enum name='XK_Up' value='65362'/>
+  <enum name='XK_Uring' value='473'/>
+  <enum name='XK_Utilde' value='989'/>
+  <enum name='XK_V' value='86'/>
+  <enum name='XK_VoidSymbol' value='16777215'/>
+  <enum name='XK_W' value='87'/>
+  <enum name='XK_Win_L' value='65371'/>
+  <enum name='XK_Win_R' value='65372'/>
+  <enum name='XK_X' value='88'/>
+  <enum name='XK_Y' value='89'/>
+  <enum name='XK_Yacute' value='221'/>
+  <enum name='XK_Z' value='90'/>
+  <enum name='XK_Zabovedot' value='431'/>
+  <enum name='XK_Zacute' value='428'/>
+  <enum name='XK_Zcaron' value='430'/>
+  <enum name='XK_Zenkaku' value='65320'/>
+  <enum name='XK_Zenkaku_Hankaku' value='65322'/>
+  <enum name='XK_a' value='97'/>
+  <enum name='XK_aacute' value='225'/>
+  <enum name='XK_abovedot' value='511'/>
+  <enum name='XK_abreve' value='483'/>
+  <enum name='XK_acircumflex' value='226'/>
+  <enum name='XK_acute' value='180'/>
+  <enum name='XK_adiaeresis' value='228'/>
+  <enum name='XK_ae' value='230'/>
+  <enum name='XK_agrave' value='224'/>
+  <enum name='XK_amacron' value='992'/>
+  <enum name='XK_ampersand' value='38'/>
+  <enum name='XK_aogonek' value='433'/>
+  <enum name='XK_apostrophe' value='39'/>
+  <enum name='XK_aring' value='229'/>
+  <enum name='XK_asciicircum' value='94'/>
+  <enum name='XK_asciitilde' value='126'/>
+  <enum name='XK_asterisk' value='42'/>
+  <enum name='XK_at' value='64'/>
+  <enum name='XK_atilde' value='227'/>
+  <enum name='XK_b' value='98'/>
+  <enum name='XK_backslash' value='92'/>
+  <enum name='XK_bar' value='124'/>
+  <enum name='XK_braceleft' value='123'/>
+  <enum name='XK_braceright' value='125'/>
+  <enum name='XK_bracketleft' value='91'/>
+  <enum name='XK_bracketright' value='93'/>
+  <enum name='XK_breve' value='418'/>
+  <enum name='XK_brokenbar' value='166'/>
+  <enum name='XK_c' value='99'/>
+  <enum name='XK_cabovedot' value='741'/>
+  <enum name='XK_cacute' value='486'/>
+  <enum name='XK_caron' value='439'/>
+  <enum name='XK_ccaron' value='488'/>
+  <enum name='XK_ccedilla' value='231'/>
+  <enum name='XK_ccircumflex' value='742'/>
+  <enum name='XK_cedilla' value='184'/>
+  <enum name='XK_cent' value='162'/>
+  <enum name='XK_colon' value='58'/>
+  <enum name='XK_comma' value='44'/>
+  <enum name='XK_copyright' value='169'/>
+  <enum name='XK_currency' value='164'/>
+  <enum name='XK_d' value='100'/>
+  <enum name='XK_dcaron' value='495'/>
+  <enum name='XK_degree' value='176'/>
+  <enum name='XK_diaeresis' value='168'/>
+  <enum name='XK_division' value='247'/>
+  <enum name='XK_dollar' value='36'/>
+  <enum name='XK_doubleacute' value='445'/>
+  <enum name='XK_dstroke' value='496'/>
+  <enum name='XK_e' value='101'/>
+  <enum name='XK_eabovedot' value='1004'/>
+  <enum name='XK_eacute' value='233'/>
+  <enum name='XK_ecaron' value='492'/>
+  <enum name='XK_ecircumflex' value='234'/>
+  <enum name='XK_ediaeresis' value='235'/>
+  <enum name='XK_egrave' value='232'/>
+  <enum name='XK_emacron' value='954'/>
+  <enum name='XK_eng' value='959'/>
+  <enum name='XK_eogonek' value='490'/>
+  <enum name='XK_equal' value='61'/>
+  <enum name='XK_eth' value='240'/>
+  <enum name='XK_exclam' value='33'/>
+  <enum name='XK_exclamdown' value='161'/>
+  <enum name='XK_f' value='102'/>
+  <enum name='XK_g' value='103'/>
+  <enum name='XK_gabovedot' value='757'/>
+  <enum name='XK_gbreve' value='699'/>
+  <enum name='XK_gcedilla' value='955'/>
+  <enum name='XK_gcircumflex' value='760'/>
+  <enum name='XK_grave' value='96'/>
+  <enum name='XK_greater' value='62'/>
+  <enum name='XK_guillemotleft' value='171'/>
+  <enum name='XK_guillemotright' value='187'/>
+  <enum name='XK_h' value='104'/>
+  <enum name='XK_hcircumflex' value='694'/>
+  <enum name='XK_hstroke' value='689'/>
+  <enum name='XK_hyphen' value='173'/>
+  <enum name='XK_i' value='105'/>
+  <enum name='XK_iacute' value='237'/>
+  <enum name='XK_icircumflex' value='238'/>
+  <enum name='XK_idiaeresis' value='239'/>
+  <enum name='XK_idotless' value='697'/>
+  <enum name='XK_igrave' value='236'/>
+  <enum name='XK_imacron' value='1007'/>
+  <enum name='XK_iogonek' value='999'/>
+  <enum name='XK_itilde' value='949'/>
+  <enum name='XK_j' value='106'/>
+  <enum name='XK_jcircumflex' value='700'/>
+  <enum name='XK_k' value='107'/>
+  <enum name='XK_kappa' value='930'/>
+  <enum name='XK_kcedilla' value='1011'/>
+  <enum name='XK_kra' value='930'/>
+  <enum name='XK_l' value='108'/>
+  <enum name='XK_lacute' value='485'/>
+  <enum name='XK_lcaron' value='437'/>
+  <enum name='XK_lcedilla' value='950'/>
+  <enum name='XK_less' value='60'/>
+  <enum name='XK_lstroke' value='435'/>
+  <enum name='XK_m' value='109'/>
+  <enum name='XK_macron' value='175'/>
+  <enum name='XK_masculine' value='186'/>
+  <enum name='XK_minus' value='45'/>
+  <enum name='XK_mu' value='181'/>
+  <enum name='XK_multiply' value='215'/>
+  <enum name='XK_n' value='110'/>
+  <enum name='XK_nacute' value='497'/>
+  <enum name='XK_ncaron' value='498'/>
+  <enum name='XK_ncedilla' value='1009'/>
+  <enum name='XK_nobreakspace' value='160'/>
+  <enum name='XK_notsign' value='172'/>
+  <enum name='XK_ntilde' value='241'/>
+  <enum name='XK_numbersign' value='35'/>
+  <enum name='XK_o' value='111'/>
+  <enum name='XK_oacute' value='243'/>
+  <enum name='XK_ocircumflex' value='244'/>
+  <enum name='XK_odiaeresis' value='246'/>
+  <enum name='XK_odoubleacute' value='501'/>
+  <enum name='XK_ogonek' value='434'/>
+  <enum name='XK_ograve' value='242'/>
+  <enum name='XK_omacron' value='1010'/>
+  <enum name='XK_onehalf' value='189'/>
+  <enum name='XK_onequarter' value='188'/>
+  <enum name='XK_onesuperior' value='185'/>
+  <enum name='XK_ordfeminine' value='170'/>
+  <enum name='XK_oslash' value='248'/>
+  <enum name='XK_otilde' value='245'/>
+  <enum name='XK_p' value='112'/>
+  <enum name='XK_paragraph' value='182'/>
+  <enum name='XK_parenleft' value='40'/>
+  <enum name='XK_parenright' value='41'/>
+  <enum name='XK_percent' value='37'/>
+  <enum name='XK_period' value='46'/>
+  <enum name='XK_periodcentered' value='183'/>
+  <enum name='XK_plus' value='43'/>
+  <enum name='XK_plusminus' value='177'/>
+  <enum name='XK_q' value='113'/>
+  <enum name='XK_question' value='63'/>
+  <enum name='XK_questiondown' value='191'/>
+  <enum name='XK_quotedbl' value='34'/>
+  <enum name='XK_quoteleft' value='96'/>
+  <enum name='XK_quoteright' value='39'/>
+  <enum name='XK_r' value='114'/>
+  <enum name='XK_racute' value='480'/>
+  <enum name='XK_rcaron' value='504'/>
+  <enum name='XK_rcedilla' value='947'/>
+  <enum name='XK_registered' value='174'/>
+  <enum name='XK_s' value='115'/>
+  <enum name='XK_sacute' value='438'/>
+  <enum name='XK_scaron' value='441'/>
+  <enum name='XK_scedilla' value='442'/>
+  <enum name='XK_scircumflex' value='766'/>
+  <enum name='XK_script_switch' value='65406'/>
+  <enum name='XK_section' value='167'/>
+  <enum name='XK_semicolon' value='59'/>
+  <enum name='XK_slash' value='47'/>
+  <enum name='XK_space' value='32'/>
+  <enum name='XK_ssharp' value='223'/>
+  <enum name='XK_sterling' value='163'/>
+  <enum name='XK_t' value='116'/>
+  <enum name='XK_tcaron' value='443'/>
+  <enum name='XK_tcedilla' value='510'/>
+  <enum name='XK_thorn' value='254'/>
+  <enum name='XK_threequarters' value='190'/>
+  <enum name='XK_threesuperior' value='179'/>
+  <enum name='XK_tslash' value='956'/>
+  <enum name='XK_twosuperior' value='178'/>
+  <enum name='XK_u' value='117'/>
+  <enum name='XK_uacute' value='250'/>
+  <enum name='XK_ubreve' value='765'/>
+  <enum name='XK_ucircumflex' value='251'/>
+  <enum name='XK_udiaeresis' value='252'/>
+  <enum name='XK_udoubleacute' value='507'/>
+  <enum name='XK_ugrave' value='249'/>
+  <enum name='XK_umacron' value='1022'/>
+  <enum name='XK_underscore' value='95'/>
+  <enum name='XK_uogonek' value='1017'/>
+  <enum name='XK_uring' value='505'/>
+  <enum name='XK_utilde' value='1021'/>
+  <enum name='XK_v' value='118'/>
+  <enum name='XK_w' value='119'/>
+  <enum name='XK_x' value='120'/>
+  <enum name='XK_y' value='121'/>
+  <enum name='XK_yacute' value='253'/>
+  <enum name='XK_ydiaeresis' value='255'/>
+  <enum name='XK_yen' value='165'/>
+  <enum name='XK_z' value='122'/>
+  <enum name='XK_zabovedot' value='447'/>
+  <enum name='XK_zacute' value='444'/>
+  <enum name='XK_zcaron' value='446'/>
+  <enum name='XLocaleNotSupported' value='-2'/>
+  <enum name='XNegative' value='16'/>
+  <enum name='XNoMemory' value='-1'/>
+  <enum name='XStdICCTextStyle' value='3'/>
+  <enum name='XStringStyle' value='0'/>
+  <enum name='XTextStyle' value='2'/>
+  <enum name='XValue' value='1'/>
+  <enum name='YNegative' value='32'/>
+  <enum name='YValue' value='2'/>
+  <enum name='ZoomState' value='2'/>
+  <function name='Tk_3DBorderColor'>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <retval type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+  </function>
+  <function name='Tk_3DBorderGC'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <arg type='i'/>
+    <retval type='^{_XGC=}'/>
+  </function>
+  <function name='Tk_3DHorizontalBevel'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_3DVerticalBevel'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_AddOption'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Alloc3DBorderFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_3DBorder_=}'/>
+  </function>
+  <function name='Tk_AllocBitmapFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_AllocColorFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+  </function>
+  <function name='Tk_AllocCursorFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_Cursor_=}'/>
+  </function>
+  <function name='Tk_AllocFontFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_Font_=}'/>
+  </function>
+  <function name='Tk_AllocStyleFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_Style_=}'/>
+  </function>
+  <function name='Tk_BindEvent'>
+    <arg type='^{Tk_BindingTable_=}'/>
+    <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='^^v'/>
+  </function>
+  <function name='Tk_CanvasDrawableCoords'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <arg type='^s'/>
+    <arg type='^s'/>
+  </function>
+  <function name='Tk_CanvasEventuallyRedraw'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_CanvasGetCoord'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='*'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasGetCoordFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasGetTextInfo'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <retval type='^{Tk_CanvasTextInfo=^{Tk_3DBorder_}i^{?}^{Tk_Item=i^{Tk_Item}[3*]^*ii^{Tk_ItemType}iiii^{Tk_Item}i*i}ii^{Tk_Item=i^{Tk_Item}[3*]^*ii^{Tk_ItemType}iiii^{Tk_Item}i*i}i^{Tk_3DBorder_}ii^{Tk_Item=i^{Tk_Item}[3*]^*ii^{Tk_ItemType}iiii^{Tk_Item}i*i}ii}'/>
+  </function>
+  <function name='Tk_CanvasPsBitmap'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasPsColor'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasPsFont'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{Tk_Font_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasPsOutline'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{Tk_Item=i^{Tk_Item}[3*]^*ii^{Tk_ItemType}iiii^{Tk_Item}i*i}'/>
+    <arg type='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}III}' type64='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}QQQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasPsPath'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^d'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_CanvasPsStipple'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasPsY'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='d'/>
+    <retval type='d'/>
+  </function>
+  <function name='Tk_CanvasSetOffset'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='^{Tk_TSOffset=iii}'/>
+  </function>
+  <function name='Tk_CanvasSetStippleOrigin'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{_XGC=}'/>
+  </function>
+  <function name='Tk_CanvasTagsParseProc'>
+    <arg type='^v'/>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CanvasTagsPrintProc'>
+    <arg type='^v'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^^?'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_CanvasTkwin'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_CanvasWindowCoords'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='d'/>
+    <arg type='d'/>
+    <arg type='^s'/>
+    <arg type='^s'/>
+  </function>
+  <function name='Tk_ChangeOutlineGC'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{Tk_Item=i^{Tk_Item}[3*]^*ii^{Tk_ItemType}iiii^{Tk_Item}i*i}'/>
+    <arg type='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}III}' type64='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}QQQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ChangeWindowAttributes'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSetWindowAttributes=ILILiiiLLilliI{Cursor=[16s][16s]{Point=ss}}}' type64='^{_XSetWindowAttributes=QQQQiiiQQiqqiQ{Cursor=[16s][16s]{Point=ss}}}'/>
+  </function>
+  <function name='Tk_CharBbox'>
+    <arg type='^{Tk_TextLayout_=}'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ClearSelection'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_ClipboardAppend'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='L' type64='Q'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ClipboardClear'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CollapseMotionEvents'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ComputeTextLayout'>
+    <arg type='^{Tk_Font_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='^{Tk_TextLayout_=}'/>
+  </function>
+  <function name='Tk_ConfigOutlineGC'>
+    <arg type='^{_XGCValues=iLLLiiiiiiiIIiiIiiiiIic}' type64='^{_XGCValues=iQQQiiiiiiiQQiiQiiiiQic}'/>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{Tk_Item=i^{Tk_Item}[3*]^*ii^{Tk_ItemType}iiii^{Tk_Item}i*i}'/>
+    <arg type='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}III}' type64='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}QQQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ConfigureInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_ConfigSpec=i****ii^{Tk_CustomOption}}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ConfigureValue'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_ConfigSpec=i****ii^{Tk_CustomOption}}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ConfigureWidget'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_ConfigSpec=i****ii^{Tk_CustomOption}}'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ConfigureWindow'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='I'/>
+    <arg type='^{_XWindowChanges=iiiiiIi}' type64='^{_XWindowChanges=iiiiiQi}'/>
+  </function>
+  <function name='Tk_CoordsToWindow'>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_CreateAnonymousWindow'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_CreateBinding'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_BindingTable_=}'/>
+    <arg type='^v'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_CreateBindingTable'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='^{Tk_BindingTable_=}'/>
+  </function>
+  <function name='Tk_CreateClientMessageHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{Tk_Window_=}'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='i'/>
+    </arg>
+  </function>
+  <function name='Tk_CreateConsoleWindow'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_CreateErrorHandler'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{_XErrorEvent=i^{_XDisplay}ILCCC}' type64='^{_XErrorEvent=i^{_XDisplay}QQCCC}'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^{Tk_ErrorHandler_=}'/>
+  </function>
+  <function name='Tk_CreateEventHandler'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_CreateGenericHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_CreateImageType'>
+    <arg type='^{Tk_ImageType=*^?^?^?^?^?^?^{Tk_ImageType}*}'/>
+  </function>
+  <function name='Tk_CreateItemType'>
+    <arg type='^{Tk_ItemType=*i^?^{Tk_ConfigSpec}^?^?^?^?i^?^?^?^?^?^?^?^?^?^?^{Tk_ItemType}*i**}'/>
+  </function>
+  <function name='Tk_CreateOldImageType'>
+    <arg type='^{Tk_ImageType=*^?^?^?^?^?^?^{Tk_ImageType}*}'/>
+  </function>
+  <function name='Tk_CreateOldPhotoImageFormat'>
+    <arg type='^{Tk_PhotoImageFormat=*^?^?^?^?^?^?^{Tk_PhotoImageFormat}}'/>
+  </function>
+  <function name='Tk_CreateOptionTable'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_OptionSpec=i****iii^vi}'/>
+    <retval type='^{Tk_OptionTable_=}'/>
+  </function>
+  <function name='Tk_CreateOutline'>
+    <arg type='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}III}' type64='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}QQQ}'/>
+  </function>
+  <function name='Tk_CreatePhotoImageFormat'>
+    <arg type='^{Tk_PhotoImageFormat=*^?^?^?^?^?^?^{Tk_PhotoImageFormat}}'/>
+  </function>
+  <function name='Tk_CreateSelHandler'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <arg type='*'/>
+      <arg type='i'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_CreateSmoothMethod'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_SmoothMethod=*^?^?}'/>
+  </function>
+  <function name='Tk_CreateStyle'>
+    <arg type='*'/>
+    <arg type='^{Tk_StyleEngine_=}'/>
+    <arg type='^v'/>
+    <retval type='^{Tk_Style_=}'/>
+  </function>
+  <function name='Tk_CreateWindow'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_CreateWindowFromPath'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_DefineBitmap'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_DefineCursor'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_Cursor_=}'/>
+  </function>
+  <function name='Tk_DeleteAllBindings'>
+    <arg type='^{Tk_BindingTable_=}'/>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_DeleteBinding'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_BindingTable_=}'/>
+    <arg type='^v'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_DeleteBindingTable'>
+    <arg type='^{Tk_BindingTable_=}'/>
+  </function>
+  <function name='Tk_DeleteClientMessageHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{Tk_Window_=}'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='i'/>
+    </arg>
+  </function>
+  <function name='Tk_DeleteErrorHandler'>
+    <arg type='^{Tk_ErrorHandler_=}'/>
+  </function>
+  <function name='Tk_DeleteEventHandler'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_DeleteGenericHandler'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_DeleteImage'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tk_DeleteOptionTable'>
+    <arg type='^{Tk_OptionTable_=}'/>
+  </function>
+  <function name='Tk_DeleteOutline'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}III}' type64='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}QQQ}'/>
+  </function>
+  <function name='Tk_DeleteSelHandler'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_DestroyWindow'>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_DisplayName'>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_DistanceToTextLayout'>
+    <arg type='^{Tk_TextLayout_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_DitherPhoto'>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Draw3DPolygon'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <arg type='^{_XPoint=ss}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Draw3DRectangle'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_DrawChars'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='^{Tk_Font_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_DrawElement'>
+    <arg type='^{Tk_Style_=}'/>
+    <arg type='^{Tk_StyledElement_=}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_DrawFocusHighlight'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='i'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_DrawTextLayout'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='^{Tk_TextLayout_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Fill3DPolygon'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <arg type='^{_XPoint=ss}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Fill3DRectangle'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_FindPhoto'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tk_FontId'>
+    <arg type='^{Tk_Font_=}'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_Free3DBorder'>
+    <arg type='^{Tk_3DBorder_=}'/>
+  </function>
+  <function name='Tk_Free3DBorderFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_FreeBitmap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_FreeBitmapFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_FreeColor'>
+    <arg type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+  </function>
+  <function name='Tk_FreeColorFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_FreeColormap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_FreeConfigOptions'>
+    <arg type='*'/>
+    <arg type='^{Tk_OptionTable_=}'/>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_FreeCursor'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^{Tk_Cursor_=}'/>
+  </function>
+  <function name='Tk_FreeCursorFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_FreeFont'>
+    <arg type='^{Tk_Font_=}'/>
+  </function>
+  <function name='Tk_FreeFontFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_FreeGC'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^{_XGC=}'/>
+  </function>
+  <function name='Tk_FreeImage'>
+    <arg type='^{Tk_Image__=}'/>
+  </function>
+  <function name='Tk_FreeOptions'>
+    <arg type='^{Tk_ConfigSpec=i****ii^{Tk_CustomOption}}'/>
+    <arg type='*'/>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_FreePixmap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_FreeSavedOptions'>
+    <arg type='^{Tk_SavedOptions=*^{Tk_Window_}i[20{Tk_SavedOption=^{TkOption}^{Tcl_Obj}d}]^{Tk_SavedOptions}}'/>
+  </function>
+  <function name='Tk_FreeStyle'>
+    <arg type='^{Tk_Style_=}'/>
+  </function>
+  <function name='Tk_FreeStyleFromObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_FreeTextLayout'>
+    <arg type='^{Tk_TextLayout_=}'/>
+  </function>
+  <function name='Tk_FreeXId'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_GCForColor'>
+    <arg type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='^{_XGC=}'/>
+  </function>
+  <function name='Tk_GeometryRequest'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Get3DBorder'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='^{Tk_3DBorder_=}'/>
+  </function>
+  <function name='Tk_Get3DBorderFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_3DBorder_=}'/>
+  </function>
+  <function name='Tk_GetAllBindings'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_BindingTable_=}'/>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_GetAnchor'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetAnchorFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetAtomName'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_GetBinding'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_BindingTable_=}'/>
+    <arg type='^v'/>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_GetBitmap'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_GetBitmapFromData'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_GetBitmapFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_GetCapStyle'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetColor'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+  </function>
+  <function name='Tk_GetColorByValue'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+    <retval type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+  </function>
+  <function name='Tk_GetColorFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+  </function>
+  <function name='Tk_GetColormap'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_GetCursor'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='^{Tk_Cursor_=}'/>
+  </function>
+  <function name='Tk_GetCursorFromData'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='^{Tk_Cursor_=}'/>
+  </function>
+  <function name='Tk_GetCursorFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_Cursor_=}'/>
+  </function>
+  <function name='Tk_GetDash'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_Dash=i(?=*[4c])}' type64='^{Tk_Dash=i(?=*[8c])}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetElementBorderWidth'>
+    <arg type='^{Tk_Style_=}'/>
+    <arg type='^{Tk_StyledElement_=}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetElementBox'>
+    <arg type='^{Tk_Style_=}'/>
+    <arg type='^{Tk_StyledElement_=}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tk_GetElementId'>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetElementSize'>
+    <arg type='^{Tk_Style_=}'/>
+    <arg type='^{Tk_StyledElement_=}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tk_GetFont'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='^{Tk_Font_=}'/>
+  </function>
+  <function name='Tk_GetFontFromObj'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_Font_=}'/>
+  </function>
+  <function name='Tk_GetFontMetrics'>
+    <arg type='^{Tk_Font_=}'/>
+    <arg type='^{Tk_FontMetrics=iii}'/>
+  </function>
+  <function name='Tk_GetGC'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XGCValues=iLLLiiiiiiiIIiiIiiiiIic}' type64='^{_XGCValues=iQQQiiiiiiiQQiiQiiiiQic}'/>
+    <retval type='^{_XGC=}'/>
+  </function>
+  <function name='Tk_GetImage'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='i'/>
+      <arg type='i'/>
+      <arg type='i'/>
+      <arg type='i'/>
+      <arg type='i'/>
+      <arg type='i'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='^{Tk_Image__=}'/>
+  </function>
+  <function name='Tk_GetImageMasterData'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^^{Tk_ImageType}'/>
+    <retval type='^v'/>
+  </function>
+  <function name='Tk_GetItemTypes'>
+    <retval type='^{Tk_ItemType=*i^?^{Tk_ConfigSpec}^?^?^?^?i^?^?^?^?^?^?^?^?^?^?^{Tk_ItemType}*i**}'/>
+  </function>
+  <function name='Tk_GetJoinStyle'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetJustify'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetJustifyFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetMMFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetNumMainWindows'>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetOption'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_GetOptionInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_OptionTable_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_GetOptionValue'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_OptionTable_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+  </function>
+  <function name='Tk_GetPixels'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetPixelsFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetPixmap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_GetRelief'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetReliefFromObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetRootCoords'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tk_GetScreenMM'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='^d'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetScrollInfo'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <arg type='^d'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetScrollInfoObj'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <arg type='^d'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetSelection'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <arg type='*'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_GetStyle'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <retval type='^{Tk_Style_=}'/>
+  </function>
+  <function name='Tk_GetStyleEngine'>
+    <arg type='*'/>
+    <retval type='^{Tk_StyleEngine_=}'/>
+  </function>
+  <function name='Tk_GetStyleFromObj'>
+    <arg type='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=ld^vq{?=^v^v})}' type64='^{Tcl_Obj=i*i^{Tcl_ObjType}(?=qd^vq{?=^v^v})}'/>
+    <retval type='^{Tk_Style_=}'/>
+  </function>
+  <function name='Tk_GetStyledElement'>
+    <arg type='^{Tk_Style_=}'/>
+    <arg type='i'/>
+    <arg type='^{Tk_OptionTable_=}'/>
+    <retval type='^{Tk_StyledElement_=}'/>
+  </function>
+  <function name='Tk_GetUid'>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_GetVRootGeometry'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tk_GetVisual'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <arg type='^i'/>
+    <arg type='^I' type64='^Q'/>
+    <retval type='^{_Visual=^{_XExtData}IiLLLii}' type64='^{_Visual=^{_XExtData}QiQQQii}'/>
+  </function>
+  <function name='Tk_Grab'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_HandleEvent'>
+    <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+  </function>
+  <function name='Tk_IdToWindow'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_ImageChanged'>
+    <arg type='^{Tk_ImageMaster_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Init'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_InitConsoleChannels'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tk_InitImageArgs'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='i'/>
+    <arg type='^^*'/>
+  </function>
+  <function name='Tk_InitOptions'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_OptionTable_=}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_InitStubs'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_InternAtom'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='Tk_IntersectTextLayout'>
+    <arg type='^{Tk_TextLayout_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_MainEx'>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{Tcl_Interp=*^?i}'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+  </function>
+  <function name='Tk_MainLoop'/>
+  <function name='Tk_MainWindow'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_MaintainGeometry'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_MakeWindowExist'>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_ManageGeometry'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_GeomMgr=*^?^?}'/>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_MapWindow'>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_MeasureChars'>
+    <arg type='^{Tk_Font_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_MoveResizeWindow'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_MoveToplevelWindow'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_MoveWindow'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_NameOf3DBorder'>
+    <arg type='^{Tk_3DBorder_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfAnchor'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfBitmap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfCapStyle'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfColor'>
+    <arg type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfCursor'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^{Tk_Cursor_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfFont'>
+    <arg type='^{Tk_Font_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfImage'>
+    <arg type='^{Tk_ImageMaster_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfJoinStyle'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfJustify'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfRelief'>
+    <arg type='i'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameOfStyle'>
+    <arg type='^{Tk_Style_=}'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_NameToWindow'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_OwnSelection'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_ParseArgv'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^i'/>
+    <arg type='^*'/>
+    <arg type='^{_Tk_ArgvInfo=*i***}'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PhotoBlank'>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_PhotoExpand'>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_PhotoGetImage'>
+    <arg type='^v'/>
+    <arg type='^{Tk_PhotoImageBlock=*iiii[4i]}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PhotoGetSize'>
+    <arg type='^v'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tk_PhotoPutBlock'>
+    <arg type='^v'/>
+    <arg type='^{Tk_PhotoImageBlock=*iiii[4i]}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_PhotoPutBlock_NoComposite'>
+    <arg type='^v'/>
+    <arg type='^{Tk_PhotoImageBlock=*iiii[4i]}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_PhotoPutZoomedBlock'>
+    <arg type='^v'/>
+    <arg type='^{Tk_PhotoImageBlock=*iiii[4i]}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_PhotoPutZoomedBlock_NoComposite'>
+    <arg type='^v'/>
+    <arg type='^{Tk_PhotoImageBlock=*iiii[4i]}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_PhotoSetSize'>
+    <arg type='^v'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_PointToChar'>
+    <arg type='^{Tk_TextLayout_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptBitmap'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptColor'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <arg type='^{_XColor=LSSScc}' type64='^{_XColor=QSSScc}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptFont'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <arg type='^{Tk_Font_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptFontName'>
+    <arg type='^{Tk_Font_=}'/>
+    <arg type='^{Tcl_DString=*ii[200c]}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptImage'>
+    <arg type='^{Tk_Image__=}'/>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptPath'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <arg type='^d'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_PostscriptPhoto'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_PhotoImageBlock=*iiii[4i]}'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptStipple'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_PostscriptY'>
+    <arg type='d'/>
+    <arg type='^{Tk_PostscriptInfo_=}'/>
+    <retval type='d'/>
+  </function>
+  <function name='Tk_PreserveColormap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_QueueWindowEvent'>
+    <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_RedrawImage'>
+    <arg type='^{Tk_Image__=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_RegisterStyleEngine'>
+    <arg type='*'/>
+    <arg type='^{Tk_StyleEngine_=}'/>
+    <retval type='^{Tk_StyleEngine_=}'/>
+  </function>
+  <function name='Tk_RegisterStyledElement'>
+    <arg type='^{Tk_StyleEngine_=}'/>
+    <arg type='^{Tk_ElementSpec=i*^{Tk_ElementOptionSpec}^?^?^?^?}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ResetOutlineGC'>
+    <arg type='^{Tk_Canvas_=}'/>
+    <arg type='^{Tk_Item=i^{Tk_Item}[3*]^*ii^{Tk_ItemType}iiii^{Tk_Item}i*i}'/>
+    <arg type='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}{Tk_Dash=i(?=*[4c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}III}' type64='^{Tk_Outline=^{_XGC}dddi{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}{Tk_Dash=i(?=*[8c])}^v^v^v{Tk_TSOffset=iii}^{?}^{?}^{?}QQQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_ResizeWindow'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_RestackWindow'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_RestoreSavedOptions'>
+    <arg type='^{Tk_SavedOptions=*^{Tk_Window_}i[20{Tk_SavedOption=^{TkOption}^{Tcl_Obj}d}]^{Tk_SavedOptions}}'/>
+  </function>
+  <function name='Tk_RestrictEvents'>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='i'/>
+    </arg>
+    <arg type='^v'/>
+    <arg type='^^v'/>
+    <retval function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^(_XEvent=i{?=iLi^{_XDisplay}I}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIIi}{?=iLi^{_XDisplay}IIIIiiiiIci}{?=iLi^{_XDisplay}IIIIiiiiiiiiI}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Iiiiii}{?=iLi^{_XDisplay}Iiiiiiii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}Ii}{?=iLi^{_XDisplay}IIiiiiii}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}II}{?=iLi^{_XDisplay}IIIiii}{?=iLi^{_XDisplay}IIiiiiiIi}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}Iii}{?=iLi^{_XDisplay}IIiiiiiIiL}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIi}{?=iLi^{_XDisplay}IIIi}{?=iLi^{_XDisplay}III}{?=iLi^{_XDisplay}IIIIII}{?=iLi^{_XDisplay}IIIII}{?=iLi^{_XDisplay}IIii}{?=iLi^{_XDisplay}IIi(?=[20c][10s][5l])}{?=iLi^{_XDisplay}Iiii}{?=i^{_XDisplay}ILCCC}{?=iLi^{_XDisplay}I[32c]}[24l])' type64='^(_XEvent=i{?=iQi^{_XDisplay}Q}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIIi}{?=iQi^{_XDisplay}QQQQiiiiIci}{?=iQi^{_XDisplay}QQQQiiiiiiiiI}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qiiiii}{?=iQi^{_XDisplay}Qiiiiiii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}Qi}{?=iQi^{_XDisplay}QQiiiiii}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQ}{?=iQi^{_XDisplay}QQQiii}{?=iQi^{_XDisplay}QQiiiiiQi}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}Qii}{?=iQi^{_XDisplay}QQiiiiiQiQ}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQi}{?=iQi^{_XDisplay}QQQi}{?=iQi^{_XDisplay}QQQ}{?=iQi^{_XDisplay}QQQQQQ}{?=iQi^{_XDisplay}QQQQQ}{?=iQi^{_XDisplay}QQii}{?=iQi^{_XDisplay}QQi(?=[20c][10s][5q])}{?=iQi^{_XDisplay}Qiii}{?=i^{_XDisplay}QQCCC}{?=iQi^{_XDisplay}Q[32c]}[24q])'/>
+      <retval type='i'/>
+    </retval>
+  </function>
+  <function name='Tk_SafeInit'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_SetAppName'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='Tk_SetBackgroundFromBorder'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_3DBorder_=}'/>
+  </function>
+  <function name='Tk_SetCaretPos'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_SetClass'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='*'/>
+  </function>
+  <function name='Tk_SetClassProcs'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_ClassProcs=I^?^?^?}'/>
+    <arg type='^v'/>
+  </function>
+  <function name='Tk_SetGrid'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_SetInternalBorder'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_SetInternalBorderEx'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_SetMinimumRequestSize'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_SetOptions'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='*'/>
+    <arg type='^{Tk_OptionTable_=}'/>
+    <arg type='i'/>
+    <arg type='^^{Tcl_Obj}'/>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_SavedOptions=*^{Tk_Window_}i[20{Tk_SavedOption=^{TkOption}^{Tcl_Obj}d}]^{Tk_SavedOptions}}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_SetTSOrigin'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_SetWindowBackground'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_SetWindowBackgroundPixmap'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_SetWindowBorder'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_SetWindowBorderPixmap'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_SetWindowBorderWidth'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_SetWindowColormap'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='Tk_SetWindowVisual'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{_Visual=^{_XExtData}IiLLLii}' type64='^{_Visual=^{_XExtData}QiQQQii}'/>
+    <arg type='i'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_SizeOfBitmap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tk_SizeOfImage'>
+    <arg type='^{Tk_Image__=}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+  </function>
+  <function name='Tk_StrictMotif'>
+    <arg type='^{Tk_Window_=}'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_TextLayoutToPostscript'>
+    <arg type='^{Tcl_Interp=*^?i}'/>
+    <arg type='^{Tk_TextLayout_=}'/>
+  </function>
+  <function name='Tk_TextWidth'>
+    <arg type='^{Tk_Font_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='Tk_UndefineCursor'>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_UnderlineChars'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='^{Tk_Font_=}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_UnderlineTextLayout'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='^{Tk_TextLayout_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='Tk_Ungrab'>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_UnmaintainGeometry'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_UnmapWindow'>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_UnsetGrid'>
+    <arg type='^{Tk_Window_=}'/>
+  </function>
+  <function name='Tk_UpdatePointer'>
+    <arg type='^{Tk_Window_=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='XAllocClassHint'>
+    <retval type='^{_XClassHint=**}'/>
+  </function>
+  <function name='XAllocIconSize'>
+    <retval type='^{_XIconSize=iiiiii}'/>
+  </function>
+  <function name='XAllocSizeHints'>
+    <retval type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+  </function>
+  <function name='XAllocStandardColormap'>
+    <retval type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
+  </function>
+  <function name='XAllocWMHints'>
+    <retval type='^{_XWMHints=liiIIiiII}' type64='^{_XWMHints=qiiQQiiQQ}'/>
+  </function>
+  <function name='XClipBox'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRectangle=ssSS}'/>
+  </function>
+  <function name='XCreateRegion'>
+    <retval type='^{_XRegion=}'/>
+  </function>
+  <function name='XDefaultString'>
+    <retval type='*'/>
+  </function>
+  <function name='XDeleteContext'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='XDestroyRegion'>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XEmptyRegion'>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XEqualRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XFindContext'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <arg type='^*'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetClassHint'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XClassHint=**}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetIconSizes'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^^{?}'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetNormalHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetRGBColormaps'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^^{?}'/>
+    <arg type='^i'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetSizeHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetStandardColormap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetTextProperty'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetWMClientMachine'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetWMHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <retval type='^{_XWMHints=liiIIiiII}' type64='^{_XWMHints=qiiQQiiQQ}'/>
+  </function>
+  <function name='XGetWMIconName'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetWMName'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetWMNormalHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='^l' type64='^q'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetWMSizeHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='^l' type64='^q'/>
+    <arg type='L' type64='Q'/>
+    <retval type='i'/>
+  </function>
+  <function name='XGetZoomHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XIntersectRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XLookupString'>
+    <arg type='^{_XKeyEvent=iLi^{_XDisplay}IIIIiiiiIIi}' type64='^{_XKeyEvent=iQi^{_XDisplay}QQQQiiiiIIi}'/>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^I' type64='^Q'/>
+    <arg type='^{_XComposeStatus=*i}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XMatchVisualInfo'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^{_XVisualInfo=^{?}IiiiLLLii}' type64='^{_XVisualInfo=^{?}QiiiQQQii}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XOffsetRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='XPointInRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='XPolygonRegion'>
+    <arg type='^{_XPoint=ss}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <retval type='^{_XRegion=}'/>
+  </function>
+  <function name='XRectInRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='I'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='XSaveContext'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='XSetClassHint'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XClassHint=**}'/>
+  </function>
+  <function name='XSetIconSizes'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XIconSize=iiiiii}'/>
+    <arg type='i'/>
+  </function>
+  <function name='XSetNormalHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+  </function>
+  <function name='XSetRGBColormaps'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
+    <arg type='i'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='XSetRegion'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^{_XGC=}'/>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XSetSizeHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='XSetStandardColormap'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='XSetStandardProperties'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^*'/>
+    <arg type='i'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+  </function>
+  <function name='XSetTextProperty'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='XSetWMHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XWMHints=liiIIiiII}' type64='^{_XWMHints=qiiQQiiQQ}'/>
+  </function>
+  <function name='XSetWMIconName'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+  </function>
+  <function name='XSetWMName'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+  </function>
+  <function name='XSetWMNormalHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+  </function>
+  <function name='XSetWMProperties'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <arg type='^*'/>
+    <arg type='i'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='^{_XWMHints=liiIIiiII}' type64='^{_XWMHints=qiiQQiiQQ}'/>
+    <arg type='^{_XClassHint=**}'/>
+  </function>
+  <function name='XSetWMSizeHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='L' type64='Q'/>
+  </function>
+  <function name='XSetZoomHints'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+  </function>
+  <function name='XShrinkRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='i'/>
+    <arg type='i'/>
+  </function>
+  <function name='XSubtractRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XTextPropertyToStringList'>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <arg type='^^*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='XUnionRectWithRegion'>
+    <arg type='^{_XRectangle=ssSS}'/>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XUnionRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XWMGeometry'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='I'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='XXorRegion'>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+    <arg type='^{_XRegion=}'/>
+  </function>
+  <function name='XmbSetWMProperties'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='L' type64='Q'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='^*'/>
+    <arg type='i'/>
+    <arg type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+    <arg type='^{_XWMHints=liiIIiiII}' type64='^{_XWMHints=qiiQQiiQQ}'/>
+    <arg type='^{_XClassHint=**}'/>
+  </function>
+  <function name='XmbTextListToTextProperty'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^*'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XmbTextPropertyToTextList'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <arg type='^^*'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function name='XwcFreeStringList'>
+    <arg type='^^i'/>
+  </function>
+  <function name='XwcTextListToTextProperty'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^^i'/>
+    <arg type='i'/>
+    <arg type='i'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <retval type='i'/>
+  </function>
+  <function name='XwcTextPropertyToTextList'>
+    <arg type='^{_XDisplay=}'/>
+    <arg type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+    <arg type='^^^i'/>
+    <arg type='^i'/>
+    <retval type='i'/>
+  </function>
+  <function_alias name='Tk_BackgroundError' original='Tcl_BackgroundError'/>
+  <function_alias name='Tk_CancelIdleCall' original='Tcl_CancelIdleCall'/>
+  <function_alias name='Tk_CreateFileHandler' original='Tcl_CreateFileHandler'/>
+  <function_alias name='Tk_CreateTimerHandler' original='Tcl_CreateTimerHandler'/>
+  <function_alias name='Tk_DeleteFileHandler' original='Tcl_DeleteFileHandler'/>
+  <function_alias name='Tk_DeleteTimerHandler' original='Tcl_DeleteTimerHandler'/>
+  <function_alias name='Tk_DoOneEvent' original='Tcl_DoOneEvent'/>
+  <function_alias name='Tk_DoWhenIdle' original='Tcl_DoWhenIdle'/>
+  <function_alias name='Tk_EventuallyFree' original='Tcl_EventuallyFree'/>
+  <function_alias name='Tk_Preserve' original='Tcl_Preserve'/>
+  <function_alias name='Tk_Release' original='Tcl_Release'/>
+  <function_alias name='Tk_Sleep' original='Tcl_Sleep'/>
+</signatures>

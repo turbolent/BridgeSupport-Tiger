@@ -1,0 +1,347 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/DiscRecording.framework/Versions/A/Frameworks/DiscRecordingEngine.framework'/>
+  <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+  <struct name='DRFileForkSizeInfo' type='{DRFileForkSizeInfo=&quot;fork&quot;I&quot;query&quot;I&quot;size&quot;Q}'/>
+  <struct name='DRFileProductionInfo' type='{DRFileProductionInfo=&quot;requestedAddress&quot;Q&quot;buffer&quot;^v&quot;reqCount&quot;I&quot;actCount&quot;I&quot;blockSize&quot;I&quot;fork&quot;I}'/>
+  <cftype name='DRFileRef' gettypeid_func='DRFileGetTypeID' type='^{__DRFile=}'/>
+  <cftype name='DRFolderRef' gettypeid_func='DRFolderGetTypeID' type='^{__DRFolder=}'/>
+  <constant name='DRAccessDate' type='@'/>
+  <constant name='DRAllFilesystems' type='@'/>
+  <constant name='DRAttributeModificationDate' type='@'/>
+  <constant name='DRBackupDate' type='@'/>
+  <constant name='DRContentModificationDate' type='@'/>
+  <constant name='DRCreationDate' type='@'/>
+  <constant name='DREffectiveDate' type='@'/>
+  <constant name='DRExpirationDate' type='@'/>
+  <constant name='DRHFSPlus' type='@'/>
+  <constant name='DRHFSPlusCatalogNodeID' type='@'/>
+  <constant name='DRHFSPlusTextEncodingHint' type='@'/>
+  <constant name='DRISO9660' type='@'/>
+  <constant name='DRISO9660LevelOne' type='@'/>
+  <constant name='DRISO9660LevelTwo' type='@'/>
+  <constant name='DRISO9660VersionNumber' type='@'/>
+  <constant name='DRInvisible' type='@'/>
+  <constant name='DRJoliet' type='@'/>
+  <constant name='DRLinkTypeFinderAlias' type='@'/>
+  <constant name='DRLinkTypeHardLink' type='@'/>
+  <constant name='DRLinkTypeSymbolicLink' type='@'/>
+  <constant name='DRMacExtendedFinderFlags' type='@'/>
+  <constant name='DRMacFileCreator' type='@'/>
+  <constant name='DRMacFileType' type='@'/>
+  <constant name='DRMacFinderFlags' type='@'/>
+  <constant name='DRMacIconLocation' type='@'/>
+  <constant name='DRMacScrollPosition' type='@'/>
+  <constant name='DRMacWindowBounds' type='@'/>
+  <constant name='DRMacWindowView' type='@'/>
+  <constant name='DRPosixFileMode' type='@'/>
+  <constant name='DRPosixGID' type='@'/>
+  <constant name='DRPosixUID' type='@'/>
+  <constant name='DRRecordingDate' type='@'/>
+  <constant name='DRUDF' type='@'/>
+  <constant name='DRUDFApplicationIdentifierSuffix' type='@'/>
+  <constant name='DRUDFExtendedFilePermissions' type='@'/>
+  <constant name='DRUDFInterchangeLevel' type='@'/>
+  <constant name='DRUDFMaxInterchangeLevel' type='@'/>
+  <constant name='DRUDFMaxVolumeSequenceNumber' type='@'/>
+  <constant name='DRUDFPrimaryVolumeDescriptorNumber' type='@'/>
+  <constant name='DRUDFRealTimeFile' type='@'/>
+  <constant name='DRUDFVersion102' type='@'/>
+  <constant name='DRUDFVersion150' type='@'/>
+  <constant name='DRUDFVolumeSequenceNumber' type='@'/>
+  <constant name='DRUDFVolumeSetIdentifier' type='@'/>
+  <constant name='DRUDFVolumeSetImplementationUse' type='@'/>
+  <constant name='DRUDFVolumeSetTimestamp' type='@'/>
+  <constant name='DRUDFWriteVersion' type='@'/>
+  <constant name='kDRAbstractFile' type='^{__CFString=}'/>
+  <constant name='kDRAccessDate' type='^{__CFString=}'/>
+  <constant name='kDRAllFilesystems' type='^{__CFString=}'/>
+  <constant name='kDRApplicationIdentifier' type='^{__CFString=}'/>
+  <constant name='kDRAttributeModificationDate' type='^{__CFString=}'/>
+  <constant name='kDRBackupDate' type='^{__CFString=}'/>
+  <constant name='kDRBibliographicFile' type='^{__CFString=}'/>
+  <constant name='kDRBlockSize' type='^{__CFString=}'/>
+  <constant name='kDRContentModificationDate' type='^{__CFString=}'/>
+  <constant name='kDRCopyrightFile' type='^{__CFString=}'/>
+  <constant name='kDRCreationDate' type='^{__CFString=}'/>
+  <constant name='kDRDataPreparer' type='^{__CFString=}'/>
+  <constant name='kDRDefaultDate' type='^{__CFString=}'/>
+  <constant name='kDREffectiveDate' type='^{__CFString=}'/>
+  <constant name='kDRExpirationDate' type='^{__CFString=}'/>
+  <constant name='kDRHFSPlus' type='^{__CFString=}'/>
+  <constant name='kDRHFSPlusCatalogNodeID' type='^{__CFString=}'/>
+  <constant name='kDRHFSPlusTextEncodingHint' type='^{__CFString=}'/>
+  <constant name='kDRISO9660' type='^{__CFString=}'/>
+  <constant name='kDRISO9660LevelOne' type='^{__CFString=}'/>
+  <constant name='kDRISO9660LevelTwo' type='^{__CFString=}'/>
+  <constant name='kDRISO9660VersionNumber' type='^{__CFString=}'/>
+  <constant name='kDRISOLevel' type='^{__CFString=}'/>
+  <constant name='kDRISOMacExtensions' type='^{__CFString=}'/>
+  <constant name='kDRISORockRidgeExtensions' type='^{__CFString=}'/>
+  <constant name='kDRInvisible' type='^{__CFString=}'/>
+  <constant name='kDRJoliet' type='^{__CFString=}'/>
+  <constant name='kDRMacExtendedFinderFlags' type='^{__CFString=}'/>
+  <constant name='kDRMacFileCreator' type='^{__CFString=}'/>
+  <constant name='kDRMacFileType' type='^{__CFString=}'/>
+  <constant name='kDRMacFinderFlags' type='^{__CFString=}'/>
+  <constant name='kDRMacIconLocation' type='^{__CFString=}'/>
+  <constant name='kDRMacScrollPosition' type='^{__CFString=}'/>
+  <constant name='kDRMacWindowBounds' type='^{__CFString=}'/>
+  <constant name='kDRMacWindowView' type='^{__CFString=}'/>
+  <constant name='kDRPosixFileMode' type='^{__CFString=}'/>
+  <constant name='kDRPosixGID' type='^{__CFString=}'/>
+  <constant name='kDRPosixUID' type='^{__CFString=}'/>
+  <constant name='kDRPublisher' type='^{__CFString=}'/>
+  <constant name='kDRRecordingDate' type='^{__CFString=}'/>
+  <constant name='kDRSuppressMacSpecificFiles' type='^{__CFString=}'/>
+  <constant name='kDRSystemIdentifier' type='^{__CFString=}'/>
+  <constant name='kDRUDF' type='^{__CFString=}'/>
+  <constant name='kDRUDFApplicationIdentifierSuffix' type='^{__CFString=}'/>
+  <constant name='kDRUDFExtendedFilePermissions' type='^{__CFString=}'/>
+  <constant name='kDRUDFInterchangeLevel' type='^{__CFString=}'/>
+  <constant name='kDRUDFMaxInterchangeLevel' type='^{__CFString=}'/>
+  <constant name='kDRUDFMaxVolumeSequenceNumber' type='^{__CFString=}'/>
+  <constant name='kDRUDFPrimaryVolumeDescriptorNumber' type='^{__CFString=}'/>
+  <constant name='kDRUDFRealTimeFile' type='^{__CFString=}'/>
+  <constant name='kDRUDFVersion102' type='^{__CFString=}'/>
+  <constant name='kDRUDFVersion150' type='^{__CFString=}'/>
+  <constant name='kDRUDFVolumeSequenceNumber' type='^{__CFString=}'/>
+  <constant name='kDRUDFVolumeSetIdentifier' type='^{__CFString=}'/>
+  <constant name='kDRUDFVolumeSetImplementationUse' type='^{__CFString=}'/>
+  <constant name='kDRUDFVolumeSetTimestamp' type='^{__CFString=}'/>
+  <constant name='kDRUDFWriteVersion' type='^{__CFString=}'/>
+  <constant name='kDRVolumeCheckedDate' type='^{__CFString=}'/>
+  <constant name='kDRVolumeCreationDate' type='^{__CFString=}'/>
+  <constant name='kDRVolumeEffectiveDate' type='^{__CFString=}'/>
+  <constant name='kDRVolumeExpirationDate' type='^{__CFString=}'/>
+  <constant name='kDRVolumeModificationDate' type='^{__CFString=}'/>
+  <constant name='kDRVolumeSet' type='^{__CFString=}'/>
+  <enum name='DRFileForkData' value='0'/>
+  <enum name='DRFileForkResource' value='1'/>
+  <enum name='DRFilesystemInclusionMaskHFSPlus' value='8'/>
+  <enum name='DRFilesystemInclusionMaskISO9660' value='1'/>
+  <enum name='DRFilesystemInclusionMaskJoliet' value='2'/>
+  <enum name='DRFilesystemInclusionMaskUDF' value='4'/>
+  <enum name='kDRFileForkData' value='0'/>
+  <enum name='kDRFileForkResource' value='1'/>
+  <enum name='kDRFileForkSizeActual' value='0'/>
+  <enum name='kDRFileForkSizeEstimate' value='1'/>
+  <enum name='kDRFileMessageForkSize' value='1718839674'/>
+  <enum name='kDRFileMessagePostBurn' value='1886352244'/>
+  <enum name='kDRFileMessagePreBurn' value='1886545184'/>
+  <enum name='kDRFileMessageProduceData' value='1886547812'/>
+  <enum name='kDRFileMessageRelease' value='1652122912'/>
+  <enum name='kDRFileMessageVerificationStarting' value='1987208825'/>
+  <enum name='kDRFilesystemMaskDefault' value='4294967295'/>
+  <enum name='kDRFilesystemMaskHFSPlus' value='8'/>
+  <enum name='kDRFilesystemMaskISO9660' value='1'/>
+  <enum name='kDRFilesystemMaskJoliet' value='2'/>
+  <enum name='kDRFilesystemMaskUDF' value='4'/>
+  <enum name='kDRLinkTypeFinderAlias' value='3'/>
+  <enum name='kDRLinkTypeHardLink' value='1'/>
+  <enum name='kDRLinkTypeSymbolicLink' value='2'/>
+  <function name='DRAudioTrackCreate'>
+    <arg type='^{FSRef=[80C]}'/>
+    <retval type='^{__DRTrack=}'/>
+  </function>
+  <function name='DRAudioTrackCreateWithURL'>
+    <arg type='^{__CFURL=}'/>
+    <retval type='^{__DRTrack=}'/>
+  </function>
+  <function name='DRFSObjectCopyBaseName'>
+    <arg type='@'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='DRFSObjectCopyFilesystemProperties'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='B'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='DRFSObjectCopyFilesystemProperty'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='B'/>
+    <retval already_retained='true' type='@'/>
+  </function>
+  <function name='DRFSObjectCopyMangledName'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='DRFSObjectCopyMangledNames'>
+    <arg type='@'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='DRFSObjectCopyRealURL'>
+    <arg type='@'/>
+    <retval already_retained='true' type='^{__CFURL=}'/>
+  </function>
+  <function name='DRFSObjectCopySpecificName'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__CFString=}'/>
+  </function>
+  <function name='DRFSObjectCopySpecificNames'>
+    <arg type='@'/>
+    <retval already_retained='true' type='^{__CFDictionary=}'/>
+  </function>
+  <function name='DRFSObjectGetFilesystemMask'>
+    <arg type='@'/>
+    <arg type='^I'/>
+    <arg type='^I'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='DRFSObjectGetParent'>
+    <arg type='@'/>
+    <retval type='^{__DRFolder=}'/>
+  </function>
+  <function name='DRFSObjectGetRealFSRef'>
+    <arg type='@'/>
+    <arg type='^{FSRef=[80C]}'/>
+  </function>
+  <function name='DRFSObjectIsVirtual'>
+    <arg type='@'/>
+    <retval type='B'/>
+  </function>
+  <function name='DRFSObjectSetBaseName'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+  </function>
+  <function name='DRFSObjectSetFilesystemMask'>
+    <arg type='@'/>
+    <arg type='L' type64='I'/>
+  </function>
+  <function name='DRFSObjectSetFilesystemProperties'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFDictionary=}'/>
+  </function>
+  <function name='DRFSObjectSetFilesystemProperty'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='@'/>
+  </function>
+  <function name='DRFSObjectSetSpecificName'>
+    <arg type='@'/>
+    <arg type='^{__CFString=}'/>
+    <arg type='^{__CFString=}'/>
+  </function>
+  <function name='DRFSObjectSetSpecificNames'>
+    <arg type='@'/>
+    <arg type='^{__CFDictionary=}'/>
+  </function>
+  <function name='DRFileCreateReal'>
+    <arg type='^{FSRef=[80C]}'/>
+    <retval already_retained='true' type='^{__DRFile=}'/>
+  </function>
+  <function name='DRFileCreateRealWithURL'>
+    <arg type='^{__CFURL=}'/>
+    <retval already_retained='true' type='^{__DRFile=}'/>
+  </function>
+  <function name='DRFileCreateVirtualLink'>
+    <arg type='@'/>
+    <arg type='L' type64='I'/>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__DRFile=}'/>
+  </function>
+  <function name='DRFileCreateVirtualWithCallback'>
+    <arg type='^{__CFString=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^v'/>
+      <arg type='^{__DRFile=}'/>
+      <arg type='L' type64='I'/>
+      <arg type='^v'/>
+      <retval type='l' type64='i'/>
+    </arg>
+    <arg type='^v'/>
+    <retval already_retained='true' type='^{__DRFile=}'/>
+  </function>
+  <function name='DRFileCreateVirtualWithData'>
+    <arg type='^{__CFString=}'/>
+    <arg type='^v'/>
+    <arg type='L' type64='I'/>
+    <retval already_retained='true' type='^{__DRFile=}'/>
+  </function>
+  <function name='DRFileGetTypeID'>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='DRFilesystemTrackCreate'>
+    <arg type='^{__DRFolder=}'/>
+    <retval type='^{__DRTrack=}'/>
+  </function>
+  <function name='DRFilesystemTrackEstimateOverhead'>
+    <arg type='Q'/>
+    <arg type='L' type64='I'/>
+    <arg type='L' type64='I'/>
+    <retval type='Q'/>
+  </function>
+  <function name='DRFolderAddChild'>
+    <arg type='^{__DRFolder=}'/>
+    <arg type='@'/>
+  </function>
+  <function name='DRFolderConvertRealToVirtual'>
+    <arg type='^{__DRFolder=}'/>
+  </function>
+  <function name='DRFolderCopyChildren'>
+    <arg type='^{__DRFolder=}'/>
+    <retval already_retained='true' type='^{__CFArray=}'/>
+  </function>
+  <function name='DRFolderCountChildren'>
+    <arg type='^{__DRFolder=}'/>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='DRFolderCreateReal'>
+    <arg type='^{FSRef=[80C]}'/>
+    <retval already_retained='true' type='^{__DRFolder=}'/>
+  </function>
+  <function name='DRFolderCreateRealWithURL'>
+    <arg type='^{__CFURL=}'/>
+    <retval already_retained='true' type='^{__DRFolder=}'/>
+  </function>
+  <function name='DRFolderCreateVirtual'>
+    <arg type='^{__CFString=}'/>
+    <retval already_retained='true' type='^{__DRFolder=}'/>
+  </function>
+  <function name='DRFolderGetTypeID'>
+    <retval type='L' type64='I'/>
+  </function>
+  <function name='DRFolderRemoveChild'>
+    <arg type='^{__DRFolder=}'/>
+    <arg type='@'/>
+  </function>
+  <class name='DRFSObject'>
+    <method selector='isVirtual'>
+      <retval type='B'/>
+    </method>
+    <method selector='propertiesForFilesystem:mergeWithOtherFilesystems:'>
+      <arg type='B' index='1'/>
+    </method>
+    <method selector='propertyForKey:inFilesystem:mergeWithOtherFilesystems:'>
+      <arg type='B' index='2'/>
+    </method>
+  </class>
+  <class name='NSObject'>
+    <method selector='calculateSizeOfFile:fork:estimating:'>
+      <arg type='B' index='2'/>
+    </method>
+    <method selector='prepareFileForBurn:'>
+      <retval type='B'/>
+    </method>
+    <method selector='prepareFileForVerification:'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <informal_protocol name='DRFileDataProduction'>
+    <method type='Q20@0:4@8L12B16' type64='Q32@0:8@16I24B28' selector='calculateSizeOfFile:fork:estimating:'/>
+    <method type='v12@0:4@8' type64='v24@0:8@16' selector='cleanupFileAfterBurn:'/>
+    <method type='B12@0:4@8' type64='B24@0:8@16' selector='prepareFileForBurn:'/>
+    <method type='B12@0:4@8' type64='B24@0:8@16' selector='prepareFileForVerification:'/>
+    <method type='I36@0:4@8L12*16I20Q24I32' type64='I52@0:8@16I24*28I36Q40I48' selector='produceFile:fork:intoBuffer:length:atAddress:blockSize:'/>
+  </informal_protocol>
+</signatures>

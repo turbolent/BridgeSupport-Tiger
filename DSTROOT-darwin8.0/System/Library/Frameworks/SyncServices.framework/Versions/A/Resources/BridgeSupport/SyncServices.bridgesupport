@@ -1,0 +1,116 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+  <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+  <constant name='ISyncAvailabilityChangedNotification' type='@'/>
+  <constant name='ISyncChangePropertyActionKey' type='@'/>
+  <constant name='ISyncChangePropertyClear' type='@'/>
+  <constant name='ISyncChangePropertyNameKey' type='@'/>
+  <constant name='ISyncChangePropertySet' type='@'/>
+  <constant name='ISyncChangePropertyValueKey' type='@'/>
+  <constant name='ISyncClientTypeApplication' type='@'/>
+  <constant name='ISyncClientTypeDevice' type='@'/>
+  <constant name='ISyncClientTypePeer' type='@'/>
+  <constant name='ISyncClientTypeServer' type='@'/>
+  <constant name='ISyncInvalidEntityException' type='@'/>
+  <constant name='ISyncInvalidRecordException' type='@'/>
+  <constant name='ISyncInvalidRecordIdentifiersKey' type='@'/>
+  <constant name='ISyncInvalidRecordReasonsKey' type='@'/>
+  <constant name='ISyncInvalidRecordsKey' type='@'/>
+  <constant name='ISyncRecordEntityNameKey' type='@'/>
+  <constant name='ISyncServerUnavailableException' type='@'/>
+  <constant name='ISyncSessionCancelledException' type='@'/>
+  <constant name='ISyncSessionUnavailableException' type='@'/>
+  <constant name='ISyncUnsupportedEntityException' type='@'/>
+  <enum name='ISyncChangeTypeAdd' value='1'/>
+  <enum name='ISyncChangeTypeDelete' value='3'/>
+  <enum name='ISyncChangeTypeModify' value='2'/>
+  <enum name='ISyncStatusCancelled' value='5'/>
+  <enum name='ISyncStatusErrors' value='4'/>
+  <enum name='ISyncStatusFailed' value='6'/>
+  <enum name='ISyncStatusNever' value='7'/>
+  <enum name='ISyncStatusRunning' value='1'/>
+  <enum name='ISyncStatusSuccess' value='2'/>
+  <enum name='ISyncStatusWarnings' value='3'/>
+  <class name='ISyncClient'>
+    <method selector='canPullChangesForEntityName:'>
+      <retval type='B'/>
+    </method>
+    <method selector='canPushChangesForEntityName:'>
+      <retval type='B'/>
+    </method>
+    <method selector='isEnabledForEntityName:'>
+      <retval type='B'/>
+    </method>
+    <method selector='setEnabled:forEntityNames:'>
+      <arg type='B' index='0'/>
+    </method>
+    <method selector='setShouldReplaceClientRecords:forEntityNames:'>
+      <arg type='B' index='0'/>
+    </method>
+    <method selector='setShouldSynchronize:withClientsOfType:'>
+      <arg type='B' index='0'/>
+    </method>
+    <method selector='setSyncAlertHandler:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='1' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method selector='shouldReplaceClientRecordsForEntityName:'>
+      <retval type='B'/>
+    </method>
+    <method selector='shouldSynchronizeWithClientsOfType:'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <class name='ISyncManager'>
+    <method selector='isEnabled'>
+      <retval type='B'/>
+    </method>
+    <method selector='registerSchemaWithBundlePath:'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <class name='ISyncSession'>
+    <method class_method='true' selector='beginSessionInBackgroundWithClient:entityNames:target:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='3' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method selector='clientLostRecordWithIdentifier:shouldReplaceOnNextSync:'>
+      <arg type='B' index='1'/>
+    </method>
+    <method selector='isCancelled'>
+      <retval type='B'/>
+    </method>
+    <method selector='prepareToPullChangesForEntityNames:beforeDate:'>
+      <retval type='B'/>
+    </method>
+    <method selector='prepareToPullChangesInBackgroundForEntityNames:target:selector:'>
+      <arg sel_of_type='v16@0:4@8@12' index='2' sel_of_type64='v32@0:8@16@24'/>
+    </method>
+    <method selector='shouldPullChangesForEntityName:'>
+      <retval type='B'/>
+    </method>
+    <method selector='shouldPushAllRecordsForEntityName:'>
+      <retval type='B'/>
+    </method>
+    <method selector='shouldPushChangesForEntityName:'>
+      <retval type='B'/>
+    </method>
+    <method selector='shouldReplaceAllRecordsOnClientForEntityName:'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <class name='NSObject'>
+    <method selector='isEqual:'>
+      <retval type='B'/>
+    </method>
+    <method selector='shouldApplyRecord:withRecordIdentifier:'>
+      <retval type='B'/>
+    </method>
+  </class>
+  <informal_protocol name='ISyncFiltering'>
+    <method type='B12@0:4@8' type64='B24@0:8@16' selector='isEqual:'/>
+    <method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='shouldApplyRecord:withRecordIdentifier:'/>
+    <method type='@8@0:4' type64='@16@0:8' selector='supportedEntityNames'/>
+  </informal_protocol>
+</signatures>

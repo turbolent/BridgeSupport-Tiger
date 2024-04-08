@@ -1,0 +1,564 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <struct name='CC_MD2_CTX' type='{CC_MD2state_st=&quot;num&quot;i&quot;data&quot;[16C]&quot;cksm&quot;[16I]&quot;state&quot;[16I]}'/>
+  <struct name='CC_MD2state_st' type='{CC_MD2state_st=&quot;num&quot;i&quot;data&quot;[16C]&quot;cksm&quot;[16I]&quot;state&quot;[16I]}'/>
+  <struct name='CC_MD4_CTX' type='{CC_MD4state_st=&quot;A&quot;I&quot;B&quot;I&quot;C&quot;I&quot;D&quot;I&quot;Nl&quot;I&quot;Nh&quot;I&quot;data&quot;[16I]&quot;num&quot;i}'/>
+  <struct name='CC_MD4state_st' type='{CC_MD4state_st=&quot;A&quot;I&quot;B&quot;I&quot;C&quot;I&quot;D&quot;I&quot;Nl&quot;I&quot;Nh&quot;I&quot;data&quot;[16I]&quot;num&quot;i}'/>
+  <struct name='CC_MD5_CTX' type='{CC_MD5state_st=&quot;A&quot;I&quot;B&quot;I&quot;C&quot;I&quot;D&quot;I&quot;Nl&quot;I&quot;Nh&quot;I&quot;data&quot;[16I]&quot;num&quot;i}'/>
+  <struct name='CC_MD5state_st' type='{CC_MD5state_st=&quot;A&quot;I&quot;B&quot;I&quot;C&quot;I&quot;D&quot;I&quot;Nl&quot;I&quot;Nh&quot;I&quot;data&quot;[16I]&quot;num&quot;i}'/>
+  <struct name='CC_SHA1_CTX' type='{CC_SHA1state_st=&quot;h0&quot;I&quot;h1&quot;I&quot;h2&quot;I&quot;h3&quot;I&quot;h4&quot;I&quot;Nl&quot;I&quot;Nh&quot;I&quot;data&quot;[16I]&quot;num&quot;i}'/>
+  <struct name='CC_SHA1state_st' type='{CC_SHA1state_st=&quot;h0&quot;I&quot;h1&quot;I&quot;h2&quot;I&quot;h3&quot;I&quot;h4&quot;I&quot;Nl&quot;I&quot;Nh&quot;I&quot;data&quot;[16I]&quot;num&quot;i}'/>
+  <struct name='CC_SHA256_CTX' type='{CC_SHA256state_st=&quot;count&quot;[2I]&quot;hash&quot;[8I]&quot;wbuf&quot;[16I]}'/>
+  <struct name='CC_SHA256state_st' type='{CC_SHA256state_st=&quot;count&quot;[2I]&quot;hash&quot;[8I]&quot;wbuf&quot;[16I]}'/>
+  <struct name='CC_SHA512_CTX' type='{CC_SHA512state_st=&quot;count&quot;[2Q]&quot;hash&quot;[8Q]&quot;wbuf&quot;[16Q]}'/>
+  <struct name='CC_SHA512state_st' type='{CC_SHA512state_st=&quot;count&quot;[2Q]&quot;hash&quot;[8Q]&quot;wbuf&quot;[16Q]}'/>
+  <opaque name='aslclient' type='^{__aslclient=}'/>
+  <opaque name='aslmsg' type='^{__aslmsg=}'/>
+  <opaque name='aslresponse' type='^{__aslresponse=}'/>
+  <opaque name='launch_data_t' type='^{_launch_data=}'/>
+  <string_constant name='ASL_KEY_GID' value='GID'/>
+  <string_constant name='ASL_KEY_HOST' value='Host'/>
+  <string_constant name='ASL_KEY_LEVEL' value='Level'/>
+  <string_constant name='ASL_KEY_MSG' value='Message'/>
+  <string_constant name='ASL_KEY_PID' value='PID'/>
+  <string_constant name='ASL_KEY_SENDER' value='Sender'/>
+  <string_constant name='ASL_KEY_TIME' value='Time'/>
+  <string_constant name='ASL_KEY_UID' value='UID'/>
+  <string_constant name='ASL_STRING_ALERT' value='Alert'/>
+  <string_constant name='ASL_STRING_CRIT' value='Critical'/>
+  <string_constant name='ASL_STRING_DEBUG' value='Debug'/>
+  <string_constant name='ASL_STRING_EMERG' value='Emergency'/>
+  <string_constant name='ASL_STRING_ERR' value='Error'/>
+  <string_constant name='ASL_STRING_INFO' value='Info'/>
+  <string_constant name='ASL_STRING_NOTICE' value='Notice'/>
+  <string_constant name='ASL_STRING_WARNING' value='Warning'/>
+  <string_constant name='LAUNCH_JOBINETDCOMPATIBILITY_WAIT' value='Wait'/>
+  <string_constant name='LAUNCH_JOBKEY_BONJOURFDS' value='BonjourFDs'/>
+  <string_constant name='LAUNCH_JOBKEY_CAL_DAY' value='Day'/>
+  <string_constant name='LAUNCH_JOBKEY_CAL_HOUR' value='Hour'/>
+  <string_constant name='LAUNCH_JOBKEY_CAL_MINUTE' value='Minute'/>
+  <string_constant name='LAUNCH_JOBKEY_CAL_MONTH' value='Month'/>
+  <string_constant name='LAUNCH_JOBKEY_CAL_WEEKDAY' value='Weekday'/>
+  <string_constant name='LAUNCH_JOBKEY_DEBUG' value='Debug'/>
+  <string_constant name='LAUNCH_JOBKEY_DISABLED' value='Disabled'/>
+  <string_constant name='LAUNCH_JOBKEY_ENVIRONMENTVARIABLES' value='EnvironmentVariables'/>
+  <string_constant name='LAUNCH_JOBKEY_EVENTSOURCES' value='EventSources'/>
+  <string_constant name='LAUNCH_JOBKEY_GROUPNAME' value='GroupName'/>
+  <string_constant name='LAUNCH_JOBKEY_HARDRESOURCELIMITS' value='HardResourceLimits'/>
+  <string_constant name='LAUNCH_JOBKEY_INETDCOMPATIBILITY' value='inetdCompatibility'/>
+  <string_constant name='LAUNCH_JOBKEY_INITGROUPS' value='InitGroups'/>
+  <string_constant name='LAUNCH_JOBKEY_LABEL' value='Label'/>
+  <string_constant name='LAUNCH_JOBKEY_LOWPRIORITYIO' value='LowPriorityIO'/>
+  <string_constant name='LAUNCH_JOBKEY_NICE' value='Nice'/>
+  <string_constant name='LAUNCH_JOBKEY_ONDEMAND' value='OnDemand'/>
+  <string_constant name='LAUNCH_JOBKEY_PID' value='PID'/>
+  <string_constant name='LAUNCH_JOBKEY_PROGRAM' value='Program'/>
+  <string_constant name='LAUNCH_JOBKEY_PROGRAMARGUMENTS' value='ProgramArguments'/>
+  <string_constant name='LAUNCH_JOBKEY_QUEUEDIRECTORIES' value='QueueDirectories'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_CORE' value='Core'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_CPU' value='CPU'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_DATA' value='Data'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_FSIZE' value='FileSize'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_MEMLOCK' value='MemoryLock'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_NOFILE' value='NumberOfFiles'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_NPROC' value='NumberOfProcesses'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_RSS' value='ResidentSetSize'/>
+  <string_constant name='LAUNCH_JOBKEY_RESOURCELIMIT_STACK' value='Stack'/>
+  <string_constant name='LAUNCH_JOBKEY_ROOTDIRECTORY' value='RootDirectory'/>
+  <string_constant name='LAUNCH_JOBKEY_RUNATLOAD' value='RunAtLoad'/>
+  <string_constant name='LAUNCH_JOBKEY_SERVICEDESCRIPTION' value='ServiceDescription'/>
+  <string_constant name='LAUNCH_JOBKEY_SERVICEIPC' value='ServiceIPC'/>
+  <string_constant name='LAUNCH_JOBKEY_SESSIONCREATE' value='SessionCreate'/>
+  <string_constant name='LAUNCH_JOBKEY_SOCKETS' value='Sockets'/>
+  <string_constant name='LAUNCH_JOBKEY_SOFTRESOURCELIMITS' value='SoftResourceLimits'/>
+  <string_constant name='LAUNCH_JOBKEY_STANDARDERRORPATH' value='StandardErrorPath'/>
+  <string_constant name='LAUNCH_JOBKEY_STANDARDOUTPATH' value='StandardOutPath'/>
+  <string_constant name='LAUNCH_JOBKEY_STARTCALENDARINTERVAL' value='StartCalendarInterval'/>
+  <string_constant name='LAUNCH_JOBKEY_STARTINTERVAL' value='StartInterval'/>
+  <string_constant name='LAUNCH_JOBKEY_TIMEOUT' value='TimeOut'/>
+  <string_constant name='LAUNCH_JOBKEY_UMASK' value='Umask'/>
+  <string_constant name='LAUNCH_JOBKEY_USERENVIRONMENTVARIABLES' value='UserEnvironmentVariables'/>
+  <string_constant name='LAUNCH_JOBKEY_USERNAME' value='UserName'/>
+  <string_constant name='LAUNCH_JOBKEY_WATCHPATHS' value='WatchPaths'/>
+  <string_constant name='LAUNCH_JOBKEY_WORKINGDIRECTORY' value='WorkingDirectory'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_BONJOUR' value='Bonjour'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_FAMILY' value='SockFamily'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_MULTICASTGROUP' value='MulticastGroup'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_NODENAME' value='SockNodeName'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_PASSIVE' value='SockPassive'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_PATHMODE' value='SockPathMode'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_PATHNAME' value='SockPathName'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_PROTOCOL' value='SockProtocol'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_SECUREWITHKEY' value='SecureSocketWithKey'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_SERVICENAME' value='SockServiceName'/>
+  <string_constant name='LAUNCH_JOBSOCKETKEY_TYPE' value='SockType'/>
+  <string_constant name='LAUNCH_KEY_CHECKIN' value='CheckIn'/>
+  <string_constant name='LAUNCH_KEY_GETJOB' value='GetJob'/>
+  <string_constant name='LAUNCH_KEY_GETJOBS' value='GetJobs'/>
+  <string_constant name='LAUNCH_KEY_GETJOBWITHHANDLES' value='GetJobWithHandles'/>
+  <string_constant name='LAUNCH_KEY_REMOVEJOB' value='RemoveJob'/>
+  <string_constant name='LAUNCH_KEY_STARTJOB' value='StartJob'/>
+  <string_constant name='LAUNCH_KEY_STOPJOB' value='StopJob'/>
+  <string_constant name='LAUNCH_KEY_SUBMITJOB' value='SubmitJob'/>
+  <enum name='ASL_FILTER_MASK_ALERT' value='2'/>
+  <enum name='ASL_FILTER_MASK_CRIT' value='4'/>
+  <enum name='ASL_FILTER_MASK_DEBUG' value='128'/>
+  <enum name='ASL_FILTER_MASK_EMERG' value='1'/>
+  <enum name='ASL_FILTER_MASK_ERR' value='8'/>
+  <enum name='ASL_FILTER_MASK_INFO' value='64'/>
+  <enum name='ASL_FILTER_MASK_NOTICE' value='32'/>
+  <enum name='ASL_FILTER_MASK_WARNING' value='16'/>
+  <enum name='ASL_LEVEL_ALERT' value='1'/>
+  <enum name='ASL_LEVEL_CRIT' value='2'/>
+  <enum name='ASL_LEVEL_DEBUG' value='7'/>
+  <enum name='ASL_LEVEL_EMERG' value='0'/>
+  <enum name='ASL_LEVEL_ERR' value='3'/>
+  <enum name='ASL_LEVEL_INFO' value='6'/>
+  <enum name='ASL_LEVEL_NOTICE' value='5'/>
+  <enum name='ASL_LEVEL_WARNING' value='4'/>
+  <enum name='ASL_OPT_NO_DELAY' value='2'/>
+  <enum name='ASL_OPT_NO_REMOTE' value='4'/>
+  <enum name='ASL_OPT_STDERR' value='1'/>
+  <enum name='ASL_QUERY_OP_CASEFOLD' value='16'/>
+  <enum name='ASL_QUERY_OP_EQUAL' value='1'/>
+  <enum name='ASL_QUERY_OP_GREATER' value='2'/>
+  <enum name='ASL_QUERY_OP_GREATER_EQUAL' value='3'/>
+  <enum name='ASL_QUERY_OP_LESS' value='4'/>
+  <enum name='ASL_QUERY_OP_LESS_EQUAL' value='5'/>
+  <enum name='ASL_QUERY_OP_NOT_EQUAL' value='6'/>
+  <enum name='ASL_QUERY_OP_NUMERIC' value='128'/>
+  <enum name='ASL_QUERY_OP_PREFIX' value='32'/>
+  <enum name='ASL_QUERY_OP_REGEX' value='256'/>
+  <enum name='ASL_QUERY_OP_SUBSTRING' value='96'/>
+  <enum name='ASL_QUERY_OP_SUFFIX' value='64'/>
+  <enum name='ASL_QUERY_OP_TRUE' value='7'/>
+  <enum name='ASL_TYPE_MSG' value='0'/>
+  <enum name='ASL_TYPE_QUERY' value='1'/>
+  <enum name='CC_MD2_BLOCK_BYTES' value='64'/>
+  <enum name='CC_MD2_BLOCK_LONG' value='16'/>
+  <enum name='CC_MD2_DIGEST_LENGTH' value='16'/>
+  <enum name='CC_MD4_BLOCK_BYTES' value='64'/>
+  <enum name='CC_MD4_BLOCK_LONG' value='16'/>
+  <enum name='CC_MD4_DIGEST_LENGTH' value='16'/>
+  <enum name='CC_MD5_BLOCK_BYTES' value='64'/>
+  <enum name='CC_MD5_BLOCK_LONG' value='16'/>
+  <enum name='CC_MD5_DIGEST_LENGTH' value='16'/>
+  <enum name='CC_SHA1_BLOCK_BYTES' value='64'/>
+  <enum name='CC_SHA1_BLOCK_LONG' value='16'/>
+  <enum name='CC_SHA1_DIGEST_LENGTH' value='20'/>
+  <enum name='CC_SHA256_BLOCK_BYTES' value='64'/>
+  <enum name='CC_SHA256_DIGEST_LENGTH' value='32'/>
+  <enum name='CC_SHA384_BLOCK_BYTES' value='128'/>
+  <enum name='CC_SHA384_DIGEST_LENGTH' value='48'/>
+  <enum name='CC_SHA512_BLOCK_BYTES' value='128'/>
+  <enum name='CC_SHA512_DIGEST_LENGTH' value='64'/>
+  <enum name='LAUNCH_DATA_ARRAY' value='2'/>
+  <enum name='LAUNCH_DATA_BOOL' value='6'/>
+  <enum name='LAUNCH_DATA_DICTIONARY' value='1'/>
+  <enum name='LAUNCH_DATA_ERRNO' value='9'/>
+  <enum name='LAUNCH_DATA_FD' value='3'/>
+  <enum name='LAUNCH_DATA_INTEGER' value='4'/>
+  <enum name='LAUNCH_DATA_OPAQUE' value='8'/>
+  <enum name='LAUNCH_DATA_REAL' value='5'/>
+  <enum name='LAUNCH_DATA_STRING' value='7'/>
+  <enum name='NOTIFY_REUSE' value='1'/>
+  <enum name='NOTIFY_STATUS_FAILED' value='1000000'/>
+  <enum name='NOTIFY_STATUS_INVALID_FILE' value='4'/>
+  <enum name='NOTIFY_STATUS_INVALID_NAME' value='1'/>
+  <enum name='NOTIFY_STATUS_INVALID_PORT' value='3'/>
+  <enum name='NOTIFY_STATUS_INVALID_REQUEST' value='6'/>
+  <enum name='NOTIFY_STATUS_INVALID_SIGNAL' value='5'/>
+  <enum name='NOTIFY_STATUS_INVALID_TOKEN' value='2'/>
+  <enum name='NOTIFY_STATUS_NOT_AUTHORIZED' value='7'/>
+  <enum name='NOTIFY_STATUS_OK' value='0'/>
+  <function name='CC_MD2_Final'>
+    <arg type='*' c_array_of_fixed_length='16' type_modifier='o'/>
+    <arg type='^{CC_MD2state_st=i[16C][16I][16I]}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD2_Init'>
+    <arg type='^{CC_MD2state_st=i[16C][16I][16I]}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD2_Update'>
+    <arg type='^{CC_MD2state_st=i[16C][16I][16I]}' type_modifier='N'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD4_Final'>
+    <arg type='*' c_array_of_fixed_length='16' type_modifier='o'/>
+    <arg type='^{CC_MD4state_st=IIIIII[16I]i}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD4_Init'>
+    <arg type='^{CC_MD4state_st=IIIIII[16I]i}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD4_Update'>
+    <arg type='^{CC_MD4state_st=IIIIII[16I]i}' type_modifier='N'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD5_Final'>
+    <arg type='*' c_array_of_fixed_length='16' type_modifier='o'/>
+    <arg type='^{CC_MD5state_st=IIIIII[16I]i}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD5_Init'>
+    <arg type='^{CC_MD5state_st=IIIIII[16I]i}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_MD5_Update'>
+    <arg type='^{CC_MD5state_st=IIIIII[16I]i}' type_modifier='N'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA1_Final'>
+    <arg type='*' c_array_of_fixed_length='20' type_modifier='o'/>
+    <arg type='^{CC_SHA1state_st=IIIIIII[16I]i}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA1_Init'>
+    <arg type='^{CC_SHA1state_st=IIIIIII[16I]i}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA1_Update'>
+    <arg type='^{CC_SHA1state_st=IIIIIII[16I]i}' type_modifier='N'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA256_Final'>
+    <arg type='*' c_array_of_fixed_length='32' type_modifier='o'/>
+    <arg type='^{CC_SHA256state_st=[2I][8I][16I]}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA256_Init'>
+    <arg type='^{CC_SHA256state_st=[2I][8I][16I]}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA256_Update'>
+    <arg type='^{CC_SHA256state_st=[2I][8I][16I]}' type_modifier='N'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA384_Final'>
+    <arg type='*' c_array_of_fixed_length='48' type_modifier='o'/>
+    <arg type='^{CC_SHA512state_st=[2Q][8Q][16Q]}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA384_Init'>
+    <arg type='^{CC_SHA512state_st=[2Q][8Q][16Q]}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA384_Update'>
+    <arg type='^{CC_SHA512state_st=[2Q][8Q][16Q]}' type_modifier='N'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA512_Final'>
+    <arg type='*' c_array_of_fixed_length='64' type_modifier='o'/>
+    <arg type='^{CC_SHA512state_st=[2Q][8Q][16Q]}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA512_Init'>
+    <arg type='^{CC_SHA512state_st=[2Q][8Q][16Q]}' type_modifier='o'/>
+    <retval type='i'/>
+  </function>
+  <function name='CC_SHA512_Update'>
+    <arg type='^{CC_SHA512state_st=[2Q][8Q][16Q]}' type_modifier='N'/>
+    <arg c_array_length_in_arg='2' type='^v' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_add_log_file'>
+    <arg type='^{__aslclient=}' type_modifier='n'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_close'>
+    <arg type='^{__aslclient=}' type_modifier='n'/>
+  </function>
+  <function name='asl_free'>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+  </function>
+  <function name='asl_get'>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <arg type='*'/>
+    <retval type='*'/>
+  </function>
+  <function name='asl_key'>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <arg type='I'/>
+    <retval type='*'/>
+  </function>
+  <function name='asl_log' variadic='true'>
+    <arg type='^{__aslclient=}' type_modifier='n'/>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <arg type='i'/>
+    <arg printf_format='true' type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_new'>
+    <arg type='I'/>
+    <retval type='^{__aslmsg=}'/>
+  </function>
+  <function name='asl_open'>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='I'/>
+    <retval type='^{__aslclient=}'/>
+  </function>
+  <function name='asl_remove_log_file'>
+    <arg type='^{__aslclient=}' type_modifier='n'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_search'>
+    <arg type='^{__aslclient=}' type_modifier='n'/>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <retval type='^{__aslresponse=}'/>
+  </function>
+  <function name='asl_send'>
+    <arg type='^{__aslclient=}' type_modifier='n'/>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_set'>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_set_filter'>
+    <arg type='^{__aslclient=}' type_modifier='n'/>
+    <arg type='i'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_set_query'>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <arg type='*'/>
+    <arg type='*'/>
+    <arg type='I'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_unset'>
+    <arg type='^{__aslmsg=}' type_modifier='n'/>
+    <arg type='*'/>
+    <retval type='i'/>
+  </function>
+  <function name='asl_vlog'>
+    <arg type='^{__aslclient=}'/>
+    <arg type='^{__aslmsg=}'/>
+    <arg type='i'/>
+    <arg type='*'/>
+    <arg type='*' type64='^{__va_list_tag=II^v^v}'/>
+    <retval type='i'/>
+  </function>
+  <function name='aslresponse_free'>
+    <arg type='^{__aslresponse=}' type_modifier='n'/>
+  </function>
+  <function name='aslresponse_next'>
+    <arg type='^{__aslresponse=}' type_modifier='n'/>
+    <retval type='^{__aslmsg=}'/>
+  </function>
+  <function name='launch_data_alloc'>
+    <arg type='i'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_array_get_count'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='launch_data_array_get_index'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_array_set_index'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_copy'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_dict_get_count'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='launch_data_dict_insert'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_dict_iterate'>
+    <arg type='^{_launch_data=}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{_launch_data=}'/>
+      <arg type='*'/>
+      <arg type='^v'/>
+      <retval type='v'/>
+    </arg>
+    <arg type='^v'/>
+  </function>
+  <function name='launch_data_dict_lookup'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='*'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_dict_remove'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_free'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+  </function>
+  <function name='launch_data_get_bool'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_get_errno'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='launch_data_get_fd'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='launch_data_get_integer'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='q'/>
+  </function>
+  <function name='launch_data_get_opaque'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='^v'/>
+  </function>
+  <function name='launch_data_get_opaque_size'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='L' type64='Q'/>
+  </function>
+  <function name='launch_data_get_real'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='d'/>
+  </function>
+  <function name='launch_data_get_string'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='*'/>
+  </function>
+  <function name='launch_data_get_type'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='i'/>
+  </function>
+  <function name='launch_data_new_bool'>
+    <arg type='B'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_new_fd'>
+    <arg type='i'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_new_integer'>
+    <arg type='q'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_new_opaque'>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_new_real'>
+    <arg type='d'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_new_string'>
+    <arg type='*'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='launch_data_set_bool'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='B'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_set_fd'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='i'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_set_integer'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='q'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_set_opaque'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='^v' type_modifier='n'/>
+    <arg type='L' type64='Q'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_set_real'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='d'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_data_set_string'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <arg type='*'/>
+    <retval type='B'/>
+  </function>
+  <function name='launch_get_fd'>
+    <retval type='i'/>
+  </function>
+  <function name='launch_msg'>
+    <arg type='^{_launch_data=}' type_modifier='n'/>
+    <retval type='^{_launch_data=}'/>
+  </function>
+  <function name='notify_cancel'>
+    <arg type='i'/>
+    <retval type='I'/>
+  </function>
+  <function name='notify_check'>
+    <arg type='i'/>
+    <arg type='^i' type_modifier='o'/>
+    <retval type='I'/>
+  </function>
+  <function name='notify_post'>
+    <arg type='*'/>
+    <retval type='I'/>
+  </function>
+  <function name='notify_register_check'>
+    <arg type='*'/>
+    <arg type='^i' type_modifier='o'/>
+    <retval type='I'/>
+  </function>
+  <function name='notify_register_file_descriptor'>
+    <arg type='*'/>
+    <arg type='^i' type_modifier='o'/>
+    <arg type='i'/>
+    <arg type='^i' type_modifier='N'/>
+    <retval type='I'/>
+  </function>
+  <function name='notify_register_mach_port'>
+    <arg type='*'/>
+    <arg type='^I' type_modifier='N'/>
+    <arg type='i'/>
+    <arg type='^i' type_modifier='o'/>
+    <retval type='I'/>
+  </function>
+  <function name='notify_register_signal'>
+    <arg type='*'/>
+    <arg type='i'/>
+    <arg type='^i' type_modifier='o'/>
+    <retval type='I'/>
+  </function>
+</signatures>

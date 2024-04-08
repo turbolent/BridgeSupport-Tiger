@@ -1,0 +1,564 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+  <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+  <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
+  <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+  <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+  <struct name='ICACloseSessionPB' type='{ICACloseSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;I}'/>
+  <struct name='ICACopyObjectPropertyDictionaryPB' type='{ICACopyObjectPropertyDictionaryPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;theDict&quot;^^{__CFDictionary}}'/>
+  <struct name='ICACopyObjectThumbnailPB' type='{ICACopyObjectThumbnailPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;thumbnailFormat&quot;I&quot;thumbnailData&quot;^^{__CFData}}'/>
+  <struct name='ICADownloadFilePB' type='{ICADownloadFilePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;dirFSRef&quot;^{FSRef}&quot;flags&quot;I&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;rotationAngle&quot;i&quot;fileFSRef&quot;^{FSRef}}'/>
+  <struct name='ICAExtendedRegisterEventNotificationPB' type='{ICAExtendedRegisterEventNotificationPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;extd&quot;I&quot;notifyProc&quot;^?&quot;rawEventType&quot;I&quot;eventType&quot;I&quot;eventClass&quot;I&quot;eventDataSize&quot;I&quot;eventDataCookie&quot;^{OpaqueICAEventDataCookie}&quot;deviceObject&quot;^{OpaqueICAObject}}'/>
+  <struct name='ICAGetChildCountPB' type='{ICAGetChildCountPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;count&quot;I}'/>
+  <struct name='ICAGetDeviceListPB' type='{ICAGetDeviceListPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}}'/>
+  <struct name='ICAGetNthChildPB' type='{ICAGetNthChildPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;index&quot;I&quot;childObject&quot;^{OpaqueICAObject}&quot;childInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
+  <struct name='ICAGetNthPropertyPB' type='{ICAGetNthPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;index&quot;I&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'/>
+  <struct name='ICAGetObjectInfoPB' type='{ICAGetObjectInfoPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
+  <struct name='ICAGetObjectRefConPB' type='{ICAGetObjectRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectRefCon&quot;I}'/>
+  <struct name='ICAGetParentOfObjectPB' type='{ICAGetParentOfObjectPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;parentObject&quot;^{OpaqueICAObject}&quot;parentInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
+  <struct name='ICAGetParentOfPropertyPB' type='{ICAGetParentOfPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;parentObject&quot;^{OpaqueICAObject}&quot;parentInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
+  <struct name='ICAGetPropertyByTypePB' type='{ICAGetPropertyByTypePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;propertyType&quot;I&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'/>
+  <struct name='ICAGetPropertyCountPB' type='{ICAGetPropertyCountPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;count&quot;I}'/>
+  <struct name='ICAGetPropertyDataPB' type='{ICAGetPropertyDataPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}'/>
+  <struct name='ICAGetPropertyInfoPB' type='{ICAGetPropertyInfoPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}}'/>
+  <struct name='ICAGetPropertyRefConPB' type='{ICAGetPropertyRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyRefCon&quot;I}'/>
+  <struct name='ICAGetRootOfObjectPB' type='{ICAGetRootOfObjectPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;rootObject&quot;^{OpaqueICAObject}&quot;rootInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
+  <struct name='ICAGetRootOfPropertyPB' type='{ICAGetRootOfPropertyPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;rootObject&quot;^{OpaqueICAObject}&quot;rootInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}}'/>
+  <struct name='ICAHeader' type='{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+  <struct name='ICAImportImagePB' type='{ICAImportImagePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}&quot;flags&quot;I&quot;supportedFileTypes&quot;^{__CFArray}&quot;filterProc&quot;^?&quot;importedImages&quot;^^{__CFArray}}'/>
+  <struct name='ICALoadDeviceModulePB' type='{ICALoadDeviceModulePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;paramDictionary&quot;^{__CFDictionary}}'/>
+  <struct name='ICAMessage' type='{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'/>
+  <struct name='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+  <struct name='ICAObjectSendMessagePB' type='{ICAObjectSendMessagePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;result&quot;I}'/>
+  <struct name='ICAOpenSessionPB' type='{ICAOpenSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}&quot;sessionID&quot;I}'/>
+  <struct name='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+  <struct name='ICARegisterEventNotificationPB' type='{ICARegisterEventNotificationPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;notifyType&quot;I&quot;notifyProc&quot;^?}'/>
+  <struct name='ICAScannerCloseSessionPB' type='{ICAScannerCloseSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
+  <struct name='ICAScannerGetParametersPB' type='{ICAScannerGetParametersPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;theDict&quot;^{__CFDictionary}}'/>
+  <struct name='ICAScannerInitializePB' type='{ICAScannerInitializePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
+  <struct name='ICAScannerOpenSessionPB' type='{ICAScannerOpenSessionPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
+  <struct name='ICAScannerSetParametersPB' type='{ICAScannerSetParametersPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;theDict&quot;^{__CFDictionary}}'/>
+  <struct name='ICAScannerStartPB' type='{ICAScannerStartPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}}'/>
+  <struct name='ICAScannerStatusPB' type='{ICAScannerStatusPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;sessionID&quot;^{OpaqueICAScannerSessionID}&quot;status&quot;I}'/>
+  <struct name='ICASetObjectRefConPB' type='{ICASetObjectRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;objectRefCon&quot;I}'/>
+  <struct name='ICASetPropertyDataPB' type='{ICASetPropertyDataPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'/>
+  <struct name='ICASetPropertyRefConPB' type='{ICASetPropertyRefConPB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}&quot;propertyRefCon&quot;I}'/>
+  <struct name='ICAThumbnail' type='{ICAThumbnail=&quot;width&quot;I&quot;height&quot;I&quot;dataSize&quot;I&quot;data&quot;[1C]}'/>
+  <struct name='ICAUnloadDeviceModulePB' type='{ICAUnloadDeviceModulePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;deviceObject&quot;^{OpaqueICAObject}}'/>
+  <struct name='ICAUploadFilePB' type='{ICAUploadFilePB=&quot;header&quot;{ICAHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;fileFSRef&quot;^{FSRef}&quot;flags&quot;I}'/>
+  <struct name='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}'/>
+  <struct name='ICD_DisposeObjectPB' type='{ICD_DisposeObjectPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}}'/>
+  <struct name='ICD_DisposePropertyPB' type='{ICD_DisposePropertyPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;property&quot;^{OpaqueICAProperty}}'/>
+  <struct name='ICD_NewObjectPB' type='{ICD_NewObjectPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;parentObject&quot;^{OpaqueICAObject}&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;object&quot;^{OpaqueICAObject}}'/>
+  <struct name='ICD_NewPropertyPB' type='{ICD_NewPropertyPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;I}&quot;object&quot;^{OpaqueICAObject}&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;property&quot;^{OpaqueICAProperty}}'/>
+  <opaque name='ICAConnectionID' type='^{OpaqueICAConnectionID=}'/>
+  <opaque name='ICAEventDataCookie' type='^{OpaqueICAEventDataCookie=}'/>
+  <opaque name='ICAObject' type='^{OpaqueICAObject=}'/>
+  <opaque name='ICAProperty' type='^{OpaqueICAProperty=}'/>
+  <opaque name='ICAScannerSessionID' type='^{OpaqueICAScannerSessionID=}'/>
+  <constant name='kICABluetoothAddressKey' type='^{__CFString=}'/>
+  <constant name='kICABluetoothTransportType' type='^{__CFString=}'/>
+  <constant name='kICADeviceModulePathKey' type='^{__CFString=}'/>
+  <constant name='kICAFireWireGUIDKey' type='^{__CFString=}'/>
+  <constant name='kICAFireWireTransportType' type='^{__CFString=}'/>
+  <constant name='kICAIOServicePathKey' type='^{__CFString=}'/>
+  <constant name='kICAIPAddressKey' type='^{__CFString=}'/>
+  <constant name='kICAIPGUIDKey' type='^{__CFString=}'/>
+  <constant name='kICAIPNameKey' type='^{__CFString=}'/>
+  <constant name='kICAIPPortKey' type='^{__CFString=}'/>
+  <constant name='kICASCSITransportType' type='^{__CFString=}'/>
+  <constant name='kICATCPIPTransportType' type='^{__CFString=}'/>
+  <constant name='kICATWAINDSPathKey' type='^{__CFString=}'/>
+  <constant name='kICATWAINTransportType' type='^{__CFString=}'/>
+  <constant name='kICATransportTypeKey' type='^{__CFString=}'/>
+  <constant name='kICAUSBLocationIDKey' type='^{__CFString=}'/>
+  <constant name='kICAUSBTransportType' type='^{__CFString=}'/>
+  <enum name='kAddMetaDataToFinderComment' value='4'/>
+  <enum name='kAdjustCreationDate' value='8'/>
+  <enum name='kCreateCustomIcon' value='2'/>
+  <enum name='kDeleteAfterDownload' value='1'/>
+  <enum name='kDontEmbedColorSyncProfile' value='128'/>
+  <enum name='kEventClassPTPStandard' value='1347702899'/>
+  <enum name='kEventClassPTPVendor' value='1347702902'/>
+  <enum name='kExtendedNotificationPB' value='1702392932'/>
+  <enum name='kICAAccessReadOnly' value='1'/>
+  <enum name='kICAAccessReadOnlyWithObjectDeletion' value='2'/>
+  <enum name='kICAAccessReadWrite' value='0'/>
+  <enum name='kICAAllowMultipleImages' value='1'/>
+  <enum name='kICAButtonCopy' value='1668247673'/>
+  <enum name='kICAButtonEMail' value='1835100524'/>
+  <enum name='kICAButtonScan' value='1935892846'/>
+  <enum name='kICAButtonWeb' value='2003132960'/>
+  <enum name='kICACannotYieldDevice' value='-9909'/>
+  <enum name='kICACommunicationErr' value='-9900'/>
+  <enum name='kICADataTypeNotFoundErr' value='-9910'/>
+  <enum name='kICADevice' value='1768121462'/>
+  <enum name='kICADeviceAlreadyOpenErr' value='-9914'/>
+  <enum name='kICADeviceCamera' value='1668117089'/>
+  <enum name='kICADeviceGUIDNotFoundErr' value='-9916'/>
+  <enum name='kICADeviceIOServicePathNotFoundErr' value='-9917'/>
+  <enum name='kICADeviceInternalErr' value='-9912'/>
+  <enum name='kICADeviceInvalidParamErr' value='-9913'/>
+  <enum name='kICADeviceLocationIDNotFoundErr' value='-9915'/>
+  <enum name='kICADeviceMFP' value='1835429920'/>
+  <enum name='kICADeviceMemoryAllocationErr' value='-9911'/>
+  <enum name='kICADeviceNotFoundErr' value='-9901'/>
+  <enum name='kICADeviceNotOpenErr' value='-9902'/>
+  <enum name='kICADeviceOther' value='1685025896'/>
+  <enum name='kICADevicePDA' value='1885626656'/>
+  <enum name='kICADevicePhone' value='1885892462'/>
+  <enum name='kICADeviceScanner' value='1935892846'/>
+  <enum name='kICADirectory' value='1684632165'/>
+  <enum name='kICADownloadAndReturnPathArray' value='2'/>
+  <enum name='kICAEntireLength' value='-1'/>
+  <enum name='kICAEventCancelTransaction' value='1701015156'/>
+  <enum name='kICAEventCaptureComplete' value='1701015651'/>
+  <enum name='kICAEventDeviceAdded' value='1701078369'/>
+  <enum name='kICAEventDeviceInfoChanged' value='1701079395'/>
+  <enum name='kICAEventDevicePropChanged' value='1701081187'/>
+  <enum name='kICAEventDeviceRemoved' value='1701078386'/>
+  <enum name='kICAEventDeviceReset' value='1701082738'/>
+  <enum name='kICAEventObjectAdded' value='1701798497'/>
+  <enum name='kICAEventObjectInfoChanged' value='1701800291'/>
+  <enum name='kICAEventObjectRemoved' value='1701798514'/>
+  <enum name='kICAEventRequestObjectTransfer' value='1701998452'/>
+  <enum name='kICAEventStorageInfoChanged' value='1702062435'/>
+  <enum name='kICAEventStoreAdded' value='1702065249'/>
+  <enum name='kICAEventStoreFull' value='1702065254'/>
+  <enum name='kICAEventStoreRemoved' value='1702065266'/>
+  <enum name='kICAEventUnreportedStatus' value='1702195827'/>
+  <enum name='kICAFile' value='1718185061'/>
+  <enum name='kICAFileAudio' value='1635083375'/>
+  <enum name='kICAFileCorruptedErr' value='-9903'/>
+  <enum name='kICAFileFirmware' value='1718186605'/>
+  <enum name='kICAFileImage' value='1768776039'/>
+  <enum name='kICAFileMovie' value='1836019574'/>
+  <enum name='kICAFileOther' value='1869899877'/>
+  <enum name='kICAFileystemDCF' value='3'/>
+  <enum name='kICAFileystemGenericFlat' value='1'/>
+  <enum name='kICAFileystemGenericHierarchical' value='2'/>
+  <enum name='kICAFlagReadAccess' value='2'/>
+  <enum name='kICAFlagReadWriteAccess' value='1'/>
+  <enum name='kICAIOPendingErr' value='-9904'/>
+  <enum name='kICAIndexOutOfRangeErr' value='-9907'/>
+  <enum name='kICAInvalidObjectErr' value='-9905'/>
+  <enum name='kICAInvalidPropertyErr' value='-9906'/>
+  <enum name='kICAList' value='1868720748'/>
+  <enum name='kICAManualConnectDeviceList' value='1835101795'/>
+  <enum name='kICAMessageCameraCaptureNewImage' value='1667460713'/>
+  <enum name='kICAMessageCameraDeleteAll' value='1684368481'/>
+  <enum name='kICAMessageCameraDeleteOne' value='1684368433'/>
+  <enum name='kICAMessageCameraReadClock' value='1919118443'/>
+  <enum name='kICAMessageCameraSyncClock' value='1935895659'/>
+  <enum name='kICAMessageCameraUploadData' value='1819238756'/>
+  <enum name='kICAMessageCheckDevice' value='1667787620'/>
+  <enum name='kICAMessageConnect' value='1869636974'/>
+  <enum name='kICAMessageDeviceYield' value='2036950380'/>
+  <enum name='kICAMessageDisconnect' value='1668050803'/>
+  <enum name='kICAMessageGetLastButtonPressed' value='1651797567'/>
+  <enum name='kICAMessageReset' value='1919251301'/>
+  <enum name='kICANetworkDeviceList' value='1852142711'/>
+  <enum name='kICAPBVersion' value='65536'/>
+  <enum name='kICAProperty' value='1886547824'/>
+  <enum name='kICAPropertyCameraAccessCapability' value='1633902960'/>
+  <enum name='kICAPropertyCameraBatteryLevel' value='892350513'/>
+  <enum name='kICAPropertyCameraBurstInterval' value='892350777'/>
+  <enum name='kICAPropertyCameraBurstNumber' value='892350776'/>
+  <enum name='kICAPropertyCameraCaptureDelay' value='892350770'/>
+  <enum name='kICAPropertyCameraCompressionSetting' value='892350516'/>
+  <enum name='kICAPropertyCameraContrast' value='892350772'/>
+  <enum name='kICAPropertyCameraDateTime' value='892350769'/>
+  <enum name='kICAPropertyCameraDigitalZoom' value='892350774'/>
+  <enum name='kICAPropertyCameraEffectMode' value='892350775'/>
+  <enum name='kICAPropertyCameraExposureBiasCompensation' value='892350768'/>
+  <enum name='kICAPropertyCameraExposureIndex' value='892350534'/>
+  <enum name='kICAPropertyCameraExposureMeteringMode' value='892350530'/>
+  <enum name='kICAPropertyCameraExposureProgramMode' value='892350533'/>
+  <enum name='kICAPropertyCameraExposureTime' value='892350532'/>
+  <enum name='kICAPropertyCameraFNumber' value='892350519'/>
+  <enum name='kICAPropertyCameraFilesystemType' value='1718843763'/>
+  <enum name='kICAPropertyCameraFlashMode' value='892350531'/>
+  <enum name='kICAPropertyCameraFocalLength' value='892350520'/>
+  <enum name='kICAPropertyCameraFocusDistance' value='892350521'/>
+  <enum name='kICAPropertyCameraFocusMeteringMode' value='892350787'/>
+  <enum name='kICAPropertyCameraFocusMode' value='892350529'/>
+  <enum name='kICAPropertyCameraFreeSpaceInBytes' value='1718773107'/>
+  <enum name='kICAPropertyCameraFreeSpaceInImages' value='1718773097'/>
+  <enum name='kICAPropertyCameraFunctionalMode' value='892350514'/>
+  <enum name='kICAPropertyCameraIcon' value='1768124270'/>
+  <enum name='kICAPropertyCameraImageSize' value='892350515'/>
+  <enum name='kICAPropertyCameraMaxCapacity' value='1835104355'/>
+  <enum name='kICAPropertyCameraRGBGain' value='892350518'/>
+  <enum name='kICAPropertyCameraSharpness' value='892350773'/>
+  <enum name='kICAPropertyCameraStillCaptureMode' value='892350771'/>
+  <enum name='kICAPropertyCameraStorageDescription' value='1937010532'/>
+  <enum name='kICAPropertyCameraStorageType' value='1937010546'/>
+  <enum name='kICAPropertyCameraSupportedMessages' value='1836279667'/>
+  <enum name='kICAPropertyCameraTimelapseInterval' value='892350786'/>
+  <enum name='kICAPropertyCameraTimelapseNumber' value='892350785'/>
+  <enum name='kICAPropertyCameraVolumeLabel' value='1987013740'/>
+  <enum name='kICAPropertyCameraWhiteBalance' value='892350517'/>
+  <enum name='kICAPropertyColorSpace' value='1093677105'/>
+  <enum name='kICAPropertyColorSyncProfile' value='1886547814'/>
+  <enum name='kICAPropertyImageAperture' value='959590450'/>
+  <enum name='kICAPropertyImageBitDepth' value='808529970'/>
+  <enum name='kICAPropertyImageDPI' value='808530241'/>
+  <enum name='kICAPropertyImageData' value='1768186228'/>
+  <enum name='kICAPropertyImageDateDigitized' value='959459380'/>
+  <enum name='kICAPropertyImageDateOriginal' value='959459379'/>
+  <enum name='kICAPropertyImageExposureTime' value='942815553'/>
+  <enum name='kICAPropertyImageFNumber' value='942815556'/>
+  <enum name='kICAPropertyImageFilename' value='1768319340'/>
+  <enum name='kICAPropertyImageFlash' value='959590457'/>
+  <enum name='kICAPropertyImageHeight' value='808529969'/>
+  <enum name='kICAPropertyImageShutterSpeed' value='959590449'/>
+  <enum name='kICAPropertyImageSize' value='1769171322'/>
+  <enum name='kICAPropertyImageThumbnail' value='1953002861'/>
+  <enum name='kICAPropertyImageWidth' value='808529968'/>
+  <enum name='kICAPropertyTypeNotFoundErr' value='-9908'/>
+  <enum name='kICAStartAtBeginning' value='0'/>
+  <enum name='kICAStorageFixedRAM' value='3'/>
+  <enum name='kICAStorageFixedROM' value='1'/>
+  <enum name='kICAStorageRemovableRAM' value='4'/>
+  <enum name='kICAStorageRemovableROM' value='2'/>
+  <enum name='kICAThumbnailFormatICA' value='1768120608'/>
+  <enum name='kICAThumbnailFormatJPEG' value='1785750887'/>
+  <enum name='kICAThumbnailFormatTIFF' value='1953064550'/>
+  <enum name='kICATypeBoolean' value='1651470188'/>
+  <enum name='kICATypeData' value='1684108385'/>
+  <enum name='kICATypeFixed' value='1936289383'/>
+  <enum name='kICATypeSInt16' value='1936273718'/>
+  <enum name='kICATypeSInt32' value='1936274226'/>
+  <enum name='kICATypeSInt64' value='1936274996'/>
+  <enum name='kICATypeString' value='1413830740'/>
+  <enum name='kICATypeThumbnail' value='1953002861'/>
+  <enum name='kICATypeUInt16' value='1969828150'/>
+  <enum name='kICATypeUInt32' value='1969828658'/>
+  <enum name='kICATypeUInt64' value='1969829428'/>
+  <enum name='kICAUploadFileAsIs' value='0'/>
+  <enum name='kICAUploadFileScaleToFit' value='1'/>
+  <enum name='kMessageGetEventData' value='1835492708'/>
+  <enum name='kRotateImage' value='64'/>
+  <enum name='kSetFileTypeAndCreator' value='16'/>
+  <function name='ICACloseSession'>
+    <arg type='^{ICACloseSessionPB={ICAHeader=sI}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICACopyObjectPropertyDictionary'>
+    <arg type='^{ICACopyObjectPropertyDictionaryPB={ICAHeader=sI}^{OpaqueICAObject}^^{__CFDictionary}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICACopyObjectThumbnail'>
+    <arg type='^{ICACopyObjectThumbnailPB={ICAHeader=sI}^{OpaqueICAObject}I^^{__CFData}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICADownloadFile'>
+    <arg type='^{ICADownloadFilePB={ICAHeader=sI}^{OpaqueICAObject}^{FSRef}IIIi^{FSRef}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetChildCount'>
+    <arg type='^{ICAGetChildCountPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetDeviceList'>
+    <arg type='^{ICAGetDeviceListPB={ICAHeader=sI}^{OpaqueICAObject}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetNthChild'>
+    <arg type='^{ICAGetNthChildPB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetNthProperty'>
+    <arg type='^{ICAGetNthPropertyPB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetObjectInfo'>
+    <arg type='^{ICAGetObjectInfoPB={ICAHeader=sI}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetObjectRefCon'>
+    <arg type='^{ICAGetObjectRefConPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetParentOfObject'>
+    <arg type='^{ICAGetParentOfObjectPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetParentOfProperty'>
+    <arg type='^{ICAGetParentOfPropertyPB={ICAHeader=sI}^{OpaqueICAProperty}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetPropertyByType'>
+    <arg type='^{ICAGetPropertyByTypePB={ICAHeader=sI}^{OpaqueICAObject}I^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetPropertyCount'>
+    <arg type='^{ICAGetPropertyCountPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetPropertyData'>
+    <arg type='^{ICAGetPropertyDataPB={ICAHeader=sI}^{OpaqueICAProperty}II^vII}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetPropertyInfo'>
+    <arg type='^{ICAGetPropertyInfoPB={ICAHeader=sI}^{OpaqueICAProperty}{ICAPropertyInfo=IIII}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetPropertyRefCon'>
+    <arg type='^{ICAGetPropertyRefConPB={ICAHeader=sI}^{OpaqueICAProperty}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetRootOfObject'>
+    <arg type='^{ICAGetRootOfObjectPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAGetRootOfProperty'>
+    <arg type='^{ICAGetRootOfPropertyPB={ICAHeader=sI}^{OpaqueICAProperty}^{OpaqueICAObject}{ICAObjectInfo=II}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAImportImage'>
+    <arg type='^{ICAImportImagePB={ICAHeader=sI}^{OpaqueICAObject}I^{__CFArray}^?^^{__CFArray}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICALoadDeviceModule'>
+    <arg type='^{ICALoadDeviceModulePB={ICAHeader=sI}^{__CFDictionary}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAObjectSendMessage'>
+    <arg type='^{ICAObjectSendMessagePB={ICAHeader=sI}^{OpaqueICAObject}{ICAMessage=II^vII}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAOpenSession'>
+    <arg type='^{ICAOpenSessionPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICARegisterEventNotification'>
+    <arg type='^{ICARegisterEventNotificationPB={ICAHeader=sI}^{OpaqueICAObject}I^?}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAScannerCloseSession'>
+    <arg type='^{ICAScannerCloseSessionPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAScannerGetParameters'>
+    <arg type='^{ICAScannerGetParametersPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}^{__CFDictionary}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAScannerInitialize'>
+    <arg type='^{ICAScannerInitializePB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAScannerOpenSession'>
+    <arg type='^{ICAScannerOpenSessionPB={ICAHeader=sI}^{OpaqueICAObject}^{OpaqueICAScannerSessionID}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAScannerSetParameters'>
+    <arg type='^{ICAScannerSetParametersPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}^{__CFDictionary}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAScannerStart'>
+    <arg type='^{ICAScannerStartPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAScannerStatus'>
+    <arg type='^{ICAScannerStatusPB={ICAHeader=sI}^{OpaqueICAScannerSessionID}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICASetObjectRefCon'>
+    <arg type='^{ICASetObjectRefConPB={ICAHeader=sI}^{OpaqueICAObject}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICASetPropertyData'>
+    <arg type='^{ICASetPropertyDataPB={ICAHeader=sI}^{OpaqueICAProperty}I^vII}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICASetPropertyRefCon'>
+    <arg type='^{ICASetPropertyRefConPB={ICAHeader=sI}^{OpaqueICAProperty}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAUnloadDeviceModule'>
+    <arg type='^{ICAUnloadDeviceModulePB={ICAHeader=sI}^{OpaqueICAObject}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICAUploadFile'>
+    <arg type='^{ICAUploadFilePB={ICAHeader=sI}^{OpaqueICAObject}^{FSRef}I}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICAHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICDDisposeObject'>
+    <arg type='^{ICD_DisposeObjectPB={ICDHeader=sI}^{OpaqueICAObject}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICDHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICDDisposeProperty'>
+    <arg type='^{ICD_DisposePropertyPB={ICDHeader=sI}^{OpaqueICAProperty}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICDHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICDNewObject'>
+    <arg type='^{ICD_NewObjectPB={ICDHeader=sI}^{OpaqueICAObject}{ICAObjectInfo=II}^{OpaqueICAObject}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICDHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+  <function name='ICDNewProperty'>
+    <arg type='^{ICD_NewPropertyPB={ICDHeader=sI}^{OpaqueICAObject}{ICAPropertyInfo=IIII}^{OpaqueICAProperty}}'/>
+    <arg function_pointer='true' type='^?'>
+      <arg type='^{ICDHeader=sI}'/>
+      <retval type='v'/>
+    </arg>
+    <retval type='s'/>
+  </function>
+</signatures>
