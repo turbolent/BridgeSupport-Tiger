@@ -29,6 +29,7 @@ def work(fname, path, is_private, out_dir, out_file)
   gen = BridgeSupportGenerator.new
   gen.frameworks << path
   gen.emulate_ppc = false # PPC is not supported anymore since SnowLeopard
+  gen.generate_format = BridgeSupportGenerator::FORMAT_COMPLETE
 
   exceptions = "exceptions-#{RUBY_PLATFORM}/#{fname}.xml"
   if File.exist?(exceptions)
