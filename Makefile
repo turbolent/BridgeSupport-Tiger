@@ -119,7 +119,7 @@ $(CLANGROOT_MADE): $(CLANG_DIR_MADE)
 	    $(MKDIR) $(CLANG_DIR)/src/darwin-$$arch && \
 	    (cd $(CLANG_DIR)/src/darwin-$$arch && \
 	    $(MKDIR) ROOT && \
-	    ../configure --prefix=$(CLANG_PREFIX) --enable-targets=powerpc --enable-debug-runtime --enable-debug-symbols --enable-optimized --disable-timestamps --disable-assertions --with-optimize-option='-Os' --without-llvmgcc --without-llvmgxx --disable-bindings --disable-doxygen --with-extra-options='-DDISABLE_SMART_POINTERS' CC="cc -arch $$arch" CXX="c++ -arch $$arch" && \
+	    ../configure --prefix=$(CLANG_PREFIX) --enable-targets=host --enable-debug-runtime --enable-debug-symbols --enable-optimized --disable-timestamps --disable-assertions --without-llvmgcc --without-llvmgxx --disable-bindings --disable-doxygen --with-extra-options='-DDISABLE_SMART_POINTERS' CC="cc -arch $$arch" CXX="c++ -arch $$arch" && \
 	    make -j$(shell sysctl -n hw.ncpu) CLANG_NO_RUNTIME=1 && \
 	    $(MKDIR) $(CLANG_DIR)/src/darwin-$$arch/ROOT && \
 	    make install DESTDIR=$(CLANG_DIR)/src/darwin-$$arch/ROOT CLANG_NO_RUNTIME=1 && \
