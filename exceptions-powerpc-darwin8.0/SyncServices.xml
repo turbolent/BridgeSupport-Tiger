@@ -16,4 +16,6 @@
       <arg index='2' sel_of_type="(void)client:(ISyncClient *)can session:(ISyncSession *)session"/>
     </method>
   </class>
+  <class name="NSObject">
+  </class>
 </signatures>

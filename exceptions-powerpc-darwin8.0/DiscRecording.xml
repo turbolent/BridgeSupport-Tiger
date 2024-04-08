@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version="1.0">
+  <cftype name="DRBurnRef" gettypeid_func="DRBurnGetTypeID" ignore_tollfree="true"/>
+  <cftype name="DRCDTextBlockRef" gettypeid_func="DRCDTextBlockGetTypeID" ignore_tollfree="true"/>
+  <cftype name="DRDeviceRef" gettypeid_func="DRDeviceGetTypeID" ignore_tollfree="true"/>
+  <cftype name="DREraseRef" gettypeid_func="DREraseGetTypeID" ignore_tollfree="true"/>
+  <cftype name="DRFileRef" gettypeid_func="DRFileGetTypeID" ignore_tollfree="true"/>
+  <cftype name="DRFolderRef" gettypeid_func="DRFolderGetTypeID" ignore_tollfree="true"/>
+  <cftype name="DRNotificationCenterRef" gettypeid_func="DRNotificationCenterGetTypeID" ignore_tollfree="true"/>
+  <cftype name="DRTrackRef" gettypeid_func="DRTrackGetTypeID" ignore_tollfree="true"/>
+</signatures>
