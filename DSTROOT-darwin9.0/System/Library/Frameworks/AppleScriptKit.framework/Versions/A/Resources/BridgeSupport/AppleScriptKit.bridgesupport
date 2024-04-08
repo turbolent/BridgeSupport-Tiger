@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
 <depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
@@ -8,4 +7,10 @@
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<class name='ASKPluginObject'>
+<method class_method='true' selector='pluginDidLoad:'>
+<arg name='bundle' declared_type='NSBundle*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
 </signatures>

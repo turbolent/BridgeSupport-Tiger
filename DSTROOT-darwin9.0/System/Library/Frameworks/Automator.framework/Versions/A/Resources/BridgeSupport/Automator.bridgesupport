@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/AppleScriptKit.framework'/>
@@ -45,70 +44,285 @@
 <enum name='AMWorkflowOlderActionVersionError' value='-112'/>
 <enum name='AMWorkflowPropertyListInvalidError' value='-101'/>
 <class name='AMAction'>
+<method selector='activated'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='closed'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='definition'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='didFinishRunningWithError:'>
+<arg name='errorInfo' declared_type='NSDictionary*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='ignoresInput'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='initWithContentsOfURL:error:'>
-<arg index='1' type_modifier='o'/>
+<arg name='fileURL' declared_type='NSURL*' type='@' index='0'/>
+<arg name='outError' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='initWithDefinition:fromArchive:'>
-<arg type='B' index='1'/>
+<arg name='dict' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='archived' declared_type='BOOL' type='B' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='opened'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='output'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='parametersUpdated'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reset'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='runAsynchronouslyWithInput:'>
+<arg name='input' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='runWithInput:fromAction:error:'>
-<arg index='2' type_modifier='o'/>
+<arg name='input' declared_type='id' type='@' index='0'/>
+<arg name='anAction' declared_type='AMAction*' type='@' index='1'/>
+<arg name='errorInfo' declared_type='NSDictionary**' type='^@' index='2' type_modifier='o'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='stop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateParameters'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willFinishRunning'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='writeToDictionary:'>
+<arg name='dictionary' declared_type='NSMutableDictionary*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='AMAppleScriptAction'>
+<method selector='script'>
+<retval declared_type='OSAScript*' type='@'/>
+</method>
+<method selector='setScript:'>
+<arg name='newScript' declared_type='OSAScript*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <class name='AMBundleAction'>
+<method selector='awakeFromBundle'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bundle'>
+<retval declared_type='NSBundle*' type='@'/>
+</method>
 <method selector='hasView'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='initWithDefinition:fromArchive:'>
-<arg type='B' index='1'/>
+<arg name='dict' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='archived' declared_type='BOOL' type='B' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='parameters'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='setParameters:'>
+<arg name='newParameters' declared_type='NSMutableDictionary*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='view'>
+<retval declared_type='NSView*' type='@'/>
 </method>
 </class>
 <class name='AMShellScriptAction'>
+<method selector='inputFieldSeparator'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='outputFieldSeparator'>
+<retval declared_type='NSString*' type='@'/>
+</method>
 <method selector='remapLineEndings'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 </class>
 <class name='AMWorkflow'>
+<method selector='actions'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='addAction:'>
+<arg name='action' declared_type='AMAction*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fileURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
 <method selector='initWithContentsOfURL:error:'>
-<arg index='1' type_modifier='o'/>
+<arg name='fileURL' declared_type='NSURL*' type='@' index='0'/>
+<arg name='outError' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='input'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='insertAction:atIndex:'>
+<arg name='action' declared_type='AMAction*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='moveActionAtIndex:toIndex:'>
+<arg name='startIndex' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='endIndex' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAction:'>
+<arg name='action' declared_type='AMAction*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method class_method='true' selector='runWorkflowAtURL:withInput:error:'>
-<arg index='2' type_modifier='o'/>
+<arg name='fileURL' declared_type='NSURL*' type='@' index='0'/>
+<arg name='input' declared_type='id' type='@' index='1'/>
+<arg name='error' declared_type='NSError**' type='^@' index='2' type_modifier='o'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setInput:'>
+<arg name='input' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setValue:forVariableWithName:'>
-<retval type='B'/>
+<arg name='value' declared_type='id' type='@' index='0'/>
+<arg name='variableName' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='valueForVariableWithName:'>
+<arg name='variableName' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='writeToURL:error:'>
-<arg index='1' type_modifier='o'/>
-<retval type='B'/>
+<arg name='fileURL' declared_type='NSURL*' type='@' index='0'/>
+<arg name='outError' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 </class>
 <class name='AMWorkflowController'>
 <method selector='canRun'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='isRunning'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='run:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWorkflow:'>
+<arg name='workflow' declared_type='AMWorkflow*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWorkflowView:'>
+<arg name='view' declared_type='AMWorkflowView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='workflow'>
+<retval declared_type='AMWorkflow*' type='@'/>
+</method>
+<method selector='workflowView'>
+<retval declared_type='AMWorkflowView*' type='@'/>
 </method>
 </class>
 <class name='AMWorkflowView'>
 <method selector='isEditable'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='setEditable:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='workflowController:didError:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<arg name='error' declared_type='NSError*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='workflowController:didRunAction:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<arg name='action' declared_type='AMAction*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='workflowController:willRunAction:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<arg name='action' declared_type='AMAction*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='workflowControllerDidRun:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='workflowControllerDidStop:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='workflowControllerWillRun:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='workflowControllerWillStop:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <informal_protocol name='AMWorkflowControllerDelegate'>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='workflowController:didError:'/>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='workflowController:didRunAction:'/>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='workflowController:willRunAction:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerDidRun:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerDidStop:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerWillRun:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerWillStop:'/>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='workflowController:didError:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<arg name='error' declared_type='NSError*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='workflowController:didRunAction:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<arg name='action' declared_type='AMAction*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='workflowController:willRunAction:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<arg name='action' declared_type='AMAction*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerDidRun:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerDidStop:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerWillRun:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='workflowControllerWillStop:'>
+<arg name='controller' declared_type='AMWorkflowController*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 </signatures>

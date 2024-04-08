@@ -1,20 +1,19 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
 <cftype name='DCSDictionaryRef' type='^{__DCSDictionary=}'/>
 <function name='DCSCopyTextDefinition'>
-<arg type='^{__DCSDictionary=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='{_CFRange=ii}' type64='{_CFRange=qq}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='dictionary' declared_type='DCSDictionaryRef' type='^{__DCSDictionary=}'/>
+<arg name='textString' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='range' declared_type='CFRange' type='{_CFRange=ii}' type64='{_CFRange=qq}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='DCSGetTermRangeInString'>
-<arg type='^{__DCSDictionary=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='l' type64='q'/>
-<retval type='{_CFRange=ii}' type64='{_CFRange=qq}'/>
+<arg name='dictionary' declared_type='DCSDictionaryRef' type='^{__DCSDictionary=}'/>
+<arg name='textString' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='offset' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='CFRange' type='{_CFRange=ii}' type64='{_CFRange=qq}'/>
 </function>
 </signatures>

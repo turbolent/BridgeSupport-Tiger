@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/AppleShareClientCore.framework'/>
@@ -19,232 +18,239 @@
 <enum name='kLastErrorCodeIndex' value='7'/>
 <enum name='kNavigationAPIErrorBase' value='1'/>
 <function name='AFPChangePassword'>
-<arg type='^I' type64='^Q'/>
-<arg type='*'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef*' type='^I' type64='^Q'/>
+<arg name='oldPassword' declared_type='StringPtr' type='*'/>
+<arg name='newPassword' declared_type='StringPtr' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPCreateSVEFromAddress'>
-<arg type='^{sockaddr=}'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='^I' type64='^Q'/>
-<retval type='l' type64='i'/>
+<arg name='serverAddress' declared_type='AddressPtr' type='^{sockaddr=}'/>
+<arg name='uamName' declared_type='StringPtr' type='*'/>
+<arg name='userName' declared_type='StringPtr' type='*'/>
+<arg name='password' declared_type='StringPtr' type='*'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef*' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPCreateSharedVolumesEnumerator'>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='serverName' declared_type='StringPtr' type='*'/>
+<arg name='serverZone' declared_type='StringPtr' type='*'/>
+<arg name='uamName' declared_type='StringPtr' type='*'/>
+<arg name='userName' declared_type='StringPtr' type='*'/>
+<arg name='password' declared_type='StringPtr' type='*'/>
+<arg name='callback' function_pointer='true' declared_type='AShareEventUPP' type='^?'>
+<arg declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='*'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='evtContext' declared_type='void*' type='^v'/>
+<arg name='filter' function_pointer='true' declared_type='ATFilterUPP' type='^?'>
+<arg declared_type='StringPtr' type='*'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='filterParam' declared_type='void*' type='^v'/>
+<arg name='notifier' function_pointer='true' declared_type='ATNotifyUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATEventCode' type='L' type64='I'/>
+<arg declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<arg type='^I' type64='^Q'/>
-<retval type='l' type64='i'/>
+<arg name='contextPtr' declared_type='void*' type='^v'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef*' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPDeleteSharedVolumesEnumerator'>
-<arg type='^I' type64='^Q'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef*' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPGetIndexedSharedVolume'>
-<arg type='L' type64='Q'/>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef' type='L' type64='Q'/>
+<arg name='index' declared_type='OneBasedIndex' type='L' type64='I'/>
+<arg name='volumeName' declared_type='StringPtr' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPGetLoginInformation'>
-<arg type='L' type64='Q'/>
-<arg type='^B'/>
-<arg type='*'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef' type='L' type64='Q'/>
+<arg name='isGuest' declared_type='Boolean*' type='^B'/>
+<arg name='userName' declared_type='unsigned char*' type='*'/>
+<arg name='password' declared_type='unsigned char*' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPGetMountAtStartup'>
-<arg type='^I' type64='^Q'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef*' type='^I' type64='^Q'/>
+<arg name='volumeName' declared_type='StringPtr' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPGetSharedVolumesCount'>
-<arg type='L' type64='Q'/>
-<arg type='^B'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef' type='L' type64='Q'/>
+<arg name='allFound' declared_type='Boolean*' type='^B'/>
+<arg name='count' declared_type='UInt32*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPLibraryPresent'>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='AFPLibraryVersion'>
-<retval type='L' type64='I'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
 </function>
 <function name='AFPMountSharedVolume'>
-<arg type='L' type64='Q'/>
-<arg type='*'/>
-<arg type='^s'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef' type='L' type64='Q'/>
+<arg name='volumeName' declared_type='unsigned char*' type='*'/>
+<arg name='volumeRefNum' declared_type='short*' type='^s'/>
+<arg name='isMounted' declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPMountSharedVolumeOnMP'>
-<arg type='L' type64='Q'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef' type='L' type64='Q'/>
+<arg name='inVolumeName' declared_type='StringPtr' type='*'/>
+<arg name='inVolPassword' declared_type='UInt8*' type='*' const='true'/>
+<arg name='inMountPoint' declared_type='char*' type='*' const='true'/>
+<arg name='inMountFlags' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inAltFlags' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inMakeUnique' declared_type='Boolean' type='B'/>
+<arg name='inMaxPath' declared_type='UInt32' type='L' type64='I'/>
+<arg name='outMountPath' declared_type='char*' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPSetMountAtStartup'>
-<arg type='^I' type64='^Q'/>
-<arg type='*'/>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef*' type='^I' type64='^Q'/>
+<arg name='volumeName' declared_type='StringPtr' type='*'/>
+<arg name='toMount' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AFPSortSharedVolumes'>
-<arg type='L' type64='Q'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AFPSharedVolumesEnumeratorRef' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='DisposeAShareEventUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='AShareEventUPP' type='^?'>
+<arg declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeATFilterUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='*'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userUPP' function_pointer='true' declared_type='ATFilterUPP' type='^?'>
+<arg declared_type='StringPtr' type='*'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeATNetworkEventNotifierUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='ATNetworkEventNotifierUPP' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeATNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='ATNotifyUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATEventCode' type='L' type64='I'/>
+<arg declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeAShareEventUPP'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='theEvent' declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg name='contextPtr' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='AShareEventUPP' type='^?'>
+<arg declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeATFilterUPP'>
-<arg type='*'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='*'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='name' declared_type='StringPtr' type='*'/>
+<arg name='data' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='ATFilterUPP' type='^?'>
+<arg declared_type='StringPtr' type='*'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='InvokeATNetworkEventNotifierUPP'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='eventCode' declared_type='UInt32' type='L' type64='I'/>
+<arg name='cookie' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='ATNetworkEventNotifierUPP' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeATNotifyUPP'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='contextPtr' declared_type='void*' type='^v'/>
+<arg name='code' declared_type='ATEventCode' type='L' type64='I'/>
+<arg name='result' declared_type='OSStatus' type='l' type64='i'/>
+<arg name='cookie' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='ATNotifyUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATEventCode' type='L' type64='I'/>
+<arg declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='NewAShareEventUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='AShareEventProcPtr' type='^?'>
+<arg declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='AShareEventUPP' type='^?'>
+<arg declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewATFilterUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='*'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userRoutine' function_pointer='true' declared_type='ATFilterProcPtr' type='^?'>
+<arg declared_type='StringPtr' type='*'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='*'/>
-<arg type='^v'/>
-<retval type='B'/>
+<retval function_pointer='true' declared_type='ATFilterUPP' type='^?'>
+<arg declared_type='StringPtr' type='*'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </retval>
 </function>
 <function name='NewATNetworkEventNotifierUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='ATNetworkEventNotifierProcPtr' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='ATNetworkEventNotifierUPP' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewATNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='ATNotifyProcPtr' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATEventCode' type='L' type64='I'/>
+<arg declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='ATNotifyUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATEventCode' type='L' type64='I'/>
+<arg declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 </signatures>

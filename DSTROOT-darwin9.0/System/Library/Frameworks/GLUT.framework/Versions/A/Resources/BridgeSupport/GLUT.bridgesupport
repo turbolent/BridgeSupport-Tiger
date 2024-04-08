@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
@@ -8,31 +7,199 @@
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/QTKit.framework'/>
-<struct name='BitmapCharPtr' type='{_BitmapCharPtr=&quot;width&quot;i&quot;height&quot;i&quot;xorig&quot;f&quot;yorig&quot;f&quot;advance&quot;f&quot;bitmap&quot;*}'/>
-<struct name='BitmapCharRec' type='{_BitmapCharRec=&quot;width&quot;i&quot;height&quot;i&quot;xorig&quot;f&quot;yorig&quot;f&quot;advance&quot;f&quot;bitmap&quot;*}'/>
-<struct name='BitmapFontPtr' type='{_BitmapFontPtr=&quot;name&quot;*&quot;num_chars&quot;i&quot;first&quot;i&quot;ch&quot;^^{?}}'/>
-<struct name='BitmapFontRec' type='{_BitmapFontRec=&quot;name&quot;*&quot;num_chars&quot;i&quot;first&quot;i&quot;ch&quot;^^{?}}'/>
-<struct name='CoordPtr' type='{_CoordPtr=&quot;x&quot;f&quot;y&quot;f}'/>
-<struct name='CoordRec' type='{_CoordRec=&quot;x&quot;f&quot;y&quot;f}'/>
-<struct name='STXY' type='{_STXY=&quot;s&quot;f&quot;t&quot;f&quot;x&quot;f&quot;y&quot;f}'/>
-<struct name='SphereMap' type='{_SphereMap=&quot;mesh&quot;^{_SphereMapMesh}&quot;smapTexObj&quot;I&quot;viewTexObjs&quot;[6I]&quot;viewTexObj&quot;I&quot;flags&quot;i&quot;viewTexDim&quot;i&quot;smapTexDim&quot;i&quot;viewOrigin&quot;[2i]&quot;smapOrigin&quot;[2i]&quot;eye&quot;[3f]&quot;up&quot;[3f]&quot;obj&quot;[3f]&quot;viewNear&quot;f&quot;viewFar&quot;f&quot;positionLights&quot;^?&quot;drawView&quot;^?&quot;context&quot;^v}'/>
-<struct name='SphereMapMesh' type='{_SphereMapMesh=&quot;refcnt&quot;i&quot;steps&quot;i&quot;rings&quot;i&quot;edgeExtend&quot;i&quot;face&quot;^{_STXY}&quot;back&quot;^{_STXY}}'/>
-<struct name='StrokeCharPtr' type='{_StrokeCharPtr=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}'/>
-<struct name='StrokeCharRec' type='{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}'/>
-<struct name='StrokeFontPtr' type='{_StrokeFontPtr=&quot;name&quot;*&quot;num_chars&quot;i&quot;ch&quot;^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}&quot;top&quot;f&quot;bottom&quot;f}'/>
-<struct name='StrokeFontRec' type='{_StrokeFontRec=&quot;name&quot;*&quot;num_chars&quot;i&quot;ch&quot;^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}&quot;top&quot;f&quot;bottom&quot;f}'/>
-<struct name='StrokePtr' type='{_StrokePtr=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}'/>
-<struct name='StrokeRec' type='{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}'/>
-<struct name='gleGC' type='{_gleGC=&quot;bgn_gen_texture&quot;^?&quot;n3f_gen_texture&quot;^?&quot;n3d_gen_texture&quot;^?&quot;v3f_gen_texture&quot;^?&quot;v3d_gen_texture&quot;^?&quot;end_gen_texture&quot;^?&quot;join_style&quot;i&quot;ncp&quot;i&quot;contour&quot;^[2d]&quot;cont_normal&quot;^[2d]&quot;up&quot;^d&quot;npoints&quot;i&quot;point_array&quot;^[3d]&quot;color_array&quot;^[3f]&quot;xform_array&quot;^[2[3d]]&quot;num_vert&quot;i&quot;segment_number&quot;i&quot;segment_length&quot;d&quot;accum_seg_len&quot;d&quot;prev_x&quot;d&quot;prev_y&quot;d&quot;save_bgn_gen_texture&quot;^?&quot;save_n3f_gen_texture&quot;^?&quot;save_n3d_gen_texture&quot;^?&quot;save_v3f_gen_texture&quot;^?&quot;save_v3d_gen_texture&quot;^?&quot;save_end_gen_texture&quot;^?}'/>
-<constant name='glutBitmap8By13' type='^v'/>
-<constant name='glutBitmap9By15' type='^v'/>
-<constant name='glutBitmapHelvetica10' type='^v'/>
-<constant name='glutBitmapHelvetica12' type='^v'/>
-<constant name='glutBitmapHelvetica18' type='^v'/>
-<constant name='glutBitmapTimesRoman10' type='^v'/>
-<constant name='glutBitmapTimesRoman24' type='^v'/>
-<constant name='glutStrokeMonoRoman' type='^v'/>
-<constant name='glutStrokeRoman' type='^v'/>
+<struct name='BitmapCharPtr' type='{_BitmapCharPtr=&quot;width&quot;i&quot;height&quot;i&quot;xorig&quot;f&quot;yorig&quot;f&quot;advance&quot;f&quot;bitmap&quot;*}'>
+<field name='width' declared_type='GLsizei' type='i' const='true'/>
+<field name='height' declared_type='GLsizei' type='i' const='true'/>
+<field name='xorig' declared_type='GLfloat' type='f' const='true'/>
+<field name='yorig' declared_type='GLfloat' type='f' const='true'/>
+<field name='advance' declared_type='GLfloat' type='f' const='true'/>
+<field name='bitmap' declared_type='GLubyte*' type='*' const='true'/>
+</struct>
+<struct name='BitmapCharRec' type='{_BitmapCharRec=&quot;width&quot;i&quot;height&quot;i&quot;xorig&quot;f&quot;yorig&quot;f&quot;advance&quot;f&quot;bitmap&quot;*}'>
+<field name='width' declared_type='GLsizei' type='i' const='true'/>
+<field name='height' declared_type='GLsizei' type='i' const='true'/>
+<field name='xorig' declared_type='GLfloat' type='f' const='true'/>
+<field name='yorig' declared_type='GLfloat' type='f' const='true'/>
+<field name='advance' declared_type='GLfloat' type='f' const='true'/>
+<field name='bitmap' declared_type='GLubyte*' type='*' const='true'/>
+</struct>
+<struct name='BitmapFontPtr' type='{_BitmapFontPtr=&quot;name&quot;*&quot;num_chars&quot;i&quot;first&quot;i&quot;ch&quot;^^{?}}'>
+<field name='name' declared_type='char*' type='*' const='true'/>
+<field name='num_chars' declared_type='int' type='i' const='true'/>
+<field name='first' declared_type='int' type='i' const='true'/>
+<field name='ch' declared_type='BitmapCharRec **' type='^^{?}' const='true'/>
+</struct>
+<struct name='BitmapFontRec' type='{_BitmapFontRec=&quot;name&quot;*&quot;num_chars&quot;i&quot;first&quot;i&quot;ch&quot;^^{?}}'>
+<field name='name' declared_type='char*' type='*' const='true'/>
+<field name='num_chars' declared_type='int' type='i' const='true'/>
+<field name='first' declared_type='int' type='i' const='true'/>
+<field name='ch' declared_type='BitmapCharRec **' type='^^{?}' const='true'/>
+</struct>
+<struct name='CoordPtr' type='{_CoordPtr=&quot;x&quot;f&quot;y&quot;f}'>
+<field name='x' declared_type='float' type='f'/>
+<field name='y' declared_type='float' type='f'/>
+</struct>
+<struct name='CoordRec' type='{_CoordRec=&quot;x&quot;f&quot;y&quot;f}'>
+<field name='x' declared_type='float' type='f'/>
+<field name='y' declared_type='float' type='f'/>
+</struct>
+<struct name='STXY' type='{_STXY=&quot;s&quot;f&quot;t&quot;f&quot;x&quot;f&quot;y&quot;f}'>
+<field name='s' declared_type='GLfloat' type='f'/>
+<field name='t' declared_type='GLfloat' type='f'/>
+<field name='x' declared_type='GLfloat' type='f'/>
+<field name='y' declared_type='GLfloat' type='f'/>
+</struct>
+<struct name='SphereMap' type='{_SphereMap=&quot;mesh&quot;^{_SphereMapMesh}&quot;smapTexObj&quot;I&quot;viewTexObjs&quot;[6I]&quot;viewTexObj&quot;I&quot;flags&quot;i&quot;viewTexDim&quot;i&quot;smapTexDim&quot;i&quot;viewOrigin&quot;[2i]&quot;smapOrigin&quot;[2i]&quot;eye&quot;[3f]&quot;up&quot;[3f]&quot;obj&quot;[3f]&quot;viewNear&quot;f&quot;viewFar&quot;f&quot;positionLights&quot;^?&quot;drawView&quot;^?&quot;context&quot;^v}'>
+<field name='mesh' declared_type='SphereMapMesh*' type='^{_SphereMapMesh=iiii^{_STXY}^{_STXY}}'/>
+<field name='smapTexObj' declared_type='GLuint' type='I'/>
+<field name='viewTexObjs' declared_type='GLuint*' type='[6I]'/>
+<field name='viewTexObj' declared_type='GLuint' type='I'/>
+<field name='flags' declared_type='SphereMapFlags' type='i'/>
+<field name='viewTexDim' declared_type='int' type='i'/>
+<field name='smapTexDim' declared_type='int' type='i'/>
+<field name='viewOrigin' declared_type='int*' type='[2i]'/>
+<field name='smapOrigin' declared_type='int*' type='[2i]'/>
+<field name='eye' declared_type='GLfloat*' type='[3f]'/>
+<field name='up' declared_type='GLfloat*' type='[3f]'/>
+<field name='obj' declared_type='GLfloat*' type='[3f]'/>
+<field name='viewNear' declared_type='GLfloat' type='f'/>
+<field name='viewFar' declared_type='GLfloat' type='f'/>
+<field name='positionLights' function_pointer='true' declared_type='void (*)(int, void *)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='drawView' function_pointer='true' declared_type='void (*)(int, void *)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='context' declared_type='void*' type='^v'/>
+</struct>
+<struct name='SphereMapMesh' type='{_SphereMapMesh=&quot;refcnt&quot;i&quot;steps&quot;i&quot;rings&quot;i&quot;edgeExtend&quot;i&quot;face&quot;^{_STXY}&quot;back&quot;^{_STXY}}'>
+<field name='refcnt' declared_type='int' type='i'/>
+<field name='steps' declared_type='int' type='i'/>
+<field name='rings' declared_type='int' type='i'/>
+<field name='edgeExtend' declared_type='int' type='i'/>
+<field name='face' declared_type='STXY*' type='^{_STXY=ffff}'/>
+<field name='back' declared_type='STXY*' type='^{_STXY=ffff}'/>
+</struct>
+<struct name='StrokeCharPtr' type='{_StrokeCharPtr=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}'>
+<field name='num_strokes' declared_type='int' type='i'/>
+<field name='stroke' declared_type='StrokeRec*' type='^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}' const='true'/>
+<field name='center' declared_type='float' type='f'/>
+<field name='right' declared_type='float' type='f'/>
+</struct>
+<struct name='StrokeCharRec' type='{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}'>
+<field name='num_strokes' declared_type='int' type='i'/>
+<field name='stroke' declared_type='StrokeRec*' type='^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}' const='true'/>
+<field name='center' declared_type='float' type='f'/>
+<field name='right' declared_type='float' type='f'/>
+</struct>
+<struct name='StrokeFontPtr' type='{_StrokeFontPtr=&quot;name&quot;*&quot;num_chars&quot;i&quot;ch&quot;^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}&quot;top&quot;f&quot;bottom&quot;f}'>
+<field name='name' declared_type='char*' type='*' const='true'/>
+<field name='num_chars' declared_type='int' type='i'/>
+<field name='ch' declared_type='StrokeCharRec*' type='^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}' const='true'/>
+<field name='top' declared_type='float' type='f'/>
+<field name='bottom' declared_type='float' type='f'/>
+</struct>
+<struct name='StrokeFontRec' type='{_StrokeFontRec=&quot;name&quot;*&quot;num_chars&quot;i&quot;ch&quot;^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}&quot;top&quot;f&quot;bottom&quot;f}'>
+<field name='name' declared_type='char*' type='*' const='true'/>
+<field name='num_chars' declared_type='int' type='i'/>
+<field name='ch' declared_type='StrokeCharRec*' type='^{_StrokeCharRec=&quot;num_strokes&quot;i&quot;stroke&quot;^{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}&quot;center&quot;f&quot;right&quot;f}' const='true'/>
+<field name='top' declared_type='float' type='f'/>
+<field name='bottom' declared_type='float' type='f'/>
+</struct>
+<struct name='StrokePtr' type='{_StrokePtr=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}'>
+<field name='num_coords' declared_type='int' type='i'/>
+<field name='coord' declared_type='CoordRec*' type='^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}' const='true'/>
+</struct>
+<struct name='StrokeRec' type='{_StrokeRec=&quot;num_coords&quot;i&quot;coord&quot;^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}}'>
+<field name='num_coords' declared_type='int' type='i'/>
+<field name='coord' declared_type='CoordRec*' type='^{_CoordRec=&quot;x&quot;f&quot;y&quot;f}' const='true'/>
+</struct>
+<struct name='gleGC' type='{_gleGC=&quot;bgn_gen_texture&quot;^?&quot;n3f_gen_texture&quot;^?&quot;n3d_gen_texture&quot;^?&quot;v3f_gen_texture&quot;^?&quot;v3d_gen_texture&quot;^?&quot;end_gen_texture&quot;^?&quot;join_style&quot;i&quot;ncp&quot;i&quot;contour&quot;^[2d]&quot;cont_normal&quot;^[2d]&quot;up&quot;^d&quot;npoints&quot;i&quot;point_array&quot;^[3d]&quot;color_array&quot;^[3f]&quot;xform_array&quot;^[2[3d]]&quot;num_vert&quot;i&quot;segment_number&quot;i&quot;segment_length&quot;d&quot;accum_seg_len&quot;d&quot;prev_x&quot;d&quot;prev_y&quot;d&quot;save_bgn_gen_texture&quot;^?&quot;save_n3f_gen_texture&quot;^?&quot;save_n3d_gen_texture&quot;^?&quot;save_v3f_gen_texture&quot;^?&quot;save_v3d_gen_texture&quot;^?&quot;save_end_gen_texture&quot;^?}'>
+<field name='bgn_gen_texture' function_pointer='true' declared_type='void (*)(int, double)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='n3f_gen_texture' function_pointer='true' declared_type='void (*)(float *)' type='^?'>
+<arg declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='n3d_gen_texture' function_pointer='true' declared_type='void (*)(double *)' type='^?'>
+<arg declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='v3f_gen_texture' function_pointer='true' declared_type='void (*)(float *, int, int)' type='^?'>
+<arg declared_type='float*' type='^f'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='v3d_gen_texture' function_pointer='true' declared_type='void (*)(double *, int, int)' type='^?'>
+<arg declared_type='double*' type='^d'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='end_gen_texture' function_pointer='true' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='join_style' declared_type='int' type='i'/>
+<field name='ncp' declared_type='int' type='i'/>
+<field name='contour' declared_type='gleTwoVec*' type='^[2d]'/>
+<field name='cont_normal' declared_type='gleTwoVec*' type='^[2d]'/>
+<field name='up' declared_type='double*' type='^d'/>
+<field name='npoints' declared_type='int' type='i'/>
+<field name='point_array' declared_type='gleVector*' type='^[3d]'/>
+<field name='color_array' declared_type='gleColor*' type='^[3f]'/>
+<field name='xform_array' declared_type='gleAffine*' type='^[2[3d]]'/>
+<field name='num_vert' declared_type='int' type='i'/>
+<field name='segment_number' declared_type='int' type='i'/>
+<field name='segment_length' declared_type='double' type='d'/>
+<field name='accum_seg_len' declared_type='double' type='d'/>
+<field name='prev_x' declared_type='double' type='d'/>
+<field name='prev_y' declared_type='double' type='d'/>
+<field name='save_bgn_gen_texture' function_pointer='true' declared_type='void (*)(int, double)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='save_n3f_gen_texture' function_pointer='true' declared_type='void (*)(float *)' type='^?'>
+<arg declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='save_n3d_gen_texture' function_pointer='true' declared_type='void (*)(double *)' type='^?'>
+<arg declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='save_v3f_gen_texture' function_pointer='true' declared_type='void (*)(float *, int, int)' type='^?'>
+<arg declared_type='float*' type='^f'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='save_v3d_gen_texture' function_pointer='true' declared_type='void (*)(double *, int, int)' type='^?'>
+<arg declared_type='double*' type='^d'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='save_end_gen_texture' function_pointer='true' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<constant name='glutBitmap8By13' declared_type='void*' type='^v'/>
+<constant name='glutBitmap9By15' declared_type='void*' type='^v'/>
+<constant name='glutBitmapHelvetica10' declared_type='void*' type='^v'/>
+<constant name='glutBitmapHelvetica12' declared_type='void*' type='^v'/>
+<constant name='glutBitmapHelvetica18' declared_type='void*' type='^v'/>
+<constant name='glutBitmapTimesRoman10' declared_type='void*' type='^v'/>
+<constant name='glutBitmapTimesRoman24' declared_type='void*' type='^v'/>
+<constant name='glutStrokeMonoRoman' declared_type='void*' type='^v'/>
+<constant name='glutStrokeRoman' declared_type='void*' type='^v'/>
 <enum name='BACKWARDS_INTERSECT' value='2'/>
 <enum name='BACK_CAP' value='4'/>
 <enum name='DEGENERATE_TOLERANCE' value='0.000002'/>
@@ -269,1033 +436,1251 @@
 <enum name='Y' value='1'/>
 <enum name='Z' value='2'/>
 <function name='bisecting_plane'>
-<arg type='^d'/>
-<arg type='^d'/>
-<arg type='^d'/>
-<arg type='^d'/>
-<retval type='i'/>
+<arg name='n' declared_type='double*' type='^d'/>
+<arg name='v1' declared_type='double*' type='^d'/>
+<arg name='v2' declared_type='double*' type='^d'/>
+<arg name='v3' declared_type='double*' type='^d'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='draw_angle_style_back_cap'>
-<arg type='i'/>
-<arg type='^d'/>
-<arg type='^[3d]'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='bi' declared_type='double*' type='^d'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_angle_style_front_cap'>
-<arg type='i'/>
-<arg type='^d'/>
-<arg type='^[3d]'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='bi' declared_type='double*' type='^d'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_binorm_segment_c_and_edge_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='front_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_last' declared_type='float*' type='^f'/>
+<arg name='color_next' declared_type='float*' type='^f'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_binorm_segment_c_and_facet_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='front_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_last' declared_type='float*' type='^f'/>
+<arg name='color_next' declared_type='float*' type='^f'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_binorm_segment_edge_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='front_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_binorm_segment_facet_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='front_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_norm' declared_type='double (*)*' type='^[3d]'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_raw_style_end_cap'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='d'/>
-<arg type='i'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='zval' declared_type='double' type='d'/>
+<arg name='frontwards' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_round_style_cap_callback'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^f'/>
-<arg type='^d'/>
-<arg type='^d'/>
-<arg type='^[3d]'/>
-<arg type='i'/>
+<arg name='iloop' declared_type='int' type='i'/>
+<arg name='cap' declared_type='double (*)*' type='^[3d]'/>
+<arg name='face_color' declared_type='float*' type='^f'/>
+<arg name='cut_vector' declared_type='double*' type='^d'/>
+<arg name='bisect_vector' declared_type='double*' type='^d'/>
+<arg name='norms' declared_type='double (*)*' type='^[3d]'/>
+<arg name='frontwards' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_segment_c_and_edge_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='norm_cont' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_last' declared_type='float*' type='^f'/>
+<arg name='color_next' declared_type='float*' type='^f'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_segment_c_and_facet_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='norm_cont' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_last' declared_type='float*' type='^f'/>
+<arg name='color_next' declared_type='float*' type='^f'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_segment_color'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_last' declared_type='float*' type='^f'/>
+<arg name='color_next' declared_type='float*' type='^f'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_segment_edge_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='norm_cont' declared_type='double (*)*' type='^[3d]'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_segment_facet_n'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='norm_cont' declared_type='double (*)*' type='^[3d]'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='draw_segment_plain'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='i'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='front_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='back_contour' declared_type='double (*)*' type='^[3d]'/>
+<arg name='inext' declared_type='int' type='i'/>
+<arg name='len' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='extrusion_angle_join'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
-<arg type='^[2[3d]]'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<arg name='xform_array' declared_type='double (*)**' type='^[2[3d]]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='extrusion_raw_join'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
-<arg type='^[2[3d]]'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<arg name='xform_array' declared_type='double (*)**' type='^[2[3d]]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='extrusion_round_or_cut_join'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
-<arg type='^[2[3d]]'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<arg name='xform_array' declared_type='double (*)**' type='^[2[3d]]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleCreateGC'>
-<retval type='^{_gleGC=^?^?^?^?^?^?ii^[2d]^[2d]^di^[3d]^[3f]^[2[3d]]iidddd^?^?^?^?^?^?}'/>
+<retval declared_type='gleGC*' type='^{_gleGC=^?^?^?^?^?^?ii^[2d]^[2d]^di^[3d]^[3f]^[2[3d]]iidddd^?^?^?^?^?^?}'/>
 </function>
 <function name='gleExtrusion'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleGetJoinStyle'>
-<retval type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='gleGetNumSlices'>
-<retval type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='gleHelicoid'>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='d'/>
-<arg type='d'/>
+<arg name='rToroid' declared_type='double' type='d'/>
+<arg name='startRadius' declared_type='double' type='d'/>
+<arg name='drdTheta' declared_type='double' type='d'/>
+<arg name='startZ' declared_type='double' type='d'/>
+<arg name='dzdTheta' declared_type='double' type='d'/>
+<arg name='startXform' declared_type='double (*)*' type='^[3d]'/>
+<arg name='dXformdTheta' declared_type='double (*)*' type='^[3d]'/>
+<arg name='startTheta' declared_type='double' type='d'/>
+<arg name='sweepTheta' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleLathe'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='d'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='startRadius' declared_type='double' type='d'/>
+<arg name='drdTheta' declared_type='double' type='d'/>
+<arg name='startZ' declared_type='double' type='d'/>
+<arg name='dzdTheta' declared_type='double' type='d'/>
+<arg name='startXform' declared_type='double (*)*' type='^[3d]'/>
+<arg name='dXformdTheta' declared_type='double (*)*' type='^[3d]'/>
+<arg name='startTheta' declared_type='double' type='d'/>
+<arg name='sweepTheta' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glePolyCone'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
-<arg type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<arg name='radius_array' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glePolyCylinder'>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
-<arg type='d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<arg name='radius' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleScrew'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='startz' declared_type='double' type='d'/>
+<arg name='endz' declared_type='double' type='d'/>
+<arg name='twist' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleSetJoinStyle'>
-<arg type='i'/>
+<arg name='style' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleSetNumSlices'>
-<arg type='i'/>
+<arg name='slices' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleSpiral'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='d'/>
-<arg type='d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='startRadius' declared_type='double' type='d'/>
+<arg name='drdTheta' declared_type='double' type='d'/>
+<arg name='startZ' declared_type='double' type='d'/>
+<arg name='dzdTheta' declared_type='double' type='d'/>
+<arg name='startXform' declared_type='double (*)*' type='^[3d]'/>
+<arg name='dXformdTheta' declared_type='double (*)*' type='^[3d]'/>
+<arg name='startTheta' declared_type='double' type='d'/>
+<arg name='sweepTheta' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleSuperExtrusion'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
-<arg type='^[2[3d]]'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<arg name='xform_array' declared_type='double (*)**' type='^[2[3d]]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleTextureMode'>
-<arg type='i'/>
+<arg name='mode' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleToroid'>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='^[3d]'/>
-<arg type='^[3d]'/>
-<arg type='d'/>
-<arg type='d'/>
+<arg name='rToroid' declared_type='double' type='d'/>
+<arg name='startRadius' declared_type='double' type='d'/>
+<arg name='drdTheta' declared_type='double' type='d'/>
+<arg name='startZ' declared_type='double' type='d'/>
+<arg name='dzdTheta' declared_type='double' type='d'/>
+<arg name='startXform' declared_type='double (*)*' type='^[3d]'/>
+<arg name='dXformdTheta' declared_type='double (*)*' type='^[3d]'/>
+<arg name='startTheta' declared_type='double' type='d'/>
+<arg name='sweepTheta' declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='gleTwistExtrusion'>
-<arg type='i'/>
-<arg type='^[2d]'/>
-<arg type='^[2d]'/>
-<arg type='^d'/>
-<arg type='i'/>
-<arg type='^[3d]'/>
-<arg type='^[3f]'/>
-<arg type='^d'/>
+<arg name='ncp' declared_type='int' type='i'/>
+<arg name='contour' declared_type='double (*)*' type='^[2d]'/>
+<arg name='cont_normal' declared_type='double (*)*' type='^[2d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<arg name='color_array' declared_type='float (*)*' type='^[3f]'/>
+<arg name='twist_array' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutAddMenuEntry'>
-<arg type='*'/>
-<arg type='i'/>
+<arg name='label' declared_type='char*' type='*' const='true'/>
+<arg name='value' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutAddSubMenu'>
-<arg type='*'/>
-<arg type='i'/>
+<arg name='label' declared_type='char*' type='*' const='true'/>
+<arg name='submenu' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutAttachMenu'>
-<arg type='i'/>
+<arg name='button' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutBitmapCharacter'>
-<arg type='^v'/>
-<arg type='i'/>
+<arg name='font' declared_type='void*' type='^v'/>
+<arg name='character' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutBitmapLength'>
-<arg type='^v'/>
-<arg type='*'/>
-<retval type='i'/>
+<arg name='font' declared_type='void*' type='^v'/>
+<arg name='string' declared_type='unsigned char*' type='*' const='true'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutBitmapWidth'>
-<arg type='^v'/>
-<arg type='i'/>
-<retval type='i'/>
+<arg name='font' declared_type='void*' type='^v'/>
+<arg name='character' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutButtonBoxFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutChangeToMenuEntry'>
-<arg type='i'/>
-<arg type='*'/>
-<arg type='i'/>
+<arg name='item' declared_type='int' type='i'/>
+<arg name='label' declared_type='char*' type='*' const='true'/>
+<arg name='value' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutChangeToSubMenu'>
-<arg type='i'/>
-<arg type='*'/>
-<arg type='i'/>
+<arg name='item' declared_type='int' type='i'/>
+<arg name='label' declared_type='char*' type='*' const='true'/>
+<arg name='submenu' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutCheckLoop'/>
+<function name='glutCheckLoop'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutCopyColormap'>
-<arg type='i'/>
+<arg name='win' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutCreateMenu'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<retval type='v'/>
+<arg function_pointer='true' declared_type='void (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutCreateSubWindow'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='i'/>
+<arg name='win' declared_type='int' type='i'/>
+<arg name='x' declared_type='int' type='i'/>
+<arg name='y' declared_type='int' type='i'/>
+<arg name='width' declared_type='int' type='i'/>
+<arg name='height' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutCreateWindow'>
-<arg type='*'/>
-<retval type='i'/>
+<arg name='title' declared_type='char*' type='*' const='true'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutDestroyMenu'>
-<arg type='i'/>
+<arg name='menu' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutDestroyWindow'>
-<arg type='i'/>
+<arg name='win' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutDetachMenu'>
-<arg type='i'/>
+<arg name='button' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutDeviceGet'>
-<arg type='I'/>
-<retval type='i'/>
+<arg name='type' declared_type='GLenum' type='I'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutDialsFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutDisplayFunc'>
-<arg function_pointer='true' type='^?'>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutEnterGameMode'>
-<retval type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutEntryFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutEstablishOverlay'/>
+<function name='glutEstablishOverlay'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutExtensionSupported'>
-<arg type='*'/>
-<retval type='i'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='int' type='i'/>
 </function>
-<function name='glutForceJoystickFunc'/>
-<function name='glutFullScreen'/>
+<function name='glutForceJoystickFunc'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutFullScreen'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutGameModeGet'>
-<arg type='I'/>
-<retval type='i'/>
+<arg name='mode' declared_type='GLenum' type='I'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutGameModeString'>
-<arg type='*'/>
+<arg name='string' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutGet'>
-<arg type='I'/>
-<retval type='i'/>
+<arg name='type' declared_type='GLenum' type='I'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutGetColor'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='f'/>
+<arg name='ndx' declared_type='int' type='i'/>
+<arg name='component' declared_type='int' type='i'/>
+<retval declared_type='GLfloat' type='f'/>
 </function>
 <function name='glutGetMenu'>
-<retval type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutGetModifiers'>
-<retval type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutGetProcAddress'>
-<arg type='*'/>
-<retval type='^v'/>
+<arg name='procName' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void*' type='^v'/>
 </function>
 <function name='glutGetWindow'>
-<retval type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
-<function name='glutHideOverlay'/>
-<function name='glutHideWindow'/>
-<function name='glutIconifyWindow'/>
+<function name='glutHideOverlay'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutHideWindow'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutIconifyWindow'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutIdleFunc'>
-<arg function_pointer='true' type='^?'>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutIgnoreKeyRepeat'>
-<arg type='i'/>
+<arg name='ignore' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutInit'>
-<arg type='^i'/>
-<arg type='^*'/>
+<arg name='argcp' declared_type='int*' type='^i'/>
+<arg name='argv' declared_type='char**' type='^*'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutInitDisplayMode'>
-<arg type='I'/>
+<arg name='mode' declared_type='unsigned int' type='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutInitDisplayString'>
-<arg type='*'/>
+<arg name='string' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutInitWindowPosition'>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='x' declared_type='int' type='i'/>
+<arg name='y' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutInitWindowSize'>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='width' declared_type='int' type='i'/>
+<arg name='height' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutJoystickFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='I'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(unsigned int, int, int, int)' type='^?'>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='i'/>
+<arg name='pollInterval' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutKeyboardFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='C'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(unsigned char, int, int)' type='^?'>
+<arg declared_type='unsigned char' type='C'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutKeyboardUpFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='C'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(unsigned char, int, int)' type='^?'>
+<arg declared_type='unsigned char' type='C'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutLayerGet'>
-<arg type='I'/>
-<retval type='i'/>
+<arg name='type' declared_type='GLenum' type='I'/>
+<retval declared_type='int' type='i'/>
 </function>
-<function name='glutLeaveGameMode'/>
-<function name='glutMainLoop'/>
+<function name='glutLeaveGameMode'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutMainLoop'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutMenuStateFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutMenuStatusFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutMotionFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutMouseFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int, int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutOverlayDisplayFunc'>
-<arg function_pointer='true' type='^?'>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutPassiveMotionFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutPopWindow'/>
+<function name='glutPopWindow'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutPositionWindow'>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='x' declared_type='int' type='i'/>
+<arg name='y' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutPostOverlayRedisplay'/>
-<function name='glutPostRedisplay'/>
+<function name='glutPostOverlayRedisplay'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutPostRedisplay'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutPostWindowOverlayRedisplay'>
-<arg type='i'/>
+<arg name='win' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutPostWindowRedisplay'>
-<arg type='i'/>
+<arg name='win' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutPushWindow'/>
+<function name='glutPushWindow'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutRemoveMenuItem'>
-<arg type='i'/>
+<arg name='item' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutRemoveOverlay'/>
-<function name='glutReportErrors'/>
+<function name='glutRemoveOverlay'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutReportErrors'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutReshapeFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutReshapeWindow'>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='width' declared_type='int' type='i'/>
+<arg name='height' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSetColor'>
-<arg type='i'/>
-<arg type='f'/>
-<arg type='f'/>
-<arg type='f'/>
+<arg declared_type='int' type='i'/>
+<arg name='red' declared_type='GLfloat' type='f'/>
+<arg name='green' declared_type='GLfloat' type='f'/>
+<arg name='blue' declared_type='GLfloat' type='f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSetCursor'>
-<arg type='i'/>
+<arg name='cursor' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSetIconTitle'>
-<arg type='*'/>
+<arg name='title' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSetKeyRepeat'>
-<arg type='i'/>
+<arg name='repeatMode' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSetMenu'>
-<arg type='i'/>
+<arg name='menu' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSetWindow'>
-<arg type='i'/>
+<arg name='win' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSetWindowTitle'>
-<arg type='*'/>
+<arg name='title' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutSetupVideoResizing'/>
-<function name='glutShowOverlay'/>
-<function name='glutShowWindow'/>
+<function name='glutSetupVideoResizing'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutShowOverlay'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutShowWindow'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutSolidCone'>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='base' declared_type='GLdouble' type='d'/>
+<arg name='height' declared_type='GLdouble' type='d'/>
+<arg name='slices' declared_type='GLint' type='i'/>
+<arg name='stacks' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSolidCube'>
-<arg type='d'/>
+<arg name='size' declared_type='GLdouble' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutSolidDodecahedron'/>
-<function name='glutSolidIcosahedron'/>
-<function name='glutSolidOctahedron'/>
+<function name='glutSolidDodecahedron'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutSolidIcosahedron'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutSolidOctahedron'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutSolidSphere'>
-<arg type='d'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='radius' declared_type='GLdouble' type='d'/>
+<arg name='slices' declared_type='GLint' type='i'/>
+<arg name='stacks' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSolidTeapot'>
-<arg type='d'/>
+<arg name='size' declared_type='GLdouble' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutSolidTetrahedron'/>
+<function name='glutSolidTetrahedron'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutSolidTorus'>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='innerRadius' declared_type='GLdouble' type='d'/>
+<arg name='outerRadius' declared_type='GLdouble' type='d'/>
+<arg name='sides' declared_type='GLint' type='i'/>
+<arg name='rings' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSpaceballButtonFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSpaceballMotionFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSpaceballRotateFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSpecialFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutSpecialUpFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutStopVideoResizing'/>
+<function name='glutStopVideoResizing'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutStrokeCharacter'>
-<arg type='^v'/>
-<arg type='i'/>
+<arg name='font' declared_type='void*' type='^v'/>
+<arg name='character' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutStrokeLength'>
-<arg type='^v'/>
-<arg type='*'/>
-<retval type='i'/>
+<arg name='font' declared_type='void*' type='^v'/>
+<arg name='string' declared_type='unsigned char*' type='*' const='true'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutStrokeWidth'>
-<arg type='^v'/>
-<arg type='i'/>
-<retval type='i'/>
+<arg name='font' declared_type='void*' type='^v'/>
+<arg name='character' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutSurfaceTexture'>
-<arg type='I'/>
-<arg type='I'/>
-<arg type='i'/>
+<arg name='target' declared_type='GLenum' type='I'/>
+<arg name='internalformat' declared_type='GLenum' type='I'/>
+<arg name='surfacewin' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutSwapBuffers'/>
+<function name='glutSwapBuffers'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutTabletButtonFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int, int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutTabletMotionFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutTimerFunc'>
-<arg type='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='millis' declared_type='unsigned int' type='I'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='i'/>
+<arg name='value' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutUseLayer'>
-<arg type='I'/>
+<arg name='layer' declared_type='GLenum' type='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutVideoPan'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='x' declared_type='int' type='i'/>
+<arg name='y' declared_type='int' type='i'/>
+<arg name='width' declared_type='int' type='i'/>
+<arg name='height' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutVideoResize'>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='x' declared_type='int' type='i'/>
+<arg name='y' declared_type='int' type='i'/>
+<arg name='width' declared_type='int' type='i'/>
+<arg name='height' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutVideoResizeGet'>
-<arg type='I'/>
-<retval type='i'/>
+<arg name='param' declared_type='GLenum' type='I'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='glutVisibilityFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutWMCloseFunc'>
-<arg function_pointer='true' type='^?'>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutWarpPointer'>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='x' declared_type='int' type='i'/>
+<arg name='y' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutWindowStatusFunc'>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<retval type='v'/>
+<arg name='func' function_pointer='true' declared_type='void (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutWireCone'>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='base' declared_type='GLdouble' type='d'/>
+<arg name='height' declared_type='GLdouble' type='d'/>
+<arg name='slices' declared_type='GLint' type='i'/>
+<arg name='stacks' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutWireCube'>
-<arg type='d'/>
+<arg name='size' declared_type='GLdouble' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutWireDodecahedron'/>
-<function name='glutWireIcosahedron'/>
-<function name='glutWireOctahedron'/>
+<function name='glutWireDodecahedron'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutWireIcosahedron'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='glutWireOctahedron'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutWireSphere'>
-<arg type='d'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='radius' declared_type='GLdouble' type='d'/>
+<arg name='slices' declared_type='GLint' type='i'/>
+<arg name='stacks' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='glutWireTeapot'>
-<arg type='d'/>
+<arg name='size' declared_type='GLdouble' type='d'/>
+<retval declared_type='void' type='v'/>
 </function>
-<function name='glutWireTetrahedron'/>
+<function name='glutWireTetrahedron'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='glutWireTorus'>
-<arg type='d'/>
-<arg type='d'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='innerRadius' declared_type='GLdouble' type='d'/>
+<arg name='outerRadius' declared_type='GLdouble' type='d'/>
+<arg name='sides' declared_type='GLint' type='i'/>
+<arg name='rings' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='rot_about_axis_d'>
-<arg type='d'/>
-<arg type='^d'/>
+<arg name='angle' declared_type='double' type='d'/>
+<arg name='axis' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='rot_about_axis_f'>
-<arg type='f'/>
-<arg type='^f'/>
+<arg name='angle' declared_type='float' type='f'/>
+<arg name='axis' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='rot_axis_d'>
-<arg type='d'/>
-<arg type='^d'/>
+<arg name='omega' declared_type='double' type='d'/>
+<arg name='axis' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='rot_axis_f'>
-<arg type='f'/>
-<arg type='^f'/>
+<arg name='omega' declared_type='float' type='f'/>
+<arg name='axis' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='rot_omega_d'>
-<arg type='^d'/>
+<arg name='axis' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='rot_omega_f'>
-<arg type='^f'/>
+<arg name='axis' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapConfigureSphereMapMesh'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='steps' declared_type='int' type='i'/>
+<arg name='rings' declared_type='int' type='i'/>
+<arg name='edgeExtend' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapCreateSphereMap'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<retval type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='shareSmap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<retval declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
 </function>
 <function name='smapDestroySphereMap'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGenSphereMap'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGenSphereMapFromViewTexs'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGenSphereMapWithOneViewTex'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGenViewTex'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='view' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGenViewTexs'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetContextData'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^^v'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='context' declared_type='void**' type='^^v'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetDrawViewFunc'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^^?'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='drawView' declared_type='void (**)(int, void *)' type='^^?'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetEye'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='eyex' declared_type='GLfloat*' type='^f'/>
+<arg name='eyey' declared_type='GLfloat*' type='^f'/>
+<arg name='eyez' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetEyeVector'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='eye' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetFlags'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='flags' declared_type='SphereMapFlags*' type='^i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetNearFar'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='viewNear' declared_type='GLfloat*' type='^f'/>
+<arg name='viewFar' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetObject'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='objx' declared_type='GLfloat*' type='^f'/>
+<arg name='objy' declared_type='GLfloat*' type='^f'/>
+<arg name='objz' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetObjectVector'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='obj' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetPositionLightsFunc'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^^?'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='positionLights' declared_type='void (**)(int, void *)' type='^^?'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetSphereMapOrigin'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^i'/>
-<arg type='^i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='x' declared_type='GLint*' type='^i'/>
+<arg name='y' declared_type='GLint*' type='^i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetSphereMapTexDim'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texdim' declared_type='GLsizei*' type='^i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetSphereMapTexObj'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^I'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texobj' declared_type='GLuint*' type='^I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetUp'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='upx' declared_type='GLfloat*' type='^f'/>
+<arg name='upy' declared_type='GLfloat*' type='^f'/>
+<arg name='upz' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetUpVector'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='up' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetViewOrigin'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^i'/>
-<arg type='^i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='x' declared_type='GLint*' type='^i'/>
+<arg name='y' declared_type='GLint*' type='^i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetViewTexDim'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texdim' declared_type='GLsizei*' type='^i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetViewTexObj'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^I'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texobj' declared_type='GLuint*' type='^I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapGetViewTexObjs'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^I'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texobjs' declared_type='GLuint*' type='^I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapRvecToSt'>
-<arg type='^f'/>
-<arg type='^f'/>
-<retval type='i'/>
+<arg name='rvec' declared_type='float*' type='^f'/>
+<arg name='st' declared_type='float*' type='^f'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='smapSetContextData'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^v'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='context' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetDrawViewFunc'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='drawView' function_pointer='true' declared_type='void (*)(int, void *)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetEye'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='f'/>
-<arg type='f'/>
-<arg type='f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='eyex' declared_type='GLfloat' type='f'/>
+<arg name='eyey' declared_type='GLfloat' type='f'/>
+<arg name='eyez' declared_type='GLfloat' type='f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetEyeVector'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='eye' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetFlags'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='flags' declared_type='SphereMapFlags' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetNearFar'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='f'/>
-<arg type='f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='viewNear' declared_type='GLfloat' type='f'/>
+<arg name='viewFar' declared_type='GLfloat' type='f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetObject'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='f'/>
-<arg type='f'/>
-<arg type='f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='objx' declared_type='GLfloat' type='f'/>
+<arg name='objy' declared_type='GLfloat' type='f'/>
+<arg name='objz' declared_type='GLfloat' type='f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetObjectVector'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='obj' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetPositionLightsFunc'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='positionLights' function_pointer='true' declared_type='void (*)(int, void *)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetSphereMapOrigin'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='x' declared_type='GLint' type='i'/>
+<arg name='y' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetSphereMapTexDim'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texdim' declared_type='GLsizei' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetSphereMapTexObj'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='I'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texobj' declared_type='GLuint' type='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetUp'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='f'/>
-<arg type='f'/>
-<arg type='f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='upx' declared_type='GLfloat' type='f'/>
+<arg name='upy' declared_type='GLfloat' type='f'/>
+<arg name='upz' declared_type='GLfloat' type='f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetUpVector'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^f'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='up' declared_type='GLfloat*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetViewOrigin'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='i'/>
-<arg type='i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='x' declared_type='GLint' type='i'/>
+<arg name='y' declared_type='GLint' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetViewTexDim'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='i'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texdim' declared_type='GLsizei' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetViewTexObj'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='I'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texobj' declared_type='GLuint' type='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapSetViewTexObjs'>
-<arg type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
-<arg type='^I'/>
+<arg name='smap' declared_type='SphereMap*' type='^{_SphereMap=^{_SphereMapMesh}I[6I]Iiii[2i][2i][3f][3f][3f]ff^?^?^v}'/>
+<arg name='texobjs' declared_type='GLuint*' type='^I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='smapStToRvec'>
-<arg type='^f'/>
-<arg type='^f'/>
+<arg name='st' declared_type='float*' type='^f'/>
+<arg name='rvec' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='up_sanity_check'>
-<arg type='^d'/>
-<arg type='i'/>
-<arg type='^[3d]'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<arg name='npoints' declared_type='int' type='i'/>
+<arg name='point_array' declared_type='double (*)*' type='^[3d]'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='urot_about_axis_d'>
-<arg type='^[4d]'/>
-<arg type='d'/>
-<arg type='^d'/>
+<arg name='m' declared_type='double (*)*' type='^[4d]'/>
+<arg name='angle' declared_type='double' type='d'/>
+<arg name='axis' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='urot_about_axis_f'>
-<arg type='^[4f]'/>
-<arg type='f'/>
-<arg type='^f'/>
+<arg name='m' declared_type='float (*)*' type='^[4f]'/>
+<arg name='angle' declared_type='float' type='f'/>
+<arg name='axis' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='urot_axis_d'>
-<arg type='^[4d]'/>
-<arg type='d'/>
-<arg type='^d'/>
+<arg name='m' declared_type='double (*)*' type='^[4d]'/>
+<arg name='omega' declared_type='double' type='d'/>
+<arg name='axis' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='urot_axis_f'>
-<arg type='^[4f]'/>
-<arg type='f'/>
-<arg type='^f'/>
+<arg name='m' declared_type='float (*)*' type='^[4f]'/>
+<arg name='omega' declared_type='float' type='f'/>
+<arg name='axis' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='urot_omega_d'>
-<arg type='^[4d]'/>
-<arg type='^d'/>
+<arg name='m' declared_type='double (*)*' type='^[4d]'/>
+<arg name='axis' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='urot_omega_f'>
-<arg type='^[4f]'/>
-<arg type='^f'/>
+<arg name='m' declared_type='float (*)*' type='^[4f]'/>
+<arg name='axis' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='uview_direction_d'>
-<arg type='^[4d]'/>
-<arg type='^d'/>
-<arg type='^d'/>
+<arg name='m' declared_type='double (*)*' type='^[4d]'/>
+<arg name='v21' declared_type='double*' type='^d'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='uview_direction_f'>
-<arg type='^[4f]'/>
-<arg type='^f'/>
-<arg type='^f'/>
+<arg name='m' declared_type='float (*)*' type='^[4f]'/>
+<arg name='v21' declared_type='float*' type='^f'/>
+<arg name='up' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='uviewpoint_d'>
-<arg type='^[4d]'/>
-<arg type='^d'/>
-<arg type='^d'/>
-<arg type='^d'/>
+<arg name='m' declared_type='double (*)*' type='^[4d]'/>
+<arg name='v1' declared_type='double*' type='^d'/>
+<arg name='v2' declared_type='double*' type='^d'/>
+<arg name='up' declared_type='double*' type='^d'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='uviewpoint_f'>
-<arg type='^[4f]'/>
-<arg type='^f'/>
-<arg type='^f'/>
-<arg type='^f'/>
+<arg name='m' declared_type='float (*)*' type='^[4f]'/>
+<arg name='v1' declared_type='float*' type='^f'/>
+<arg name='v2' declared_type='float*' type='^f'/>
+<arg name='up' declared_type='float*' type='^f'/>
+<retval declared_type='void' type='v'/>
 </function>
 </signatures>

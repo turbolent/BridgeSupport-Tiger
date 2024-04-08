@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
@@ -7,12 +6,12 @@
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-<constant name='IMKCandidatesOpacityAttributeName' type='@'/>
-<constant name='IMKControllerClass' type='@'/>
-<constant name='IMKDelegateClass' type='@'/>
-<constant name='IMKModeDictionary' type='@'/>
-<constant name='kIMKCommandClientName' type='@'/>
-<constant name='kIMKCommandMenuItemName' type='@'/>
+<constant name='IMKCandidatesOpacityAttributeName' declared_type='NSString*' type='@' const='true'/>
+<constant name='IMKControllerClass' declared_type='NSString*' type='@' const='true'/>
+<constant name='IMKDelegateClass' declared_type='NSString*' type='@' const='true'/>
+<constant name='IMKModeDictionary' declared_type='NSString*' type='@' const='true'/>
+<constant name='kIMKCommandClientName' declared_type='NSString*' type='@' const='true'/>
+<constant name='kIMKCommandMenuItemName' declared_type='NSString*' type='@' const='true'/>
 <enum name='kIMKLocateCandidatesAboveHint' value='1'/>
 <enum name='kIMKLocateCandidatesBelowHint' value='2'/>
 <enum name='kIMKLocateCandidatesLeftHint' value='3'/>
@@ -21,62 +20,334 @@
 <enum name='kIMKSingleColumnScrollingCandidatePanel' value='1'/>
 <enum name='kIMKSingleRowSteppingCandidatePanel' value='3'/>
 <class name='IMKCandidates'>
+<method selector='attributes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
 <method selector='dismissesAutomatically'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hide'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithServer:panelType:'>
+<arg name='server' declared_type='IMKServer*' type='@' index='0'/>
+<arg name='panelType' declared_type='IMKCandidatePanelType' type='I' type64='Q' index='1'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='isVisible'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='panelType'>
+<retval declared_type='IMKCandidatePanelType' type='I' type64='Q'/>
+</method>
+<method selector='selectionKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='selectionKeysKeylayout'>
+<retval declared_type='TISInputSourceRef' type='^{__TISInputSource=}'/>
+</method>
+<method selector='setAttributes:'>
+<arg name='attributes' declared_type='NSDictionary*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setDismissesAutomatically:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPanelType:'>
+<arg name='panelType' declared_type='IMKCandidatePanelType' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSelectionKeys:'>
+<arg name='keyCodes' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSelectionKeysKeylayout:'>
+<arg name='layout' declared_type='TISInputSourceRef' type='^{__TISInputSource=}' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='show:'>
+<arg name='locationHint' declared_type='IMKCandidatesLocationHint' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showAnnotation:'>
+<arg name='annotationString' declared_type='NSAttributedString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateCandidates'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IMKInputController'>
+<method selector='annotationSelected:forCandidate:'>
+<arg name='annotationString' declared_type='NSAttributedString*' type='@' index='0'/>
+<arg name='candidateString' declared_type='NSAttributedString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelComposition'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='candidateSelected:'>
+<arg name='candidateString' declared_type='NSAttributedString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='candidateSelectionChanged:'>
+<arg name='candidateString' declared_type='NSAttributedString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='client'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='compositionAttributesAtRange:'>
+<arg name='range' declared_type='NSRange' type='{_NSRange=II}' type64='{_NSRange=QQ}' index='0'/>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='doCommandBySelector:commandDictionary:'>
+<arg name='aSelector' declared_type='SEL' type=':' index='0'/>
+<arg name='infoDictionary' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='hidePalettes'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithServer:delegate:client:'>
+<arg name='server' declared_type='IMKServer*' type='@' index='0'/>
+<arg name='delegate' declared_type='id' type='@' index='1'/>
+<arg name='inputClient' declared_type='id' type='@' index='2'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='markForStyle:atRange:'>
+<arg name='style' declared_type='NSInteger' type='i' type64='q' index='0'/>
+<arg name='range' declared_type='NSRange' type='{_NSRange=II}' type64='{_NSRange=QQ}' index='1'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='menu'>
+<retval declared_type='NSMenu*' type='@'/>
+</method>
+<method selector='replacementRange'>
+<retval declared_type='NSRange' type='{_NSRange=II}' type64='{_NSRange=QQ}'/>
+</method>
+<method selector='selectionRange'>
+<retval declared_type='NSRange' type='{_NSRange=II}' type64='{_NSRange=QQ}'/>
+</method>
+<method selector='server'>
+<retval declared_type='IMKServer*' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='newDelegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateComposition'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IMKServer'>
+<method selector='bundle'>
+<retval declared_type='NSBundle*' type='@'/>
+</method>
+<method selector='initWithName:bundleIdentifier:'>
+<arg name='name' declared_type='NSString*' type='@' index='0'/>
+<arg name='bundleIdentifier' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithName:controllerClass:delegateClass:'>
+<arg name='name' declared_type='NSString*' type='@' index='0'/>
+<arg name='controllerClassID' declared_type='Class' type='#' index='1'/>
+<arg name='delegateClassID' declared_type='Class' type='#' index='2'/>
+<retval declared_type='id' type='@'/>
 </method>
 </class>
 <class name='NSObject'>
+<method selector='activateServer:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='candidates:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='commitComposition:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='composedString:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='deactivateServer:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='didCommandBySelector:client:'>
-<retval type='B'/>
+<arg name='aSelector' declared_type='SEL' type=':' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='handleEvent:client:'>
-<retval type='B'/>
+<arg name='event' declared_type='NSEvent*' type='@' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='inputText:client:'>
-<retval type='B'/>
+<arg name='string' declared_type='NSString*' type='@' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='inputText:key:modifiers:client:'>
-<retval type='B'/>
+<arg name='string' declared_type='NSString*' type='@' index='0'/>
+<arg name='keyCode' declared_type='NSInteger' type='i' type64='q' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='sender' declared_type='id' type='@' index='3'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='modes:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSDictionary*' type='@'/>
 </method>
 <method selector='mouseDownOnCharacterIndex:coordinate:withModifier:continueTracking:client:'>
-<arg type='^B' index='3' type_modifier='n'/>
-<retval type='B'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='keepTracking' declared_type='BOOL*' type='^B' index='3' type_modifier='n'/>
+<arg name='sender' declared_type='id' type='@' index='4'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='mouseMovedOnCharacterIndex:coordinate:withModifier:client:'>
-<retval type='B'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='sender' declared_type='id' type='@' index='3'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='mouseUpOnCharacterIndex:coordinate:withModifier:client:'>
-<retval type='B'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='sender' declared_type='id' type='@' index='3'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='originalString:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+<method selector='recognizedEvents:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setValue:forTag:client:'>
+<arg name='value' declared_type='id' type='@' index='0'/>
+<arg name='tag' declared_type='long' type='l' type64='q' index='1'/>
+<arg name='sender' declared_type='id' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showPreferences:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='valueForTag:client:'>
+<arg name='tag' declared_type='long' type='l' type64='q' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
 </method>
 </class>
 <informal_protocol name='IMKMouseHandling'>
-<method type='B32@0:4I8{_NSPoint=ff}12I20^B24@28' type64='B64@0:8Q16{CGPoint=dd}24Q40^B48@56' selector='mouseDownOnCharacterIndex:coordinate:withModifier:continueTracking:client:'/>
-<method type='B28@0:4I8{_NSPoint=ff}12I20@24' type64='B56@0:8Q16{CGPoint=dd}24Q40@48' selector='mouseMovedOnCharacterIndex:coordinate:withModifier:client:'/>
-<method type='B28@0:4I8{_NSPoint=ff}12I20@24' type64='B56@0:8Q16{CGPoint=dd}24Q40@48' selector='mouseUpOnCharacterIndex:coordinate:withModifier:client:'/>
+<method type='B32@0:4I8{_NSPoint=ff}12I20^B24@28' type64='B64@0:8Q16{CGPoint=dd}24Q40^B48@56' selector='mouseDownOnCharacterIndex:coordinate:withModifier:continueTracking:client:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='keepTracking' declared_type='BOOL*' type='^B' index='3' type_modifier='n'/>
+<arg name='sender' declared_type='id' type='@' index='4'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B28@0:4I8{_NSPoint=ff}12I20@24' type64='B56@0:8Q16{CGPoint=dd}24Q40@48' selector='mouseMovedOnCharacterIndex:coordinate:withModifier:client:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='sender' declared_type='id' type='@' index='3'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B28@0:4I8{_NSPoint=ff}12I20@24' type64='B56@0:8Q16{CGPoint=dd}24Q40@48' selector='mouseUpOnCharacterIndex:coordinate:withModifier:client:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='sender' declared_type='id' type='@' index='3'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
 </informal_protocol>
 <informal_protocol name='IMKServerInput'>
-<method type='@12@0:4@8' type64='@24@0:8@16' selector='candidates:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='commitComposition:'/>
-<method type='@12@0:4@8' type64='@24@0:8@16' selector='composedString:'/>
-<method type='B16@0:4:8@12' type64='B32@0:8:16@24' selector='didCommandBySelector:client:'/>
-<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='handleEvent:client:'/>
-<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='inputText:client:'/>
-<method type='B24@0:4@8i12I16@20' type64='B48@0:8@16q24Q32@40' selector='inputText:key:modifiers:client:'/>
-<method type='@12@0:4@8' type64='@24@0:8@16' selector='originalString:'/>
+<method type='@12@0:4@8' type64='@24@0:8@16' selector='candidates:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='commitComposition:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@12@0:4@8' type64='@24@0:8@16' selector='composedString:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='B16@0:4:8@12' type64='B32@0:8:16@24' selector='didCommandBySelector:client:'>
+<arg name='aSelector' declared_type='SEL' type=':' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='handleEvent:client:'>
+<arg name='event' declared_type='NSEvent*' type='@' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='inputText:client:'>
+<arg name='string' declared_type='NSString*' type='@' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B24@0:4@8i12I16@20' type64='B48@0:8@16q24Q32@40' selector='inputText:key:modifiers:client:'>
+<arg name='string' declared_type='NSString*' type='@' index='0'/>
+<arg name='keyCode' declared_type='NSInteger' type='i' type64='q' index='1'/>
+<arg name='flags' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='sender' declared_type='id' type='@' index='3'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='@12@0:4@8' type64='@24@0:8@16' selector='originalString:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
 </informal_protocol>
 <informal_protocol name='IMKStateSetting'>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='activateServer:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='deactivateServer:'/>
-<method type='@12@0:4@8' type64='@24@0:8@16' selector='modes:'/>
-<method type='I12@0:4@8' type64='Q24@0:8@16' selector='recognizedEvents:'/>
-<method type='v20@0:4@8l12@16' type64='v40@0:8@16q24@32' selector='setValue:forTag:client:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='showPreferences:'/>
-<method type='@16@0:4l8@12' type64='@32@0:8q16@24' selector='valueForTag:client:'/>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='activateServer:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='deactivateServer:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@12@0:4@8' type64='@24@0:8@16' selector='modes:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method type='I12@0:4@8' type64='Q24@0:8@16' selector='recognizedEvents:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='v20@0:4@8l12@16' type64='v40@0:8@16q24@32' selector='setValue:forTag:client:'>
+<arg name='value' declared_type='id' type='@' index='0'/>
+<arg name='tag' declared_type='long' type='l' type64='q' index='1'/>
+<arg name='sender' declared_type='id' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='showPreferences:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@16@0:4l8@12' type64='@32@0:8q16@24' selector='valueForTag:client:'>
+<arg name='tag' declared_type='long' type='l' type64='q' index='0'/>
+<arg name='sender' declared_type='id' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
 </informal_protocol>
 </signatures>

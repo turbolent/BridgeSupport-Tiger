@@ -1,100 +1,576 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
-<struct name='CM2Header' type='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}' type64='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}'/>
-<struct name='CM2Profile' type='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}' type64='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}'/>
-<struct name='CM2ProfilePtr' type='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}' type64='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}'/>
-<struct name='CM4Header' type='{CM4Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;digest&quot;[16C]&quot;reserved&quot;[28c]}' type64='{CM4Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;digest&quot;[16C]&quot;reserved&quot;[28c]}'/>
-<struct name='CMAdaptationMatrixType' type='{CMAdaptationMatrixType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;adaptationMatrix&quot;[9l]}' type64='{CMAdaptationMatrixType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;adaptationMatrix&quot;[9i]}'/>
-<struct name='CMBitmap' type='{CMBitmap=&quot;image&quot;*&quot;width&quot;I&quot;height&quot;I&quot;rowBytes&quot;I&quot;pixelSize&quot;I&quot;space&quot;I&quot;user1&quot;I&quot;user2&quot;I}' type64='{CMBitmap=&quot;image&quot;*&quot;width&quot;Q&quot;height&quot;Q&quot;rowBytes&quot;Q&quot;pixelSize&quot;Q&quot;space&quot;I&quot;user1&quot;I&quot;user2&quot;I}'/>
-<struct name='CMBufferLocation' type='{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I}'/>
-<struct name='CMCMYColor' type='{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}'/>
-<struct name='CMCMYKColor' type='{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}'/>
-<struct name='CMConcatProfileSet' type='{CMConcatProfileSet=&quot;keyIndex&quot;S&quot;count&quot;S&quot;profileSet&quot;[1^{OpaqueCMProfileRef}]}'/>
-<struct name='CMCurveType' type='{CMCurveType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;countValue&quot;I&quot;data&quot;[1S]}'/>
-<struct name='CMDataType' type='{CMDataType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;dataFlag&quot;I&quot;data&quot;[1c]}'/>
-<struct name='CMDateTime' type='{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}'/>
-<struct name='CMDateTimeType' type='{CMDateTimeType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}}'/>
-<struct name='CMDeviceInfo' type='{CMDeviceInfo=&quot;dataVersion&quot;I&quot;deviceClass&quot;I&quot;deviceID&quot;I&quot;deviceScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;deviceState&quot;I&quot;defaultProfileID&quot;I&quot;deviceName&quot;^^{__CFDictionary}&quot;profileCount&quot;I&quot;reserved&quot;I}'/>
-<struct name='CMDeviceInfoPtr' type='{CMDeviceInfo=&quot;dataVersion&quot;I&quot;deviceClass&quot;I&quot;deviceID&quot;I&quot;deviceScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;deviceState&quot;I&quot;defaultProfileID&quot;I&quot;deviceName&quot;^^{__CFDictionary}&quot;profileCount&quot;I&quot;reserved&quot;I}'/>
-<struct name='CMDeviceProfileArray' type='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}' type64='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}'/>
-<struct name='CMDeviceProfileArrayPtr' type='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}' type64='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}'/>
-<struct name='CMDeviceProfileInfo' type='{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}' type64='{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}'/>
-<struct name='CMDeviceProfileScope' type='{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}'/>
-<struct name='CMDeviceScope' type='{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}'/>
-<struct name='CMFixedXYColor' type='{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}'/>
-<struct name='CMFixedXYZColor' type='{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}'/>
-<struct name='CMFloatBitmap' type='{CMFloatBitmap=&quot;version&quot;L&quot;buffers&quot;[16^f]&quot;height&quot;I&quot;width&quot;I&quot;rowStride&quot;i&quot;colStride&quot;i&quot;space&quot;I&quot;flags&quot;i}' type64='{CMFloatBitmap=&quot;version&quot;Q&quot;buffers&quot;[16^f]&quot;height&quot;Q&quot;width&quot;Q&quot;rowStride&quot;q&quot;colStride&quot;q&quot;space&quot;I&quot;flags&quot;i}'/>
-<struct name='CMGrayColor' type='{CMGrayColor=&quot;gray&quot;S}'/>
-<struct name='CMHLSColor' type='{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}'/>
-<struct name='CMHSVColor' type='{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}'/>
-<struct name='CMHandleLocation' type='{CMHandleLocation=&quot;h&quot;^*}'/>
-<struct name='CMIntentCRDVMSize' type='{CMIntentCRDVMSize=&quot;renderingIntent&quot;I&quot;VMSize&quot;I}'/>
-<struct name='CMLabColor' type='{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}'/>
-<struct name='CMLut16Type' type='{CMLut16Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3l]]&quot;inputTableEntries&quot;S&quot;outputTableEntries&quot;S&quot;inputTable&quot;[1S]}' type64='{CMLut16Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3i]]&quot;inputTableEntries&quot;S&quot;outputTableEntries&quot;S&quot;inputTable&quot;[1S]}'/>
-<struct name='CMLut8Type' type='{CMLut8Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3l]]&quot;inputTable&quot;[1C]}' type64='{CMLut8Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3i]]&quot;inputTable&quot;[1C]}'/>
-<struct name='CMLuvColor' type='{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}'/>
-<struct name='CMMInfo' type='{CMMInfo=&quot;dataSize&quot;I&quot;CMMType&quot;I&quot;CMMMfr&quot;I&quot;CMMVersion&quot;I&quot;ASCIIName&quot;[32C]&quot;ASCIIDesc&quot;[256C]&quot;UniCodeNameCount&quot;I&quot;UniCodeName&quot;[32S]&quot;UniCodeDescCount&quot;I&quot;UniCodeDesc&quot;[256S]}' type64='{CMMInfo=&quot;dataSize&quot;Q&quot;CMMType&quot;I&quot;CMMMfr&quot;I&quot;CMMVersion&quot;I&quot;ASCIIName&quot;[32C]&quot;ASCIIDesc&quot;[256C]&quot;UniCodeNameCount&quot;Q&quot;UniCodeName&quot;[32S]&quot;UniCodeDescCount&quot;Q&quot;UniCodeDesc&quot;[256S]}'/>
-<struct name='CMMakeAndModel' type='{CMMakeAndModel=&quot;manufacturer&quot;I&quot;model&quot;I&quot;serialNumber&quot;I&quot;manufactureDate&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;reserved4&quot;I}'/>
-<struct name='CMMakeAndModelType' type='{CMMakeAndModelType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;makeAndModel&quot;{CMMakeAndModel=&quot;manufacturer&quot;I&quot;model&quot;I&quot;serialNumber&quot;I&quot;manufactureDate&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;reserved4&quot;I}}'/>
-<struct name='CMMeasurementType' type='{CMMeasurementType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;standardObserver&quot;I&quot;backingXYZ&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;geometry&quot;I&quot;flare&quot;I&quot;illuminant&quot;I}'/>
-<struct name='CMMultiFunctCLUTType' type='{CMMultiFunctCLUTType=&quot;gridPoints&quot;[16C]&quot;entrySize&quot;C&quot;reserved&quot;[3C]&quot;data&quot;[2C]}'/>
-<struct name='CMMultiFunctLutA2BType' type='{CMMultiFunctLutType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;reserved2&quot;S&quot;offsetBcurves&quot;I&quot;offsetMatrix&quot;I&quot;offsetMcurves&quot;I&quot;offsetCLUT&quot;I&quot;offsetAcurves&quot;I&quot;data&quot;[1C]}'/>
-<struct name='CMMultiFunctLutB2AType' type='{CMMultiFunctLutType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;reserved2&quot;S&quot;offsetBcurves&quot;I&quot;offsetMatrix&quot;I&quot;offsetMcurves&quot;I&quot;offsetCLUT&quot;I&quot;offsetAcurves&quot;I&quot;data&quot;[1C]}'/>
-<struct name='CMMultiFunctLutType' type='{CMMultiFunctLutType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;reserved2&quot;S&quot;offsetBcurves&quot;I&quot;offsetMatrix&quot;I&quot;offsetMcurves&quot;I&quot;offsetCLUT&quot;I&quot;offsetAcurves&quot;I&quot;data&quot;[1C]}'/>
-<struct name='CMMultiLocalizedUniCodeEntryRec' type='{CMMultiLocalizedUniCodeEntryRec=&quot;languageCode&quot;[2c]&quot;regionCode&quot;[2c]&quot;textLength&quot;I&quot;textOffset&quot;I}'/>
-<struct name='CMMultiLocalizedUniCodeType' type='{CMMultiLocalizedUniCodeType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;entryCount&quot;I&quot;entrySize&quot;I}'/>
-<struct name='CMMultichannel5Color' type='{CMMultichannel5Color=&quot;components&quot;[5C]}'/>
-<struct name='CMMultichannel6Color' type='{CMMultichannel6Color=&quot;components&quot;[6C]}'/>
-<struct name='CMMultichannel7Color' type='{CMMultichannel7Color=&quot;components&quot;[7C]}'/>
-<struct name='CMMultichannel8Color' type='{CMMultichannel8Color=&quot;components&quot;[8C]}'/>
-<struct name='CMNamedColor' type='{CMNamedColor=&quot;namedColorIndex&quot;I}'/>
-<struct name='CMNamedColor2EntryType' type='{CMNamedColor2EntryType=&quot;rootName&quot;[32C]&quot;PCSColorCoords&quot;[3S]&quot;DeviceColorCoords&quot;[1S]}'/>
-<struct name='CMNamedColor2Type' type='{CMNamedColor2Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;vendorFlag&quot;I&quot;count&quot;I&quot;deviceChannelCount&quot;I&quot;prefixName&quot;[32C]&quot;suffixName&quot;[32C]&quot;data&quot;[1c]}'/>
-<struct name='CMNamedColorType' type='{CMNamedColorType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;vendorFlag&quot;I&quot;count&quot;I&quot;prefixName&quot;[1C]}'/>
-<struct name='CMNativeDisplayInfo' type='{CMNativeDisplayInfo=&quot;dataSize&quot;I&quot;redPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;greenPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;bluePhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;whitePoint&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;redGammaValue&quot;i&quot;greenGammaValue&quot;i&quot;blueGammaValue&quot;i&quot;gammaChannels&quot;S&quot;gammaEntryCount&quot;S&quot;gammaEntrySize&quot;S&quot;gammaData&quot;[1c]}'/>
-<struct name='CMNativeDisplayInfoType' type='{CMNativeDisplayInfoType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;nativeDisplayInfo&quot;{CMNativeDisplayInfo=&quot;dataSize&quot;I&quot;redPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;greenPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;bluePhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;whitePoint&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;redGammaValue&quot;i&quot;greenGammaValue&quot;i&quot;blueGammaValue&quot;i&quot;gammaChannels&quot;S&quot;gammaEntryCount&quot;S&quot;gammaEntrySize&quot;S&quot;gammaData&quot;[1c]}}'/>
-<struct name='CMPS2CRDVMSizeType' type='{CMPS2CRDVMSizeType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;count&quot;I&quot;intentCRD&quot;[1{CMIntentCRDVMSize=&quot;renderingIntent&quot;I&quot;VMSize&quot;I}]}'/>
-<struct name='CMParametricCurveType' type='{CMParametricCurveType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;functionType&quot;S&quot;reserved2&quot;S&quot;value&quot;[1l]}' type64='{CMParametricCurveType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;functionType&quot;S&quot;reserved2&quot;S&quot;value&quot;[1i]}'/>
-<struct name='CMPathLocation' type='{CMPathLocation=&quot;path&quot;[256c]}' type64='{CMPathLocation=&quot;path&quot;[1024c]}'/>
-<struct name='CMProfileIterateData' type='{CMProfileIterateData=&quot;dataVersion&quot;I&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;code&quot;s&quot;name&quot;[256C]&quot;location&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;uniCodeNameCount&quot;I&quot;uniCodeName&quot;^S&quot;asciiName&quot;*&quot;makeAndModel&quot;^{CMMakeAndModel}&quot;digest&quot;^[16C]}' type64='{CMProfileIterateData=&quot;dataVersion&quot;I&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;code&quot;s&quot;name&quot;[256C]&quot;location&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;uniCodeNameCount&quot;Q&quot;uniCodeName&quot;^S&quot;asciiName&quot;*&quot;makeAndModel&quot;^{CMMakeAndModel}&quot;digest&quot;^[16C]}'/>
-<struct name='CMProfileLocation' type='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}' type64='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}'/>
-<struct name='CMProfileSequenceDescType' type='{CMProfileSequenceDescType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;count&quot;I&quot;data&quot;[1c]}'/>
-<struct name='CMRGBColor' type='{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}'/>
-<struct name='CMS15Fixed16ArrayType' type='{CMS15Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1l]}' type64='{CMS15Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1i]}'/>
-<struct name='CMScreeningChannelRec' type='{CMScreeningChannelRec=&quot;frequency&quot;i&quot;angle&quot;i&quot;spotFunction&quot;I}'/>
-<struct name='CMScreeningType' type='{CMScreeningType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;screeningFlag&quot;I&quot;channelCount&quot;I&quot;channelInfo&quot;[1{CMScreeningChannelRec=&quot;frequency&quot;i&quot;angle&quot;i&quot;spotFunction&quot;I}]}'/>
-<struct name='CMSignatureType' type='{CMSignatureType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;signature&quot;I}'/>
-<struct name='CMTagElemTable' type='{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}'/>
-<struct name='CMTagRecord' type='{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}'/>
-<struct name='CMTextDescriptionType' type='{CMTextDescriptionType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;ASCIICount&quot;I&quot;ASCIIName&quot;[2C]}'/>
-<struct name='CMTextType' type='{CMTextType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;text&quot;[1C]}'/>
-<struct name='CMU16Fixed16ArrayType' type='{CMU16Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1L]}' type64='{CMU16Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1I]}'/>
-<struct name='CMUInt16ArrayType' type='{CMUInt16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1S]}'/>
-<struct name='CMUInt32ArrayType' type='{CMUInt32ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1L]}' type64='{CMUInt32ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1I]}'/>
-<struct name='CMUInt64ArrayType' type='{CMUInt64ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1L]}' type64='{CMUInt64ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1I]}'/>
-<struct name='CMUInt8ArrayType' type='{CMUInt8ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1C]}'/>
-<struct name='CMUcrBgType' type='{CMUcrBgType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;ucrCount&quot;I&quot;ucrValues&quot;[1S]}'/>
-<struct name='CMUnicodeTextType' type='{CMUnicodeTextType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;text&quot;[1S]}'/>
-<struct name='CMVideoCardGamma' type='{CMVideoCardGamma=&quot;tagType&quot;I&quot;u&quot;(?=&quot;table&quot;{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}&quot;formula&quot;{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i})}'/>
-<struct name='CMVideoCardGammaFormula' type='{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i}'/>
-<struct name='CMVideoCardGammaTable' type='{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}'/>
-<struct name='CMVideoCardGammaType' type='{CMVideoCardGammaType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;gamma&quot;{CMVideoCardGamma=&quot;tagType&quot;I&quot;u&quot;(?=&quot;table&quot;{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}&quot;formula&quot;{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i})}}'/>
-<struct name='CMViewingConditionsType' type='{CMViewingConditionsType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;illuminant&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;surround&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;stdIlluminant&quot;I}'/>
-<struct name='CMXYZColor' type='{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}'/>
-<struct name='CMXYZType' type='{CMXYZType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;XYZ&quot;[1{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}]}'/>
-<struct name='CMYxyColor' type='{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}'/>
-<struct name='NCMConcatProfileSet' type='{NCMConcatProfileSet=&quot;cmm&quot;I&quot;flags&quot;I&quot;flagsMask&quot;I&quot;profileCount&quot;I&quot;profileSpecs&quot;[1{NCMConcatProfileSpec=&quot;renderingIntent&quot;I&quot;transformTag&quot;I&quot;profile&quot;^{OpaqueCMProfileRef}}]}'/>
-<struct name='NCMConcatProfileSpec' type='{NCMConcatProfileSpec=&quot;renderingIntent&quot;I&quot;transformTag&quot;I&quot;profile&quot;^{OpaqueCMProfileRef}}'/>
-<struct name='NCMDeviceProfileInfo' type='{NCMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;profileScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;reserved&quot;I}' type64='{NCMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;profileScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;reserved&quot;I}'/>
+<struct name='CM2Header' type='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}' type64='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}'>
+<field name='size' declared_type='UInt32' type='L' type64='I'/>
+<field name='CMMType' declared_type='OSType' type='L' type64='I'/>
+<field name='profileVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='profileClass' declared_type='OSType' type='L' type64='I'/>
+<field name='dataColorSpace' declared_type='OSType' type='L' type64='I'/>
+<field name='profileConnectionSpace' declared_type='OSType' type='L' type64='I'/>
+<field name='dateTime' declared_type='CMDateTime' type='{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}'/>
+<field name='CS2profileSignature' declared_type='OSType' type='L' type64='I'/>
+<field name='platform' declared_type='OSType' type='L' type64='I'/>
+<field name='flags' declared_type='UInt32' type='L' type64='I'/>
+<field name='deviceManufacturer' declared_type='OSType' type='L' type64='I'/>
+<field name='deviceModel' declared_type='UInt32' type='L' type64='I'/>
+<field name='deviceAttributes' declared_type='UInt32*' type='[2L]' type64='[2I]'/>
+<field name='renderingIntent' declared_type='UInt32' type='L' type64='I'/>
+<field name='white' declared_type='CMFixedXYZColor' type='{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}'/>
+<field name='creator' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='char*' type='[44c]'/>
+</struct>
+<struct name='CM2Profile' type='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}' type64='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}'>
+<field name='header' declared_type='CM2Header' type='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}' type64='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}'/>
+<field name='tagTable' declared_type='CMTagElemTable' type='{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}'/>
+<field name='elemData' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='CM2ProfilePtr' type='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}' type64='{CM2Profile=&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;tagTable&quot;{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}&quot;elemData&quot;[1c]}'>
+<field name='header' declared_type='CM2Header' type='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}' type64='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}'/>
+<field name='tagTable' declared_type='CMTagElemTable' type='{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}'/>
+<field name='elemData' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='CM4Header' type='{CM4Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;digest&quot;[16C]&quot;reserved&quot;[28c]}' type64='{CM4Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;digest&quot;[16C]&quot;reserved&quot;[28c]}'>
+<field name='size' declared_type='UInt32' type='L' type64='I'/>
+<field name='CMMType' declared_type='OSType' type='L' type64='I'/>
+<field name='profileVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='profileClass' declared_type='OSType' type='L' type64='I'/>
+<field name='dataColorSpace' declared_type='OSType' type='L' type64='I'/>
+<field name='profileConnectionSpace' declared_type='OSType' type='L' type64='I'/>
+<field name='dateTime' declared_type='CMDateTime' type='{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}'/>
+<field name='CS2profileSignature' declared_type='OSType' type='L' type64='I'/>
+<field name='platform' declared_type='OSType' type='L' type64='I'/>
+<field name='flags' declared_type='UInt32' type='L' type64='I'/>
+<field name='deviceManufacturer' declared_type='OSType' type='L' type64='I'/>
+<field name='deviceModel' declared_type='UInt32' type='L' type64='I'/>
+<field name='deviceAttributes' declared_type='UInt32*' type='[2L]' type64='[2I]'/>
+<field name='renderingIntent' declared_type='UInt32' type='L' type64='I'/>
+<field name='white' declared_type='CMFixedXYZColor' type='{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}'/>
+<field name='creator' declared_type='OSType' type='L' type64='I'/>
+<field name='digest' declared_type='CMProfileMD5' type='[16C]'/>
+<field name='reserved' declared_type='char*' type='[28c]'/>
+</struct>
+<struct name='CMAdaptationMatrixType' type='{CMAdaptationMatrixType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;adaptationMatrix&quot;[9l]}' type64='{CMAdaptationMatrixType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;adaptationMatrix&quot;[9i]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='adaptationMatrix' declared_type='Fixed*' type='[9l]' type64='[9i]'/>
+</struct>
+<struct name='CMBitmap' type='{CMBitmap=&quot;image&quot;*&quot;width&quot;I&quot;height&quot;I&quot;rowBytes&quot;I&quot;pixelSize&quot;I&quot;space&quot;I&quot;user1&quot;I&quot;user2&quot;I}' type64='{CMBitmap=&quot;image&quot;*&quot;width&quot;Q&quot;height&quot;Q&quot;rowBytes&quot;Q&quot;pixelSize&quot;Q&quot;space&quot;I&quot;user1&quot;I&quot;user2&quot;I}'>
+<field name='image' declared_type='char*' type='*'/>
+<field name='width' declared_type='size_t' type='L' type64='Q'/>
+<field name='height' declared_type='size_t' type='L' type64='Q'/>
+<field name='rowBytes' declared_type='size_t' type='L' type64='Q'/>
+<field name='pixelSize' declared_type='size_t' type='L' type64='Q'/>
+<field name='space' declared_type='CMBitmapColorSpace' type='L' type64='I'/>
+<field name='user1' declared_type='UInt32' type='L' type64='I'/>
+<field name='user2' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMBufferLocation' type='{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I}'>
+<field name='buffer' declared_type='void*' type='^v'/>
+<field name='size' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMCMYColor' type='{CMCMYColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S}'>
+<field name='cyan' declared_type='UInt16' type='S'/>
+<field name='magenta' declared_type='UInt16' type='S'/>
+<field name='yellow' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMCMYKColor' type='{CMCMYKColor=&quot;cyan&quot;S&quot;magenta&quot;S&quot;yellow&quot;S&quot;black&quot;S}'>
+<field name='cyan' declared_type='UInt16' type='S'/>
+<field name='magenta' declared_type='UInt16' type='S'/>
+<field name='yellow' declared_type='UInt16' type='S'/>
+<field name='black' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMConcatProfileSet' type='{CMConcatProfileSet=&quot;keyIndex&quot;S&quot;count&quot;S&quot;profileSet&quot;[1^{OpaqueCMProfileRef}]}'>
+<field name='keyIndex' declared_type='UInt16' type='S'/>
+<field name='count' declared_type='UInt16' type='S'/>
+<field name='profileSet' declared_type='CMProfileRef*' type='[1^{OpaqueCMProfileRef}]'/>
+</struct>
+<struct name='CMCurveType' type='{CMCurveType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;countValue&quot;I&quot;data&quot;[1S]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='countValue' declared_type='UInt32' type='L' type64='I'/>
+<field name='data' declared_type='UInt16*' type='[1S]'/>
+</struct>
+<struct name='CMDataType' type='{CMDataType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;dataFlag&quot;I&quot;data&quot;[1c]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataFlag' declared_type='UInt32' type='L' type64='I'/>
+<field name='data' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='CMDateTime' type='{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}'>
+<field name='year' declared_type='UInt16' type='S'/>
+<field name='month' declared_type='UInt16' type='S'/>
+<field name='dayOfTheMonth' declared_type='UInt16' type='S'/>
+<field name='hours' declared_type='UInt16' type='S'/>
+<field name='minutes' declared_type='UInt16' type='S'/>
+<field name='seconds' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMDateTimeType' type='{CMDateTimeType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='dateTime' declared_type='CMDateTime' type='{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}'/>
+</struct>
+<struct name='CMDeviceInfo' type='{CMDeviceInfo=&quot;dataVersion&quot;I&quot;deviceClass&quot;I&quot;deviceID&quot;I&quot;deviceScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;deviceState&quot;I&quot;defaultProfileID&quot;I&quot;deviceName&quot;^^{__CFDictionary}&quot;profileCount&quot;I&quot;reserved&quot;I}'>
+<field name='dataVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<field name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<field name='deviceScope' declared_type='CMDeviceScope' type='{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}'/>
+<field name='deviceState' declared_type='CMDeviceState' type='L' type64='I'/>
+<field name='defaultProfileID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<field name='deviceName' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<field name='profileCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMDeviceInfoPtr' type='{CMDeviceInfo=&quot;dataVersion&quot;I&quot;deviceClass&quot;I&quot;deviceID&quot;I&quot;deviceScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;deviceState&quot;I&quot;defaultProfileID&quot;I&quot;deviceName&quot;^^{__CFDictionary}&quot;profileCount&quot;I&quot;reserved&quot;I}'>
+<field name='dataVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<field name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<field name='deviceScope' declared_type='CMDeviceScope' type='{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}'/>
+<field name='deviceState' declared_type='CMDeviceState' type='L' type64='I'/>
+<field name='defaultProfileID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<field name='deviceName' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<field name='profileCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMDeviceProfileArray' type='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}' type64='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}'>
+<field name='profileCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='profiles' declared_type='CMDeviceProfileInfo*' type='[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]' type64='[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]'/>
+</struct>
+<struct name='CMDeviceProfileArrayPtr' type='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}' type64='{CMDeviceProfileArray=&quot;profileCount&quot;I&quot;profiles&quot;[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]}'>
+<field name='profileCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='profiles' declared_type='CMDeviceProfileInfo*' type='[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]' type64='[1{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}]'/>
+</struct>
+<struct name='CMDeviceProfileInfo' type='{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}' type64='{CMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;reserved&quot;I}'>
+<field name='dataVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='profileID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<field name='profileLoc' declared_type='CMProfileLocation' type='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}' type64='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}'/>
+<field name='profileName' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMDeviceProfileScope' type='{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}'>
+<field name='deviceUser' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='deviceHost' declared_type='CFStringRef' type='^{__CFString=}'/>
+</struct>
+<struct name='CMDeviceScope' type='{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}'>
+<field name='deviceUser' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='deviceHost' declared_type='CFStringRef' type='^{__CFString=}'/>
+</struct>
+<struct name='CMFixedXYColor' type='{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}'>
+<field name='x' declared_type='Fixed' type='l' type64='i'/>
+<field name='y' declared_type='Fixed' type='l' type64='i'/>
+</struct>
+<struct name='CMFixedXYZColor' type='{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}'>
+<field name='X' declared_type='Fixed' type='l' type64='i'/>
+<field name='Y' declared_type='Fixed' type='l' type64='i'/>
+<field name='Z' declared_type='Fixed' type='l' type64='i'/>
+</struct>
+<struct name='CMFloatBitmap' type='{CMFloatBitmap=&quot;version&quot;L&quot;buffers&quot;[16^f]&quot;height&quot;I&quot;width&quot;I&quot;rowStride&quot;i&quot;colStride&quot;i&quot;space&quot;I&quot;flags&quot;i}' type64='{CMFloatBitmap=&quot;version&quot;Q&quot;buffers&quot;[16^f]&quot;height&quot;Q&quot;width&quot;Q&quot;rowStride&quot;q&quot;colStride&quot;q&quot;space&quot;I&quot;flags&quot;i}'>
+<field name='version' declared_type='unsigned long' type='L' type64='Q'/>
+<field name='buffers' declared_type='float**' type='[16^f]'/>
+<field name='height' declared_type='size_t' type='L' type64='Q'/>
+<field name='width' declared_type='size_t' type='L' type64='Q'/>
+<field name='rowStride' declared_type='ptrdiff_t' type='i' type64='q'/>
+<field name='colStride' declared_type='ptrdiff_t' type='i' type64='q'/>
+<field name='space' declared_type='OSType' type='L' type64='I'/>
+<field name='flags' declared_type='CMFloatBitmapFlags' type='i'/>
+</struct>
+<struct name='CMGrayColor' type='{CMGrayColor=&quot;gray&quot;S}'>
+<field name='gray' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMHLSColor' type='{CMHLSColor=&quot;hue&quot;S&quot;lightness&quot;S&quot;saturation&quot;S}'>
+<field name='hue' declared_type='UInt16' type='S'/>
+<field name='lightness' declared_type='UInt16' type='S'/>
+<field name='saturation' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMHSVColor' type='{CMHSVColor=&quot;hue&quot;S&quot;saturation&quot;S&quot;value&quot;S}'>
+<field name='hue' declared_type='UInt16' type='S'/>
+<field name='saturation' declared_type='UInt16' type='S'/>
+<field name='value' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMHandleLocation' type='{CMHandleLocation=&quot;h&quot;^*}'>
+<field name='h' declared_type='Handle' type='^*'/>
+</struct>
+<struct name='CMIntentCRDVMSize' type='{CMIntentCRDVMSize=&quot;renderingIntent&quot;I&quot;VMSize&quot;I}'>
+<field name='renderingIntent' declared_type='UInt32' type='L' type64='I'/>
+<field name='VMSize' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMLabColor' type='{CMLabColor=&quot;L&quot;S&quot;a&quot;S&quot;b&quot;S}'>
+<field name='L' declared_type='UInt16' type='S'/>
+<field name='a' declared_type='UInt16' type='S'/>
+<field name='b' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMLut16Type' type='{CMLut16Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3l]]&quot;inputTableEntries&quot;S&quot;outputTableEntries&quot;S&quot;inputTable&quot;[1S]}' type64='{CMLut16Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3i]]&quot;inputTableEntries&quot;S&quot;outputTableEntries&quot;S&quot;inputTable&quot;[1S]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='inputChannels' declared_type='UInt8' type='C'/>
+<field name='outputChannels' declared_type='UInt8' type='C'/>
+<field name='gridPoints' declared_type='UInt8' type='C'/>
+<field name='reserved2' declared_type='UInt8' type='C'/>
+<field name='matrix' declared_type='Fixed**' type='[3[3l]]' type64='[3[3i]]'/>
+<field name='inputTableEntries' declared_type='UInt16' type='S'/>
+<field name='outputTableEntries' declared_type='UInt16' type='S'/>
+<field name='inputTable' declared_type='UInt16*' type='[1S]'/>
+</struct>
+<struct name='CMLut8Type' type='{CMLut8Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3l]]&quot;inputTable&quot;[1C]}' type64='{CMLut8Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;gridPoints&quot;C&quot;reserved2&quot;C&quot;matrix&quot;[3[3i]]&quot;inputTable&quot;[1C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='inputChannels' declared_type='UInt8' type='C'/>
+<field name='outputChannels' declared_type='UInt8' type='C'/>
+<field name='gridPoints' declared_type='UInt8' type='C'/>
+<field name='reserved2' declared_type='UInt8' type='C'/>
+<field name='matrix' declared_type='Fixed**' type='[3[3l]]' type64='[3[3i]]'/>
+<field name='inputTable' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='CMLuvColor' type='{CMLuvColor=&quot;L&quot;S&quot;u&quot;S&quot;v&quot;S}'>
+<field name='L' declared_type='UInt16' type='S'/>
+<field name='u' declared_type='UInt16' type='S'/>
+<field name='v' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMMInfo' type='{CMMInfo=&quot;dataSize&quot;I&quot;CMMType&quot;I&quot;CMMMfr&quot;I&quot;CMMVersion&quot;I&quot;ASCIIName&quot;[32C]&quot;ASCIIDesc&quot;[256C]&quot;UniCodeNameCount&quot;I&quot;UniCodeName&quot;[32S]&quot;UniCodeDescCount&quot;I&quot;UniCodeDesc&quot;[256S]}' type64='{CMMInfo=&quot;dataSize&quot;Q&quot;CMMType&quot;I&quot;CMMMfr&quot;I&quot;CMMVersion&quot;I&quot;ASCIIName&quot;[32C]&quot;ASCIIDesc&quot;[256C]&quot;UniCodeNameCount&quot;Q&quot;UniCodeName&quot;[32S]&quot;UniCodeDescCount&quot;Q&quot;UniCodeDesc&quot;[256S]}'>
+<field name='dataSize' declared_type='size_t' type='L' type64='Q'/>
+<field name='CMMType' declared_type='OSType' type='L' type64='I'/>
+<field name='CMMMfr' declared_type='OSType' type='L' type64='I'/>
+<field name='CMMVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='ASCIIName' declared_type='unsigned char*' type='[32C]'/>
+<field name='ASCIIDesc' declared_type='unsigned char*' type='[256C]'/>
+<field name='UniCodeNameCount' declared_type='UniCharCount' type='L' type64='Q'/>
+<field name='UniCodeName' declared_type='UniChar*' type='[32S]'/>
+<field name='UniCodeDescCount' declared_type='UniCharCount' type='L' type64='Q'/>
+<field name='UniCodeDesc' declared_type='UniChar*' type='[256S]'/>
+</struct>
+<struct name='CMMakeAndModel' type='{CMMakeAndModel=&quot;manufacturer&quot;I&quot;model&quot;I&quot;serialNumber&quot;I&quot;manufactureDate&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;reserved4&quot;I}'>
+<field name='manufacturer' declared_type='OSType' type='L' type64='I'/>
+<field name='model' declared_type='UInt32' type='L' type64='I'/>
+<field name='serialNumber' declared_type='UInt32' type='L' type64='I'/>
+<field name='manufactureDate' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved1' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved2' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved3' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved4' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMMakeAndModelType' type='{CMMakeAndModelType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;makeAndModel&quot;{CMMakeAndModel=&quot;manufacturer&quot;I&quot;model&quot;I&quot;serialNumber&quot;I&quot;manufactureDate&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;reserved4&quot;I}}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='makeAndModel' declared_type='CMMakeAndModel' type='{CMMakeAndModel=&quot;manufacturer&quot;I&quot;model&quot;I&quot;serialNumber&quot;I&quot;manufactureDate&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;reserved4&quot;I}'/>
+</struct>
+<struct name='CMMeasurementType' type='{CMMeasurementType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;standardObserver&quot;I&quot;backingXYZ&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;geometry&quot;I&quot;flare&quot;I&quot;illuminant&quot;I}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='standardObserver' declared_type='UInt32' type='L' type64='I'/>
+<field name='backingXYZ' declared_type='CMFixedXYZColor' type='{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}'/>
+<field name='geometry' declared_type='UInt32' type='L' type64='I'/>
+<field name='flare' declared_type='UInt32' type='L' type64='I'/>
+<field name='illuminant' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMMultiFunctCLUTType' type='{CMMultiFunctCLUTType=&quot;gridPoints&quot;[16C]&quot;entrySize&quot;C&quot;reserved&quot;[3C]&quot;data&quot;[2C]}'>
+<field name='gridPoints' declared_type='UInt8*' type='[16C]'/>
+<field name='entrySize' declared_type='UInt8' type='C'/>
+<field name='reserved' declared_type='UInt8*' type='[3C]'/>
+<field name='data' declared_type='UInt8*' type='[2C]'/>
+</struct>
+<struct name='CMMultiFunctLutA2BType' type='{CMMultiFunctLutType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;reserved2&quot;S&quot;offsetBcurves&quot;I&quot;offsetMatrix&quot;I&quot;offsetMcurves&quot;I&quot;offsetCLUT&quot;I&quot;offsetAcurves&quot;I&quot;data&quot;[1C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='inputChannels' declared_type='UInt8' type='C'/>
+<field name='outputChannels' declared_type='UInt8' type='C'/>
+<field name='reserved2' declared_type='UInt16' type='S'/>
+<field name='offsetBcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetMatrix' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetMcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetCLUT' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetAcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='data' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='CMMultiFunctLutB2AType' type='{CMMultiFunctLutType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;reserved2&quot;S&quot;offsetBcurves&quot;I&quot;offsetMatrix&quot;I&quot;offsetMcurves&quot;I&quot;offsetCLUT&quot;I&quot;offsetAcurves&quot;I&quot;data&quot;[1C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='inputChannels' declared_type='UInt8' type='C'/>
+<field name='outputChannels' declared_type='UInt8' type='C'/>
+<field name='reserved2' declared_type='UInt16' type='S'/>
+<field name='offsetBcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetMatrix' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetMcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetCLUT' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetAcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='data' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='CMMultiFunctLutType' type='{CMMultiFunctLutType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;inputChannels&quot;C&quot;outputChannels&quot;C&quot;reserved2&quot;S&quot;offsetBcurves&quot;I&quot;offsetMatrix&quot;I&quot;offsetMcurves&quot;I&quot;offsetCLUT&quot;I&quot;offsetAcurves&quot;I&quot;data&quot;[1C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='inputChannels' declared_type='UInt8' type='C'/>
+<field name='outputChannels' declared_type='UInt8' type='C'/>
+<field name='reserved2' declared_type='UInt16' type='S'/>
+<field name='offsetBcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetMatrix' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetMcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetCLUT' declared_type='UInt32' type='L' type64='I'/>
+<field name='offsetAcurves' declared_type='UInt32' type='L' type64='I'/>
+<field name='data' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='CMMultiLocalizedUniCodeEntryRec' type='{CMMultiLocalizedUniCodeEntryRec=&quot;languageCode&quot;[2c]&quot;regionCode&quot;[2c]&quot;textLength&quot;I&quot;textOffset&quot;I}'>
+<field name='languageCode' declared_type='char*' type='[2c]'/>
+<field name='regionCode' declared_type='char*' type='[2c]'/>
+<field name='textLength' declared_type='UInt32' type='L' type64='I'/>
+<field name='textOffset' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMMultiLocalizedUniCodeType' type='{CMMultiLocalizedUniCodeType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;entryCount&quot;I&quot;entrySize&quot;I}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='entryCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='entrySize' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMMultichannel5Color' type='{CMMultichannel5Color=&quot;components&quot;[5C]}'>
+<field name='components' declared_type='UInt8*' type='[5C]'/>
+</struct>
+<struct name='CMMultichannel6Color' type='{CMMultichannel6Color=&quot;components&quot;[6C]}'>
+<field name='components' declared_type='UInt8*' type='[6C]'/>
+</struct>
+<struct name='CMMultichannel7Color' type='{CMMultichannel7Color=&quot;components&quot;[7C]}'>
+<field name='components' declared_type='UInt8*' type='[7C]'/>
+</struct>
+<struct name='CMMultichannel8Color' type='{CMMultichannel8Color=&quot;components&quot;[8C]}'>
+<field name='components' declared_type='UInt8*' type='[8C]'/>
+</struct>
+<struct name='CMNamedColor' type='{CMNamedColor=&quot;namedColorIndex&quot;I}'>
+<field name='namedColorIndex' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMNamedColor2EntryType' type='{CMNamedColor2EntryType=&quot;rootName&quot;[32C]&quot;PCSColorCoords&quot;[3S]&quot;DeviceColorCoords&quot;[1S]}'>
+<field name='rootName' declared_type='UInt8*' type='[32C]'/>
+<field name='PCSColorCoords' declared_type='UInt16*' type='[3S]'/>
+<field name='DeviceColorCoords' declared_type='UInt16*' type='[1S]'/>
+</struct>
+<struct name='CMNamedColor2Type' type='{CMNamedColor2Type=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;vendorFlag&quot;I&quot;count&quot;I&quot;deviceChannelCount&quot;I&quot;prefixName&quot;[32C]&quot;suffixName&quot;[32C]&quot;data&quot;[1c]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='vendorFlag' declared_type='UInt32' type='L' type64='I'/>
+<field name='count' declared_type='UInt32' type='L' type64='I'/>
+<field name='deviceChannelCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='prefixName' declared_type='UInt8*' type='[32C]'/>
+<field name='suffixName' declared_type='UInt8*' type='[32C]'/>
+<field name='data' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='CMNamedColorType' type='{CMNamedColorType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;vendorFlag&quot;I&quot;count&quot;I&quot;prefixName&quot;[1C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='vendorFlag' declared_type='UInt32' type='L' type64='I'/>
+<field name='count' declared_type='UInt32' type='L' type64='I'/>
+<field name='prefixName' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='CMNativeDisplayInfo' type='{CMNativeDisplayInfo=&quot;dataSize&quot;I&quot;redPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;greenPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;bluePhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;whitePoint&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;redGammaValue&quot;i&quot;greenGammaValue&quot;i&quot;blueGammaValue&quot;i&quot;gammaChannels&quot;S&quot;gammaEntryCount&quot;S&quot;gammaEntrySize&quot;S&quot;gammaData&quot;[1c]}'>
+<field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='redPhosphor' declared_type='CMFixedXYColor' type='{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}'/>
+<field name='greenPhosphor' declared_type='CMFixedXYColor' type='{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}'/>
+<field name='bluePhosphor' declared_type='CMFixedXYColor' type='{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}'/>
+<field name='whitePoint' declared_type='CMFixedXYColor' type='{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}'/>
+<field name='redGammaValue' declared_type='Fixed' type='l' type64='i'/>
+<field name='greenGammaValue' declared_type='Fixed' type='l' type64='i'/>
+<field name='blueGammaValue' declared_type='Fixed' type='l' type64='i'/>
+<field name='gammaChannels' declared_type='UInt16' type='S'/>
+<field name='gammaEntryCount' declared_type='UInt16' type='S'/>
+<field name='gammaEntrySize' declared_type='UInt16' type='S'/>
+<field name='gammaData' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='CMNativeDisplayInfoType' type='{CMNativeDisplayInfoType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;nativeDisplayInfo&quot;{CMNativeDisplayInfo=&quot;dataSize&quot;I&quot;redPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;greenPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;bluePhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;whitePoint&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;redGammaValue&quot;i&quot;greenGammaValue&quot;i&quot;blueGammaValue&quot;i&quot;gammaChannels&quot;S&quot;gammaEntryCount&quot;S&quot;gammaEntrySize&quot;S&quot;gammaData&quot;[1c]}}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='nativeDisplayInfo' declared_type='CMNativeDisplayInfo' type='{CMNativeDisplayInfo=&quot;dataSize&quot;I&quot;redPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;greenPhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;bluePhosphor&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;whitePoint&quot;{CMFixedXYColor=&quot;x&quot;i&quot;y&quot;i}&quot;redGammaValue&quot;i&quot;greenGammaValue&quot;i&quot;blueGammaValue&quot;i&quot;gammaChannels&quot;S&quot;gammaEntryCount&quot;S&quot;gammaEntrySize&quot;S&quot;gammaData&quot;[1c]}'/>
+</struct>
+<struct name='CMPS2CRDVMSizeType' type='{CMPS2CRDVMSizeType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;count&quot;I&quot;intentCRD&quot;[1{CMIntentCRDVMSize=&quot;renderingIntent&quot;I&quot;VMSize&quot;I}]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='count' declared_type='UInt32' type='L' type64='I'/>
+<field name='intentCRD' declared_type='CMIntentCRDVMSize*' type='[1{CMIntentCRDVMSize=&quot;renderingIntent&quot;I&quot;VMSize&quot;I}]'/>
+</struct>
+<struct name='CMParametricCurveType' type='{CMParametricCurveType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;functionType&quot;S&quot;reserved2&quot;S&quot;value&quot;[1l]}' type64='{CMParametricCurveType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;functionType&quot;S&quot;reserved2&quot;S&quot;value&quot;[1i]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='functionType' declared_type='UInt16' type='S'/>
+<field name='reserved2' declared_type='UInt16' type='S'/>
+<field name='value' declared_type='Fixed*' type='[1l]' type64='[1i]'/>
+</struct>
+<struct name='CMPathLocation' type='{CMPathLocation=&quot;path&quot;[256c]}' type64='{CMPathLocation=&quot;path&quot;[1024c]}'>
+<field name='path' declared_type='char*' type='[256c]' type64='[1024c]'/>
+</struct>
+<struct name='CMProfileIterateData' type='{CMProfileIterateData=&quot;dataVersion&quot;I&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;code&quot;s&quot;name&quot;[256C]&quot;location&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;uniCodeNameCount&quot;I&quot;uniCodeName&quot;^S&quot;asciiName&quot;*&quot;makeAndModel&quot;^{CMMakeAndModel}&quot;digest&quot;^[16C]}' type64='{CMProfileIterateData=&quot;dataVersion&quot;I&quot;header&quot;{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}&quot;code&quot;s&quot;name&quot;[256C]&quot;location&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;uniCodeNameCount&quot;Q&quot;uniCodeName&quot;^S&quot;asciiName&quot;*&quot;makeAndModel&quot;^{CMMakeAndModel}&quot;digest&quot;^[16C]}'>
+<field name='dataVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='header' declared_type='CM2Header' type='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2L]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}' type64='{CM2Header=&quot;size&quot;I&quot;CMMType&quot;I&quot;profileVersion&quot;I&quot;profileClass&quot;I&quot;dataColorSpace&quot;I&quot;profileConnectionSpace&quot;I&quot;dateTime&quot;{CMDateTime=&quot;year&quot;S&quot;month&quot;S&quot;dayOfTheMonth&quot;S&quot;hours&quot;S&quot;minutes&quot;S&quot;seconds&quot;S}&quot;CS2profileSignature&quot;I&quot;platform&quot;I&quot;flags&quot;I&quot;deviceManufacturer&quot;I&quot;deviceModel&quot;I&quot;deviceAttributes&quot;[2I]&quot;renderingIntent&quot;I&quot;white&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;creator&quot;I&quot;reserved&quot;[44c]}'/>
+<field name='code' declared_type='ScriptCode' type='s'/>
+<field name='name' declared_type='Str255' type='[256C]'/>
+<field name='location' declared_type='CMProfileLocation' type='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}' type64='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}'/>
+<field name='uniCodeNameCount' declared_type='UniCharCount' type='L' type64='Q'/>
+<field name='uniCodeName' declared_type='UniChar*' type='^S'/>
+<field name='asciiName' declared_type='unsigned char*' type='*'/>
+<field name='makeAndModel' declared_type='CMMakeAndModel*' type='^{CMMakeAndModel=IIIIIIII}'/>
+<field name='digest' declared_type='CMProfileMD5*' type='^[16C]'/>
+</struct>
+<struct name='CMProfileLocation' type='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}' type64='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}'>
+<field name='locType' declared_type='short' type='s'/>
+<field name='u' declared_type='CMProfLoc' type='(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})' type64='(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})'/>
+</struct>
+<struct name='CMProfileSequenceDescType' type='{CMProfileSequenceDescType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;count&quot;I&quot;data&quot;[1c]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='count' declared_type='UInt32' type='L' type64='I'/>
+<field name='data' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='CMRGBColor' type='{CMRGBColor=&quot;red&quot;S&quot;green&quot;S&quot;blue&quot;S}'>
+<field name='red' declared_type='UInt16' type='S'/>
+<field name='green' declared_type='UInt16' type='S'/>
+<field name='blue' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='CMS15Fixed16ArrayType' type='{CMS15Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1l]}' type64='{CMS15Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1i]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='value' declared_type='Fixed*' type='[1l]' type64='[1i]'/>
+</struct>
+<struct name='CMScreeningChannelRec' type='{CMScreeningChannelRec=&quot;frequency&quot;i&quot;angle&quot;i&quot;spotFunction&quot;I}'>
+<field name='frequency' declared_type='Fixed' type='l' type64='i'/>
+<field name='angle' declared_type='Fixed' type='l' type64='i'/>
+<field name='spotFunction' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMScreeningType' type='{CMScreeningType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;screeningFlag&quot;I&quot;channelCount&quot;I&quot;channelInfo&quot;[1{CMScreeningChannelRec=&quot;frequency&quot;i&quot;angle&quot;i&quot;spotFunction&quot;I}]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='screeningFlag' declared_type='UInt32' type='L' type64='I'/>
+<field name='channelCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='channelInfo' declared_type='CMScreeningChannelRec*' type='[1{CMScreeningChannelRec=&quot;frequency&quot;i&quot;angle&quot;i&quot;spotFunction&quot;I}]'/>
+</struct>
+<struct name='CMSignatureType' type='{CMSignatureType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;signature&quot;I}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='signature' declared_type='OSType' type='L' type64='I'/>
+</struct>
+<struct name='CMTagElemTable' type='{CMTagElemTable=&quot;count&quot;I&quot;tagList&quot;[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]}'>
+<field name='count' declared_type='UInt32' type='L' type64='I'/>
+<field name='tagList' declared_type='CMTagRecord*' type='[1{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}]'/>
+</struct>
+<struct name='CMTagRecord' type='{CMTagRecord=&quot;tag&quot;I&quot;elementOffset&quot;I&quot;elementSize&quot;I}'>
+<field name='tag' declared_type='OSType' type='L' type64='I'/>
+<field name='elementOffset' declared_type='UInt32' type='L' type64='I'/>
+<field name='elementSize' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMTextDescriptionType' type='{CMTextDescriptionType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;ASCIICount&quot;I&quot;ASCIIName&quot;[2C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='ASCIICount' declared_type='UInt32' type='L' type64='I'/>
+<field name='ASCIIName' declared_type='UInt8*' type='[2C]'/>
+</struct>
+<struct name='CMTextType' type='{CMTextType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;text&quot;[1C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='text' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='CMU16Fixed16ArrayType' type='{CMU16Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1L]}' type64='{CMU16Fixed16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1I]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='value' declared_type='UInt32*' type='[1L]' type64='[1I]'/>
+</struct>
+<struct name='CMUInt16ArrayType' type='{CMUInt16ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1S]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='value' declared_type='UInt16*' type='[1S]'/>
+</struct>
+<struct name='CMUInt32ArrayType' type='{CMUInt32ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1L]}' type64='{CMUInt32ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1I]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='value' declared_type='UInt32*' type='[1L]' type64='[1I]'/>
+</struct>
+<struct name='CMUInt64ArrayType' type='{CMUInt64ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1L]}' type64='{CMUInt64ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1I]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='value' declared_type='UInt32*' type='[1L]' type64='[1I]'/>
+</struct>
+<struct name='CMUInt8ArrayType' type='{CMUInt8ArrayType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;value&quot;[1C]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='value' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='CMUcrBgType' type='{CMUcrBgType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;ucrCount&quot;I&quot;ucrValues&quot;[1S]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='ucrCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='ucrValues' declared_type='UInt16*' type='[1S]'/>
+</struct>
+<struct name='CMUnicodeTextType' type='{CMUnicodeTextType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;text&quot;[1S]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='text' declared_type='UniChar*' type='[1S]'/>
+</struct>
+<struct name='CMVideoCardGamma' type='{CMVideoCardGamma=&quot;tagType&quot;I&quot;u&quot;(?=&quot;table&quot;{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}&quot;formula&quot;{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i})}'>
+<field name='tagType' declared_type='UInt32' type='L' type64='I'/>
+<field name='u' declared_type='union CMVideoCardGamma::' type='(?=&quot;table&quot;{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}&quot;formula&quot;{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i})'/>
+</struct>
+<struct name='CMVideoCardGammaFormula' type='{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i}'>
+<field name='redGamma' declared_type='Fixed' type='l' type64='i'/>
+<field name='redMin' declared_type='Fixed' type='l' type64='i'/>
+<field name='redMax' declared_type='Fixed' type='l' type64='i'/>
+<field name='greenGamma' declared_type='Fixed' type='l' type64='i'/>
+<field name='greenMin' declared_type='Fixed' type='l' type64='i'/>
+<field name='greenMax' declared_type='Fixed' type='l' type64='i'/>
+<field name='blueGamma' declared_type='Fixed' type='l' type64='i'/>
+<field name='blueMin' declared_type='Fixed' type='l' type64='i'/>
+<field name='blueMax' declared_type='Fixed' type='l' type64='i'/>
+</struct>
+<struct name='CMVideoCardGammaTable' type='{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}'>
+<field name='channels' declared_type='UInt16' type='S'/>
+<field name='entryCount' declared_type='UInt16' type='S'/>
+<field name='entrySize' declared_type='UInt16' type='S'/>
+<field name='data' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='CMVideoCardGammaType' type='{CMVideoCardGammaType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;gamma&quot;{CMVideoCardGamma=&quot;tagType&quot;I&quot;u&quot;(?=&quot;table&quot;{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}&quot;formula&quot;{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i})}}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='gamma' declared_type='CMVideoCardGamma' type='{CMVideoCardGamma=&quot;tagType&quot;I&quot;u&quot;(?=&quot;table&quot;{CMVideoCardGammaTable=&quot;channels&quot;S&quot;entryCount&quot;S&quot;entrySize&quot;S&quot;data&quot;[1c]}&quot;formula&quot;{CMVideoCardGammaFormula=&quot;redGamma&quot;i&quot;redMin&quot;i&quot;redMax&quot;i&quot;greenGamma&quot;i&quot;greenMin&quot;i&quot;greenMax&quot;i&quot;blueGamma&quot;i&quot;blueMin&quot;i&quot;blueMax&quot;i})}'/>
+</struct>
+<struct name='CMViewingConditionsType' type='{CMViewingConditionsType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;illuminant&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;surround&quot;{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}&quot;stdIlluminant&quot;I}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='illuminant' declared_type='CMFixedXYZColor' type='{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}'/>
+<field name='surround' declared_type='CMFixedXYZColor' type='{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}'/>
+<field name='stdIlluminant' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CMXYZColor' type='{CMXYZColor=&quot;X&quot;S&quot;Y&quot;S&quot;Z&quot;S}'>
+<field name='X' declared_type='CMXYZComponent' type='S'/>
+<field name='Y' declared_type='CMXYZComponent' type='S'/>
+<field name='Z' declared_type='CMXYZComponent' type='S'/>
+</struct>
+<struct name='CMXYZType' type='{CMXYZType=&quot;typeDescriptor&quot;I&quot;reserved&quot;I&quot;XYZ&quot;[1{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}]}'>
+<field name='typeDescriptor' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+<field name='XYZ' declared_type='CMFixedXYZColor*' type='[1{CMFixedXYZColor=&quot;X&quot;i&quot;Y&quot;i&quot;Z&quot;i}]'/>
+</struct>
+<struct name='CMYxyColor' type='{CMYxyColor=&quot;capY&quot;S&quot;x&quot;S&quot;y&quot;S}'>
+<field name='capY' declared_type='UInt16' type='S'/>
+<field name='x' declared_type='UInt16' type='S'/>
+<field name='y' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='NCMConcatProfileSet' type='{NCMConcatProfileSet=&quot;cmm&quot;I&quot;flags&quot;I&quot;flagsMask&quot;I&quot;profileCount&quot;I&quot;profileSpecs&quot;[1{NCMConcatProfileSpec=&quot;renderingIntent&quot;I&quot;transformTag&quot;I&quot;profile&quot;^{OpaqueCMProfileRef}}]}'>
+<field name='cmm' declared_type='OSType' type='L' type64='I'/>
+<field name='flags' declared_type='UInt32' type='L' type64='I'/>
+<field name='flagsMask' declared_type='UInt32' type='L' type64='I'/>
+<field name='profileCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='profileSpecs' declared_type='NCMConcatProfileSpec*' type='[1{NCMConcatProfileSpec=&quot;renderingIntent&quot;I&quot;transformTag&quot;I&quot;profile&quot;^{OpaqueCMProfileRef}}]'/>
+</struct>
+<struct name='NCMConcatProfileSpec' type='{NCMConcatProfileSpec=&quot;renderingIntent&quot;I&quot;transformTag&quot;I&quot;profile&quot;^{OpaqueCMProfileRef}}'>
+<field name='renderingIntent' declared_type='UInt32' type='L' type64='I'/>
+<field name='transformTag' declared_type='UInt32' type='L' type64='I'/>
+<field name='profile' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+</struct>
+<struct name='NCMDeviceProfileInfo' type='{NCMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;profileScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;reserved&quot;I}' type64='{NCMDeviceProfileInfo=&quot;dataVersion&quot;I&quot;profileID&quot;I&quot;profileLoc&quot;{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}&quot;profileName&quot;^{__CFDictionary}&quot;profileScope&quot;{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}&quot;reserved&quot;I}'>
+<field name='dataVersion' declared_type='UInt32' type='L' type64='I'/>
+<field name='profileID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<field name='profileLoc' declared_type='CMProfileLocation' type='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;fileLoc&quot;{CMFileLocation=&quot;spec&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}}&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;ptrLoc&quot;{CMPtrLocation=&quot;p&quot;*}&quot;procLoc&quot;{CMProcedureLocation=&quot;proc&quot;^?&quot;refCon&quot;^v}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[256c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}' type64='{CMProfileLocation=&quot;locType&quot;s&quot;u&quot;(CMProfLoc=&quot;handleLoc&quot;{CMHandleLocation=&quot;h&quot;^*}&quot;pathLoc&quot;{CMPathLocation=&quot;path&quot;[1024c]}&quot;bufferLoc&quot;{CMBufferLocation=&quot;buffer&quot;^v&quot;size&quot;I})}'/>
+<field name='profileName' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<field name='profileScope' declared_type='CMDeviceProfileScope' type='{CMDeviceScope=&quot;deviceUser&quot;^{__CFString}&quot;deviceHost&quot;^{__CFString}}'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+</struct>
 <cftype name='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
 <cftype name='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
-<constant name='kCMIlluminantD50' type='[3f]'/>
-<constant name='kCMIlluminantD65' type='[3f]'/>
+<constant name='kCMIlluminantD50' declared_type='float*' type='[3f]' const='true'/>
+<constant name='kCMIlluminantD65' declared_type='float*' type='[3f]' const='true'/>
 <string_constant name='kCMDefaultDeviceNotification' nsstring='true' value='CMDefaultDeviceNotification'/>
 <string_constant name='kCMDefaultDeviceProfileNotification' nsstring='true' value='CMDefaultDeviceProfileNotification'/>
 <string_constant name='kCMDeviceOfflineNotification' nsstring='true' value='CMDeviceOfflineNotification'/>
@@ -504,799 +980,806 @@
 <enum name='kUseBtoB' value='3'/>
 <enum name='kUseProfileIntent' value='-1'/>
 <function name='CMCloneProfileRef'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMCloseProfile'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMConvertRGBFloatBitmap'>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<retval type='l' type64='i'/>
+<arg name='src' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}' const='true'/>
+<arg name='dst' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMConvertXYZFloatBitmap'>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<arg type='^f'/>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<arg type='^f'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='src' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}' const='true'/>
+<arg name='srcIlluminantXYZ' declared_type='float*' type='^f' const='true'/>
+<arg name='dst' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
+<arg name='dstIlluminantXYZ' declared_type='float*' type='^f' const='true'/>
+<arg name='method' declared_type='CMChromaticAdaptation' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMCopyProfile'>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='targetProf' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<arg name='targetLocation' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}' const='true'/>
+<arg name='srcProf' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMCopyProfileDescriptionString'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='str' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMCopyProfileLocalizedString'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<arg type='^^{__CFString}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='reqLocale' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='locale' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<arg name='str' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMCopyProfileLocalizedStringDictionary'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^^{__CFDictionary}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='theDict' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMCountProfileElements'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='elementCount' declared_type='UInt32*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMFloatBitmapMakeChunky'>
-<arg type='^f'/>
-<arg type='L' type64='Q'/>
-<arg type='L' type64='Q'/>
-<arg type='L' type64='I'/>
-<retval type='{CMFloatBitmap=L[16^f]IIiiIi}' type64='{CMFloatBitmap=Q[16^f]QQqqIi}'/>
+<arg name='buffer' declared_type='float*' type='^f'/>
+<arg name='height' declared_type='size_t' type='L' type64='Q'/>
+<arg name='width' declared_type='size_t' type='L' type64='Q'/>
+<arg name='space' declared_type='OSType' type='L' type64='I'/>
+<retval declared_type='CMFloatBitmap' type='{CMFloatBitmap=L[16^f]IIiiIi}' type64='{CMFloatBitmap=Q[16^f]QQqqIi}'/>
 </function>
 <function name='CMGetColorSyncVersion'>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='version' declared_type='UInt32*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDefaultDevice'>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDefaultProfileBySpace'>
-<arg type='L' type64='I'/>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<retval type='l' type64='i'/>
+<arg name='dataColorSpace' declared_type='OSType' type='L' type64='I'/>
+<arg name='prof' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDefaultProfileByUse'>
-<arg type='L' type64='I'/>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<retval type='l' type64='i'/>
+<arg name='use' declared_type='OSType' type='L' type64='I'/>
+<arg name='prof' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDeviceDefaultProfileID'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='defaultProfID' declared_type='CMDeviceProfileID*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDeviceFactoryProfiles'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}' type64='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='defaultProfID' declared_type='CMDeviceProfileID*' type='^I'/>
+<arg name='arraySize' declared_type='UInt32*' type='^I'/>
+<arg name='deviceProfiles' declared_type='CMDeviceProfileArray*' type='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}' type64='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDeviceInfo'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{CMDeviceInfo=III{CMDeviceScope=^{__CFString}^{__CFString}}II^^{__CFDictionary}II}'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='deviceInfo' declared_type='CMDeviceInfo*' type='^{CMDeviceInfo=III{CMDeviceScope=^{__CFString}^{__CFString}}II^^{__CFDictionary}II}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDeviceProfile'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='profileID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<arg name='profileLoc' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetDeviceState'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='deviceState' declared_type='CMDeviceState*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetGammaByAVID'>
-<arg type='L' type64='I'/>
-<arg type='^{CMVideoCardGamma=I(?={CMVideoCardGammaTable=SSS[1c]}{CMVideoCardGammaFormula=iiiiiiiii})}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='theID' declared_type='CMDisplayIDType' type='L' type64='I'/>
+<arg name='gamma' declared_type='CMVideoCardGamma*' type='^{CMVideoCardGamma=I(?={CMVideoCardGammaTable=SSS[1c]}{CMVideoCardGammaFormula=iiiiiiiii})}'/>
+<arg name='size' declared_type='UInt32*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetIndNamedColorValue'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='index' declared_type='UInt32' type='L' type64='I'/>
+<arg name='deviceColor' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<arg name='PCSColor' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetIndProfileElement'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='index' declared_type='UInt32' type='L' type64='I'/>
+<arg name='elementSize' declared_type='UInt32*' type='^I'/>
+<arg name='elementData' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetIndProfileElementInfo'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='index' declared_type='UInt32' type='L' type64='I'/>
+<arg name='tag' declared_type='OSType*' type='^I'/>
+<arg name='elementSize' declared_type='UInt32*' type='^I'/>
+<arg name='refs' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetNamedColorIndex'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='*'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='name' declared_type='StringPtr' type='*'/>
+<arg name='index' declared_type='UInt32*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetNamedColorInfo'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='*'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='deviceChannels' declared_type='UInt32*' type='^I'/>
+<arg name='deviceColorSpace' declared_type='OSType*' type='^I'/>
+<arg name='PCSColorSpace' declared_type='OSType*' type='^I'/>
+<arg name='count' declared_type='UInt32*' type='^I'/>
+<arg name='prefix' declared_type='StringPtr' type='*'/>
+<arg name='suffix' declared_type='StringPtr' type='*'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetNamedColorName'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='index' declared_type='UInt32' type='L' type64='I'/>
+<arg name='name' declared_type='StringPtr' type='*'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetNamedColorValue'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='*'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='name' declared_type='StringPtr' type='*'/>
+<arg name='deviceColor' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<arg name='PCSColor' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetPS2ColorRendering'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='srcProf' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='dstProf' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='flags' declared_type='UInt32' type='L' type64='I'/>
+<arg name='proc' function_pointer='true' declared_type='CMFlattenUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='^v'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='preferredCMMnotfound' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetPS2ColorRenderingIntent'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='srcProf' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='flags' declared_type='UInt32' type='L' type64='I'/>
+<arg name='proc' function_pointer='true' declared_type='CMFlattenUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='^v'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='preferredCMMnotfound' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetPS2ColorRenderingVMSize'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^I'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='srcProf' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='dstProf' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='vmSize' declared_type='UInt32*' type='^I'/>
+<arg name='preferredCMMnotfound' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetPS2ColorSpace'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='srcProf' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='flags' declared_type='UInt32' type='L' type64='I'/>
+<arg name='proc' function_pointer='true' declared_type='CMFlattenUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='^v'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='preferredCMMnotfound' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetPartialProfileElement'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='offset' declared_type='UInt32' type='L' type64='I'/>
+<arg name='byteCount' declared_type='UInt32*' type='^I'/>
+<arg name='elementData' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetProfileByAVID'>
-<arg type='L' type64='I'/>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<retval type='l' type64='i'/>
+<arg name='theID' declared_type='CMDisplayIDType' type='L' type64='I'/>
+<arg name='prof' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetProfileDescriptions'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='*'/>
-<arg type='^I'/>
-<arg type='*'/>
-<arg type='^s'/>
-<arg type='^S'/>
-<arg type='^I' type64='^Q'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='aName' declared_type='char*' type='*'/>
+<arg name='aCount' declared_type='UInt32*' type='^I'/>
+<arg name='mName' declared_type='unsigned char*' type='*'/>
+<arg name='mCode' declared_type='ScriptCode*' type='^s'/>
+<arg name='uName' declared_type='UniChar*' type='^S'/>
+<arg name='uCount' declared_type='UniCharCount*' type='^I' type64='^Q'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetProfileElement'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='elementSize' declared_type='UInt32*' type='^I'/>
+<arg name='elementData' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetProfileHeader'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^(CMAppleProfileHeader={CMHeader=IIIIIII[2L]IIII{CMXYZColor=SSS}{CMXYZColor=SSS}}{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[16C][28c]})' type64='^(CMAppleProfileHeader={CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[16C][28c]})'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='header' declared_type='CMAppleProfileHeader*' type='^(CMAppleProfileHeader={CMHeader=IIIIIII[2L]IIII{CMXYZColor=SSS}{CMXYZColor=SSS}}{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[16C][28c]})' type64='^(CMAppleProfileHeader={CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[16C][28c]})'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetProfileMD5'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='digest' declared_type='unsigned char*' type='*'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetProfileRefCount'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^l' type64='^q'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='count' declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMGetSystemProfile'>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMIterateCMMInfo'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='proc' function_pointer='true' declared_type='CMMIterateUPP' type='^?'>
+<arg declared_type='CMMInfo*' type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='^I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='count' declared_type='UInt32*' type='^I'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMIterateColorDevices'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMDeviceInfo=III{CMDeviceScope=^{__CFString}^{__CFString}}II^^{__CFDictionary}II}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='proc' function_pointer='true' declared_type='CMIterateDeviceInfoProcPtr' type='^?'>
+<arg declared_type='CMDeviceInfo*' type='^{CMDeviceInfo=III{CMDeviceScope=^{__CFString}^{__CFString}}II^^{__CFDictionary}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='seed' declared_type='UInt32*' type='^I'/>
+<arg name='count' declared_type='UInt32*' type='^I'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMIterateColorSyncFolder'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='proc' function_pointer='true' declared_type='CMProfileIterateUPP' type='^?'>
+<arg declared_type='CMProfileIterateData*' type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='seed' declared_type='UInt32*' type='^I'/>
+<arg name='count' declared_type='UInt32*' type='^I'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMIterateDeviceProfiles'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMDeviceInfo=III{CMDeviceScope=^{__CFString}^{__CFString}}II^^{__CFDictionary}II}'/>
-<arg type='^{NCMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}^{__CFDictionary}{CMDeviceScope=^{__CFString}^{__CFString}}I}' type64='^{NCMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}^{__CFDictionary}{CMDeviceScope=^{__CFString}^{__CFString}}I}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='proc' function_pointer='true' declared_type='CMIterateDeviceProfileProcPtr' type='^?'>
+<arg declared_type='CMDeviceInfo*' type='^{CMDeviceInfo=III{CMDeviceScope=^{__CFString}^{__CFString}}II^^{__CFDictionary}II}' const='true'/>
+<arg declared_type='NCMDeviceProfileInfo*' type='^{NCMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}^{__CFDictionary}{CMDeviceScope=^{__CFString}^{__CFString}}I}' type64='^{NCMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}^{__CFDictionary}{CMDeviceScope=^{__CFString}^{__CFString}}I}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='seed' declared_type='UInt32*' type='^I'/>
+<arg name='count' declared_type='UInt32*' type='^I'/>
+<arg name='flags' declared_type='UInt32' type='L' type64='I'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMLaunchControlPanel'>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='flags' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_CheckBitmap'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='bitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}' const='true'/>
+<arg name='progressProc' function_pointer='true' declared_type='CMBitmapCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='resultBitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_CheckColors'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='colors' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<arg name='count' declared_type='UInt32' type='L' type64='I'/>
+<arg name='result' declared_type='UInt8*' type='*'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_ConcatColorWorld'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='profileSet' declared_type='NCMConcatProfileSet*' type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
+<arg name='proc' function_pointer='true' declared_type='CMConcatCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_CreateLinkProfile'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='profileSet' declared_type='NCMConcatProfileSet*' type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
+<arg name='proc' function_pointer='true' declared_type='CMConcatCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_GetProperty'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='@'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='requestedKey' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFTypeRef' type='@'/>
 </function>
 <function name='CMM_MatchBitmap'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='bitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
+<arg name='progressProc' function_pointer='true' declared_type='CMBitmapCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='matchedBitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_MatchColors'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='colors' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<arg name='count' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_MatchFloatBitmap'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='bitmap' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}' const='true'/>
+<arg name='resultBitmap' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMM_ValidateProfile'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='valid' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMMakeProfile'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^{__CFDictionary=}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='spec' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMMatchFloatBitmap'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<arg type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='src' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}' const='true'/>
+<arg name='dst' declared_type='CMFloatBitmap*' type='^{CMFloatBitmap=L[16^f]IIiiIi}' type64='^{CMFloatBitmap=Q[16^f]QQqqIi}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMNewProfile'>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<arg name='theProfile' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMOpenProfile'>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<arg name='theProfile' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMProfileCopyICCData'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<retval already_retained='true' type='^{__CFData=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
 </function>
 <function name='CMProfileElementExists'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='found' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMProfileModified'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='modified' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMRegisterColorDevice'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFDictionary=}'/>
-<arg type='^{CMDeviceScope=^{__CFString}^{__CFString}}'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='deviceName' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='deviceScope' declared_type='CMDeviceScope*' type='^{CMDeviceScope=^{__CFString}^{__CFString}}' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMRemoveProfileElement'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetDefaultDevice'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetDeviceDefaultProfileID'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='defaultProfID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetDeviceFactoryProfiles'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}' type64='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='defaultProfID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<arg name='deviceProfiles' declared_type='CMDeviceProfileArray*' type='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}' type64='^{CMDeviceProfileArray=I[1{CMDeviceProfileInfo=II{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}^{__CFDictionary}I}]}' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetDeviceProfile'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{CMDeviceScope=^{__CFString}^{__CFString}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='profileScope' declared_type='CMDeviceProfileScope*' type='^{CMDeviceScope=^{__CFString}^{__CFString}}' const='true'/>
+<arg name='profileID' declared_type='CMDeviceProfileID' type='L' type64='I'/>
+<arg name='profileLoc' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetDeviceState'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<arg name='deviceState' declared_type='CMDeviceState' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetGammaByAVID'>
-<arg type='L' type64='I'/>
-<arg type='^{CMVideoCardGamma=I(?={CMVideoCardGammaTable=SSS[1c]}{CMVideoCardGammaFormula=iiiiiiiii})}'/>
-<retval type='l' type64='i'/>
+<arg name='theID' declared_type='CMDisplayIDType' type='L' type64='I'/>
+<arg name='gamma' declared_type='CMVideoCardGamma*' type='^{CMVideoCardGamma=I(?={CMVideoCardGammaTable=SSS[1c]}{CMVideoCardGammaFormula=iiiiiiiii})}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetPartialProfileElement'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='offset' declared_type='UInt32' type='L' type64='I'/>
+<arg name='byteCount' declared_type='UInt32' type='L' type64='I'/>
+<arg name='elementData' declared_type='void*' type='^v' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetProfileByAVID'>
-<arg type='L' type64='I'/>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='theID' declared_type='CMDisplayIDType' type='L' type64='I'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetProfileDescriptions'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='*'/>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<arg type='s'/>
-<arg type='^S'/>
-<arg type='L' type64='Q'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='aName' declared_type='char*' type='*' const='true'/>
+<arg name='aCount' declared_type='UInt32' type='L' type64='I'/>
+<arg name='mName' declared_type='ConstStr255Param' type='*'/>
+<arg name='mCode' declared_type='ScriptCode' type='s'/>
+<arg name='uName' declared_type='UniChar*' type='^S' const='true'/>
+<arg name='uCount' declared_type='UniCharCount' type='L' type64='Q'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetProfileElement'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='elementSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='elementData' declared_type='void*' type='^v' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetProfileElementReference'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='elementTag' declared_type='OSType' type='L' type64='I'/>
+<arg name='referenceTag' declared_type='OSType' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetProfileElementSize'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='elementSize' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetProfileHeader'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^(CMAppleProfileHeader={CMHeader=IIIIIII[2L]IIII{CMXYZColor=SSS}{CMXYZColor=SSS}}{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[16C][28c]})' type64='^(CMAppleProfileHeader={CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[16C][28c]})'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='header' declared_type='CMAppleProfileHeader*' type='^(CMAppleProfileHeader={CMHeader=IIIIIII[2L]IIII{CMXYZColor=SSS}{CMXYZColor=SSS}}{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[16C][28c]})' type64='^(CMAppleProfileHeader={CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}{CM4Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[16C][28c]})' const='true'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMSetProfileLocalizedStringDictionary'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFDictionary=}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='tag' declared_type='OSType' type='L' type64='I'/>
+<arg name='theDict' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMUnregisterColorDevice'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='deviceClass' declared_type='CMDeviceClass' type='L' type64='I'/>
+<arg name='deviceID' declared_type='CMDeviceID' type='L' type64='I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMUpdateProfile'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CMValidateProfile'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^B'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='valid' declared_type='Boolean*' type='^B'/>
+<arg name='preferredCMMnotfound' declared_type='Boolean*' type='^B'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CWCheckBitmap'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='bitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}' const='true'/>
+<arg name='progressProc' function_pointer='true' declared_type='CMBitmapCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='resultBitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CWCheckColors'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<arg type='L' type64='Q'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='myColors' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<arg name='count' declared_type='size_t' type='L' type64='Q'/>
+<arg name='result' declared_type='UInt8*' type='*'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CWColorWorldGetProperty'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='^v'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='key' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void*' type='^v' const='true'/>
 </function>
 <function name='CWColorWorldSetProperty'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='key' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='value' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CWDisposeColorWorld'>
-<arg type='^{OpaqueCMWorldRef=}'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CWFillLookupTexture'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='gridPoints' declared_type='UInt32' type='L' type64='I'/>
+<arg name='format' declared_type='UInt32' type='L' type64='I'/>
+<arg name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='data' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CWGetCMMSignature'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<retval type='L' type64='I'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
 </function>
 <function name='CWMatchBitmap'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='bitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
+<arg name='progressProc' function_pointer='true' declared_type='CMBitmapCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='matchedBitmap' declared_type='CMBitmap*' type='^{CMBitmap=*IIIIIII}' type64='^{CMBitmap=*QQQQIII}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='CWMatchColors'>
-<arg type='^{OpaqueCMWorldRef=}'/>
-<arg type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
-<arg type='L' type64='Q'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef' type='^{OpaqueCMWorldRef=}'/>
+<arg name='myColors' declared_type='CMColor*' type='^(CMColor={CMRGBColor=SSS}{CMHSVColor=SSS}{CMHLSColor=SSS}{CMXYZColor=SSS}{CMLabColor=SSS}{CMLuvColor=SSS}{CMYxyColor=SSS}{CMCMYKColor=SSSS}{CMCMYColor=SSS}{CMGrayColor=S}{CMMultichannel5Color=[5C]}{CMMultichannel6Color=[6C]}{CMMultichannel7Color=[7C]}{CMMultichannel8Color=[8C]}{CMNamedColor=I})'/>
+<arg name='count' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='DisposeCMBitmapCallBackUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMBitmapCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeCMConcatCallBackUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMConcatCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeCMFlattenUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMFlattenUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeCMMIterateUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMMIterateUPP' type='^?'>
+<arg declared_type='CMMInfo*' type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeCMProfileIterateUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMProfileIterateUPP' type='^?'>
+<arg declared_type='CMProfileIterateData*' type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeCMBitmapCallBackUPP' inline='true'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='progress' declared_type='SInt32' type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMBitmapCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='InvokeCMConcatCallBackUPP' inline='true'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='progress' declared_type='SInt32' type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMConcatCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='InvokeCMFlattenUPP' inline='true'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='command' declared_type='SInt32' type='l' type64='i'/>
+<arg name='size' declared_type='long*' type='^l' type64='^q'/>
+<arg name='data' declared_type='void*' type='^v'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMFlattenUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeCMMIterateUPP' inline='true'>
-<arg type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='iterateData' declared_type='CMMInfo*' type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMMIterateUPP' type='^?'>
+<arg declared_type='CMMInfo*' type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeCMProfileIterateUPP' inline='true'>
-<arg type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='iterateData' declared_type='CMProfileIterateData*' type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='CMProfileIterateUPP' type='^?'>
+<arg declared_type='CMProfileIterateData*' type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NCMGetProfileLocation'>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='prof' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='theProfile' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
+<arg name='locationSize' declared_type='UInt32*' type='^I'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='NCWConcatColorWorld'>
-<arg type='^^{OpaqueCMWorldRef}'/>
-<arg type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='cw' declared_type='CMWorldRef*' type='^^{OpaqueCMWorldRef}'/>
+<arg name='profileSet' declared_type='NCMConcatProfileSet*' type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
+<arg name='proc' function_pointer='true' declared_type='CMConcatCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='NCWNewColorWorld'>
-<arg type='^^{OpaqueCMWorldRef}'/>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<arg type='^{OpaqueCMProfileRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='cw' declared_type='CMWorldRef*' type='^^{OpaqueCMWorldRef}'/>
+<arg name='src' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<arg name='dst' declared_type='CMProfileRef' type='^{OpaqueCMProfileRef=}'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='NCWNewLinkProfile'>
-<arg type='^^{OpaqueCMProfileRef}'/>
-<arg type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}'/>
-<arg type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='prof' declared_type='CMProfileRef*' type='^^{OpaqueCMProfileRef}'/>
+<arg name='targetLocation' declared_type='CMProfileLocation*' type='^{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}' type64='^{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}' const='true'/>
+<arg name='profileSet' declared_type='NCMConcatProfileSet*' type='^{NCMConcatProfileSet=IIII[1{NCMConcatProfileSpec=II^{OpaqueCMProfileRef}}]}'/>
+<arg name='proc' function_pointer='true' declared_type='CMConcatCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='void*' type='^v'/>
+<retval declared_type='CMError' type='l' type64='i'/>
 </function>
 <function name='NewCMBitmapCallBackUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userRoutine' function_pointer='true' declared_type='CMBitmapCallBackProcPtr' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<retval function_pointer='true' declared_type='CMBitmapCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </retval>
 </function>
 <function name='NewCMConcatCallBackUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userRoutine' function_pointer='true' declared_type='CMConcatCallBackProcPtr' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='B'/>
+<retval function_pointer='true' declared_type='CMConcatCallBackUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </retval>
 </function>
 <function name='NewCMFlattenUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='CMFlattenProcPtr' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^l' type64='^q'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='CMFlattenUPP' type='^?'>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewCMMIterateUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='CMMIterateProcPtr' type='^?'>
+<arg declared_type='CMMInfo*' type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='CMMIterateUPP' type='^?'>
+<arg declared_type='CMMInfo*' type='^{CMMInfo=IIII[32C][256C]I[32S]I[256S]}' type64='^{CMMInfo=QIII[32C][256C]Q[32S]Q[256S]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewCMProfileIterateUPP' inline='true'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='CMProfileIterateProcPtr' type='^?'>
+<arg declared_type='CMProfileIterateData*' type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='CMProfileIterateUPP' type='^?'>
+<arg declared_type='CMProfileIterateData*' type='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2L]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMFileLocation={FSSpec=si[64C]}}{CMHandleLocation=^*}{CMPtrLocation=*}{CMProcedureLocation=^?^v}{CMPathLocation=[256c]}{CMBufferLocation=^vI})}I^S*^{CMMakeAndModel}^[16C]}' type64='^{CMProfileIterateData=I{CM2Header=IIIIII{CMDateTime=SSSSSS}IIIII[2I]I{CMFixedXYZColor=iii}I[44c]}s[256C]{CMProfileLocation=s(CMProfLoc={CMHandleLocation=^*}{CMPathLocation=[1024c]}{CMBufferLocation=^vI})}Q^S*^{CMMakeAndModel}^[16C]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 </signatures>

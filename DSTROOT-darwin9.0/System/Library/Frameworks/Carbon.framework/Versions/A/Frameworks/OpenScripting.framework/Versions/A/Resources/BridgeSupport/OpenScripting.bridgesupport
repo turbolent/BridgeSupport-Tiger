@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
@@ -711,604 +710,607 @@
 <enum name='typeSound' value='1936614432'/>
 <enum name='typeUserRecordFields' value='1818850164'/>
 <function name='ASCopySourceAttributes'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^^{__CFArray}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resultingSourceAttributes' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='ASGetSourceStyleNames'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingSourceStyleNamesList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='ASGetSourceStyles'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^^^{STElement}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resultingSourceStyles' declared_type='STHandle*' type='^^^{STElement}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='ASInit'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='minStackSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='preferredStackSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='maxStackSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='minHeapSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='preferredHeapSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='maxHeapSize' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='ASSetSourceAttributes'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{__CFArray=}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='sourceAttributes' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='ASSetSourceStyles'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^^{STElement}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='sourceStyles' declared_type='STHandle' type='^^{STElement}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='DisposeOSAActiveUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSAActiveUPP' type='^?'>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSACreateAppleEventUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSACreateAppleEventUPP' type='^?'>
+<arg declared_type='AEEventClass' type='L' type64='I'/>
+<arg declared_type='AEEventID' type='L' type64='I'/>
+<arg declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='short' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSASendUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^?'/>
-<arg type='^?'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSASendUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='AESendMode' type='l' type64='i'/>
+<arg declared_type='AESendPriority' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AEIdleUPP' type='^?'/>
+<arg declared_type='AEFilterUPP' type='^?'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeOSAActiveUPP'>
-<arg type='l' type64='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='refCon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSAActiveUPP' type='^?'>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSACreateAppleEventUPP'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='theAEEventClass' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='theAEEventID' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='target' declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='returnID' declared_type='short' type='s'/>
+<arg name='transactionID' declared_type='SInt32' type='l' type64='i'/>
+<arg name='result' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='refCon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSACreateAppleEventUPP' type='^?'>
+<arg declared_type='AEEventClass' type='L' type64='I'/>
+<arg declared_type='AEEventID' type='L' type64='I'/>
+<arg declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='short' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSASendUPP'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='^i'/>
-<arg type='^^{OpaqueRgnHandle}'/>
-<retval type='B'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='reply' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='sendMode' declared_type='AESendMode' type='l' type64='i'/>
+<arg name='sendPriority' declared_type='AESendPriority' type='s'/>
+<arg name='timeOutInTicks' declared_type='SInt32' type='l' type64='i'/>
+<arg name='idleProc' function_pointer='true' declared_type='AEIdleUPP' type='^?'>
+<arg declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg declared_type='SInt32*' type='^i'/>
+<arg declared_type='RgnHandle*' type='^^{OpaqueRgnHandle}'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
-<arg type='l' type64='i'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='B'/>
+<arg name='filterProc' function_pointer='true' declared_type='AEFilterUPP' type='^?'>
+<arg declared_type='EventRecord*' type='^{EventRecord=SLI{Point=ss}S}' type64='^{EventRecord=SQI{Point=ss}S}'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AETransactionID' type='l' type64='i'/>
+<arg declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='l' type64='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^?'/>
-<arg type='^?'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='refCon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSASendUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='AESendMode' type='l' type64='i'/>
+<arg declared_type='AESendPriority' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AEIdleUPP' type='^?'/>
+<arg declared_type='AEFilterUPP' type='^?'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NewOSAActiveUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSAActiveProcPtr' type='^?'>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSAActiveUPP' type='^?'>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSACreateAppleEventUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSACreateAppleEventProcPtr' type='^?'>
+<arg declared_type='AEEventClass' type='L' type64='I'/>
+<arg declared_type='AEEventID' type='L' type64='I'/>
+<arg declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='short' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSACreateAppleEventUPP' type='^?'>
+<arg declared_type='AEEventClass' type='L' type64='I'/>
+<arg declared_type='AEEventID' type='L' type64='I'/>
+<arg declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='short' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSASendUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^?'/>
-<arg type='^?'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSASendProcPtr' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='AESendMode' type='l' type64='i'/>
+<arg declared_type='AESendPriority' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AEIdleUPP' type='^?'/>
+<arg declared_type='AEFilterUPP' type='^?'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^?'/>
-<arg type='^?'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSASendUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='AESendMode' type='l' type64='i'/>
+<arg declared_type='AESendPriority' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AEIdleUPP' type='^?'/>
+<arg declared_type='AEFilterUPP' type='^?'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='OSAAddStorageType'>
-<arg type='^^{OpaqueAEDataStorageType}'/>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='scriptData' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+<arg name='dscType' declared_type='DescType' type='L' type64='I'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='OSAAvailableDialectCodeList'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resultingDialectCodeList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAAvailableDialects'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resultingDialectInfoList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACoerceFromDesc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACoerceToDesc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACompile'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='sourceData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='previousAndResultingScriptID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACompileExecute'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='sourceData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptValueID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACopyDisplayString'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^^{__CFAttributedString}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='result' declared_type='CFAttributedStringRef*' type='^^{__CFAttributedString}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACopyID'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='fromID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='toID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACopyScriptingDefinition'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='l' type64='i'/>
-<arg type='^^{__CFData}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='sdef' declared_type='CFDataRef*' type='^^{__CFData}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSACopySourceString'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^^{__CFAttributedString}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='result' declared_type='CFAttributedStringRef*' type='^^{__CFAttributedString}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSADisplay'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptValueID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingText' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSADispose'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSADoEvent'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='reply' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSADoScript'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='sourceData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingText' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSADoScriptFile'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingText' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAExecute'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='compiledScriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptValueID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAExecuteEvent'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptValueID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGenericToRealID'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^I'/>
-<arg type='^^{ComponentInstanceRecord}'/>
-<retval type='l' type64='i'/>
+<arg name='genericScriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='theScriptID' declared_type='OSAID*' type='^I'/>
+<arg name='theExactComponent' declared_type='ComponentInstance*' type='^^{ComponentInstanceRecord}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetActiveProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^^?'/>
-<arg type='^i' type64='^^v'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='activeProc' declared_type='OSAActiveUPP*' type='^^?'/>
+<arg name='refCon' declared_type='SRefCon*' type='^i' type64='^^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetCreateProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^^?'/>
-<arg type='^i' type64='^^v'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='createProc' declared_type='OSACreateAppleEventUPP*' type='^^?'/>
+<arg name='refCon' declared_type='SRefCon*' type='^i' type64='^^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetCurrentDialect'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^s'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resultingDialectCode' declared_type='short*' type='^s'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetDefaultScriptingComponent'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='genericScriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptingSubType' declared_type='ScriptingComponentSelector*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetDialectInfo'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='s'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='dialectCode' declared_type='short' type='s'/>
+<arg name='selector' declared_type='OSType' type='L' type64='I'/>
+<arg name='resultingDialectInfo' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetHandler'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='handlerName' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='resultingCompiledScriptID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetHandlerNames'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='resultingHandlerNames' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetProperty'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='variableName' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='resultingScriptValueID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetPropertyNames'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='resultingPropertyNames' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetResumeDispatchProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^^?'/>
-<arg type='^i' type64='^^v'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resumeDispatchProc' declared_type='AEEventHandlerUPP*' type='^^?'/>
+<arg name='refCon' declared_type='SRefCon*' type='^i' type64='^^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetScriptInfo'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^l' type64='^q'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='selector' declared_type='OSType' type='L' type64='I'/>
+<arg name='result' declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetScriptingComponent'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='^^{ComponentInstanceRecord}'/>
-<retval type='l' type64='i'/>
+<arg name='genericScriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptingSubType' declared_type='ScriptingComponentSelector' type='L' type64='I'/>
+<arg name='scriptingInstance' declared_type='ComponentInstance*' type='^^{ComponentInstanceRecord}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetScriptingComponentFromStored'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='genericScriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='scriptingSubType' declared_type='ScriptingComponentSelector*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetSendProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^^?'/>
-<arg type='^i' type64='^^v'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='sendProc' declared_type='OSASendUPP*' type='^^?'/>
+<arg name='refCon' declared_type='SRefCon*' type='^i' type64='^^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetSource'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='resultingSourceData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAGetStorageType'>
-<arg type='^^{OpaqueAEDataStorageType}'/>
-<arg type='^I'/>
-<retval type='s'/>
+<arg name='scriptData' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+<arg name='dscType' declared_type='DescType*' type='^I'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='OSAGetSysTerminology'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='s'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='terminologyID' declared_type='short' type='s'/>
+<arg name='terminologyList' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSALoad'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSALoadExecute'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptValueID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSALoadExecuteFile'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptValueID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSALoadFile'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^B'/>
-<arg type='l' type64='i'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='storable' declared_type='Boolean*' type='^B'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAMakeContext'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='contextName' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='parentContext' declared_type='OSAID' type='L' type64='I'/>
+<arg name='resultingContextID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSARealToGenericID'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^I'/>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<retval type='l' type64='i'/>
+<arg name='genericScriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='theScriptID' declared_type='OSAID*' type='^I'/>
+<arg name='theExactComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSARemoveStorageType'>
-<arg type='^^{OpaqueAEDataStorageType}'/>
-<retval type='s'/>
+<arg name='scriptData' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='OSAScriptError'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='selector' declared_type='OSType' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='resultingErrorDescription' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAScriptingComponentName'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resultingScriptingComponentName' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetActiveProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='activeProc' function_pointer='true' declared_type='OSAActiveUPP' type='^?'>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='l' type64='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetCreateProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='createProc' function_pointer='true' declared_type='OSACreateAppleEventUPP' type='^?'>
+<arg declared_type='AEEventClass' type='L' type64='I'/>
+<arg declared_type='AEEventID' type='L' type64='I'/>
+<arg declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='short' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='l' type64='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetCurrentDialect'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='s'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='dialectCode' declared_type='short' type='s'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetDefaultScriptingComponent'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='genericScriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptingSubType' declared_type='ScriptingComponentSelector' type='L' type64='I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetDefaultTarget'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='target' declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetHandler'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='handlerName' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='compiledScriptID' declared_type='OSAID' type='L' type64='I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetProperty'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='l' type64='i'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='contextID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='variableName' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='scriptValueID' declared_type='OSAID' type='L' type64='I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetResumeDispatchProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='resumeDispatchProc' function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='l' type64='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetScriptInfo'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='selector' declared_type='OSType' type='L' type64='I'/>
+<arg name='value' declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSASetSendProc'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^?'/>
-<arg type='^?'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='sendProc' function_pointer='true' declared_type='OSASendUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='AESendMode' type='l' type64='i'/>
+<arg declared_type='AESendPriority' type='s'/>
+<arg declared_type='SInt32' type='l' type64='i'/>
+<arg declared_type='AEIdleUPP' type='^?'/>
+<arg declared_type='AEFilterUPP' type='^?'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='l' type64='^v'/>
-<retval type='l' type64='i'/>
+<arg name='refCon' declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAStartRecording'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='compiledScriptToModifyID' declared_type='OSAID*' type='^I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAStopRecording'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='compiledScriptID' declared_type='OSAID' type='L' type64='I'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAStore'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultingScriptData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 <function name='OSAStoreFile'>
-<arg type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^{FSRef=[80C]}'/>
-<retval type='l' type64='i'/>
+<arg name='scriptingComponent' declared_type='ComponentInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg name='scriptID' declared_type='OSAID' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='modeFlags' declared_type='SInt32' type='l' type64='i'/>
+<arg name='scriptFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<retval declared_type='OSAError' type='l' type64='i'/>
 </function>
 </signatures>

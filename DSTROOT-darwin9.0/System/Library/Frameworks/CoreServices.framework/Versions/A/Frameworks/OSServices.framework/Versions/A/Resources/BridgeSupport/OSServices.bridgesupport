@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
 <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
@@ -8,93 +7,590 @@
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CFNetwork.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-<struct name='AppleTalkInfo' type='{AppleTalkInfo=&quot;fOurAddress&quot;{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}&quot;fRouterAddress&quot;{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}&quot;fCableRange&quot;[2S]&quot;fFlags&quot;S}'/>
-<struct name='Block0' type='{Block0=&quot;sbSig&quot;S&quot;sbBlkSize&quot;S&quot;sbBlkCount&quot;I&quot;sbDevType&quot;S&quot;sbDevId&quot;S&quot;sbData&quot;I&quot;sbDrvrCount&quot;S&quot;ddBlock&quot;I&quot;ddSize&quot;S&quot;ddType&quot;S&quot;ddPad&quot;[243S]}'/>
-<struct name='CCMiscInfo' type='{CCMiscInfo=&quot;connectionStatus&quot;I&quot;connectionTimeElapsed&quot;I&quot;connectionTimeRemaining&quot;I&quot;bytesTransmitted&quot;I&quot;bytesReceived&quot;I&quot;reserved&quot;I}'/>
-<struct name='CSIdentityClientContext' type='{CSIdentityClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?&quot;statusUpdated&quot;^?}' type64='{CSIdentityClientContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?&quot;statusUpdated&quot;^?}'/>
-<struct name='CSIdentityQueryClientContext' type='{CSIdentityQueryClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retainInfo&quot;^?&quot;releaseInfo&quot;^?&quot;copyInfoDescription&quot;^?&quot;receiveEvent&quot;^?}' type64='{CSIdentityQueryClientContext=&quot;version&quot;q&quot;info&quot;^v&quot;retainInfo&quot;^?&quot;releaseInfo&quot;^?&quot;copyInfoDescription&quot;^?&quot;receiveEvent&quot;^?}'/>
-<struct name='DDMap' type='{DDMap=&quot;ddBlock&quot;I&quot;ddSize&quot;S&quot;ddType&quot;S}'/>
-<struct name='DDPAddress' type='{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}'/>
-<struct name='DDPNBPAddress' type='{DDPNBPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C&quot;fNBPNameBuffer&quot;[105C]}'/>
-<struct name='DNSAddress' type='{DNSAddress=&quot;fAddressType&quot;S&quot;fName&quot;[256c]}'/>
-<struct name='DNSQueryInfo' type='{DNSQueryInfo=&quot;qType&quot;S&quot;qClass&quot;S&quot;ttl&quot;I&quot;name&quot;[256c]&quot;responseType&quot;S&quot;resourceLen&quot;S&quot;resourceData&quot;[4c]}'/>
-<struct name='EnetPacketHeader' type='{EnetPacketHeader=&quot;fDestAddr&quot;[6C]&quot;fSourceAddr&quot;[6C]&quot;fProto&quot;S}'/>
-<struct name='IconFamilyElement' type='{IconFamilyElement=&quot;elementType&quot;I&quot;elementSize&quot;i&quot;elementData&quot;[1C]}'/>
-<struct name='IconFamilyResource' type='{IconFamilyResource=&quot;resourceType&quot;I&quot;resourceSize&quot;i&quot;elements&quot;[1{IconFamilyElement=&quot;elementType&quot;I&quot;elementSize&quot;i&quot;elementData&quot;[1C]}]}'/>
-<struct name='InetAddress' type='{InetAddress=&quot;fAddressType&quot;S&quot;fPort&quot;S&quot;fHost&quot;I&quot;fUnused&quot;[8C]}'/>
-<struct name='InetDHCPOption' type='{InetDHCPOption=&quot;fOptionTag&quot;C&quot;fOptionLen&quot;C&quot;fOptionValue&quot;C}'/>
-<struct name='InetHostInfo' type='{InetHostInfo=&quot;name&quot;[256c]&quot;addrs&quot;[10L]}' type64='{InetHostInfo=&quot;name&quot;[256c]&quot;addrs&quot;[10I]}'/>
-<struct name='InetInterfaceInfo' type='{InetInterfaceInfo=&quot;fAddress&quot;I&quot;fNetmask&quot;I&quot;fBroadcastAddr&quot;I&quot;fDefaultGatewayAddr&quot;I&quot;fDNSAddr&quot;I&quot;fVersion&quot;S&quot;fHWAddrLen&quot;S&quot;fHWAddr&quot;*&quot;fIfMTU&quot;I&quot;fReservedPtrs&quot;[2*]&quot;fDomainName&quot;[256c]&quot;fIPSecondaryCount&quot;I&quot;fReserved&quot;[252C]}'/>
-<struct name='InetMailExchange' type='{InetMailExchange=&quot;preference&quot;S&quot;exchange&quot;[256c]}'/>
-<struct name='InetSysInfo' type='{InetSysInfo=&quot;cpuType&quot;[32c]&quot;osType&quot;[32c]}'/>
-<struct name='KCAttribute' type='{SecKeychainAttribute=&quot;tag&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
-<struct name='KCAttributeList' type='{SecKeychainAttributeList=&quot;count&quot;I&quot;attr&quot;^{SecKeychainAttribute}}'/>
-<struct name='KCCallbackInfo' type='{KCCallbackInfo=&quot;version&quot;I&quot;item&quot;^{OpaqueSecKeychainItemRef}&quot;processID&quot;[2l]&quot;event&quot;[4l]&quot;keychain&quot;^{OpaqueSecKeychainRef}}' type64='{KCCallbackInfo=&quot;version&quot;I&quot;item&quot;^{OpaqueSecKeychainItemRef}&quot;processID&quot;[2i]&quot;event&quot;[4i]&quot;keychain&quot;^{OpaqueSecKeychainRef}}'/>
-<struct name='LCPEcho' type='{LCPEcho=&quot;retryCount&quot;I&quot;retryPeriod&quot;I}'/>
-<struct name='NBPAddress' type='{NBPAddress=&quot;fAddressType&quot;S&quot;fNBPNameBuffer&quot;[105C]}'/>
-<struct name='NBPEntity' type='{NBPEntity=&quot;fEntity&quot;[99C]}'/>
-<struct name='NSLClientAsyncInfo' type='{NSLClientAsyncInfo=&quot;clientContextPtr&quot;^v&quot;mgrContextPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;l&quot;maxBufferSize&quot;l&quot;startTime&quot;I&quot;intStartTime&quot;I&quot;maxSearchTime&quot;I&quot;alertInterval&quot;I&quot;totalItems&quot;I&quot;alertThreshold&quot;I&quot;searchState&quot;S&quot;searchResult&quot;{NSLError=&quot;theErr&quot;i&quot;theContext&quot;I}&quot;searchDataType&quot;I}' type64='{NSLClientAsyncInfo=&quot;clientContextPtr&quot;^v&quot;mgrContextPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;q&quot;maxBufferSize&quot;q&quot;startTime&quot;I&quot;intStartTime&quot;I&quot;maxSearchTime&quot;I&quot;alertInterval&quot;I&quot;totalItems&quot;I&quot;alertThreshold&quot;I&quot;searchState&quot;S&quot;searchResult&quot;{NSLError=&quot;theErr&quot;i&quot;theContext&quot;I}&quot;searchDataType&quot;I}'/>
-<struct name='NSLError' type='{NSLError=&quot;theErr&quot;i&quot;theContext&quot;I}'/>
-<struct name='NSLPluginAsyncInfo' type='{NSLPluginAsyncInfo=&quot;mgrContextPtr&quot;^v&quot;pluginContextPtr&quot;^v&quot;pluginPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;l&quot;maxBufferSize&quot;l&quot;maxSearchTime&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;clientRef&quot;I&quot;requestRef&quot;I&quot;searchState&quot;S&quot;searchResult&quot;i}' type64='{NSLPluginAsyncInfo=&quot;mgrContextPtr&quot;^v&quot;pluginContextPtr&quot;^v&quot;pluginPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;q&quot;maxBufferSize&quot;q&quot;maxSearchTime&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;clientRef&quot;I&quot;requestRef&quot;I&quot;searchState&quot;S&quot;searchResult&quot;i}'/>
-<struct name='NSLPluginData' type='{NSLPluginData=&quot;reserved1&quot;l&quot;reserved2&quot;l&quot;reserved3&quot;l&quot;supportsRegistration&quot;B&quot;isPurgeable&quot;B&quot;totalLen&quot;S&quot;dataTypeOffset&quot;S&quot;serviceListOffset&quot;S&quot;protocolListOffset&quot;S&quot;commentStringOffset&quot;S}' type64='{NSLPluginData=&quot;reserved1&quot;q&quot;reserved2&quot;q&quot;reserved3&quot;q&quot;supportsRegistration&quot;B&quot;isPurgeable&quot;B&quot;totalLen&quot;S&quot;dataTypeOffset&quot;S&quot;serviceListOffset&quot;S&quot;protocolListOffset&quot;S&quot;commentStringOffset&quot;S}'/>
-<struct name='NSLServicesListHeader' type='{NSLServicesListHeader=&quot;numServices&quot;L&quot;logicalLen&quot;L}' type64='{NSLServicesListHeader=&quot;numServices&quot;Q&quot;logicalLen&quot;Q}'/>
-<struct name='NSLTypedData' type='{NSLTypedData=&quot;dataType&quot;L&quot;lengthOfData&quot;L}' type64='{NSLTypedData=&quot;dataType&quot;Q&quot;lengthOfData&quot;Q}'/>
-<struct name='OTAddress' type='{OTAddress=&quot;fAddressType&quot;S&quot;fAddress&quot;[1C]}'/>
-<struct name='OTBuffer' type='{OTBuffer=&quot;fLink&quot;^v&quot;fLink2&quot;^v&quot;fNext&quot;^{OTBuffer}&quot;fData&quot;*&quot;fLen&quot;I&quot;fSave&quot;^v&quot;fBand&quot;C&quot;fType&quot;C&quot;fPad1&quot;C&quot;fFlags&quot;C}' type64='{OTBuffer=&quot;fLink&quot;^v&quot;fLink2&quot;^v&quot;fNext&quot;^{OTBuffer}&quot;fData&quot;*&quot;fLen&quot;Q&quot;fSave&quot;^v&quot;fBand&quot;C&quot;fType&quot;C&quot;fPad1&quot;C&quot;fFlags&quot;C}'/>
-<struct name='OTBufferInfo' type='{OTBufferInfo=&quot;fBuffer&quot;^{OTBuffer}&quot;fOffset&quot;I&quot;fPad&quot;C}' type64='{OTBufferInfo=&quot;fBuffer&quot;^{OTBuffer}&quot;fOffset&quot;Q&quot;fPad&quot;C}'/>
-<struct name='OTClientList' type='{OTClientList=&quot;fNumClients&quot;I&quot;fBuffer&quot;[4C]}' type64='{OTClientList=&quot;fNumClients&quot;Q&quot;fBuffer&quot;[4C]}'/>
-<struct name='OTData' type='{OTData=&quot;fNext&quot;^v&quot;fData&quot;^v&quot;fLen&quot;I}' type64='{OTData=&quot;fNext&quot;^v&quot;fData&quot;^v&quot;fLen&quot;Q}'/>
-<struct name='OTGate' type='{OTGate=&quot;fLIFO&quot;{OTLIFO=&quot;fHead&quot;^{OTLink}}&quot;fList&quot;{OTList=&quot;fHead&quot;^{OTLink}}&quot;fProc&quot;^?&quot;fNumQueued&quot;i&quot;fInside&quot;i}'/>
-<struct name='OTHashList' type='{OTHashList=&quot;fHashProc&quot;^?&quot;fHashTableSize&quot;I&quot;fHashBuckets&quot;^^{OTLink}}' type64='{OTHashList=&quot;fHashProc&quot;^?&quot;fHashTableSize&quot;Q&quot;fHashBuckets&quot;^^{OTLink}}'/>
-<struct name='OTISDNAddress' type='{OTISDNAddress=&quot;fAddressType&quot;S&quot;fPhoneLength&quot;S&quot;fPhoneNumber&quot;[37c]}'/>
-<struct name='OTLIFO' type='{OTLIFO=&quot;fHead&quot;^{OTLink}}'/>
-<struct name='OTLink' type='{OTLink=&quot;fNext&quot;^{OTLink}}'/>
-<struct name='OTList' type='{OTList=&quot;fHead&quot;^{OTLink}}'/>
-<struct name='OTPortCloseStruct' type='{OTPortCloseStruct=&quot;fPortRef&quot;I&quot;fTheProvider&quot;^v&quot;fDenyReason&quot;i}'/>
-<struct name='OTPortRecord' type='{OTPortRecord=&quot;fRef&quot;I&quot;fPortFlags&quot;I&quot;fInfoFlags&quot;I&quot;fCapabilities&quot;I&quot;fNumChildPorts&quot;I&quot;fChildPorts&quot;^I&quot;fPortName&quot;[36c]&quot;fModuleName&quot;[32c]&quot;fSlotID&quot;[8c]&quot;fResourceInfo&quot;[32c]&quot;fReserved&quot;[164c]}' type64='{OTPortRecord=&quot;fRef&quot;I&quot;fPortFlags&quot;I&quot;fInfoFlags&quot;I&quot;fCapabilities&quot;I&quot;fNumChildPorts&quot;Q&quot;fChildPorts&quot;^I&quot;fPortName&quot;[36c]&quot;fModuleName&quot;[32c]&quot;fSlotID&quot;[8c]&quot;fResourceInfo&quot;[32c]&quot;fReserved&quot;[164c]}'/>
-<struct name='OTScriptInfo' type='{OTScriptInfo=&quot;fScriptType&quot;I&quot;fTheScript&quot;^v&quot;fScriptLength&quot;I}'/>
-<struct name='OTTimeStamp' type='{UnsignedWide=&quot;lo&quot;I&quot;hi&quot;I}'/>
-<struct name='PPPMRULimits' type='{PPPMRULimits=&quot;mruSize&quot;I&quot;upperMRULimit&quot;I&quot;lowerMRULimit&quot;I}'/>
-<struct name='Partition' type='{Partition=&quot;pmSig&quot;S&quot;pmSigPad&quot;S&quot;pmMapBlkCnt&quot;I&quot;pmPyPartStart&quot;I&quot;pmPartBlkCnt&quot;I&quot;pmPartName&quot;[32C]&quot;pmParType&quot;[32C]&quot;pmLgDataStart&quot;I&quot;pmDataCnt&quot;I&quot;pmPartStatus&quot;I&quot;pmLgBootStart&quot;I&quot;pmBootSize&quot;I&quot;pmBootAddr&quot;I&quot;pmBootAddr2&quot;I&quot;pmBootEntry&quot;I&quot;pmBootEntry2&quot;I&quot;pmBootCksum&quot;I&quot;pmProcessor&quot;[16C]&quot;pmPad&quot;[188S]}'/>
-<struct name='SleepQRec' type='{SleepQRec=&quot;sleepQLink&quot;^{SleepQRec}&quot;sleepQType&quot;s&quot;sleepQProc&quot;^?&quot;sleepQFlags&quot;s}'/>
-<struct name='T8022Address' type='{T8022Address=&quot;fAddrFamily&quot;S&quot;fHWAddr&quot;[6C]&quot;fSAP&quot;S&quot;fSNAP&quot;[5C]}'/>
-<struct name='T8022FullPacketHeader' type='{T8022FullPacketHeader=&quot;fEnetPart&quot;{EnetPacketHeader=&quot;fDestAddr&quot;[6C]&quot;fSourceAddr&quot;[6C]&quot;fProto&quot;S}&quot;f8022Part&quot;{T8022SNAPHeader=&quot;fDSAP&quot;C&quot;fSSAP&quot;C&quot;fCtrl&quot;C&quot;fSNAP&quot;[5C]}}'/>
-<struct name='T8022Header' type='{T8022Header=&quot;fDSAP&quot;C&quot;fSSAP&quot;C&quot;fCtrl&quot;C}'/>
-<struct name='T8022SNAPHeader' type='{T8022SNAPHeader=&quot;fDSAP&quot;C&quot;fSSAP&quot;C&quot;fCtrl&quot;C&quot;fSNAP&quot;[5C]}'/>
-<struct name='TBind' type='{TBind=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;qlen&quot;I}' type64='{TBind=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;qlen&quot;I}'/>
-<struct name='TCall' type='{TCall=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TCall=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'/>
-<struct name='TDiscon' type='{TDiscon=&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;reason&quot;i&quot;sequence&quot;i}' type64='{TDiscon=&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;reason&quot;i&quot;sequence&quot;i}'/>
-<struct name='TEndpointInfo' type='{TEndpointInfo=&quot;addr&quot;i&quot;options&quot;i&quot;tsdu&quot;i&quot;etsdu&quot;i&quot;connect&quot;i&quot;discon&quot;i&quot;servtype&quot;I&quot;flags&quot;I}'/>
-<struct name='TIPAddMulticast' type='{TIPAddMulticast=&quot;multicastGroupAddress&quot;I&quot;interfaceAddress&quot;I}'/>
-<struct name='TLookupBuffer' type='{TLookupBuffer=&quot;fAddressLength&quot;S&quot;fNameLength&quot;S&quot;fAddressBuffer&quot;[1C]}'/>
-<struct name='TLookupReply' type='{TLookupReply=&quot;names&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;rspcount&quot;I}' type64='{TLookupReply=&quot;names&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;rspcount&quot;I}'/>
-<struct name='TLookupRequest' type='{TLookupRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;maxcnt&quot;I&quot;timeout&quot;I&quot;flags&quot;I}' type64='{TLookupRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;maxcnt&quot;I&quot;timeout&quot;I&quot;flags&quot;I}'/>
-<struct name='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
-<struct name='TOptMgmt' type='{TOptMgmt=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;flags&quot;I}' type64='{TOptMgmt=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;flags&quot;I}'/>
-<struct name='TOption' type='{TOption=&quot;len&quot;I&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I&quot;value&quot;[1L]}' type64='{TOption=&quot;len&quot;Q&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I&quot;value&quot;[1I]}'/>
-<struct name='TOptionHeader' type='{TOptionHeader=&quot;len&quot;I&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I}' type64='{TOptionHeader=&quot;len&quot;Q&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I}'/>
-<struct name='TRegisterReply' type='{TRegisterReply=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;nameid&quot;i}' type64='{TRegisterReply=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;nameid&quot;i}'/>
-<struct name='TRegisterRequest' type='{TRegisterRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;flags&quot;I}' type64='{TRegisterRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;flags&quot;I}'/>
-<struct name='TReply' type='{TReply=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TReply=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'/>
-<struct name='TRequest' type='{TRequest=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TRequest=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'/>
-<struct name='TUDErr' type='{TUDErr=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;error&quot;i}' type64='{TUDErr=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;error&quot;i}'/>
-<struct name='TUnitData' type='{TUnitData=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}}' type64='{TUnitData=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}}'/>
-<struct name='TUnitReply' type='{TUnitReply=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TUnitReply=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'/>
-<struct name='TUnitRequest' type='{TUnitRequest=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TUnitRequest=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'/>
-<struct name='WSClientContext' type='{WSClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type64='{WSClientContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
-<struct name='bandinfo' type='{bandinfo=&quot;bi_pri&quot;C&quot;pad1&quot;c&quot;bi_flag&quot;i}'/>
-<struct name='log_ctl' type='{log_ctl=&quot;mid&quot;s&quot;sid&quot;s&quot;level&quot;c&quot;pad1&quot;c&quot;flags&quot;s&quot;ltime&quot;l&quot;ttime&quot;l&quot;seq_no&quot;i}' type64='{log_ctl=&quot;mid&quot;s&quot;sid&quot;s&quot;level&quot;c&quot;pad1&quot;c&quot;flags&quot;s&quot;ltime&quot;q&quot;ttime&quot;q&quot;seq_no&quot;i}'/>
-<struct name='str_list' type='{str_list=&quot;sl_nmods&quot;i&quot;sl_modlist&quot;^{str_mlist}}'/>
-<struct name='str_mlist' type='{str_mlist=&quot;l_name&quot;[32c]}'/>
-<struct name='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'/>
-<struct name='strfdinsert' type='{strfdinsert=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;l&quot;fildes&quot;l&quot;offset&quot;i}' type64='{strfdinsert=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;q&quot;fildes&quot;q&quot;offset&quot;i}'/>
-<struct name='strioctl' type='{strioctl=&quot;ic_cmd&quot;i&quot;ic_timout&quot;i&quot;ic_len&quot;i&quot;ic_dp&quot;*}'/>
-<struct name='strpeek' type='{strpeek=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;l}' type64='{strpeek=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;q}'/>
-<struct name='strpmsg' type='{strpmsg=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;band&quot;i&quot;flags&quot;l}' type64='{strpmsg=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;band&quot;i&quot;flags&quot;q}'/>
-<struct name='strrecvfd' type='{strrecvfd=&quot;fd&quot;l&quot;uid&quot;S&quot;gid&quot;S&quot;fill&quot;[8c]}' type64='{strrecvfd=&quot;fd&quot;q&quot;uid&quot;S&quot;gid&quot;S&quot;fill&quot;[8c]}'/>
-<struct name='t_kpalive' type='{t_kpalive=&quot;kp_onoff&quot;i&quot;kp_timeout&quot;i}'/>
-<struct name='t_linger' type='{t_linger=&quot;l_onoff&quot;i&quot;l_linger&quot;i}'/>
-<struct name='trace_ids' type='{trace_ids=&quot;ti_mid&quot;s&quot;ti_sid&quot;s&quot;ti_level&quot;c}'/>
+<struct name='AppleTalkInfo' type='{AppleTalkInfo=&quot;fOurAddress&quot;{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}&quot;fRouterAddress&quot;{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}&quot;fCableRange&quot;[2S]&quot;fFlags&quot;S}'>
+<field name='fOurAddress' declared_type='DDPAddress' type='{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}'/>
+<field name='fRouterAddress' declared_type='DDPAddress' type='{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}'/>
+<field name='fCableRange' declared_type='UInt16*' type='[2S]'/>
+<field name='fFlags' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='Block0' type='{Block0=&quot;sbSig&quot;S&quot;sbBlkSize&quot;S&quot;sbBlkCount&quot;I&quot;sbDevType&quot;S&quot;sbDevId&quot;S&quot;sbData&quot;I&quot;sbDrvrCount&quot;S&quot;ddBlock&quot;I&quot;ddSize&quot;S&quot;ddType&quot;S&quot;ddPad&quot;[243S]}'>
+<field name='sbSig' declared_type='UInt16' type='S'/>
+<field name='sbBlkSize' declared_type='UInt16' type='S'/>
+<field name='sbBlkCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='sbDevType' declared_type='UInt16' type='S'/>
+<field name='sbDevId' declared_type='UInt16' type='S'/>
+<field name='sbData' declared_type='UInt32' type='L' type64='I'/>
+<field name='sbDrvrCount' declared_type='UInt16' type='S'/>
+<field name='ddBlock' declared_type='UInt32' type='L' type64='I'/>
+<field name='ddSize' declared_type='UInt16' type='S'/>
+<field name='ddType' declared_type='UInt16' type='S'/>
+<field name='ddPad' declared_type='UInt16*' type='[243S]'/>
+</struct>
+<struct name='CCMiscInfo' type='{CCMiscInfo=&quot;connectionStatus&quot;I&quot;connectionTimeElapsed&quot;I&quot;connectionTimeRemaining&quot;I&quot;bytesTransmitted&quot;I&quot;bytesReceived&quot;I&quot;reserved&quot;I}'>
+<field name='connectionStatus' declared_type='UInt32' type='L' type64='I'/>
+<field name='connectionTimeElapsed' declared_type='UInt32' type='L' type64='I'/>
+<field name='connectionTimeRemaining' declared_type='UInt32' type='L' type64='I'/>
+<field name='bytesTransmitted' declared_type='UInt32' type='L' type64='I'/>
+<field name='bytesReceived' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='CSIdentityClientContext' type='{CSIdentityClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?&quot;statusUpdated&quot;^?}' type64='{CSIdentityClientContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?&quot;statusUpdated&quot;^?}'>
+<field name='version' declared_type='CFIndex' type='l' type64='q'/>
+<field name='info' declared_type='void*' type='^v'/>
+<field name='retain' function_pointer='true' declared_type='CFAllocatorRetainCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='void*' type='^v' const='true'/>
+</field>
+<field name='release' function_pointer='true' declared_type='CFAllocatorReleaseCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='copyDescription' function_pointer='true' declared_type='CFAllocatorCopyDescriptionCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
+</field>
+<field name='statusUpdated' function_pointer='true' declared_type='CSIdentityStatusUpdatedCallback' type='^?'>
+<arg declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg declared_type='CFIndex' type='l' type64='q'/>
+<arg declared_type='CFErrorRef' type='^{__CFError=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='CSIdentityQueryClientContext' type='{CSIdentityQueryClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retainInfo&quot;^?&quot;releaseInfo&quot;^?&quot;copyInfoDescription&quot;^?&quot;receiveEvent&quot;^?}' type64='{CSIdentityQueryClientContext=&quot;version&quot;q&quot;info&quot;^v&quot;retainInfo&quot;^?&quot;releaseInfo&quot;^?&quot;copyInfoDescription&quot;^?&quot;receiveEvent&quot;^?}'>
+<field name='version' declared_type='CFIndex' type='l' type64='q'/>
+<field name='info' declared_type='void*' type='^v'/>
+<field name='retainInfo' function_pointer='true' declared_type='CFAllocatorRetainCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='void*' type='^v' const='true'/>
+</field>
+<field name='releaseInfo' function_pointer='true' declared_type='CFAllocatorReleaseCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='copyInfoDescription' function_pointer='true' declared_type='CFAllocatorCopyDescriptionCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
+</field>
+<field name='receiveEvent' function_pointer='true' declared_type='CSIdentityQueryReceiveEventCallback' type='^?'>
+<arg declared_type='CSIdentityQueryRef' type='^{__CSIdentityQuery=}'/>
+<arg declared_type='CSIdentityQueryEvent' type='l' type64='q'/>
+<arg declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg declared_type='CFErrorRef' type='^{__CFError=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='DDMap' type='{DDMap=&quot;ddBlock&quot;I&quot;ddSize&quot;S&quot;ddType&quot;S}'>
+<field name='ddBlock' declared_type='UInt32' type='L' type64='I'/>
+<field name='ddSize' declared_type='UInt16' type='S'/>
+<field name='ddType' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='DDPAddress' type='{DDPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C}'>
+<field name='fAddressType' declared_type='OTAddressType' type='S'/>
+<field name='fNetwork' declared_type='UInt16' type='S'/>
+<field name='fNodeID' declared_type='UInt8' type='C'/>
+<field name='fSocket' declared_type='UInt8' type='C'/>
+<field name='fDDPType' declared_type='UInt8' type='C'/>
+<field name='fPad' declared_type='UInt8' type='C'/>
+</struct>
+<struct name='DDPNBPAddress' type='{DDPNBPAddress=&quot;fAddressType&quot;S&quot;fNetwork&quot;S&quot;fNodeID&quot;C&quot;fSocket&quot;C&quot;fDDPType&quot;C&quot;fPad&quot;C&quot;fNBPNameBuffer&quot;[105C]}'>
+<field name='fAddressType' declared_type='OTAddressType' type='S'/>
+<field name='fNetwork' declared_type='UInt16' type='S'/>
+<field name='fNodeID' declared_type='UInt8' type='C'/>
+<field name='fSocket' declared_type='UInt8' type='C'/>
+<field name='fDDPType' declared_type='UInt8' type='C'/>
+<field name='fPad' declared_type='UInt8' type='C'/>
+<field name='fNBPNameBuffer' declared_type='UInt8*' type='[105C]'/>
+</struct>
+<struct name='DNSAddress' type='{DNSAddress=&quot;fAddressType&quot;S&quot;fName&quot;[256c]}'>
+<field name='fAddressType' declared_type='OTAddressType' type='S'/>
+<field name='fName' declared_type='InetDomainName' type='[256c]'/>
+</struct>
+<struct name='DNSQueryInfo' type='{DNSQueryInfo=&quot;qType&quot;S&quot;qClass&quot;S&quot;ttl&quot;I&quot;name&quot;[256c]&quot;responseType&quot;S&quot;resourceLen&quot;S&quot;resourceData&quot;[4c]}'>
+<field name='qType' declared_type='UInt16' type='S'/>
+<field name='qClass' declared_type='UInt16' type='S'/>
+<field name='ttl' declared_type='UInt32' type='L' type64='I'/>
+<field name='name' declared_type='InetDomainName' type='[256c]'/>
+<field name='responseType' declared_type='UInt16' type='S'/>
+<field name='resourceLen' declared_type='UInt16' type='S'/>
+<field name='resourceData' declared_type='char*' type='[4c]'/>
+</struct>
+<struct name='EnetPacketHeader' type='{EnetPacketHeader=&quot;fDestAddr&quot;[6C]&quot;fSourceAddr&quot;[6C]&quot;fProto&quot;S}'>
+<field name='fDestAddr' declared_type='UInt8*' type='[6C]'/>
+<field name='fSourceAddr' declared_type='UInt8*' type='[6C]'/>
+<field name='fProto' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='IconFamilyElement' type='{IconFamilyElement=&quot;elementType&quot;I&quot;elementSize&quot;i&quot;elementData&quot;[1C]}'>
+<field name='elementType' declared_type='OSType' type='L' type64='I'/>
+<field name='elementSize' declared_type='SInt32' type='l' type64='i'/>
+<field name='elementData' declared_type='unsigned char*' type='[1C]'/>
+</struct>
+<struct name='IconFamilyResource' type='{IconFamilyResource=&quot;resourceType&quot;I&quot;resourceSize&quot;i&quot;elements&quot;[1{IconFamilyElement=&quot;elementType&quot;I&quot;elementSize&quot;i&quot;elementData&quot;[1C]}]}'>
+<field name='resourceType' declared_type='OSType' type='L' type64='I'/>
+<field name='resourceSize' declared_type='SInt32' type='l' type64='i'/>
+<field name='elements' declared_type='IconFamilyElement*' type='[1{IconFamilyElement=&quot;elementType&quot;I&quot;elementSize&quot;i&quot;elementData&quot;[1C]}]'/>
+</struct>
+<struct name='InetAddress' type='{InetAddress=&quot;fAddressType&quot;S&quot;fPort&quot;S&quot;fHost&quot;I&quot;fUnused&quot;[8C]}'>
+<field name='fAddressType' declared_type='OTAddressType' type='S'/>
+<field name='fPort' declared_type='InetPort' type='S'/>
+<field name='fHost' declared_type='InetHost' type='L' type64='I'/>
+<field name='fUnused' declared_type='UInt8*' type='[8C]'/>
+</struct>
+<struct name='InetDHCPOption' type='{InetDHCPOption=&quot;fOptionTag&quot;C&quot;fOptionLen&quot;C&quot;fOptionValue&quot;C}'>
+<field name='fOptionTag' declared_type='UInt8' type='C'/>
+<field name='fOptionLen' declared_type='UInt8' type='C'/>
+<field name='fOptionValue' declared_type='UInt8' type='C'/>
+</struct>
+<struct name='InetHostInfo' type='{InetHostInfo=&quot;name&quot;[256c]&quot;addrs&quot;[10L]}' type64='{InetHostInfo=&quot;name&quot;[256c]&quot;addrs&quot;[10I]}'>
+<field name='name' declared_type='InetDomainName' type='[256c]'/>
+<field name='addrs' declared_type='InetHost*' type='[10L]' type64='[10I]'/>
+</struct>
+<struct name='InetInterfaceInfo' type='{InetInterfaceInfo=&quot;fAddress&quot;I&quot;fNetmask&quot;I&quot;fBroadcastAddr&quot;I&quot;fDefaultGatewayAddr&quot;I&quot;fDNSAddr&quot;I&quot;fVersion&quot;S&quot;fHWAddrLen&quot;S&quot;fHWAddr&quot;*&quot;fIfMTU&quot;I&quot;fReservedPtrs&quot;[2*]&quot;fDomainName&quot;[256c]&quot;fIPSecondaryCount&quot;I&quot;fReserved&quot;[252C]}'>
+<field name='fAddress' declared_type='InetHost' type='L' type64='I'/>
+<field name='fNetmask' declared_type='InetHost' type='L' type64='I'/>
+<field name='fBroadcastAddr' declared_type='InetHost' type='L' type64='I'/>
+<field name='fDefaultGatewayAddr' declared_type='InetHost' type='L' type64='I'/>
+<field name='fDNSAddr' declared_type='InetHost' type='L' type64='I'/>
+<field name='fVersion' declared_type='UInt16' type='S'/>
+<field name='fHWAddrLen' declared_type='UInt16' type='S'/>
+<field name='fHWAddr' declared_type='UInt8*' type='*'/>
+<field name='fIfMTU' declared_type='UInt32' type='L' type64='I'/>
+<field name='fReservedPtrs' declared_type='UInt8**' type='[2*]'/>
+<field name='fDomainName' declared_type='InetDomainName' type='[256c]'/>
+<field name='fIPSecondaryCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='fReserved' declared_type='UInt8*' type='[252C]'/>
+</struct>
+<struct name='InetMailExchange' type='{InetMailExchange=&quot;preference&quot;S&quot;exchange&quot;[256c]}'>
+<field name='preference' declared_type='UInt16' type='S'/>
+<field name='exchange' declared_type='InetDomainName' type='[256c]'/>
+</struct>
+<struct name='InetSysInfo' type='{InetSysInfo=&quot;cpuType&quot;[32c]&quot;osType&quot;[32c]}'>
+<field name='cpuType' declared_type='char*' type='[32c]'/>
+<field name='osType' declared_type='char*' type='[32c]'/>
+</struct>
+<struct name='KCAttribute' type='{SecKeychainAttribute=&quot;tag&quot;I&quot;length&quot;I&quot;data&quot;^v}'>
+<field name='tag' declared_type='SecKeychainAttrType' type='L' type64='I'/>
+<field name='length' declared_type='UInt32' type='L' type64='I'/>
+<field name='data' declared_type='void*' type='^v'/>
+</struct>
+<struct name='KCAttributeList' type='{SecKeychainAttributeList=&quot;count&quot;I&quot;attr&quot;^{SecKeychainAttribute}}'>
+<field name='count' declared_type='UInt32' type='L' type64='I'/>
+<field name='attr' declared_type='SecKeychainAttribute*' type='^{SecKeychainAttribute=II^v}'/>
+</struct>
+<struct name='KCCallbackInfo' type='{KCCallbackInfo=&quot;version&quot;I&quot;item&quot;^{OpaqueSecKeychainItemRef}&quot;processID&quot;[2l]&quot;event&quot;[4l]&quot;keychain&quot;^{OpaqueSecKeychainRef}}' type64='{KCCallbackInfo=&quot;version&quot;I&quot;item&quot;^{OpaqueSecKeychainItemRef}&quot;processID&quot;[2i]&quot;event&quot;[4i]&quot;keychain&quot;^{OpaqueSecKeychainRef}}'>
+<field name='version' declared_type='UInt32' type='L' type64='I'/>
+<field name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<field name='processID' declared_type='SInt32*' type='[2l]' type64='[2i]'/>
+<field name='event' declared_type='SInt32*' type='[4l]' type64='[4i]'/>
+<field name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+</struct>
+<struct name='LCPEcho' type='{LCPEcho=&quot;retryCount&quot;I&quot;retryPeriod&quot;I}'>
+<field name='retryCount' declared_type='UInt32' type='L' type64='I'/>
+<field name='retryPeriod' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='NBPAddress' type='{NBPAddress=&quot;fAddressType&quot;S&quot;fNBPNameBuffer&quot;[105C]}'>
+<field name='fAddressType' declared_type='OTAddressType' type='S'/>
+<field name='fNBPNameBuffer' declared_type='UInt8*' type='[105C]'/>
+</struct>
+<struct name='NBPEntity' type='{NBPEntity=&quot;fEntity&quot;[99C]}'>
+<field name='fEntity' declared_type='UInt8*' type='[99C]'/>
+</struct>
+<struct name='NSLClientAsyncInfo' type='{NSLClientAsyncInfo=&quot;clientContextPtr&quot;^v&quot;mgrContextPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;l&quot;maxBufferSize&quot;l&quot;startTime&quot;I&quot;intStartTime&quot;I&quot;maxSearchTime&quot;I&quot;alertInterval&quot;I&quot;totalItems&quot;I&quot;alertThreshold&quot;I&quot;searchState&quot;S&quot;searchResult&quot;{NSLError=&quot;theErr&quot;i&quot;theContext&quot;I}&quot;searchDataType&quot;I}' type64='{NSLClientAsyncInfo=&quot;clientContextPtr&quot;^v&quot;mgrContextPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;q&quot;maxBufferSize&quot;q&quot;startTime&quot;I&quot;intStartTime&quot;I&quot;maxSearchTime&quot;I&quot;alertInterval&quot;I&quot;totalItems&quot;I&quot;alertThreshold&quot;I&quot;searchState&quot;S&quot;searchResult&quot;{NSLError=&quot;theErr&quot;i&quot;theContext&quot;I}&quot;searchDataType&quot;I}'>
+<field name='clientContextPtr' declared_type='void*' type='^v'/>
+<field name='mgrContextPtr' declared_type='void*' type='^v'/>
+<field name='resultBuffer' declared_type='char*' type='*'/>
+<field name='bufferLen' declared_type='long' type='l' type64='q'/>
+<field name='maxBufferSize' declared_type='long' type='l' type64='q'/>
+<field name='startTime' declared_type='UInt32' type='L' type64='I'/>
+<field name='intStartTime' declared_type='UInt32' type='L' type64='I'/>
+<field name='maxSearchTime' declared_type='UInt32' type='L' type64='I'/>
+<field name='alertInterval' declared_type='UInt32' type='L' type64='I'/>
+<field name='totalItems' declared_type='UInt32' type='L' type64='I'/>
+<field name='alertThreshold' declared_type='UInt32' type='L' type64='I'/>
+<field name='searchState' declared_type='NSLSearchState' type='S'/>
+<field name='searchResult' declared_type='NSLError' type='{NSLError=&quot;theErr&quot;i&quot;theContext&quot;I}'/>
+<field name='searchDataType' declared_type='NSLEventCode' type='L' type64='I'/>
+</struct>
+<struct name='NSLError' type='{NSLError=&quot;theErr&quot;i&quot;theContext&quot;I}'>
+<field name='theErr' declared_type='OSStatus' type='l' type64='i'/>
+<field name='theContext' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='NSLPluginAsyncInfo' type='{NSLPluginAsyncInfo=&quot;mgrContextPtr&quot;^v&quot;pluginContextPtr&quot;^v&quot;pluginPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;l&quot;maxBufferSize&quot;l&quot;maxSearchTime&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;clientRef&quot;I&quot;requestRef&quot;I&quot;searchState&quot;S&quot;searchResult&quot;i}' type64='{NSLPluginAsyncInfo=&quot;mgrContextPtr&quot;^v&quot;pluginContextPtr&quot;^v&quot;pluginPtr&quot;^v&quot;resultBuffer&quot;*&quot;bufferLen&quot;q&quot;maxBufferSize&quot;q&quot;maxSearchTime&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;reserved3&quot;I&quot;clientRef&quot;I&quot;requestRef&quot;I&quot;searchState&quot;S&quot;searchResult&quot;i}'>
+<field name='mgrContextPtr' declared_type='void*' type='^v'/>
+<field name='pluginContextPtr' declared_type='void*' type='^v'/>
+<field name='pluginPtr' declared_type='void*' type='^v'/>
+<field name='resultBuffer' declared_type='char*' type='*'/>
+<field name='bufferLen' declared_type='long' type='l' type64='q'/>
+<field name='maxBufferSize' declared_type='long' type='l' type64='q'/>
+<field name='maxSearchTime' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved1' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved2' declared_type='UInt32' type='L' type64='I'/>
+<field name='reserved3' declared_type='UInt32' type='L' type64='I'/>
+<field name='clientRef' declared_type='NSLClientRef' type='L' type64='I'/>
+<field name='requestRef' declared_type='NSLRequestRef' type='L' type64='I'/>
+<field name='searchState' declared_type='NSLSearchState' type='S'/>
+<field name='searchResult' declared_type='OSStatus' type='l' type64='i'/>
+</struct>
+<struct name='NSLPluginData' type='{NSLPluginData=&quot;reserved1&quot;l&quot;reserved2&quot;l&quot;reserved3&quot;l&quot;supportsRegistration&quot;B&quot;isPurgeable&quot;B&quot;totalLen&quot;S&quot;dataTypeOffset&quot;S&quot;serviceListOffset&quot;S&quot;protocolListOffset&quot;S&quot;commentStringOffset&quot;S}' type64='{NSLPluginData=&quot;reserved1&quot;q&quot;reserved2&quot;q&quot;reserved3&quot;q&quot;supportsRegistration&quot;B&quot;isPurgeable&quot;B&quot;totalLen&quot;S&quot;dataTypeOffset&quot;S&quot;serviceListOffset&quot;S&quot;protocolListOffset&quot;S&quot;commentStringOffset&quot;S}'>
+<field name='reserved1' declared_type='long' type='l' type64='q'/>
+<field name='reserved2' declared_type='long' type='l' type64='q'/>
+<field name='reserved3' declared_type='long' type='l' type64='q'/>
+<field name='supportsRegistration' declared_type='Boolean' type='B'/>
+<field name='isPurgeable' declared_type='Boolean' type='B'/>
+<field name='totalLen' declared_type='UInt16' type='S'/>
+<field name='dataTypeOffset' declared_type='UInt16' type='S'/>
+<field name='serviceListOffset' declared_type='UInt16' type='S'/>
+<field name='protocolListOffset' declared_type='UInt16' type='S'/>
+<field name='commentStringOffset' declared_type='UInt16' type='S'/>
+</struct>
+<struct name='NSLServicesListHeader' type='{NSLServicesListHeader=&quot;numServices&quot;L&quot;logicalLen&quot;L}' type64='{NSLServicesListHeader=&quot;numServices&quot;Q&quot;logicalLen&quot;Q}'>
+<field name='numServices' declared_type='unsigned long' type='L' type64='Q'/>
+<field name='logicalLen' declared_type='unsigned long' type='L' type64='Q'/>
+</struct>
+<struct name='NSLTypedData' type='{NSLTypedData=&quot;dataType&quot;L&quot;lengthOfData&quot;L}' type64='{NSLTypedData=&quot;dataType&quot;Q&quot;lengthOfData&quot;Q}'>
+<field name='dataType' declared_type='unsigned long' type='L' type64='Q'/>
+<field name='lengthOfData' declared_type='unsigned long' type='L' type64='Q'/>
+</struct>
+<struct name='OTAddress' type='{OTAddress=&quot;fAddressType&quot;S&quot;fAddress&quot;[1C]}'>
+<field name='fAddressType' declared_type='OTAddressType' type='S'/>
+<field name='fAddress' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='OTBuffer' type='{OTBuffer=&quot;fLink&quot;^v&quot;fLink2&quot;^v&quot;fNext&quot;^{OTBuffer}&quot;fData&quot;*&quot;fLen&quot;I&quot;fSave&quot;^v&quot;fBand&quot;C&quot;fType&quot;C&quot;fPad1&quot;C&quot;fFlags&quot;C}' type64='{OTBuffer=&quot;fLink&quot;^v&quot;fLink2&quot;^v&quot;fNext&quot;^{OTBuffer}&quot;fData&quot;*&quot;fLen&quot;Q&quot;fSave&quot;^v&quot;fBand&quot;C&quot;fType&quot;C&quot;fPad1&quot;C&quot;fFlags&quot;C}'>
+<field name='fLink' declared_type='void*' type='^v'/>
+<field name='fLink2' declared_type='void*' type='^v'/>
+<field name='fNext' declared_type='struct OTBuffer*' type='^{OTBuffer=^v^v^{OTBuffer}*I^vCCCC}' type64='^{OTBuffer=^v^v^{OTBuffer}*Q^vCCCC}'/>
+<field name='fData' declared_type='UInt8*' type='*'/>
+<field name='fLen' declared_type='ByteCount' type='L' type64='Q'/>
+<field name='fSave' declared_type='void*' type='^v'/>
+<field name='fBand' declared_type='UInt8' type='C'/>
+<field name='fType' declared_type='UInt8' type='C'/>
+<field name='fPad1' declared_type='UInt8' type='C'/>
+<field name='fFlags' declared_type='UInt8' type='C'/>
+</struct>
+<struct name='OTBufferInfo' type='{OTBufferInfo=&quot;fBuffer&quot;^{OTBuffer}&quot;fOffset&quot;I&quot;fPad&quot;C}' type64='{OTBufferInfo=&quot;fBuffer&quot;^{OTBuffer}&quot;fOffset&quot;Q&quot;fPad&quot;C}'>
+<field name='fBuffer' declared_type='OTBuffer*' type='^{OTBuffer=^v^v^{OTBuffer}*I^vCCCC}' type64='^{OTBuffer=^v^v^{OTBuffer}*Q^vCCCC}'/>
+<field name='fOffset' declared_type='ByteCount' type='L' type64='Q'/>
+<field name='fPad' declared_type='UInt8' type='C'/>
+</struct>
+<struct name='OTClientList' type='{OTClientList=&quot;fNumClients&quot;I&quot;fBuffer&quot;[4C]}' type64='{OTClientList=&quot;fNumClients&quot;Q&quot;fBuffer&quot;[4C]}'>
+<field name='fNumClients' declared_type='ItemCount' type='L' type64='Q'/>
+<field name='fBuffer' declared_type='UInt8*' type='[4C]'/>
+</struct>
+<struct name='OTData' type='{OTData=&quot;fNext&quot;^v&quot;fData&quot;^v&quot;fLen&quot;I}' type64='{OTData=&quot;fNext&quot;^v&quot;fData&quot;^v&quot;fLen&quot;Q}'>
+<field name='fNext' declared_type='void*' type='^v'/>
+<field name='fData' declared_type='void*' type='^v'/>
+<field name='fLen' declared_type='ByteCount' type='L' type64='Q'/>
+</struct>
+<struct name='OTGate' type='{OTGate=&quot;fLIFO&quot;{OTLIFO=&quot;fHead&quot;^{OTLink}}&quot;fList&quot;{OTList=&quot;fHead&quot;^{OTLink}}&quot;fProc&quot;^?&quot;fNumQueued&quot;i&quot;fInside&quot;i}'>
+<field name='fLIFO' declared_type='OTLIFO' type='{OTLIFO=&quot;fHead&quot;^{OTLink}}'/>
+<field name='fList' declared_type='OTList' type='{OTList=&quot;fHead&quot;^{OTLink}}'/>
+<field name='fProc' function_pointer='true' declared_type='OTGateProcPtr' type='^?'>
+<arg declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+<field name='fNumQueued' declared_type='SInt32' type='l' type64='i'/>
+<field name='fInside' declared_type='SInt32' type='l' type64='i'/>
+</struct>
+<struct name='OTHashList' type='{OTHashList=&quot;fHashProc&quot;^?&quot;fHashTableSize&quot;I&quot;fHashBuckets&quot;^^{OTLink}}' type64='{OTHashList=&quot;fHashProc&quot;^?&quot;fHashTableSize&quot;Q&quot;fHashBuckets&quot;^^{OTLink}}'>
+<field name='fHashProc' function_pointer='true' declared_type='OTHashProcPtr' type='^?'>
+<arg declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
+</field>
+<field name='fHashTableSize' declared_type='ByteCount' type='L' type64='Q'/>
+<field name='fHashBuckets' declared_type='OTLink**' type='^^{OTLink}'/>
+</struct>
+<struct name='OTISDNAddress' type='{OTISDNAddress=&quot;fAddressType&quot;S&quot;fPhoneLength&quot;S&quot;fPhoneNumber&quot;[37c]}'>
+<field name='fAddressType' declared_type='OTAddressType' type='S'/>
+<field name='fPhoneLength' declared_type='UInt16' type='S'/>
+<field name='fPhoneNumber' declared_type='char*' type='[37c]'/>
+</struct>
+<struct name='OTLIFO' type='{OTLIFO=&quot;fHead&quot;^{OTLink}}'>
+<field name='fHead' declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+</struct>
+<struct name='OTLink' type='{OTLink=&quot;fNext&quot;^{OTLink}}'>
+<field name='fNext' declared_type='struct OTLink*' type='^{OTLink=^{OTLink}}'/>
+</struct>
+<struct name='OTList' type='{OTList=&quot;fHead&quot;^{OTLink}}'>
+<field name='fHead' declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+</struct>
+<struct name='OTPortCloseStruct' type='{OTPortCloseStruct=&quot;fPortRef&quot;I&quot;fTheProvider&quot;^v&quot;fDenyReason&quot;i}'>
+<field name='fPortRef' declared_type='OTPortRef' type='L' type64='I'/>
+<field name='fTheProvider' declared_type='ProviderRef' type='@'/>
+<field name='fDenyReason' declared_type='OSStatus' type='l' type64='i'/>
+</struct>
+<struct name='OTPortRecord' type='{OTPortRecord=&quot;fRef&quot;I&quot;fPortFlags&quot;I&quot;fInfoFlags&quot;I&quot;fCapabilities&quot;I&quot;fNumChildPorts&quot;I&quot;fChildPorts&quot;^I&quot;fPortName&quot;[36c]&quot;fModuleName&quot;[32c]&quot;fSlotID&quot;[8c]&quot;fResourceInfo&quot;[32c]&quot;fReserved&quot;[164c]}' type64='{OTPortRecord=&quot;fRef&quot;I&quot;fPortFlags&quot;I&quot;fInfoFlags&quot;I&quot;fCapabilities&quot;I&quot;fNumChildPorts&quot;Q&quot;fChildPorts&quot;^I&quot;fPortName&quot;[36c]&quot;fModuleName&quot;[32c]&quot;fSlotID&quot;[8c]&quot;fResourceInfo&quot;[32c]&quot;fReserved&quot;[164c]}'>
+<field name='fRef' declared_type='OTPortRef' type='L' type64='I'/>
+<field name='fPortFlags' declared_type='UInt32' type='L' type64='I'/>
+<field name='fInfoFlags' declared_type='UInt32' type='L' type64='I'/>
+<field name='fCapabilities' declared_type='UInt32' type='L' type64='I'/>
+<field name='fNumChildPorts' declared_type='ItemCount' type='L' type64='Q'/>
+<field name='fChildPorts' declared_type='OTPortRef*' type='^I'/>
+<field name='fPortName' declared_type='char*' type='[36c]'/>
+<field name='fModuleName' declared_type='char*' type='[32c]'/>
+<field name='fSlotID' declared_type='char*' type='[8c]'/>
+<field name='fResourceInfo' declared_type='char*' type='[32c]'/>
+<field name='fReserved' declared_type='char*' type='[164c]'/>
+</struct>
+<struct name='OTScriptInfo' type='{OTScriptInfo=&quot;fScriptType&quot;I&quot;fTheScript&quot;^v&quot;fScriptLength&quot;I}'>
+<field name='fScriptType' declared_type='UInt32' type='L' type64='I'/>
+<field name='fTheScript' declared_type='void*' type='^v'/>
+<field name='fScriptLength' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='OTTimeStamp' type='{UnsignedWide=&quot;lo&quot;I&quot;hi&quot;I}'>
+<field name='lo' declared_type='UInt32' type='L' type64='I'/>
+<field name='hi' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='PPPMRULimits' type='{PPPMRULimits=&quot;mruSize&quot;I&quot;upperMRULimit&quot;I&quot;lowerMRULimit&quot;I}'>
+<field name='mruSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='upperMRULimit' declared_type='UInt32' type='L' type64='I'/>
+<field name='lowerMRULimit' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='Partition' type='{Partition=&quot;pmSig&quot;S&quot;pmSigPad&quot;S&quot;pmMapBlkCnt&quot;I&quot;pmPyPartStart&quot;I&quot;pmPartBlkCnt&quot;I&quot;pmPartName&quot;[32C]&quot;pmParType&quot;[32C]&quot;pmLgDataStart&quot;I&quot;pmDataCnt&quot;I&quot;pmPartStatus&quot;I&quot;pmLgBootStart&quot;I&quot;pmBootSize&quot;I&quot;pmBootAddr&quot;I&quot;pmBootAddr2&quot;I&quot;pmBootEntry&quot;I&quot;pmBootEntry2&quot;I&quot;pmBootCksum&quot;I&quot;pmProcessor&quot;[16C]&quot;pmPad&quot;[188S]}'>
+<field name='pmSig' declared_type='UInt16' type='S'/>
+<field name='pmSigPad' declared_type='UInt16' type='S'/>
+<field name='pmMapBlkCnt' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmPyPartStart' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmPartBlkCnt' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmPartName' declared_type='UInt8*' type='[32C]'/>
+<field name='pmParType' declared_type='UInt8*' type='[32C]'/>
+<field name='pmLgDataStart' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmDataCnt' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmPartStatus' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmLgBootStart' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmBootSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmBootAddr' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmBootAddr2' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmBootEntry' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmBootEntry2' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmBootCksum' declared_type='UInt32' type='L' type64='I'/>
+<field name='pmProcessor' declared_type='UInt8*' type='[16C]'/>
+<field name='pmPad' declared_type='UInt16*' type='[188S]'/>
+</struct>
+<struct name='SleepQRec' type='{SleepQRec=&quot;sleepQLink&quot;^{SleepQRec}&quot;sleepQType&quot;s&quot;sleepQProc&quot;^?&quot;sleepQFlags&quot;s}'>
+<field name='sleepQLink' declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<field name='sleepQType' declared_type='short' type='s'/>
+<field name='sleepQProc' function_pointer='true' declared_type='SleepQUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<retval declared_type='long' type='l' type64='q'/>
+</field>
+<field name='sleepQFlags' declared_type='short' type='s'/>
+</struct>
+<struct name='T8022Address' type='{T8022Address=&quot;fAddrFamily&quot;S&quot;fHWAddr&quot;[6C]&quot;fSAP&quot;S&quot;fSNAP&quot;[5C]}'>
+<field name='fAddrFamily' declared_type='OTAddressType' type='S'/>
+<field name='fHWAddr' declared_type='UInt8*' type='[6C]'/>
+<field name='fSAP' declared_type='UInt16' type='S'/>
+<field name='fSNAP' declared_type='UInt8*' type='[5C]'/>
+</struct>
+<struct name='T8022FullPacketHeader' type='{T8022FullPacketHeader=&quot;fEnetPart&quot;{EnetPacketHeader=&quot;fDestAddr&quot;[6C]&quot;fSourceAddr&quot;[6C]&quot;fProto&quot;S}&quot;f8022Part&quot;{T8022SNAPHeader=&quot;fDSAP&quot;C&quot;fSSAP&quot;C&quot;fCtrl&quot;C&quot;fSNAP&quot;[5C]}}'>
+<field name='fEnetPart' declared_type='EnetPacketHeader' type='{EnetPacketHeader=&quot;fDestAddr&quot;[6C]&quot;fSourceAddr&quot;[6C]&quot;fProto&quot;S}'/>
+<field name='f8022Part' declared_type='T8022SNAPHeader' type='{T8022SNAPHeader=&quot;fDSAP&quot;C&quot;fSSAP&quot;C&quot;fCtrl&quot;C&quot;fSNAP&quot;[5C]}'/>
+</struct>
+<struct name='T8022Header' type='{T8022Header=&quot;fDSAP&quot;C&quot;fSSAP&quot;C&quot;fCtrl&quot;C}'>
+<field name='fDSAP' declared_type='UInt8' type='C'/>
+<field name='fSSAP' declared_type='UInt8' type='C'/>
+<field name='fCtrl' declared_type='UInt8' type='C'/>
+</struct>
+<struct name='T8022SNAPHeader' type='{T8022SNAPHeader=&quot;fDSAP&quot;C&quot;fSSAP&quot;C&quot;fCtrl&quot;C&quot;fSNAP&quot;[5C]}'>
+<field name='fDSAP' declared_type='UInt8' type='C'/>
+<field name='fSSAP' declared_type='UInt8' type='C'/>
+<field name='fCtrl' declared_type='UInt8' type='C'/>
+<field name='fSNAP' declared_type='UInt8*' type='[5C]'/>
+</struct>
+<struct name='TBind' type='{TBind=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;qlen&quot;I}' type64='{TBind=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;qlen&quot;I}'>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='qlen' declared_type='OTQLen' type='L' type64='I'/>
+</struct>
+<struct name='TCall' type='{TCall=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TCall=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='udata' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='sequence' declared_type='OTSequence' type='l' type64='i'/>
+</struct>
+<struct name='TDiscon' type='{TDiscon=&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;reason&quot;i&quot;sequence&quot;i}' type64='{TDiscon=&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;reason&quot;i&quot;sequence&quot;i}'>
+<field name='udata' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='reason' declared_type='OTReason' type='l' type64='i'/>
+<field name='sequence' declared_type='OTSequence' type='l' type64='i'/>
+</struct>
+<struct name='TEndpointInfo' type='{TEndpointInfo=&quot;addr&quot;i&quot;options&quot;i&quot;tsdu&quot;i&quot;etsdu&quot;i&quot;connect&quot;i&quot;discon&quot;i&quot;servtype&quot;I&quot;flags&quot;I}'>
+<field name='addr' declared_type='OTDataSize' type='l' type64='i'/>
+<field name='options' declared_type='OTDataSize' type='l' type64='i'/>
+<field name='tsdu' declared_type='OTDataSize' type='l' type64='i'/>
+<field name='etsdu' declared_type='OTDataSize' type='l' type64='i'/>
+<field name='connect' declared_type='OTDataSize' type='l' type64='i'/>
+<field name='discon' declared_type='OTDataSize' type='l' type64='i'/>
+<field name='servtype' declared_type='OTServiceType' type='L' type64='I'/>
+<field name='flags' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='TIPAddMulticast' type='{TIPAddMulticast=&quot;multicastGroupAddress&quot;I&quot;interfaceAddress&quot;I}'>
+<field name='multicastGroupAddress' declared_type='InetHost' type='L' type64='I'/>
+<field name='interfaceAddress' declared_type='InetHost' type='L' type64='I'/>
+</struct>
+<struct name='TLookupBuffer' type='{TLookupBuffer=&quot;fAddressLength&quot;S&quot;fNameLength&quot;S&quot;fAddressBuffer&quot;[1C]}'>
+<field name='fAddressLength' declared_type='UInt16' type='S'/>
+<field name='fNameLength' declared_type='UInt16' type='S'/>
+<field name='fAddressBuffer' declared_type='UInt8*' type='[1C]'/>
+</struct>
+<struct name='TLookupReply' type='{TLookupReply=&quot;names&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;rspcount&quot;I}' type64='{TLookupReply=&quot;names&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;rspcount&quot;I}'>
+<field name='names' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='rspcount' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='TLookupRequest' type='{TLookupRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;maxcnt&quot;I&quot;timeout&quot;I&quot;flags&quot;I}' type64='{TLookupRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;maxcnt&quot;I&quot;timeout&quot;I&quot;flags&quot;I}'>
+<field name='name' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='maxcnt' declared_type='UInt32' type='L' type64='I'/>
+<field name='timeout' declared_type='OTTimeout' type='L' type64='I'/>
+<field name='flags' declared_type='OTFlags' type='L' type64='I'/>
+</struct>
+<struct name='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'>
+<field name='maxlen' declared_type='ByteCount' type='L' type64='Q'/>
+<field name='len' declared_type='ByteCount' type='L' type64='Q'/>
+<field name='buf' declared_type='UInt8*' type='*'/>
+</struct>
+<struct name='TOptMgmt' type='{TOptMgmt=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;flags&quot;I}' type64='{TOptMgmt=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;flags&quot;I}'>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='flags' declared_type='OTFlags' type='L' type64='I'/>
+</struct>
+<struct name='TOption' type='{TOption=&quot;len&quot;I&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I&quot;value&quot;[1L]}' type64='{TOption=&quot;len&quot;Q&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I&quot;value&quot;[1I]}'>
+<field name='len' declared_type='ByteCount' type='L' type64='Q'/>
+<field name='level' declared_type='OTXTILevel' type='L' type64='I'/>
+<field name='name' declared_type='OTXTIName' type='L' type64='I'/>
+<field name='status' declared_type='UInt32' type='L' type64='I'/>
+<field name='value' declared_type='UInt32*' type='[1L]' type64='[1I]'/>
+</struct>
+<struct name='TOptionHeader' type='{TOptionHeader=&quot;len&quot;I&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I}' type64='{TOptionHeader=&quot;len&quot;Q&quot;level&quot;I&quot;name&quot;I&quot;status&quot;I}'>
+<field name='len' declared_type='ByteCount' type='L' type64='Q'/>
+<field name='level' declared_type='OTXTILevel' type='L' type64='I'/>
+<field name='name' declared_type='OTXTIName' type='L' type64='I'/>
+<field name='status' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='TRegisterReply' type='{TRegisterReply=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;nameid&quot;i}' type64='{TRegisterReply=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;nameid&quot;i}'>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='nameid' declared_type='OTNameID' type='l' type64='i'/>
+</struct>
+<struct name='TRegisterRequest' type='{TRegisterRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;flags&quot;I}' type64='{TRegisterRequest=&quot;name&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;flags&quot;I}'>
+<field name='name' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='flags' declared_type='OTFlags' type='L' type64='I'/>
+</struct>
+<struct name='TReply' type='{TReply=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TReply=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'>
+<field name='data' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='sequence' declared_type='OTSequence' type='l' type64='i'/>
+</struct>
+<struct name='TRequest' type='{TRequest=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TRequest=&quot;data&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'>
+<field name='data' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='sequence' declared_type='OTSequence' type='l' type64='i'/>
+</struct>
+<struct name='TUDErr' type='{TUDErr=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;error&quot;i}' type64='{TUDErr=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;error&quot;i}'>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='error' declared_type='SInt32' type='l' type64='i'/>
+</struct>
+<struct name='TUnitData' type='{TUnitData=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}}' type64='{TUnitData=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}}'>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='udata' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+</struct>
+<struct name='TUnitReply' type='{TUnitReply=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TUnitReply=&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='udata' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='sequence' declared_type='OTSequence' type='l' type64='i'/>
+</struct>
+<struct name='TUnitRequest' type='{TUnitRequest=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}&quot;sequence&quot;i}' type64='{TUnitRequest=&quot;addr&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;opt&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;udata&quot;{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}&quot;sequence&quot;i}'>
+<field name='addr' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='opt' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='udata' declared_type='TNetbuf' type='{TNetbuf=&quot;maxlen&quot;I&quot;len&quot;I&quot;buf&quot;*}' type64='{TNetbuf=&quot;maxlen&quot;Q&quot;len&quot;Q&quot;buf&quot;*}'/>
+<field name='sequence' declared_type='OTSequence' type='l' type64='i'/>
+</struct>
+<struct name='WSClientContext' type='{WSClientContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type64='{WSClientContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'>
+<field name='version' declared_type='CFIndex' type='l' type64='q'/>
+<field name='info' declared_type='void*' type='^v'/>
+<field name='retain' function_pointer='true' declared_type='WSClientContextRetainCallBackProcPtr' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field name='release' function_pointer='true' declared_type='WSClientContextReleaseCallBackProcPtr' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='copyDescription' function_pointer='true' declared_type='WSClientContextCopyDescriptionCallBackProcPtr' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
+</field>
+</struct>
+<struct name='bandinfo' type='{bandinfo=&quot;bi_pri&quot;C&quot;pad1&quot;c&quot;bi_flag&quot;i}'>
+<field name='bi_pri' declared_type='unsigned char' type='C'/>
+<field name='pad1' declared_type='char' type='c'/>
+<field name='bi_flag' declared_type='SInt32' type='l' type64='i'/>
+</struct>
+<struct name='log_ctl' type='{log_ctl=&quot;mid&quot;s&quot;sid&quot;s&quot;level&quot;c&quot;pad1&quot;c&quot;flags&quot;s&quot;ltime&quot;l&quot;ttime&quot;l&quot;seq_no&quot;i}' type64='{log_ctl=&quot;mid&quot;s&quot;sid&quot;s&quot;level&quot;c&quot;pad1&quot;c&quot;flags&quot;s&quot;ltime&quot;q&quot;ttime&quot;q&quot;seq_no&quot;i}'>
+<field name='mid' declared_type='short' type='s'/>
+<field name='sid' declared_type='short' type='s'/>
+<field name='level' declared_type='char' type='c'/>
+<field name='pad1' declared_type='char' type='c'/>
+<field name='flags' declared_type='short' type='s'/>
+<field name='ltime' declared_type='long' type='l' type64='q'/>
+<field name='ttime' declared_type='long' type='l' type64='q'/>
+<field name='seq_no' declared_type='SInt32' type='l' type64='i'/>
+</struct>
+<struct name='str_list' type='{str_list=&quot;sl_nmods&quot;i&quot;sl_modlist&quot;^{str_mlist}}'>
+<field name='sl_nmods' declared_type='SInt32' type='l' type64='i'/>
+<field name='sl_modlist' declared_type='str_mlist*' type='^{str_mlist=[32c]}'/>
+</struct>
+<struct name='str_mlist' type='{str_mlist=&quot;l_name&quot;[32c]}'>
+<field name='l_name' declared_type='char*' type='[32c]'/>
+</struct>
+<struct name='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'>
+<field name='maxlen' declared_type='SInt32' type='l' type64='i'/>
+<field name='len' declared_type='SInt32' type='l' type64='i'/>
+<field name='buf' declared_type='char*' type='*'/>
+</struct>
+<struct name='strfdinsert' type='{strfdinsert=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;l&quot;fildes&quot;l&quot;offset&quot;i}' type64='{strfdinsert=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;q&quot;fildes&quot;q&quot;offset&quot;i}'>
+<field name='ctlbuf' declared_type='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'/>
+<field name='databuf' declared_type='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'/>
+<field name='flags' declared_type='long' type='l' type64='q'/>
+<field name='fildes' declared_type='long' type='l' type64='q'/>
+<field name='offset' declared_type='SInt32' type='l' type64='i'/>
+</struct>
+<struct name='strioctl' type='{strioctl=&quot;ic_cmd&quot;i&quot;ic_timout&quot;i&quot;ic_len&quot;i&quot;ic_dp&quot;*}'>
+<field name='ic_cmd' declared_type='SInt32' type='l' type64='i'/>
+<field name='ic_timout' declared_type='SInt32' type='l' type64='i'/>
+<field name='ic_len' declared_type='SInt32' type='l' type64='i'/>
+<field name='ic_dp' declared_type='char*' type='*'/>
+</struct>
+<struct name='strpeek' type='{strpeek=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;l}' type64='{strpeek=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;flags&quot;q}'>
+<field name='ctlbuf' declared_type='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'/>
+<field name='databuf' declared_type='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'/>
+<field name='flags' declared_type='long' type='l' type64='q'/>
+</struct>
+<struct name='strpmsg' type='{strpmsg=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;band&quot;i&quot;flags&quot;l}' type64='{strpmsg=&quot;ctlbuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;databuf&quot;{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}&quot;band&quot;i&quot;flags&quot;q}'>
+<field name='ctlbuf' declared_type='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'/>
+<field name='databuf' declared_type='strbuf' type='{strbuf=&quot;maxlen&quot;i&quot;len&quot;i&quot;buf&quot;*}'/>
+<field name='band' declared_type='SInt32' type='l' type64='i'/>
+<field name='flags' declared_type='long' type='l' type64='q'/>
+</struct>
+<struct name='strrecvfd' type='{strrecvfd=&quot;fd&quot;l&quot;uid&quot;S&quot;gid&quot;S&quot;fill&quot;[8c]}' type64='{strrecvfd=&quot;fd&quot;q&quot;uid&quot;S&quot;gid&quot;S&quot;fill&quot;[8c]}'>
+<field name='fd' declared_type='long' type='l' type64='q'/>
+<field name='uid' declared_type='unsigned short' type='S'/>
+<field name='gid' declared_type='unsigned short' type='S'/>
+<field name='fill' declared_type='char*' type='[8c]'/>
+</struct>
+<struct name='t_kpalive' type='{t_kpalive=&quot;kp_onoff&quot;i&quot;kp_timeout&quot;i}'>
+<field name='kp_onoff' declared_type='SInt32' type='l' type64='i'/>
+<field name='kp_timeout' declared_type='SInt32' type='l' type64='i'/>
+</struct>
+<struct name='t_linger' type='{t_linger=&quot;l_onoff&quot;i&quot;l_linger&quot;i}'>
+<field name='l_onoff' declared_type='SInt32' type='l' type64='i'/>
+<field name='l_linger' declared_type='SInt32' type='l' type64='i'/>
+</struct>
+<struct name='trace_ids' type='{trace_ids=&quot;ti_mid&quot;s&quot;ti_sid&quot;s&quot;ti_level&quot;c}'>
+<field name='ti_mid' declared_type='short' type='s'/>
+<field name='ti_sid' declared_type='short' type='s'/>
+<field name='ti_level' declared_type='char' type='c'/>
+</struct>
 <cftype name='ATSvcRef' type='^v'/>
 <cftype name='CSIdentityAuthorityRef' gettypeid_func='CSIdentityAuthorityGetTypeID' type='^{__CSIdentityAuthority=}'/>
 <cftype name='CSIdentityQueryRef' gettypeid_func='CSIdentityQueryGetTypeID' type='^{__CSIdentityQuery=}'/>
@@ -109,39 +605,39 @@
 <opaque name='HDQueueElement' type64='^{HDQueueElement=}'/>
 <opaque name='OTClientContextPtr' type='^{OpaqueOTClientContextPtr=}'/>
 <opaque name='PMgrQueueElement' type64='^{PMgrQueueElement=}'/>
-<constant name='kCSIdentityErrorDomain' type='^{__CFString=}'/>
-<constant name='kCSIdentityGeneratePosixName' type='^{__CFString=}'/>
-<constant name='kWSDebugIncomingBody' type='^{__CFString=}'/>
-<constant name='kWSDebugIncomingHeaders' type='^{__CFString=}'/>
-<constant name='kWSDebugOutgoingBody' type='^{__CFString=}'/>
-<constant name='kWSDebugOutgoingHeaders' type='^{__CFString=}'/>
-<constant name='kWSFaultCode' type='^{__CFString=}'/>
-<constant name='kWSFaultExtra' type='^{__CFString=}'/>
-<constant name='kWSFaultString' type='^{__CFString=}'/>
-<constant name='kWSHTTPExtraHeaders' type='^{__CFString=}'/>
-<constant name='kWSHTTPFollowsRedirects' type='^{__CFString=}'/>
-<constant name='kWSHTTPMessage' type='^{__CFString=}'/>
-<constant name='kWSHTTPProxy' type='^{__CFString=}'/>
-<constant name='kWSHTTPResponseMessage' type='^{__CFString=}'/>
-<constant name='kWSHTTPVersion' type='^{__CFString=}'/>
-<constant name='kWSMethodInvocationResult' type='^{__CFString=}'/>
-<constant name='kWSMethodInvocationResultParameterName' type='^{__CFString=}'/>
-<constant name='kWSMethodInvocationTimeoutValue' type='^{__CFString=}'/>
-<constant name='kWSNetworkStreamFaultString' type='^{__CFString=}'/>
-<constant name='kWSRecordNamespaceURI' type='^{__CFString=}'/>
-<constant name='kWSRecordParameterOrder' type='^{__CFString=}'/>
-<constant name='kWSRecordType' type='^{__CFString=}'/>
-<constant name='kWSSOAP1999Protocol' type='^{__CFString=}'/>
-<constant name='kWSSOAP2001Protocol' type='^{__CFString=}'/>
-<constant name='kWSSOAPBodyEncodingStyle' type='^{__CFString=}'/>
-<constant name='kWSSOAPMessageHeaders' type='^{__CFString=}'/>
-<constant name='kWSSOAPMethodNamespaceURI' type='^{__CFString=}'/>
-<constant name='kWSSOAPStyleDoc' type='^{__CFString=}'/>
-<constant name='kWSSOAPStyleRPC' type='^{__CFString=}'/>
-<constant name='kWSStreamErrorDomain' type='^{__CFString=}'/>
-<constant name='kWSStreamErrorError' type='^{__CFString=}'/>
-<constant name='kWSStreamErrorMessage' type='^{__CFString=}'/>
-<constant name='kWSXMLRPCProtocol' type='^{__CFString=}'/>
+<constant name='kCSIdentityErrorDomain' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kCSIdentityGeneratePosixName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kWSDebugIncomingBody' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSDebugIncomingHeaders' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSDebugOutgoingBody' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSDebugOutgoingHeaders' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSFaultCode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSFaultExtra' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSFaultString' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSHTTPExtraHeaders' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSHTTPFollowsRedirects' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSHTTPMessage' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSHTTPProxy' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSHTTPResponseMessage' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSHTTPVersion' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSMethodInvocationResult' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSMethodInvocationResultParameterName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSMethodInvocationTimeoutValue' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSNetworkStreamFaultString' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSRecordNamespaceURI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSRecordParameterOrder' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSRecordType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSSOAP1999Protocol' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSSOAP2001Protocol' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSSOAPBodyEncodingStyle' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSSOAPMessageHeaders' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSSOAPMethodNamespaceURI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSSOAPStyleDoc' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSSOAPStyleRPC' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSStreamErrorDomain' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSStreamErrorError' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSStreamErrorMessage' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kWSXMLRPCProtocol' declared_type='CFStringRef' type='^{__CFString=}'/>
 <string_constant name='kADSPName' value='adsp'/>
 <string_constant name='kASPName' value='asp'/>
 <string_constant name='kATBinderID' value='ot:atbd$'/>
@@ -1302,999 +1798,1046 @@
 <enum name='small1BitMask' value='1768125219'/>
 <enum name='small4BitData' value='1768125236'/>
 <enum name='small8BitData' value='1768125240'/>
-<function name='AlertSoundPlay'/>
+<function name='AlertSoundPlay'>
+<retval declared_type='void' type='v'/>
+</function>
 <function name='AlertSoundPlayCustomSound'>
-<arg type='L' type64='I'/>
+<arg name='inAction' declared_type='SystemSoundActionID' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='BatteryCount'>
-<retval type='s'/>
+<retval declared_type='short' type='s'/>
 </function>
 <function name='CSGetDefaultIdentityAuthority'>
-<retval type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
 </function>
 <function name='CSGetLocalIdentityAuthority'>
-<retval type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
 </function>
 <function name='CSGetManagedIdentityAuthority'>
-<retval type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
 </function>
 <function name='CSIdentityAddAlias'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='alias' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentityAddMember'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CSIdentity=}'/>
+<arg name='group' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='member' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentityAuthenticateUsingPassword'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='B'/>
+<arg name='user' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='password' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityAuthorityCopyLocalizedName'>
-<arg type='^{__CSIdentityAuthority=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='authority' declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='CSIdentityAuthorityGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='CSIdentityCommit'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{AuthorizationOpaqueRef=}'/>
-<arg type='^^{__CFError}'/>
-<retval type='B'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='authorization' declared_type='AuthorizationRef' type='^{AuthorizationOpaqueRef=}'/>
+<arg name='error' declared_type='CFErrorRef*' type='^^{__CFError}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityCommitAsynchronously'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{CSIdentityClientContext=i^v^?^?^?^?}' type64='^{CSIdentityClientContext=q^v^?^?^?^?}'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{AuthorizationOpaqueRef=}'/>
-<retval type='B'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='clientContext' declared_type='CSIdentityClientContext*' type='^{CSIdentityClientContext=i^v^?^?^?^?}' type64='^{CSIdentityClientContext=q^v^?^?^?^?}' const='true'/>
+<arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='authorization' declared_type='AuthorizationRef' type='^{AuthorizationOpaqueRef=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='l' type64='q'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='Q'/>
-<arg type='^{__CSIdentityAuthority=}'/>
-<retval already_retained='true' type='^{__CSIdentity=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='identityClass' declared_type='CSIdentityClass' type='l' type64='q'/>
+<arg name='fullName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='posixName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='flags' declared_type='CSIdentityFlags' type='L' type64='Q'/>
+<arg name='authority' declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityRef' already_retained='true' type='^{__CSIdentity=}'/>
 </function>
 <function name='CSIdentityCreateCopy'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CSIdentity=}'/>
-<retval already_retained='true' type='^{__CSIdentity=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CSIdentityRef' already_retained='true' type='^{__CSIdentity=}'/>
 </function>
 <function name='CSIdentityCreateGroupMembershipQuery'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CSIdentity=}'/>
-<retval already_retained='true' type='^{__CSIdentityQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='group' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CSIdentityQueryRef' already_retained='true' type='^{__CSIdentityQuery=}'/>
 </function>
 <function name='CSIdentityCreatePersistentReference'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CSIdentity=}'/>
-<retval already_retained='true' type='^{__CFData=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
 </function>
 <function name='CSIdentityDelete'>
-<arg type='^{__CSIdentity=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentityGetAliases'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFArray=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFArrayRef' type='^{__CFArray=}'/>
 </function>
 <function name='CSIdentityGetAuthority'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CSIdentityAuthority=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
 </function>
 <function name='CSIdentityGetCertificate'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{OpaqueSecCertificateRef=}'/>
+<arg name='user' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='SecCertificateRef' type='^{OpaqueSecCertificateRef=}'/>
 </function>
 <function name='CSIdentityGetClass'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='l' type64='q'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CSIdentityClass' type='l' type64='q'/>
 </function>
 <function name='CSIdentityGetEmailAddress'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
 </function>
 <function name='CSIdentityGetFullName'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
 </function>
 <function name='CSIdentityGetImageData'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFData=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFDataRef' type='^{__CFData=}'/>
 </function>
 <function name='CSIdentityGetImageDataType'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
 </function>
 <function name='CSIdentityGetImageURL'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFURL=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFURLRef' type='^{__CFURL=}'/>
 </function>
 <function name='CSIdentityGetPosixID'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='I'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='id_t' type='I'/>
 </function>
 <function name='CSIdentityGetPosixName'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
 </function>
 <function name='CSIdentityGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='CSIdentityGetUUID'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='^{__CFUUID=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='CFUUIDRef' type='^{__CFUUID=}'/>
 </function>
 <function name='CSIdentityIsCommitting'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='B'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityIsEnabled'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='B'/>
+<arg name='user' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityIsHidden'>
-<arg type='^{__CSIdentity=}'/>
-<retval type='B'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityIsMemberOfGroup'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CSIdentity=}'/>
-<retval type='B'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='group' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityQueryCopyResults'>
-<arg type='^{__CSIdentityQuery=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='query' declared_type='CSIdentityQueryRef' type='^{__CSIdentityQuery=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='CSIdentityQueryCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='l' type64='q'/>
-<arg type='^{__CSIdentityAuthority=}'/>
-<retval already_retained='true' type='^{__CSIdentityQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='identityClass' declared_type='CSIdentityClass' type='l' type64='q'/>
+<arg name='authority' declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityQueryRef' already_retained='true' type='^{__CSIdentityQuery=}'/>
 </function>
 <function name='CSIdentityQueryCreateForCurrentUser'>
-<arg type='^{__CFAllocator=}'/>
-<retval already_retained='true' type='^{__CSIdentityQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<retval declared_type='CSIdentityQueryRef' already_retained='true' type='^{__CSIdentityQuery=}'/>
 </function>
 <function name='CSIdentityQueryCreateForName'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<arg type='^{__CSIdentityAuthority=}'/>
-<retval already_retained='true' type='^{__CSIdentityQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='comparisonMethod' declared_type='CSIdentityQueryStringComparisonMethod' type='l' type64='q'/>
+<arg name='identityClass' declared_type='CSIdentityClass' type='l' type64='q'/>
+<arg name='authority' declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityQueryRef' already_retained='true' type='^{__CSIdentityQuery=}'/>
 </function>
 <function name='CSIdentityQueryCreateForPersistentReference'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFData=}'/>
-<retval already_retained='true' type='^{__CSIdentityQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='referenceData' declared_type='CFDataRef' type='^{__CFData=}'/>
+<retval declared_type='CSIdentityQueryRef' already_retained='true' type='^{__CSIdentityQuery=}'/>
 </function>
 <function name='CSIdentityQueryCreateForPosixID'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='I'/>
-<arg type='l' type64='q'/>
-<arg type='^{__CSIdentityAuthority=}'/>
-<retval already_retained='true' type='^{__CSIdentityQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='posixID' declared_type='id_t' type='I'/>
+<arg name='identityClass' declared_type='CSIdentityClass' type='l' type64='q'/>
+<arg name='authority' declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityQueryRef' already_retained='true' type='^{__CSIdentityQuery=}'/>
 </function>
 <function name='CSIdentityQueryCreateForUUID'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFUUID=}'/>
-<arg type='^{__CSIdentityAuthority=}'/>
-<retval already_retained='true' type='^{__CSIdentityQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='uuid' declared_type='CFUUIDRef' type='^{__CFUUID=}'/>
+<arg name='authority' declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CSIdentityQueryRef' already_retained='true' type='^{__CSIdentityQuery=}'/>
 </function>
 <function name='CSIdentityQueryExecute'>
-<arg type='^{__CSIdentityQuery=}'/>
-<arg type='L' type64='Q'/>
-<arg type='^^{__CFError}'/>
-<retval type='B'/>
+<arg name='query' declared_type='CSIdentityQueryRef' type='^{__CSIdentityQuery=}'/>
+<arg name='flags' declared_type='CSIdentityQueryFlags' type='L' type64='Q'/>
+<arg name='error' declared_type='CFErrorRef*' type='^^{__CFError}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityQueryExecuteAsynchronously'>
-<arg type='^{__CSIdentityQuery=}'/>
-<arg type='L' type64='Q'/>
-<arg type='^{CSIdentityQueryClientContext=i^v^?^?^?^?}' type64='^{CSIdentityQueryClientContext=q^v^?^?^?^?}'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='B'/>
+<arg name='query' declared_type='CSIdentityQueryRef' type='^{__CSIdentityQuery=}'/>
+<arg name='flags' declared_type='CSIdentityQueryFlags' type='L' type64='Q'/>
+<arg name='clientContext' declared_type='CSIdentityQueryClientContext*' type='^{CSIdentityQueryClientContext=i^v^?^?^?^?}' type64='^{CSIdentityQueryClientContext=q^v^?^?^?^?}' const='true'/>
+<arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='CSIdentityQueryGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='CSIdentityQueryStop'>
-<arg type='^{__CSIdentityQuery=}'/>
+<arg name='query' declared_type='CSIdentityQueryRef' type='^{__CSIdentityQuery=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentityRemoveAlias'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='alias' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentityRemoveClient'>
-<arg type='^{__CSIdentity=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentityRemoveMember'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CSIdentity=}'/>
+<arg name='group' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='member' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentitySetCertificate'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{OpaqueSecCertificateRef=}'/>
+<arg name='user' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='certificate' declared_type='SecCertificateRef' type='^{OpaqueSecCertificateRef=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentitySetEmailAddress'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='emailAddress' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentitySetFullName'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='fullName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentitySetImageData'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFData=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='imageData' declared_type='CFDataRef' type='^{__CFData=}'/>
+<arg name='imageDataType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentitySetImageURL'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFURL=}'/>
+<arg name='identity' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentitySetIsEnabled'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='B'/>
+<arg name='user' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='isEnabled' declared_type='Boolean' type='B'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CSIdentitySetPassword'>
-<arg type='^{__CSIdentity=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='user' declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+<arg name='password' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='CurrentProcessorSpeed'>
-<retval type='s'/>
+<retval declared_type='short' type='s'/>
 </function>
 <function name='DisposeHDSpindownUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='HDSpindownUPP' type='^?'>
+<arg declared_type='HDQueueElement*' type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeKCCallbackUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='S'/>
-<arg type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='userUPP' function_pointer='true' declared_type='KCCallbackUPP' type='^?'>
+<arg declared_type='KCEvent' type='S'/>
+<arg declared_type='KCCallbackInfo*' type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeNSLClientNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='NSLClientNotifyUPP' type='^?'>
+<arg declared_type='NSLClientAsyncInfo*' type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeNSLMgrNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='NSLMgrNotifyUPP' type='^?'>
+<arg declared_type='NSLPluginAsyncInfo*' type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOTListSearchUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='^{OTLink=^{OTLink}}'/>
-<retval type='B'/>
+<arg name='userUPP' function_pointer='true' declared_type='OTListSearchUPP' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOTNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OTNotifyUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='OTEventCode' type='L' type64='I'/>
+<arg declared_type='OTResult' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOTProcessUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OTProcessUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposePMgrStateChangeUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
-<arg type='l' type64='q'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='PMgrStateChangeUPP' type='^?'>
+<arg declared_type='PMgrQueueElement*' type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeSleepQUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='^{SleepQRec=^{SleepQRec}s^?s}'/>
-<retval type='l' type64='q'/>
+<arg name='userUPP' function_pointer='true' declared_type='SleepQUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<retval declared_type='long' type='l' type64='q'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeSystemSoundCompletionUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='userUPP' function_pointer='true' declared_type='SystemSoundCompletionUPP' type='^?'>
+<arg declared_type='SystemSoundActionID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='GetCPUSpeed'>
-<retval type='l' type64='q'/>
+<retval declared_type='long' type='l' type64='q'/>
 </function>
 <function name='InvokeHDSpindownUPP'>
-<arg type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
-<retval type='v'/>
+<arg name='theElement' declared_type='HDQueueElement*' type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
+<arg name='userUPP' function_pointer='true' declared_type='HDSpindownUPP' type='^?'>
+<arg declared_type='HDQueueElement*' type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeKCCallbackUPP'>
-<arg type='S'/>
-<arg type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='S'/>
-<arg type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='keychainEvent' declared_type='KCEvent' type='S'/>
+<arg name='info' declared_type='KCCallbackInfo*' type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
+<arg name='userContext' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='KCCallbackUPP' type='^?'>
+<arg declared_type='KCEvent' type='S'/>
+<arg declared_type='KCCallbackInfo*' type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='InvokeNSLClientNotifyUPP'>
-<arg type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
-<retval type='v'/>
+<arg name='theClientAsyncInfo' declared_type='NSLClientAsyncInfo*' type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
+<arg name='userUPP' function_pointer='true' declared_type='NSLClientNotifyUPP' type='^?'>
+<arg declared_type='NSLClientAsyncInfo*' type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeNSLMgrNotifyUPP'>
-<arg type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
-<retval type='v'/>
+<arg name='thePluginAsyncInfo' declared_type='NSLPluginAsyncInfo*' type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
+<arg name='userUPP' function_pointer='true' declared_type='NSLMgrNotifyUPP' type='^?'>
+<arg declared_type='NSLPluginAsyncInfo*' type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeOTListSearchUPP'>
-<arg type='^v'/>
-<arg type='^{OTLink=^{OTLink}}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='^{OTLink=^{OTLink}}'/>
-<retval type='B'/>
+<arg name='ref' declared_type='void*' type='^v' const='true'/>
+<arg name='linkToCheck' declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+<arg name='userUPP' function_pointer='true' declared_type='OTListSearchUPP' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='InvokeOTNotifyUPP'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='contextPtr' declared_type='void*' type='^v'/>
+<arg name='code' declared_type='OTEventCode' type='L' type64='I'/>
+<arg name='result' declared_type='OTResult' type='l' type64='i'/>
+<arg name='cookie' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OTNotifyUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='OTEventCode' type='L' type64='I'/>
+<arg declared_type='OTResult' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeOTProcessUPP'>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='arg' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OTProcessUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokePMgrStateChangeUPP'>
-<arg type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
-<arg type='l' type64='q'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
-<arg type='l' type64='q'/>
-<retval type='v'/>
+<arg name='theElement' declared_type='PMgrQueueElement*' type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
+<arg name='stateBits' declared_type='long' type='l' type64='q'/>
+<arg name='userUPP' function_pointer='true' declared_type='PMgrStateChangeUPP' type='^?'>
+<arg declared_type='PMgrQueueElement*' type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeSleepQUPP'>
-<arg type='l' type64='q'/>
-<arg type='^{SleepQRec=^{SleepQRec}s^?s}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='^{SleepQRec=^{SleepQRec}s^?s}'/>
-<retval type='l' type64='q'/>
+<arg name='message' declared_type='long' type='l' type64='q'/>
+<arg name='qRecPtr' declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<arg name='userUPP' function_pointer='true' declared_type='SleepQUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<retval declared_type='long' type='l' type64='q'/>
 </arg>
-<retval type='l' type64='q'/>
+<retval declared_type='long' type='l' type64='q'/>
 </function>
 <function name='InvokeSystemSoundCompletionUPP'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='actionID' declared_type='SystemSoundActionID' type='L' type64='I'/>
+<arg name='userData' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='SystemSoundCompletionUPP' type='^?'>
+<arg declared_type='SystemSoundActionID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCAddCallback'>
-<arg function_pointer='true' type='^?'>
-<arg type='S'/>
-<arg type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='callbackProc' function_pointer='true' declared_type='KCCallbackUPP' type='^?'>
+<arg declared_type='KCEvent' type='S'/>
+<arg declared_type='KCCallbackInfo*' type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='S'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='eventMask' declared_type='KCEventMask' type='S'/>
+<arg name='userContext' declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCCopyItem'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<arg name='destKeychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<arg name='copy' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCCountKeychains'>
-<retval type='S'/>
+<retval declared_type='UInt16' type='S'/>
 </function>
 <function name='KCDeleteItem'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCFindAppleSharePassword'>
-<arg type='^[16C]'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serverSignature' declared_type='AFPServerSignature*' type='^[16C]'/>
+<arg name='serverAddress' declared_type='ConstStringPtr' type='*'/>
+<arg name='serverName' declared_type='ConstStringPtr' type='*'/>
+<arg name='volumeName' declared_type='ConstStringPtr' type='*'/>
+<arg name='accountName' declared_type='ConstStringPtr' type='*'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCFindFirstItem'>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<arg type='^{SecKeychainAttributeList=I^{SecKeychainAttribute}}'/>
-<arg type='^^{OpaqueSecKeychainSearchRef}'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<arg name='attrList' declared_type='KCAttributeList*' type='^{SecKeychainAttributeList=I^{SecKeychainAttribute}}' const='true'/>
+<arg name='search' declared_type='KCSearchRef*' type='^^{OpaqueSecKeychainSearchRef}'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCFindGenericPassword'>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serviceName' declared_type='ConstStringPtr' type='*'/>
+<arg name='accountName' declared_type='ConstStringPtr' type='*'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCFindInternetPassword'>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='S'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serverName' declared_type='ConstStringPtr' type='*'/>
+<arg name='securityDomain' declared_type='ConstStringPtr' type='*'/>
+<arg name='accountName' declared_type='ConstStringPtr' type='*'/>
+<arg name='port' declared_type='UInt16' type='S'/>
+<arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+<arg name='authType' declared_type='OSType' type='L' type64='I'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCFindInternetPasswordWithPath'>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='S'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serverName' declared_type='ConstStringPtr' type='*'/>
+<arg name='securityDomain' declared_type='ConstStringPtr' type='*'/>
+<arg name='accountName' declared_type='ConstStringPtr' type='*'/>
+<arg name='path' declared_type='ConstStringPtr' type='*'/>
+<arg name='port' declared_type='UInt16' type='S'/>
+<arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+<arg name='authType' declared_type='OSType' type='L' type64='I'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCFindNextItem'>
-<arg type='^{OpaqueSecKeychainSearchRef=}'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='search' declared_type='KCSearchRef' type='^{OpaqueSecKeychainSearchRef=}'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetAttribute'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<arg type='^{SecKeychainAttribute=II^v}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<arg name='attr' declared_type='KCAttribute*' type='^{SecKeychainAttribute=II^v}'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetData'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='data' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetDefaultKeychain'>
-<arg type='^^{OpaqueSecKeychainRef}'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetIndKeychain'>
-<arg type='S'/>
-<arg type='^^{OpaqueSecKeychainRef}'/>
-<retval type='l' type64='i'/>
+<arg name='index' declared_type='UInt16' type='S'/>
+<arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetKeychain'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<arg type='^^{OpaqueSecKeychainRef}'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetKeychainManagerVersion'>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='returnVers' declared_type='UInt32*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetKeychainName'>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<arg name='keychainName' declared_type='StringPtr' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCGetStatus'>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<arg name='keychainStatus' declared_type='UInt32*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCIsInteractionAllowed'>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='KCLock'>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCMakeAliasFromKCRef'>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<arg type='^^^{AliasRecord}'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<arg name='keychainAlias' declared_type='AliasHandle*' type='^^^{AliasRecord}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCMakeKCRefFromAlias'>
-<arg type='^^{AliasRecord}'/>
-<arg type='^^{OpaqueSecKeychainRef}'/>
-<retval type='l' type64='i'/>
+<arg name='keychainAlias' declared_type='AliasHandle' type='^^{AliasRecord}'/>
+<arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCMakeKCRefFromFSRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{OpaqueSecKeychainRef}'/>
-<retval type='l' type64='i'/>
+<arg name='keychainFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCNewItem'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='itemClass' declared_type='KCItemClass' type='L' type64='I'/>
+<arg name='itemCreator' declared_type='OSType' type='L' type64='I'/>
+<arg name='length' declared_type='UInt32' type='L' type64='I'/>
+<arg name='data' declared_type='void*' type='^v' const='true'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCReleaseItem'>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCReleaseKeychain'>
-<arg type='^^{OpaqueSecKeychainRef}'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef*' type='^^{OpaqueSecKeychainRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCReleaseSearch'>
-<arg type='^^{OpaqueSecKeychainSearchRef}'/>
-<retval type='l' type64='i'/>
+<arg name='search' declared_type='KCSearchRef*' type='^^{OpaqueSecKeychainSearchRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCRemoveCallback'>
-<arg function_pointer='true' type='^?'>
-<arg type='S'/>
-<arg type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='callbackProc' function_pointer='true' declared_type='KCCallbackUPP' type='^?'>
+<arg declared_type='KCEvent' type='S'/>
+<arg declared_type='KCCallbackInfo*' type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCSetAttribute'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<arg type='^{SecKeychainAttribute=II^v}'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<arg name='attr' declared_type='KCAttribute*' type='^{SecKeychainAttribute=II^v}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCSetData'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<arg name='length' declared_type='UInt32' type='L' type64='I'/>
+<arg name='data' declared_type='void*' type='^v' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCSetDefaultKeychain'>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCSetInteractionAllowed'>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='state' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='KCUpdateItem'>
-<arg type='^{OpaqueSecKeychainItemRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='item' declared_type='KCItemRef' type='^{OpaqueSecKeychainItemRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='MaximumProcessorSpeed'>
-<retval type='s'/>
+<retval declared_type='short' type='s'/>
 </function>
 <function name='MinimumProcessorSpeed'>
-<retval type='s'/>
+<retval declared_type='short' type='s'/>
 </function>
 <function name='NewHDSpindownUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='HDSpindownProcPtr' type='^?'>
+<arg declared_type='HDQueueElement*' type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='HDSpindownUPP' type='^?'>
+<arg declared_type='HDQueueElement*' type='^{HDQueueElement=^{HDQueueElement}ss^?l}' type64='^{HDQueueElement=}'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewKCCallbackUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='S'/>
-<arg type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='userRoutine' function_pointer='true' declared_type='KCCallbackProcPtr' type='^?'>
+<arg declared_type='KCEvent' type='S'/>
+<arg declared_type='KCCallbackInfo*' type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='S'/>
-<arg type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<retval function_pointer='true' declared_type='KCCallbackUPP' type='^?'>
+<arg declared_type='KCEvent' type='S'/>
+<arg declared_type='KCCallbackInfo*' type='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2l][4l]^{OpaqueSecKeychainRef}}' type64='^{KCCallbackInfo=I^{OpaqueSecKeychainItemRef}[2i][4i]^{OpaqueSecKeychainRef}}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </retval>
 </function>
 <function name='NewNSLClientNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='NSLClientNotifyProcPtr' type='^?'>
+<arg declared_type='NSLClientAsyncInfo*' type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='NSLClientNotifyUPP' type='^?'>
+<arg declared_type='NSLClientAsyncInfo*' type='^{NSLClientAsyncInfo=^v^v*llIIIIIIS{NSLError=iI}I}' type64='^{NSLClientAsyncInfo=^v^v*qqIIIIIIS{NSLError=iI}I}'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewNSLMgrNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='NSLMgrNotifyProcPtr' type='^?'>
+<arg declared_type='NSLPluginAsyncInfo*' type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='NSLMgrNotifyUPP' type='^?'>
+<arg declared_type='NSLPluginAsyncInfo*' type='^{NSLPluginAsyncInfo=^v^v^v*llIIIIIISi}' type64='^{NSLPluginAsyncInfo=^v^v^v*qqIIIIIISi}'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewOTListSearchUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='^{OTLink=^{OTLink}}'/>
-<retval type='B'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OTListSearchProcPtr' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='^{OTLink=^{OTLink}}'/>
-<retval type='B'/>
+<retval function_pointer='true' declared_type='OTListSearchUPP' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='OTLink*' type='^{OTLink=^{OTLink}}'/>
+<retval declared_type='Boolean' type='B'/>
 </retval>
 </function>
 <function name='NewOTNotifyUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OTNotifyProcPtr' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='OTEventCode' type='L' type64='I'/>
+<arg declared_type='OTResult' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='OTNotifyUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='OTEventCode' type='L' type64='I'/>
+<arg declared_type='OTResult' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewOTProcessUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OTProcessProcPtr' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^v'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='OTProcessUPP' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewPMgrStateChangeUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
-<arg type='l' type64='q'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='PMgrStateChangeProcPtr' type='^?'>
+<arg declared_type='PMgrQueueElement*' type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
-<arg type='l' type64='q'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='PMgrStateChangeUPP' type='^?'>
+<arg declared_type='PMgrQueueElement*' type='^{PMgrQueueElement=^{PMgrQueueElement}ssl^?l}' type64='^{PMgrQueueElement=}'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewSleepQUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='^{SleepQRec=^{SleepQRec}s^?s}'/>
-<retval type='l' type64='q'/>
+<arg name='userRoutine' function_pointer='true' declared_type='SleepQProcPtr' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<retval declared_type='long' type='l' type64='q'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='^{SleepQRec=^{SleepQRec}s^?s}'/>
-<retval type='l' type64='q'/>
+<retval function_pointer='true' declared_type='SleepQUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<retval declared_type='long' type='l' type64='q'/>
 </retval>
 </function>
 <function name='NewSystemSoundCompletionUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='userRoutine' function_pointer='true' declared_type='SystemSoundCompletionProcPtr' type='^?'>
+<arg declared_type='SystemSoundActionID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<retval function_pointer='true' declared_type='SystemSoundCompletionUPP' type='^?'>
+<arg declared_type='SystemSoundActionID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </retval>
 </function>
 <function name='SleepQInstall'>
-<arg type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<arg name='qRecPtr' declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='SleepQRemove'>
-<arg type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<arg name='qRecPtr' declared_type='SleepQRecPtr' type='^{SleepQRec=^{SleepQRec}s^?s}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='SystemSoundGetActionID'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='userFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='outAction' declared_type='SystemSoundActionID*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='SystemSoundPlay'>
-<arg type='L' type64='I'/>
+<arg name='inAction' declared_type='SystemSoundActionID' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='SystemSoundRemoveActionID'>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='inAction' declared_type='SystemSoundActionID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='SystemSoundRemoveCompletionRoutine'>
-<arg type='L' type64='I'/>
+<arg name='inAction' declared_type='SystemSoundActionID' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='SystemSoundSetCompletionRoutine'>
-<arg type='L' type64='I'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inAction' declared_type='SystemSoundActionID' type='L' type64='I'/>
+<arg name='inRunLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='inRunLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inCompletionRoutine' function_pointer='true' declared_type='SystemSoundCompletionUPP' type='^?'>
+<arg declared_type='SystemSoundActionID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inUserData' declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='UpdateSystemActivity'>
-<arg type='C'/>
-<retval type='s'/>
+<arg name='activity' declared_type='UInt8' type='C'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='WSGetCFTypeIDFromWSTypeID'>
-<arg type='i'/>
-<retval type='L' type64='Q'/>
+<arg name='typeID' declared_type='WSTypeID' type='i'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='WSGetWSTypeIDFromCFType'>
-<arg type='@'/>
-<retval type='i'/>
+<arg name='ref' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='WSTypeID' type='i'/>
 </function>
 <function name='WSMethodInvocationAddDeserializationOverride'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^{__CFTree=}'/>
-<arg type='^{__CFTree=}'/>
-<arg type='^v'/>
-<retval type='@'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='typeNamespace' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='typeName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='deserializationProc' function_pointer='true' declared_type='WSMethodInvocationDeserializationProcPtr' type='^?'>
+<arg declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg declared_type='CFXMLTreeRef' type='^{__CFTree=}'/>
+<arg declared_type='CFXMLTreeRef' type='^{__CFTree=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='CFTypeRef' type='@'/>
 </arg>
-<arg type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<arg name='context' declared_type='WSClientContext*' type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSMethodInvocationAddSerializationOverride'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='L' type64='Q'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='@'/>
-<arg type='^v'/>
-<retval type='^{__CFString=}'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='objType' declared_type='CFTypeID' type='L' type64='Q'/>
+<arg name='serializationProc' function_pointer='true' declared_type='WSMethodInvocationSerializationProcPtr' type='^?'>
+<arg declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg declared_type='CFTypeRef' type='@'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
 </arg>
-<arg type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<arg name='context' declared_type='WSClientContext*' type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSMethodInvocationCopyParameters'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^^{__CFArray}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='parameterOrder' declared_type='CFArrayRef*' type='^^{__CFArray}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='WSMethodInvocationCopyProperty'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='@'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='propertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFTypeRef' already_retained='true' type='@'/>
 </function>
 <function name='WSMethodInvocationCopySerialization'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<retval already_retained='true' type='^{__CFData=}'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
 </function>
 <function name='WSMethodInvocationCreate'>
-<arg type='^{__CFURL=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='methodName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='protocol' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='WSMethodInvocationRef' already_retained='true' type='^{OpaqueWSMethodInvocationRef=}'/>
 </function>
 <function name='WSMethodInvocationCreateFromSerialization'>
-<arg type='^{__CFData=}'/>
-<retval already_retained='true' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='contract' declared_type='CFDataRef' type='^{__CFData=}'/>
+<retval declared_type='WSMethodInvocationRef' already_retained='true' type='^{OpaqueWSMethodInvocationRef=}'/>
 </function>
 <function name='WSMethodInvocationGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='WSMethodInvocationInvoke'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<retval type='^{__CFDictionary=}'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<retval declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
 </function>
 <function name='WSMethodInvocationScheduleWithRunLoop'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSMethodInvocationSetCallBack'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^v'/>
-<arg type='^{__CFDictionary=}'/>
-<retval type='v'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='clientCB' function_pointer='true' declared_type='WSMethodInvocationCallBackProcPtr' type='^?'>
+<arg declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<arg name='context' declared_type='WSClientContext*' type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSMethodInvocationSetParameters'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^{__CFDictionary=}'/>
-<arg type='^{__CFArray=}'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='parameters' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='parameterOrder' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSMethodInvocationSetProperty'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='propertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='propertyValue' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSMethodInvocationUnscheduleFromRunLoop'>
-<arg type='^{OpaqueWSMethodInvocationRef=}'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
+<arg name='invocation' declared_type='WSMethodInvocationRef' type='^{OpaqueWSMethodInvocationRef=}'/>
+<arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSMethodResultIsFault'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='B'/>
+<arg name='methodResult' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='WSProtocolHandlerCopyFaultDocument'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFDictionary=}'/>
-<arg type='^{__CFDictionary=}'/>
-<retval already_retained='true' type='^{__CFData=}'/>
+<arg name='ref' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='methodContext' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='faultDict' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
 </function>
 <function name='WSProtocolHandlerCopyProperty'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='@'/>
+<arg name='ref' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='propertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFTypeRef' already_retained='true' type='@'/>
 </function>
 <function name='WSProtocolHandlerCopyReplyDictionary'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFData=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='ref' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='methodName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='data' declared_type='CFDataRef' type='^{__CFData=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='WSProtocolHandlerCopyReplyDocument'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFDictionary=}'/>
-<arg type='@'/>
-<retval already_retained='true' type='^{__CFData=}'/>
+<arg name='ref' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='methodContext' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='resultValue' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
 </function>
 <function name='WSProtocolHandlerCopyRequestDictionary'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFData=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='ref' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='data' declared_type='CFDataRef' type='^{__CFData=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='WSProtocolHandlerCopyRequestDocument'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFDictionary=}'/>
-<arg type='^{__CFArray=}'/>
-<arg type='^{__CFDictionary=}'/>
-<retval already_retained='true' type='^{__CFData=}'/>
+<arg name='ref' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='methodName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='methodParams' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='methodParamOrder' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg name='methodExtras' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
 </function>
 <function name='WSProtocolHandlerCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='protocol' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='WSProtocolHandlerRef' already_retained='true' type='^{OpaqueWSProtocolHandlerRef=}'/>
 </function>
 <function name='WSProtocolHandlerGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='WSProtocolHandlerSetDeserializationOverride'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFTree=}'/>
-<arg type='^{__CFTree=}'/>
-<arg type='^v'/>
-<retval type='@'/>
+<arg name='protocol' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='typeNamespace' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='typeName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='deserializationProc' function_pointer='true' declared_type='WSProtocolHandlerDeserializationProcPtr' type='^?'>
+<arg declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg declared_type='CFXMLTreeRef' type='^{__CFTree=}'/>
+<arg declared_type='CFXMLTreeRef' type='^{__CFTree=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='CFTypeRef' type='@'/>
 </arg>
-<arg type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<arg name='context' declared_type='WSClientContext*' type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSProtocolHandlerSetProperty'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
+<arg name='ref' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='propertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='propertyValue' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='WSProtocolHandlerSetSerializationOverride'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='L' type64='Q'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{OpaqueWSProtocolHandlerRef=}'/>
-<arg type='@'/>
-<arg type='^v'/>
-<retval type='^{__CFString=}'/>
+<arg name='protocol' declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg name='objType' declared_type='CFTypeID' type='L' type64='Q'/>
+<arg name='serializationProc' function_pointer='true' declared_type='WSProtocolHandlerSerializationProcPtr' type='^?'>
+<arg declared_type='WSProtocolHandlerRef' type='^{OpaqueWSProtocolHandlerRef=}'/>
+<arg declared_type='CFTypeRef' type='@'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
 </arg>
-<arg type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<arg name='context' declared_type='WSClientContext*' type='^{WSClientContext=i^v^?^?^?}' type64='^{WSClientContext=q^v^?^?^?}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='kcfindapplesharepassword'>
-<arg type='^[16C]'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serverSignature' declared_type='AFPServerSignature*' type='^[16C]'/>
+<arg name='serverAddress' declared_type='char*' type='*' const='true'/>
+<arg name='serverName' declared_type='char*' type='*' const='true'/>
+<arg name='volumeName' declared_type='char*' type='*' const='true'/>
+<arg name='accountName' declared_type='char*' type='*' const='true'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='kcfindgenericpassword'>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serviceName' declared_type='char*' type='*' const='true'/>
+<arg name='accountName' declared_type='char*' type='*' const='true'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='kcfindinternetpassword'>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='S'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serverName' declared_type='char*' type='*' const='true'/>
+<arg name='securityDomain' declared_type='char*' type='*' const='true'/>
+<arg name='accountName' declared_type='char*' type='*' const='true'/>
+<arg name='port' declared_type='UInt16' type='S'/>
+<arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+<arg name='authType' declared_type='OSType' type='L' type64='I'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='kcfindinternetpasswordwithpath'>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='*'/>
-<arg type='S'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='^I'/>
-<arg type='^^{OpaqueSecKeychainItemRef}'/>
-<retval type='l' type64='i'/>
+<arg name='serverName' declared_type='char*' type='*' const='true'/>
+<arg name='securityDomain' declared_type='char*' type='*' const='true'/>
+<arg name='accountName' declared_type='char*' type='*' const='true'/>
+<arg name='path' declared_type='char*' type='*' const='true'/>
+<arg name='port' declared_type='UInt16' type='S'/>
+<arg name='protocol' declared_type='OSType' type='L' type64='I'/>
+<arg name='authType' declared_type='OSType' type='L' type64='I'/>
+<arg name='maxLength' declared_type='UInt32' type='L' type64='I'/>
+<arg name='passwordData' declared_type='void*' type='^v'/>
+<arg name='actualLength' declared_type='UInt32*' type='^I'/>
+<arg name='item' declared_type='KCItemRef*' type='^^{OpaqueSecKeychainItemRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='kcgetkeychainname'>
-<arg type='^{OpaqueSecKeychainRef=}'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='keychain' declared_type='KCRef' type='^{OpaqueSecKeychainRef=}'/>
+<arg name='keychainName' declared_type='char*' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 </signatures>

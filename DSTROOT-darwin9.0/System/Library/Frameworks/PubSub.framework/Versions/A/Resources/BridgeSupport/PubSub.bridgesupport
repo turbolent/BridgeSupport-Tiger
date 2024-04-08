@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
@@ -8,14 +7,14 @@
 <depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
 <depends_on path='/System/Library/Frameworks/JavaScriptCore.framework'/>
 <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
-<constant name='PSEnclosureDownloadStateDidChangeNotification' type='@'/>
-<constant name='PSErrorDomain' type='@'/>
-<constant name='PSFeedAddedEntriesKey' type='@'/>
-<constant name='PSFeedDidChangeEntryFlagsKey' type='@'/>
-<constant name='PSFeedEntriesChangedNotification' type='@'/>
-<constant name='PSFeedRefreshingNotification' type='@'/>
-<constant name='PSFeedRemovedEntriesKey' type='@'/>
-<constant name='PSFeedUpdatedEntriesKey' type='@'/>
+<constant name='PSEnclosureDownloadStateDidChangeNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='PSErrorDomain' declared_type='NSString*' type='@' const='true'/>
+<constant name='PSFeedAddedEntriesKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='PSFeedDidChangeEntryFlagsKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='PSFeedEntriesChangedNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='PSFeedRefreshingNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='PSFeedRemovedEntriesKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='PSFeedUpdatedEntriesKey' declared_type='NSString*' type='@' const='true'/>
 <enum name='PSAtomFormat' value='2'/>
 <enum name='PSEnclosureDownloadDidFail' value='4'/>
 <enum name='PSEnclosureDownloadDidFinish' value='3'/>
@@ -38,76 +37,463 @@
 <enum name='PSNotAFeedError' value='2'/>
 <enum name='PSRSSFormat' value='1'/>
 <enum name='PSUnknownFormat' value='0'/>
+<class name='NSObject'>
+<method selector='enclosure:downloadStateDidChange:'>
+<arg name='enclosure' declared_type='PSEnclosure*' type='@' index='0'/>
+<arg name='state' declared_type='PSEnclosureDownloadState' type='i' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='feed:didAddEntries:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='entries' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='feed:didChangeFlagsInEntries:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='entries' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='feed:didRemoveEntriesWithIdentifiers:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='identifiers' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='feed:didUpdateEntries:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='entries' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='feedDidBeginRefresh:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='feedDidEndRefresh:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
 <class name='PSClient'>
 <method selector='addFeed:'>
-<retval type='B'/>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='addFeedWithURL:'>
+<arg name='url' declared_type='NSURL*' type='@' index='0'/>
+<retval declared_type='PSFeed*' type='@'/>
+</method>
+<method class_method='true' selector='allClientBundleIdentifiers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='applicationClient'>
+<retval declared_type='PSClient*' type='@'/>
+</method>
+<method class_method='true' selector='clientForBundleIdentifier:'>
+<arg name='bundleIdentifier' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='PSClient*' type='@'/>
+</method>
+<method selector='dateLastUpdated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='entryWithIdentifier:'>
+<arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='PSEntry*' type='@'/>
+</method>
+<method selector='feedWithIdentifier:'>
+<arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='PSFeed*' type='@'/>
+</method>
+<method selector='feedWithURL:'>
+<arg name='url' declared_type='NSURL*' type='@' index='0'/>
+<retval declared_type='PSFeed*' type='@'/>
+</method>
+<method selector='feeds'>
+<retval declared_type='NSArray*' type='@'/>
 </method>
 <method selector='isPrivate'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='removeFeed:'>
-<retval type='B'/>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sendChangesSinceDate:'>
+<arg name='dateLastUpdated' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setPrivate:'>
-<arg type='B' index='0'/>
+<arg name='isPrivate' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSettings:'>
+<arg name='settings' declared_type='PSFeedSettings*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='settings'>
+<retval declared_type='PSFeedSettings*' type='@'/>
+</method>
+<method selector='signature'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='PSContent'>
+<method selector='HTMLString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='MIMEType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='data'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='plainTextString'>
+<retval declared_type='NSString*' type='@'/>
 </method>
 </class>
 <class name='PSEnclosure'>
+<method selector='MIMEType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='URL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='cancelDownload'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteDownload'>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='download:'>
-<arg index='0' type_modifier='o'/>
-<retval type='B'/>
+<arg name='error' declared_type='NSError**' type='^@' index='0' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='downloadError'>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='downloadProgress'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='downloadState'>
+<retval declared_type='PSEnclosureDownloadState' type='i'/>
+</method>
+<method selector='downloadedPath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='entry'>
+<retval declared_type='PSEntry*' type='@'/>
+</method>
+<method selector='length'>
+<retval declared_type='long long' type='q'/>
 </method>
 </class>
 <class name='PSEntry'>
+<method selector='XMLRepresentation'>
+<retval declared_type='NSXMLElement*' type='@'/>
+</method>
+<method selector='alternateURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='authors'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='authorsForDisplay'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='baseURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='content'>
+<retval declared_type='PSContent*' type='@'/>
+</method>
+<method selector='contributors'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='dateCreated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='dateForDisplay'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='datePublished'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='dateUpdated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='enclosures'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='extensionXMLElementsUsingNamespace:'>
+<arg name='nameSpace' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='feed'>
+<retval declared_type='PSFeed*' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
 <method selector='isCurrent'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='isFlagged'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='isRead'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='localDateCreated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='localDateUpdated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='rights'>
+<retval declared_type='NSString*' type='@'/>
 </method>
 <method selector='setFlagged:'>
-<arg type='B' index='0'/>
+<arg name='flagged' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setRead:'>
-<arg type='B' index='0'/>
+<arg name='read' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='summary'>
+<retval declared_type='PSContent*' type='@'/>
+</method>
+<method selector='timeZoneCreated'>
+<retval declared_type='NSTimeZone*' type='@'/>
+</method>
+<method selector='timeZonePublished'>
+<retval declared_type='NSTimeZone*' type='@'/>
+</method>
+<method selector='timeZoneUpdated'>
+<retval declared_type='NSTimeZone*' type='@'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='titleForDisplay'>
+<retval declared_type='NSString*' type='@'/>
 </method>
 </class>
 <class name='PSFeed'>
+<method selector='URL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='XMLRepresentation'>
+<retval declared_type='NSXMLElement*' type='@'/>
+</method>
 <method selector='XMLRepresentationWithEntries:'>
-<arg type='B' index='0'/>
+<arg name='withEntries' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='NSXMLElement*' type='@'/>
+</method>
+<method selector='alternateURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='client'>
+<retval declared_type='PSClient*' type='@'/>
+</method>
+<method selector='dateUpdated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='entries'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='entryEnumeratorSortedBy:'>
+<arg name='sortDescriptors' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='NSEnumerator*' type='@'/>
+</method>
+<method selector='extensionXMLElementsUsingNamespace:'>
+<arg name='nameSpace' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='feedFormat'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='iconURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithData:URL:'>
+<arg name='data' declared_type='NSData*' type='@' index='0'/>
+<arg name='aURL' declared_type='NSURL*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURL:'>
+<arg name='url' declared_type='NSURL*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='isRefreshing'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastError'>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='links'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='localDateUpdated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='login'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='logoURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='redirectedURL'>
+<retval declared_type='NSURL*' type='@'/>
 </method>
 <method selector='refresh:'>
-<arg index='0' type_modifier='o'/>
-<retval type='B'/>
+<arg name='error' declared_type='NSError**' type='^@' index='0' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rights'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setLogin:'>
+<arg name='login' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPassword:'>
+<arg name='password' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSettings:'>
+<arg name='settings' declared_type='PSFeedSettings*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='settings'>
+<retval declared_type='PSFeedSettings*' type='@'/>
+</method>
+<method selector='subtitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='timeZoneUpdated'>
+<retval declared_type='NSTimeZone*' type='@'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='unreadCount'>
+<retval declared_type='int' type='i'/>
 </method>
 </class>
 <class name='PSFeedSettings'>
+<method class_method='true' selector='defaultClientSettings'>
+<retval declared_type='PSFeedSettings*' type='@'/>
+</method>
+<method class_method='true' selector='defaultFeedSettings'>
+<retval declared_type='PSFeedSettings*' type='@'/>
+</method>
 <method selector='downloadsEnclosures'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='enclosureTypes'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='expirationInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='maxEnclosureSize'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='refreshInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
 </method>
 <method selector='refreshesInBackground'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='setDownloadsEnclosures:'>
-<arg type='B' index='0'/>
+<arg name='downloadsEnclosures' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnclosureTypes:'>
+<arg name='enclosureTypes' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExpirationInterval:'>
+<arg name='expirationInterval' declared_type='NSTimeInterval' type='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxEnclosureSize:'>
+<arg name='maxEnclosureSize' declared_type='double' type='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRefreshInterval:'>
+<arg name='refreshInterval' declared_type='NSTimeInterval' type='d' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setRefreshesInBackground:'>
-<arg type='B' index='0'/>
+<arg name='refreshesInBackground' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='PSLink'>
+<method selector='MIMEType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='URL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='linkKind'>
+<retval declared_type='PSLinkKind' type='i'/>
+</method>
+<method class_method='true' selector='linksInXML:baseURL:'>
+<arg name='root' declared_type='NSXMLElement*' type='@' index='0'/>
+<arg name='baseURL' declared_type='NSURL*' type='@' index='1'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='relations'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
 </method>
 </class>
 <informal_protocol name='PSClientDelegate'>
-<method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='enclosure:downloadStateDidChange:'/>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didAddEntries:'/>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didChangeFlagsInEntries:'/>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didRemoveEntriesWithIdentifiers:'/>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didUpdateEntries:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='feedDidBeginRefresh:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='feedDidEndRefresh:'/>
+<method type='v16@0:4@8i12' type64='v28@0:8@16i24' selector='enclosure:downloadStateDidChange:'>
+<arg name='enclosure' declared_type='PSEnclosure*' type='@' index='0'/>
+<arg name='state' declared_type='PSEnclosureDownloadState' type='i' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didAddEntries:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='entries' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didChangeFlagsInEntries:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='entries' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didRemoveEntriesWithIdentifiers:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='identifiers' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='feed:didUpdateEntries:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<arg name='entries' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='feedDidBeginRefresh:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='feedDidEndRefresh:'>
+<arg name='feed' declared_type='PSFeed*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 </signatures>

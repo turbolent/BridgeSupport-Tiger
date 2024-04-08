@@ -1,19 +1,119 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
 <depends_on path='/System/Library/Frameworks/JavaVM.framework'/>
-<struct name='AppletDescriptor' type='{AppletDescriptor=&quot;docBase&quot;^{__CFURL}&quot;codeBase&quot;^{__CFURL}&quot;htmlAttrs&quot;^{__CFDictionary}&quot;appletParams&quot;^{__CFDictionary}}'/>
-<struct name='JAWT' type='{jawt=&quot;version&quot;i&quot;GetDrawingSurface&quot;^?&quot;FreeDrawingSurface&quot;^?}'/>
-<struct name='JAWT_DrawingSurface' type='{jawt_DrawingSurface=&quot;env&quot;^^{JNINativeInterface_}&quot;target&quot;^{_jobject}&quot;Lock&quot;^?&quot;GetDrawingSurfaceInfo&quot;^?&quot;FreeDrawingSurfaceInfo&quot;^?&quot;Unlock&quot;^?}'/>
-<struct name='JAWT_DrawingSurfaceInfo' type='{jawt_DrawingSurfaceInfo=&quot;platformInfo&quot;^v&quot;ds&quot;^{jawt_DrawingSurface}&quot;bounds&quot;{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;clipSize&quot;i&quot;clip&quot;^{jawt_Rectangle}}'/>
-<struct name='JAWT_MacDrawingSurfaceInfo' type='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}' type64='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}'/>
-<struct name='JAWT_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
-<struct name='jawt' type='{jawt=&quot;version&quot;i&quot;GetDrawingSurface&quot;^?&quot;FreeDrawingSurface&quot;^?}'/>
-<struct name='jawt_DrawingSurface' type='{jawt_DrawingSurface=&quot;env&quot;^^{JNINativeInterface_}&quot;target&quot;^{_jobject}&quot;Lock&quot;^?&quot;GetDrawingSurfaceInfo&quot;^?&quot;FreeDrawingSurfaceInfo&quot;^?&quot;Unlock&quot;^?}'/>
-<struct name='jawt_DrawingSurfaceInfo' type='{jawt_DrawingSurfaceInfo=&quot;platformInfo&quot;^v&quot;ds&quot;^{jawt_DrawingSurface}&quot;bounds&quot;{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;clipSize&quot;i&quot;clip&quot;^{jawt_Rectangle}}'/>
-<struct name='jawt_MacDrawingSurfaceInfo' type='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}' type64='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}'/>
-<struct name='jawt_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
+<struct name='AppletDescriptor' type='{AppletDescriptor=&quot;docBase&quot;^{__CFURL}&quot;codeBase&quot;^{__CFURL}&quot;htmlAttrs&quot;^{__CFDictionary}&quot;appletParams&quot;^{__CFDictionary}}'>
+<field name='docBase' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<field name='codeBase' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<field name='htmlAttrs' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<field name='appletParams' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+</struct>
+<struct name='JAWT' type='{jawt=&quot;version&quot;i&quot;GetDrawingSurface&quot;^?&quot;FreeDrawingSurface&quot;^?}'>
+<field name='version' declared_type='jint' type='l' type64='i'/>
+<field name='GetDrawingSurface' function_pointer='true' declared_type='JAWT_DrawingSurface *(*)(JNIEnv *, jobject)' type='^?'>
+<arg declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' type='^{_jobject=}'/>
+<retval declared_type='JAWT_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+</field>
+<field name='FreeDrawingSurface' function_pointer='true' declared_type='void (*)(JAWT_DrawingSurface *)' type='^?'>
+<arg declared_type='JAWT_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='JAWT_DrawingSurface' type='{jawt_DrawingSurface=&quot;env&quot;^^{JNINativeInterface_}&quot;target&quot;^{_jobject}&quot;Lock&quot;^?&quot;GetDrawingSurfaceInfo&quot;^?&quot;FreeDrawingSurfaceInfo&quot;^?&quot;Unlock&quot;^?}'>
+<field name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<field name='target' declared_type='jobject' type='^{_jobject=}'/>
+<field name='Lock' function_pointer='true' declared_type='jint (*)(struct jawt_DrawingSurface *)' type='^?'>
+<arg declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='jint' type='l' type64='i'/>
+</field>
+<field name='GetDrawingSurfaceInfo' function_pointer='true' declared_type='JAWT_DrawingSurfaceInfo *(*)(struct jawt_DrawingSurface *)' type='^?'>
+<arg declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='JAWT_DrawingSurfaceInfo*' type='^{jawt_DrawingSurfaceInfo=^v^{jawt_DrawingSurface}{jawt_Rectangle=iiii}i^{jawt_Rectangle}}'/>
+</field>
+<field name='FreeDrawingSurfaceInfo' function_pointer='true' declared_type='void (*)(JAWT_DrawingSurfaceInfo *)' type='^?'>
+<arg declared_type='JAWT_DrawingSurfaceInfo*' type='^{jawt_DrawingSurfaceInfo=^v^{jawt_DrawingSurface}{jawt_Rectangle=iiii}i^{jawt_Rectangle}}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='Unlock' function_pointer='true' declared_type='void (*)(struct jawt_DrawingSurface *)' type='^?'>
+<arg declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='JAWT_DrawingSurfaceInfo' type='{jawt_DrawingSurfaceInfo=&quot;platformInfo&quot;^v&quot;ds&quot;^{jawt_DrawingSurface}&quot;bounds&quot;{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;clipSize&quot;i&quot;clip&quot;^{jawt_Rectangle}}'>
+<field name='platformInfo' declared_type='void*' type='^v'/>
+<field name='ds' declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<field name='bounds' declared_type='JAWT_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
+<field name='clipSize' declared_type='jint' type='l' type64='i'/>
+<field name='clip' declared_type='JAWT_Rectangle*' type='^{jawt_Rectangle=iiii}'/>
+</struct>
+<struct name='JAWT_MacDrawingSurfaceInfo' type='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}' type64='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}'>
+<field name='fQDDevice' declared_type='GDevice*' type='^{GDevice=sss^^{ITab}s^^{SProcRec}^^{CProcRec}s^^{PixMap}i^^{GDevice}{Rect=ssss}iss^*^*^*}'/>
+<field name='fQDPort' declared_type='GrafPtr' type='^{OpaqueGrafPtr=}'/>
+<field name='fQDWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+<field name='fLocationInParent' declared_type='CGRect' type='{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}' type64='{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}'/>
+<field name='fCGWindowID' declared_type='UInt32' type='L' type64='I'/>
+<field name='fCGConnectionID' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='JAWT_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'>
+<field name='x' declared_type='jint' type='l' type64='i'/>
+<field name='y' declared_type='jint' type='l' type64='i'/>
+<field name='width' declared_type='jint' type='l' type64='i'/>
+<field name='height' declared_type='jint' type='l' type64='i'/>
+</struct>
+<struct name='jawt' type='{jawt=&quot;version&quot;i&quot;GetDrawingSurface&quot;^?&quot;FreeDrawingSurface&quot;^?}'>
+<field name='version' declared_type='jint' type='l' type64='i'/>
+<field name='GetDrawingSurface' function_pointer='true' declared_type='JAWT_DrawingSurface *(*)(JNIEnv *, jobject)' type='^?'>
+<arg declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' type='^{_jobject=}'/>
+<retval declared_type='JAWT_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+</field>
+<field name='FreeDrawingSurface' function_pointer='true' declared_type='void (*)(JAWT_DrawingSurface *)' type='^?'>
+<arg declared_type='JAWT_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='jawt_DrawingSurface' type='{jawt_DrawingSurface=&quot;env&quot;^^{JNINativeInterface_}&quot;target&quot;^{_jobject}&quot;Lock&quot;^?&quot;GetDrawingSurfaceInfo&quot;^?&quot;FreeDrawingSurfaceInfo&quot;^?&quot;Unlock&quot;^?}'>
+<field name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<field name='target' declared_type='jobject' type='^{_jobject=}'/>
+<field name='Lock' function_pointer='true' declared_type='jint (*)(struct jawt_DrawingSurface *)' type='^?'>
+<arg declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='jint' type='l' type64='i'/>
+</field>
+<field name='GetDrawingSurfaceInfo' function_pointer='true' declared_type='JAWT_DrawingSurfaceInfo *(*)(struct jawt_DrawingSurface *)' type='^?'>
+<arg declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='JAWT_DrawingSurfaceInfo*' type='^{jawt_DrawingSurfaceInfo=^v^{jawt_DrawingSurface}{jawt_Rectangle=iiii}i^{jawt_Rectangle}}'/>
+</field>
+<field name='FreeDrawingSurfaceInfo' function_pointer='true' declared_type='void (*)(JAWT_DrawingSurfaceInfo *)' type='^?'>
+<arg declared_type='JAWT_DrawingSurfaceInfo*' type='^{jawt_DrawingSurfaceInfo=^v^{jawt_DrawingSurface}{jawt_Rectangle=iiii}i^{jawt_Rectangle}}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='Unlock' function_pointer='true' declared_type='void (*)(struct jawt_DrawingSurface *)' type='^?'>
+<arg declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='jawt_DrawingSurfaceInfo' type='{jawt_DrawingSurfaceInfo=&quot;platformInfo&quot;^v&quot;ds&quot;^{jawt_DrawingSurface}&quot;bounds&quot;{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;clipSize&quot;i&quot;clip&quot;^{jawt_Rectangle}}'>
+<field name='platformInfo' declared_type='void*' type='^v'/>
+<field name='ds' declared_type='struct jawt_DrawingSurface*' type='^{jawt_DrawingSurface=^^{JNINativeInterface_}^{_jobject}^?^?^?^?}'/>
+<field name='bounds' declared_type='JAWT_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
+<field name='clipSize' declared_type='jint' type='l' type64='i'/>
+<field name='clip' declared_type='JAWT_Rectangle*' type='^{jawt_Rectangle=iiii}'/>
+</struct>
+<struct name='jawt_MacDrawingSurfaceInfo' type='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}' type64='{jawt_MacDrawingSurfaceInfo=&quot;fQDDevice&quot;^{GDevice}&quot;fQDPort&quot;^{OpaqueGrafPtr}&quot;fQDWindow&quot;^{OpaqueWindowPtr}&quot;fLocationInParent&quot;{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}&quot;fCGWindowID&quot;I&quot;fCGConnectionID&quot;I}'>
+<field name='fQDDevice' declared_type='GDevice*' type='^{GDevice=sss^^{ITab}s^^{SProcRec}^^{CProcRec}s^^{PixMap}i^^{GDevice}{Rect=ssss}iss^*^*^*}'/>
+<field name='fQDPort' declared_type='GrafPtr' type='^{OpaqueGrafPtr=}'/>
+<field name='fQDWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+<field name='fLocationInParent' declared_type='CGRect' type='{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}}' type64='{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}'/>
+<field name='fCGWindowID' declared_type='UInt32' type='L' type64='I'/>
+<field name='fCGConnectionID' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='jawt_Rectangle' type='{jawt_Rectangle=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'>
+<field name='x' declared_type='jint' type='l' type64='i'/>
+<field name='y' declared_type='jint' type='l' type64='i'/>
+<field name='width' declared_type='jint' type='l' type64='i'/>
+<field name='height' declared_type='jint' type='l' type64='i'/>
+</struct>
 <opaque name='AppletArena' type='^{OpaqueAppletArena=}'/>
 <enum name='JAWT_LOCK_BOUNDS_CHANGED' value='4'/>
 <enum name='JAWT_LOCK_CLIP_CHANGED' value='2'/>
@@ -34,127 +134,127 @@
 <enum name='kAppletStart' value='1'/>
 <enum name='kAppletStop' value='2'/>
 <function name='CreateAppletArena'>
-<arg type='^^{OpaqueAppletArena}'/>
-<retval type='l' type64='i'/>
+<arg name='outNewArena' declared_type='AppletArena*' type='^^{OpaqueAppletArena}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='CreateJavaApplet'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='{AppletDescriptor=^{__CFURL}^{__CFURL}^{__CFDictionary}^{__CFDictionary}}'/>
-<arg type='B'/>
-<arg type='^{OpaqueAppletArena=}'/>
-<arg type='^^{_jobject}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='applet' declared_type='AppletDescriptor' type='{AppletDescriptor=^{__CFURL}^{__CFURL}^{__CFDictionary}^{__CFDictionary}}'/>
+<arg name='trusted' declared_type='Boolean' type='B'/>
+<arg name='arena' declared_type='AppletArena' type='^{OpaqueAppletArena=}'/>
+<arg name='outJavaFrame' declared_type='jobject*' type='^^{_jobject}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='CreateJavaControl'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueWindowPtr=}'/>
-<arg type='^{Rect=ssss}'/>
-<arg type='^{_jobject=}'/>
-<arg type='B'/>
-<arg type='^^{OpaqueControlRef}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inNativeWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+<arg name='inBounds' declared_type='Rect*' type='^{Rect=ssss}' const='true'/>
+<arg name='inAppletFrame' declared_type='jobject' type='^{_jobject=}'/>
+<arg name='inVisible' declared_type='Boolean' type='B'/>
+<arg name='outControl' declared_type='ControlRef*' type='^^{OpaqueControlRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='DrawJavaControl'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueControlRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='theControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetControlFromJavaFrame'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{_jobject=}'/>
-<arg type='^^{OpaqueControlRef}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inJavaFrame' declared_type='jobject' type='^{_jobject=}'/>
+<arg name='outMacControl' declared_type='ControlRef*' type='^^{OpaqueControlRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetEmbeddingVMParams'>
-<arg type='^{JavaVMInitArgs=ii^{JavaVMOption}C}'/>
-<retval type='l' type64='i'/>
+<arg name='ioJavaVMInitArgs' declared_type='JavaVMInitArgs*' type='^{JavaVMInitArgs=ii^{JavaVMOption}C}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetJavaFrameFromControl'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueControlRef=}'/>
-<arg type='^^{_jobject}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inMacControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+<arg name='outJavaFrame' declared_type='jobject*' type='^^{_jobject}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetJavaWindowFromWindow'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueWindowPtr=}'/>
-<arg type='^^{_jobject}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inMacWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+<arg name='outJavaWindow' declared_type='jobject*' type='^^{_jobject}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetWindowFromJavaWindow'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{_jobject=}'/>
-<arg type='^^{OpaqueWindowPtr}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inJavaWindow' declared_type='jobject' type='^{_jobject=}'/>
+<arg name='outMacWindow' declared_type='WindowRef*' type='^^{OpaqueWindowPtr}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='JAWT_GetAWT'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{jawt=i^?^?}'/>
-<retval type='C'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='awt' declared_type='JAWT*' type='^{jawt=i^?^?}'/>
+<retval declared_type='jboolean' type='C'/>
 </function>
 <function name='MoveAndClipJavaControl'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueControlRef=}'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='theControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+<arg name='posX' declared_type='int' type='i'/>
+<arg name='posY' declared_type='int' type='i'/>
+<arg name='clipX' declared_type='int' type='i'/>
+<arg name='clipY' declared_type='int' type='i'/>
+<arg name='clipWidth' declared_type='int' type='i'/>
+<arg name='clipHeight' declared_type='int' type='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='RegisterShowDocumentCallback'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{_jobject=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{_jobject=}'/>
-<arg type='^{__CFURL=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inJavaFrame' declared_type='jobject' type='^{_jobject=}'/>
+<arg name='showDocumentFunction' function_pointer='true' declared_type='JE_ShowDocumentCallback' type='^?'>
+<arg declared_type='jobject' type='^{_jobject=}'/>
+<arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='userData' declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='RegisterStatusCallback'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{_jobject=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{_jobject=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inJavaFrame' declared_type='jobject' type='^{_jobject=}'/>
+<arg name='showStatusFunction' function_pointer='true' declared_type='JE_SetStatusCallback' type='^?'>
+<arg declared_type='jobject' type='^{_jobject=}'/>
+<arg declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='userData' declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='RestartJavaControlAsyncDrawing'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueControlRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='theControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='SetJavaAppletState'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{_jobject=}'/>
-<arg type='i'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='inAppletFrame' declared_type='jobject' type='^{_jobject=}'/>
+<arg name='inNewState' declared_type='AppletState' type='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='ShowHideJavaControl'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueControlRef=}'/>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='theControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+<arg name='visible' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='SizeJavaControl'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueControlRef=}'/>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='theControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+<arg name='width' declared_type='int' type='i'/>
+<arg name='height' declared_type='int' type='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='StopJavaControlAsyncDrawing'>
-<arg type='^^{JNINativeInterface_}'/>
-<arg type='^{OpaqueControlRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='env' declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<arg name='theControl' declared_type='ControlRef' type='^{OpaqueControlRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 </signatures>

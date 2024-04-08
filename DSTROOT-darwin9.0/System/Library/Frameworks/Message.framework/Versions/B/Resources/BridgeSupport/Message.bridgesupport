@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
 <depends_on path='/System/Library/Frameworks/CalendarStore.framework'/>
@@ -18,19 +17,26 @@
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreData.framework'/>
-<constant name='NSASCIIMailFormat' type='@'/>
-<constant name='NSMIMEMailFormat' type='@'/>
-<constant name='NSSMTPDeliveryProtocol' type='@'/>
-<constant name='NSSendmailDeliveryProtocol' type='@'/>
+<constant name='NSASCIIMailFormat' declared_type='NSString*' type='@'/>
+<constant name='NSMIMEMailFormat' declared_type='NSString*' type='@'/>
+<constant name='NSSMTPDeliveryProtocol' declared_type='NSString*' type='@'/>
+<constant name='NSSendmailDeliveryProtocol' declared_type='NSString*' type='@'/>
 <class name='NSMailDelivery'>
 <method class_method='true' selector='deliverMessage:headers:format:protocol:'>
-<retval type='B'/>
+<arg name='messageBody' declared_type='NSAttributedString*' type='@' index='0'/>
+<arg name='messageHeaders' declared_type='NSDictionary*' type='@' index='1'/>
+<arg name='messageFormat' declared_type='NSString*' type='@' index='2'/>
+<arg name='deliveryProtocol' declared_type='NSString*' type='@' index='3'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method class_method='true' selector='deliverMessage:subject:to:'>
-<retval type='B'/>
+<arg name='messageBody' declared_type='NSString*' type='@' index='0'/>
+<arg name='messageSubject' declared_type='NSString*' type='@' index='1'/>
+<arg name='destinationAddress' declared_type='NSString*' type='@' index='2'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method class_method='true' selector='hasDeliveryClassBeenConfigured'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 </class>
 </signatures>

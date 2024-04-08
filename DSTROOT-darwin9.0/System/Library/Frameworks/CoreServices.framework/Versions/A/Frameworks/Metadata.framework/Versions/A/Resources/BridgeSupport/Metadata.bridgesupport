@@ -1,415 +1,430 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework'/>
-<struct name='MDQueryBatchingParams' type='{_MDQueryBatchingParams=&quot;first_max_num&quot;I&quot;first_max_ms&quot;I&quot;progress_max_num&quot;I&quot;progress_max_ms&quot;I&quot;update_max_num&quot;I&quot;update_max_ms&quot;I}' type64='{_MDQueryBatchingParams=&quot;first_max_num&quot;Q&quot;first_max_ms&quot;Q&quot;progress_max_num&quot;Q&quot;progress_max_ms&quot;Q&quot;update_max_num&quot;Q&quot;update_max_ms&quot;Q}'/>
+<struct name='MDQueryBatchingParams' type='{_MDQueryBatchingParams=&quot;first_max_num&quot;I&quot;first_max_ms&quot;I&quot;progress_max_num&quot;I&quot;progress_max_ms&quot;I&quot;update_max_num&quot;I&quot;update_max_ms&quot;I}' type64='{_MDQueryBatchingParams=&quot;first_max_num&quot;Q&quot;first_max_ms&quot;Q&quot;progress_max_num&quot;Q&quot;progress_max_ms&quot;Q&quot;update_max_num&quot;Q&quot;update_max_ms&quot;Q}'>
+<field name='first_max_num' declared_type='size_t' type='L' type64='Q'/>
+<field name='first_max_ms' declared_type='size_t' type='L' type64='Q'/>
+<field name='progress_max_num' declared_type='size_t' type='L' type64='Q'/>
+<field name='progress_max_ms' declared_type='size_t' type='L' type64='Q'/>
+<field name='update_max_num' declared_type='size_t' type='L' type64='Q'/>
+<field name='update_max_ms' declared_type='size_t' type='L' type64='Q'/>
+</struct>
 <cftype name='MDExternalDatastoreQueryRef' type='^v'/>
 <cftype name='MDExternalDatastoreRef' type='^v'/>
 <cftype name='MDItemRef' gettypeid_func='MDItemGetTypeID' type='^{__MDItem=}'/>
 <cftype name='MDOIDEnumerationRef' type='^v'/>
 <cftype name='MDQueryRef' gettypeid_func='MDQueryGetTypeID' type='^{__MDQuery=}'/>
 <cftype name='MDResponseChannelRef' type='^v'/>
-<constant name='kMDAttributeAllValues' type='^{__CFString=}'/>
-<constant name='kMDAttributeDisplayValues' type='^{__CFString=}'/>
-<constant name='kMDAttributeMultiValued' type='^{__CFString=}'/>
-<constant name='kMDAttributeName' type='^{__CFString=}'/>
-<constant name='kMDAttributeReadOnlyValues' type='^{__CFString=}'/>
-<constant name='kMDAttributeType' type='^{__CFString=}'/>
-<constant name='kMDExporterAvaliable' type='^{__CFString=}'/>
-<constant name='kMDItemAcquisitionMake' type='^{__CFString=}'/>
-<constant name='kMDItemAcquisitionModel' type='^{__CFString=}'/>
-<constant name='kMDItemAlbum' type='^{__CFString=}'/>
-<constant name='kMDItemAltitude' type='^{__CFString=}'/>
-<constant name='kMDItemAperture' type='^{__CFString=}'/>
-<constant name='kMDItemAppleLoopDescriptors' type='^{__CFString=}'/>
-<constant name='kMDItemAppleLoopsKeyFilterType' type='^{__CFString=}'/>
-<constant name='kMDItemAppleLoopsLoopMode' type='^{__CFString=}'/>
-<constant name='kMDItemAppleLoopsRootKey' type='^{__CFString=}'/>
-<constant name='kMDItemAttributeChangeDate' type='^{__CFString=}'/>
-<constant name='kMDItemAudiences' type='^{__CFString=}'/>
-<constant name='kMDItemAudioBitRate' type='^{__CFString=}'/>
-<constant name='kMDItemAudioChannelCount' type='^{__CFString=}'/>
-<constant name='kMDItemAudioEncodingApplication' type='^{__CFString=}'/>
-<constant name='kMDItemAudioSampleRate' type='^{__CFString=}'/>
-<constant name='kMDItemAudioTrackNumber' type='^{__CFString=}'/>
-<constant name='kMDItemAuthorEmailAddresses' type='^{__CFString=}'/>
-<constant name='kMDItemAuthors' type='^{__CFString=}'/>
-<constant name='kMDItemBitsPerSample' type='^{__CFString=}'/>
-<constant name='kMDItemCFBundleIdentifier' type='^{__CFString=}'/>
-<constant name='kMDItemCity' type='^{__CFString=}'/>
-<constant name='kMDItemCodecs' type='^{__CFString=}'/>
-<constant name='kMDItemColorSpace' type='^{__CFString=}'/>
-<constant name='kMDItemComment' type='^{__CFString=}'/>
-<constant name='kMDItemComposer' type='^{__CFString=}'/>
-<constant name='kMDItemContactKeywords' type='^{__CFString=}'/>
-<constant name='kMDItemContentCreationDate' type='^{__CFString=}'/>
-<constant name='kMDItemContentModificationDate' type='^{__CFString=}'/>
-<constant name='kMDItemContentType' type='^{__CFString=}'/>
-<constant name='kMDItemContentTypeTree' type='^{__CFString=}'/>
-<constant name='kMDItemContributors' type='^{__CFString=}'/>
-<constant name='kMDItemCopyright' type='^{__CFString=}'/>
-<constant name='kMDItemCountry' type='^{__CFString=}'/>
-<constant name='kMDItemCoverage' type='^{__CFString=}'/>
-<constant name='kMDItemCreator' type='^{__CFString=}'/>
-<constant name='kMDItemDeliveryType' type='^{__CFString=}'/>
-<constant name='kMDItemDescription' type='^{__CFString=}'/>
-<constant name='kMDItemDirector' type='^{__CFString=}'/>
-<constant name='kMDItemDisplayName' type='^{__CFString=}'/>
-<constant name='kMDItemDueDate' type='^{__CFString=}'/>
-<constant name='kMDItemDurationSeconds' type='^{__CFString=}'/>
-<constant name='kMDItemEXIFGPSVersion' type='^{__CFString=}'/>
-<constant name='kMDItemEXIFVersion' type='^{__CFString=}'/>
-<constant name='kMDItemEditors' type='^{__CFString=}'/>
-<constant name='kMDItemEmailAddresses' type='^{__CFString=}'/>
-<constant name='kMDItemEncodingApplications' type='^{__CFString=}'/>
-<constant name='kMDItemExposureMode' type='^{__CFString=}'/>
-<constant name='kMDItemExposureProgram' type='^{__CFString=}'/>
-<constant name='kMDItemExposureTimeSeconds' type='^{__CFString=}'/>
-<constant name='kMDItemExposureTimeString' type='^{__CFString=}'/>
-<constant name='kMDItemFNumber' type='^{__CFString=}'/>
-<constant name='kMDItemFSContentChangeDate' type='^{__CFString=}'/>
-<constant name='kMDItemFSCreationDate' type='^{__CFString=}'/>
-<constant name='kMDItemFSExists' type='^{__CFString=}'/>
-<constant name='kMDItemFSHasCustomIcon' type='^{__CFString=}'/>
-<constant name='kMDItemFSInvisible' type='^{__CFString=}'/>
-<constant name='kMDItemFSIsExtensionHidden' type='^{__CFString=}'/>
-<constant name='kMDItemFSIsReadable' type='^{__CFString=}'/>
-<constant name='kMDItemFSIsStationery' type='^{__CFString=}'/>
-<constant name='kMDItemFSIsWriteable' type='^{__CFString=}'/>
-<constant name='kMDItemFSLabel' type='^{__CFString=}'/>
-<constant name='kMDItemFSName' type='^{__CFString=}'/>
-<constant name='kMDItemFSNodeCount' type='^{__CFString=}'/>
-<constant name='kMDItemFSOwnerGroupID' type='^{__CFString=}'/>
-<constant name='kMDItemFSOwnerUserID' type='^{__CFString=}'/>
-<constant name='kMDItemFSSize' type='^{__CFString=}'/>
-<constant name='kMDItemFinderComment' type='^{__CFString=}'/>
-<constant name='kMDItemFlashOnOff' type='^{__CFString=}'/>
-<constant name='kMDItemFocalLength' type='^{__CFString=}'/>
-<constant name='kMDItemFonts' type='^{__CFString=}'/>
-<constant name='kMDItemGPSTrack' type='^{__CFString=}'/>
-<constant name='kMDItemGenre' type='^{__CFString=}'/>
-<constant name='kMDItemHasAlphaChannel' type='^{__CFString=}'/>
-<constant name='kMDItemHeadline' type='^{__CFString=}'/>
-<constant name='kMDItemISOSpeed' type='^{__CFString=}'/>
-<constant name='kMDItemIdentifier' type='^{__CFString=}'/>
-<constant name='kMDItemImageDirection' type='^{__CFString=}'/>
-<constant name='kMDItemInformation' type='^{__CFString=}'/>
-<constant name='kMDItemInstantMessageAddresses' type='^{__CFString=}'/>
-<constant name='kMDItemInstructions' type='^{__CFString=}'/>
-<constant name='kMDItemIsGeneralMIDISequence' type='^{__CFString=}'/>
-<constant name='kMDItemKeySignature' type='^{__CFString=}'/>
-<constant name='kMDItemKeywords' type='^{__CFString=}'/>
-<constant name='kMDItemKind' type='^{__CFString=}'/>
-<constant name='kMDItemLanguages' type='^{__CFString=}'/>
-<constant name='kMDItemLastUsedDate' type='^{__CFString=}'/>
-<constant name='kMDItemLatitude' type='^{__CFString=}'/>
-<constant name='kMDItemLayerNames' type='^{__CFString=}'/>
-<constant name='kMDItemLongitude' type='^{__CFString=}'/>
-<constant name='kMDItemLyricist' type='^{__CFString=}'/>
-<constant name='kMDItemMaxAperture' type='^{__CFString=}'/>
-<constant name='kMDItemMediaTypes' type='^{__CFString=}'/>
-<constant name='kMDItemMeteringMode' type='^{__CFString=}'/>
-<constant name='kMDItemMusicalGenre' type='^{__CFString=}'/>
-<constant name='kMDItemMusicalInstrumentCategory' type='^{__CFString=}'/>
-<constant name='kMDItemMusicalInstrumentName' type='^{__CFString=}'/>
-<constant name='kMDItemNumberOfPages' type='^{__CFString=}'/>
-<constant name='kMDItemOrganizations' type='^{__CFString=}'/>
-<constant name='kMDItemOrientation' type='^{__CFString=}'/>
-<constant name='kMDItemOriginalFormat' type='^{__CFString=}'/>
-<constant name='kMDItemOriginalSource' type='^{__CFString=}'/>
-<constant name='kMDItemPageHeight' type='^{__CFString=}'/>
-<constant name='kMDItemPageWidth' type='^{__CFString=}'/>
-<constant name='kMDItemPath' type='^{__CFString=}'/>
-<constant name='kMDItemPerformers' type='^{__CFString=}'/>
-<constant name='kMDItemPhoneNumbers' type='^{__CFString=}'/>
-<constant name='kMDItemPixelHeight' type='^{__CFString=}'/>
-<constant name='kMDItemPixelWidth' type='^{__CFString=}'/>
-<constant name='kMDItemProducer' type='^{__CFString=}'/>
-<constant name='kMDItemProfileName' type='^{__CFString=}'/>
-<constant name='kMDItemProjects' type='^{__CFString=}'/>
-<constant name='kMDItemPublishers' type='^{__CFString=}'/>
-<constant name='kMDItemRecipientEmailAddresses' type='^{__CFString=}'/>
-<constant name='kMDItemRecipients' type='^{__CFString=}'/>
-<constant name='kMDItemRecordingDate' type='^{__CFString=}'/>
-<constant name='kMDItemRecordingYear' type='^{__CFString=}'/>
-<constant name='kMDItemRedEyeOnOff' type='^{__CFString=}'/>
-<constant name='kMDItemResolutionHeightDPI' type='^{__CFString=}'/>
-<constant name='kMDItemResolutionWidthDPI' type='^{__CFString=}'/>
-<constant name='kMDItemRights' type='^{__CFString=}'/>
-<constant name='kMDItemSecurityMethod' type='^{__CFString=}'/>
-<constant name='kMDItemSpeed' type='^{__CFString=}'/>
-<constant name='kMDItemStarRating' type='^{__CFString=}'/>
-<constant name='kMDItemStateOrProvince' type='^{__CFString=}'/>
-<constant name='kMDItemStreamable' type='^{__CFString=}'/>
-<constant name='kMDItemSubject' type='^{__CFString=}'/>
-<constant name='kMDItemSupportFileType' type='^{__CFString=}'/>
-<constant name='kMDItemTempo' type='^{__CFString=}'/>
-<constant name='kMDItemTextContent' type='^{__CFString=}'/>
-<constant name='kMDItemTheme' type='^{__CFString=}'/>
-<constant name='kMDItemTimeSignature' type='^{__CFString=}'/>
-<constant name='kMDItemTimestamp' type='^{__CFString=}'/>
-<constant name='kMDItemTitle' type='^{__CFString=}'/>
-<constant name='kMDItemTotalBitRate' type='^{__CFString=}'/>
-<constant name='kMDItemURL' type='^{__CFString=}'/>
-<constant name='kMDItemVersion' type='^{__CFString=}'/>
-<constant name='kMDItemVideoBitRate' type='^{__CFString=}'/>
-<constant name='kMDItemWhereFroms' type='^{__CFString=}'/>
-<constant name='kMDItemWhiteBalance' type='^{__CFString=}'/>
-<constant name='kMDQueryDidFinishNotification' type='^{__CFString=}'/>
-<constant name='kMDQueryDidUpdateNotification' type='^{__CFString=}'/>
-<constant name='kMDQueryProgressNotification' type='^{__CFString=}'/>
-<constant name='kMDQueryResultContentRelevance' type='^{__CFString=}'/>
-<constant name='kMDQueryScopeComputer' type='^{__CFString=}'/>
-<constant name='kMDQueryScopeHome' type='^{__CFString=}'/>
-<constant name='kMDQueryScopeNetwork' type='^{__CFString=}'/>
-<constant name='kMDQueryUpdateAddedItems' type='^{__CFString=}'/>
-<constant name='kMDQueryUpdateChangedItems' type='^{__CFString=}'/>
-<constant name='kMDQueryUpdateRemovedItems' type='^{__CFString=}'/>
+<constant name='kMDAttributeAllValues' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDAttributeDisplayValues' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDAttributeMultiValued' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDAttributeName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDAttributeReadOnlyValues' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDAttributeType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDExporterAvaliable' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAcquisitionMake' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAcquisitionModel' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAlbum' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAltitude' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAperture' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAppleLoopDescriptors' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAppleLoopsKeyFilterType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAppleLoopsLoopMode' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAppleLoopsRootKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAttributeChangeDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAudiences' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAudioBitRate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAudioChannelCount' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAudioEncodingApplication' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAudioSampleRate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAudioTrackNumber' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAuthorEmailAddresses' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemAuthors' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemBitsPerSample' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemCFBundleIdentifier' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemCity' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemCodecs' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemColorSpace' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemComment' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemComposer' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemContactKeywords' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemContentCreationDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemContentModificationDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemContentType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemContentTypeTree' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemContributors' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemCopyright' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemCountry' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemCoverage' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemCreator' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemDeliveryType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemDescription' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemDirector' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemDisplayName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemDueDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemDurationSeconds' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemEXIFGPSVersion' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemEXIFVersion' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemEditors' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemEmailAddresses' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemEncodingApplications' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemExposureMode' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemExposureProgram' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemExposureTimeSeconds' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemExposureTimeString' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFNumber' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSContentChangeDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSCreationDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSExists' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSHasCustomIcon' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSInvisible' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSIsExtensionHidden' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSIsReadable' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSIsStationery' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSIsWriteable' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSLabel' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSNodeCount' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSOwnerGroupID' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSOwnerUserID' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFSSize' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFinderComment' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFlashOnOff' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFocalLength' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemFonts' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemGPSTrack' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemGenre' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemHasAlphaChannel' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemHeadline' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemISOSpeed' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemIdentifier' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemImageDirection' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemInformation' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemInstantMessageAddresses' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemInstructions' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemIsGeneralMIDISequence' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemKeySignature' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemKeywords' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemKind' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemLanguages' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemLastUsedDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemLatitude' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemLayerNames' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemLongitude' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemLyricist' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemMaxAperture' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemMediaTypes' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemMeteringMode' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemMusicalGenre' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemMusicalInstrumentCategory' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemMusicalInstrumentName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemNumberOfPages' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemOrganizations' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemOrientation' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemOriginalFormat' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemOriginalSource' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPageHeight' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPageWidth' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPath' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPerformers' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPhoneNumbers' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPixelHeight' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPixelWidth' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemProducer' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemProfileName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemProjects' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemPublishers' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemRecipientEmailAddresses' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemRecipients' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemRecordingDate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemRecordingYear' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemRedEyeOnOff' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemResolutionHeightDPI' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemResolutionWidthDPI' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemRights' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemSecurityMethod' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemSpeed' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemStarRating' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemStateOrProvince' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemStreamable' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemSubject' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemSupportFileType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemTempo' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemTextContent' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemTheme' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemTimeSignature' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemTimestamp' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemTitle' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemTotalBitRate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemURL' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemVersion' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemVideoBitRate' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemWhereFroms' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDItemWhiteBalance' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryDidFinishNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryDidUpdateNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryProgressNotification' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryResultContentRelevance' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryScopeComputer' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryScopeHome' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryScopeNetwork' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryUpdateAddedItems' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryUpdateChangedItems' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kMDQueryUpdateRemovedItems' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
 <enum name='kMDQuerySynchronous' value='1'/>
 <enum name='kMDQueryWantsUpdates' value='4'/>
 <function name='MDItemCopyAttribute'>
-<arg type='^{__MDItem=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='@'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFTypeRef' already_retained='true' type='@'/>
 </function>
 <function name='MDItemCopyAttributeList' variadic='true'>
-<arg type='^{__MDItem=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='MDItemCopyAttributeNames'>
-<arg type='^{__MDItem=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDItemCopyAttributes'>
-<arg type='^{__MDItem=}'/>
-<arg type='^{__CFArray=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<arg name='names' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='MDItemCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__MDItem=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='path' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='MDItemRef' already_retained='true' type='^{__MDItem=}'/>
 </function>
 <function name='MDItemGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='MDLineageCopyChildren'>
-<arg type='^{__MDItem=}'/>
-<arg type='^{__CFArray=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<arg name='family' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDLineageCopyLeafDescendants'>
-<arg type='^{__MDItem=}'/>
-<arg type='^{__CFArray=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<arg name='family' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDLineageCopyParents'>
-<arg type='^{__MDItem=}'/>
-<arg type='^{__CFArray=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<arg name='family' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDLineageCopyRootAncestors'>
-<arg type='^{__MDItem=}'/>
-<arg type='^{__CFArray=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<arg name='family' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDLineageCreate'>
-<arg type='^{__CFAllocator=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='MDLineageCreateBranch'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFDictionary=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='originalLineage' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='MDLineageCreateBranchFromFile'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFURL=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='fileURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='MDLineageCreateFromFile'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFURL=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='fileURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='MDLineageCreateQueryString'>
-<arg type='^{__MDItem=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='item' declared_type='MDItemRef' type='^{__MDItem=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='MDLineageRemoveFromFile'>
-<arg type='^{__CFURL=}'/>
-<retval type='B'/>
+<arg name='fileURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='MDLineageSetOnFile'>
-<arg type='^{__CFDictionary=}'/>
-<arg type='^{__CFURL=}'/>
-<retval type='B'/>
+<arg name='lineage' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='fileURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='MDOIDEnumerationHasMoreOIDs'>
-<arg type='@'/>
-<retval type='B'/>
+<arg name='oidEnum' declared_type='MDOIDEnumerationRef' type='@'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='MDOIDEnumerationNextOID'>
-<arg type='@'/>
-<retval type='Q'/>
+<arg name='oidEnum' declared_type='MDOIDEnumerationRef' type='@'/>
+<retval declared_type='uint64_t' type='Q'/>
 </function>
 <function name='MDQueryCopyQueryString'>
-<arg type='^{__MDQuery=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='MDQueryCopySortingAttributes'>
-<arg type='^{__MDQuery=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDQueryCopyValueListAttributes'>
-<arg type='^{__MDQuery=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDQueryCopyValuesOfAttribute'>
-<arg type='^{__MDQuery=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDQueryCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFArray=}'/>
-<arg type='^{__CFArray=}'/>
-<retval already_retained='true' type='^{__MDQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='queryString' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='valueListAttrs' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg name='sortingAttrs' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='MDQueryRef' already_retained='true' type='^{__MDQuery=}'/>
 </function>
 <function name='MDQueryCreateSubset'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__MDQuery=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFArray=}'/>
-<arg type='^{__CFArray=}'/>
-<retval already_retained='true' type='^{__MDQuery=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='queryString' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='valueListAttrs' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg name='sortingAttrs' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='MDQueryRef' already_retained='true' type='^{__MDQuery=}'/>
 </function>
 <function name='MDQueryDisableUpdates'>
-<arg type='^{__MDQuery=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQueryEnableUpdates'>
-<arg type='^{__MDQuery=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQueryExecute'>
-<arg type='^{__MDQuery=}'/>
-<arg type='L' type64='Q'/>
-<retval type='B'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='optionFlags' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='MDQueryGetAttributeValueOfResultAtIndex'>
-<arg type='^{__MDQuery=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='l' type64='q'/>
-<retval type='^v'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='idx' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='void*' type='^v'/>
 </function>
 <function name='MDQueryGetBatchingParameters'>
-<arg type='^{__MDQuery=}'/>
-<retval type='{_MDQueryBatchingParams=IIIIII}' type64='{_MDQueryBatchingParams=QQQQQQ}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='MDQueryBatchingParams' type='{_MDQueryBatchingParams=IIIIII}' type64='{_MDQueryBatchingParams=QQQQQQ}'/>
 </function>
 <function name='MDQueryGetCountOfResultsWithAttributeValue'>
-<arg type='^{__MDQuery=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
-<retval type='l' type64='q'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='value' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='CFIndex' type='l' type64='q'/>
 </function>
 <function name='MDQueryGetIndexOfResult'>
-<arg type='^{__MDQuery=}'/>
-<arg type='^v'/>
-<retval type='l' type64='q'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='result' declared_type='void*' type='^v' const='true'/>
+<retval declared_type='CFIndex' type='l' type64='q'/>
 </function>
 <function name='MDQueryGetResultAtIndex'>
-<arg type='^{__MDQuery=}'/>
-<arg type='l' type64='q'/>
-<retval type='^v'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='idx' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='void*' type='^v' const='true'/>
 </function>
 <function name='MDQueryGetResultCount'>
-<arg type='^{__MDQuery=}'/>
-<retval type='l' type64='q'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='CFIndex' type='l' type64='q'/>
 </function>
 <function name='MDQueryGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='MDQueryIsGatheringComplete'>
-<arg type='^{__MDQuery=}'/>
-<retval type='B'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='MDQuerySetBatchingParameters'>
-<arg type='^{__MDQuery=}'/>
-<arg type='{_MDQueryBatchingParams=IIIIII}' type64='{_MDQueryBatchingParams=QQQQQQ}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='params' declared_type='MDQueryBatchingParams' type='{_MDQueryBatchingParams=IIIIII}' type64='{_MDQueryBatchingParams=QQQQQQ}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQuerySetCreateResultFunction'>
-<arg type='^{__MDQuery=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{__MDQuery=}'/>
-<arg type='^{__MDItem=}'/>
-<arg type='^v'/>
-<retval type='^v'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='func' function_pointer='true' declared_type='MDQueryCreateResultFunction' type='^?'>
+<arg declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg declared_type='MDItemRef' type='^{__MDItem=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v' const='true'/>
 </arg>
-<arg type='^v'/>
-<arg type='^{_CFArrayCallBacks=i^?^?^?^?}' type64='^{_CFArrayCallBacks=q^?^?^?^?}'/>
+<arg name='context' declared_type='void*' type='^v'/>
+<arg name='cb' declared_type='CFArrayCallBacks*' type='^{_CFArrayCallBacks=i^?^?^?^?}' type64='^{_CFArrayCallBacks=q^?^?^?^?}' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQuerySetCreateValueFunction'>
-<arg type='^{__MDQuery=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{__MDQuery=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
-<arg type='^v'/>
-<retval type='^v'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='func' function_pointer='true' declared_type='MDQueryCreateValueFunction' type='^?'>
+<arg declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef' type='@'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v' const='true'/>
 </arg>
-<arg type='^v'/>
-<arg type='^{_CFArrayCallBacks=i^?^?^?^?}' type64='^{_CFArrayCallBacks=q^?^?^?^?}'/>
+<arg name='context' declared_type='void*' type='^v'/>
+<arg name='cb' declared_type='CFArrayCallBacks*' type='^{_CFArrayCallBacks=i^?^?^?^?}' type64='^{_CFArrayCallBacks=q^?^?^?^?}' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQuerySetMaxCount'>
-<arg type='^{__MDQuery=}'/>
-<arg type='l' type64='q'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='size' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQuerySetSearchScope'>
-<arg type='^{__MDQuery=}'/>
-<arg type='^{__CFArray=}'/>
-<arg type='L' type64='I'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='scopeDirectories' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg name='scopeOptions' declared_type='OptionBits' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQuerySetSortComparator'>
-<arg type='^{__MDQuery=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^^v'/>
-<arg type='^^v'/>
-<arg type='^v'/>
-<retval type='l' type64='q'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<arg name='comparator' function_pointer='true' declared_type='MDQuerySortComparatorFunction' type='^?'>
+<arg declared_type='CFTypeRef*' type='^^v' const='true'/>
+<arg declared_type='CFTypeRef*' type='^^v' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='CFComparisonResult' type='l' type64='q'/>
 </arg>
-<arg type='^v'/>
+<arg name='context' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDQueryStop'>
-<arg type='^{__MDQuery=}'/>
+<arg name='query' declared_type='MDQueryRef' type='^{__MDQuery=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='MDResponseChannelSendOID'>
-<arg type='@'/>
-<arg type='Q'/>
-<retval type='B'/>
+<arg name='channel' declared_type='MDResponseChannelRef' type='@'/>
+<arg name='oid' declared_type='uint64_t' type='Q'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='MDResponseChannelSendObject'>
-<arg type='@'/>
-<arg type='^^v'/>
-<retval type='B'/>
+<arg name='channel' declared_type='MDResponseChannelRef' type='@'/>
+<arg name='obj' declared_type='CFTypeRef*' type='^^v'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='MDSchemaCopyAllAttributes'>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='MDSchemaCopyAttributesForContentType'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='contentTypeUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='MDSchemaCopyDisplayDescriptionForAttribute'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='MDSchemaCopyDisplayNameForAttribute'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='MDSchemaCopyMetaAttributesForAttribute'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='name' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 </signatures>

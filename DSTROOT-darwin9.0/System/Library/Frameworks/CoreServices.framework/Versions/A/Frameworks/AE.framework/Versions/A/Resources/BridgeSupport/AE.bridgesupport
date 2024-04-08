@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
@@ -7,28 +6,92 @@
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework'/>
-<struct name='AEAddressDesc' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-<struct name='AEBuildError' type='{AEBuildError=&quot;fError&quot;I&quot;fErrorPos&quot;I}'/>
-<struct name='AEDesc' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-<struct name='AEDescList' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-<struct name='AEKeyDesc' type='{AEKeyDesc=&quot;descKey&quot;I&quot;descContent&quot;{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}}'/>
-<struct name='AERecord' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-<struct name='AERemoteProcessResolverContext' type='{AERemoteProcessResolverContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type64='{AERemoteProcessResolverContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'/>
-<struct name='AppleEvent' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
-<struct name='IntlText' type='{IntlText=&quot;theScriptCode&quot;s&quot;theLangCode&quot;s&quot;theText&quot;[1c]}'/>
-<struct name='OffsetArray' type='{OffsetArray=&quot;fNumOfOffsets&quot;s&quot;fOffset&quot;[1l]}' type64='{OffsetArray=&quot;fNumOfOffsets&quot;s&quot;fOffset&quot;[1i]}'/>
-<struct name='TScriptingSizeResource' type='{TScriptingSizeResource=&quot;scriptingSizeFlags&quot;s&quot;minStackSize&quot;I&quot;preferredStackSize&quot;I&quot;maxStackSize&quot;I&quot;minHeapSize&quot;I&quot;preferredHeapSize&quot;I&quot;maxHeapSize&quot;I}'/>
-<struct name='TextRange' type='{TextRange=&quot;fStart&quot;i&quot;fEnd&quot;i&quot;fHiliteStyle&quot;s}'/>
-<struct name='TextRangeArray' type='{TextRangeArray=&quot;fNumOfRanges&quot;s&quot;fRange&quot;[1{TextRange=&quot;fStart&quot;i&quot;fEnd&quot;i&quot;fHiliteStyle&quot;s}]}'/>
-<struct name='WritingCode' type='{WritingCode=&quot;theScriptCode&quot;s&quot;theLangCode&quot;s}'/>
-<struct name='ccntTokenRecord' type='{ccntTokenRecord=&quot;tokenClass&quot;I&quot;token&quot;{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}}'/>
+<struct name='AEAddressDesc' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+<field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+<field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+</struct>
+<struct name='AEBuildError' type='{AEBuildError=&quot;fError&quot;I&quot;fErrorPos&quot;I}'>
+<field name='fError' declared_type='AEBuildErrorCode' type='L' type64='I'/>
+<field name='fErrorPos' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='AEDesc' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+<field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+<field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+</struct>
+<struct name='AEDescList' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+<field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+<field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+</struct>
+<struct name='AEKeyDesc' type='{AEKeyDesc=&quot;descKey&quot;I&quot;descContent&quot;{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}}'>
+<field name='descKey' declared_type='AEKeyword' type='L' type64='I'/>
+<field name='descContent' declared_type='AEDesc' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
+</struct>
+<struct name='AERecord' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+<field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+<field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+</struct>
+<struct name='AERemoteProcessResolverContext' type='{AERemoteProcessResolverContext=&quot;version&quot;i&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}' type64='{AERemoteProcessResolverContext=&quot;version&quot;q&quot;info&quot;^v&quot;retain&quot;^?&quot;release&quot;^?&quot;copyDescription&quot;^?}'>
+<field name='version' declared_type='CFIndex' type='l' type64='q'/>
+<field name='info' declared_type='void*' type='^v'/>
+<field name='retain' function_pointer='true' declared_type='CFAllocatorRetainCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='void*' type='^v' const='true'/>
+</field>
+<field name='release' function_pointer='true' declared_type='CFAllocatorReleaseCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='copyDescription' function_pointer='true' declared_type='CFAllocatorCopyDescriptionCallBack' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
+</field>
+</struct>
+<struct name='AppleEvent' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
+<field name='descriptorType' declared_type='DescType' type='L' type64='I'/>
+<field name='dataHandle' declared_type='AEDataStorage' type='^^{OpaqueAEDataStorageType}'/>
+</struct>
+<struct name='IntlText' type='{IntlText=&quot;theScriptCode&quot;s&quot;theLangCode&quot;s&quot;theText&quot;[1c]}'>
+<field name='theScriptCode' declared_type='ScriptCode' type='s'/>
+<field name='theLangCode' declared_type='LangCode' type='s'/>
+<field name='theText' declared_type='char*' type='[1c]'/>
+</struct>
+<struct name='OffsetArray' type='{OffsetArray=&quot;fNumOfOffsets&quot;s&quot;fOffset&quot;[1l]}' type64='{OffsetArray=&quot;fNumOfOffsets&quot;s&quot;fOffset&quot;[1i]}'>
+<field name='fNumOfOffsets' declared_type='SInt16' type='s'/>
+<field name='fOffset' declared_type='SInt32*' type='[1l]' type64='[1i]'/>
+</struct>
+<struct name='TScriptingSizeResource' type='{TScriptingSizeResource=&quot;scriptingSizeFlags&quot;s&quot;minStackSize&quot;I&quot;preferredStackSize&quot;I&quot;maxStackSize&quot;I&quot;minHeapSize&quot;I&quot;preferredHeapSize&quot;I&quot;maxHeapSize&quot;I}'>
+<field name='scriptingSizeFlags' declared_type='SInt16' type='s'/>
+<field name='minStackSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='preferredStackSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='maxStackSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='minHeapSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='preferredHeapSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='maxHeapSize' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='TextRange' type='{TextRange=&quot;fStart&quot;i&quot;fEnd&quot;i&quot;fHiliteStyle&quot;s}'>
+<field name='fStart' declared_type='SInt32' type='l' type64='i'/>
+<field name='fEnd' declared_type='SInt32' type='l' type64='i'/>
+<field name='fHiliteStyle' declared_type='SInt16' type='s'/>
+</struct>
+<struct name='TextRangeArray' type='{TextRangeArray=&quot;fNumOfRanges&quot;s&quot;fRange&quot;[1{TextRange=&quot;fStart&quot;i&quot;fEnd&quot;i&quot;fHiliteStyle&quot;s}]}'>
+<field name='fNumOfRanges' declared_type='SInt16' type='s'/>
+<field name='fRange' declared_type='TextRange*' type='[1{TextRange=&quot;fStart&quot;i&quot;fEnd&quot;i&quot;fHiliteStyle&quot;s}]'/>
+</struct>
+<struct name='WritingCode' type='{WritingCode=&quot;theScriptCode&quot;s&quot;theLangCode&quot;s}'>
+<field name='theScriptCode' declared_type='ScriptCode' type='s'/>
+<field name='theLangCode' declared_type='LangCode' type='s'/>
+</struct>
+<struct name='ccntTokenRecord' type='{ccntTokenRecord=&quot;tokenClass&quot;I&quot;token&quot;{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}}'>
+<field name='tokenClass' declared_type='DescType' type='L' type64='I'/>
+<field name='token' declared_type='AEDesc' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
+</struct>
 <cftype name='AERemoteProcessResolverRef' type='^{AERemoteProcessResolver=}'/>
 <cftype name='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
 <opaque name='AEDataStorageType' type='^{OpaqueAEDataStorageType=}'/>
-<constant name='kAERemoteProcessNameKey' type='^{__CFString=}'/>
-<constant name='kAERemoteProcessProcessIDKey' type='^{__CFString=}'/>
-<constant name='kAERemoteProcessURLKey' type='^{__CFString=}'/>
-<constant name='kAERemoteProcessUserIDKey' type='^{__CFString=}'/>
+<constant name='kAERemoteProcessNameKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kAERemoteProcessProcessIDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kAERemoteProcessURLKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kAERemoteProcessUserIDKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
 <enum name='KAEISHandleCGI' value='1935961955'/>
 <enum name='aeBuildSyntaxBadData' value='12'/>
 <enum name='aeBuildSyntaxBadDesc' value='11'/>
@@ -1088,1139 +1151,1155 @@
 <enum name='typeWildCard' value='707406378'/>
 <enum name='typeYards' value='2036429412'/>
 <function name='AEBuildAppleEvent' variadic='true'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEBuildError=II}'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='theClass' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='theID' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='addressType' declared_type='DescType' type='L' type64='I'/>
+<arg name='addressData' declared_type='void*' type='^v' const='true'/>
+<arg name='addressLength' declared_type='Size' type='l' type64='q'/>
+<arg name='returnID' declared_type='SInt16' type='s'/>
+<arg name='transactionID' declared_type='SInt32' type='l' type64='i'/>
+<arg name='result' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='error' declared_type='AEBuildError*' type='^{AEBuildError=II}'/>
+<arg name='paramsFmt' declared_type='char*' type='*' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEBuildDesc' variadic='true'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEBuildError=II}'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='dst' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='error' declared_type='AEBuildError*' type='^{AEBuildError=II}'/>
+<arg name='src' declared_type='char*' type='*' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEBuildParameters' variadic='true'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEBuildError=II}'/>
-<arg type='*'/>
-<retval type='l' type64='i'/>
+<arg name='event' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='error' declared_type='AEBuildError*' type='^{AEBuildError=II}'/>
+<arg name='format' declared_type='char*' type='*' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AECallObjectAccessor'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='desiredClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='containerToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='containerClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='keyForm' declared_type='DescType' type='L' type64='I'/>
+<arg name='keyData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='token' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AECheckIsRecord'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='B'/>
+<arg name='theDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='AECoerceDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='toType' declared_type='DescType' type='L' type64='I'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AECoercePtr'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='typeCode' declared_type='DescType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataSize' declared_type='Size' type='l' type64='q'/>
+<arg name='toType' declared_type='DescType' type='L' type64='I'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AECountItems'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='theCount' declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AECreateAppleEvent'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAEEventClass' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='theAEEventID' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='target' declared_type='AEAddressDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='returnID' declared_type='AEReturnID' type='s'/>
+<arg name='transactionID' declared_type='AETransactionID' type='l' type64='i'/>
+<arg name='result' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AECreateDesc'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='typeCode' declared_type='DescType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataSize' declared_type='Size' type='l' type64='q'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AECreateDescFromExternalPtr'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='^v'/>
-<retval type='v'/>
+<arg name='descriptorType' declared_type='OSType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataLength' declared_type='Size' type='l' type64='q'/>
+<arg name='disposeCallback' function_pointer='true' declared_type='AEDisposeExternalUPP' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='disposeRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='theDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AECreateList'>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='B'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='factoringPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='factoredSize' declared_type='Size' type='l' type64='q'/>
+<arg name='isRecord' declared_type='Boolean' type='B'/>
+<arg name='resultList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AECreateRemoteProcessResolver'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFURL=}'/>
-<retval already_retained='true' type='^{AERemoteProcessResolver=}'/>
+<arg name='allocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='url' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<retval declared_type='AERemoteProcessResolverRef' already_retained='true' type='^{AERemoteProcessResolver=}'/>
 </function>
 <function name='AEDecodeMessage'>
-<arg type='^{_mach_msg_header_t=IIIIIi}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='header' declared_type='mach_msg_header_t*' type='^{_mach_msg_header_t=IIIIIi}'/>
+<arg name='event' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEDeleteItem'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='index' declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEDeleteParam'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEDisposeDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEDisposeRemoteProcessResolver'>
-<arg type='^{AERemoteProcessResolver=}'/>
+<arg name='ref' declared_type='AERemoteProcessResolverRef' type='^{AERemoteProcessResolver=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='AEDisposeToken'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEDuplicateDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEFlattenDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='*'/>
-<arg type='l' type64='q'/>
-<arg type='^i' type64='^q'/>
-<retval type='l' type64='i'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='buffer' declared_type='Ptr' type='*'/>
+<arg name='bufferSize' declared_type='Size' type='l' type64='q'/>
+<arg name='actualSize' declared_type='Size*' type='^i' type64='^q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEGetArray'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='c'/>
-<arg type='^(AEArrayData=[1s][1c][1^*][1{AEDesc=I^^{OpaqueAEDataStorageType}}][1{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}])'/>
-<arg type='l' type64='q'/>
-<arg type='^I'/>
-<arg type='^i' type64='^q'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='arrayType' declared_type='AEArrayType' type='c'/>
+<arg name='arrayPtr' declared_type='AEArrayDataPointer' type='^(AEArrayData=[1s][1c][1^*][1{AEDesc=I^^{OpaqueAEDataStorageType}}][1{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}])'/>
+<arg name='maximumSize' declared_type='Size' type='l' type64='q'/>
+<arg name='itemType' declared_type='DescType*' type='^I'/>
+<arg name='itemSize' declared_type='Size*' type='^i' type64='^q'/>
+<arg name='itemCount' declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetAttributeDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetAttributePtr'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='^i' type64='^q'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='typeCode' declared_type='DescType*' type='^I'/>
+<arg name='dataPtr' declared_type='void*' type='^v'/>
+<arg name='maximumSize' declared_type='Size' type='l' type64='q'/>
+<arg name='actualSize' declared_type='Size*' type='^i' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetCoercionHandler'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^^?'/>
-<arg type='^i' type64='^^v'/>
-<arg type='^B'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='fromType' declared_type='DescType' type='L' type64='I'/>
+<arg name='toType' declared_type='DescType' type='L' type64='I'/>
+<arg name='handler' declared_type='AECoercionHandlerUPP*' type='^^?'/>
+<arg name='handlerRefcon' declared_type='SRefCon*' type='^i' type64='^^v'/>
+<arg name='fromTypeIsDesc' declared_type='Boolean*' type='^B'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetDescData'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='dataPtr' declared_type='void*' type='^v'/>
+<arg name='maximumSize' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetDescDataRange'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='dataDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='buffer' declared_type='void*' type='^v'/>
+<arg name='offset' declared_type='Size' type='l' type64='q'/>
+<arg name='length' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEGetDescDataSize'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='q'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='Size' type='l' type64='q'/>
 </function>
 <function name='AEGetEventHandler'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^^?'/>
-<arg type='^i' type64='^^v'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='theAEEventClass' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='theAEEventID' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='handler' declared_type='AEEventHandlerUPP*' type='^^?'/>
+<arg name='handlerRefcon' declared_type='SRefCon*' type='^i' type64='^^v'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetNthDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='index' declared_type='long' type='l' type64='q'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='theAEKeyword' declared_type='AEKeyword*' type='^I'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetNthPtr'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='^i' type64='^q'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='index' declared_type='long' type='l' type64='q'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='theAEKeyword' declared_type='AEKeyword*' type='^I'/>
+<arg name='typeCode' declared_type='DescType*' type='^I'/>
+<arg name='dataPtr' declared_type='void*' type='^v'/>
+<arg name='maximumSize' declared_type='Size' type='l' type64='q'/>
+<arg name='actualSize' declared_type='Size*' type='^i' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetObjectAccessor'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^^?'/>
-<arg type='^i' type64='^^v'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='desiredClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='containerType' declared_type='DescType' type='L' type64='I'/>
+<arg name='accessor' declared_type='OSLAccessorUPP*' type='^^?'/>
+<arg name='accessorRefcon' declared_type='SRefCon*' type='^i' type64='^^v'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetParamDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetParamPtr'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='^i' type64='^q'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='actualType' declared_type='DescType*' type='^I'/>
+<arg name='dataPtr' declared_type='void*' type='^v'/>
+<arg name='maximumSize' declared_type='Size' type='l' type64='q'/>
+<arg name='actualSize' declared_type='Size*' type='^i' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEGetRegisteredMachPort'>
-<retval type='I'/>
+<retval declared_type='mach_port_t' type='I'/>
 </function>
 <function name='AEGetSpecialHandler'>
-<arg type='L' type64='I'/>
-<arg type='^^?'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='functionClass' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='handler' declared_type='AEEventHandlerUPP*' type='^^?'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEInitializeDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='desc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='AEInstallCoercionHandler'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='fromType' declared_type='DescType' type='L' type64='I'/>
+<arg name='toType' declared_type='DescType' type='L' type64='I'/>
+<arg name='handler' function_pointer='true' declared_type='AECoercionHandlerUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='l' type64='^v'/>
-<arg type='B'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='handlerRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='fromTypeIsDesc' declared_type='Boolean' type='B'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEInstallEventHandler'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='theAEEventClass' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='theAEEventID' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='handler' function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='l' type64='^v'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='handlerRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEInstallObjectAccessor'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='desiredClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='containerType' declared_type='DescType' type='L' type64='I'/>
+<arg name='theAccessor' function_pointer='true' declared_type='OSLAccessorUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='l' type64='^v'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='accessorRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEInstallSpecialHandler'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='functionClass' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='handler' function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEManagerInfo'>
-<arg type='L' type64='I'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<arg name='keyWord' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='result' declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEObjectInit'>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEPrintDescToHandle'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^^*'/>
-<retval type='l' type64='i'/>
+<arg name='desc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='result' declared_type='Handle*' type='^^*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEProcessMessage'>
-<arg type='^{_mach_msg_header_t=IIIIIi}'/>
-<retval type='l' type64='i'/>
+<arg name='header' declared_type='mach_msg_header_t*' type='^{_mach_msg_header_t=IIIIIi}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEPutArray'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='c'/>
-<arg type='^(AEArrayData=[1s][1c][1^*][1{AEDesc=I^^{OpaqueAEDataStorageType}}][1{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}])'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='arrayType' declared_type='AEArrayType' type='c'/>
+<arg name='arrayPtr' declared_type='AEArrayData*' type='^(AEArrayData=[1s][1c][1^*][1{AEDesc=I^^{OpaqueAEDataStorageType}}][1{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}])' const='true'/>
+<arg name='itemType' declared_type='DescType' type='L' type64='I'/>
+<arg name='itemSize' declared_type='Size' type='l' type64='q'/>
+<arg name='itemCount' declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEPutAttributeDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEPutAttributePtr'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='typeCode' declared_type='DescType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataSize' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEPutDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='index' declared_type='long' type='l' type64='q'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEPutParamDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEPutParamPtr'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='typeCode' declared_type='DescType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataSize' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEPutPtr'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='index' declared_type='long' type='l' type64='q'/>
+<arg name='typeCode' declared_type='DescType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataSize' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AERemoteProcessResolverGetProcesses'>
-<arg type='^{AERemoteProcessResolver=}'/>
-<arg type='^{_CFStreamError=ii}' type64='^{_CFStreamError=qi}'/>
-<retval type='^{__CFArray=}'/>
+<arg name='ref' declared_type='AERemoteProcessResolverRef' type='^{AERemoteProcessResolver=}'/>
+<arg name='outError' declared_type='CFStreamError*' type='^{_CFStreamError=ii}' type64='^{_CFStreamError=qi}'/>
+<retval declared_type='CFArrayRef' type='^{__CFArray=}'/>
 </function>
 <function name='AERemoteProcessResolverScheduleWithRunLoop'>
-<arg type='^{AERemoteProcessResolver=}'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AERemoteProcessResolver=}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='ref' declared_type='AERemoteProcessResolverRef' type='^{AERemoteProcessResolver=}'/>
+<arg name='runLoop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='runLoopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='callback' function_pointer='true' declared_type='AERemoteProcessResolverCallback' type='^?'>
+<arg declared_type='AERemoteProcessResolverRef' type='^{AERemoteProcessResolver=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^{AERemoteProcessResolverContext=i^v^?^?^?}' type64='^{AERemoteProcessResolverContext=q^v^?^?^?}'/>
+<arg name='ctx' declared_type='AERemoteProcessResolverContext*' type='^{AERemoteProcessResolverContext=i^v^?^?^?}' type64='^{AERemoteProcessResolverContext=q^v^?^?^?}' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='AERemoveCoercionHandler'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='fromType' declared_type='DescType' type='L' type64='I'/>
+<arg name='toType' declared_type='DescType' type='L' type64='I'/>
+<arg name='handler' function_pointer='true' declared_type='AECoercionHandlerUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AERemoveEventHandler'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='theAEEventClass' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='theAEEventID' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='handler' function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AERemoveObjectAccessor'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='desiredClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='containerType' declared_type='DescType' type='L' type64='I'/>
+<arg name='theAccessor' function_pointer='true' declared_type='OSLAccessorUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AERemoveSpecialHandler'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='functionClass' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='handler' function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='isSysHandler' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEReplaceDescData'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='typeCode' declared_type='DescType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataSize' declared_type='Size' type='l' type64='q'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEResolve'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='s'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='objectSpecifier' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='callbackFlags' declared_type='short' type='s'/>
+<arg name='theToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AESendMessage'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='i'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='event' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='reply' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='sendMode' declared_type='AESendMode' type='l' type64='i'/>
+<arg name='timeOutInTicks' declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AESetObjectCallbacks'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^B'/>
-<retval type='s'/>
+<arg name='myCompareProc' function_pointer='true' declared_type='OSLCompareUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<arg name='myCountProc' function_pointer='true' declared_type='OSLCountUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='myDisposeTokenProc' function_pointer='true' declared_type='OSLDisposeTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='myGetMarkTokenProc' function_pointer='true' declared_type='OSLGetMarkTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='myMarkProc' function_pointer='true' declared_type='OSLMarkUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='myAdjustMarksProc' function_pointer='true' declared_type='OSLAdjustMarksUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^^{AEDesc}'/>
-<retval type='s'/>
+<arg name='myGetErrDescProcPtr' function_pointer='true' declared_type='OSLGetErrDescUPP' type='^?'>
+<arg declared_type='AEDesc**' type='^^{AEDesc}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AESizeOfAttribute'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^i' type64='^q'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='typeCode' declared_type='DescType*' type='^I'/>
+<arg name='dataSize' declared_type='Size*' type='^i' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AESizeOfFlattenedDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='q'/>
+<arg name='theAEDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='Size' type='l' type64='q'/>
 </function>
 <function name='AESizeOfNthItem'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<arg type='^I'/>
-<arg type='^i' type64='^q'/>
-<retval type='s'/>
+<arg name='theAEDescList' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='index' declared_type='long' type='l' type64='q'/>
+<arg name='typeCode' declared_type='DescType*' type='^I'/>
+<arg name='dataSize' declared_type='Size*' type='^i' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AESizeOfParam'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg type='^i' type64='^q'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='theAEKeyword' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='typeCode' declared_type='DescType*' type='^I'/>
+<arg name='dataSize' declared_type='Size*' type='^i' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='AEStreamClose'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='desc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamCloseDesc'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamCloseList'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamCloseRecord'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamCreateEvent'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<retval already_retained='true' type='^{OpaqueAEStreamRef=}'/>
+<arg name='clazz' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='id' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='targetType' declared_type='DescType' type='L' type64='I'/>
+<arg name='targetData' declared_type='void*' type='^v' const='true'/>
+<arg name='targetLength' declared_type='Size' type='l' type64='q'/>
+<arg name='returnID' declared_type='SInt16' type='s'/>
+<arg name='transactionID' declared_type='SInt32' type='l' type64='i'/>
+<retval declared_type='AEStreamRef' already_retained='true' type='^{OpaqueAEStreamRef=}'/>
 </function>
 <function name='AEStreamOpen'>
-<retval type='^{OpaqueAEStreamRef=}'/>
+<retval declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
 </function>
 <function name='AEStreamOpenDesc'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='newType' declared_type='DescType' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamOpenEvent'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='^{OpaqueAEStreamRef=}'/>
+<arg name='event' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
 </function>
 <function name='AEStreamOpenKeyDesc'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='key' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='newType' declared_type='DescType' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamOpenList'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamOpenRecord'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='newType' declared_type='DescType' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamOptionalParam'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='key' declared_type='AEKeyword' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamSetRecordType'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='newType' declared_type='DescType' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamWriteAEDesc'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='desc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamWriteData'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='data' declared_type='void*' type='^v' const='true'/>
+<arg name='length' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamWriteDesc'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='newType' declared_type='DescType' type='L' type64='I'/>
+<arg name='data' declared_type='void*' type='^v' const='true'/>
+<arg name='length' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamWriteKey'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='key' declared_type='AEKeyword' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEStreamWriteKeyDesc'>
-<arg type='^{OpaqueAEStreamRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='AEStreamRef' type='^{OpaqueAEStreamRef=}'/>
+<arg name='key' declared_type='AEKeyword' type='L' type64='I'/>
+<arg name='newType' declared_type='DescType' type='L' type64='I'/>
+<arg name='data' declared_type='void*' type='^v' const='true'/>
+<arg name='length' declared_type='Size' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AEUnflattenDesc'>
-<arg type='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='l' type64='i'/>
+<arg name='buffer' declared_type='void*' type='^v' const='true'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='CreateCompDescriptor'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='B'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='comparisonOperator' declared_type='DescType' type='L' type64='I'/>
+<arg name='operand1' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='operand2' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='disposeInputs' declared_type='Boolean' type='B'/>
+<arg name='theDescriptor' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='CreateLogicalDescriptor'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theLogicalTerms' declared_type='AEDescList*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='theLogicOperator' declared_type='DescType' type='L' type64='I'/>
+<arg name='disposeInputs' declared_type='Boolean' type='B'/>
+<arg name='theDescriptor' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='CreateObjSpecifier'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='B'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='desiredClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='theContainer' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='keyForm' declared_type='DescType' type='L' type64='I'/>
+<arg name='keyData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='disposeInputs' declared_type='Boolean' type='B'/>
+<arg name='objSpecifier' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='CreateOffsetDescriptor'>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='theOffset' declared_type='long' type='l' type64='q'/>
+<arg name='theDescriptor' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='CreateRangeDescriptor'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='B'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='rangeStart' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='rangeStop' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='disposeInputs' declared_type='Boolean' type='B'/>
+<arg name='theDescriptor' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='DisposeAECoerceDescUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='AECoerceDescUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeAECoercePtrUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='AECoercePtrUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeAEDisposeExternalUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='^v'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='AEDisposeExternalUPP' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeAEEventHandlerUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLAccessorUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLAccessorUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLAdjustMarksUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLAdjustMarksUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLCompareUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^B'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLCompareUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLCountUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLCountUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLDisposeTokenUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLDisposeTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLGetErrDescUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^^{AEDesc}'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLGetErrDescUPP' type='^?'>
+<arg declared_type='AEDesc**' type='^^{AEDesc}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLGetMarkTokenUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLGetMarkTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeOSLMarkUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLMarkUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeAECoerceDescUPP'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='fromDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='toType' declared_type='DescType' type='L' type64='I'/>
+<arg name='handlerRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='toDesc' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='userUPP' function_pointer='true' declared_type='AECoerceDescUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeAECoercePtrUPP'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='typeCode' declared_type='DescType' type='L' type64='I'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataSize' declared_type='Size' type='l' type64='q'/>
+<arg name='toType' declared_type='DescType' type='L' type64='I'/>
+<arg name='handlerRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='userUPP' function_pointer='true' declared_type='AECoercePtrUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeAEDisposeExternalUPP'>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='^v'/>
-<retval type='v'/>
+<arg name='dataPtr' declared_type='void*' type='^v' const='true'/>
+<arg name='dataLength' declared_type='Size' type='l' type64='q'/>
+<arg name='refcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='AEDisposeExternalUPP' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeAEEventHandlerUPP'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='theAppleEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='reply' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='handlerRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLAccessorUPP'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='desiredClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='container' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='containerClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='form' declared_type='DescType' type='L' type64='I'/>
+<arg name='selectionData' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='value' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='accessorRefcon' declared_type='SRefCon' type='l' type64='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLAccessorUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLAdjustMarksUPP'>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='newStart' declared_type='long' type='l' type64='q'/>
+<arg name='newStop' declared_type='long' type='l' type64='q'/>
+<arg name='markToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLAdjustMarksUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLCompareUPP'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^B'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^B'/>
-<retval type='s'/>
+<arg name='oper' declared_type='DescType' type='L' type64='I'/>
+<arg name='obj1' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='obj2' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='result' declared_type='Boolean*' type='^B'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLCompareUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLCountUPP'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^l' type64='^q'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<arg name='desiredType' declared_type='DescType' type='L' type64='I'/>
+<arg name='containerClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='container' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='result' declared_type='long*' type='^l' type64='^q'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLCountUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLDisposeTokenUPP'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='unneededToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLDisposeTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLGetErrDescUPP'>
-<arg type='^^{AEDesc}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^^{AEDesc}'/>
-<retval type='s'/>
+<arg name='appDescPtr' declared_type='AEDesc**' type='^^{AEDesc}'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLGetErrDescUPP' type='^?'>
+<arg declared_type='AEDesc**' type='^^{AEDesc}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLGetMarkTokenUPP'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='dContainerToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='containerClass' declared_type='DescType' type='L' type64='I'/>
+<arg name='result' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLGetMarkTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='InvokeOSLMarkUPP'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='dToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='markToken' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg name='index' declared_type='long' type='l' type64='q'/>
+<arg name='userUPP' function_pointer='true' declared_type='OSLMarkUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NewAECoerceDescUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='AECoerceDescProcPtr' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='AECoerceDescUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewAECoercePtrUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='AECoercePtrProcPtr' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='l' type64='^v'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='AECoercePtrUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewAEDisposeExternalUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='^v'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='AEDisposeExternalProcPtr' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='l' type64='^v'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='AEDisposeExternalUPP' type='^?'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='Size' type='l' type64='q'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewAEEventHandlerUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='AEEventHandlerProcPtr' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='AEEventHandlerUPP' type='^?'>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLAccessorUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLAccessorProcPtr' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='^v'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLAccessorUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='SRefCon' type='l' type64='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLAdjustMarksUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLAdjustMarksProcPtr' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='l' type64='q'/>
-<arg type='l' type64='q'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLAdjustMarksUPP' type='^?'>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='long' type='l' type64='q'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLCompareUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^B'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLCompareProcPtr' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^B'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLCompareUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLCountUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLCountProcPtr' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^l' type64='^q'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLCountUPP' type='^?'>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLDisposeTokenUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLDisposeTokenProcPtr' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLDisposeTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLGetErrDescUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^^{AEDesc}'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLGetErrDescProcPtr' type='^?'>
+<arg declared_type='AEDesc**' type='^^{AEDesc}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^^{AEDesc}'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLGetErrDescUPP' type='^?'>
+<arg declared_type='AEDesc**' type='^^{AEDesc}'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLGetMarkTokenUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLGetMarkTokenProcPtr' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLGetMarkTokenUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='DescType' type='L' type64='I'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='NewOSLMarkUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<arg name='userRoutine' function_pointer='true' declared_type='OSLMarkProcPtr' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='l' type64='q'/>
-<retval type='s'/>
+<retval function_pointer='true' declared_type='OSLMarkUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<arg declared_type='long' type='l' type64='q'/>
+<retval declared_type='OSErr' type='s'/>
 </retval>
 </function>
 <function name='vAEBuildAppleEvent'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<arg type='l' type64='q'/>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEBuildError=II}'/>
-<arg type='*'/>
-<arg type='*' type64='^{__va_list_tag=II^v^v}'/>
-<retval type='l' type64='i'/>
+<arg name='theClass' declared_type='AEEventClass' type='L' type64='I'/>
+<arg name='theID' declared_type='AEEventID' type='L' type64='I'/>
+<arg name='addressType' declared_type='DescType' type='L' type64='I'/>
+<arg name='addressData' declared_type='void*' type='^v' const='true'/>
+<arg name='addressLength' declared_type='Size' type='l' type64='q'/>
+<arg name='returnID' declared_type='SInt16' type='s'/>
+<arg name='transactionID' declared_type='SInt32' type='l' type64='i'/>
+<arg name='resultEvt' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='error' declared_type='AEBuildError*' type='^{AEBuildError=II}'/>
+<arg name='paramsFmt' declared_type='char*' type='*' const='true'/>
+<arg name='args' declared_type='va_list' type='*' type64='^{__va_list_tag=II^v^v}' declared_type64='__va_list_tag*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='vAEBuildDesc'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEBuildError=II}'/>
-<arg type='*'/>
-<arg type='*' type64='^{__va_list_tag=II^v^v}'/>
-<retval type='l' type64='i'/>
+<arg name='dst' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='error' declared_type='AEBuildError*' type='^{AEBuildError=II}'/>
+<arg name='src' declared_type='char*' type='*' const='true'/>
+<arg name='args' declared_type='va_list' type='*' type64='^{__va_list_tag=II^v^v}' declared_type64='__va_list_tag*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='vAEBuildParameters'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{AEBuildError=II}'/>
-<arg type='*'/>
-<arg type='*' type64='^{__va_list_tag=II^v^v}'/>
-<retval type='l' type64='i'/>
+<arg name='event' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='error' declared_type='AEBuildError*' type='^{AEBuildError=II}'/>
+<arg name='format' declared_type='char*' type='*' const='true'/>
+<arg name='args' declared_type='va_list' type='*' type64='^{__va_list_tag=II^v^v}' declared_type64='__va_list_tag*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 </signatures>

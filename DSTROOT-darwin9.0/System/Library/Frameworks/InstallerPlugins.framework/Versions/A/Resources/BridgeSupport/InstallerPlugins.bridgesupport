@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
@@ -8,52 +7,137 @@
 <opaque name='InstallerPane_Private' type='^{InstallerPane_Private=}'/>
 <opaque name='InstallerSection_Private' type='^{InstallerSection_Private=}'/>
 <opaque name='InstallerState_Private' type='^{InstallerState_Private=}'/>
-<constant name='InstallerState_Choice_CustomLocation' type='@'/>
-<constant name='InstallerState_Choice_Identifier' type='@'/>
-<constant name='InstallerState_Choice_Installed' type='@'/>
+<constant name='InstallerState_Choice_CustomLocation' declared_type='NSString*' type='@' const='true'/>
+<constant name='InstallerState_Choice_Identifier' declared_type='NSString*' type='@' const='true'/>
+<constant name='InstallerState_Choice_Installed' declared_type='NSString*' type='@' const='true'/>
 <enum name='InstallerDirectionBackward' value='1'/>
 <enum name='InstallerDirectionForward' value='0'/>
 <enum name='InstallerDirectionUndefined' value='2'/>
 <class name='InstallerPane'>
+<method selector='contentView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='didEnterPane:'>
+<arg name='dir' declared_type='InstallerSectionDirection' type='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didExitPane:'>
+<arg name='dir' declared_type='InstallerSectionDirection' type='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='firstKeyView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
 <method selector='gotoNextPane'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='gotoPreviousPane'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithSection:'>
+<arg name='parent' declared_type='id' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initialKeyView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='lastKeyView'>
+<retval declared_type='NSView*' type='@'/>
 </method>
 <method selector='nextEnabled'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='nextPane'>
+<retval declared_type='InstallerPane*' type='@'/>
 </method>
 <method selector='previousEnabled'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='section'>
+<retval declared_type='InstallerSection*' type='@'/>
 </method>
 <method selector='setNextEnabled:'>
-<arg type='B' index='0'/>
+<arg name='enabled' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setPreviousEnabled:'>
-<arg type='B' index='0'/>
+<arg name='enabled' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='shouldExitPane:'>
-<retval type='B'/>
+<arg name='dir' declared_type='InstallerSectionDirection' type='i' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='willEnterPane:'>
+<arg name='dir' declared_type='InstallerSectionDirection' type='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willExitPane:'>
+<arg name='dir' declared_type='InstallerSectionDirection' type='i' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <class name='InstallerSection'>
+<method selector='activePane'>
+<retval declared_type='InstallerPane*' type='@'/>
+</method>
+<method selector='bundle'>
+<retval declared_type='NSBundle*' type='@'/>
+</method>
+<method selector='didLoadMainNib'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='firstPane'>
+<retval declared_type='InstallerPane*' type='@'/>
+</method>
 <method selector='gotoPane:'>
-<retval type='B'/>
+<arg name='pane' declared_type='InstallerPane*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='installerState'>
+<retval declared_type='InstallerState*' type='@'/>
+</method>
+<method selector='sharedDictionary'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
 </method>
 <method selector='shouldLoad'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='willLoadMainNib'>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <class name='InstallerState'>
+<method selector='choiceDictionaries'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='choiceDictionaryForIdentifier:'>
+<arg name='choiceIdentifier' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
 <method selector='installStarted'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='installSucceeded'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='licenseAgreed'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='licenseAgreedLanguage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='targetPath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='targetVolumePath'>
+<retval declared_type='NSString*' type='@'/>
 </method>
 </class>
 </signatures>

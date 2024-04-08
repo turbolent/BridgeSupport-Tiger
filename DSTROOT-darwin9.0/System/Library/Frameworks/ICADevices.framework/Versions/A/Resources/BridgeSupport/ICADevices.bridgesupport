@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
 <depends_on path='/System/Library/Frameworks/Carbon.framework'/>
@@ -11,26 +10,523 @@
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
-<struct name='ICD_GetPropertyDataPB' type='{ICD_GetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}' type64='{ICD_GetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}'/>
-<struct name='ICD_ObjectSendMessagePB' type='{ICD_ObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}' type64='{ICD_ObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}'/>
-<struct name='ICD_ScannerCloseSessionPB' type='{ICD_ScannerCloseSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerCloseSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'/>
-<struct name='ICD_ScannerGetParametersPB' type='{ICD_ScannerGetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}' type64='{ICD_ScannerGetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}'/>
-<struct name='ICD_ScannerGetPropertyDataPB' type='{ICD_ScannerGetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}' type64='{ICD_ScannerGetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}'/>
-<struct name='ICD_ScannerInitializePB' type='{ICD_ScannerInitializePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerInitializePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'/>
-<struct name='ICD_ScannerObjectSendMessagePB' type='{ICD_ScannerObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}' type64='{ICD_ScannerObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}'/>
-<struct name='ICD_ScannerOpenSessionPB' type='{ICD_ScannerOpenSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerOpenSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'/>
-<struct name='ICD_ScannerSetParametersPB' type='{ICD_ScannerSetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}' type64='{ICD_ScannerSetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}'/>
-<struct name='ICD_ScannerSetPropertyDataPB' type='{ICD_ScannerSetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}' type64='{ICD_ScannerSetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}'/>
-<struct name='ICD_ScannerStartPB' type='{ICD_ScannerStartPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerStartPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'/>
-<struct name='ICD_ScannerStatusPB' type='{ICD_ScannerStatusPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;status&quot;I}' type64='{ICD_ScannerStatusPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;status&quot;I}'/>
-<struct name='ICD_Scannerscanner_callback_functions' type='{ICD_Scannerscanner_callback_functions=&quot;f_ICD_ScannerOpenUSBDevice&quot;^?&quot;f_ICD_ScannerOpenUSBDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerCloseDevice&quot;^?&quot;f_ICD_ScannerPeriodicTask&quot;^?&quot;f_ICD_ScannerGetObjectInfo&quot;^?&quot;f_ICD_ScannerCleanup&quot;^?&quot;f_ICD_ScannerGetPropertyData&quot;^?&quot;f_ICD_ScannerSetPropertyData&quot;^?&quot;f_ICD_ScannerReadFileData&quot;^?&quot;f_ICD_ScannerWriteFileData&quot;^?&quot;f_ICD_ScannerSendMessage&quot;^?&quot;f_ICD_ScannerAddPropertiesToCFDictionary&quot;^?&quot;f_ICD_ScannerOpenFireWireDevice&quot;^?&quot;f_ICD_ScannerOpenFireWireDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerOpenSession&quot;^?&quot;f_ICD_ScannerCloseSession&quot;^?&quot;f_ICD_ScannerInitialize&quot;^?&quot;f_ICD_ScannerGetParameters&quot;^?&quot;f_ICD_ScannerSetParameters&quot;^?&quot;f_ICD_ScannerStatus&quot;^?&quot;f_ICD_ScannerStart&quot;^?&quot;f_ICD_ScannerOpenBluetoothDevice&quot;^?&quot;f_ICD_ScannerOpenTCPIPDevice&quot;^?&quot;f_ICD_ScannerWriteDataToFile&quot;^?}'/>
-<struct name='ICD_SetPropertyDataPB' type='{ICD_SetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}' type64='{ICD_SetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}'/>
-<struct name='ICD_callback_functions' type='{ICD_callback_functions=&quot;f_ICD_OpenUSBDevice&quot;^?&quot;f_ICD_CloseDevice&quot;^?&quot;f_ICD_PeriodicTask&quot;^?&quot;f_ICD_GetObjectInfo&quot;^?&quot;f_ICD_Cleanup&quot;^?&quot;f_ICD_GetPropertyData&quot;^?&quot;f_ICD_SetPropertyData&quot;^?&quot;f_ICD_ReadFileData&quot;^?&quot;f_ICD_WriteFileData&quot;^?&quot;f_ICD_SendMessage&quot;^?&quot;f_ICD_AddPropertiesToCFDictionary&quot;^?&quot;f_ICD_OpenFireWireDevice&quot;^?&quot;f_ICD_OpenUSBDeviceWithIORegPath&quot;^?&quot;f_ICD_OpenFireWireDeviceWithIORegPath&quot;^?&quot;f_ICD_OpenBluetoothDevice&quot;^?&quot;f_ICD_OpenTCPIPDevice&quot;^?&quot;f_ICD_WriteDataToFile&quot;^?}'/>
-<struct name='ICD_scanner_callback_functions' type='{ICD_Scannerscanner_callback_functions=&quot;f_ICD_ScannerOpenUSBDevice&quot;^?&quot;f_ICD_ScannerOpenUSBDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerCloseDevice&quot;^?&quot;f_ICD_ScannerPeriodicTask&quot;^?&quot;f_ICD_ScannerGetObjectInfo&quot;^?&quot;f_ICD_ScannerCleanup&quot;^?&quot;f_ICD_ScannerGetPropertyData&quot;^?&quot;f_ICD_ScannerSetPropertyData&quot;^?&quot;f_ICD_ScannerReadFileData&quot;^?&quot;f_ICD_ScannerWriteFileData&quot;^?&quot;f_ICD_ScannerSendMessage&quot;^?&quot;f_ICD_ScannerAddPropertiesToCFDictionary&quot;^?&quot;f_ICD_ScannerOpenFireWireDevice&quot;^?&quot;f_ICD_ScannerOpenFireWireDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerOpenSession&quot;^?&quot;f_ICD_ScannerCloseSession&quot;^?&quot;f_ICD_ScannerInitialize&quot;^?&quot;f_ICD_ScannerGetParameters&quot;^?&quot;f_ICD_ScannerSetParameters&quot;^?&quot;f_ICD_ScannerStatus&quot;^?&quot;f_ICD_ScannerStart&quot;^?&quot;f_ICD_ScannerOpenBluetoothDevice&quot;^?&quot;f_ICD_ScannerOpenTCPIPDevice&quot;^?&quot;f_ICD_ScannerWriteDataToFile&quot;^?}'/>
-<struct name='ObjectInfo' type='{ObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;L&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;uniqueIDFireWire&quot;Q&quot;tag&quot;I}' type64='{ObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;Q&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;uniqueIDFireWire&quot;Q&quot;tag&quot;I}'/>
-<struct name='ScannerObjectInfo' type='{ScannerObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;L&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;uniqueIDFireWire&quot;Q&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;tag&quot;I}' type64='{ScannerObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;Q&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;uniqueIDFireWire&quot;Q&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;tag&quot;I}'/>
-<constant name='gICDCallbackFunctions' type='{ICD_callback_functions=^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
-<constant name='gICDScannerCallbackFunctions' type='{ICD_Scannerscanner_callback_functions=^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<struct name='ICD_GetPropertyDataPB' type='{ICD_GetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}' type64='{ICD_GetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='parentObject' declared_type='ICAObject' type='L' type64='I'/>
+<field name='parentObjectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='property' declared_type='ICAProperty' type='L' type64='I'/>
+<field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+<field name='startByte' declared_type='UInt32' type='L' type64='I'/>
+<field name='requestedSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataPtr' declared_type='void*' type='^v'/>
+<field name='actualSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataType' declared_type='OSType' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ObjectSendMessagePB' type='{ICD_ObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}' type64='{ICD_ObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='message' declared_type='ICAMessage' type='{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'/>
+<field name='totalDataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='result' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerCloseSessionPB' type='{ICD_ScannerCloseSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerCloseSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='sessionID' declared_type='ICAScannerSessionID' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerGetParametersPB' type='{ICD_ScannerGetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}' type64='{ICD_ScannerGetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='sessionID' declared_type='ICAScannerSessionID' type='L' type64='I'/>
+<field name='theDict' declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+</struct>
+<struct name='ICD_ScannerGetPropertyDataPB' type='{ICD_ScannerGetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}' type64='{ICD_ScannerGetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;requestedSize&quot;I&quot;dataPtr&quot;^v&quot;actualSize&quot;I&quot;dataType&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='parentObject' declared_type='ICAObject' type='L' type64='I'/>
+<field name='parentObjectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='property' declared_type='ICAProperty' type='L' type64='I'/>
+<field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+<field name='startByte' declared_type='UInt32' type='L' type64='I'/>
+<field name='requestedSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataPtr' declared_type='void*' type='^v'/>
+<field name='actualSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataType' declared_type='OSType' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerInitializePB' type='{ICD_ScannerInitializePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerInitializePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='sessionID' declared_type='ICAScannerSessionID' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerObjectSendMessagePB' type='{ICD_ScannerObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}' type64='{ICD_ScannerObjectSendMessagePB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;message&quot;{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}&quot;totalDataSize&quot;I&quot;result&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='message' declared_type='ICAMessage' type='{ICAMessage=&quot;messageType&quot;I&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;dataType&quot;I}'/>
+<field name='totalDataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='result' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerOpenSessionPB' type='{ICD_ScannerOpenSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerOpenSessionPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='sessionID' declared_type='ICAScannerSessionID' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerSetParametersPB' type='{ICD_ScannerSetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}' type64='{ICD_ScannerSetParametersPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;theDict&quot;^{__CFDictionary}}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='sessionID' declared_type='ICAScannerSessionID' type='L' type64='I'/>
+<field name='theDict' declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+</struct>
+<struct name='ICD_ScannerSetPropertyDataPB' type='{ICD_ScannerSetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}' type64='{ICD_ScannerSetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='parentObject' declared_type='ICAObject' type='L' type64='I'/>
+<field name='parentObjectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='property' declared_type='ICAProperty' type='L' type64='I'/>
+<field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+<field name='startByte' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataPtr' declared_type='void*' type='^v'/>
+<field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='totalDataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataType' declared_type='OSType' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerStartPB' type='{ICD_ScannerStartPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}' type64='{ICD_ScannerStartPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='sessionID' declared_type='ICAScannerSessionID' type='L' type64='I'/>
+</struct>
+<struct name='ICD_ScannerStatusPB' type='{ICD_ScannerStatusPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;status&quot;I}' type64='{ICD_ScannerStatusPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;object&quot;I&quot;objectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;sessionID&quot;I&quot;status&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='object' declared_type='ICAObject' type='L' type64='I'/>
+<field name='objectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='sessionID' declared_type='ICAScannerSessionID' type='L' type64='I'/>
+<field name='status' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='ICD_Scannerscanner_callback_functions' type='{ICD_Scannerscanner_callback_functions=&quot;f_ICD_ScannerOpenUSBDevice&quot;^?&quot;f_ICD_ScannerOpenUSBDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerCloseDevice&quot;^?&quot;f_ICD_ScannerPeriodicTask&quot;^?&quot;f_ICD_ScannerGetObjectInfo&quot;^?&quot;f_ICD_ScannerCleanup&quot;^?&quot;f_ICD_ScannerGetPropertyData&quot;^?&quot;f_ICD_ScannerSetPropertyData&quot;^?&quot;f_ICD_ScannerReadFileData&quot;^?&quot;f_ICD_ScannerWriteFileData&quot;^?&quot;f_ICD_ScannerSendMessage&quot;^?&quot;f_ICD_ScannerAddPropertiesToCFDictionary&quot;^?&quot;f_ICD_ScannerOpenFireWireDevice&quot;^?&quot;f_ICD_ScannerOpenFireWireDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerOpenSession&quot;^?&quot;f_ICD_ScannerCloseSession&quot;^?&quot;f_ICD_ScannerInitialize&quot;^?&quot;f_ICD_ScannerGetParameters&quot;^?&quot;f_ICD_ScannerSetParameters&quot;^?&quot;f_ICD_ScannerStatus&quot;^?&quot;f_ICD_ScannerStart&quot;^?&quot;f_ICD_ScannerOpenBluetoothDevice&quot;^?&quot;f_ICD_ScannerOpenTCPIPDevice&quot;^?&quot;f_ICD_ScannerWriteDataToFile&quot;^?}'>
+<field name='f_ICD_ScannerOpenUSBDevice' function_pointer='true' declared_type='__ICD_ScannerOpenUSBDevice' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenUSBDeviceWithIORegPath' function_pointer='true' declared_type='__ICD_ScannerOpenUSBDeviceWithIORegPath' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='char*' type='*'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerCloseDevice' function_pointer='true' declared_type='__ICD_ScannerCloseDevice' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerPeriodicTask' function_pointer='true' declared_type='__ICD_ScannerPeriodicTask' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerGetObjectInfo' function_pointer='true' declared_type='__ICD_ScannerGetObjectInfo' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerCleanup' function_pointer='true' declared_type='__ICD_ScannerCleanup' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerGetPropertyData' function_pointer='true' declared_type='__ICD_ScannerGetPropertyData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerGetPropertyDataPB*' type='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type64='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerSetPropertyData' function_pointer='true' declared_type='__ICD_ScannerSetPropertyData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerSetPropertyDataPB*' type='^{ICD_ScannerSetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}I^vIII}' type64='^{ICD_ScannerSetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}I^vIII}' const='true'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerReadFileData' function_pointer='true' declared_type='__ICD_ScannerReadFileData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Ptr' type='*'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerWriteFileData' function_pointer='true' declared_type='__ICD_ScannerWriteFileData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='char*' type='*' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Ptr' type='*'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerSendMessage' function_pointer='true' declared_type='__ICD_ScannerSendMessage' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerObjectSendMessagePB*' type='^{ICD_ScannerObjectSendMessagePB={ICDHeader=sL}I{ICAObjectInfo=II}I{ICAMessage=II^vII}II}' type64='^{ICD_ScannerObjectSendMessagePB={ICDHeader=sQ}I{ICAObjectInfo=II}I{ICAMessage=II^vII}II}'/>
+<arg declared_type='ICDCompletion' type='^?'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerAddPropertiesToCFDictionary' function_pointer='true' declared_type='__ICD_ScannerAddPropertiesToCFDictionary' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<arg declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenFireWireDevice' function_pointer='true' declared_type='__ICD_ScannerOpenFireWireDevice' type='^?'>
+<arg declared_type='UInt64' type='Q'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenFireWireDeviceWithIORegPath' function_pointer='true' declared_type='__ICD_ScannerOpenFireWireDeviceWithIORegPath' type='^?'>
+<arg declared_type='UInt64' type='Q'/>
+<arg declared_type='char*' type='*'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenSession' function_pointer='true' declared_type='__ICD_ScannerOpenSession' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerOpenSessionPB*' type='^{ICD_ScannerOpenSessionPB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerOpenSessionPB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerCloseSession' function_pointer='true' declared_type='__ICD_ScannerCloseSession' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerCloseSessionPB*' type='^{ICD_ScannerCloseSessionPB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerCloseSessionPB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerInitialize' function_pointer='true' declared_type='__ICD_ScannerInitialize' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerInitializePB*' type='^{ICD_ScannerInitializePB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerInitializePB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerGetParameters' function_pointer='true' declared_type='__ICD_ScannerGetParameters' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerGetParametersPB*' type='^{ICD_ScannerGetParametersPB={ICDHeader=sL}I{ICAObjectInfo=II}II^{__CFDictionary}}' type64='^{ICD_ScannerGetParametersPB={ICDHeader=sQ}I{ICAObjectInfo=II}II^{__CFDictionary}}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerSetParameters' function_pointer='true' declared_type='__ICD_ScannerSetParameters' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerSetParametersPB*' type='^{ICD_ScannerSetParametersPB={ICDHeader=sL}I{ICAObjectInfo=II}II^{__CFDictionary}}' type64='^{ICD_ScannerSetParametersPB={ICDHeader=sQ}I{ICAObjectInfo=II}II^{__CFDictionary}}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerStatus' function_pointer='true' declared_type='__ICD_ScannerStatus' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerStatusPB*' type='^{ICD_ScannerStatusPB={ICDHeader=sL}I{ICAObjectInfo=II}III}' type64='^{ICD_ScannerStatusPB={ICDHeader=sQ}I{ICAObjectInfo=II}III}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerStart' function_pointer='true' declared_type='__ICD_ScannerStart' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerStartPB*' type='^{ICD_ScannerStartPB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerStartPB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenBluetoothDevice' function_pointer='true' declared_type='__ICD_ScannerOpenBluetoothDevice' type='^?'>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenTCPIPDevice' function_pointer='true' declared_type='__ICD_ScannerOpenTCPIPDevice' type='^?'>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerWriteDataToFile' function_pointer='true' declared_type='__ICD_ScannerWriteDataToFile' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='FILE*' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+</struct>
+<struct name='ICD_SetPropertyDataPB' type='{ICD_SetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}' type64='{ICD_SetPropertyDataPB=&quot;header&quot;{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}&quot;parentObject&quot;I&quot;parentObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;connectionID&quot;I&quot;property&quot;I&quot;propertyInfo&quot;{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}&quot;startByte&quot;I&quot;dataPtr&quot;^v&quot;dataSize&quot;I&quot;totalDataSize&quot;I&quot;dataType&quot;I}'>
+<field name='header' declared_type='ICDHeader' type='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;L}' type64='{ICDHeader=&quot;err&quot;s&quot;refcon&quot;Q}'/>
+<field name='parentObject' declared_type='ICAObject' type='L' type64='I'/>
+<field name='parentObjectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='connectionID' declared_type='ICAConnectionID' type='L' type64='I'/>
+<field name='property' declared_type='ICAProperty' type='L' type64='I'/>
+<field name='propertyInfo' declared_type='ICAPropertyInfo' type='{ICAPropertyInfo=&quot;propertyType&quot;I&quot;dataType&quot;I&quot;dataSize&quot;I&quot;dataFlags&quot;I}'/>
+<field name='startByte' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataPtr' declared_type='void*' type='^v'/>
+<field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='totalDataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataType' declared_type='OSType' type='L' type64='I'/>
+</struct>
+<struct name='ICD_callback_functions' type='{ICD_callback_functions=&quot;f_ICD_OpenUSBDevice&quot;^?&quot;f_ICD_CloseDevice&quot;^?&quot;f_ICD_PeriodicTask&quot;^?&quot;f_ICD_GetObjectInfo&quot;^?&quot;f_ICD_Cleanup&quot;^?&quot;f_ICD_GetPropertyData&quot;^?&quot;f_ICD_SetPropertyData&quot;^?&quot;f_ICD_ReadFileData&quot;^?&quot;f_ICD_WriteFileData&quot;^?&quot;f_ICD_SendMessage&quot;^?&quot;f_ICD_AddPropertiesToCFDictionary&quot;^?&quot;f_ICD_OpenFireWireDevice&quot;^?&quot;f_ICD_OpenUSBDeviceWithIORegPath&quot;^?&quot;f_ICD_OpenFireWireDeviceWithIORegPath&quot;^?&quot;f_ICD_OpenBluetoothDevice&quot;^?&quot;f_ICD_OpenTCPIPDevice&quot;^?&quot;f_ICD_WriteDataToFile&quot;^?}'>
+<field name='f_ICD_OpenUSBDevice' function_pointer='true' declared_type='__ICD_OpenUSBDevice' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_CloseDevice' function_pointer='true' declared_type='__ICD_CloseDevice' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_PeriodicTask' function_pointer='true' declared_type='__ICD_PeriodicTask' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_GetObjectInfo' function_pointer='true' declared_type='__ICD_GetObjectInfo' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_Cleanup' function_pointer='true' declared_type='__ICD_Cleanup' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_GetPropertyData' function_pointer='true' declared_type='__ICD_GetPropertyData' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<arg declared_type='ICD_GetPropertyDataPB*' type='^{ICD_GetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type64='^{ICD_GetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_SetPropertyData' function_pointer='true' declared_type='__ICD_SetPropertyData' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<arg declared_type='ICD_SetPropertyDataPB*' type='^{ICD_SetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}I^vIII}' type64='^{ICD_SetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}I^vIII}' const='true'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ReadFileData' function_pointer='true' declared_type='__ICD_ReadFileData' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Ptr' type='*'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_WriteFileData' function_pointer='true' declared_type='__ICD_WriteFileData' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<arg declared_type='char*' type='*' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Ptr' type='*'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_SendMessage' function_pointer='true' declared_type='__ICD_SendMessage' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<arg declared_type='ICD_ObjectSendMessagePB*' type='^{ICD_ObjectSendMessagePB={ICDHeader=sL}I{ICAObjectInfo=II}I{ICAMessage=II^vII}II}' type64='^{ICD_ObjectSendMessagePB={ICDHeader=sQ}I{ICAObjectInfo=II}I{ICAMessage=II^vII}II}'/>
+<arg declared_type='ICDCompletion' type='^?'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_AddPropertiesToCFDictionary' function_pointer='true' declared_type='__ICD_AddPropertiesToCFDictionary' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<arg declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_OpenFireWireDevice' function_pointer='true' declared_type='__ICD_OpenFireWireDevice' type='^?'>
+<arg declared_type='UInt64' type='Q'/>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_OpenUSBDeviceWithIORegPath' function_pointer='true' declared_type='__ICD_OpenUSBDeviceWithIORegPath' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='char*' type='*'/>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_OpenFireWireDeviceWithIORegPath' function_pointer='true' declared_type='__ICD_OpenFireWireDeviceWithIORegPath' type='^?'>
+<arg declared_type='UInt64' type='Q'/>
+<arg declared_type='char*' type='*'/>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_OpenBluetoothDevice' function_pointer='true' declared_type='__ICD_OpenBluetoothDevice' type='^?'>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_OpenTCPIPDevice' function_pointer='true' declared_type='__ICD_OpenTCPIPDevice' type='^?'>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_WriteDataToFile' function_pointer='true' declared_type='__ICD_WriteDataToFile' type='^?'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<arg declared_type='FILE*' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+</struct>
+<struct name='ICD_scanner_callback_functions' type='{ICD_Scannerscanner_callback_functions=&quot;f_ICD_ScannerOpenUSBDevice&quot;^?&quot;f_ICD_ScannerOpenUSBDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerCloseDevice&quot;^?&quot;f_ICD_ScannerPeriodicTask&quot;^?&quot;f_ICD_ScannerGetObjectInfo&quot;^?&quot;f_ICD_ScannerCleanup&quot;^?&quot;f_ICD_ScannerGetPropertyData&quot;^?&quot;f_ICD_ScannerSetPropertyData&quot;^?&quot;f_ICD_ScannerReadFileData&quot;^?&quot;f_ICD_ScannerWriteFileData&quot;^?&quot;f_ICD_ScannerSendMessage&quot;^?&quot;f_ICD_ScannerAddPropertiesToCFDictionary&quot;^?&quot;f_ICD_ScannerOpenFireWireDevice&quot;^?&quot;f_ICD_ScannerOpenFireWireDeviceWithIORegPath&quot;^?&quot;f_ICD_ScannerOpenSession&quot;^?&quot;f_ICD_ScannerCloseSession&quot;^?&quot;f_ICD_ScannerInitialize&quot;^?&quot;f_ICD_ScannerGetParameters&quot;^?&quot;f_ICD_ScannerSetParameters&quot;^?&quot;f_ICD_ScannerStatus&quot;^?&quot;f_ICD_ScannerStart&quot;^?&quot;f_ICD_ScannerOpenBluetoothDevice&quot;^?&quot;f_ICD_ScannerOpenTCPIPDevice&quot;^?&quot;f_ICD_ScannerWriteDataToFile&quot;^?}'>
+<field name='f_ICD_ScannerOpenUSBDevice' function_pointer='true' declared_type='__ICD_ScannerOpenUSBDevice' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenUSBDeviceWithIORegPath' function_pointer='true' declared_type='__ICD_ScannerOpenUSBDeviceWithIORegPath' type='^?'>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='char*' type='*'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerCloseDevice' function_pointer='true' declared_type='__ICD_ScannerCloseDevice' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerPeriodicTask' function_pointer='true' declared_type='__ICD_ScannerPeriodicTask' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerGetObjectInfo' function_pointer='true' declared_type='__ICD_ScannerGetObjectInfo' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerCleanup' function_pointer='true' declared_type='__ICD_ScannerCleanup' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerGetPropertyData' function_pointer='true' declared_type='__ICD_ScannerGetPropertyData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerGetPropertyDataPB*' type='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type64='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerSetPropertyData' function_pointer='true' declared_type='__ICD_ScannerSetPropertyData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerSetPropertyDataPB*' type='^{ICD_ScannerSetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}I^vIII}' type64='^{ICD_ScannerSetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}I^vIII}' const='true'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerReadFileData' function_pointer='true' declared_type='__ICD_ScannerReadFileData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Ptr' type='*'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerWriteFileData' function_pointer='true' declared_type='__ICD_ScannerWriteFileData' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='char*' type='*' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Ptr' type='*'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerSendMessage' function_pointer='true' declared_type='__ICD_ScannerSendMessage' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerObjectSendMessagePB*' type='^{ICD_ScannerObjectSendMessagePB={ICDHeader=sL}I{ICAObjectInfo=II}I{ICAMessage=II^vII}II}' type64='^{ICD_ScannerObjectSendMessagePB={ICDHeader=sQ}I{ICAObjectInfo=II}I{ICAMessage=II^vII}II}'/>
+<arg declared_type='ICDCompletion' type='^?'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerAddPropertiesToCFDictionary' function_pointer='true' declared_type='__ICD_ScannerAddPropertiesToCFDictionary' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<arg declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenFireWireDevice' function_pointer='true' declared_type='__ICD_ScannerOpenFireWireDevice' type='^?'>
+<arg declared_type='UInt64' type='Q'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenFireWireDeviceWithIORegPath' function_pointer='true' declared_type='__ICD_ScannerOpenFireWireDeviceWithIORegPath' type='^?'>
+<arg declared_type='UInt64' type='Q'/>
+<arg declared_type='char*' type='*'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenSession' function_pointer='true' declared_type='__ICD_ScannerOpenSession' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerOpenSessionPB*' type='^{ICD_ScannerOpenSessionPB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerOpenSessionPB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerCloseSession' function_pointer='true' declared_type='__ICD_ScannerCloseSession' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerCloseSessionPB*' type='^{ICD_ScannerCloseSessionPB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerCloseSessionPB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerInitialize' function_pointer='true' declared_type='__ICD_ScannerInitialize' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerInitializePB*' type='^{ICD_ScannerInitializePB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerInitializePB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerGetParameters' function_pointer='true' declared_type='__ICD_ScannerGetParameters' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerGetParametersPB*' type='^{ICD_ScannerGetParametersPB={ICDHeader=sL}I{ICAObjectInfo=II}II^{__CFDictionary}}' type64='^{ICD_ScannerGetParametersPB={ICDHeader=sQ}I{ICAObjectInfo=II}II^{__CFDictionary}}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerSetParameters' function_pointer='true' declared_type='__ICD_ScannerSetParameters' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerSetParametersPB*' type='^{ICD_ScannerSetParametersPB={ICDHeader=sL}I{ICAObjectInfo=II}II^{__CFDictionary}}' type64='^{ICD_ScannerSetParametersPB={ICDHeader=sQ}I{ICAObjectInfo=II}II^{__CFDictionary}}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerStatus' function_pointer='true' declared_type='__ICD_ScannerStatus' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerStatusPB*' type='^{ICD_ScannerStatusPB={ICDHeader=sL}I{ICAObjectInfo=II}III}' type64='^{ICD_ScannerStatusPB={ICDHeader=sQ}I{ICAObjectInfo=II}III}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerStart' function_pointer='true' declared_type='__ICD_ScannerStart' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='ICD_ScannerStartPB*' type='^{ICD_ScannerStartPB={ICDHeader=sL}I{ICAObjectInfo=II}II}' type64='^{ICD_ScannerStartPB={ICDHeader=sQ}I{ICAObjectInfo=II}II}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenBluetoothDevice' function_pointer='true' declared_type='__ICD_ScannerOpenBluetoothDevice' type='^?'>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerOpenTCPIPDevice' function_pointer='true' declared_type='__ICD_ScannerOpenTCPIPDevice' type='^?'>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+<field name='f_ICD_ScannerWriteDataToFile' function_pointer='true' declared_type='__ICD_ScannerWriteDataToFile' type='^?'>
+<arg declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true'/>
+<arg declared_type='FILE*' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<retval declared_type='ICAError' type='s'/>
+</field>
+</struct>
+<struct name='ObjectInfo' type='{ObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;L&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;uniqueIDFireWire&quot;Q&quot;tag&quot;I}' type64='{ObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;Q&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;uniqueIDFireWire&quot;Q&quot;tag&quot;I}'>
+<field name='icaObject' declared_type='ICAObject' type='L' type64='I'/>
+<field name='reserved' declared_type='unsigned long' type='L' type64='Q'/>
+<field name='icaObjectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='uniqueID' declared_type='UInt32' type='L' type64='I'/>
+<field name='thumbnailSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataWidth' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataHeight' declared_type='UInt32' type='L' type64='I'/>
+<field name='name' declared_type='UInt8*' type='[32C]'/>
+<field name='creationDate' declared_type='UInt8*' type='[20C]'/>
+<field name='flags' declared_type='UInt32' type='L' type64='I'/>
+<field name='privateData' declared_type='Ptr' type='*'/>
+<field name='uniqueIDFireWire' declared_type='UInt64' type='Q'/>
+<field name='tag' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='ScannerObjectInfo' type='{ScannerObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;L&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;uniqueIDFireWire&quot;Q&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;tag&quot;I}' type64='{ScannerObjectInfo=&quot;icaObject&quot;I&quot;reserved&quot;Q&quot;icaObjectInfo&quot;{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}&quot;uniqueID&quot;I&quot;uniqueIDFireWire&quot;Q&quot;thumbnailSize&quot;I&quot;dataSize&quot;I&quot;dataWidth&quot;I&quot;dataHeight&quot;I&quot;name&quot;[32C]&quot;creationDate&quot;[20C]&quot;flags&quot;I&quot;privateData&quot;*&quot;tag&quot;I}'>
+<field name='icaObject' declared_type='ICAObject' type='L' type64='I'/>
+<field name='reserved' declared_type='unsigned long' type='L' type64='Q'/>
+<field name='icaObjectInfo' declared_type='ICAObjectInfo' type='{ICAObjectInfo=&quot;objectType&quot;I&quot;objectSubtype&quot;I}'/>
+<field name='uniqueID' declared_type='UInt32' type='L' type64='I'/>
+<field name='uniqueIDFireWire' declared_type='UInt64' type='Q'/>
+<field name='thumbnailSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataWidth' declared_type='UInt32' type='L' type64='I'/>
+<field name='dataHeight' declared_type='UInt32' type='L' type64='I'/>
+<field name='name' declared_type='UInt8*' type='[32C]'/>
+<field name='creationDate' declared_type='UInt8*' type='[20C]'/>
+<field name='flags' declared_type='UInt32' type='L' type64='I'/>
+<field name='privateData' declared_type='Ptr' type='*'/>
+<field name='tag' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<constant name='gICDCallbackFunctions' declared_type='ICD_callback_functions' type='{ICD_callback_functions=^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<constant name='gICDScannerCallbackFunctions' declared_type='ICD_scanner_callback_functions' type='{ICD_Scannerscanner_callback_functions=^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
 <enum name='fileLockedMask' value='4'/>
 <enum name='hasChildrenMask' value='1'/>
 <enum name='hasThumbnailMask' value='2'/>
@@ -48,215 +544,215 @@
 <enum name='kICS_ThumbnailDataFormatTIFF' value='1953786214'/>
 <enum name='rawImageFormatMask' value='8'/>
 <function name='ICDAddImageInfoToNotificationDictionary'>
-<arg type='^{__CFDictionary=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg c_array_length_in_arg='6' type='^v' type_modifier='n'/>
-<retval type='s'/>
+<arg name='dict' declared_type='CFMutableDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='width' declared_type='UInt32' type='L' type64='I'/>
+<arg name='height' declared_type='UInt32' type='L' type64='I'/>
+<arg name='bytesPerRow' declared_type='UInt32' type='L' type64='I'/>
+<arg name='dataStartRow' declared_type='UInt32' type='L' type64='I'/>
+<arg name='dataNumberOfRows' declared_type='UInt32' type='L' type64='I'/>
+<arg name='dataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='dataBuffer' c_array_length_in_arg='6' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDConnectBluetoothDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDConnectFWDevice'>
-<arg type='Q'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDConnectFWDeviceWithIORegPath'>
-<arg type='Q'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDConnectTCPIPDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDConnectUSBDevice'>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDConnectUSBDeviceWithIORegPath'>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDCopyDeviceInfoDictionary'>
-<arg type='*'/>
-<arg type='^^{__CFDictionary}' type_modifier='o'/>
-<retval type='s'/>
+<arg name='deviceName' declared_type='char*' type='*' const='true'/>
+<arg name='theDict' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDCreateEventDataCookie'>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<retval type='s'/>
+<arg name='object' declared_type='ICAObject' type='L' type64='I' const='true'/>
+<arg name='cookie' declared_type='ICAEventDataCookie*' type='^I' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDCreateICAThumbnailFromICNS'>
-<arg type='*'/>
-<arg type='^{ICAThumbnail=III[1C]}' type_modifier='o'/>
-<retval type='s'/>
+<arg name='fileName' declared_type='char*' type='*' const='true'/>
+<arg name='thumbnail' declared_type='ICAThumbnail*' type='^{ICAThumbnail=III[1C]}' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDCreateICAThumbnailFromIconRef'>
-<arg type='^{OpaqueIconRef=}' type_modifier='n'/>
-<arg type='^{ICAThumbnail=III[1C]}' type_modifier='o'/>
-<retval type='s'/>
+<arg name='iconRef' declared_type='IconRef' type='^{OpaqueIconRef=}' const='true' type_modifier='n'/>
+<arg name='thumbnail' declared_type='ICAThumbnail*' type='^{ICAThumbnail=III[1C]}' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDDisconnectBluetoothDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDDisconnectFWDevice'>
-<arg type='Q'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDDisconnectFWDeviceWithIORegPath'>
-<arg type='Q'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDDisconnectTCPIPDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDDisconnectUSBDevice'>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDDisconnectUSBDeviceWithIORegPath'>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDGetStandardPropertyData'>
-<arg type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type_modifier='n'/>
-<arg type='^{ICD_GetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type64='^{ICD_GetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type_modifier='o'/>
-<retval type='s'/>
+<arg name='objectInfo' declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true' type_modifier='n'/>
+<arg name='pb' declared_type='ICD_GetPropertyDataPB*' type='^{ICD_GetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type64='^{ICD_GetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDInitiateNotificationCallback'>
-<arg type='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sL}II^?IIIIII}' type64='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sQ}II^?IIIIII}' type_modifier='n'/>
-<retval type='s'/>
+<arg name='pb' declared_type='ICAExtendedRegisterEventNotificationPB*' type='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sL}II^?IIIIII}' type64='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sQ}II^?IIIIII}' const='true' type_modifier='n'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDNewObjectCreated'>
-<arg type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type_modifier='n'/>
-<arg type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type_modifier='n'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}'/>
-<retval type='v'/>
+<arg name='parentInfo' declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true' type_modifier='n'/>
+<arg name='objectInfo' declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true' type_modifier='n'/>
+<arg name='completion' function_pointer='true' declared_type='ICDNewObjectCreatedCompletion' type='^?' type_modifier='n'>
+<arg declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval type='s'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDNewObjectInfoCreated'>
-<arg type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<retval type='s'/>
+<arg name='parentInfo' declared_type='ObjectInfo*' type='^{ObjectInfo=IL{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' type64='^{ObjectInfo=IQ{ICAObjectInfo=II}IIIII[32C][20C]I*QI}' const='true' type_modifier='n'/>
+<arg name='index' declared_type='UInt32' type='L' type64='I'/>
+<arg name='newICAObject' declared_type='ICAObject*' type='^I' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerConnectBluetoothDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerConnectFWDevice'>
-<arg type='Q'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerConnectFWDeviceWithIORegPath'>
-<arg type='Q'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerConnectTCPIPDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerConnectUSBDevice'>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerConnectUSBDeviceWithIORegPath'>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerCopyDeviceInfoDictionary'>
-<arg type='*'/>
-<arg type='^^{__CFDictionary}' type_modifier='o'/>
-<retval type='s'/>
+<arg name='deviceName' declared_type='char*' type='*' const='true'/>
+<arg name='theDict' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerCreateEventDataCookie'>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<retval type='s'/>
+<arg name='object' declared_type='ICAObject' type='L' type64='I' const='true'/>
+<arg name='cookie' declared_type='ICAEventDataCookie*' type='^I' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerCreateICAThumbnailFromICNS'>
-<arg type='*'/>
-<arg type='^{ICAThumbnail=III[1C]}' type_modifier='o'/>
-<retval type='s'/>
+<arg name='fileName' declared_type='char*' type='*' const='true'/>
+<arg name='thumbnail' declared_type='ICAThumbnail*' type='^{ICAThumbnail=III[1C]}' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerDisconnectBluetoothDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerDisconnectFWDevice'>
-<arg type='Q'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerDisconnectFWDeviceWithIORegPath'>
-<arg type='Q'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='guid' declared_type='UInt64' type='Q'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerDisconnectTCPIPDevice'>
-<arg type='^{__CFDictionary=}'/>
-<retval type='s'/>
+<arg name='params' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerDisconnectUSBDevice'>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerDisconnectUSBDeviceWithIORegPath'>
-<arg type='L' type64='I'/>
-<arg type='*'/>
-<retval type='s'/>
+<arg name='locationID' declared_type='UInt32' type='L' type64='I'/>
+<arg name='ioregPath' declared_type='char*' type='*'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerGetStandardPropertyData'>
-<arg type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type_modifier='n'/>
-<arg type='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type64='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type_modifier='o'/>
-<retval type='s'/>
+<arg name='objectInfo' declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true' type_modifier='n'/>
+<arg name='pb' declared_type='ICD_ScannerGetPropertyDataPB*' type='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sL}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type64='^{ICD_ScannerGetPropertyDataPB={ICDHeader=sQ}I{ICAObjectInfo=II}II{ICAPropertyInfo=IIII}II^vII}' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerInitiateNotificationCallback'>
-<arg type='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sL}II^?IIIIII}' type64='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sQ}II^?IIIIII}' type_modifier='n'/>
-<retval type='s'/>
+<arg name='pb' declared_type='ICAExtendedRegisterEventNotificationPB*' type='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sL}II^?IIIIII}' type64='^{ICAExtendedRegisterEventNotificationPB={ICAHeader=sQ}II^?IIIIII}' const='true' type_modifier='n'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDScannerNewObjectInfoCreated'>
-<arg type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<retval type='s'/>
+<arg name='parentInfo' declared_type='ScannerObjectInfo*' type='^{ScannerObjectInfo=IL{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' type64='^{ScannerObjectInfo=IQ{ICAObjectInfo=II}IQIIII[32C][20C]I*I}' const='true' type_modifier='n'/>
+<arg name='index' declared_type='UInt32' type='L' type64='I'/>
+<arg name='newICAObject' declared_type='ICAObject*' type='^I' type_modifier='o'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDSendNotification'>
-<arg type='^{ICASendNotificationPB={ICAHeader=sL}^{__CFDictionary}I}' type64='^{ICASendNotificationPB={ICAHeader=sQ}^{__CFDictionary}I}' type_modifier='n'/>
-<retval type='s'/>
+<arg name='pb' declared_type='ICASendNotificationPB*' type='^{ICASendNotificationPB={ICAHeader=sL}^{__CFDictionary}I}' type64='^{ICASendNotificationPB={ICAHeader=sQ}^{__CFDictionary}I}' type_modifier='n'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDSendNotificationAndWaitForReply'>
-<arg type='^{ICASendNotificationPB={ICAHeader=sL}^{__CFDictionary}I}' type64='^{ICASendNotificationPB={ICAHeader=sQ}^{__CFDictionary}I}' type_modifier='n'/>
-<retval type='s'/>
+<arg name='pb' declared_type='ICASendNotificationPB*' type='^{ICASendNotificationPB={ICAHeader=sL}^{__CFDictionary}I}' type64='^{ICASendNotificationPB={ICAHeader=sQ}^{__CFDictionary}I}' type_modifier='n'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICDStatusChanged'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='object' declared_type='ICAObject' type='L' type64='I'/>
+<arg name='message' declared_type='OSType' type='L' type64='I'/>
+<retval declared_type='ICAError' type='s'/>
 </function>
 <function name='ICD_ScannerMain'>
-<arg type='i'/>
-<arg c_array_length_in_arg='0' type='^*' type_modifier='n'/>
-<retval type='i'/>
+<arg name='argc' declared_type='int' type='i'/>
+<arg name='argv' c_array_length_in_arg='0' declared_type='char**' type='^*' const='true' type_modifier='n'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='ICD_main'>
-<arg type='i'/>
-<arg c_array_length_in_arg='0' type='^*' type_modifier='n'/>
-<retval type='i'/>
+<arg name='argc' declared_type='int' type='i'/>
+<arg name='argv' c_array_length_in_arg='0' declared_type='char**' type='^*' const='true' type_modifier='n'/>
+<retval declared_type='int' type='i'/>
 </function>
 </signatures>

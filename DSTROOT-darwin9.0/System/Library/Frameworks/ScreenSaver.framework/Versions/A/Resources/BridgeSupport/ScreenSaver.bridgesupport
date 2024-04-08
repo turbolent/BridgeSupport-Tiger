@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
@@ -9,40 +8,78 @@
 <depends_on path='/System/Library/Frameworks/SecurityInterface.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <function name='SSCenteredRectInRect' inline='true'>
-<arg type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
-<arg type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
-<retval type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='innerRect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='outerRect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
 </function>
 <function name='SSRandomFloatBetween' inline='true'>
-<arg type='f'/>
-<arg type='f'/>
-<retval type='f'/>
+<arg name='a' declared_type='float' type='f'/>
+<arg name='b' declared_type='float' type='f'/>
+<retval declared_type='float' type='f'/>
 </function>
 <function name='SSRandomIntBetween' inline='true'>
-<arg type='i'/>
-<arg type='i'/>
-<retval type='i'/>
+<arg name='a' declared_type='int' type='i'/>
+<arg name='b' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='SSRandomPointForSizeWithinRect' inline='true'>
-<arg type='{_NSSize=ff}' type64='{CGSize=dd}'/>
-<arg type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
-<retval type='{_NSPoint=ff}' type64='{CGPoint=dd}'/>
+<arg name='size' declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}'/>
+<arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}'/>
 </function>
+<class name='ScreenSaverDefaults'>
+<method class_method='true' selector='defaultsForModuleWithName:'>
+<arg name='inModuleName' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
 <class name='ScreenSaverView'>
+<method selector='animateOneFrame'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='animationTimeInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method class_method='true' selector='backingStoreType'>
+<retval declared_type='NSBackingStoreType' type='I' type64='Q'/>
+</method>
+<method selector='configureSheet'>
+<retval declared_type='NSWindow*' type='@'/>
+</method>
+<method selector='drawRect:'>
+<arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='hasConfigureSheet'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithFrame:'>
+<arg name='frame' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='initWithFrame:isPreview:'>
-<arg type='B' index='1'/>
+<arg name='frame' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<arg name='isPreview' declared_type='BOOL' type='B' index='1'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='isAnimating'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='isPreview'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method class_method='true' selector='performGammaFade'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setAnimationTimeInterval:'>
+<arg name='timeInterval' declared_type='NSTimeInterval' type='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startAnimation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopAnimation'>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 </signatures>

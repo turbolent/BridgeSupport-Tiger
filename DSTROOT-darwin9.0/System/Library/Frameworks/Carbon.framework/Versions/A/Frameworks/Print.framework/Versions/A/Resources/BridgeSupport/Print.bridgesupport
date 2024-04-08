@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
@@ -39,47 +38,155 @@
 <string_constant name='kPMSummaryPanelKindID' nsstring='true' value='com.apple.print.pde.SummaryKind'/>
 <string_constant name='kPrinterModuleTypeIDStr' nsstring='true' value='BDB091F4-E57F-11D3-B5CC-0050E4603277'/>
 <class name='NSObject'>
+<method selector='PDEPanelsForType:withHostInfo:'>
+<arg name='pdeType' declared_type='NSString*' type='@' index='0'/>
+<arg name='host' declared_type='id' type='@' index='1'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='PMPrinter'>
+<retval declared_type='PMPrinter' type='^{OpaquePMPrinter=}'/>
+</method>
+<method selector='PPDOptionKeyValueDidChange:ppdChoice:'>
+<arg name='option' declared_type='NSString*' type='@' index='0'/>
+<arg name='choice' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='initWithBundle:'>
-<retval type='B'/>
+<arg name='theBundle' declared_type='NSBundle*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='jobTemplate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='pageFormat'>
+<retval declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+</method>
+<method selector='panelKind'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='panelName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='panelView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='panelViewDidResize'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='ppdFile'>
+<retval declared_type='ppd_file_t*' type='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}'/>
+</method>
+<method selector='printSession'>
+<retval declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+</method>
+<method selector='printSettings'>
+<retval declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+</method>
+<method selector='printerInfoTicket'>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='restoreValuesAndReturnError:'>
-<retval type='B'/>
+<arg name='error' declared_type='NSError**' type='^@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='saveValuesAndReturnError:'>
-<retval type='B'/>
+<arg name='error' declared_type='NSError**' type='^@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='shouldHide'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='summaryInfo'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='supportedPPDOptionKeys'>
+<retval declared_type='NSArray*' type='@'/>
 </method>
 <method selector='willChangePPDOptionKeyValue:ppdChoice:'>
-<retval type='B'/>
+<arg name='option' declared_type='NSString*' type='@' index='0'/>
+<arg name='choice' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='willShow'>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <informal_protocol name='PDEPanel'>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='PPDOptionKeyValueDidChange:ppdChoice:'/>
-<method type='@8@0:4' type64='@16@0:8' selector='panelKind'/>
-<method type='@8@0:4' type64='@16@0:8' selector='panelName'/>
-<method type='@8@0:4' type64='@16@0:8' selector='panelView'/>
-<method type='B12@0:4^@8' type64='B24@0:8^@16' selector='restoreValuesAndReturnError:'/>
-<method type='B12@0:4^@8' type64='B24@0:8^@16' selector='saveValuesAndReturnError:'/>
-<method type='B8@0:4' type64='B16@0:8' selector='shouldHide'/>
-<method type='@8@0:4' type64='@16@0:8' selector='summaryInfo'/>
-<method type='@8@0:4' type64='@16@0:8' selector='supportedPPDOptionKeys'/>
-<method type='v8@0:4' type64='v16@0:8' selector='willShow'/>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='PPDOptionKeyValueDidChange:ppdChoice:'>
+<arg name='option' declared_type='NSString*' type='@' index='0'/>
+<arg name='choice' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='panelKind'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='panelName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='panelView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method type='B12@0:4^@8' type64='B24@0:8^@16' selector='restoreValuesAndReturnError:'>
+<arg name='error' declared_type='NSError**' type='^@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B12@0:4^@8' type64='B24@0:8^@16' selector='saveValuesAndReturnError:'>
+<arg name='error' declared_type='NSError**' type='^@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B8@0:4' type64='B16@0:8' selector='shouldHide'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='summaryInfo'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='supportedPPDOptionKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method type='v8@0:4' type64='v16@0:8' selector='willShow'>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 <informal_protocol name='PDEPlugIn'>
-<method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='PDEPanelsForType:withHostInfo:'/>
-<method type='B12@0:4@8' type64='B24@0:8@16' selector='initWithBundle:'/>
+<method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='PDEPanelsForType:withHostInfo:'>
+<arg name='pdeType' declared_type='NSString*' type='@' index='0'/>
+<arg name='host' declared_type='id' type='@' index='1'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method type='B12@0:4@8' type64='B24@0:8@16' selector='initWithBundle:'>
+<arg name='theBundle' declared_type='NSBundle*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
 </informal_protocol>
 <informal_protocol name='PDEPlugInCallbackProtocol'>
-<method type='^{OpaquePMPrinter=}8@0:4' type64='^{OpaquePMPrinter=}16@0:8' selector='PMPrinter'/>
-<method type='@8@0:4' type64='@16@0:8' selector='jobTemplate'/>
-<method type='^{OpaquePMPageFormat=}8@0:4' type64='^{OpaquePMPageFormat=}16@0:8' selector='pageFormat'/>
-<method type='v8@0:4' type64='v16@0:8' selector='panelViewDidResize'/>
-<method type='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}8@0:4' type64='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}16@0:8' selector='ppdFile'/>
-<method type='^{OpaquePMPrintSession=}8@0:4' type64='^{OpaquePMPrintSession=}16@0:8' selector='printSession'/>
-<method type='^{OpaquePMPrintSettings=}8@0:4' type64='^{OpaquePMPrintSettings=}16@0:8' selector='printSettings'/>
-<method type='@8@0:4' type64='@16@0:8' selector='printerInfoTicket'/>
-<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='willChangePPDOptionKeyValue:ppdChoice:'/>
+<method type='^{OpaquePMPrinter=}8@0:4' type64='^{OpaquePMPrinter=}16@0:8' selector='PMPrinter'>
+<retval declared_type='PMPrinter' type='^{OpaquePMPrinter=}'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='jobTemplate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='^{OpaquePMPageFormat=}8@0:4' type64='^{OpaquePMPageFormat=}16@0:8' selector='pageFormat'>
+<retval declared_type='PMPageFormat' type='^{OpaquePMPageFormat=}'/>
+</method>
+<method type='v8@0:4' type64='v16@0:8' selector='panelViewDidResize'>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}8@0:4' type64='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}16@0:8' selector='ppdFile'>
+<retval declared_type='ppd_file_t*' type='^{ppd_file_s=iiiiiiiiii*i^{ppd_emul_s}***********i^{ppd_group_s}i^{ppd_size_s}[2f][2f][4f]i^{?}i^*i^{ppd_profile_s}i^*i**ii^^{ppd_attr_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}^{_cups_array_s}}'/>
+</method>
+<method type='^{OpaquePMPrintSession=}8@0:4' type64='^{OpaquePMPrintSession=}16@0:8' selector='printSession'>
+<retval declared_type='PMPrintSession' type='^{OpaquePMPrintSession=}'/>
+</method>
+<method type='^{OpaquePMPrintSettings=}8@0:4' type64='^{OpaquePMPrintSettings=}16@0:8' selector='printSettings'>
+<retval declared_type='PMPrintSettings' type='^{OpaquePMPrintSettings=}'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='printerInfoTicket'>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='willChangePPDOptionKeyValue:ppdChoice:'>
+<arg name='option' declared_type='NSString*' type='@' index='0'/>
+<arg name='choice' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
 </informal_protocol>
 </signatures>

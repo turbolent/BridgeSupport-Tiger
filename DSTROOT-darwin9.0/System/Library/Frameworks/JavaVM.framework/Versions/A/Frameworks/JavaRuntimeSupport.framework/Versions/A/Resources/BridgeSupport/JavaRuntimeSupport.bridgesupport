@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/JavaVM.framework'/>
@@ -10,7 +9,7 @@
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
-<constant name='JRSMenuDidReuseItemNotification' type='@'/>
+<constant name='JRSMenuDidReuseItemNotification' declared_type='NSString*' type='@'/>
 <enum name='JRS_CONVERT_BUFFER_TOO_SMALL' value='1'/>
 <enum name='JRS_CONVERT_INVALID_INPUT' value='2'/>
 <enum name='JRS_CONVERT_OK' value='0'/>
@@ -177,200 +176,273 @@
 <enum name='kJRSUI_WindowType_titlelessUtility' value='3'/>
 <enum name='kJRSUI_WindowType_utility' value='2'/>
 <function name='JRSConvertBytesToUnicode'>
-<arg type='*'/>
-<arg type='l' type64='q'/>
-<arg type='^i' type64='^q'/>
-<arg type='^S'/>
-<arg type='l' type64='q'/>
-<arg type='^i' type64='^q'/>
-<arg type='B'/>
-<retval type='i'/>
+<arg name='bytes' declared_type='uint8_t*' type='*'/>
+<arg name='numBytes' declared_type='CFIndex' type='l' type64='q'/>
+<arg name='usedByteLen' declared_type='CFIndex*' type='^i' type64='^q'/>
+<arg name='unichars' declared_type='UniChar*' type='^S'/>
+<arg name='maxChars' declared_type='CFIndex' type='l' type64='q'/>
+<arg name='usedCharLen' declared_type='CFIndex*' type='^i' type64='^q'/>
+<arg name='allowSubstitution' declared_type='Boolean' type='B'/>
+<retval declared_type='JRSConvertBytesStatus' type='i'/>
 </function>
 <function name='JRSCopyCanonicalLanguageForPrimaryLanguage'>
-<arg type='*'/>
-<retval type='*'/>
+<arg name='primaryLanguage' declared_type='char*' type='*' const='true'/>
+<retval declared_type='char*' type='*'/>
 </function>
 <function name='JRSCopyOSName'>
-<retval type='*'/>
+<retval declared_type='char*' type='*'/>
 </function>
 <function name='JRSCopyOSVersion'>
-<retval type='*'/>
+<retval declared_type='char*' type='*'/>
 </function>
 <function name='JRSCopyPrimaryLanguage'>
-<retval type='*'/>
+<retval declared_type='char*' type='*'/>
 </function>
 <function name='JRSFontAlignStyleForFractionalMeasurement'>
-<arg type='I'/>
-<retval type='I'/>
+<arg name='style' declared_type='JRSFontRenderingStyle' type='I' const='true'/>
+<retval declared_type='JRSFontRenderingStyle' type='I'/>
 </function>
 <function name='JRSFontAlignStyleForIntegerMeasurement'>
-<arg type='I'/>
-<retval type='I'/>
+<arg name='style' declared_type='JRSFontRenderingStyle' type='I'/>
+<retval declared_type='JRSFontRenderingStyle' type='I'/>
 </function>
 <function name='JRSFontCreateFallbackFontForCharacters'>
-<arg type='^{__CTFont=}'/>
-<arg type='^S'/>
-<arg type='l' type64='q'/>
-<retval already_retained='true' type='^{__CTFont=}'/>
+<arg name='font' declared_type='CTFontRef' type='^{__CTFont=}' const='true'/>
+<arg name='unichars' declared_type='UTF16Char*' type='^S' const='true'/>
+<arg name='length' declared_type='CFIndex' type='l' type64='q' const='true'/>
+<retval declared_type='CTFontRef' already_retained='true' type='^{__CTFont=}'/>
 </function>
 <function name='JRSFontGetAdvancesForGlyphsAndStyle'>
-<arg type='^{__CTFont=}'/>
-<arg type='^{CGAffineTransform=ffffff}' type64='^{CGAffineTransform=dddddd}'/>
-<arg type='I'/>
-<arg type='^S'/>
-<arg type='L' type64='Q'/>
-<arg type='^{CGSize=ff}' type64='^{CGSize=dd}'/>
-<retval type='f' type64='d'/>
+<arg name='font' declared_type='CTFontRef' type='^{__CTFont=}' const='true'/>
+<arg name='tx' declared_type='CGAffineTransform*' type='^{CGAffineTransform=ffffff}' type64='^{CGAffineTransform=dddddd}' const='true'/>
+<arg name='style' declared_type='JRSFontRenderingStyle' type='I' const='true'/>
+<arg name='glyphs' declared_type='CGGlyph*' type='^S' const='true'/>
+<arg name='count' declared_type='size_t' type='L' type64='Q'/>
+<arg name='advances' declared_type='CGSize*' type='^{CGSize=ff}' type64='^{CGSize=dd}'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
 </function>
 <function name='JRSFontGetBoundingBoxesForGlyphsAndStyle'>
-<arg type='^{__CTFont=}'/>
-<arg type='^{CGAffineTransform=ffffff}' type64='^{CGAffineTransform=dddddd}'/>
-<arg type='I'/>
-<arg type='^S'/>
-<arg type='L' type64='Q'/>
-<arg type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
-<retval type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='font' declared_type='CTFontRef' type='^{__CTFont=}' const='true'/>
+<arg name='tx' declared_type='CGAffineTransform*' type='^{CGAffineTransform=ffffff}' type64='^{CGAffineTransform=dddddd}' const='true'/>
+<arg name='style' declared_type='JRSFontRenderingStyle' type='I' const='true'/>
+<arg name='glyphs' declared_type='CGGlyph*' type='^S' const='true'/>
+<arg name='count' declared_type='size_t' type='L' type64='Q'/>
+<arg name='bboxes' declared_type='CGRect*' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
 </function>
 <function name='JRSFontGetRenderingStyleForContext'>
-<arg type='^{CGContext=}'/>
-<retval type='I'/>
+<arg name='context' declared_type='CGContextRef' type='^{CGContext=}' const='true'/>
+<retval declared_type='JRSFontRenderingStyle' type='I'/>
 </function>
 <function name='JRSFontGetRenderingStyleForHints'>
-<arg type='l' type64='i'/>
-<arg type='l' type64='i'/>
-<retval type='I'/>
+<arg name='fmHint' declared_type='jint' type='l' type64='i' const='true'/>
+<arg name='aaHint' declared_type='jint' type='l' type64='i' const='true'/>
+<retval declared_type='JRSFontRenderingStyle' type='I'/>
 </function>
 <function name='JRSFontSetRenderingStyleOnContext'>
-<arg type='^{CGContext=}'/>
-<arg type='I'/>
+<arg name='context' declared_type='CGContextRef' type='^{CGContext=}' const='true'/>
+<arg name='style' declared_type='JRSFontRenderingStyle' type='I' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSFontStyleIsAntialiased'>
-<arg type='I'/>
-<retval type='B'/>
+<arg name='style' declared_type='JRSFontRenderingStyle' type='I' const='true'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JRSFontStyleUsesFractionalMetrics'>
-<arg type='I'/>
-<retval type='B'/>
+<arg name='style' declared_type='JRSFontRenderingStyle' type='I' const='true'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JRSSetDefaultLocalization'>
-<arg type='*'/>
+<arg name='primaryLanguage' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlCreate'>
-<arg type='B'/>
-<retval already_retained='true' type='@'/>
+<arg name='isFlipped' declared_type='Boolean' type='B'/>
+<retval declared_type='JRSUIControlRef' already_retained='true' type='@'/>
 </function>
 <function name='JRSUIControlDraw'>
-<arg type='@'/>
-<arg type='@'/>
-<arg type='^{CGContext=}'/>
-<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='renderer' declared_type='JRSUIRendererRef' type='@'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='context' declared_type='CGContextRef' type='^{CGContext=}'/>
+<arg name='bounds' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlGetHitPart'>
-<arg type='@'/>
-<arg type='@'/>
-<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
-<arg type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
-<retval type='l' type64='q'/>
+<arg name='renderer' declared_type='JRSUIRendererRef' type='@'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='bounds' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='point' declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<retval declared_type='JRSUIPartHit' type='l' type64='q'/>
 </function>
 <function name='JRSUIControlGetScrollBarOffsetFor'>
-<arg type='@'/>
-<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
-<arg type='f' type64='d'/>
-<arg type='f' type64='d'/>
-<arg type='f' type64='d'/>
-<retval type='f' type64='d'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='frame' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='offset' declared_type='CGFloat' type='f' type64='d'/>
+<arg name='visibleAmount' declared_type='CGFloat' type='f' type64='d'/>
+<arg name='extent' declared_type='CGFloat' type='f' type64='d'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
 </function>
 <function name='JRSUIControlGetScrollBarPartBounds'>
-<arg type='@'/>
-<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
-<arg type='l' type64='q'/>
-<retval type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='frame' declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg name='part' declared_type='JRSUIScrollBarPart' type='l' type64='q'/>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
 </function>
 <function name='JRSUIControlRelease'>
-<arg type='@'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetAlignmentHorizontal'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIAlignmentVertical' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetAlignmentVertical'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIAlignmentHorizontal' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetAnimating'>
-<arg type='@'/>
-<arg type='B'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='Boolean' type='B'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetDirection'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIDirection' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetOrientation'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIOrintation' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetScrollBarPart'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIScrollBarPart' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetSegmentPosition'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUISegmentPosition' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetShowArrows'>
-<arg type='@'/>
-<arg type='B'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='Boolean' type='B'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetSize'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUISize' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetState'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIState' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetValueByKey'>
-<arg type='@'/>
-<arg type='@'/>
-<arg type='@'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='key' declared_type='CFTypeRef' type='@'/>
+<arg name='value' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetVariant'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIVariant' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetWidget'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIWidget' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlSetWindowType'>
-<arg type='@'/>
-<arg type='l' type64='q'/>
+<arg name='control' declared_type='JRSUIControlRef' type='@'/>
+<arg name='value' declared_type='JRSUIWindowType' type='l' type64='q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JRSUIControlShouldScrollToClick'>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='JRSUIGetKey'>
-<arg type='l' type64='q'/>
-<retval type='@'/>
+<arg name='value' declared_type='JRSUIKey' type='l' type64='q'/>
+<retval declared_type='CFTypeRef' type='@'/>
 </function>
 <function name='JRSUIRendererCreate'>
-<retval already_retained='true' type='@'/>
+<retval declared_type='JRSUIRendererRef' already_retained='true' type='@'/>
 </function>
 <function name='JRSUIRendererRelease'>
-<arg type='@'/>
+<arg name='renderer' declared_type='JRSUIRendererRef' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
+<class name='JRSAppKitAWT'>
+<method class_method='true' selector='awtAppDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='NSCursor'>
+<method class_method='true' selector='javaBusyButClickableCursor'>
+<retval declared_type='NSCursor*' type='@'/>
+</method>
+<method class_method='true' selector='javaMoveCursor'>
+<retval declared_type='NSCursor*' type='@'/>
+</method>
+<method class_method='true' selector='javaResizeNECursor'>
+<retval declared_type='NSCursor*' type='@'/>
+</method>
+<method class_method='true' selector='javaResizeNWCursor'>
+<retval declared_type='NSCursor*' type='@'/>
+</method>
+<method class_method='true' selector='javaResizeSECursor'>
+<retval declared_type='NSCursor*' type='@'/>
+</method>
+<method class_method='true' selector='javaResizeSWCursor'>
+<retval declared_type='NSCursor*' type='@'/>
+</method>
+</class>
 <class name='NSEvent'>
+<method selector='deadKeyCharacter'>
+<retval declared_type='unichar' type='S'/>
+</method>
 <method selector='willBeHandledByComplexInputMethod'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 </class>
 <class name='NSMenu'>
 <method selector='isJavaMenu'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='javaMenuWithTitle:'>
+<arg name='title' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='NSMenu*' type='@'/>
+</method>
+<method selector='setJavaMenuDelegate:'>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='handleJavaMenuItemTargetedAtIndex:rect:'>
+<arg name='menuIndex' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleJavaMouseEvent:'>
+<arg name='event' declared_type='NSEvent*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <informal_protocol name='JRSMenuDelegate'>
-<method type='v28@0:4I8{_NSRect={_NSPoint=ff}{_NSSize=ff}}12' type64='v56@0:8Q16{CGRect={CGPoint=dd}{CGSize=dd}}24' selector='handleJavaMenuItemTargetedAtIndex:rect:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='handleJavaMouseEvent:'/>
+<method type='v28@0:4I8{_NSRect={_NSPoint=ff}{_NSSize=ff}}12' type64='v56@0:8Q16{CGRect={CGPoint=dd}{CGSize=dd}}24' selector='handleJavaMenuItemTargetedAtIndex:rect:'>
+<arg name='menuIndex' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='handleJavaMouseEvent:'>
+<arg name='event' declared_type='NSEvent*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 </signatures>

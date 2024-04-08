@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <depends_on path='/System/Library/Frameworks/vecLib.framework'/>
@@ -38,155 +37,156 @@
 <enum name='kLSMTextPreserveAcronyms' value='2'/>
 <enum name='kLSMTextPreserveCase' value='1'/>
 <function name='LSMMapAddCategory'>
-<arg type='^{__LSMMap=}'/>
-<retval type='I'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<retval declared_type='LSMCategory' type='I'/>
 </function>
 <function name='LSMMapAddText'>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__LSMText=}'/>
-<arg type='I'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<arg name='category' declared_type='LSMCategory' type='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMMapAddTextWithWeight'>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__LSMText=}'/>
-<arg type='I'/>
-<arg type='f'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<arg name='category' declared_type='LSMCategory' type='I'/>
+<arg name='weight' declared_type='float' type='f'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMMapApplyClusters'>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__CFArray=}'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='clusters' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMMapCompile'>
-<arg type='^{__LSMMap=}'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMMapCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='L' type64='Q'/>
-<retval already_retained='true' type='^{__LSMMap=}'/>
+<arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='flags' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='LSMMapRef' already_retained='true' type='^{__LSMMap=}'/>
 </function>
 <function name='LSMMapCreateClusters'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__CFArray=}'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='Q'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='subset' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg name='numClusters' declared_type='CFIndex' type='l' type64='q'/>
+<arg name='flags' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='LSMMapCreateFromURL'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFURL=}'/>
-<arg type='L' type64='Q'/>
-<retval already_retained='true' type='^{__LSMMap=}'/>
+<arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='file' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='flags' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='LSMMapRef' already_retained='true' type='^{__LSMMap=}'/>
 </function>
 <function name='LSMMapGetCategoryCount'>
-<arg type='^{__LSMMap=}'/>
-<retval type='l' type64='q'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<retval declared_type='CFIndex' type='l' type64='q'/>
 </function>
 <function name='LSMMapGetProperties'>
-<arg type='^{__LSMMap=}'/>
-<retval type='^{__CFDictionary=}'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<retval declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
 </function>
 <function name='LSMMapGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='LSMMapSetProperties'>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__CFDictionary=}'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='properties' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='LSMMapSetStopWords'>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__LSMText=}'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMMapStartTraining'>
-<arg type='^{__LSMMap=}'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMMapWriteToStream'>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__LSMText=}'/>
-<arg type='^{__CFWriteStream=}'/>
-<arg type='L' type64='Q'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<arg name='stream' declared_type='CFWriteStreamRef' type='^{__CFWriteStream=}'/>
+<arg name='options' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMMapWriteToURL'>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__CFURL=}'/>
-<arg type='L' type64='Q'/>
-<retval type='l' type64='i'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='file' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='flags' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMResultCopyToken'>
-<arg type='^{__LSMResult=}'/>
-<arg type='l' type64='q'/>
-<retval already_retained='true' type='^{__CFData=}'/>
+<arg name='mapref' declared_type='LSMResultRef' type='^{__LSMResult=}'/>
+<arg name='n' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='CFDataRef' already_retained='true' type='^{__CFData=}'/>
 </function>
 <function name='LSMResultCopyTokenCluster'>
-<arg type='^{__LSMResult=}'/>
-<arg type='l' type64='q'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='mapref' declared_type='LSMResultRef' type='^{__LSMResult=}'/>
+<arg name='n' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='LSMResultCopyWord'>
-<arg type='^{__LSMResult=}'/>
-<arg type='l' type64='q'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='result' declared_type='LSMResultRef' type='^{__LSMResult=}'/>
+<arg name='n' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='LSMResultCopyWordCluster'>
-<arg type='^{__LSMResult=}'/>
-<arg type='l' type64='q'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='result' declared_type='LSMResultRef' type='^{__LSMResult=}'/>
+<arg name='n' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='LSMResultCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__LSMMap=}'/>
-<arg type='^{__LSMText=}'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='Q'/>
-<retval already_retained='true' type='^{__LSMResult=}'/>
+<arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<arg name='numResults' declared_type='CFIndex' type='l' type64='q'/>
+<arg name='flags' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='LSMResultRef' already_retained='true' type='^{__LSMResult=}'/>
 </function>
 <function name='LSMResultGetCategory'>
-<arg type='^{__LSMResult=}'/>
-<arg type='l' type64='q'/>
-<retval type='I'/>
+<arg name='result' declared_type='LSMResultRef' type='^{__LSMResult=}'/>
+<arg name='n' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='LSMCategory' type='I'/>
 </function>
 <function name='LSMResultGetCount'>
-<arg type='^{__LSMResult=}'/>
-<retval type='l' type64='q'/>
+<arg name='result' declared_type='LSMResultRef' type='^{__LSMResult=}'/>
+<retval declared_type='CFIndex' type='l' type64='q'/>
 </function>
 <function name='LSMResultGetScore'>
-<arg type='^{__LSMResult=}'/>
-<arg type='l' type64='q'/>
-<retval type='f'/>
+<arg name='result' declared_type='LSMResultRef' type='^{__LSMResult=}'/>
+<arg name='n' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='float' type='f'/>
 </function>
 <function name='LSMResultGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='LSMTextAddToken'>
-<arg type='^{__LSMText=}'/>
-<arg type='^{__CFData=}'/>
-<retval type='l' type64='i'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<arg name='token' declared_type='CFDataRef' type='^{__CFData=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMTextAddWord'>
-<arg type='^{__LSMText=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='l' type64='i'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<arg name='word' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMTextAddWords'>
-<arg type='^{__LSMText=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFLocale=}'/>
-<arg type='L' type64='Q'/>
-<retval type='l' type64='i'/>
+<arg name='textref' declared_type='LSMTextRef' type='^{__LSMText=}'/>
+<arg name='words' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='locale' declared_type='CFLocaleRef' type='^{__CFLocale=}'/>
+<arg name='flags' declared_type='CFOptionFlags' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSMTextCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__LSMMap=}'/>
-<retval already_retained='true' type='^{__LSMText=}'/>
+<arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='mapref' declared_type='LSMMapRef' type='^{__LSMMap=}'/>
+<retval declared_type='LSMTextRef' already_retained='true' type='^{__LSMText=}'/>
 </function>
 <function name='LSMTextGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 </signatures>

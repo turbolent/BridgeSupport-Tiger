@@ -1,24 +1,321 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
-<struct name='AudioBuffer' type='{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}'/>
-<struct name='AudioBufferList' type='{AudioBufferList=&quot;mNumberBuffers&quot;I&quot;mBuffers&quot;[1{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}]}'/>
-<struct name='AudioChannelDescription' type='{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}'/>
-<struct name='AudioChannelLayout' type='{AudioChannelLayout=&quot;mChannelLayoutTag&quot;I&quot;mChannelBitmap&quot;I&quot;mNumberChannelDescriptions&quot;I&quot;mChannelDescriptions&quot;[1{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}]}'/>
-<struct name='AudioClassDescription' type='{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}'/>
-<struct name='AudioDriverPlugInHostInfo' type='{AudioDriverPlugInHostInfo=&quot;mDeviceID&quot;I&quot;mIOAudioDevice&quot;I&quot;mIOAudioEngine&quot;I&quot;mDevicePropertyChangedProc&quot;^?&quot;mStreamPropertyChangedProc&quot;^?}'/>
-<struct name='AudioHardwareIOProcStreamUsage' type='{AudioHardwareIOProcStreamUsage=&quot;mIOProc&quot;^v&quot;mNumberStreams&quot;I&quot;mStreamIsOn&quot;[1L]}' type64='{AudioHardwareIOProcStreamUsage=&quot;mIOProc&quot;^v&quot;mNumberStreams&quot;I&quot;mStreamIsOn&quot;[1I]}'/>
-<struct name='AudioHardwarePlugInInterface' type='{AudioHardwarePlugInInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;Initialize&quot;^?&quot;Teardown&quot;^?&quot;DeviceAddIOProc&quot;^?&quot;DeviceRemoveIOProc&quot;^?&quot;DeviceStart&quot;^?&quot;DeviceStop&quot;^?&quot;DeviceRead&quot;^?&quot;DeviceGetCurrentTime&quot;^?&quot;DeviceTranslateTime&quot;^?&quot;DeviceGetPropertyInfo&quot;^?&quot;DeviceGetProperty&quot;^?&quot;DeviceSetProperty&quot;^?&quot;StreamGetPropertyInfo&quot;^?&quot;StreamGetProperty&quot;^?&quot;StreamSetProperty&quot;^?&quot;DeviceStartAtTime&quot;^?&quot;DeviceGetNearestStartTime&quot;^?&quot;InitializeWithObjectID&quot;^?&quot;ObjectShow&quot;^?&quot;ObjectHasProperty&quot;^?&quot;ObjectIsPropertySettable&quot;^?&quot;ObjectGetPropertyDataSize&quot;^?&quot;ObjectGetPropertyData&quot;^?&quot;ObjectSetPropertyData&quot;^?&quot;DeviceCreateIOProcID&quot;^?&quot;DeviceDestroyIOProcID&quot;^?}'/>
-<struct name='AudioObjectPropertyAddress' type='{AudioObjectPropertyAddress=&quot;mSelector&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'/>
-<struct name='AudioStreamBasicDescription' type='{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}'/>
-<struct name='AudioStreamPacketDescription' type='{AudioStreamPacketDescription=&quot;mStartOffset&quot;q&quot;mVariableFramesInPacket&quot;I&quot;mDataByteSize&quot;I}'/>
-<struct name='AudioStreamRangedDescription' type='{AudioStreamRangedDescription=&quot;mFormat&quot;{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}&quot;mSampleRateRange&quot;{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}}'/>
-<struct name='AudioTimeStamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
-<struct name='AudioValueRange' type='{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}'/>
-<struct name='AudioValueTranslation' type='{AudioValueTranslation=&quot;mInputData&quot;^v&quot;mInputDataSize&quot;I&quot;mOutputData&quot;^v&quot;mOutputDataSize&quot;I}'/>
-<struct name='SMPTETime' type='{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}'/>
+<struct name='AudioBuffer' type='{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}'>
+<field name='mNumberChannels' declared_type='UInt32' type='L' type64='I'/>
+<field name='mDataByteSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='mData' declared_type='void*' type='^v'/>
+</struct>
+<struct name='AudioBufferList' type='{AudioBufferList=&quot;mNumberBuffers&quot;I&quot;mBuffers&quot;[1{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}]}'>
+<field name='mNumberBuffers' declared_type='UInt32' type='L' type64='I'/>
+<field name='mBuffers' declared_type='AudioBuffer*' type='[1{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}]'/>
+</struct>
+<struct name='AudioChannelDescription' type='{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}'>
+<field name='mChannelLabel' declared_type='AudioChannelLabel' type='L' type64='I'/>
+<field name='mChannelFlags' declared_type='UInt32' type='L' type64='I'/>
+<field name='mCoordinates' declared_type='Float32*' type='[3f]'/>
+</struct>
+<struct name='AudioChannelLayout' type='{AudioChannelLayout=&quot;mChannelLayoutTag&quot;I&quot;mChannelBitmap&quot;I&quot;mNumberChannelDescriptions&quot;I&quot;mChannelDescriptions&quot;[1{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}]}'>
+<field name='mChannelLayoutTag' declared_type='AudioChannelLayoutTag' type='L' type64='I'/>
+<field name='mChannelBitmap' declared_type='UInt32' type='L' type64='I'/>
+<field name='mNumberChannelDescriptions' declared_type='UInt32' type='L' type64='I'/>
+<field name='mChannelDescriptions' declared_type='AudioChannelDescription*' type='[1{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}]'/>
+</struct>
+<struct name='AudioClassDescription' type='{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}'>
+<field name='mType' declared_type='OSType' type='L' type64='I'/>
+<field name='mSubType' declared_type='OSType' type='L' type64='I'/>
+<field name='mManufacturer' declared_type='OSType' type='L' type64='I'/>
+</struct>
+<struct name='AudioDriverPlugInHostInfo' type='{AudioDriverPlugInHostInfo=&quot;mDeviceID&quot;I&quot;mIOAudioDevice&quot;I&quot;mIOAudioEngine&quot;I&quot;mDevicePropertyChangedProc&quot;^?&quot;mStreamPropertyChangedProc&quot;^?}'>
+<field name='mDeviceID' declared_type='AudioDeviceID' type='L' type64='I'/>
+<field name='mIOAudioDevice' declared_type='io_object_t' type='I'/>
+<field name='mIOAudioEngine' declared_type='io_object_t' type='I'/>
+<field name='mDevicePropertyChangedProc' function_pointer='true' declared_type='AudioDriverPlugInDevicePropertyChangedProc' type='^?'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Boolean' type='B'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='mStreamPropertyChangedProc' function_pointer='true' declared_type='AudioDriverPlugInStreamPropertyChangedProc' type='^?'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='io_object_t' type='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+</struct>
+<struct name='AudioHardwareIOProcStreamUsage' type='{AudioHardwareIOProcStreamUsage=&quot;mIOProc&quot;^v&quot;mNumberStreams&quot;I&quot;mStreamIsOn&quot;[1L]}' type64='{AudioHardwareIOProcStreamUsage=&quot;mIOProc&quot;^v&quot;mNumberStreams&quot;I&quot;mStreamIsOn&quot;[1I]}'>
+<field name='mIOProc' declared_type='void*' type='^v'/>
+<field name='mNumberStreams' declared_type='UInt32' type='L' type64='I'/>
+<field name='mStreamIsOn' declared_type='UInt32*' type='[1L]' type64='[1I]'/>
+</struct>
+<struct name='AudioHardwarePlugInInterface' type='{AudioHardwarePlugInInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;Initialize&quot;^?&quot;Teardown&quot;^?&quot;DeviceAddIOProc&quot;^?&quot;DeviceRemoveIOProc&quot;^?&quot;DeviceStart&quot;^?&quot;DeviceStop&quot;^?&quot;DeviceRead&quot;^?&quot;DeviceGetCurrentTime&quot;^?&quot;DeviceTranslateTime&quot;^?&quot;DeviceGetPropertyInfo&quot;^?&quot;DeviceGetProperty&quot;^?&quot;DeviceSetProperty&quot;^?&quot;StreamGetPropertyInfo&quot;^?&quot;StreamGetProperty&quot;^?&quot;StreamSetProperty&quot;^?&quot;DeviceStartAtTime&quot;^?&quot;DeviceGetNearestStartTime&quot;^?&quot;InitializeWithObjectID&quot;^?&quot;ObjectShow&quot;^?&quot;ObjectHasProperty&quot;^?&quot;ObjectIsPropertySettable&quot;^?&quot;ObjectGetPropertyDataSize&quot;^?&quot;ObjectGetPropertyData&quot;^?&quot;ObjectSetPropertyData&quot;^?&quot;DeviceCreateIOProcID&quot;^?&quot;DeviceDestroyIOProcID&quot;^?}'>
+<field name='_reserved' declared_type='void*' type='^v'/>
+<field name='QueryInterface' function_pointer='true' declared_type='HRESULT (*)(void *, REFIID, LPVOID *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='REFIID' type='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+<arg declared_type='LPVOID*' type='^^v'/>
+<retval declared_type='HRESULT' type='l' type64='i'/>
+</field>
+<field name='AddRef' function_pointer='true' declared_type='ULONG (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='ULONG' type='L' type64='I'/>
+</field>
+<field name='Release' function_pointer='true' declared_type='ULONG (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='ULONG' type='L' type64='I'/>
+</field>
+<field name='Initialize' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='Teardown' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceAddIOProc' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioDeviceIOProc, void *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioDeviceIOProc' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceRemoveIOProc' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioDeviceIOProc)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioDeviceIOProc' type='^?'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceStart' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioDeviceIOProcID)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioDeviceIOProcID' type='^?'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceStop' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioDeviceIOProcID)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioDeviceIOProcID' type='^?'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceRead' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioTimeStamp *, AudioBufferList *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceGetCurrentTime' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioTimeStamp *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceTranslateTime' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioTimeStamp *, AudioTimeStamp *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceGetPropertyInfo' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, UInt32, Boolean, AudioDevicePropertyID, UInt32 *, Boolean *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Boolean' type='B'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceGetProperty' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, UInt32, Boolean, AudioDevicePropertyID, UInt32 *, void *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Boolean' type='B'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceSetProperty' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioTimeStamp *, UInt32, Boolean, AudioDevicePropertyID, UInt32, void *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Boolean' type='B'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='StreamGetPropertyInfo' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioStreamID, UInt32, AudioDevicePropertyID, UInt32 *, Boolean *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioStreamID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='StreamGetProperty' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioStreamID, UInt32, AudioDevicePropertyID, UInt32 *, void *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioStreamID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32*' type='^I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='StreamSetProperty' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioStreamID, AudioTimeStamp *, UInt32, AudioDevicePropertyID, UInt32, void *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioStreamID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceStartAtTime' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioDeviceIOProcID, AudioTimeStamp *, UInt32)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioDeviceIOProcID' type='^?'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceGetNearestStartTime' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioTimeStamp *, UInt32)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='InitializeWithObjectID' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioObjectID)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='ObjectShow' function_pointer='true' declared_type='void (*)(AudioHardwarePlugInRef, AudioObjectID)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='ObjectHasProperty' function_pointer='true' declared_type='Boolean (*)(AudioHardwarePlugInRef, AudioObjectID, AudioObjectPropertyAddress *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<arg declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+<field name='ObjectIsPropertySettable' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioObjectID, AudioObjectPropertyAddress *, Boolean *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<arg declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true'/>
+<arg declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='ObjectGetPropertyDataSize' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioObjectID, AudioObjectPropertyAddress *, UInt32, void *, UInt32 *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<arg declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='UInt32*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='ObjectGetPropertyData' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioObjectID, AudioObjectPropertyAddress *, UInt32, void *, UInt32 *, void *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<arg declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='UInt32*' type='^I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='ObjectSetPropertyData' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioObjectID, AudioObjectPropertyAddress *, UInt32, void *, UInt32, void *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<arg declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='void*' type='^v' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceCreateIOProcID' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioDeviceIOProc, void *, AudioDeviceIOProcID *)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioDeviceIOProc' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='AudioDeviceIOProcID*' type='^^?'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field name='DeviceDestroyIOProcID' function_pointer='true' declared_type='OSStatus (*)(AudioHardwarePlugInRef, AudioDeviceID, AudioDeviceIOProcID)' type='^?'>
+<arg declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioDeviceIOProcID' type='^?'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+</struct>
+<struct name='AudioObjectPropertyAddress' type='{AudioObjectPropertyAddress=&quot;mSelector&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
+<field name='mSelector' declared_type='AudioObjectPropertySelector' type='L' type64='I'/>
+<field name='mScope' declared_type='AudioObjectPropertyScope' type='L' type64='I'/>
+<field name='mElement' declared_type='AudioObjectPropertyElement' type='L' type64='I'/>
+</struct>
+<struct name='AudioStreamBasicDescription' type='{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}'>
+<field name='mSampleRate' declared_type='Float64' type='d'/>
+<field name='mFormatID' declared_type='UInt32' type='L' type64='I'/>
+<field name='mFormatFlags' declared_type='UInt32' type='L' type64='I'/>
+<field name='mBytesPerPacket' declared_type='UInt32' type='L' type64='I'/>
+<field name='mFramesPerPacket' declared_type='UInt32' type='L' type64='I'/>
+<field name='mBytesPerFrame' declared_type='UInt32' type='L' type64='I'/>
+<field name='mChannelsPerFrame' declared_type='UInt32' type='L' type64='I'/>
+<field name='mBitsPerChannel' declared_type='UInt32' type='L' type64='I'/>
+<field name='mReserved' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='AudioStreamPacketDescription' type='{AudioStreamPacketDescription=&quot;mStartOffset&quot;q&quot;mVariableFramesInPacket&quot;I&quot;mDataByteSize&quot;I}'>
+<field name='mStartOffset' declared_type='SInt64' type='q'/>
+<field name='mVariableFramesInPacket' declared_type='UInt32' type='L' type64='I'/>
+<field name='mDataByteSize' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='AudioStreamRangedDescription' type='{AudioStreamRangedDescription=&quot;mFormat&quot;{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}&quot;mSampleRateRange&quot;{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}}'>
+<field name='mFormat' declared_type='AudioStreamBasicDescription' type='{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}'/>
+<field name='mSampleRateRange' declared_type='AudioValueRange' type='{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}'/>
+</struct>
+<struct name='AudioTimeStamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'>
+<field name='mSampleTime' declared_type='Float64' type='d'/>
+<field name='mHostTime' declared_type='UInt64' type='Q'/>
+<field name='mRateScalar' declared_type='Float64' type='d'/>
+<field name='mWordClockTime' declared_type='UInt64' type='Q'/>
+<field name='mSMPTETime' declared_type='SMPTETime' type='{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}'/>
+<field name='mFlags' declared_type='UInt32' type='L' type64='I'/>
+<field name='mReserved' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='AudioValueRange' type='{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}'>
+<field name='mMinimum' declared_type='Float64' type='d'/>
+<field name='mMaximum' declared_type='Float64' type='d'/>
+</struct>
+<struct name='AudioValueTranslation' type='{AudioValueTranslation=&quot;mInputData&quot;^v&quot;mInputDataSize&quot;I&quot;mOutputData&quot;^v&quot;mOutputDataSize&quot;I}'>
+<field name='mInputData' declared_type='void*' type='^v'/>
+<field name='mInputDataSize' declared_type='UInt32' type='L' type64='I'/>
+<field name='mOutputData' declared_type='void*' type='^v'/>
+<field name='mOutputDataSize' declared_type='UInt32' type='L' type64='I'/>
+</struct>
+<struct name='SMPTETime' type='{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}'>
+<field name='mSubframes' declared_type='SInt16' type='s'/>
+<field name='mSubframeDivisor' declared_type='SInt16' type='s'/>
+<field name='mCounter' declared_type='UInt32' type='L' type64='I'/>
+<field name='mType' declared_type='UInt32' type='L' type64='I'/>
+<field name='mFlags' declared_type='UInt32' type='L' type64='I'/>
+<field name='mHours' declared_type='SInt16' type='s'/>
+<field name='mMinutes' declared_type='SInt16' type='s'/>
+<field name='mSeconds' declared_type='SInt16' type='s'/>
+<field name='mFrames' declared_type='SInt16' type='s'/>
+</struct>
 <string_constant name='kAudioAggregateDeviceIsPrivateKey' value='private'/>
 <string_constant name='kAudioAggregateDeviceMasterSubDeviceKey' value='master'/>
 <string_constant name='kAudioAggregateDeviceNameKey' value='name'/>
@@ -530,511 +827,512 @@
 <enum name='kSMPTETimeType60Drop' value='8'/>
 <enum name='kSMPTETimeValid' value='1'/>
 <function name='AudioConvertHostTimeToNanos'>
-<arg type='Q'/>
-<retval type='Q'/>
+<arg name='inHostTime' declared_type='UInt64' type='Q'/>
+<retval declared_type='UInt64' type='Q'/>
 </function>
 <function name='AudioConvertNanosToHostTime'>
-<arg type='Q'/>
-<retval type='Q'/>
+<arg name='inNanos' declared_type='UInt64' type='Q'/>
+<retval declared_type='UInt64' type='Q'/>
 </function>
 <function name='AudioDeviceAddIOProc'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioDeviceIOProc' type='^?'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceAddPropertyListener'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioDevicePropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Boolean' type='B'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceCreateIOProcID'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioDeviceIOProc' type='^?'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^?'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outIOProcID' declared_type='AudioDeviceIOProcID*' type='^^?'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceDestroyIOProcID'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inIOProcID' function_pointer='true' declared_type='AudioDeviceIOProcID' type='^?'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceGetCurrentTime'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='outTime' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceGetNearestStartTime'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='N'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='ioRequestedStartTime' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='N'/>
+<arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceGetProperty'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='N'/>
-<arg type='^v' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+<arg name='outPropertyData' declared_type='void*' type='^v' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceGetPropertyInfo'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<arg type='^B' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='outSize' declared_type='UInt32*' type='^I' type_modifier='o'/>
+<arg name='outWritable' declared_type='Boolean*' type='^B' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceRead'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inStartTime' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg name='outData' declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceRemoveIOProc'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioDeviceIOProc' type='^?'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceRemovePropertyListener'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioDevicePropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='Boolean' type='B'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceSetProperty'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inWhen' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true' type_modifier='n'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceStart'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inProcID' function_pointer='true' declared_type='AudioDeviceIOProcID' type='^?' type_modifier='n'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceStartAtTime'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inProcID' function_pointer='true' declared_type='AudioDeviceIOProcID' type='^?' type_modifier='n'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='N'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='ioRequestedStartTime' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='N'/>
+<arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceStop'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inProcID' function_pointer='true' declared_type='AudioDeviceIOProcID' type='^?' type_modifier='n'>
+<arg declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}' const='true'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='AudioBufferList*' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDeviceTranslateTime'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='n'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inTime' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true' type_modifier='n'/>
+<arg name='outTime' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInClose'>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInDeviceGetProperty'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='N'/>
-<arg type='^v' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+<arg name='outPropertyData' declared_type='void*' type='^v' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInDeviceGetPropertyInfo'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<arg type='^B' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='outSize' declared_type='UInt32*' type='^I' type_modifier='o'/>
+<arg name='outWritable' declared_type='Boolean*' type='^B' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInDeviceSetProperty'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inWhen' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true' type_modifier='n'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInOpen'>
-<arg type='^{AudioDriverPlugInHostInfo=III^?^?}' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inHostInfo' declared_type='AudioDriverPlugInHostInfo*' type='^{AudioDriverPlugInHostInfo=III^?^?}' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInStreamGetProperty'>
-<arg type='L' type64='I'/>
-<arg type='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='N'/>
-<arg type='^v' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inIOAudioStream' declared_type='io_object_t' type='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+<arg name='outPropertyData' declared_type='void*' type='^v' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInStreamGetPropertyInfo'>
-<arg type='L' type64='I'/>
-<arg type='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<arg type='^B' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inIOAudioStream' declared_type='io_object_t' type='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='outSize' declared_type='UInt32*' type='^I' type_modifier='o'/>
+<arg name='outWritable' declared_type='Boolean*' type='^B' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioDriverPlugInStreamSetProperty'>
-<arg type='L' type64='I'/>
-<arg type='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inDevice' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inIOAudioStream' declared_type='io_object_t' type='I'/>
+<arg name='inWhen' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true' type_modifier='n'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioGetCurrentHostTime'>
-<retval type='Q'/>
+<retval declared_type='UInt64' type='Q'/>
 </function>
 <function name='AudioGetHostClockFrequency'>
-<retval type='d'/>
+<retval declared_type='Float64' type='d'/>
 </function>
 <function name='AudioGetHostClockMinimumTimeDelta'>
-<retval type='L' type64='I'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
 </function>
 <function name='AudioHardwareAddPropertyListener'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inPropertyID' declared_type='AudioHardwarePropertyID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioHardwarePropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioHardwarePropertyID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareAddRunLoopSource'>
-<arg type='^{__CFRunLoopSource=}'/>
-<retval type='l' type64='i'/>
+<arg name='inRunLoopSource' declared_type='CFRunLoopSourceRef' type='^{__CFRunLoopSource=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareClaimAudioDeviceID'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='outAudioDeviceID' declared_type='AudioDeviceID*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareClaimAudioStreamID'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='inOwningDeviceID' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='outAudioStreamID' declared_type='AudioStreamID*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareDevicePropertyChanged'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='B'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='inDeviceID' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='isInput' declared_type='Boolean' type='B'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareDevicesCreated'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='inNumberDevices' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inAudioDeviceIDs' declared_type='AudioDeviceID*' type='^I' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareDevicesDied'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='inNumberDevices' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inAudioDeviceIDs' declared_type='AudioDeviceID*' type='^I' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareGetProperty'>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='N'/>
-<arg type='^v' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inPropertyID' declared_type='AudioHardwarePropertyID' type='L' type64='I'/>
+<arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+<arg name='outPropertyData' declared_type='void*' type='^v' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareGetPropertyInfo'>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<arg type='^B' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inPropertyID' declared_type='AudioHardwarePropertyID' type='L' type64='I'/>
+<arg name='outSize' declared_type='UInt32*' type='^I' type_modifier='o'/>
+<arg name='outWritable' declared_type='Boolean*' type='^B' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareRemovePropertyListener'>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inPropertyID' declared_type='AudioHardwarePropertyID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioHardwarePropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioHardwarePropertyID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareRemoveRunLoopSource'>
-<arg type='^{__CFRunLoopSource=}'/>
-<retval type='l' type64='i'/>
+<arg name='inRunLoopSource' declared_type='CFRunLoopSourceRef' type='^{__CFRunLoopSource=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareSetProperty'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inPropertyID' declared_type='AudioHardwarePropertyID' type='L' type64='I'/>
+<arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareStreamPropertyChanged'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='inOwningDeviceID' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inStreamID' declared_type='AudioStreamID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareStreamsCreated'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='inOwningDeviceID' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inNumberStreams' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inAudioStreamIDs' declared_type='AudioStreamID*' type='^I' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareStreamsDied'>
-<arg type='^^{AudioHardwarePlugInInterface}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<retval type='l' type64='i'/>
+<arg name='inOwner' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}'/>
+<arg name='inOwningDeviceID' declared_type='AudioDeviceID' type='L' type64='I'/>
+<arg name='inNumberStreams' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inAudioStreamIDs' declared_type='AudioStreamID*' type='^I' const='true'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioHardwareUnload'>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectAddPropertyListener'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inAddress' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<arg name='inListener' function_pointer='true' declared_type='AudioObjectPropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectCreate'>
-<arg type='^^{AudioHardwarePlugInInterface}' type_modifier='o'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inOwningPlugIn' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}' type_modifier='o'/>
+<arg name='inOwningObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inClassID' declared_type='AudioClassID' type='L' type64='I'/>
+<arg name='outAudioObjectID' declared_type='AudioObjectID*' type='^I' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectGetPropertyData'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<arg type='^I' type_modifier='N'/>
-<arg type='^v' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inAddress' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<arg name='inQualifierDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inQualifierData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<arg name='ioDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+<arg name='outData' declared_type='void*' type='^v' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectGetPropertyDataSize'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<arg type='^I' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inAddress' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<arg name='inQualifierDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inQualifierData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<arg name='outDataSize' declared_type='UInt32*' type='^I' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectHasProperty'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<retval type='B'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inAddress' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='AudioObjectIsPropertySettable'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<arg type='^B' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inAddress' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<arg name='outIsSettable' declared_type='Boolean*' type='^B' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectPropertiesChanged'>
-<arg type='^^{AudioHardwarePlugInInterface}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg c_array_length_in_arg='2' type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inOwningPlugIn' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}' type_modifier='n'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inNumberAddresses' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inAddresses' c_array_length_in_arg='2' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectRemovePropertyListener'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inAddress' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<arg name='inListener' function_pointer='true' declared_type='AudioObjectPropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioObjectID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectSetPropertyData'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioObjectPropertyAddress=III}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inAddress' declared_type='AudioObjectPropertyAddress*' type='^{AudioObjectPropertyAddress=III}' const='true' type_modifier='n'/>
+<arg name='inQualifierDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inQualifierData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<arg name='inDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioObjectShow'>
-<arg type='L' type64='I'/>
+<arg name='inObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='AudioObjectsPublishedAndDied'>
-<arg type='^^{AudioHardwarePlugInInterface}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg c_array_length_in_arg='2' type='^I' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg c_array_length_in_arg='4' type='^I' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inOwningPlugIn' declared_type='AudioHardwarePlugInRef' type='^^{AudioHardwarePlugInInterface}' type_modifier='n'/>
+<arg name='inOwningObjectID' declared_type='AudioObjectID' type='L' type64='I'/>
+<arg name='inNumberPublishedAudioObjects' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPublishedAudioObjects' c_array_length_in_arg='2' declared_type='AudioObjectID*' type='^I' const='true' type_modifier='n'/>
+<arg name='inNumberDeadAudioObjects' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inDeadAudioObjects' c_array_length_in_arg='4' declared_type='AudioObjectID*' type='^I' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioStreamAddPropertyListener'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inStream' declared_type='AudioStreamID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioStreamPropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioStreamID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioStreamGetProperty'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='N'/>
-<arg type='^v' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inStream' declared_type='AudioStreamID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='ioPropertyDataSize' declared_type='UInt32*' type='^I' type_modifier='N'/>
+<arg name='outPropertyData' declared_type='void*' type='^v' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioStreamGetPropertyInfo'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^I' type_modifier='o'/>
-<arg type='^B' type_modifier='o'/>
-<retval type='l' type64='i'/>
+<arg name='inStream' declared_type='AudioStreamID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='outSize' declared_type='UInt32*' type='^I' type_modifier='o'/>
+<arg name='outWritable' declared_type='Boolean*' type='^B' type_modifier='o'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioStreamRemovePropertyListener'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='l' type64='i'/>
+<arg name='inStream' declared_type='AudioStreamID' type='L' type64='I'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inProc' function_pointer='true' declared_type='AudioStreamPropertyListenerProc' type='^?' type_modifier='n'>
+<arg declared_type='AudioStreamID' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </arg>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='AudioStreamSetProperty'>
-<arg type='L' type64='I'/>
-<arg type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' type_modifier='n'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='l' type64='i'/>
+<arg name='inStream' declared_type='AudioStreamID' type='L' type64='I'/>
+<arg name='inWhen' declared_type='AudioTimeStamp*' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}' const='true' type_modifier='n'/>
+<arg name='inChannel' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyID' declared_type='AudioDevicePropertyID' type='L' type64='I'/>
+<arg name='inPropertyDataSize' declared_type='UInt32' type='L' type64='I'/>
+<arg name='inPropertyData' declared_type='void*' type='^v' const='true' type_modifier='n'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 </signatures>

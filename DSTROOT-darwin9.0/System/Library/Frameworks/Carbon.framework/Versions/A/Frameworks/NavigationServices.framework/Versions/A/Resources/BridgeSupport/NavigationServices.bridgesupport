@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
@@ -7,14 +6,86 @@
 <depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CarbonSound.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
-<struct name='NavCBRec' type='{NavCBRec=&quot;version&quot;S&quot;context&quot;^{__NavDialog}&quot;window&quot;^{OpaqueWindowPtr}&quot;customRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;previewRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;eventData&quot;{NavEventData=&quot;eventDataParms&quot;(NavEventDataInfo=&quot;event&quot;^{EventRecord}&quot;param&quot;^v)&quot;itemHit&quot;s}&quot;userAction&quot;I&quot;reserved&quot;[218c]}'/>
-<struct name='NavDialogCreationOptions' type='{NavDialogCreationOptions=&quot;version&quot;S&quot;optionFlags&quot;I&quot;location&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;clientName&quot;^{__CFString}&quot;windowTitle&quot;^{__CFString}&quot;actionButtonLabel&quot;^{__CFString}&quot;cancelButtonLabel&quot;^{__CFString}&quot;saveFileName&quot;^{__CFString}&quot;message&quot;^{__CFString}&quot;preferenceKey&quot;I&quot;popupExtension&quot;^{__CFArray}&quot;modality&quot;I&quot;parentWindow&quot;^{OpaqueWindowPtr}&quot;reserved&quot;[16c]}'/>
-<struct name='NavDialogOptions' type='{NavDialogOptions=&quot;version&quot;S&quot;dialogOptionFlags&quot;I&quot;location&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;clientName&quot;[256C]&quot;windowTitle&quot;[256C]&quot;actionButtonLabel&quot;[256C]&quot;cancelButtonLabel&quot;[256C]&quot;savedFileName&quot;[256C]&quot;message&quot;[256C]&quot;preferenceKey&quot;I&quot;popupExtension&quot;^^{NavMenuItemSpec}&quot;reserved&quot;[494c]}'/>
-<struct name='NavEventData' type='{NavEventData=&quot;eventDataParms&quot;(NavEventDataInfo=&quot;event&quot;^{EventRecord}&quot;param&quot;^v)&quot;itemHit&quot;s}'/>
-<struct name='NavFileOrFolderInfo' type='{NavFileOrFolderInfo=&quot;version&quot;S&quot;isFolder&quot;B&quot;visible&quot;B&quot;creationDate&quot;I&quot;modificationDate&quot;I&quot;fileAndFolder&quot;(?=&quot;fileInfo&quot;{?=&quot;locked&quot;B&quot;resourceOpen&quot;B&quot;dataOpen&quot;B&quot;reserved1&quot;B&quot;dataSize&quot;I&quot;resourceSize&quot;I&quot;finderInfo&quot;{FInfo=&quot;fdType&quot;I&quot;fdCreator&quot;I&quot;fdFlags&quot;S&quot;fdLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;fdFldr&quot;s}&quot;finderXInfo&quot;{FXInfo=&quot;fdIconID&quot;s&quot;fdReserved&quot;[3s]&quot;fdScript&quot;c&quot;fdXFlags&quot;c&quot;fdComment&quot;s&quot;fdPutAway&quot;i}}&quot;folderInfo&quot;{?=&quot;shareable&quot;B&quot;sharePoint&quot;B&quot;mounted&quot;B&quot;readable&quot;B&quot;writeable&quot;B&quot;reserved2&quot;B&quot;numberOfFiles&quot;I&quot;finderDInfo&quot;{DInfo=&quot;frRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;frFlags&quot;S&quot;frLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frView&quot;s}&quot;finderDXInfo&quot;{DXInfo=&quot;frScroll&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frOpenChain&quot;i&quot;frScript&quot;c&quot;frXFlags&quot;c&quot;frComment&quot;s&quot;frPutAway&quot;i}&quot;folderType&quot;I&quot;folderCreator&quot;I&quot;reserved3&quot;[206c]})}' type64='{NavFileOrFolderInfo=&quot;version&quot;S&quot;isFolder&quot;B&quot;visible&quot;B&quot;creationDate&quot;I&quot;modificationDate&quot;I&quot;fileAndFolder&quot;(?=&quot;fileInfo&quot;{?=&quot;locked&quot;B&quot;resourceOpen&quot;B&quot;dataOpen&quot;B&quot;reserved1&quot;B&quot;dataSize&quot;Q&quot;resourceSize&quot;Q&quot;finderInfo&quot;{FInfo=&quot;fdType&quot;I&quot;fdCreator&quot;I&quot;fdFlags&quot;S&quot;fdLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;fdFldr&quot;s}&quot;finderXInfo&quot;{FXInfo=&quot;fdIconID&quot;s&quot;fdReserved&quot;[3s]&quot;fdScript&quot;c&quot;fdXFlags&quot;c&quot;fdComment&quot;s&quot;fdPutAway&quot;i}}&quot;folderInfo&quot;{?=&quot;shareable&quot;B&quot;sharePoint&quot;B&quot;mounted&quot;B&quot;readable&quot;B&quot;writeable&quot;B&quot;reserved2&quot;B&quot;numberOfFiles&quot;Q&quot;finderDInfo&quot;{DInfo=&quot;frRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;frFlags&quot;S&quot;frLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frView&quot;s}&quot;finderDXInfo&quot;{DXInfo=&quot;frScroll&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frOpenChain&quot;i&quot;frScript&quot;c&quot;frXFlags&quot;c&quot;frComment&quot;s&quot;frPutAway&quot;i}&quot;folderType&quot;I&quot;folderCreator&quot;I&quot;reserved3&quot;[206c]})}'/>
-<struct name='NavMenuItemSpec' type='{NavMenuItemSpec=&quot;version&quot;S&quot;menuCreator&quot;I&quot;menuType&quot;I&quot;menuItemName&quot;[256C]&quot;reserved&quot;[245c]}'/>
-<struct name='NavReplyRecord' type='{NavReplyRecord=&quot;version&quot;S&quot;validRecord&quot;B&quot;replacing&quot;B&quot;isStationery&quot;B&quot;translationNeeded&quot;B&quot;selection&quot;{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}&quot;keyScript&quot;s&quot;fileTranslation&quot;^^{FileTranslationSpec}&quot;reserved1&quot;I&quot;saveFileName&quot;^{__CFString}&quot;saveFileExtensionHidden&quot;B&quot;reserved2&quot;C&quot;reserved&quot;[225c]}'/>
-<struct name='NavTypeList' type='{NavTypeList=&quot;componentSignature&quot;I&quot;reserved&quot;s&quot;osTypeCount&quot;s&quot;osType&quot;[1L]}' type64='{NavTypeList=&quot;componentSignature&quot;I&quot;reserved&quot;s&quot;osTypeCount&quot;s&quot;osType&quot;[1I]}'/>
+<struct name='NavCBRec' type='{NavCBRec=&quot;version&quot;S&quot;context&quot;^{__NavDialog}&quot;window&quot;^{OpaqueWindowPtr}&quot;customRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;previewRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;eventData&quot;{NavEventData=&quot;eventDataParms&quot;(NavEventDataInfo=&quot;event&quot;^{EventRecord}&quot;param&quot;^v)&quot;itemHit&quot;s}&quot;userAction&quot;I&quot;reserved&quot;[218c]}'>
+<field name='version' declared_type='UInt16' type='S'/>
+<field name='context' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<field name='window' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+<field name='customRect' declared_type='Rect' type='{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}'/>
+<field name='previewRect' declared_type='Rect' type='{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}'/>
+<field name='eventData' declared_type='NavEventData' type='{NavEventData=&quot;eventDataParms&quot;(NavEventDataInfo=&quot;event&quot;^{EventRecord}&quot;param&quot;^v)&quot;itemHit&quot;s}'/>
+<field name='userAction' declared_type='NavUserAction' type='L' type64='I'/>
+<field name='reserved' declared_type='char*' type='[218c]'/>
+</struct>
+<struct name='NavDialogCreationOptions' type='{NavDialogCreationOptions=&quot;version&quot;S&quot;optionFlags&quot;I&quot;location&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;clientName&quot;^{__CFString}&quot;windowTitle&quot;^{__CFString}&quot;actionButtonLabel&quot;^{__CFString}&quot;cancelButtonLabel&quot;^{__CFString}&quot;saveFileName&quot;^{__CFString}&quot;message&quot;^{__CFString}&quot;preferenceKey&quot;I&quot;popupExtension&quot;^{__CFArray}&quot;modality&quot;I&quot;parentWindow&quot;^{OpaqueWindowPtr}&quot;reserved&quot;[16c]}'>
+<field name='version' declared_type='UInt16' type='S'/>
+<field name='optionFlags' declared_type='NavDialogOptionFlags' type='L' type64='I'/>
+<field name='location' declared_type='Point' type='{Point=&quot;v&quot;s&quot;h&quot;s}'/>
+<field name='clientName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='windowTitle' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='actionButtonLabel' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='cancelButtonLabel' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='saveFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='message' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='preferenceKey' declared_type='UInt32' type='L' type64='I'/>
+<field name='popupExtension' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<field name='modality' declared_type='WindowModality' type='L' type64='I'/>
+<field name='parentWindow' declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
+<field name='reserved' declared_type='char*' type='[16c]'/>
+</struct>
+<struct name='NavDialogOptions' type='{NavDialogOptions=&quot;version&quot;S&quot;dialogOptionFlags&quot;I&quot;location&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;clientName&quot;[256C]&quot;windowTitle&quot;[256C]&quot;actionButtonLabel&quot;[256C]&quot;cancelButtonLabel&quot;[256C]&quot;savedFileName&quot;[256C]&quot;message&quot;[256C]&quot;preferenceKey&quot;I&quot;popupExtension&quot;^^{NavMenuItemSpec}&quot;reserved&quot;[494c]}'>
+<field name='version' declared_type='UInt16' type='S'/>
+<field name='dialogOptionFlags' declared_type='NavDialogOptionFlags' type='L' type64='I'/>
+<field name='location' declared_type='Point' type='{Point=&quot;v&quot;s&quot;h&quot;s}'/>
+<field name='clientName' declared_type='Str255' type='[256C]'/>
+<field name='windowTitle' declared_type='Str255' type='[256C]'/>
+<field name='actionButtonLabel' declared_type='Str255' type='[256C]'/>
+<field name='cancelButtonLabel' declared_type='Str255' type='[256C]'/>
+<field name='savedFileName' declared_type='Str255' type='[256C]'/>
+<field name='message' declared_type='Str255' type='[256C]'/>
+<field name='preferenceKey' declared_type='UInt32' type='L' type64='I'/>
+<field name='popupExtension' declared_type='NavMenuItemSpecArrayHandle' type='^^{NavMenuItemSpec}'/>
+<field name='reserved' declared_type='char*' type='[494c]'/>
+</struct>
+<struct name='NavEventData' type='{NavEventData=&quot;eventDataParms&quot;(NavEventDataInfo=&quot;event&quot;^{EventRecord}&quot;param&quot;^v)&quot;itemHit&quot;s}'>
+<field name='eventDataParms' declared_type='NavEventDataInfo' type='(NavEventDataInfo=&quot;event&quot;^{EventRecord}&quot;param&quot;^v)'/>
+<field name='itemHit' declared_type='SInt16' type='s'/>
+</struct>
+<struct name='NavFileOrFolderInfo' type='{NavFileOrFolderInfo=&quot;version&quot;S&quot;isFolder&quot;B&quot;visible&quot;B&quot;creationDate&quot;I&quot;modificationDate&quot;I&quot;fileAndFolder&quot;(?=&quot;fileInfo&quot;{?=&quot;locked&quot;B&quot;resourceOpen&quot;B&quot;dataOpen&quot;B&quot;reserved1&quot;B&quot;dataSize&quot;I&quot;resourceSize&quot;I&quot;finderInfo&quot;{FInfo=&quot;fdType&quot;I&quot;fdCreator&quot;I&quot;fdFlags&quot;S&quot;fdLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;fdFldr&quot;s}&quot;finderXInfo&quot;{FXInfo=&quot;fdIconID&quot;s&quot;fdReserved&quot;[3s]&quot;fdScript&quot;c&quot;fdXFlags&quot;c&quot;fdComment&quot;s&quot;fdPutAway&quot;i}}&quot;folderInfo&quot;{?=&quot;shareable&quot;B&quot;sharePoint&quot;B&quot;mounted&quot;B&quot;readable&quot;B&quot;writeable&quot;B&quot;reserved2&quot;B&quot;numberOfFiles&quot;I&quot;finderDInfo&quot;{DInfo=&quot;frRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;frFlags&quot;S&quot;frLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frView&quot;s}&quot;finderDXInfo&quot;{DXInfo=&quot;frScroll&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frOpenChain&quot;i&quot;frScript&quot;c&quot;frXFlags&quot;c&quot;frComment&quot;s&quot;frPutAway&quot;i}&quot;folderType&quot;I&quot;folderCreator&quot;I&quot;reserved3&quot;[206c]})}' type64='{NavFileOrFolderInfo=&quot;version&quot;S&quot;isFolder&quot;B&quot;visible&quot;B&quot;creationDate&quot;I&quot;modificationDate&quot;I&quot;fileAndFolder&quot;(?=&quot;fileInfo&quot;{?=&quot;locked&quot;B&quot;resourceOpen&quot;B&quot;dataOpen&quot;B&quot;reserved1&quot;B&quot;dataSize&quot;Q&quot;resourceSize&quot;Q&quot;finderInfo&quot;{FInfo=&quot;fdType&quot;I&quot;fdCreator&quot;I&quot;fdFlags&quot;S&quot;fdLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;fdFldr&quot;s}&quot;finderXInfo&quot;{FXInfo=&quot;fdIconID&quot;s&quot;fdReserved&quot;[3s]&quot;fdScript&quot;c&quot;fdXFlags&quot;c&quot;fdComment&quot;s&quot;fdPutAway&quot;i}}&quot;folderInfo&quot;{?=&quot;shareable&quot;B&quot;sharePoint&quot;B&quot;mounted&quot;B&quot;readable&quot;B&quot;writeable&quot;B&quot;reserved2&quot;B&quot;numberOfFiles&quot;Q&quot;finderDInfo&quot;{DInfo=&quot;frRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;frFlags&quot;S&quot;frLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frView&quot;s}&quot;finderDXInfo&quot;{DXInfo=&quot;frScroll&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frOpenChain&quot;i&quot;frScript&quot;c&quot;frXFlags&quot;c&quot;frComment&quot;s&quot;frPutAway&quot;i}&quot;folderType&quot;I&quot;folderCreator&quot;I&quot;reserved3&quot;[206c]})}'>
+<field name='version' declared_type='UInt16' type='S'/>
+<field name='isFolder' declared_type='Boolean' type='B'/>
+<field name='visible' declared_type='Boolean' type='B'/>
+<field name='creationDate' declared_type='UInt32' type='L' type64='I'/>
+<field name='modificationDate' declared_type='UInt32' type='L' type64='I'/>
+<field name='fileAndFolder' declared_type='union NavFileOrFolderInfo::' type='(?=&quot;fileInfo&quot;{?=&quot;locked&quot;B&quot;resourceOpen&quot;B&quot;dataOpen&quot;B&quot;reserved1&quot;B&quot;dataSize&quot;I&quot;resourceSize&quot;I&quot;finderInfo&quot;{FInfo=&quot;fdType&quot;I&quot;fdCreator&quot;I&quot;fdFlags&quot;S&quot;fdLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;fdFldr&quot;s}&quot;finderXInfo&quot;{FXInfo=&quot;fdIconID&quot;s&quot;fdReserved&quot;[3s]&quot;fdScript&quot;c&quot;fdXFlags&quot;c&quot;fdComment&quot;s&quot;fdPutAway&quot;i}}&quot;folderInfo&quot;{?=&quot;shareable&quot;B&quot;sharePoint&quot;B&quot;mounted&quot;B&quot;readable&quot;B&quot;writeable&quot;B&quot;reserved2&quot;B&quot;numberOfFiles&quot;I&quot;finderDInfo&quot;{DInfo=&quot;frRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;frFlags&quot;S&quot;frLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frView&quot;s}&quot;finderDXInfo&quot;{DXInfo=&quot;frScroll&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frOpenChain&quot;i&quot;frScript&quot;c&quot;frXFlags&quot;c&quot;frComment&quot;s&quot;frPutAway&quot;i}&quot;folderType&quot;I&quot;folderCreator&quot;I&quot;reserved3&quot;[206c]})' type64='(?=&quot;fileInfo&quot;{?=&quot;locked&quot;B&quot;resourceOpen&quot;B&quot;dataOpen&quot;B&quot;reserved1&quot;B&quot;dataSize&quot;Q&quot;resourceSize&quot;Q&quot;finderInfo&quot;{FInfo=&quot;fdType&quot;I&quot;fdCreator&quot;I&quot;fdFlags&quot;S&quot;fdLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;fdFldr&quot;s}&quot;finderXInfo&quot;{FXInfo=&quot;fdIconID&quot;s&quot;fdReserved&quot;[3s]&quot;fdScript&quot;c&quot;fdXFlags&quot;c&quot;fdComment&quot;s&quot;fdPutAway&quot;i}}&quot;folderInfo&quot;{?=&quot;shareable&quot;B&quot;sharePoint&quot;B&quot;mounted&quot;B&quot;readable&quot;B&quot;writeable&quot;B&quot;reserved2&quot;B&quot;numberOfFiles&quot;Q&quot;finderDInfo&quot;{DInfo=&quot;frRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;frFlags&quot;S&quot;frLocation&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frView&quot;s}&quot;finderDXInfo&quot;{DXInfo=&quot;frScroll&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;frOpenChain&quot;i&quot;frScript&quot;c&quot;frXFlags&quot;c&quot;frComment&quot;s&quot;frPutAway&quot;i}&quot;folderType&quot;I&quot;folderCreator&quot;I&quot;reserved3&quot;[206c]})'/>
+</struct>
+<struct name='NavMenuItemSpec' type='{NavMenuItemSpec=&quot;version&quot;S&quot;menuCreator&quot;I&quot;menuType&quot;I&quot;menuItemName&quot;[256C]&quot;reserved&quot;[245c]}'>
+<field name='version' declared_type='UInt16' type='S'/>
+<field name='menuCreator' declared_type='OSType' type='L' type64='I'/>
+<field name='menuType' declared_type='OSType' type='L' type64='I'/>
+<field name='menuItemName' declared_type='Str255' type='[256C]'/>
+<field name='reserved' declared_type='char*' type='[245c]'/>
+</struct>
+<struct name='NavReplyRecord' type='{NavReplyRecord=&quot;version&quot;S&quot;validRecord&quot;B&quot;replacing&quot;B&quot;isStationery&quot;B&quot;translationNeeded&quot;B&quot;selection&quot;{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}&quot;keyScript&quot;s&quot;fileTranslation&quot;^^{FileTranslationSpec}&quot;reserved1&quot;I&quot;saveFileName&quot;^{__CFString}&quot;saveFileExtensionHidden&quot;B&quot;reserved2&quot;C&quot;reserved&quot;[225c]}'>
+<field name='version' declared_type='UInt16' type='S'/>
+<field name='validRecord' declared_type='Boolean' type='B'/>
+<field name='replacing' declared_type='Boolean' type='B'/>
+<field name='isStationery' declared_type='Boolean' type='B'/>
+<field name='translationNeeded' declared_type='Boolean' type='B'/>
+<field name='selection' declared_type='AEDescList' type='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'/>
+<field name='keyScript' declared_type='ScriptCode' type='s'/>
+<field name='fileTranslation' declared_type='FileTranslationSpecArrayHandle' type='^^{FileTranslationSpec}'/>
+<field name='reserved1' declared_type='UInt32' type='L' type64='I'/>
+<field name='saveFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='saveFileExtensionHidden' declared_type='Boolean' type='B'/>
+<field name='reserved2' declared_type='UInt8' type='C'/>
+<field name='reserved' declared_type='char*' type='[225c]'/>
+</struct>
+<struct name='NavTypeList' type='{NavTypeList=&quot;componentSignature&quot;I&quot;reserved&quot;s&quot;osTypeCount&quot;s&quot;osType&quot;[1L]}' type64='{NavTypeList=&quot;componentSignature&quot;I&quot;reserved&quot;s&quot;osTypeCount&quot;s&quot;osType&quot;[1I]}'>
+<field name='componentSignature' declared_type='OSType' type='L' type64='I'/>
+<field name='reserved' declared_type='short' type='s'/>
+<field name='osTypeCount' declared_type='short' type='s'/>
+<field name='osType' declared_type='OSType*' type='[1L]' type64='[1I]'/>
+</struct>
 <cftype name='NavDialogRef' type='^{__NavDialog=}'/>
 <enum name='kNavAllFiles' value='2'/>
 <enum name='kNavAllFilesInPopup' value='16'/>
@@ -126,540 +197,545 @@
 <enum name='kNavUserActionSaveAs' value='3'/>
 <enum name='kNavUserActionSaveChanges' value='6'/>
 <function name='DisposeNavEventUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userUPP' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeNavObjectFilterUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='userUPP' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='DisposeNavPreviewUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userUPP' function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeNavEventUPP'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='callBackSelector' declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg name='callBackParms' declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='InvokeNavObjectFilterUPP'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='theItem' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='info' declared_type='void*' type='^v'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<arg name='filterMode' declared_type='NavFilterModes' type='s'/>
+<arg name='userUPP' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='InvokeNavPreviewUPP'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='callBackParms' declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<arg name='userUPP' function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='NavAskDiscardChanges'>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg type='^I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='reply' declared_type='NavAskDiscardChangesResult*' type='^I'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavAskSaveChanges'>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg type='L' type64='I'/>
-<arg type='^I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='action' declared_type='NavAskSaveChangesAction' type='L' type64='I'/>
+<arg name='reply' declared_type='NavAskSaveChangesResult*' type='^I'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavChooseFile'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='defaultLocation' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='previewProc' function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='filterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^^{NavTypeList}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='typeList' declared_type='NavTypeListHandle' type='^^{NavTypeList}'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavChooseFolder'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='defaultLocation' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='filterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavChooseObject'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='defaultLocation' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='filterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavChooseVolume'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='defaultSelection' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='filterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavCompleteSave'>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}' const='true'/>
+<arg name='howToTranslate' declared_type='NavTranslationOptions' type='L' type64='I'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavCreateAskDiscardChangesDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateAskReviewDocumentsDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg type='L' type64='Q'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inDocumentCount' declared_type='ItemCount' type='L' type64='Q'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateAskSaveChangesDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inAction' declared_type='NavAskSaveChangesAction' type='L' type64='I'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateChooseFileDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg type='^^{NavTypeList}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inTypeList' declared_type='NavTypeListHandle' type='^^{NavTypeList}'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='inPreviewProc' function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='inFilterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateChooseFolderDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='inFilterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateChooseObjectDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='inPreviewProc' function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='inFilterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateChooseVolumeDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='inFilterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateGetFileDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg type='^^{NavTypeList}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inTypeList' declared_type='NavTypeListHandle' type='^^{NavTypeList}'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='inPreviewProc' function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='inFilterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreateNewFolderDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCreatePutFileDialog'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}' const='true'/>
+<arg name='inFileType' declared_type='OSType' type='L' type64='I'/>
+<arg name='inFileCreator' declared_type='OSType' type='L' type64='I'/>
+<arg name='inEventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<arg type='^^{__NavDialog}'/>
-<retval type='l' type64='i'/>
+<arg name='inClientData' declared_type='void*' type='^v'/>
+<arg name='outDialog' declared_type='NavDialogRef*' type='^^{__NavDialog}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavCustomAskSaveChanges'>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg type='^I'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='reply' declared_type='NavAskSaveChangesResult*' type='^I'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavCustomControl'>
-<arg type='^{__NavDialog=}'/>
-<arg type='l' type64='i'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='dialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<arg name='selector' declared_type='NavCustomControlMessage' type='l' type64='i'/>
+<arg name='parms' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavDialogDispose'>
-<arg type='^{__NavDialog=}'/>
+<arg name='inDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='NavDialogGetReply'>
-<arg type='^{__NavDialog=}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<retval type='l' type64='i'/>
+<arg name='inDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<arg name='outReply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavDialogGetSaveFileExtensionHidden'>
-<arg type='^{__NavDialog=}'/>
-<retval type='B'/>
+<arg name='inPutFileDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='NavDialogGetSaveFileName'>
-<arg type='^{__NavDialog=}'/>
-<retval type='^{__CFString=}'/>
+<arg name='inPutFileDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
 </function>
 <function name='NavDialogGetUserAction'>
-<arg type='^{__NavDialog=}'/>
-<retval type='L' type64='I'/>
+<arg name='inDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<retval declared_type='NavUserAction' type='L' type64='I'/>
 </function>
 <function name='NavDialogGetWindow'>
-<arg type='^{__NavDialog=}'/>
-<retval type='^{OpaqueWindowPtr=}'/>
+<arg name='inDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<retval declared_type='WindowRef' type='^{OpaqueWindowPtr=}'/>
 </function>
 <function name='NavDialogRun'>
-<arg type='^{__NavDialog=}'/>
-<retval type='l' type64='i'/>
+<arg name='inDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavDialogSetFilterTypeIdentifiers'>
-<arg type='^{__NavDialog=}'/>
-<arg type='^{__CFArray=}'/>
-<retval type='l' type64='i'/>
+<arg name='inGetFileDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<arg name='inTypeIdentifiers' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavDialogSetSaveFileExtensionHidden'>
-<arg type='^{__NavDialog=}'/>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='inPutFileDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<arg name='inHidden' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavDialogSetSaveFileName'>
-<arg type='^{__NavDialog=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='l' type64='i'/>
+<arg name='inPutFileDialog' declared_type='NavDialogRef' type='^{__NavDialog=}'/>
+<arg name='inFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavDisposeReply'>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<retval type='s'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavGetDefaultDialogCreationOptions'>
-<arg type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
-<retval type='l' type64='i'/>
+<arg name='outOptions' declared_type='NavDialogCreationOptions*' type='^{NavDialogCreationOptions=SI{Point=ss}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}^{__CFString}I^{__CFArray}I^{OpaqueWindowPtr}[16c]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='NavGetDefaultDialogOptions'>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<retval type='s'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavGetFile'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='defaultLocation' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='previewProc' function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='filterProc' function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<arg type='^^{NavTypeList}'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='typeList' declared_type='NavTypeListHandle' type='^^{NavTypeList}'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavLibraryVersion'>
-<retval type='L' type64='I'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
 </function>
 <function name='NavLoad'>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavNewFolder'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='defaultLocation' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavPutFile'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='defaultLocation' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
+<arg name='dialogOptions' declared_type='NavDialogOptions*' type='^{NavDialogOptions=SI{Point=ss}[256C][256C][256C][256C][256C][256C]I^^{NavMenuItemSpec}[494c]}'/>
+<arg name='eventProc' function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^v'/>
-<retval type='s'/>
+<arg name='fileType' declared_type='OSType' type='L' type64='I'/>
+<arg name='fileCreator' declared_type='OSType' type='L' type64='I'/>
+<arg name='callBackUD' declared_type='void*' type='^v'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavServicesCanRun'>
-<retval type='B'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='NavTranslateFile'>
-<arg type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}'/>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='reply' declared_type='NavReplyRecord*' type='^{NavReplyRecord=SBBBB{AEDesc=I^^{OpaqueAEDataStorageType}}s^^{FileTranslationSpec}I^{__CFString}BC[225c]}' const='true'/>
+<arg name='howToTranslate' declared_type='NavTranslationOptions' type='L' type64='I'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NavUnload'>
-<retval type='s'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='NewNavEventUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='userRoutine' function_pointer='true' declared_type='NavEventProcPtr' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='l' type64='i'/>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<retval function_pointer='true' declared_type='NavEventUPP' type='^?'>
+<arg declared_type='NavEventCallbackMessage' type='l' type64='i'/>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </retval>
 </function>
 <function name='NewNavObjectFilterUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<arg name='userRoutine' function_pointer='true' declared_type='NavObjectFilterProcPtr' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
-<arg type='^v'/>
-<arg type='^v'/>
-<arg type='s'/>
-<retval type='B'/>
+<retval function_pointer='true' declared_type='NavObjectFilterUPP' type='^?'>
+<arg declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='NavFilterModes' type='s'/>
+<retval declared_type='Boolean' type='B'/>
 </retval>
 </function>
 <function name='NewNavPreviewUPP'>
-<arg function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<arg name='userRoutine' function_pointer='true' declared_type='NavPreviewProcPtr' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
-<arg type='^v'/>
-<retval type='B'/>
+<retval function_pointer='true' declared_type='NavPreviewUPP' type='^?'>
+<arg declared_type='NavCBRecPtr' type='^{NavCBRec=S^{__NavDialog}^{OpaqueWindowPtr}{Rect=ssss}{Rect=ssss}{NavEventData=(NavEventDataInfo=^{EventRecord}^v)s}I[218c]}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
 </retval>
 </function>
 </signatures>

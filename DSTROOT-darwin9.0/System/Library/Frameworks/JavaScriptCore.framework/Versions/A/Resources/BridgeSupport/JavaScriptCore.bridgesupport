@@ -1,12 +1,122 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
-<struct name='JSClassDefinition' type='{_JSClassDefinition=&quot;version&quot;i&quot;attributes&quot;I&quot;className&quot;*&quot;parentClass&quot;^{OpaqueJSClass}&quot;staticValues&quot;^{_JSStaticValue=&quot;name&quot;*&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;attributes&quot;I}&quot;staticFunctions&quot;^{_JSStaticFunction=&quot;name&quot;*&quot;callAsFunction&quot;^?&quot;attributes&quot;I}&quot;initialize&quot;^?&quot;finalize&quot;^?&quot;hasProperty&quot;^?&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;deleteProperty&quot;^?&quot;getPropertyNames&quot;^?&quot;callAsFunction&quot;^?&quot;callAsConstructor&quot;^?&quot;hasInstance&quot;^?&quot;convertToType&quot;^?}'/>
-<struct name='JSStaticFunction' type='{_JSStaticFunction=&quot;name&quot;*&quot;callAsFunction&quot;^?&quot;attributes&quot;I}'/>
-<struct name='JSStaticValue' type='{_JSStaticValue=&quot;name&quot;*&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;attributes&quot;I}'/>
+<struct name='JSClassDefinition' type='{_JSClassDefinition=&quot;version&quot;i&quot;attributes&quot;I&quot;className&quot;*&quot;parentClass&quot;^{OpaqueJSClass}&quot;staticValues&quot;^{_JSStaticValue=&quot;name&quot;*&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;attributes&quot;I}&quot;staticFunctions&quot;^{_JSStaticFunction=&quot;name&quot;*&quot;callAsFunction&quot;^?&quot;attributes&quot;I}&quot;initialize&quot;^?&quot;finalize&quot;^?&quot;hasProperty&quot;^?&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;deleteProperty&quot;^?&quot;getPropertyNames&quot;^?&quot;callAsFunction&quot;^?&quot;callAsConstructor&quot;^?&quot;hasInstance&quot;^?&quot;convertToType&quot;^?}'>
+<field name='version' declared_type='int' type='i'/>
+<field name='attributes' declared_type='JSClassAttributes' type='I'/>
+<field name='className' declared_type='char*' type='*' const='true'/>
+<field name='parentClass' declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
+<field name='staticValues' declared_type='JSStaticValue*' type='^{_JSStaticValue=&quot;name&quot;*&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;attributes&quot;I}' const='true'/>
+<field name='staticFunctions' declared_type='JSStaticFunction*' type='^{_JSStaticFunction=&quot;name&quot;*&quot;callAsFunction&quot;^?&quot;attributes&quot;I}' const='true'/>
+<field name='initialize' function_pointer='true' declared_type='JSObjectInitializeCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='finalize' function_pointer='true' declared_type='JSObjectFinalizeCallback' type='^?'>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='hasProperty' function_pointer='true' declared_type='JSObjectHasPropertyCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='_Bool' type='B'/>
+</field>
+<field name='getProperty' function_pointer='true' declared_type='JSObjectGetPropertyCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+</field>
+<field name='setProperty' function_pointer='true' declared_type='JSObjectSetPropertyCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='_Bool' type='B'/>
+</field>
+<field name='deleteProperty' function_pointer='true' declared_type='JSObjectDeletePropertyCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='_Bool' type='B'/>
+</field>
+<field name='getPropertyNames' function_pointer='true' declared_type='JSObjectGetPropertyNamesCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSPropertyNameAccumulatorRef' type='^{OpaqueJSPropertyNameAccumulator=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='callAsFunction' function_pointer='true' declared_type='JSObjectCallAsFunctionCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='size_t' type='L' type64='Q'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}' const='true'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+</field>
+<field name='callAsConstructor' function_pointer='true' declared_type='JSObjectCallAsConstructorCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='size_t' type='L' type64='Q'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}' const='true'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+</field>
+<field name='hasInstance' function_pointer='true' declared_type='JSObjectHasInstanceCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='_Bool' type='B'/>
+</field>
+<field name='convertToType' function_pointer='true' declared_type='JSObjectConvertToTypeCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSType' type='i'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+</field>
+</struct>
+<struct name='JSStaticFunction' type='{_JSStaticFunction=&quot;name&quot;*&quot;callAsFunction&quot;^?&quot;attributes&quot;I}'>
+<field name='name' declared_type='char*' type='*' const='true'/>
+<field name='callAsFunction' function_pointer='true' declared_type='JSObjectCallAsFunctionCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='size_t' type='L' type64='Q'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}' const='true'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+</field>
+<field name='attributes' declared_type='JSPropertyAttributes' type='I'/>
+</struct>
+<struct name='JSStaticValue' type='{_JSStaticValue=&quot;name&quot;*&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;attributes&quot;I}'>
+<field name='name' declared_type='char*' type='*' const='true'/>
+<field name='getProperty' function_pointer='true' declared_type='JSObjectGetPropertyCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+</field>
+<field name='setProperty' function_pointer='true' declared_type='JSObjectSetPropertyCallback' type='^?'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='_Bool' type='B'/>
+</field>
+<field name='attributes' declared_type='JSPropertyAttributes' type='I'/>
+</struct>
 <opaque name='JSClassRef' type='^{OpaqueJSClass=}'/>
 <opaque name='JSContextRef' type='^{OpaqueJSContext=}'/>
 <opaque name='JSGlobalContextRef' type='^{OpaqueJSContext=}'/>
@@ -15,7 +125,7 @@
 <opaque name='JSPropertyNameArrayRef' type='^{OpaqueJSPropertyNameArray=}'/>
 <opaque name='JSStringRef' type='^{OpaqueJSString=}'/>
 <opaque name='JSValueRef' type='^{OpaqueJSValue=}'/>
-<constant name='kJSClassDefinitionEmpty' type='{_JSClassDefinition=iI*^{OpaqueJSClass}^{_JSStaticValue=*^?^?I}^{_JSStaticFunction=*^?I}^?^?^?^?^?^?^?^?^?^?^?}'/>
+<constant name='kJSClassDefinitionEmpty' declared_type='JSClassDefinition' type='{_JSClassDefinition=iI*^{OpaqueJSClass}^{_JSStaticValue=*^?^?I}^{_JSStaticFunction=*^?I}^?^?^?^?^?^?^?^?^?^?^?}' const='true'/>
 <enum name='kJSClassAttributeNoAutomaticPrototype' value='2'/>
 <enum name='kJSClassAttributeNone' value='0'/>
 <enum name='kJSPropertyAttributeDontDelete' value='8'/>
@@ -29,374 +139,385 @@
 <enum name='kJSTypeString' value='4'/>
 <enum name='kJSTypeUndefined' value='0'/>
 <function name='JSCheckScriptSyntax'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='i'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='script' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='sourceURL' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='startingLineNumber' declared_type='int' type='i'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSClassCreate'>
-<arg type='^{_JSClassDefinition=iI*^{OpaqueJSClass}^{_JSStaticValue=*^?^?I}^{_JSStaticFunction=*^?I}^?^?^?^?^?^?^?^?^?^?^?}' type_modifier='n'/>
-<retval type='^{OpaqueJSClass=}'/>
+<arg name='definition' declared_type='JSClassDefinition*' type='^{_JSClassDefinition=iI*^{OpaqueJSClass}^{_JSStaticValue=*^?^?I}^{_JSStaticFunction=*^?I}^?^?^?^?^?^?^?^?^?^?^?}' const='true' type_modifier='n'/>
+<retval declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
 </function>
 <function name='JSClassRelease'>
-<arg type='^{OpaqueJSClass=}'/>
+<arg name='jsClass' declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSClassRetain'>
-<arg type='^{OpaqueJSClass=}'/>
-<retval type='^{OpaqueJSClass=}'/>
+<arg name='jsClass' declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
+<retval declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
 </function>
 <function name='JSContextGetGlobalObject'>
-<arg type='^{OpaqueJSContext=}'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSEvaluateScript'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='i'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='script' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='thisObject' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='sourceURL' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='startingLineNumber' declared_type='int' type='i'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSGarbageCollect'>
-<arg type='^{OpaqueJSContext=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSGlobalContextCreate'>
-<arg type='^{OpaqueJSClass=}'/>
-<retval type='^{OpaqueJSContext=}'/>
+<arg name='globalObjectClass' declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
+<retval declared_type='JSGlobalContextRef' type='^{OpaqueJSContext=}'/>
 </function>
 <function name='JSGlobalContextRelease'>
-<arg type='^{OpaqueJSContext=}'/>
+<arg name='ctx' declared_type='JSGlobalContextRef' type='^{OpaqueJSContext=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSGlobalContextRetain'>
-<arg type='^{OpaqueJSContext=}'/>
-<retval type='^{OpaqueJSContext=}'/>
+<arg name='ctx' declared_type='JSGlobalContextRef' type='^{OpaqueJSContext=}'/>
+<retval declared_type='JSGlobalContextRef' type='^{OpaqueJSContext=}'/>
 </function>
 <function name='JSObjectCallAsConstructor'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='L' type64='Q'/>
-<arg c_array_length_in_arg='2' type='^^{OpaqueJSValue}' type_modifier='n'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='argumentCount' declared_type='size_t' type='L' type64='Q'/>
+<arg name='arguments' c_array_length_in_arg='2' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' const='true' type_modifier='n'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectCallAsFunction'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='L' type64='Q'/>
-<arg c_array_length_in_arg='3' type='^^{OpaqueJSValue}' type_modifier='n'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='thisObject' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='argumentCount' declared_type='size_t' type='L' type64='Q'/>
+<arg name='arguments' c_array_length_in_arg='3' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' const='true' type_modifier='n'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectCopyPropertyNames'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='^{OpaqueJSPropertyNameArray=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='JSPropertyNameArrayRef' type='^{OpaqueJSPropertyNameArray=}'/>
 </function>
 <function name='JSObjectDeleteProperty'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='propertyName' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSObjectGetPrivate'>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='^v'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='void*' type='^v'/>
 </function>
 <function name='JSObjectGetProperty'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='propertyName' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectGetPropertyAtIndex'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='I'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='propertyIndex' declared_type='unsigned int' type='I'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectGetPrototype'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectHasProperty'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='propertyName' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSObjectIsConstructor'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSObjectIsFunction'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSObjectMake'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSClass=}'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='jsClass' declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
+<arg name='data' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectMakeConstructor'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSClass=}'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='L' type64='Q'/>
-<arg type='^^{OpaqueJSValue}'/>
-<arg type='^^{OpaqueJSValue}'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='jsClass' declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
+<arg name='callAsConstructor' function_pointer='true' declared_type='JSObjectCallAsConstructorCallback' type='^?' type_modifier='n'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='size_t' type='L' type64='Q'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}' const='true'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </arg>
-<retval type='^{OpaqueJSValue=}'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectMakeFunction'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='I'/>
-<arg c_array_length_in_arg='2' type='^^{OpaqueJSString}' type_modifier='n'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='i'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='name' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='parameterCount' declared_type='unsigned int' type='I'/>
+<arg name='parameterNames' c_array_length_in_arg='2' declared_type='JSStringRef*' type='^^{OpaqueJSString}' const='true' type_modifier='n'/>
+<arg name='body' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='sourceURL' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='startingLineNumber' declared_type='int' type='i'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectMakeFunctionWithCallback'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg function_pointer='true' type='^?' type_modifier='n'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='L' type64='Q'/>
-<arg type='^^{OpaqueJSValue}'/>
-<arg type='^^{OpaqueJSValue}'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='name' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='callAsFunction' function_pointer='true' declared_type='JSObjectCallAsFunctionCallback' type='^?' type_modifier='n'>
+<arg declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg declared_type='size_t' type='L' type64='Q'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}' const='true'/>
+<arg declared_type='JSValueRef*' type='^^{OpaqueJSValue}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </arg>
-<retval type='^{OpaqueJSValue=}'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSObjectSetPrivate'>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^v' type_modifier='n'/>
-<retval type='B'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='data' declared_type='void*' type='^v' type_modifier='n'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSObjectSetProperty'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='I'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='propertyName' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='attributes' declared_type='JSPropertyAttributes' type='I'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSObjectSetPropertyAtIndex'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='I'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='propertyIndex' declared_type='unsigned int' type='I'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSObjectSetPrototype'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='object' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSPropertyNameAccumulatorAddName'>
-<arg type='^{OpaqueJSPropertyNameAccumulator=}'/>
-<arg type='^{OpaqueJSString=}'/>
+<arg name='accumulator' declared_type='JSPropertyNameAccumulatorRef' type='^{OpaqueJSPropertyNameAccumulator=}'/>
+<arg name='propertyName' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSPropertyNameArrayGetCount'>
-<arg type='^{OpaqueJSPropertyNameArray=}'/>
-<retval type='L' type64='Q'/>
+<arg name='array' declared_type='JSPropertyNameArrayRef' type='^{OpaqueJSPropertyNameArray=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
 </function>
 <function name='JSPropertyNameArrayGetNameAtIndex'>
-<arg type='^{OpaqueJSPropertyNameArray=}'/>
-<arg type='L' type64='Q'/>
-<retval type='^{OpaqueJSString=}'/>
+<arg name='array' declared_type='JSPropertyNameArrayRef' type='^{OpaqueJSPropertyNameArray=}'/>
+<arg name='index' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
 </function>
 <function name='JSPropertyNameArrayRelease'>
-<arg type='^{OpaqueJSPropertyNameArray=}'/>
+<arg name='array' declared_type='JSPropertyNameArrayRef' type='^{OpaqueJSPropertyNameArray=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSPropertyNameArrayRetain'>
-<arg type='^{OpaqueJSPropertyNameArray=}'/>
-<retval type='^{OpaqueJSPropertyNameArray=}'/>
+<arg name='array' declared_type='JSPropertyNameArrayRef' type='^{OpaqueJSPropertyNameArray=}'/>
+<retval declared_type='JSPropertyNameArrayRef' type='^{OpaqueJSPropertyNameArray=}'/>
 </function>
 <function name='JSStringCopyCFString'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='alloc' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='JSStringCreateWithCFString'>
-<arg type='^{__CFString=}'/>
-<retval type='^{OpaqueJSString=}'/>
+<arg name='string' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
 </function>
 <function name='JSStringCreateWithCharacters'>
-<arg c_array_length_in_arg='1' type='^S' type_modifier='n'/>
-<arg type='L' type64='Q'/>
-<retval type='^{OpaqueJSString=}'/>
+<arg name='chars' c_array_length_in_arg='1' declared_type='JSChar*' type='^S' const='true' type_modifier='n'/>
+<arg name='numChars' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
 </function>
 <function name='JSStringCreateWithUTF8CString'>
-<arg type='*'/>
-<retval type='^{OpaqueJSString=}'/>
+<arg name='string' declared_type='char*' type='*' const='true'/>
+<retval declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
 </function>
 <function name='JSStringGetCharactersPtr'>
-<arg type='^{OpaqueJSString=}'/>
-<retval type='^S'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='JSChar*' type='^S' const='true'/>
 </function>
 <function name='JSStringGetLength'>
-<arg type='^{OpaqueJSString=}'/>
-<retval type='L' type64='Q'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
 </function>
 <function name='JSStringGetMaximumUTF8CStringSize'>
-<arg type='^{OpaqueJSString=}'/>
-<retval type='L' type64='Q'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
 </function>
 <function name='JSStringGetUTF8CString'>
-<arg type='^{OpaqueJSString=}'/>
-<arg c_array_length_in_arg='2' type='*' type_modifier='o'/>
-<arg type='L' type64='Q'/>
-<retval type='L' type64='Q'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='buffer' c_array_length_in_arg='2' declared_type='char*' type='*' type_modifier='o'/>
+<arg name='bufferSize' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
 </function>
 <function name='JSStringIsEqual'>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<retval type='B'/>
+<arg name='a' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='b' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSStringIsEqualToUTF8CString'>
-<arg type='^{OpaqueJSString=}'/>
-<arg type='*'/>
-<retval type='B'/>
+<arg name='a' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<arg name='b' declared_type='char*' type='*' const='true'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSStringRelease'>
-<arg type='^{OpaqueJSString=}'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSStringRetain'>
-<arg type='^{OpaqueJSString=}'/>
-<retval type='^{OpaqueJSString=}'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
 </function>
 <function name='JSValueGetType'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='i'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='JSType' type='i'/>
 </function>
 <function name='JSValueIsBoolean'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsEqual'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='a' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='b' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsInstanceOfConstructor'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='constructor' declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsNull'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsNumber'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsObject'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsObjectOfClass'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSClass=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='jsClass' declared_type='JSClassRef' type='^{OpaqueJSClass=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsStrictEqual'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='a' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='b' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsString'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueIsUndefined'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueMakeBoolean'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='B'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='boolean' declared_type='_Bool' type='B'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSValueMakeNull'>
-<arg type='^{OpaqueJSContext=}'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSValueMakeNumber'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='d'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='number' declared_type='double' type='d'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSValueMakeString'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSString=}'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='string' declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSValueMakeUndefined'>
-<arg type='^{OpaqueJSContext=}'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<retval declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSValueProtect'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='JSValueToBoolean'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<retval type='B'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='_Bool' type='B'/>
 </function>
 <function name='JSValueToNumber'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='d'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='double' type='d'/>
 </function>
 <function name='JSValueToObject'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSObjectRef' type='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSValueToStringCopy'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
-<arg type='^^{OpaqueJSValue}' type_modifier='o'/>
-<retval type='^{OpaqueJSString=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<arg name='exception' declared_type='JSValueRef*' type='^^{OpaqueJSValue}' type_modifier='o'/>
+<retval declared_type='JSStringRef' type='^{OpaqueJSString=}'/>
 </function>
 <function name='JSValueUnprotect'>
-<arg type='^{OpaqueJSContext=}'/>
-<arg type='^{OpaqueJSValue=}'/>
+<arg name='ctx' declared_type='JSContextRef' type='^{OpaqueJSContext=}'/>
+<arg name='value' declared_type='JSValueRef' type='^{OpaqueJSValue=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 </signatures>

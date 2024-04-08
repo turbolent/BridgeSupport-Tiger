@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
@@ -11,32 +10,32 @@
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
-<constant name='CalAlarmActionDisplay' type='@'/>
-<constant name='CalAlarmActionEmail' type='@'/>
-<constant name='CalAlarmActionProcedure' type='@'/>
-<constant name='CalAlarmActionSound' type='@'/>
-<constant name='CalAttendeeStatusAccepted' type='@'/>
-<constant name='CalAttendeeStatusDeclined' type='@'/>
-<constant name='CalAttendeeStatusNeedsAction' type='@'/>
-<constant name='CalAttendeeStatusTentative' type='@'/>
-<constant name='CalCalendarStoreErrorDomain' type='@'/>
-<constant name='CalCalendarTypeBirthday' type='@'/>
-<constant name='CalCalendarTypeCalDAV' type='@'/>
-<constant name='CalCalendarTypeIMAP' type='@'/>
-<constant name='CalCalendarTypeLocal' type='@'/>
-<constant name='CalCalendarTypeSubscription' type='@'/>
-<constant name='CalCalendarsChangedExternallyNotification' type='@'/>
-<constant name='CalCalendarsChangedNotification' type='@'/>
-<constant name='CalDefaultRecurrenceInterval' type='I' type64='Q'/>
-<constant name='CalDeletedRecordsKey' type='@'/>
-<constant name='CalEventsChangedExternallyNotification' type='@'/>
-<constant name='CalEventsChangedNotification' type='@'/>
-<constant name='CalInsertedRecordsKey' type='@'/>
-<constant name='CalSenderProcessIDKey' type='@'/>
-<constant name='CalTasksChangedExternallyNotification' type='@'/>
-<constant name='CalTasksChangedNotification' type='@'/>
-<constant name='CalUpdatedRecordsKey' type='@'/>
-<constant name='CalUserUIDKey' type='@'/>
+<constant name='CalAlarmActionDisplay' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalAlarmActionEmail' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalAlarmActionProcedure' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalAlarmActionSound' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalAttendeeStatusAccepted' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalAttendeeStatusDeclined' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalAttendeeStatusNeedsAction' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalAttendeeStatusTentative' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarStoreErrorDomain' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarTypeBirthday' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarTypeCalDAV' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarTypeIMAP' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarTypeLocal' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarTypeSubscription' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarsChangedExternallyNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalCalendarsChangedNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalDefaultRecurrenceInterval' declared_type='NSUInteger' type='I' type64='Q' const='true'/>
+<constant name='CalDeletedRecordsKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalEventsChangedExternallyNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalEventsChangedNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalInsertedRecordsKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalSenderProcessIDKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalTasksChangedExternallyNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalTasksChangedNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalUpdatedRecordsKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='CalUserUIDKey' declared_type='NSString*' type='@' const='true'/>
 <enum name='CalCalendarNotEditableError' value='1025'/>
 <enum name='CalCalendarNotInRepository' value='1027'/>
 <enum name='CalCalendarTitleNotUniqueError' value='1028'/>
@@ -52,64 +51,446 @@
 <enum name='CalSpanAllEvents' value='2'/>
 <enum name='CalSpanFutureEvents' value='1'/>
 <enum name='CalSpanThisEvent' value='0'/>
+<class name='CalAlarm'>
+<method selector='absoluteTrigger'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='action'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='alarm'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='emailAddress'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='relativeTrigger'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='setAbsoluteTrigger:'>
+<arg name='absoluteTrigger' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAction:'>
+<arg name='action' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEmailAddress:'>
+<arg name='emailAddress' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRelativeTrigger:'>
+<arg name='relativeTrigger' declared_type='NSTimeInterval' type='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSound:'>
+<arg name='sound' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrl:'>
+<arg name='url' declared_type='NSURL*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sound'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='triggerDateRelativeTo:'>
+<arg name='date' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='CalAttendee'>
+<method selector='address'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='commonName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='status'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
 <class name='CalCalendar'>
+<method class_method='true' selector='calendar'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='color'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
 <method selector='isEditable'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='notes'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setColor:'>
+<arg name='color' declared_type='NSColor*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNotes:'>
+<arg name='notes' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg name='title' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='type'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='uid'>
+<retval declared_type='NSString*' type='@'/>
 </method>
 </class>
 <class name='CalCalendarItem'>
+<method selector='addAlarm:'>
+<arg name='alarm' declared_type='CalAlarm*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addAlarms:'>
+<arg name='alarms' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='alarms'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='calendar'>
+<retval declared_type='CalCalendar*' type='@'/>
+</method>
+<method selector='dateStamp'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
 <method selector='hasAlarm'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='nextAlarmDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='notes'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='removeAlarm:'>
+<arg name='alarm' declared_type='CalAlarm*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAlarms:'>
+<arg name='alarms' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlarms:'>
+<arg name='alarms' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCalendar:'>
+<arg name='calendar' declared_type='CalCalendar*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNotes:'>
+<arg name='notes' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg name='title' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrl:'>
+<arg name='url' declared_type='NSURL*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='uid'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL*' type='@'/>
 </method>
 </class>
 <class name='CalCalendarStore'>
+<method selector='calendarWithUID:'>
+<arg name='UID' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='CalCalendar*' type='@'/>
+</method>
+<method selector='calendars'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='defaultCalendarStore'>
+<retval declared_type='CalCalendarStore*' type='@'/>
+</method>
+<method class_method='true' selector='eventPredicateWithStartDate:endDate:UID:calendars:'>
+<arg name='startDate' declared_type='NSDate*' type='@' index='0'/>
+<arg name='endDate' declared_type='NSDate*' type='@' index='1'/>
+<arg name='UID' declared_type='NSString*' type='@' index='2'/>
+<arg name='calendars' declared_type='NSArray*' type='@' index='3'/>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method class_method='true' selector='eventPredicateWithStartDate:endDate:calendars:'>
+<arg name='startDate' declared_type='NSDate*' type='@' index='0'/>
+<arg name='endDate' declared_type='NSDate*' type='@' index='1'/>
+<arg name='calendars' declared_type='NSArray*' type='@' index='2'/>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method selector='eventWithUID:occurrence:'>
+<arg name='uid' declared_type='NSString*' type='@' index='0'/>
+<arg name='date' declared_type='NSDate*' type='@' index='1'/>
+<retval declared_type='CalEvent*' type='@'/>
+</method>
+<method selector='eventsWithPredicate:'>
+<arg name='predicate' declared_type='NSPredicate*' type='@' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
 <method selector='removeCalendar:error:'>
-<arg index='1' type_modifier='o'/>
-<retval type='B'/>
+<arg name='calendar' declared_type='CalCalendar*' type='@' index='0'/>
+<arg name='error' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='removeEvent:span:error:'>
-<arg index='2' type_modifier='o'/>
-<retval type='B'/>
+<arg name='event' declared_type='CalEvent*' type='@' index='0'/>
+<arg name='span' declared_type='CalSpan' type='i' index='1'/>
+<arg name='error' declared_type='NSError**' type='^@' index='2' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='removeTask:error:'>
-<arg index='1' type_modifier='o'/>
-<retval type='B'/>
+<arg name='task' declared_type='CalTask*' type='@' index='0'/>
+<arg name='error' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='saveCalendar:error:'>
-<arg index='1' type_modifier='o'/>
-<retval type='B'/>
+<arg name='calendar' declared_type='CalCalendar*' type='@' index='0'/>
+<arg name='error' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='saveEvent:span:error:'>
-<arg index='2' type_modifier='o'/>
-<retval type='B'/>
+<arg name='event' declared_type='CalEvent*' type='@' index='0'/>
+<arg name='span' declared_type='CalSpan' type='i' index='1'/>
+<arg name='error' declared_type='NSError**' type='^@' index='2' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='saveTask:error:'>
-<arg index='1' type_modifier='o'/>
-<retval type='B'/>
+<arg name='task' declared_type='CalTask*' type='@' index='0'/>
+<arg name='error' declared_type='NSError**' type='^@' index='1' type_modifier='o'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='taskPredicateWithCalendars:'>
+<arg name='calendars' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method class_method='true' selector='taskPredicateWithTasksCompletedSince:calendars:'>
+<arg name='completedSince' declared_type='NSDate*' type='@' index='0'/>
+<arg name='calendars' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method class_method='true' selector='taskPredicateWithUncompletedTasks:'>
+<arg name='calendars' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method class_method='true' selector='taskPredicateWithUncompletedTasksDueBefore:calendars:'>
+<arg name='dueDate' declared_type='NSDate*' type='@' index='0'/>
+<arg name='calendars' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method selector='taskWithUID:'>
+<arg name='uid' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='CalTask*' type='@'/>
+</method>
+<method selector='tasksWithPredicate:'>
+<arg name='predicate' declared_type='NSPredicate*' type='@' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
 </method>
 </class>
 <class name='CalEvent'>
+<method selector='attendees'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='endDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method class_method='true' selector='event'>
+<retval declared_type='id' type='@'/>
+</method>
 <method selector='isAllDay'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='isDetached'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='location'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='occurrence'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='recurrenceRule'>
+<retval declared_type='CalRecurrenceRule*' type='@'/>
+</method>
+<method selector='setEndDate:'>
+<arg name='endDate' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setIsAllDay:'>
-<arg type='B' index='0'/>
+<arg name='isAllDay' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocation:'>
+<arg name='location' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecurrenceRule:'>
+<arg name='recurrenceRule' declared_type='CalRecurrenceRule*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStartDate:'>
+<arg name='startDate' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+</class>
+<class name='CalNthWeekDay'>
+<method selector='dayOfTheWeek'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='weekNumber'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
 </method>
 </class>
 <class name='CalRecurrenceEnd'>
+<method selector='endDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='occurrenceCount'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method class_method='true' selector='recurrenceEndWithEndDate:'>
+<arg name='endDate' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='recurrenceEndWithOccurrenceCount:'>
+<arg name='occurrenceCount' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
 <method selector='usesEndDate'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CalRecurrenceRule'>
+<method selector='daysOfTheMonth'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='daysOfTheWeek'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='firstDayOfTheWeek'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='initDailyRecurrenceWithInterval:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initMonthlyRecurrenceWithInterval:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initMonthlyRecurrenceWithInterval:forDayOfTheWeek:forWeekOfTheMonth:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='weekDay' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='monthWeek' declared_type='NSInteger' type='i' type64='q' index='2'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='3'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initMonthlyRecurrenceWithInterval:forDaysOfTheMonth:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='monthDays' declared_type='NSArray*' type='@' index='1'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='2'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWeeklyRecurrenceWithInterval:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWeeklyRecurrenceWithInterval:forDaysOfTheWeek:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='days' declared_type='NSArray*' type='@' index='1'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='2'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initYearlyRecurrenceWithInterval:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initYearlyRecurrenceWithInterval:forDayOfTheWeek:forWeekOfTheMonth:forMonthsOfTheYear:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='weekDay' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='monthWeek' declared_type='NSInteger' type='i' type64='q' index='2'/>
+<arg name='months' declared_type='NSArray*' type='@' index='3'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='4'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initYearlyRecurrenceWithInterval:forMonthsOfTheYear:end:'>
+<arg name='interval' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='months' declared_type='NSArray*' type='@' index='1'/>
+<arg name='end' declared_type='CalRecurrenceEnd*' type='@' index='2'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='monthsOfTheYear'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='nthWeekDaysOfTheMonth'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='recurrenceEnd'>
+<retval declared_type='CalRecurrenceEnd*' type='@'/>
+</method>
+<method selector='recurrenceInterval'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='recurrenceType'>
+<retval declared_type='CalRecurrenceType' type='i'/>
 </method>
 </class>
 <class name='CalTask'>
+<method selector='completedDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='dueDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
 <method selector='isCompleted'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='priority'>
+<retval declared_type='CalPriority' type='I' type64='Q'/>
+</method>
+<method selector='setCompletedDate:'>
+<arg name='completedDate' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDueDate:'>
+<arg name='dueDate' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setIsCompleted:'>
-<arg type='B' index='0'/>
+<arg name='isCompleted' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPriority:'>
+<arg name='priority' declared_type='CalPriority' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='task'>
+<retval declared_type='id' type='@'/>
 </method>
 </class>
 </signatures>

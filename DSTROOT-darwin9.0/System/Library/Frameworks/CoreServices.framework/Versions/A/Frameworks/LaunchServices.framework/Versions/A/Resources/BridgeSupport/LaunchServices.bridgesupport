@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework'/>
@@ -7,130 +6,158 @@
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework'/>
 <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework'/>
-<struct name='LSApplicationParameters' type='{LSApplicationParameters=&quot;version&quot;i&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}' type64='{LSApplicationParameters=&quot;version&quot;q&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}'/>
-<struct name='LSItemInfoRecord' type='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}&quot;iconFileName&quot;^{__CFString}&quot;kindID&quot;I}' type64='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}}'/>
-<struct name='LSLaunchFSRefSpec' type='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;I&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}' type64='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;Q&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'/>
-<struct name='LSLaunchURLSpec' type='{LSLaunchURLSpec=&quot;appURL&quot;^{__CFURL}&quot;itemURLs&quot;^{__CFArray}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'/>
+<struct name='LSApplicationParameters' type='{LSApplicationParameters=&quot;version&quot;i&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}' type64='{LSApplicationParameters=&quot;version&quot;q&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}'>
+<field name='version' declared_type='CFIndex' type='l' type64='q'/>
+<field name='flags' declared_type='LSLaunchFlags' type='L' type64='I'/>
+<field name='application' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<field name='asyncLaunchRefCon' declared_type='void*' type='^v'/>
+<field name='environment' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<field name='argv' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<field name='initialEvent' declared_type='AppleEvent*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+</struct>
+<struct name='LSItemInfoRecord' type='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}&quot;iconFileName&quot;^{__CFString}&quot;kindID&quot;I}' type64='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}}'>
+<field name='flags' declared_type='LSItemInfoFlags' type='L' type64='I'/>
+<field name='filetype' declared_type='OSType' type='L' type64='I'/>
+<field name='creator' declared_type='OSType' type='L' type64='I'/>
+<field name='extension' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='iconFileName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<field name='kindID' declared_type='LSKindID' type='L'/>
+</struct>
+<struct name='LSLaunchFSRefSpec' type='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;I&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}' type64='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;Q&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'>
+<field name='appRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<field name='numDocs' declared_type='ItemCount' type='L' type64='Q'/>
+<field name='itemRefs' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<field name='passThruParams' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<field name='launchFlags' declared_type='LSLaunchFlags' type='L' type64='I'/>
+<field name='asyncRefCon' declared_type='void*' type='^v'/>
+</struct>
+<struct name='LSLaunchURLSpec' type='{LSLaunchURLSpec=&quot;appURL&quot;^{__CFURL}&quot;itemURLs&quot;^{__CFArray}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'>
+<field name='appURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<field name='itemURLs' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<field name='passThruParams' declared_type='AEDesc*' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}' const='true'/>
+<field name='launchFlags' declared_type='LSLaunchFlags' type='L' type64='I'/>
+<field name='asyncRefCon' declared_type='void*' type='^v'/>
+</struct>
 <cftype name='IconRef' type='^{OpaqueIconRef=}'/>
 <cftype name='LSSharedFileListItemRef' gettypeid_func='LSSharedFileListItemGetTypeID' type='^{OpaqueLSSharedFileListItemRef=}'/>
 <cftype name='LSSharedFileListRef' gettypeid_func='LSSharedFileListGetTypeID' type='^{OpaqueLSSharedFileListRef=}'/>
-<constant name='kLSItemContentType' type='^{__CFString=}'/>
-<constant name='kLSItemDisplayKind' type='^{__CFString=}'/>
-<constant name='kLSItemDisplayName' type='^{__CFString=}'/>
-<constant name='kLSItemExtension' type='^{__CFString=}'/>
-<constant name='kLSItemExtensionIsHidden' type='^{__CFString=}'/>
-<constant name='kLSItemFileCreator' type='^{__CFString=}'/>
-<constant name='kLSItemFileType' type='^{__CFString=}'/>
-<constant name='kLSItemIsInvisible' type='^{__CFString=}'/>
-<constant name='kLSItemQuarantineProperties' type='^{__CFString=}'/>
-<constant name='kLSItemRoleHandlerDisplayName' type='^{__CFString=}'/>
-<constant name='kLSQuarantineAgentBundleIdentifierKey' type='^{__CFString=}'/>
-<constant name='kLSQuarantineAgentNameKey' type='^{__CFString=}'/>
-<constant name='kLSQuarantineDataURLKey' type='^{__CFString=}'/>
-<constant name='kLSQuarantineOriginURLKey' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTimeStampKey' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTypeCalendarEventAttachment' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTypeEmailAttachment' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTypeInstantMessageAttachment' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTypeKey' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTypeOtherAttachment' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTypeOtherDownload' type='^{__CFString=}'/>
-<constant name='kLSQuarantineTypeWebDownload' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListFavoriteItems' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListFavoriteVolumes' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListGlobalLoginItems' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListItemBeforeFirst' type='^{OpaqueLSSharedFileListItemRef=}'/>
-<constant name='kLSSharedFileListItemHidden' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListItemLast' type='^{OpaqueLSSharedFileListItemRef=}'/>
-<constant name='kLSSharedFileListRecentApplicationItems' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListRecentDocumentItems' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListRecentItemsMaxAmount' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListRecentServerItems' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListSessionLoginItems' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListVolumesComputerVisible' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListVolumesIDiskVisible' type='^{__CFString=}'/>
-<constant name='kLSSharedFileListVolumesNetworkVisible' type='^{__CFString=}'/>
-<constant name='kUTExportedTypeDeclarationsKey' type='^{__CFString=}'/>
-<constant name='kUTImportedTypeDeclarationsKey' type='^{__CFString=}'/>
-<constant name='kUTTagClassFilenameExtension' type='^{__CFString=}'/>
-<constant name='kUTTagClassMIMEType' type='^{__CFString=}'/>
-<constant name='kUTTagClassNSPboardType' type='^{__CFString=}'/>
-<constant name='kUTTagClassOSType' type='^{__CFString=}'/>
-<constant name='kUTTypeAliasFile' type='^{__CFString=}'/>
-<constant name='kUTTypeAliasRecord' type='^{__CFString=}'/>
-<constant name='kUTTypeAppleICNS' type='^{__CFString=}'/>
-<constant name='kUTTypeAppleProtectedMPEG4Audio' type='^{__CFString=}'/>
-<constant name='kUTTypeApplication' type='^{__CFString=}'/>
-<constant name='kUTTypeApplicationBundle' type='^{__CFString=}'/>
-<constant name='kUTTypeApplicationFile' type='^{__CFString=}'/>
-<constant name='kUTTypeArchive' type='^{__CFString=}'/>
-<constant name='kUTTypeAudio' type='^{__CFString=}'/>
-<constant name='kUTTypeAudiovisualContent' type='^{__CFString=}'/>
-<constant name='kUTTypeBMP' type='^{__CFString=}'/>
-<constant name='kUTTypeBundle' type='^{__CFString=}'/>
-<constant name='kUTTypeCHeader' type='^{__CFString=}'/>
-<constant name='kUTTypeCPlusPlusHeader' type='^{__CFString=}'/>
-<constant name='kUTTypeCPlusPlusSource' type='^{__CFString=}'/>
-<constant name='kUTTypeCSource' type='^{__CFString=}'/>
-<constant name='kUTTypeCompositeContent' type='^{__CFString=}'/>
-<constant name='kUTTypeConformsToKey' type='^{__CFString=}'/>
-<constant name='kUTTypeContact' type='^{__CFString=}'/>
-<constant name='kUTTypeContent' type='^{__CFString=}'/>
-<constant name='kUTTypeData' type='^{__CFString=}'/>
-<constant name='kUTTypeDescriptionKey' type='^{__CFString=}'/>
-<constant name='kUTTypeDirectory' type='^{__CFString=}'/>
-<constant name='kUTTypeDiskImage' type='^{__CFString=}'/>
-<constant name='kUTTypeFileURL' type='^{__CFString=}'/>
-<constant name='kUTTypeFlatRTFD' type='^{__CFString=}'/>
-<constant name='kUTTypeFolder' type='^{__CFString=}'/>
-<constant name='kUTTypeFramework' type='^{__CFString=}'/>
-<constant name='kUTTypeGIF' type='^{__CFString=}'/>
-<constant name='kUTTypeHTML' type='^{__CFString=}'/>
-<constant name='kUTTypeICO' type='^{__CFString=}'/>
-<constant name='kUTTypeIconFileKey' type='^{__CFString=}'/>
-<constant name='kUTTypeIdentifierKey' type='^{__CFString=}'/>
-<constant name='kUTTypeImage' type='^{__CFString=}'/>
-<constant name='kUTTypeInkText' type='^{__CFString=}'/>
-<constant name='kUTTypeItem' type='^{__CFString=}'/>
-<constant name='kUTTypeJPEG' type='^{__CFString=}'/>
-<constant name='kUTTypeJPEG2000' type='^{__CFString=}'/>
-<constant name='kUTTypeJavaSource' type='^{__CFString=}'/>
-<constant name='kUTTypeMP3' type='^{__CFString=}'/>
-<constant name='kUTTypeMPEG' type='^{__CFString=}'/>
-<constant name='kUTTypeMPEG4' type='^{__CFString=}'/>
-<constant name='kUTTypeMPEG4Audio' type='^{__CFString=}'/>
-<constant name='kUTTypeMessage' type='^{__CFString=}'/>
-<constant name='kUTTypeMountPoint' type='^{__CFString=}'/>
-<constant name='kUTTypeMovie' type='^{__CFString=}'/>
-<constant name='kUTTypeObjectiveCPlusPlusSource' type='^{__CFString=}'/>
-<constant name='kUTTypeObjectiveCSource' type='^{__CFString=}'/>
-<constant name='kUTTypePDF' type='^{__CFString=}'/>
-<constant name='kUTTypePICT' type='^{__CFString=}'/>
-<constant name='kUTTypePNG' type='^{__CFString=}'/>
-<constant name='kUTTypePackage' type='^{__CFString=}'/>
-<constant name='kUTTypePlainText' type='^{__CFString=}'/>
-<constant name='kUTTypeQuickTimeImage' type='^{__CFString=}'/>
-<constant name='kUTTypeQuickTimeMovie' type='^{__CFString=}'/>
-<constant name='kUTTypeRTF' type='^{__CFString=}'/>
-<constant name='kUTTypeRTFD' type='^{__CFString=}'/>
-<constant name='kUTTypeReferenceURLKey' type='^{__CFString=}'/>
-<constant name='kUTTypeResolvable' type='^{__CFString=}'/>
-<constant name='kUTTypeSourceCode' type='^{__CFString=}'/>
-<constant name='kUTTypeSymLink' type='^{__CFString=}'/>
-<constant name='kUTTypeTIFF' type='^{__CFString=}'/>
-<constant name='kUTTypeTXNTextAndMultimediaData' type='^{__CFString=}'/>
-<constant name='kUTTypeTagSpecificationKey' type='^{__CFString=}'/>
-<constant name='kUTTypeText' type='^{__CFString=}'/>
-<constant name='kUTTypeURL' type='^{__CFString=}'/>
-<constant name='kUTTypeUTF16ExternalPlainText' type='^{__CFString=}'/>
-<constant name='kUTTypeUTF16PlainText' type='^{__CFString=}'/>
-<constant name='kUTTypeUTF8PlainText' type='^{__CFString=}'/>
-<constant name='kUTTypeVCard' type='^{__CFString=}'/>
-<constant name='kUTTypeVersionKey' type='^{__CFString=}'/>
-<constant name='kUTTypeVideo' type='^{__CFString=}'/>
-<constant name='kUTTypeVolume' type='^{__CFString=}'/>
-<constant name='kUTTypeWebArchive' type='^{__CFString=}'/>
-<constant name='kUTTypeXML' type='^{__CFString=}'/>
+<constant name='kLSItemContentType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemDisplayKind' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemDisplayName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemExtension' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemExtensionIsHidden' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemFileCreator' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemFileType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemIsInvisible' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemQuarantineProperties' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSItemRoleHandlerDisplayName' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineAgentBundleIdentifierKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineAgentNameKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineDataURLKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineOriginURLKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTimeStampKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTypeCalendarEventAttachment' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTypeEmailAttachment' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTypeInstantMessageAttachment' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTypeKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTypeOtherAttachment' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTypeOtherDownload' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSQuarantineTypeWebDownload' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kLSSharedFileListFavoriteItems' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListFavoriteVolumes' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListGlobalLoginItems' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListItemBeforeFirst' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<constant name='kLSSharedFileListItemHidden' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListItemLast' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<constant name='kLSSharedFileListRecentApplicationItems' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListRecentDocumentItems' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListRecentItemsMaxAmount' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListRecentServerItems' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListSessionLoginItems' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListVolumesComputerVisible' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListVolumesIDiskVisible' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kLSSharedFileListVolumesNetworkVisible' declared_type='CFStringRef' type='^{__CFString=}'/>
+<constant name='kUTExportedTypeDeclarationsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTImportedTypeDeclarationsKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTagClassFilenameExtension' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTagClassMIMEType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTagClassNSPboardType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTagClassOSType' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeAliasFile' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeAliasRecord' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeAppleICNS' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeAppleProtectedMPEG4Audio' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeApplication' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeApplicationBundle' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeApplicationFile' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeArchive' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeAudio' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeAudiovisualContent' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeBMP' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeBundle' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeCHeader' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeCPlusPlusHeader' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeCPlusPlusSource' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeCSource' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeCompositeContent' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeConformsToKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeContact' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeContent' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeData' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeDescriptionKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeDirectory' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeDiskImage' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeFileURL' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeFlatRTFD' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeFolder' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeFramework' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeGIF' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeHTML' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeICO' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeIconFileKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeIdentifierKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeImage' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeInkText' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeItem' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeJPEG' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeJPEG2000' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeJavaSource' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeMP3' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeMPEG' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeMPEG4' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeMPEG4Audio' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeMessage' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeMountPoint' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeMovie' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeObjectiveCPlusPlusSource' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeObjectiveCSource' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypePDF' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypePICT' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypePNG' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypePackage' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypePlainText' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeQuickTimeImage' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeQuickTimeMovie' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeRTF' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeRTFD' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeReferenceURLKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeResolvable' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeSourceCode' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeSymLink' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeTIFF' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeTXNTextAndMultimediaData' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeTagSpecificationKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeText' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeURL' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeUTF16ExternalPlainText' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeUTF16PlainText' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeUTF8PlainText' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeVCard' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeVersionKey' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeVideo' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeVolume' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeWebArchive' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
+<constant name='kUTTypeXML' declared_type='CFStringRef' type='^{__CFString=}' const='true'/>
 <enum name='appleMenuFolderIconResource' value='-3982'/>
 <enum name='controlPanelFolderIconResource' value='-3976'/>
 <enum name='desktopIconResource' value='-3992'/>
@@ -448,540 +475,542 @@
 <enum name='systemFolderIconResource' value='-3983'/>
 <enum name='trashIconResource' value='-3993'/>
 <function name='AcquireIconRef'>
-<arg type='^{OpaqueIconRef=}'/>
-<retval type='s'/>
+<arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='CompositeIconRef'>
-<arg type='^{OpaqueIconRef=}'/>
-<arg type='^{OpaqueIconRef=}'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='s'/>
+<arg name='backgroundIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<arg name='foregroundIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<arg name='compositeIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='GetCustomIconsEnabled'>
-<arg type='s'/>
-<arg type='^B'/>
-<retval type='s'/>
+<arg name='vRefNum' declared_type='SInt16' type='s'/>
+<arg name='customIconsEnabled' declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='GetIconRef'>
-<arg type='s'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='s'/>
+<arg name='vRefNum' declared_type='SInt16' type='s'/>
+<arg name='creator' declared_type='OSType' type='L' type64='I'/>
+<arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+<arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='GetIconRefFromComponent'>
-<arg type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='l' type64='i'/>
+<arg name='inComponent' declared_type='Component' type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
+<arg name='outIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetIconRefFromFileInfo'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='Q'/>
-<arg type='^S'/>
-<arg type='L' type64='I'/>
-<arg type='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}[4L][16C][16C]QQQQII}' type64='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{FSPermissionInfo=IICCS^{__FSFileSecurity}}[16C][16C]QQQQII}'/>
-<arg type='L' type64='I'/>
-<arg type='^^{OpaqueIconRef}'/>
-<arg type='^s'/>
-<retval type='l' type64='i'/>
+<arg name='inRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inFileNameLength' declared_type='UniCharCount' type='L' type64='Q'/>
+<arg name='inFileName' declared_type='UniChar*' type='^S' const='true'/>
+<arg name='inWhichInfo' declared_type='FSCatalogInfoBitmap' type='L' type64='I'/>
+<arg name='inCatalogInfo' declared_type='FSCatalogInfo*' type='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}[4L][16C][16C]QQQQII}' type64='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{FSPermissionInfo=IICCS^{__FSFileSecurity}}[16C][16C]QQQQII}' const='true'/>
+<arg name='inUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+<arg name='outIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<arg name='outLabel' declared_type='SInt16*' type='^s'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetIconRefFromFolder'>
-<arg type='s'/>
-<arg type='l' type64='i'/>
-<arg type='l' type64='i'/>
-<arg type='c'/>
-<arg type='c'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='s'/>
+<arg name='vRefNum' declared_type='SInt16' type='s'/>
+<arg name='parentFolderID' declared_type='SInt32' type='l' type64='i'/>
+<arg name='folderID' declared_type='SInt32' type='l' type64='i'/>
+<arg name='attributes' declared_type='SInt8' type='c'/>
+<arg name='accessPrivileges' declared_type='SInt8' type='c'/>
+<arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='GetIconRefFromIconFamilyPtr'>
-<arg type='^{IconFamilyResource=Ii[1{IconFamilyElement=Ii[1C]}]}'/>
-<arg type='l' type64='q'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='l' type64='i'/>
+<arg name='inIconFamilyPtr' declared_type='IconFamilyResource*' type='^{IconFamilyResource=Ii[1{IconFamilyElement=Ii[1C]}]}' const='true'/>
+<arg name='inSize' declared_type='Size' type='l' type64='q'/>
+<arg name='outIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='GetIconRefFromTypeInfo'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='I'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='s'/>
+<arg name='inCreator' declared_type='OSType' type='L' type64='I'/>
+<arg name='inType' declared_type='OSType' type='L' type64='I'/>
+<arg name='inExtension' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inMIMEType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inUsageFlags' declared_type='IconServicesUsageFlags' type='L' type64='I'/>
+<arg name='outIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='GetIconRefOwners'>
-<arg type='^{OpaqueIconRef=}'/>
-<arg type='^S'/>
-<retval type='s'/>
+<arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<arg name='owners' declared_type='UInt16*' type='^S'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='IsDataAvailableInIconRef'>
-<arg type='L' type64='I'/>
-<arg type='^{OpaqueIconRef=}'/>
-<retval type='B'/>
+<arg name='inIconKind' declared_type='OSType' type='L' type64='I'/>
+<arg name='inIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='IsIconRefComposite'>
-<arg type='^{OpaqueIconRef=}'/>
-<arg type='^^{OpaqueIconRef}'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='s'/>
+<arg name='compositeIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<arg name='backgroundIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<arg name='foregroundIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='IsValidIconRef'>
-<arg type='^{OpaqueIconRef=}'/>
-<retval type='B'/>
+<arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='LSCanRefAcceptItem'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='inItemFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inTargetRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inRoleMask' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inFlags' declared_type='LSAcceptanceFlags' type='L' type64='I'/>
+<arg name='outAcceptsItem' declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCanURLAcceptURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='^{__CFURL=}'/>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^B'/>
-<retval type='l' type64='i'/>
+<arg name='inItemURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inTargetURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inRoleMask' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inFlags' declared_type='LSAcceptanceFlags' type='L' type64='I'/>
+<arg name='outAcceptsItem' declared_type='Boolean*' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyAllHandlersForURLScheme'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='inURLScheme' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='LSCopyAllRoleHandlersForContentType'>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='I'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='inContentType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inRole' declared_type='LSRolesMask' type='L' type64='I'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='LSCopyApplicationForMIMEType'>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='I'/>
-<arg type='^^{__CFURL}'/>
-<retval type='l' type64='i'/>
+<arg name='inMIMEType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inRoleMask' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='outAppURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyApplicationURLsForURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='L' type64='I'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inRoleMask' declared_type='LSRolesMask' type='L' type64='I'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='LSCopyDefaultHandlerForURLScheme'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='inURLScheme' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='LSCopyDefaultRoleHandlerForContentType'>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='I'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='inContentType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inRole' declared_type='LSRolesMask' type='L' type64='I'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='LSCopyDisplayNameForRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='inRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='outDisplayName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyDisplayNameForURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='outDisplayName' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyItemAttribute'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<arg type='^^v'/>
-<retval type='l' type64='i'/>
+<arg name='inItem' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inRoles' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inAttributeName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='outValue' declared_type='CFTypeRef*' type='^^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyItemAttributes'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFArray=}'/>
-<arg type='^^{__CFDictionary}'/>
-<retval type='l' type64='i'/>
+<arg name='inItem' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inRoles' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inAttributeNames' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg name='outValues' declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyItemInfoForRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
-<retval type='l' type64='i'/>
+<arg name='inItemRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inWhichInfo' declared_type='LSRequestedInfo' type='L' type64='I'/>
+<arg name='outItemInfo' declared_type='LSItemInfoRecord*' type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyItemInfoForURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='L' type64='I'/>
-<arg type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
-<retval type='l' type64='i'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inWhichInfo' declared_type='LSRequestedInfo' type='L' type64='I'/>
+<arg name='outItemInfo' declared_type='LSItemInfoRecord*' type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyKindStringForMIMEType'>
-<arg type='^{__CFString=}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='inMIMEType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='outKindString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyKindStringForRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='inFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='outKindString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyKindStringForTypeInfo'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='inType' declared_type='OSType' type='L' type64='I'/>
+<arg name='inCreator' declared_type='OSType' type='L' type64='I'/>
+<arg name='inExtension' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='outKindString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSCopyKindStringForURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='^^{__CFString}'/>
-<retval type='l' type64='i'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='outKindString' declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSFindApplicationForInfo'>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{__CFURL}'/>
-<retval type='l' type64='i'/>
+<arg name='inCreator' declared_type='OSType' type='L' type64='I'/>
+<arg name='inBundleID' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='outAppRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<arg name='outAppURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSGetApplicationForInfo'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='I'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{__CFURL}'/>
-<retval type='l' type64='i'/>
+<arg name='inType' declared_type='OSType' type='L' type64='I'/>
+<arg name='inCreator' declared_type='OSType' type='L' type64='I'/>
+<arg name='inExtension' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inRoleMask' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='outAppRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<arg name='outAppURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSGetApplicationForItem'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{__CFURL}'/>
-<retval type='l' type64='i'/>
+<arg name='inItemRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inRoleMask' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='outAppRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<arg name='outAppURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSGetApplicationForURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='L' type64='I'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{__CFURL}'/>
-<retval type='l' type64='i'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inRoleMask' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='outAppRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<arg name='outAppURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSGetExtensionInfo'>
-<arg type='L' type64='Q'/>
-<arg type='^S'/>
-<arg type='^I' type64='^Q'/>
-<retval type='l' type64='i'/>
+<arg name='inNameLen' declared_type='UniCharCount' type='L' type64='Q'/>
+<arg name='inNameBuffer' declared_type='UniChar*' type='^S' const='true'/>
+<arg name='outExtStartIndex' declared_type='UniCharCount*' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSGetHandlerOptionsForContentType'>
-<arg type='^{__CFString=}'/>
-<retval type='L' type64='I'/>
+<arg name='inContentType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='LSHandlerOptions' type='L' type64='I'/>
 </function>
 <function name='LSInit'>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='inFlags' declared_type='LSInitializeFlags' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSOpenApplication'>
-<arg type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
-<arg type='^{ProcessSerialNumber=II}'/>
-<retval type='l' type64='i'/>
+<arg name='appParams' declared_type='LSApplicationParameters*' type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' const='true'/>
+<arg name='outPSN' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSOpenCFURLRef'>
-<arg type='^{__CFURL=}'/>
-<arg type='^^{__CFURL}'/>
-<retval type='l' type64='i'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='outLaunchedURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSOpenFSRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^{FSRef=[80C]}'/>
-<retval type='l' type64='i'/>
+<arg name='inRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='outLaunchedRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSOpenFromRefSpec'>
-<arg type='^{LSLaunchFSRefSpec=^{FSRef}I^{FSRef}^{AEDesc}I^v}' type64='^{LSLaunchFSRefSpec=^{FSRef}Q^{FSRef}^{AEDesc}I^v}'/>
-<arg type='^{FSRef=[80C]}'/>
-<retval type='l' type64='i'/>
+<arg name='inLaunchSpec' declared_type='LSLaunchFSRefSpec*' type='^{LSLaunchFSRefSpec=^{FSRef}I^{FSRef}^{AEDesc}I^v}' type64='^{LSLaunchFSRefSpec=^{FSRef}Q^{FSRef}^{AEDesc}I^v}' const='true'/>
+<arg name='outLaunchedRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSOpenFromURLSpec'>
-<arg type='^{LSLaunchURLSpec=^{__CFURL}^{__CFArray}^{AEDesc}I^v}'/>
-<arg type='^^{__CFURL}'/>
-<retval type='l' type64='i'/>
+<arg name='inLaunchSpec' declared_type='LSLaunchURLSpec*' type='^{LSLaunchURLSpec=^{__CFURL}^{__CFArray}^{AEDesc}I^v}' const='true'/>
+<arg name='outLaunchedURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSOpenItemsWithRole'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='l' type64='q'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
-<arg type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
-<arg type='^{ProcessSerialNumber=II}'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='inItems' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inItemCount' declared_type='CFIndex' type='l' type64='q'/>
+<arg name='inRole' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inAEParam' declared_type='AEKeyDesc*' type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}' const='true'/>
+<arg name='inAppParams' declared_type='LSApplicationParameters*' type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' const='true'/>
+<arg name='outPSNs' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}'/>
+<arg name='inMaxPSNCount' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSOpenURLsWithRole'>
-<arg type='^{__CFArray=}'/>
-<arg type='L' type64='I'/>
-<arg type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
-<arg type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
-<arg type='^{ProcessSerialNumber=II}'/>
-<arg type='l' type64='q'/>
-<retval type='l' type64='i'/>
+<arg name='inURLs' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<arg name='inRole' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inAEParam' declared_type='AEKeyDesc*' type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}' const='true'/>
+<arg name='inAppParams' declared_type='LSApplicationParameters*' type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' const='true'/>
+<arg name='outPSNs' declared_type='ProcessSerialNumber*' type='^{ProcessSerialNumber=II}'/>
+<arg name='inMaxPSNCount' declared_type='CFIndex' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSRegisterFSRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='inRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inUpdate' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSRegisterURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inUpdate' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSetDefaultHandlerForURLScheme'>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='l' type64='i'/>
+<arg name='inURLScheme' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inHandlerBundleID' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSetDefaultRoleHandlerForContentType'>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<retval type='l' type64='i'/>
+<arg name='inContentType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inRole' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inHandlerBundleID' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSetExtensionHiddenForRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='inRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inHide' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSetExtensionHiddenForURL'>
-<arg type='^{__CFURL=}'/>
-<arg type='B'/>
-<retval type='l' type64='i'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inHide' declared_type='Boolean' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSetHandlerOptionsForContentType'>
-<arg type='^{__CFString=}'/>
-<arg type='L' type64='I'/>
-<retval type='l' type64='i'/>
+<arg name='inContentType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inOptions' declared_type='LSHandlerOptions' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSetItemAttribute'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='L' type64='I'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
-<retval type='l' type64='i'/>
+<arg name='inItem' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inRoles' declared_type='LSRolesMask' type='L' type64='I'/>
+<arg name='inAttributeName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inValue' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSharedFileListAddObserver'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inRunloop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='inRunloopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='callback' function_pointer='true' declared_type='LSSharedFileListChangedProcPtr' type='^?'>
+<arg declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
+<arg name='context' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='LSSharedFileListCopyProperty'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='@'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inPropertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFTypeRef' already_retained='true' type='@'/>
 </function>
 <function name='LSSharedFileListCopySnapshot'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^I'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='outSnapshotSeed' declared_type='UInt32*' type='^I'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='LSSharedFileListCreate'>
-<arg type='^{__CFAllocator=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
-<retval already_retained='true' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inAllocator' declared_type='CFAllocatorRef' type='^{__CFAllocator=}'/>
+<arg name='inListType' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='listOptions' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='LSSharedFileListRef' already_retained='true' type='^{OpaqueLSSharedFileListRef=}'/>
 </function>
 <function name='LSSharedFileListGetSeedValue'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<retval type='L' type64='I'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
 </function>
 <function name='LSSharedFileListGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='LSSharedFileListInsertItemFSRef'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{OpaqueIconRef=}'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^{__CFDictionary=}'/>
-<arg type='^{__CFArray=}'/>
-<retval type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='insertAfterThisItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inDisplayName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<arg name='inFSRef' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='inPropertiesToSet' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='inPropertiesToClear' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
 </function>
 <function name='LSSharedFileListInsertItemURL'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{OpaqueIconRef=}'/>
-<arg type='^{__CFURL=}'/>
-<arg type='^{__CFDictionary=}'/>
-<arg type='^{__CFArray=}'/>
-<retval type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='insertAfterThisItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inDisplayName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<arg name='inURL' declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg name='inPropertiesToSet' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg name='inPropertiesToClear' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
 </function>
 <function name='LSSharedFileListItemCopyDisplayName'>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='LSSharedFileListItemCopyIconRef'>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<retval already_retained='true' type='^{OpaqueIconRef=}'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='IconRef' already_retained='true' type='^{OpaqueIconRef=}'/>
 </function>
 <function name='LSSharedFileListItemCopyProperty'>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='@'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inPropertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFTypeRef' already_retained='true' type='@'/>
 </function>
 <function name='LSSharedFileListItemGetID'>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<retval type='L' type64='I'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
 </function>
 <function name='LSSharedFileListItemGetTypeID'>
-<retval type='L' type64='Q'/>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
 </function>
 <function name='LSSharedFileListItemMove'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inMoveAfterItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSharedFileListItemRemove'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSharedFileListItemResolve'>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<arg type='L' type64='I'/>
-<arg type='^^{__CFURL}'/>
-<arg type='^{FSRef=[80C]}'/>
-<retval type='l' type64='i'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inFlags' declared_type='UInt32' type='L' type64='I'/>
+<arg name='outURL' declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<arg name='outRef' declared_type='FSRef*' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSharedFileListItemSetProperty'>
-<arg type='^{OpaqueLSSharedFileListItemRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
-<retval type='l' type64='i'/>
+<arg name='inItem' declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg name='inPropertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inPropertyData' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSharedFileListRemoveAllItems'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSharedFileListRemoveObserver'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{__CFRunLoop=}'/>
-<arg type='^{__CFString=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inRunloop' declared_type='CFRunLoopRef' type='^{__CFRunLoop=}'/>
+<arg name='inRunloopMode' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='callback' function_pointer='true' declared_type='LSSharedFileListChangedProcPtr' type='^?'>
+<arg declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='^v'/>
+<arg name='context' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='LSSharedFileListSetAuthorization'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{AuthorizationOpaqueRef=}'/>
-<retval type='l' type64='i'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inAuthorization' declared_type='AuthorizationRef' type='^{AuthorizationOpaqueRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSSharedFileListSetProperty'>
-<arg type='^{OpaqueLSSharedFileListRef=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='@'/>
-<retval type='l' type64='i'/>
+<arg name='inList' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg name='inPropertyName' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inPropertyData' declared_type='CFTypeRef' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='LSTerm'>
-<retval type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='OverrideIconRef'>
-<arg type='^{OpaqueIconRef=}'/>
-<arg type='^{OpaqueIconRef=}'/>
-<retval type='s'/>
+<arg name='oldIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<arg name='newIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='ReadIconFromFSRef'>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^^{IconFamilyResource}'/>
-<retval type='l' type64='i'/>
+<arg name='ref' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='iconFamily' declared_type='IconFamilyHandle*' type='^^^{IconFamilyResource}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='RegisterIconRefFromFSRef'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^{FSRef=[80C]}'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='l' type64='i'/>
+<arg name='creator' declared_type='OSType' type='L' type64='I'/>
+<arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+<arg name='iconFile' declared_type='FSRef*' type='^{FSRef=[80C]}' const='true'/>
+<arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
 </function>
 <function name='RegisterIconRefFromIconFamily'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<arg type='^^{IconFamilyResource}'/>
-<arg type='^^{OpaqueIconRef}'/>
-<retval type='s'/>
+<arg name='creator' declared_type='OSType' type='L' type64='I'/>
+<arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+<arg name='iconFamily' declared_type='IconFamilyHandle' type='^^{IconFamilyResource}'/>
+<arg name='theIconRef' declared_type='IconRef*' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='ReleaseIconRef'>
-<arg type='^{OpaqueIconRef=}'/>
-<retval type='s'/>
+<arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='RemoveIconRefOverride'>
-<arg type='^{OpaqueIconRef=}'/>
-<retval type='s'/>
+<arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='SetCustomIconsEnabled'>
-<arg type='s'/>
-<arg type='B'/>
-<retval type='s'/>
+<arg name='vRefNum' declared_type='SInt16' type='s'/>
+<arg name='enableCustomIcons' declared_type='Boolean' type='B'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='UTCreateStringForOSType'>
-<arg type='L' type64='I'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='inOSType' declared_type='OSType' type='L' type64='I'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='UTGetOSTypeFromString'>
-<arg type='^{__CFString=}'/>
-<retval type='L' type64='I'/>
+<arg name='inString' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='OSType' type='L' type64='I'/>
 </function>
 <function name='UTTypeConformsTo'>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='B'/>
+<arg name='inUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inConformsToUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='UTTypeCopyDeclaration'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFDictionary=}'/>
+<arg name='inUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFDictionaryRef' already_retained='true' type='^{__CFDictionary=}'/>
 </function>
 <function name='UTTypeCopyDeclaringBundleURL'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFURL=}'/>
+<arg name='inUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFURLRef' already_retained='true' type='^{__CFURL=}'/>
 </function>
 <function name='UTTypeCopyDescription'>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='inUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='UTTypeCopyPreferredTagWithClass'>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='inUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inTagClass' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='UTTypeCreateAllIdentifiersForTag'>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFArray=}'/>
+<arg name='inTagClass' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inTag' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inConformingToUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFArrayRef' already_retained='true' type='^{__CFArray=}'/>
 </function>
 <function name='UTTypeCreatePreferredIdentifierForTag'>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<retval already_retained='true' type='^{__CFString=}'/>
+<arg name='inTagClass' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inTag' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inConformingToUTI' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef' already_retained='true' type='^{__CFString=}'/>
 </function>
 <function name='UTTypeEqual'>
-<arg type='^{__CFString=}'/>
-<arg type='^{__CFString=}'/>
-<retval type='B'/>
+<arg name='inUTI1' declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg name='inUTI2' declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
 </function>
 <function name='UnregisterIconRef'>
-<arg type='L' type64='I'/>
-<arg type='L' type64='I'/>
-<retval type='s'/>
+<arg name='creator' declared_type='OSType' type='L' type64='I'/>
+<arg name='iconType' declared_type='OSType' type='L' type64='I'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 <function name='UpdateIconRef'>
-<arg type='^{OpaqueIconRef=}'/>
-<retval type='s'/>
+<arg name='theIconRef' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
 </function>
 </signatures>

@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/QuickTime.framework'/>
 <depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
@@ -19,74 +18,74 @@
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
-<constant name='IKFilterBrowserDefaultInputImage' type='@'/>
-<constant name='IKFilterBrowserExcludeCategories' type='@'/>
-<constant name='IKFilterBrowserExcludeFilters' type='@'/>
-<constant name='IKFilterBrowserFilterDoubleClickNotification' type='@'/>
-<constant name='IKFilterBrowserFilterSelectedNotification' type='@'/>
-<constant name='IKFilterBrowserShowCategories' type='@'/>
-<constant name='IKFilterBrowserShowPreview' type='@'/>
-<constant name='IKFilterBrowserWillPreviewFilterNotification' type='@'/>
-<constant name='IKImageBrowserBackgroundColorKey' type='@'/>
-<constant name='IKImageBrowserCGImageRepresentationType' type='@'/>
-<constant name='IKImageBrowserCGImageSourceRepresentationType' type='@'/>
-<constant name='IKImageBrowserCellsHighlightedTitleAttributesKey' type='@'/>
-<constant name='IKImageBrowserCellsOutlineColorKey' type='@'/>
-<constant name='IKImageBrowserCellsSubtitleAttributesKey' type='@'/>
-<constant name='IKImageBrowserCellsTitleAttributesKey' type='@'/>
-<constant name='IKImageBrowserGroupBackgroundColorKey' type='@'/>
-<constant name='IKImageBrowserGroupRangeKey' type='@'/>
-<constant name='IKImageBrowserGroupStyleKey' type='@'/>
-<constant name='IKImageBrowserGroupTitleKey' type='@'/>
-<constant name='IKImageBrowserIconRefPathRepresentationType' type='@'/>
-<constant name='IKImageBrowserIconRefRepresentationType' type='@'/>
-<constant name='IKImageBrowserNSBitmapImageRepresentationType' type='@'/>
-<constant name='IKImageBrowserNSDataRepresentationType' type='@'/>
-<constant name='IKImageBrowserNSImageRepresentationType' type='@'/>
-<constant name='IKImageBrowserNSURLRepresentationType' type='@'/>
-<constant name='IKImageBrowserPathRepresentationType' type='@'/>
-<constant name='IKImageBrowserQCCompositionPathRepresentationType' type='@'/>
-<constant name='IKImageBrowserQCCompositionRepresentationType' type='@'/>
-<constant name='IKImageBrowserQTMoviePathRepresentationType' type='@'/>
-<constant name='IKImageBrowserQTMovieRepresentationType' type='@'/>
-<constant name='IKImageBrowserQuickLookPathRepresentationType' type='@'/>
-<constant name='IKImageBrowserSelectionColorKey' type='@'/>
-<constant name='IKOverlayTypeBackground' type='@'/>
-<constant name='IKOverlayTypeImage' type='@'/>
-<constant name='IKPictureTakerAllowsEditingKey' type='@'/>
-<constant name='IKPictureTakerAllowsFileChoosingKey' type='@'/>
-<constant name='IKPictureTakerAllowsVideoCaptureKey' type='@'/>
-<constant name='IKPictureTakerCropAreaSizeKey' type='@'/>
-<constant name='IKPictureTakerImageTransformsKey' type='@'/>
-<constant name='IKPictureTakerInformationalTextKey' type='@'/>
-<constant name='IKPictureTakerOutputImageMaxSizeKey' type='@'/>
-<constant name='IKPictureTakerShowAddressBookPictureKey' type='@'/>
-<constant name='IKPictureTakerShowEffectsKey' type='@'/>
-<constant name='IKPictureTakerShowEmptyPictureKey' type='@'/>
-<constant name='IKPictureTakerShowRecentPictureKey' type='@'/>
-<constant name='IKPictureTakerUpdateRecentPictureKey' type='@'/>
-<constant name='IKSlideshowModeImages' type='@'/>
-<constant name='IKSlideshowModeOther' type='@'/>
-<constant name='IKSlideshowModePDF' type='@'/>
-<constant name='IKSlideshowPDFDisplayBox' type='@'/>
-<constant name='IKSlideshowPDFDisplayMode' type='@'/>
-<constant name='IKSlideshowPDFDisplaysAsBook' type='@'/>
-<constant name='IKSlideshowStartIndex' type='@'/>
-<constant name='IKSlideshowStartPaused' type='@'/>
-<constant name='IKSlideshowWrapAround' type='@'/>
-<constant name='IKToolModeAnnotate' type='@'/>
-<constant name='IKToolModeCrop' type='@'/>
-<constant name='IKToolModeMove' type='@'/>
-<constant name='IKToolModeNone' type='@'/>
-<constant name='IKToolModeRotate' type='@'/>
-<constant name='IKToolModeSelect' type='@'/>
-<constant name='IKUIFlavorAllowFallback' type='@'/>
-<constant name='IKUISizeFlavor' type='@'/>
-<constant name='IKUISizeMini' type='@'/>
-<constant name='IKUISizeRegular' type='@'/>
-<constant name='IKUISizeSmall' type='@'/>
-<constant name='IKUImaxSize' type='@'/>
-<constant name='IK_iPhotoBundleIdentifier' type='@'/>
+<constant name='IKFilterBrowserDefaultInputImage' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKFilterBrowserExcludeCategories' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKFilterBrowserExcludeFilters' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKFilterBrowserFilterDoubleClickNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKFilterBrowserFilterSelectedNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKFilterBrowserShowCategories' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKFilterBrowserShowPreview' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKFilterBrowserWillPreviewFilterNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserBackgroundColorKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserCGImageRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserCGImageSourceRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserCellsHighlightedTitleAttributesKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserCellsOutlineColorKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserCellsSubtitleAttributesKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserCellsTitleAttributesKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserGroupBackgroundColorKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserGroupRangeKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserGroupStyleKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserGroupTitleKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserIconRefPathRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserIconRefRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserNSBitmapImageRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserNSDataRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserNSImageRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserNSURLRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserPathRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserQCCompositionPathRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserQCCompositionRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserQTMoviePathRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserQTMovieRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserQuickLookPathRepresentationType' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKImageBrowserSelectionColorKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKOverlayTypeBackground' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKOverlayTypeImage' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerAllowsEditingKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerAllowsFileChoosingKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerAllowsVideoCaptureKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerCropAreaSizeKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerImageTransformsKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerInformationalTextKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerOutputImageMaxSizeKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerShowAddressBookPictureKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerShowEffectsKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerShowEmptyPictureKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerShowRecentPictureKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKPictureTakerUpdateRecentPictureKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowModeImages' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowModeOther' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowModePDF' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowPDFDisplayBox' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowPDFDisplayMode' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowPDFDisplaysAsBook' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowStartIndex' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowStartPaused' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKSlideshowWrapAround' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKToolModeAnnotate' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKToolModeCrop' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKToolModeMove' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKToolModeNone' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKToolModeRotate' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKToolModeSelect' declared_type='NSString*' type='@' const='true'/>
+<constant name='IKUIFlavorAllowFallback' declared_type='NSString*' type='@'/>
+<constant name='IKUISizeFlavor' declared_type='NSString*' type='@'/>
+<constant name='IKUISizeMini' declared_type='NSString*' type='@'/>
+<constant name='IKUISizeRegular' declared_type='NSString*' type='@'/>
+<constant name='IKUISizeSmall' declared_type='NSString*' type='@'/>
+<constant name='IKUImaxSize' declared_type='NSString*' type='@'/>
+<constant name='IK_iPhotoBundleIdentifier' declared_type='NSString*' type='@' const='true'/>
 <enum name='IKCellsStyleNone' value='0'/>
 <enum name='IKCellsStyleOutlined' value='2'/>
 <enum name='IKCellsStyleShadowed' value='1'/>
@@ -94,179 +93,755 @@
 <enum name='IKCellsStyleTitled' value='4'/>
 <enum name='IKGroupBezelStyle' value='0'/>
 <enum name='IKGroupDisclosureStyle' value='1'/>
+<class name='CIFilter'>
+<method selector='viewForUIConfiguration:excludedKeys:'>
+<arg name='inUIConfiguration' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='inKeys' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='IKFilterUIView*' type='@'/>
+</method>
+</class>
 <class name='IKFilterBrowserPanel'>
 <method selector='beginSheetWithOptions:modalForWindow:modalDelegate:didEndSelector:contextInfo:'>
-<arg sel_of_type='v20@0:4@8i12^v16' index='3' sel_of_type64='v36@0:8@16i24^v28'/>
-<arg index='4' type_modifier='n'/>
+<arg name='inOptions' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='docWindow' declared_type='NSWindow*' type='@' index='1'/>
+<arg name='modalDelegate' declared_type='id' type='@' index='2'/>
+<arg sel_of_type='v20@0:4@8i12^v16' name='didEndSelector' declared_type='SEL' type=':' index='3' sel_of_type64='v36@0:8@16i24^v28'/>
+<arg name='contextInfo' declared_type='void*' type='^v' index='4' type_modifier='n'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='beginWithOptions:modelessDelegate:didEndSelector:contextInfo:'>
-<arg sel_of_type='v20@0:4@8i12^v16' index='2' sel_of_type64='v40@0:8@16q24^v32'/>
-<arg index='3' type_modifier='n'/>
+<arg name='inOptions' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='modelessDelegate' declared_type='id' type='@' index='1'/>
+<arg sel_of_type='v20@0:4@8i12^v16' name='didEndSelector' declared_type='SEL' type=':' index='2' sel_of_type64='v40@0:8@16q24^v32'/>
+<arg name='contextInfo' declared_type='void*' type='^v' index='3' type_modifier='n'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='filterBrowserPanelWithStyleMask:'>
+<arg name='styleMask' declared_type='unsigned int' type='I' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='filterBrowserViewWithOptions:'>
+<arg name='inOptions' declared_type='NSDictionary*' type='@' index='0'/>
+<retval declared_type='IKFilterBrowserView*' type='@'/>
+</method>
+<method selector='filterName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='finish:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='runModalWithOptions:'>
+<arg name='inOptions' declared_type='NSDictionary*' type='@' index='0'/>
+<retval declared_type='int' type='i'/>
 </method>
 </class>
 <class name='IKFilterBrowserView'>
+<method selector='filterName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
 <method selector='setPreviewState:'>
-<arg type='B' index='0'/>
+<arg name='inState' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IKFilterUIView'>
+<method selector='filter'>
+<retval declared_type='CIFilter*' type='@'/>
+</method>
+<method selector='initWithFrame:filter:'>
+<arg name='frameRect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<arg name='inFilter' declared_type='CIFilter*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectController'>
+<retval declared_type='NSObjectController*' type='@'/>
+</method>
+<method class_method='true' selector='viewWithFrame:filter:'>
+<arg name='frameRect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<arg name='inFilter' declared_type='CIFilter*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
 </method>
 </class>
 <class name='IKImageBrowserView'>
 <method selector='allowsEmptySelection'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='allowsMultipleSelection'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='allowsReordering'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='animates'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='cellSize'>
+<retval declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='cellsStyleMask'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='collapseGroupAtIndex:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='constrainsToOriginalSize'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentResizingMask'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='dataSource'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='draggingDestinationDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='expandGroupAtIndex:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='indexAtLocationOfDroppedItem'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='indexOfItemAtPoint:'>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='0'/>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='initWithFrame:'>
+<arg name='frame' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='isGroupExpandedAtIndex:'>
-<retval type='B'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='itemFrameAtIndex:'>
+<arg name='index' declared_type='NSInteger' type='i' type64='q' index='0'/>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='reloadData'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scrollIndexToVisible:'>
+<arg name='index' declared_type='NSInteger' type='i' type64='q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='selectionIndexes'>
+<retval declared_type='NSIndexSet*' type='@'/>
 </method>
 <method selector='setAllowsEmptySelection:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setAllowsMultipleSelection:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setAllowsReordering:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setAnimates:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCellSize:'>
+<arg name='size' declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCellsStyleMask:'>
+<arg name='mask' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setConstrainsToOriginalSize:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentResizingMask:'>
+<arg name='mask' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDataSource:'>
+<arg name='source' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='aDelegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDraggingDestinationDelegate:'>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setSelectionIndexes:byExtendingSelection:'>
-<arg type='B' index='1'/>
+<arg name='indexes' declared_type='NSIndexSet*' type='@' index='0'/>
+<arg name='extendSelection' declared_type='BOOL' type='B' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZoomValue:'>
+<arg name='aValue' declared_type='float' type='f' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zoomValue'>
+<retval declared_type='float' type='f'/>
+</method>
+</class>
+<class name='IKImageEditPanel'>
+<method selector='dataSource'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='reloadData'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDataSource:'>
+<arg name='dataSource' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedImageEditPanel'>
+<retval declared_type='IKImageEditPanel*' type='@'/>
 </method>
 </class>
 <class name='IKImageView'>
 <method selector='autohidesScrollers'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='autoresizes'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='backgroundColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='convertImagePointToViewPoint:'>
+<arg name='imagePoint' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='0'/>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method selector='convertImageRectToViewRect:'>
+<arg name='imageRect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='convertViewPointToImagePoint:'>
+<arg name='viewPoint' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='0'/>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method selector='convertViewRectToImageRect:'>
+<arg name='viewRect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='currentToolMode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='doubleClickOpensImageEditPanel'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='editable'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='flipImageHorizontal:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='flipImageVertical:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='hasHorizontalScroller'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='hasVerticalScroller'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='image'>
+<retval declared_type='CGImageRef' type='^{CGImage=}'/>
+</method>
+<method selector='imageCorrection'>
+<retval declared_type='CIFilter*' type='@'/>
+</method>
+<method selector='imageProperties'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='imageSize'>
+<retval declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='overlayForType:'>
+<arg name='layerType' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='CALayer*' type='@'/>
+</method>
+<method selector='rotationAngle'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='scrollToPoint:'>
+<arg name='point' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scrollToRect:'>
+<arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setAutohidesScrollers:'>
-<arg type='B' index='0'/>
+<arg name='autohidesScrollers' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setAutoresizes:'>
-<arg type='B' index='0'/>
+<arg name='autoresizes' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundColor:'>
+<arg name='backgroundColor' declared_type='NSColor*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCurrentToolMode:'>
+<arg name='currentToolMode' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setDoubleClickOpensImageEditPanel:'>
-<arg type='B' index='0'/>
+<arg name='doubleClickOpensImageEditPanel' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setEditable:'>
-<arg type='B' index='0'/>
+<arg name='editable' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setHasHorizontalScroller:'>
-<arg type='B' index='0'/>
+<arg name='hasHorizontalScroller' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setHasVerticalScroller:'>
-<arg type='B' index='0'/>
+<arg name='hasVerticalScroller' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:imageProperties:'>
+<arg name='image' declared_type='CGImageRef' type='^{CGImage=}' index='0'/>
+<arg name='metaData' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageCorrection:'>
+<arg name='imageCorrection' declared_type='CIFilter*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:'>
+<arg name='url' declared_type='NSURL*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageZoomFactor:centerPoint:'>
+<arg name='zoomFactor' declared_type='CGFloat' type='f' type64='d' index='0'/>
+<arg name='centerPoint' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOverlay:forType:'>
+<arg name='layer' declared_type='CALayer*' type='@' index='0'/>
+<arg name='layerType' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRotationAngle:'>
+<arg name='rotationAngle' declared_type='CGFloat' type='f' type64='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRotationAngle:centerPoint:'>
+<arg name='rotationAngle' declared_type='CGFloat' type='f' type64='d' index='0'/>
+<arg name='centerPoint' declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}' index='1'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setSupportsDragAndDrop:'>
-<arg type='B' index='0'/>
+<arg name='supportsDragAndDrop' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZoomFactor:'>
+<arg name='zoomFactor' declared_type='CGFloat' type='f' type64='d' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='supportsDragAndDrop'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='zoomFactor'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='zoomImageToActualSize:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zoomImageToFit:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zoomImageToRect:'>
+<arg name='rect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <class name='IKPictureTaker'>
 <method selector='beginPictureTakerSheetForWindow:withDelegate:didEndSelector:contextInfo:'>
-<arg sel_of_type='v20@0:4@8i12^v16' index='2' sel_of_type64='v40@0:8@16q24^v32'/>
-<arg index='3' type_modifier='n'/>
+<arg name='aWindow' declared_type='NSWindow*' type='@' index='0'/>
+<arg name='delegate' declared_type='id' type='@' index='1'/>
+<arg sel_of_type='v20@0:4@8i12^v16' name='didEndSelector' declared_type='SEL' type=':' index='2' sel_of_type64='v40@0:8@16q24^v32'/>
+<arg name='contextInfo' declared_type='void*' type='^v' index='3' type_modifier='n'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='beginPictureTakerWithDelegate:didEndSelector:contextInfo:'>
-<arg sel_of_type='v20@0:4@8i12^v16' index='1' sel_of_type64='v40@0:8@16q24^v32'/>
-<arg index='2' type_modifier='n'/>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<arg sel_of_type='v20@0:4@8i12^v16' name='didEndSelector' declared_type='SEL' type=':' index='1' sel_of_type64='v40@0:8@16q24^v32'/>
+<arg name='contextInfo' declared_type='void*' type='^v' index='2' type_modifier='n'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inputImage'>
+<retval declared_type='NSImage*' type='@'/>
 </method>
 <method selector='mirroring'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='outputImage'>
+<retval declared_type='NSImage*' type='@'/>
+</method>
+<method class_method='true' selector='pictureTaker'>
+<retval declared_type='IKPictureTaker*' type='@'/>
 </method>
 <method selector='popUpRecentsMenuForView:withDelegate:didEndSelector:contextInfo:'>
-<arg sel_of_type='v20@0:4@8i12^v16' index='2' sel_of_type64='v40@0:8@16q24^v32'/>
-<arg index='3' type_modifier='n'/>
+<arg name='aView' declared_type='NSView*' type='@' index='0'/>
+<arg name='delegate' declared_type='id' type='@' index='1'/>
+<arg sel_of_type='v20@0:4@8i12^v16' name='didEndSelector' declared_type='SEL' type=':' index='2' sel_of_type64='v40@0:8@16q24^v32'/>
+<arg name='contextInfo' declared_type='void*' type='^v' index='3' type_modifier='n'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='runModal'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setInputImage:'>
+<arg name='image' declared_type='NSImage*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setMirroring:'>
-<arg type='B' index='0'/>
+<arg name='b' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IKSaveOptions'>
+<method selector='addSaveOptionsAccessoryViewToSavePanel:'>
+<arg name='savePanel' declared_type='NSSavePanel*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='imageProperties'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='imageUTType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithImageProperties:imageUTType:'>
+<arg name='imageProperties' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='imageUTType' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='userSelection'>
+<retval declared_type='NSDictionary*' type='@'/>
 </method>
 </class>
 <class name='IKSlideshow'>
+<method selector='autoPlayDelay'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
 <method class_method='true' selector='canExportToApplication:'>
-<retval type='B'/>
+<arg name='applicationBundleIdentifier' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='exportSlideshowItem:toApplication:'>
+<arg name='item' declared_type='id' type='@' index='0'/>
+<arg name='applicationBundleIdentifier' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='indexOfCurrentSlideshowItem'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='reloadData'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reloadSlideshowItemAtIndex:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='runSlideshowWithDataSource:inMode:options:'>
+<arg name='dataSource' declared_type='id' type='@' index='0'/>
+<arg name='slideshowMode' declared_type='NSString*' type='@' index='1'/>
+<arg name='slideshowOptions' declared_type='NSDictionary*' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAutoPlayDelay:'>
+<arg name='autoPlayDelay' declared_type='NSTimeInterval' type='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedSlideshow'>
+<retval declared_type='IKSlideshow*' type='@'/>
+</method>
+<method selector='stopSlideshow:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <class name='NSObject'>
 <method selector='canExportSlideshowItemAtIndex:toApplication:'>
-<retval type='B'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='applicationBundleIdentifier' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='image'>
+<retval declared_type='CGImageRef' type='^{CGImage=}'/>
+</method>
+<method selector='imageBrowser:backgroundWasRightClickedWithEvent:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='event' declared_type='NSEvent*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='imageBrowser:cellWasDoubleClickedAtIndex:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='imageBrowser:cellWasRightClickedAtIndex:withEvent:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='event' declared_type='NSEvent*' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='imageBrowser:groupAtIndex:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='imageBrowser:itemAtIndex:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='imageBrowser:moveItemsAtIndexes:toIndex:'>
-<retval type='B'/>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='indexes' declared_type='NSIndexSet*' type='@' index='1'/>
+<arg name='destinationIndex' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='imageBrowser:removeItemsAtIndexes:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='indexes' declared_type='NSIndexSet*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='imageBrowser:writeItemsAtIndexes:toPasteboard:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='itemIndexes' declared_type='NSIndexSet*' type='@' index='1'/>
+<arg name='pasteboard' declared_type='NSPasteboard*' type='@' index='2'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='imageBrowserSelectionDidChange:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='imageProperties'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='imageRepresentation'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='imageRepresentationType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='imageSubtitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='imageTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='imageUID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='imageVersion'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
 </method>
 <method selector='isSelectable'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='nameOfSlideshowItemAtIndex:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='numberOfGroupsInImageBrowser:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='numberOfItemsInImageBrowser:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='numberOfSlideshowItems'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='provideViewForUIConfiguration:excludedKeys:'>
+<arg name='inUIConfiguration' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='inKeys' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='IKFilterUIView*' type='@'/>
+</method>
+<method selector='setImage:imageProperties:'>
+<arg name='image' declared_type='CGImageRef' type='^{CGImage=}' index='0'/>
+<arg name='metaData' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='slideshowDidChangeCurrentIndex:'>
+<arg name='newIndex' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='slideshowDidStop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='slideshowItemAtIndex:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='slideshowWillStart'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='thumbnailWithMaximumSize:'>
+<arg name='size' declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}' index='0'/>
+<retval declared_type='CGImageRef' type='^{CGImage=}'/>
 </method>
 </class>
 <informal_protocol name='IKFilterCustomUIProvider'>
-<method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='provideViewForUIConfiguration:excludedKeys:'/>
+<method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='provideViewForUIConfiguration:excludedKeys:'>
+<arg name='inUIConfiguration' declared_type='NSDictionary*' type='@' index='0'/>
+<arg name='inKeys' declared_type='NSArray*' type='@' index='1'/>
+<retval declared_type='IKFilterUIView*' type='@'/>
+</method>
 </informal_protocol>
 <informal_protocol name='IKImageBrowserDataSource'>
-<method type='@16@0:4@8I12' type64='@32@0:8@16Q24' selector='imageBrowser:groupAtIndex:'/>
-<method type='@16@0:4@8I12' type64='@32@0:8@16Q24' selector='imageBrowser:itemAtIndex:'/>
-<method type='B20@0:4@8@12I16' type64='B40@0:8@16@24Q32' selector='imageBrowser:moveItemsAtIndexes:toIndex:'/>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='imageBrowser:removeItemsAtIndexes:'/>
-<method type='I20@0:4@8@12@16' type64='Q40@0:8@16@24@32' selector='imageBrowser:writeItemsAtIndexes:toPasteboard:'/>
-<method type='I12@0:4@8' type64='Q24@0:8@16' selector='numberOfGroupsInImageBrowser:'/>
-<method type='I12@0:4@8' type64='Q24@0:8@16' selector='numberOfItemsInImageBrowser:'/>
+<method type='@16@0:4@8I12' type64='@32@0:8@16Q24' selector='imageBrowser:groupAtIndex:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method type='@16@0:4@8I12' type64='@32@0:8@16Q24' selector='imageBrowser:itemAtIndex:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='B20@0:4@8@12I16' type64='B40@0:8@16@24Q32' selector='imageBrowser:moveItemsAtIndexes:toIndex:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='indexes' declared_type='NSIndexSet*' type='@' index='1'/>
+<arg name='destinationIndex' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='imageBrowser:removeItemsAtIndexes:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='indexes' declared_type='NSIndexSet*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='I20@0:4@8@12@16' type64='Q40@0:8@16@24@32' selector='imageBrowser:writeItemsAtIndexes:toPasteboard:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='itemIndexes' declared_type='NSIndexSet*' type='@' index='1'/>
+<arg name='pasteboard' declared_type='NSPasteboard*' type='@' index='2'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='I12@0:4@8' type64='Q24@0:8@16' selector='numberOfGroupsInImageBrowser:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='I12@0:4@8' type64='Q24@0:8@16' selector='numberOfItemsInImageBrowser:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
 </informal_protocol>
 <informal_protocol name='IKImageBrowserDelegate'>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='imageBrowser:backgroundWasRightClickedWithEvent:'/>
-<method type='v16@0:4@8I12' type64='v32@0:8@16Q24' selector='imageBrowser:cellWasDoubleClickedAtIndex:'/>
-<method type='v20@0:4@8I12@16' type64='v40@0:8@16Q24@32' selector='imageBrowser:cellWasRightClickedAtIndex:withEvent:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='imageBrowserSelectionDidChange:'/>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='imageBrowser:backgroundWasRightClickedWithEvent:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='event' declared_type='NSEvent*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v16@0:4@8I12' type64='v32@0:8@16Q24' selector='imageBrowser:cellWasDoubleClickedAtIndex:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v20@0:4@8I12@16' type64='v40@0:8@16Q24@32' selector='imageBrowser:cellWasRightClickedAtIndex:withEvent:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='event' declared_type='NSEvent*' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='imageBrowserSelectionDidChange:'>
+<arg name='aBrowser' declared_type='IKImageBrowserView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 <informal_protocol name='IKImageBrowserItem'>
-<method type='@8@0:4' type64='@16@0:8' selector='imageRepresentation'/>
-<method type='@8@0:4' type64='@16@0:8' selector='imageRepresentationType'/>
-<method type='@8@0:4' type64='@16@0:8' selector='imageSubtitle'/>
-<method type='@8@0:4' type64='@16@0:8' selector='imageTitle'/>
-<method type='@8@0:4' type64='@16@0:8' selector='imageUID'/>
-<method type='I8@0:4' type64='Q16@0:8' selector='imageVersion'/>
-<method type='B8@0:4' type64='B16@0:8' selector='isSelectable'/>
+<method type='@8@0:4' type64='@16@0:8' selector='imageRepresentation'>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='imageRepresentationType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='imageSubtitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='imageTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='imageUID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='I8@0:4' type64='Q16@0:8' selector='imageVersion'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='B8@0:4' type64='B16@0:8' selector='isSelectable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
 </informal_protocol>
 <informal_protocol name='IKImageEditPanelDataSource'>
-<method type='^{CGImage=}8@0:4' type64='^{CGImage=}16@0:8' selector='image'/>
-<method type='@8@0:4' type64='@16@0:8' selector='imageProperties'/>
-<method type='v16@0:4^{CGImage=}8@12' type64='v32@0:8^{CGImage=}16@24' selector='setImage:imageProperties:'/>
-<method type='^{CGImage=}16@0:4{_NSSize=ff}8' type64='^{CGImage=}32@0:8{CGSize=dd}16' selector='thumbnailWithMaximumSize:'/>
+<method type='^{CGImage=}8@0:4' type64='^{CGImage=}16@0:8' selector='image'>
+<retval declared_type='CGImageRef' type='^{CGImage=}'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='imageProperties'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method type='v16@0:4^{CGImage=}8@12' type64='v32@0:8^{CGImage=}16@24' selector='setImage:imageProperties:'>
+<arg name='image' declared_type='CGImageRef' type='^{CGImage=}' index='0'/>
+<arg name='metaData' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='^{CGImage=}16@0:4{_NSSize=ff}8' type64='^{CGImage=}32@0:8{CGSize=dd}16' selector='thumbnailWithMaximumSize:'>
+<arg name='size' declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}' index='0'/>
+<retval declared_type='CGImageRef' type='^{CGImage=}'/>
+</method>
 </informal_protocol>
 <informal_protocol name='IKSlideshowDataSource'>
-<method type='B16@0:4I8@12' type64='B32@0:8Q16@24' selector='canExportSlideshowItemAtIndex:toApplication:'/>
-<method type='@12@0:4I8' type64='@24@0:8Q16' selector='nameOfSlideshowItemAtIndex:'/>
-<method type='I8@0:4' type64='Q16@0:8' selector='numberOfSlideshowItems'/>
-<method type='v12@0:4I8' type64='v24@0:8Q16' selector='slideshowDidChangeCurrentIndex:'/>
-<method type='v8@0:4' type64='v16@0:8' selector='slideshowDidStop'/>
-<method type='@12@0:4I8' type64='@24@0:8Q16' selector='slideshowItemAtIndex:'/>
-<method type='v8@0:4' type64='v16@0:8' selector='slideshowWillStart'/>
+<method type='B16@0:4I8@12' type64='B32@0:8Q16@24' selector='canExportSlideshowItemAtIndex:toApplication:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<arg name='applicationBundleIdentifier' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='@12@0:4I8' type64='@24@0:8Q16' selector='nameOfSlideshowItemAtIndex:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='I8@0:4' type64='Q16@0:8' selector='numberOfSlideshowItems'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='v12@0:4I8' type64='v24@0:8Q16' selector='slideshowDidChangeCurrentIndex:'>
+<arg name='newIndex' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v8@0:4' type64='v16@0:8' selector='slideshowDidStop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@12@0:4I8' type64='@24@0:8Q16' selector='slideshowItemAtIndex:'>
+<arg name='index' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='v8@0:4' type64='v16@0:8' selector='slideshowWillStart'>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 </signatures>

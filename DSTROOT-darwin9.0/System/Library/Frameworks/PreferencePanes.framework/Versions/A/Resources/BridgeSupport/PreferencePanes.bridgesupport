@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
@@ -11,8 +10,8 @@
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
-<constant name='NSPreferencePaneCancelUnselectNotification' type='@'/>
-<constant name='NSPreferencePaneDoUnselectNotification' type='@'/>
+<constant name='NSPreferencePaneCancelUnselectNotification' declared_type='NSString*' type='@'/>
+<constant name='NSPreferencePaneDoUnselectNotification' declared_type='NSString*' type='@'/>
 <string_constant name='kNSPrefPaneHelpMenuAnchorKey' nsstring='true' value='anchor'/>
 <string_constant name='kNSPrefPaneHelpMenuInfoPListKey' nsstring='true' value='NSPrefPaneHelpAnchors'/>
 <string_constant name='kNSPrefPaneHelpMenuTitleKey' nsstring='true' value='title'/>
@@ -20,14 +19,81 @@
 <enum name='NSUnselectLater' value='2'/>
 <enum name='NSUnselectNow' value='1'/>
 <class name='NSPreferencePane'>
+<method selector='assignMainView'>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='autoSaveTextFields'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bundle'>
+<retval declared_type='NSBundle*' type='@'/>
+</method>
+<method selector='didSelect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didUnselect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='firstKeyView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='initWithBundle:'>
+<arg name='bundle' declared_type='NSBundle*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initialKeyView'>
+<retval declared_type='NSView*' type='@'/>
 </method>
 <method selector='isSelected'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastKeyView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='loadMainView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='mainNibName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='mainView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='mainViewDidLoad'>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='replyToShouldUnselect:'>
-<arg type='B' index='0'/>
+<arg name='shouldUnselect' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFirstKeyView:'>
+<arg name='view' declared_type='NSView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInitialKeyView:'>
+<arg name='view' declared_type='NSView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLastKeyView:'>
+<arg name='view' declared_type='NSView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMainView:'>
+<arg name='view' declared_type='NSView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldUnselect'>
+<retval declared_type='NSPreferencePaneUnselectReply' type='i'/>
+</method>
+<method selector='updateHelpMenuWithArray:'>
+<arg name='inArrayOfMenuItems' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willSelect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willUnselect'>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 </signatures>

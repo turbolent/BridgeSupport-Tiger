@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/JavaVM.framework'/>
 <depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
@@ -7,8 +6,49 @@
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
-<constant name='JavaFrameViewDidCreateJavaFrame' type='@'/>
+<constant name='JavaFrameViewDidCreateJavaFrame' declared_type='NSString*' type='@'/>
+<class name='JavaFrameView'>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrame:javaFrameClassName:'>
+<arg name='inFrameRect' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='0'/>
+<arg name='inClassName' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='javaFrame'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='javaFrameClassName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='anObject' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setJavaFrameClassName:'>
+<arg name='inClassName' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setJavaStartupOptions:'>
+<arg name='inStartupOptions' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='javaFrameView:didCreateJavaFrame:withJNIEnv:'>
+<arg name='sender' declared_type='JavaFrameView*' type='@' index='0'/>
+<arg name='javaFrame' declared_type='id' type='@' index='1'/>
+<arg name='theEnv' declared_type='id' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
 <informal_protocol name='JavaFrameViewDelegate'>
-<method type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32' selector='javaFrameView:didCreateJavaFrame:withJNIEnv:'/>
+<method type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32' selector='javaFrameView:didCreateJavaFrame:withJNIEnv:'>
+<arg name='sender' declared_type='JavaFrameView*' type='@' index='0'/>
+<arg name='javaFrame' declared_type='id' type='@' index='1'/>
+<arg name='theEnv' declared_type='id' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 </signatures>

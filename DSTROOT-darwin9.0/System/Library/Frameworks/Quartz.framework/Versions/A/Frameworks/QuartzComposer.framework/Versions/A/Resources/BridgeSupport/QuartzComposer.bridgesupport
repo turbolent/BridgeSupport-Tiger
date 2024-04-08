@@ -1,5 +1,4 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
@@ -12,71 +11,71 @@
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
-<constant name='QCCompositionAttributeBuiltInKey' type='@'/>
-<constant name='QCCompositionAttributeCategoryKey' type='@'/>
-<constant name='QCCompositionAttributeCopyrightKey' type='@'/>
-<constant name='QCCompositionAttributeDescriptionKey' type='@'/>
-<constant name='QCCompositionAttributeHasConsumersKey' type='@'/>
-<constant name='QCCompositionAttributeIsTimeDependentKey' type='@'/>
-<constant name='QCCompositionAttributeNameKey' type='@'/>
-<constant name='QCCompositionCategoryDistortion' type='@'/>
-<constant name='QCCompositionCategoryStylize' type='@'/>
-<constant name='QCCompositionCategoryUtility' type='@'/>
-<constant name='QCCompositionInputAudioPeakKey' type='@'/>
-<constant name='QCCompositionInputAudioSpectrumKey' type='@'/>
-<constant name='QCCompositionInputDestinationImageKey' type='@'/>
-<constant name='QCCompositionInputImageKey' type='@'/>
-<constant name='QCCompositionInputPaceKey' type='@'/>
-<constant name='QCCompositionInputPreviewModeKey' type='@'/>
-<constant name='QCCompositionInputPrimaryColorKey' type='@'/>
-<constant name='QCCompositionInputRSSArticleDurationKey' type='@'/>
-<constant name='QCCompositionInputRSSFeedURLKey' type='@'/>
-<constant name='QCCompositionInputScreenImageKey' type='@'/>
-<constant name='QCCompositionInputSecondaryColorKey' type='@'/>
-<constant name='QCCompositionInputSourceImageKey' type='@'/>
-<constant name='QCCompositionInputTrackInfoKey' type='@'/>
-<constant name='QCCompositionInputTrackPositionKey' type='@'/>
-<constant name='QCCompositionInputTrackSignalKey' type='@'/>
-<constant name='QCCompositionInputXKey' type='@'/>
-<constant name='QCCompositionInputYKey' type='@'/>
-<constant name='QCCompositionOutputImageKey' type='@'/>
-<constant name='QCCompositionOutputWebPageURLKey' type='@'/>
-<constant name='QCCompositionPickerPanelDidSelectCompositionNotification' type='@'/>
-<constant name='QCCompositionPickerViewDidSelectCompositionNotification' type='@'/>
-<constant name='QCCompositionProtocolGraphicAnimation' type='@'/>
-<constant name='QCCompositionProtocolGraphicTransition' type='@'/>
-<constant name='QCCompositionProtocolImageFilter' type='@'/>
-<constant name='QCCompositionProtocolMusicVisualizer' type='@'/>
-<constant name='QCCompositionProtocolRSSVisualizer' type='@'/>
-<constant name='QCCompositionProtocolScreenSaver' type='@'/>
-<constant name='QCCompositionRepositoryDidUpdateNotification' type='@'/>
-<constant name='QCPlugInAttributeCopyrightKey' type='@'/>
-<constant name='QCPlugInAttributeDescriptionKey' type='@'/>
-<constant name='QCPlugInAttributeNameKey' type='@'/>
-<constant name='QCPlugInExecutionArgumentEventKey' type='@'/>
-<constant name='QCPlugInExecutionArgumentMouseLocationKey' type='@'/>
-<constant name='QCPlugInPixelFormatARGB8' type='@'/>
-<constant name='QCPlugInPixelFormatBGRA8' type='@'/>
-<constant name='QCPlugInPixelFormatI8' type='@'/>
-<constant name='QCPlugInPixelFormatIf' type='@'/>
-<constant name='QCPlugInPixelFormatRGBAf' type='@'/>
-<constant name='QCPortAttributeDefaultValueKey' type='@'/>
-<constant name='QCPortAttributeMaximumValueKey' type='@'/>
-<constant name='QCPortAttributeMenuItemsKey' type='@'/>
-<constant name='QCPortAttributeMinimumValueKey' type='@'/>
-<constant name='QCPortAttributeNameKey' type='@'/>
-<constant name='QCPortAttributeTypeKey' type='@'/>
-<constant name='QCPortTypeBoolean' type='@'/>
-<constant name='QCPortTypeColor' type='@'/>
-<constant name='QCPortTypeImage' type='@'/>
-<constant name='QCPortTypeIndex' type='@'/>
-<constant name='QCPortTypeNumber' type='@'/>
-<constant name='QCPortTypeString' type='@'/>
-<constant name='QCPortTypeStructure' type='@'/>
-<constant name='QCRendererEventKey' type='@'/>
-<constant name='QCRendererMouseLocationKey' type='@'/>
-<constant name='QCViewDidStartRenderingNotification' type='@'/>
-<constant name='QCViewDidStopRenderingNotification' type='@'/>
+<constant name='QCCompositionAttributeBuiltInKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionAttributeCategoryKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionAttributeCopyrightKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionAttributeDescriptionKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionAttributeHasConsumersKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionAttributeIsTimeDependentKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionAttributeNameKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionCategoryDistortion' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionCategoryStylize' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionCategoryUtility' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputAudioPeakKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputAudioSpectrumKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputDestinationImageKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputImageKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputPaceKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputPreviewModeKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputPrimaryColorKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputRSSArticleDurationKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputRSSFeedURLKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputScreenImageKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputSecondaryColorKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputSourceImageKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputTrackInfoKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputTrackPositionKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputTrackSignalKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputXKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionInputYKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionOutputImageKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionOutputWebPageURLKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionPickerPanelDidSelectCompositionNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionPickerViewDidSelectCompositionNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionProtocolGraphicAnimation' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionProtocolGraphicTransition' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionProtocolImageFilter' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionProtocolMusicVisualizer' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionProtocolRSSVisualizer' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionProtocolScreenSaver' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCCompositionRepositoryDidUpdateNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInAttributeCopyrightKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInAttributeDescriptionKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInAttributeNameKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInExecutionArgumentEventKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInExecutionArgumentMouseLocationKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInPixelFormatARGB8' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInPixelFormatBGRA8' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInPixelFormatI8' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInPixelFormatIf' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPlugInPixelFormatRGBAf' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortAttributeDefaultValueKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortAttributeMaximumValueKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortAttributeMenuItemsKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortAttributeMinimumValueKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortAttributeNameKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortAttributeTypeKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortTypeBoolean' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortTypeColor' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortTypeImage' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortTypeIndex' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortTypeNumber' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortTypeString' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCPortTypeStructure' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCRendererEventKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCRendererMouseLocationKey' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCViewDidStartRenderingNotification' declared_type='NSString*' type='@' const='true'/>
+<constant name='QCViewDidStopRenderingNotification' declared_type='NSString*' type='@' const='true'/>
 <enum name='kQCPlugInExecutionModeConsumer' value='3'/>
 <enum name='kQCPlugInExecutionModeProcessor' value='2'/>
 <enum name='kQCPlugInExecutionModeProvider' value='1'/>
@@ -84,212 +83,914 @@
 <enum name='kQCPlugInTimeModeNone' value='0'/>
 <enum name='kQCPlugInTimeModeTimeBase' value='2'/>
 <class name='NSObject'>
+<method selector='CGLContextObj'>
+<retval declared_type='CGLContextObj' type='^{_CGLContextObject=}'/>
+</method>
+<method selector='attributes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
 <method selector='bindTextureRepresentationToCGLContext:textureUnit:normalizeCoordinates:'>
-<arg type='B' index='2'/>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='unit' declared_type='GLenum' type='I' index='1'/>
+<arg name='flag' declared_type='BOOL' type='B' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bounds'>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='bufferBaseAddress'>
+<retval declared_type='void*' type='^v' const='true'/>
+</method>
+<method selector='bufferBytesPerRow'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='bufferColorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method selector='bufferPixelFormat'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='bufferPixelsHigh'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='bufferPixelsWide'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
 </method>
 <method selector='canRenderWithCGLContext:'>
-<retval type='B'/>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='colorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method selector='compositionParameterView:didChangeParameterWithKey:'>
+<arg name='parameterView' declared_type='QCCompositionParameterView*' type='@' index='0'/>
+<arg name='portKey' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='compositionParameterView:shouldDisplayParameterWithKey:attributes:'>
-<retval type='B'/>
+<arg name='parameterView' declared_type='QCCompositionParameterView*' type='@' index='0'/>
+<arg name='portKey' declared_type='NSString*' type='@' index='1'/>
+<arg name='portAttributes' declared_type='NSDictionary*' type='@' index='2'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='compositionPickerView:didSelectComposition:'>
+<arg name='pickerView' declared_type='QCCompositionPickerView*' type='@' index='0'/>
+<arg name='composition' declared_type='QCComposition*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='compositionPickerViewDidStartAnimating:'>
+<arg name='pickerView' declared_type='QCCompositionPickerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='compositionPickerViewWillStopAnimating:'>
+<arg name='pickerView' declared_type='QCCompositionPickerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='compositionURL'>
+<retval declared_type='NSURL*' type='@'/>
 </method>
 <method selector='copyRenderedTextureForCGLContext:pixelFormat:bounds:isFlipped:'>
-<arg type='^B' index='3'/>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='format' declared_type='NSString*' type='@' index='1'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='2'/>
+<arg name='flipped' declared_type='BOOL*' type='^B' index='3'/>
+<retval declared_type='GLuint' type='I'/>
+</method>
+<method selector='imageBounds'>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='imageColorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method selector='inputKeys'>
+<retval declared_type='NSArray*' type='@'/>
 </method>
 <method selector='lockBufferRepresentationWithPixelFormat:colorSpace:forBounds:'>
-<retval type='B'/>
+<arg name='format' declared_type='NSString*' type='@' index='0'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='1'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='2'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='lockTextureRepresentationWithColorSpace:forBounds:'>
-<retval type='B'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='0'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='1'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method variadic='true' selector='logMessage:'>
-<arg printf_format='true' index='0'/>
+<arg name='format' printf_format='true' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='outputImageProviderFromBufferWithPixelFormat:pixelsWide:pixelsHigh:baseAddress:bytesPerRow:releaseCallback:releaseContext:colorSpace:shouldColorMatch:'>
-<arg function_pointer='true' type='^?' index='5'>
-<arg type='^v'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='format' declared_type='NSString*' type='@' index='0'/>
+<arg name='width' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='height' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='baseAddress' declared_type='void*' type='^v' const='true' index='3'/>
+<arg name='rowBytes' declared_type='NSUInteger' type='I' type64='Q' index='4'/>
+<arg name='callback' function_pointer='true' declared_type='QCPlugInBufferReleaseCallback' type='^?' index='5'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='B' index='8'/>
+<arg name='context' declared_type='void*' type='^v' index='6'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='7'/>
+<arg name='colorMatch' declared_type='BOOL' type='B' index='8'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='outputImageProviderFromTextureWithPixelFormat:pixelsWide:pixelsHigh:name:flipped:releaseCallback:releaseContext:colorSpace:shouldColorMatch:'>
-<arg type='B' index='4'/>
-<arg function_pointer='true' type='^?' index='5'>
-<arg type='^{_CGLContextObject=}'/>
-<arg type='I'/>
-<arg type='^v'/>
-<retval type='v'/>
+<arg name='format' declared_type='NSString*' type='@' index='0'/>
+<arg name='width' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='height' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='name' declared_type='GLuint' type='I' index='3'/>
+<arg name='flipped' declared_type='BOOL' type='B' index='4'/>
+<arg name='callback' function_pointer='true' declared_type='QCPlugInTextureReleaseCallback' type='^?' index='5'>
+<arg declared_type='CGLContextObj' type='^{_CGLContextObject=}'/>
+<arg declared_type='GLuint' type='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </arg>
-<arg type='B' index='8'/>
+<arg name='context' declared_type='void*' type='^v' index='6'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='7'/>
+<arg name='colorMatch' declared_type='BOOL' type='B' index='8'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='outputKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='propertyListFromInputValues'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='releaseRenderedTexture:forCGLContext:'>
+<arg name='name' declared_type='GLuint' type='I' index='0'/>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='1'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='renderToBuffer:withBytesPerRow:pixelFormat:forBounds:'>
-<retval type='B'/>
+<arg name='baseAddress' declared_type='void*' type='^v' index='0'/>
+<arg name='rowBytes' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='format' declared_type='NSString*' type='@' index='2'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='3'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='renderWithCGLContext:forBounds:'>
-<retval type='B'/>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setInputValuesWithPropertyList:'>
+<arg name='plist' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setValue:forInputKey:'>
-<retval type='B'/>
+<arg name='value' declared_type='id' type='@' index='0'/>
+<arg name='key' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='shouldColorMatch'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='supportedBufferPixelFormats'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='supportedRenderedTexturePixelFormats'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='textureColorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
 </method>
 <method selector='textureFlipped'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='textureMatrix'>
+<retval declared_type='GLfloat*' type='^f' const='true'/>
+</method>
+<method selector='textureName'>
+<retval declared_type='GLuint' type='I'/>
+</method>
+<method selector='texturePixelsHigh'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='texturePixelsWide'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='textureTarget'>
+<retval declared_type='GLenum' type='I'/>
+</method>
+<method selector='unbindTextureRepresentationFromCGLContext:textureUnit:'>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='unit' declared_type='GLenum' type='I' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unlockBufferRepresentation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unlockTextureRepresentation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='valueForInputKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='valueForOutputKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='valueForOutputKey:ofType:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<arg name='type' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='QCComposition'>
+<method selector='attributes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='compositionWithData:'>
+<arg name='data' declared_type='NSData*' type='@' index='0'/>
+<retval declared_type='QCComposition*' type='@'/>
+</method>
+<method class_method='true' selector='compositionWithFile:'>
+<arg name='path' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='QCComposition*' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='inputKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='outputKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='protocols'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='QCCompositionLayer'>
+<method selector='composition'>
+<retval declared_type='QCComposition*' type='@'/>
+</method>
+<method class_method='true' selector='compositionLayerWithComposition:'>
+<arg name='composition' declared_type='QCComposition*' type='@' index='0'/>
+<retval declared_type='QCCompositionLayer*' type='@'/>
+</method>
+<method class_method='true' selector='compositionLayerWithFile:'>
+<arg name='path' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='QCCompositionLayer*' type='@'/>
+</method>
+<method selector='initWithComposition:'>
+<arg name='composition' declared_type='QCComposition*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFile:'>
+<arg name='path' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
 </method>
 </class>
 <class name='QCCompositionParameterView'>
+<method selector='backgroundColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='compositionRenderer'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
 <method selector='drawsBackground'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='hasParameters'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setBackgroundColor:'>
+<arg name='color' declared_type='NSColor*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCompositionRenderer:'>
+<arg name='renderer' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setDrawsBackground:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='QCCompositionPickerPanel'>
+<method selector='compositionPickerView'>
+<retval declared_type='QCCompositionPickerView*' type='@'/>
+</method>
+<method class_method='true' selector='sharedCompositionPickerPanel'>
+<retval declared_type='QCCompositionPickerPanel*' type='@'/>
 </method>
 </class>
 <class name='QCCompositionPickerView'>
 <method selector='allowsEmptySelection'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='backgroundColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='compositionAspectRatio'>
+<retval declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='compositions'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='drawsBackground'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='isAnimating'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='maxAnimationFrameRate'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='numberOfColumns'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='numberOfRows'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='resetDefaultInputValues'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='selectedComposition'>
+<retval declared_type='QCComposition*' type='@'/>
 </method>
 <method selector='setAllowsEmptySelection:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundColor:'>
+<arg name='color' declared_type='NSColor*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCompositionAspectRatio:'>
+<arg name='ratio' declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCompositionsFromRepositoryWithProtocol:andAttributes:'>
+<arg name='protocol' declared_type='NSString*' type='@' index='0'/>
+<arg name='attributes' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultValue:forInputKey:'>
+<arg name='value' declared_type='id' type='@' index='0'/>
+<arg name='key' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setDrawsBackground:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxAnimationFrameRate:'>
+<arg name='maxFPS' declared_type='float' type='f' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfColumns:'>
+<arg name='columns' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfRows:'>
+<arg name='rows' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSelectedComposition:'>
+<arg name='composition' declared_type='QCComposition*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setShowsCompositionNames:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='showsCompositionNames'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='startAnimation:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopAnimation:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='QCCompositionRepository'>
+<method selector='allCompositions'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='compositionWithIdentifier:'>
+<arg name='identifier' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='QCComposition*' type='@'/>
+</method>
+<method selector='compositionsWithProtocols:andAttributes:'>
+<arg name='protocols' declared_type='NSArray*' type='@' index='0'/>
+<arg name='attributes' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='sharedCompositionRepository'>
+<retval declared_type='QCCompositionRepository*' type='@'/>
 </method>
 </class>
 <class name='QCPlugIn'>
+<method selector='addInputPortWithType:forKey:withAttributes:'>
+<arg name='type' declared_type='NSString*' type='@' index='0'/>
+<arg name='key' declared_type='NSString*' type='@' index='1'/>
+<arg name='attributes' declared_type='NSDictionary*' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addOutputPortWithType:forKey:withAttributes:'>
+<arg name='type' declared_type='NSString*' type='@' index='0'/>
+<arg name='key' declared_type='NSString*' type='@' index='1'/>
+<arg name='attributes' declared_type='NSDictionary*' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='attributes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='attributesForPropertyPortWithKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='createViewController'>
+<retval declared_type='QCPlugInViewController*' type='@'/>
+</method>
 <method selector='didValueForInputKeyChange:'>
-<retval type='B'/>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableExecution:'>
+<arg name='context' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='enableExecution:'>
+<arg name='context' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='execute:atTime:withArguments:'>
-<retval type='B'/>
+<arg name='context' declared_type='id' type='@' index='0'/>
+<arg name='time' declared_type='NSTimeInterval' type='d' index='1'/>
+<arg name='arguments' declared_type='NSDictionary*' type='@' index='2'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='executionMode'>
+<retval declared_type='QCPlugInExecutionMode' type='i'/>
 </method>
 <method class_method='true' selector='loadPlugInAtPath:'>
-<retval type='B'/>
+<arg name='path' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='plugInKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='registerPlugInClass:'>
+<arg name='aClass' declared_type='Class' type='#' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeInputPortForKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeOutputPortForKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='serializedValueForKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setSerializedValue:forKey:'>
+<arg name='serializedValue' declared_type='id' type='@' index='0'/>
+<arg name='key' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setValue:forOutputKey:'>
-<retval type='B'/>
+<arg name='value' declared_type='id' type='@' index='0'/>
+<arg name='key' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='sortedPropertyPortKeys'>
+<retval declared_type='NSArray*' type='@'/>
 </method>
 <method selector='startExecution:'>
-<retval type='B'/>
+<arg name='context' declared_type='id' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='stopExecution:'>
+<arg name='context' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='timeMode'>
+<retval declared_type='QCPlugInTimeMode' type='i'/>
+</method>
+<method selector='valueForInputKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='QCPlugInViewController'>
+<method selector='initWithPlugIn:viewNibName:'>
+<arg name='plugIn' declared_type='QCPlugIn*' type='@' index='0'/>
+<arg name='name' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='plugIn'>
+<retval declared_type='QCPlugIn*' type='@'/>
 </method>
 </class>
 <class name='QCRenderer'>
+<method selector='composition'>
+<retval declared_type='QCComposition*' type='@'/>
+</method>
+<method selector='createSnapshotImageOfType:'>
+<arg name='type' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initOffScreenWithSize:colorSpace:composition:'>
+<arg name='size' declared_type='NSSize' type='{_NSSize=ff}' type64='{CGSize=dd}' index='0'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='1'/>
+<arg name='composition' declared_type='QCComposition*' type='@' index='2'/>
+<retval declared_type='id' type='@'/>
+</method>
 <method selector='initWithCGLContext:pixelFormat:colorSpace:composition:'>
-<arg index='0' type_modifier='n'/>
-<arg index='1' type_modifier='n'/>
+<arg name='context' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0' type_modifier='n'/>
+<arg name='format' declared_type='CGLPixelFormatObj' type='^{_CGLPixelFormatObject=}' index='1' type_modifier='n'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='2'/>
+<arg name='composition' declared_type='QCComposition*' type='@' index='3'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithComposition:colorSpace:'>
+<arg name='composition' declared_type='QCComposition*' type='@' index='0'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithOpenGLContext:pixelFormat:file:'>
+<arg name='context' declared_type='NSOpenGLContext*' type='@' index='0'/>
+<arg name='format' declared_type='NSOpenGLPixelFormat*' type='@' index='1'/>
+<arg name='path' declared_type='NSString*' type='@' index='2'/>
+<retval declared_type='id' type='@'/>
 </method>
 <method selector='renderAtTime:arguments:'>
-<retval type='B'/>
+<arg name='time' declared_type='NSTimeInterval' type='d' index='0'/>
+<arg name='arguments' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='snapshotImage'>
+<retval declared_type='NSImage*' type='@'/>
 </method>
 </class>
 <class name='QCView'>
 <method selector='autostartsRendering'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='createSnapshotImageOfType:'>
+<arg name='type' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='erase'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='eraseColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='eventForwardingMask'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
 </method>
 <method selector='isPausedRendering'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='isRendering'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='loadComposition:'>
-<retval type='B'/>
+<arg name='composition' declared_type='QCComposition*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='loadCompositionFromFile:'>
-<retval type='B'/>
+<arg name='path' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loadedComposition'>
+<retval declared_type='QCComposition*' type='@'/>
+</method>
+<method selector='maxRenderingFrameRate'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='openGLContext'>
+<retval declared_type='NSOpenGLContext*' type='@'/>
+</method>
+<method selector='openGLPixelFormat'>
+<retval declared_type='NSOpenGLPixelFormat*' type='@'/>
+</method>
+<method selector='pauseRendering'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='play:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='renderAtTime:arguments:'>
-<retval type='B'/>
+<arg name='time' declared_type='NSTimeInterval' type='d' index='0'/>
+<arg name='arguments' declared_type='NSDictionary*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='resumeRendering'>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='setAutostartsRendering:'>
-<arg type='B' index='0'/>
+<arg name='flag' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEraseColor:'>
+<arg name='color' declared_type='NSColor*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEventForwardingMask:'>
+<arg name='mask' declared_type='NSUInteger' type='I' type64='Q' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxRenderingFrameRate:'>
+<arg name='maxFPS' declared_type='float' type='f' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='snapshotImage'>
+<retval declared_type='NSImage*' type='@'/>
+</method>
+<method selector='start:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
 </method>
 <method selector='startRendering'>
-<retval type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='stop:'>
+<arg name='sender' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopRendering'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unloadComposition'>
+<retval declared_type='void' type='v'/>
 </method>
 </class>
 <informal_protocol name='QCCompositionParameterViewDelegate'>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='compositionParameterView:didChangeParameterWithKey:'/>
-<method type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32' selector='compositionParameterView:shouldDisplayParameterWithKey:attributes:'/>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='compositionParameterView:didChangeParameterWithKey:'>
+<arg name='parameterView' declared_type='QCCompositionParameterView*' type='@' index='0'/>
+<arg name='portKey' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32' selector='compositionParameterView:shouldDisplayParameterWithKey:attributes:'>
+<arg name='parameterView' declared_type='QCCompositionParameterView*' type='@' index='0'/>
+<arg name='portKey' declared_type='NSString*' type='@' index='1'/>
+<arg name='portAttributes' declared_type='NSDictionary*' type='@' index='2'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
 </informal_protocol>
 <informal_protocol name='QCCompositionPickerViewDelegate'>
-<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='compositionPickerView:didSelectComposition:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='compositionPickerViewDidStartAnimating:'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='compositionPickerViewWillStopAnimating:'/>
+<method type='v16@0:4@8@12' type64='v32@0:8@16@24' selector='compositionPickerView:didSelectComposition:'>
+<arg name='pickerView' declared_type='QCCompositionPickerView*' type='@' index='0'/>
+<arg name='composition' declared_type='QCComposition*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='compositionPickerViewDidStartAnimating:'>
+<arg name='pickerView' declared_type='QCCompositionPickerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='compositionPickerViewWillStopAnimating:'>
+<arg name='pickerView' declared_type='QCCompositionPickerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 <informal_protocol name='QCCompositionRenderer'>
-<method type='@8@0:4' type64='@16@0:8' selector='attributes'/>
-<method type='@8@0:4' type64='@16@0:8' selector='inputKeys'/>
-<method type='@8@0:4' type64='@16@0:8' selector='outputKeys'/>
-<method type='@8@0:4' type64='@16@0:8' selector='propertyListFromInputValues'/>
-<method type='v12@0:4@8' type64='v24@0:8@16' selector='setInputValuesWithPropertyList:'/>
-<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='setValue:forInputKey:'/>
-<method type='@8@0:4' type64='@16@0:8' selector='userInfo'/>
-<method type='@12@0:4@8' type64='@24@0:8@16' selector='valueForInputKey:'/>
-<method type='@12@0:4@8' type64='@24@0:8@16' selector='valueForOutputKey:'/>
-<method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='valueForOutputKey:ofType:'/>
+<method type='@8@0:4' type64='@16@0:8' selector='attributes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='inputKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='outputKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='propertyListFromInputValues'>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='v12@0:4@8' type64='v24@0:8@16' selector='setInputValuesWithPropertyList:'>
+<arg name='plist' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='B16@0:4@8@12' type64='B32@0:8@16@24' selector='setValue:forInputKey:'>
+<arg name='value' declared_type='id' type='@' index='0'/>
+<arg name='key' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='userInfo'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method type='@12@0:4@8' type64='@24@0:8@16' selector='valueForInputKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='@12@0:4@8' type64='@24@0:8@16' selector='valueForOutputKey:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='@16@0:4@8@12' type64='@32@0:8@16@24' selector='valueForOutputKey:ofType:'>
+<arg name='key' declared_type='NSString*' type='@' index='0'/>
+<arg name='type' declared_type='NSString*' type='@' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
 </informal_protocol>
 <informal_protocol name='QCPlugInContext'>
-<method type='^{_CGLContextObject=}8@0:4' type64='^{_CGLContextObject=}16@0:8' selector='CGLContextObj'/>
-<method type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}8@0:4' type64='{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8' selector='bounds'/>
-<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='colorSpace'/>
-<method type='@8@0:4' type64='@16@0:8' selector='compositionURL'/>
-<method variadic='true' type='v12@0:4@8' type64='v24@0:8@16' selector='logMessage:'/>
-<method type='@44@0:4@8I12I16r^v20I24^?28^v32^{CGColorSpace=}36B40' type64='@84@0:8@16Q24Q32r^v40Q48^?56^v64^{CGColorSpace=}72B80' selector='outputImageProviderFromBufferWithPixelFormat:pixelsWide:pixelsHigh:baseAddress:bytesPerRow:releaseCallback:releaseContext:colorSpace:shouldColorMatch:'/>
-<method type='@44@0:4@8I12I16I20B24^?28^v32^{CGColorSpace=}36B40' type64='@76@0:8@16Q24Q32I40B44^?48^v56^{CGColorSpace=}64B72' selector='outputImageProviderFromTextureWithPixelFormat:pixelsWide:pixelsHigh:name:flipped:releaseCallback:releaseContext:colorSpace:shouldColorMatch:'/>
-<method type='@8@0:4' type64='@16@0:8' selector='userInfo'/>
+<method type='^{_CGLContextObject=}8@0:4' type64='^{_CGLContextObject=}16@0:8' selector='CGLContextObj'>
+<retval declared_type='CGLContextObj' type='^{_CGLContextObject=}'/>
+</method>
+<method type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}8@0:4' type64='{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8' selector='bounds'>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='colorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='compositionURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method variadic='true' type='v12@0:4@8' type64='v24@0:8@16' selector='logMessage:'>
+<arg name='format' printf_format='true' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@44@0:4@8I12I16r^v20I24^?28^v32^{CGColorSpace=}36B40' type64='@84@0:8@16Q24Q32r^v40Q48^?56^v64^{CGColorSpace=}72B80' selector='outputImageProviderFromBufferWithPixelFormat:pixelsWide:pixelsHigh:baseAddress:bytesPerRow:releaseCallback:releaseContext:colorSpace:shouldColorMatch:'>
+<arg name='format' declared_type='NSString*' type='@' index='0'/>
+<arg name='width' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='height' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='baseAddress' declared_type='void*' type='^v' const='true' index='3'/>
+<arg name='rowBytes' declared_type='NSUInteger' type='I' type64='Q' index='4'/>
+<arg name='callback' function_pointer='true' declared_type='QCPlugInBufferReleaseCallback' type='^?' index='5'>
+<arg declared_type='void*' type='^v' const='true'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg name='context' declared_type='void*' type='^v' index='6'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='7'/>
+<arg name='colorMatch' declared_type='BOOL' type='B' index='8'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='@44@0:4@8I12I16I20B24^?28^v32^{CGColorSpace=}36B40' type64='@76@0:8@16Q24Q32I40B44^?48^v56^{CGColorSpace=}64B72' selector='outputImageProviderFromTextureWithPixelFormat:pixelsWide:pixelsHigh:name:flipped:releaseCallback:releaseContext:colorSpace:shouldColorMatch:'>
+<arg name='format' declared_type='NSString*' type='@' index='0'/>
+<arg name='width' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='height' declared_type='NSUInteger' type='I' type64='Q' index='2'/>
+<arg name='name' declared_type='GLuint' type='I' index='3'/>
+<arg name='flipped' declared_type='BOOL' type='B' index='4'/>
+<arg name='callback' function_pointer='true' declared_type='QCPlugInTextureReleaseCallback' type='^?' index='5'>
+<arg declared_type='CGLContextObj' type='^{_CGLContextObject=}'/>
+<arg declared_type='GLuint' type='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg name='context' declared_type='void*' type='^v' index='6'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='7'/>
+<arg name='colorMatch' declared_type='BOOL' type='B' index='8'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='userInfo'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
 </informal_protocol>
 <informal_protocol name='QCPlugInInputImageSource'>
-<method type='v20@0:4^{_CGLContextObject=}8I12B16' type64='v32@0:8^{_CGLContextObject=}16I24B28' selector='bindTextureRepresentationToCGLContext:textureUnit:normalizeCoordinates:'/>
-<method type='r^v8@0:4' type64='r^v16@0:8' selector='bufferBaseAddress'/>
-<method type='I8@0:4' type64='Q16@0:8' selector='bufferBytesPerRow'/>
-<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='bufferColorSpace'/>
-<method type='@8@0:4' type64='@16@0:8' selector='bufferPixelFormat'/>
-<method type='I8@0:4' type64='Q16@0:8' selector='bufferPixelsHigh'/>
-<method type='I8@0:4' type64='Q16@0:8' selector='bufferPixelsWide'/>
-<method type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}8@0:4' type64='{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8' selector='imageBounds'/>
-<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='imageColorSpace'/>
-<method type='B32@0:4@8^{CGColorSpace=}12{_NSRect={_NSPoint=ff}{_NSSize=ff}}16' type64='B64@0:8@16^{CGColorSpace=}24{CGRect={CGPoint=dd}{CGSize=dd}}32' selector='lockBufferRepresentationWithPixelFormat:colorSpace:forBounds:'/>
-<method type='B28@0:4^{CGColorSpace=}8{_NSRect={_NSPoint=ff}{_NSSize=ff}}12' type64='B56@0:8^{CGColorSpace=}16{CGRect={CGPoint=dd}{CGSize=dd}}24' selector='lockTextureRepresentationWithColorSpace:forBounds:'/>
-<method type='B8@0:4' type64='B16@0:8' selector='shouldColorMatch'/>
-<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='textureColorSpace'/>
-<method type='B8@0:4' type64='B16@0:8' selector='textureFlipped'/>
-<method type='r^f8@0:4' type64='r^f16@0:8' selector='textureMatrix'/>
-<method type='I8@0:4' type64='I16@0:8' selector='textureName'/>
-<method type='I8@0:4' type64='Q16@0:8' selector='texturePixelsHigh'/>
-<method type='I8@0:4' type64='Q16@0:8' selector='texturePixelsWide'/>
-<method type='I8@0:4' type64='I16@0:8' selector='textureTarget'/>
-<method type='v16@0:4^{_CGLContextObject=}8I12' type64='v28@0:8^{_CGLContextObject=}16I24' selector='unbindTextureRepresentationFromCGLContext:textureUnit:'/>
-<method type='v8@0:4' type64='v16@0:8' selector='unlockBufferRepresentation'/>
-<method type='v8@0:4' type64='v16@0:8' selector='unlockTextureRepresentation'/>
+<method type='v20@0:4^{_CGLContextObject=}8I12B16' type64='v32@0:8^{_CGLContextObject=}16I24B28' selector='bindTextureRepresentationToCGLContext:textureUnit:normalizeCoordinates:'>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='unit' declared_type='GLenum' type='I' index='1'/>
+<arg name='flag' declared_type='BOOL' type='B' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='r^v8@0:4' type64='r^v16@0:8' selector='bufferBaseAddress'>
+<retval declared_type='void*' type='^v' const='true'/>
+</method>
+<method type='I8@0:4' type64='Q16@0:8' selector='bufferBytesPerRow'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='bufferColorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='bufferPixelFormat'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method type='I8@0:4' type64='Q16@0:8' selector='bufferPixelsHigh'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='I8@0:4' type64='Q16@0:8' selector='bufferPixelsWide'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}8@0:4' type64='{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8' selector='imageBounds'>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='imageColorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method type='B32@0:4@8^{CGColorSpace=}12{_NSRect={_NSPoint=ff}{_NSSize=ff}}16' type64='B64@0:8@16^{CGColorSpace=}24{CGRect={CGPoint=dd}{CGSize=dd}}32' selector='lockBufferRepresentationWithPixelFormat:colorSpace:forBounds:'>
+<arg name='format' declared_type='NSString*' type='@' index='0'/>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='1'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='2'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B28@0:4^{CGColorSpace=}8{_NSRect={_NSPoint=ff}{_NSSize=ff}}12' type64='B56@0:8^{CGColorSpace=}16{CGRect={CGPoint=dd}{CGSize=dd}}24' selector='lockTextureRepresentationWithColorSpace:forBounds:'>
+<arg name='colorSpace' declared_type='CGColorSpaceRef' type='^{CGColorSpace=}' index='0'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B8@0:4' type64='B16@0:8' selector='shouldColorMatch'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='textureColorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method type='B8@0:4' type64='B16@0:8' selector='textureFlipped'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='r^f8@0:4' type64='r^f16@0:8' selector='textureMatrix'>
+<retval declared_type='GLfloat*' type='^f' const='true'/>
+</method>
+<method type='I8@0:4' type64='I16@0:8' selector='textureName'>
+<retval declared_type='GLuint' type='I'/>
+</method>
+<method type='I8@0:4' type64='Q16@0:8' selector='texturePixelsHigh'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='I8@0:4' type64='Q16@0:8' selector='texturePixelsWide'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method type='I8@0:4' type64='I16@0:8' selector='textureTarget'>
+<retval declared_type='GLenum' type='I'/>
+</method>
+<method type='v16@0:4^{_CGLContextObject=}8I12' type64='v28@0:8^{_CGLContextObject=}16I24' selector='unbindTextureRepresentationFromCGLContext:textureUnit:'>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='unit' declared_type='GLenum' type='I' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v8@0:4' type64='v16@0:8' selector='unlockBufferRepresentation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v8@0:4' type64='v16@0:8' selector='unlockTextureRepresentation'>
+<retval declared_type='void' type='v'/>
+</method>
 </informal_protocol>
 <informal_protocol name='QCPlugInOutputImageProvider'>
-<method type='B12@0:4^{_CGLContextObject=}8' type64='B24@0:8^{_CGLContextObject=}16' selector='canRenderWithCGLContext:'/>
-<method type='I36@0:4^{_CGLContextObject=}8@12{_NSRect={_NSPoint=ff}{_NSSize=ff}}16^B32' type64='I72@0:8^{_CGLContextObject=}16@24{CGRect={CGPoint=dd}{CGSize=dd}}32^B64' selector='copyRenderedTextureForCGLContext:pixelFormat:bounds:isFlipped:'/>
-<method type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}8@0:4' type64='{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8' selector='imageBounds'/>
-<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='imageColorSpace'/>
-<method type='v16@0:4I8^{_CGLContextObject=}12' type64='v28@0:8I16^{_CGLContextObject=}20' selector='releaseRenderedTexture:forCGLContext:'/>
-<method type='B36@0:4^v8I12@16{_NSRect={_NSPoint=ff}{_NSSize=ff}}20' type64='B72@0:8^v16Q24@32{CGRect={CGPoint=dd}{CGSize=dd}}40' selector='renderToBuffer:withBytesPerRow:pixelFormat:forBounds:'/>
-<method type='B28@0:4^{_CGLContextObject=}8{_NSRect={_NSPoint=ff}{_NSSize=ff}}12' type64='B56@0:8^{_CGLContextObject=}16{CGRect={CGPoint=dd}{CGSize=dd}}24' selector='renderWithCGLContext:forBounds:'/>
-<method type='B8@0:4' type64='B16@0:8' selector='shouldColorMatch'/>
-<method type='@8@0:4' type64='@16@0:8' selector='supportedBufferPixelFormats'/>
-<method type='@8@0:4' type64='@16@0:8' selector='supportedRenderedTexturePixelFormats'/>
+<method type='B12@0:4^{_CGLContextObject=}8' type64='B24@0:8^{_CGLContextObject=}16' selector='canRenderWithCGLContext:'>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='I36@0:4^{_CGLContextObject=}8@12{_NSRect={_NSPoint=ff}{_NSSize=ff}}16^B32' type64='I72@0:8^{_CGLContextObject=}16@24{CGRect={CGPoint=dd}{CGSize=dd}}32^B64' selector='copyRenderedTextureForCGLContext:pixelFormat:bounds:isFlipped:'>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='format' declared_type='NSString*' type='@' index='1'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='2'/>
+<arg name='flipped' declared_type='BOOL*' type='^B' index='3'/>
+<retval declared_type='GLuint' type='I'/>
+</method>
+<method type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}8@0:4' type64='{CGRect={CGPoint=dd}{CGSize=dd}}16@0:8' selector='imageBounds'>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method type='^{CGColorSpace=}8@0:4' type64='^{CGColorSpace=}16@0:8' selector='imageColorSpace'>
+<retval declared_type='CGColorSpaceRef' type='^{CGColorSpace=}'/>
+</method>
+<method type='v16@0:4I8^{_CGLContextObject=}12' type64='v28@0:8I16^{_CGLContextObject=}20' selector='releaseRenderedTexture:forCGLContext:'>
+<arg name='name' declared_type='GLuint' type='I' index='0'/>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='B36@0:4^v8I12@16{_NSRect={_NSPoint=ff}{_NSSize=ff}}20' type64='B72@0:8^v16Q24@32{CGRect={CGPoint=dd}{CGSize=dd}}40' selector='renderToBuffer:withBytesPerRow:pixelFormat:forBounds:'>
+<arg name='baseAddress' declared_type='void*' type='^v' index='0'/>
+<arg name='rowBytes' declared_type='NSUInteger' type='I' type64='Q' index='1'/>
+<arg name='format' declared_type='NSString*' type='@' index='2'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='3'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B28@0:4^{_CGLContextObject=}8{_NSRect={_NSPoint=ff}{_NSSize=ff}}12' type64='B56@0:8^{_CGLContextObject=}16{CGRect={CGPoint=dd}{CGSize=dd}}24' selector='renderWithCGLContext:forBounds:'>
+<arg name='cgl_ctx' declared_type='CGLContextObj' type='^{_CGLContextObject=}' index='0'/>
+<arg name='bounds' declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}' index='1'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='B8@0:4' type64='B16@0:8' selector='shouldColorMatch'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='supportedBufferPixelFormats'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method type='@8@0:4' type64='@16@0:8' selector='supportedRenderedTexturePixelFormats'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
 </informal_protocol>
 </signatures>
