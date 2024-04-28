@@ -1,0 +1,481 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<struct name='Class' type='{objc_class=&quot;isa&quot;#}'/>
+<struct name='id' type='{objc_object=&quot;isa&quot;#}'/>
+<struct name='objc_method_description' type='{objc_method_description=&quot;name&quot;:&quot;types&quot;*}'/>
+<struct name='objc_method_description_list' type='{objc_method_description_list=&quot;count&quot;i&quot;list&quot;[1{objc_method_description=&quot;name&quot;:&quot;types&quot;*}]}'/>
+<struct name='objc_object' type='{objc_object=&quot;isa&quot;#}'/>
+<struct name='objc_protocol_list' type='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;l&quot;list&quot;[1@&quot;Protocol&quot;]}' type64='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;q&quot;list&quot;[1@&quot;Protocol&quot;]}'/>
+<struct name='objc_super' type='{objc_super=&quot;receiver&quot;@&quot;super_class&quot;#}'/>
+<opaque name='Category' type='^{objc_category=}'/>
+<opaque name='Ivar' type='^{objc_ivar=}'/>
+<opaque name='Method' type='^{objc_method=}'/>
+<opaque name='SEL' type='^{objc_selector=}'/>
+<opaque name='objc_property_t' type='^{objc_property=}'/>
+<enum name='NO' value='0'/>
+<enum name='OBJC_NEXT_METHOD_LIST' value='1'/>
+<enum name='OBSOLETE_OBJC_GETCLASSES' value='1'/>
+<enum name='YES' value='1'/>
+<function name='class_addIvar'>
+<arg type='#'/>
+<arg type='*'/>
+<arg type='L' type64='Q'/>
+<arg type='C'/>
+<arg type='*'/>
+<retval type='B'/>
+</function>
+<function name='class_addMethod'>
+<arg type='#'/>
+<arg type=':'/>
+<arg function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</arg>
+<arg type='*'/>
+<retval type='B'/>
+</function>
+<function name='class_addProtocol'>
+<arg type='#'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='class_conformsToProtocol'>
+<arg type='#'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='class_copyIvarList'>
+<arg type='#'/>
+<arg type='^I'/>
+<retval type='^^{objc_ivar}'/>
+</function>
+<function name='class_copyMethodList'>
+<arg type='#'/>
+<arg type='^I'/>
+<retval type='^^{objc_method}'/>
+</function>
+<function name='class_copyPropertyList'>
+<arg type='#'/>
+<arg type='^I'/>
+<retval type='^^{objc_property}'/>
+</function>
+<function name='class_copyProtocolList'>
+<arg type='#'/>
+<arg type='^I'/>
+<retval type='^@'/>
+</function>
+<function name='class_createInstance'>
+<arg type='#'/>
+<arg type='L' type64='Q'/>
+<retval type='@'/>
+</function>
+<function name='class_getClassMethod'>
+<arg type='#'/>
+<arg type=':'/>
+<retval type='^{objc_method=}'/>
+</function>
+<function name='class_getClassVariable'>
+<arg type='#'/>
+<arg type='*'/>
+<retval type='^{objc_ivar=}'/>
+</function>
+<function name='class_getImageName'>
+<arg type='#'/>
+<retval type='*'/>
+</function>
+<function name='class_getInstanceMethod'>
+<arg type='#'/>
+<arg type=':'/>
+<retval type='^{objc_method=}'/>
+</function>
+<function name='class_getInstanceSize'>
+<arg type='#'/>
+<retval type='L' type64='Q'/>
+</function>
+<function name='class_getInstanceVariable'>
+<arg type='#'/>
+<arg type='*'/>
+<retval type='^{objc_ivar=}'/>
+</function>
+<function name='class_getIvarLayout'>
+<arg type='#'/>
+<retval type='*'/>
+</function>
+<function name='class_getMethodImplementation'>
+<arg type='#'/>
+<arg type=':'/>
+<retval function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</retval>
+</function>
+<function name='class_getMethodImplementation_stret'>
+<arg type='#'/>
+<arg type=':'/>
+<retval function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</retval>
+</function>
+<function name='class_getName'>
+<arg type='#'/>
+<retval type='*'/>
+</function>
+<function name='class_getProperty'>
+<arg type='#'/>
+<arg type='*'/>
+<retval type='^{objc_property=}'/>
+</function>
+<function name='class_getSuperclass'>
+<arg type='#'/>
+<retval type='#'/>
+</function>
+<function name='class_getVersion'>
+<arg type='#'/>
+<retval type='i'/>
+</function>
+<function name='class_getWeakIvarLayout'>
+<arg type='#'/>
+<retval type='*'/>
+</function>
+<function name='class_isMetaClass'>
+<arg type='#'/>
+<retval type='B'/>
+</function>
+<function name='class_replaceMethod'>
+<arg type='#'/>
+<arg type=':'/>
+<arg function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</arg>
+<arg type='*'/>
+<retval function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</retval>
+</function>
+<function name='class_respondsToSelector'>
+<arg type='#'/>
+<arg type=':'/>
+<retval type='B'/>
+</function>
+<function name='class_setIvarLayout'>
+<arg type='#'/>
+<arg type='*'/>
+</function>
+<function name='class_setVersion'>
+<arg type='#'/>
+<arg type='i'/>
+</function>
+<function name='class_setWeakIvarLayout'>
+<arg type='#'/>
+<arg type='*'/>
+</function>
+<function name='ivar_getName'>
+<arg type='^{objc_ivar=}'/>
+<retval type='*'/>
+</function>
+<function name='ivar_getOffset'>
+<arg type='^{objc_ivar=}'/>
+<retval type='i' type64='q'/>
+</function>
+<function name='ivar_getTypeEncoding'>
+<arg type='^{objc_ivar=}'/>
+<retval type='*'/>
+</function>
+<function name='method_copyArgumentType'>
+<arg type='^{objc_method=}'/>
+<arg type='I'/>
+<retval type='*'/>
+</function>
+<function name='method_copyReturnType'>
+<arg type='^{objc_method=}'/>
+<retval type='*'/>
+</function>
+<function name='method_exchangeImplementations'>
+<arg type='^{objc_method=}'/>
+<arg type='^{objc_method=}'/>
+</function>
+<function name='method_getArgumentType'>
+<arg type='^{objc_method=}'/>
+<arg type='I'/>
+<arg type='*'/>
+<arg type='L' type64='Q'/>
+</function>
+<function name='method_getDescription'>
+<arg type='^{objc_method=}'/>
+<retval type='^{objc_method_description=:*}'/>
+</function>
+<function name='method_getImplementation'>
+<arg type='^{objc_method=}'/>
+<retval function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</retval>
+</function>
+<function name='method_getName'>
+<arg type='^{objc_method=}'/>
+<retval type=':'/>
+</function>
+<function name='method_getNumberOfArguments'>
+<arg type='^{objc_method=}'/>
+<retval type='I'/>
+</function>
+<function name='method_getReturnType'>
+<arg type='^{objc_method=}'/>
+<arg type='*'/>
+<arg type='L' type64='Q'/>
+</function>
+<function name='method_getTypeEncoding'>
+<arg type='^{objc_method=}'/>
+<retval type='*'/>
+</function>
+<function name='method_invoke' variadic='true'>
+<arg type='@'/>
+<arg type='^{objc_method=}'/>
+<retval type='@'/>
+</function>
+<function name='method_invoke_stret' variadic='true'>
+<arg type='@'/>
+<arg type='^{objc_method=}'/>
+</function>
+<function name='method_setImplementation'>
+<arg type='^{objc_method=}'/>
+<arg function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</arg>
+<retval function_pointer='true' type='^?'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</retval>
+</function>
+<function name='objc_allocateClassPair'>
+<arg type='#'/>
+<arg type='*'/>
+<arg type='L' type64='Q'/>
+<retval type='#'/>
+</function>
+<function name='objc_copyClassNamesForImage'>
+<arg type='*'/>
+<arg type='^I'/>
+<retval type='^*'/>
+</function>
+<function name='objc_copyImageNames'>
+<arg type='^I'/>
+<retval type='^*'/>
+</function>
+<function name='objc_copyProtocolList'>
+<arg type='^I'/>
+<retval type='^@'/>
+</function>
+<function name='objc_disposeClassPair'>
+<arg type='#'/>
+</function>
+<function name='objc_duplicateClass'>
+<arg type='#'/>
+<arg type='*'/>
+<arg type='L' type64='Q'/>
+<retval type='#'/>
+</function>
+<function name='objc_enumerationMutation'>
+<arg type='@'/>
+</function>
+<function name='objc_getClass'>
+<arg type='*'/>
+<retval type='@'/>
+</function>
+<function name='objc_getClassList'>
+<arg type='^#'/>
+<arg type='i'/>
+<retval type='i'/>
+</function>
+<function name='objc_getFutureClass'>
+<arg type='*'/>
+<retval type='#'/>
+</function>
+<function name='objc_getMetaClass'>
+<arg type='*'/>
+<retval type='@'/>
+</function>
+<function name='objc_getProtocol'>
+<arg type='*'/>
+<retval type='@'/>
+</function>
+<function name='objc_getRequiredClass'>
+<arg type='*'/>
+<retval type='@'/>
+</function>
+<function name='objc_lookUpClass'>
+<arg type='*'/>
+<retval type='@'/>
+</function>
+<function name='objc_msgSend' variadic='true'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='@'/>
+</function>
+<function name='objc_msgSendSuper' variadic='true'>
+<arg type='^{objc_super=@#}'/>
+<arg type=':'/>
+<retval type='@'/>
+</function>
+<function name='objc_msgSendSuper_stret' variadic='true'>
+<arg type='^{objc_super=@#}'/>
+<arg type=':'/>
+</function>
+<function name='objc_msgSend_fpret' variadic='true'>
+<arg type='@'/>
+<arg type=':'/>
+<retval type='d'/>
+</function>
+<function name='objc_msgSend_stret' variadic='true'>
+<arg type='@'/>
+<arg type=':'/>
+</function>
+<function name='objc_registerClassPair'>
+<arg type='#'/>
+</function>
+<function name='objc_setEnumerationMutationHandler'>
+<arg function_pointer='true' type='^?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</function>
+<function name='objc_setForwardHandler'>
+<arg type='^v'/>
+<arg type='^v'/>
+</function>
+<function name='objc_setFutureClass'>
+<arg type='#'/>
+<arg type='*'/>
+</function>
+<function name='object_copy'>
+<arg type='@'/>
+<arg type='L' type64='Q'/>
+<retval type='@'/>
+</function>
+<function name='object_dispose'>
+<arg type='@'/>
+<retval type='@'/>
+</function>
+<function name='object_getClass'>
+<arg type='@'/>
+<retval type='#'/>
+</function>
+<function name='object_getClassName'>
+<arg type='@'/>
+<retval type='*'/>
+</function>
+<function name='object_getIndexedIvars'>
+<arg type='@'/>
+<retval type='^v'/>
+</function>
+<function name='object_getInstanceVariable'>
+<arg type='@'/>
+<arg type='*'/>
+<arg type='^^v'/>
+<retval type='^{objc_ivar=}'/>
+</function>
+<function name='object_getIvar'>
+<arg type='@'/>
+<arg type='^{objc_ivar=}'/>
+<retval type='@'/>
+</function>
+<function name='object_setClass'>
+<arg type='@'/>
+<arg type='#'/>
+<retval type='#'/>
+</function>
+<function name='object_setInstanceVariable'>
+<arg type='@'/>
+<arg type='*'/>
+<arg type='^v'/>
+<retval type='^{objc_ivar=}'/>
+</function>
+<function name='object_setIvar'>
+<arg type='@'/>
+<arg type='^{objc_ivar=}'/>
+<arg type='@'/>
+</function>
+<function name='property_getAttributes'>
+<arg type='^{objc_property=}'/>
+<retval type='*'/>
+</function>
+<function name='property_getName'>
+<arg type='^{objc_property=}'/>
+<retval type='*'/>
+</function>
+<function name='protocol_conformsToProtocol'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='protocol_copyMethodDescriptionList'>
+<arg type='@'/>
+<arg type='B'/>
+<arg type='B'/>
+<arg type='^I'/>
+<retval type='^{objc_method_description=:*}'/>
+</function>
+<function name='protocol_copyPropertyList'>
+<arg type='@'/>
+<arg type='^I'/>
+<retval type='^^{objc_property}'/>
+</function>
+<function name='protocol_copyProtocolList'>
+<arg type='@'/>
+<arg type='^I'/>
+<retval type='^@'/>
+</function>
+<function name='protocol_getMethodDescription'>
+<arg type='@'/>
+<arg type=':'/>
+<arg type='B'/>
+<arg type='B'/>
+<retval type='{objc_method_description=:*}'/>
+</function>
+<function name='protocol_getName'>
+<arg type='@'/>
+<retval type='*'/>
+</function>
+<function name='protocol_getProperty'>
+<arg type='@'/>
+<arg type='*'/>
+<arg type='B'/>
+<arg type='B'/>
+<retval type='^{objc_property=}'/>
+</function>
+<function name='protocol_isEqual'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='B'/>
+</function>
+<function name='sel_getName'>
+<arg type=':'/>
+<retval type='*'/>
+</function>
+<function name='sel_getUid'>
+<arg type='*'/>
+<retval type=':'/>
+</function>
+<function name='sel_isEqual'>
+<arg type=':'/>
+<arg type=':'/>
+<retval type='B'/>
+</function>
+<function name='sel_registerName'>
+<arg type='*'/>
+<retval type=':'/>
+</function>
+</signatures>
