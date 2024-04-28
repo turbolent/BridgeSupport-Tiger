@@ -1,13 +1,31 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
-<struct name='Class' type='{objc_class=&quot;isa&quot;#}'/>
-<struct name='id' type='{objc_object=&quot;isa&quot;#}'/>
-<struct name='objc_method_description' type='{objc_method_description=&quot;name&quot;:&quot;types&quot;*}'/>
-<struct name='objc_method_description_list' type='{objc_method_description_list=&quot;count&quot;i&quot;list&quot;[1{objc_method_description=&quot;name&quot;:&quot;types&quot;*}]}'/>
-<struct name='objc_object' type='{objc_object=&quot;isa&quot;#}'/>
-<struct name='objc_protocol_list' type='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;l&quot;list&quot;[1@&quot;Protocol&quot;]}' type64='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;q&quot;list&quot;[1@&quot;Protocol&quot;]}'/>
-<struct name='objc_super' type='{objc_super=&quot;receiver&quot;@&quot;super_class&quot;#}'/>
+<struct name='Class' type='{objc_class=&quot;isa&quot;#}'>
+<field name='isa' declared_type='Class' type='#'/>
+</struct>
+<struct name='id' type='{objc_object=&quot;isa&quot;#}'>
+<field name='isa' declared_type='Class' type='#'/>
+</struct>
+<struct name='objc_method_description' type='{objc_method_description=&quot;name&quot;:&quot;types&quot;*}'>
+<field name='name' declared_type='SEL' type=':'/>
+<field name='types' declared_type='char*' type='*'/>
+</struct>
+<struct name='objc_method_description_list' type='{objc_method_description_list=&quot;count&quot;i&quot;list&quot;[1{objc_method_description=&quot;name&quot;:&quot;types&quot;*}]}'>
+<field name='count' declared_type='int' type='i'/>
+<field name='list' declared_type='struct objc_method_description*' type='[1{objc_method_description=&quot;name&quot;:&quot;types&quot;*}]'/>
+</struct>
+<struct name='objc_object' type='{objc_object=&quot;isa&quot;#}'>
+<field name='isa' declared_type='Class' type='#'/>
+</struct>
+<struct name='objc_protocol_list' type='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;l&quot;list&quot;[1@&quot;Protocol&quot;]}' type64='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;q&quot;list&quot;[1@&quot;Protocol&quot;]}'>
+<field name='next' declared_type='struct objc_protocol_list*' type='^{objc_protocol_list=^{objc_protocol_list}l[1@]}' type64='^{objc_protocol_list=^{objc_protocol_list}q[1@]}'/>
+<field name='count' declared_type='long' type='l' type64='q'/>
+<field name='list' declared_type='Protocol**' type='[1@&quot;Protocol&quot;]'/>
+</struct>
+<struct name='objc_super' type='{objc_super=&quot;receiver&quot;@&quot;super_class&quot;#}'>
+<field name='receiver' declared_type='id' type='@'/>
+<field name='super_class' declared_type='Class' type='#'/>
+</struct>
 <opaque name='Category' type='^{objc_category=}'/>
 <opaque name='Ivar' type='^{objc_ivar=}'/>
 <opaque name='Method' type='^{objc_method=}'/>
@@ -18,464 +36,480 @@
 <enum name='OBSOLETE_OBJC_GETCLASSES' value='1'/>
 <enum name='YES' value='1'/>
 <function name='class_addIvar'>
-<arg type='#'/>
-<arg type='*'/>
-<arg type='L' type64='Q'/>
-<arg type='C'/>
-<arg type='*'/>
-<retval type='B'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<arg name='size' declared_type='size_t' type='L' type64='Q'/>
+<arg name='alignment' declared_type='uint8_t' type='C'/>
+<arg name='types' declared_type='char*' type='*' const='true'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='class_addMethod'>
-<arg type='#'/>
-<arg type=':'/>
-<arg function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='SEL' type=':'/>
+<arg function_pointer='true' name='imp' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </arg>
-<arg type='*'/>
-<retval type='B'/>
+<arg name='types' declared_type='char*' type='*' const='true'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='class_addProtocol'>
-<arg type='#'/>
-<arg type='@'/>
-<retval type='B'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='protocol' declared_type='Protocol*' type='@'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='class_conformsToProtocol'>
-<arg type='#'/>
-<arg type='@'/>
-<retval type='B'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='protocol' declared_type='Protocol*' type='@'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='class_copyIvarList'>
-<arg type='#'/>
-<arg type='^I'/>
-<retval type='^^{objc_ivar}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='Ivar*' type='^^{objc_ivar}'/>
 </function>
 <function name='class_copyMethodList'>
-<arg type='#'/>
-<arg type='^I'/>
-<retval type='^^{objc_method}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='Method*' type='^^{objc_method}'/>
 </function>
 <function name='class_copyPropertyList'>
-<arg type='#'/>
-<arg type='^I'/>
-<retval type='^^{objc_property}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='objc_property_t*' type='^^{objc_property}'/>
 </function>
 <function name='class_copyProtocolList'>
-<arg type='#'/>
-<arg type='^I'/>
-<retval type='^@'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='Protocol**' type='^@'/>
 </function>
 <function name='class_createInstance'>
-<arg type='#'/>
-<arg type='L' type64='Q'/>
-<retval type='@'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='extraBytes' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='class_getClassMethod'>
-<arg type='#'/>
-<arg type=':'/>
-<retval type='^{objc_method=}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='SEL' type=':'/>
+<retval declared_type='Method' type='^{objc_method=}'/>
 </function>
 <function name='class_getClassVariable'>
-<arg type='#'/>
-<arg type='*'/>
-<retval type='^{objc_ivar=}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='Ivar' type='^{objc_ivar=}'/>
 </function>
 <function name='class_getImageName'>
-<arg type='#'/>
-<retval type='*'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='class_getInstanceMethod'>
-<arg type='#'/>
-<arg type=':'/>
-<retval type='^{objc_method=}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='SEL' type=':'/>
+<retval declared_type='Method' type='^{objc_method=}'/>
 </function>
 <function name='class_getInstanceSize'>
-<arg type='#'/>
-<retval type='L' type64='Q'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
 </function>
 <function name='class_getInstanceVariable'>
-<arg type='#'/>
-<arg type='*'/>
-<retval type='^{objc_ivar=}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='Ivar' type='^{objc_ivar=}'/>
 </function>
 <function name='class_getIvarLayout'>
-<arg type='#'/>
-<retval type='*'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='class_getMethodImplementation'>
-<arg type='#'/>
-<arg type=':'/>
-<retval function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='SEL' type=':'/>
+<retval function_pointer='true' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </retval>
 </function>
 <function name='class_getMethodImplementation_stret'>
-<arg type='#'/>
-<arg type=':'/>
-<retval function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='SEL' type=':'/>
+<retval function_pointer='true' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </retval>
 </function>
 <function name='class_getName'>
-<arg type='#'/>
-<retval type='*'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='class_getProperty'>
-<arg type='#'/>
-<arg type='*'/>
-<retval type='^{objc_property=}'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='objc_property_t' type='^{objc_property=}'/>
 </function>
 <function name='class_getSuperclass'>
-<arg type='#'/>
-<retval type='#'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='Class' type='#'/>
 </function>
 <function name='class_getVersion'>
-<arg type='#'/>
-<retval type='i'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='class_getWeakIvarLayout'>
-<arg type='#'/>
-<retval type='*'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='class_isMetaClass'>
-<arg type='#'/>
-<retval type='B'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='class_replaceMethod'>
-<arg type='#'/>
-<arg type=':'/>
-<arg function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='SEL' type=':'/>
+<arg function_pointer='true' name='imp' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </arg>
-<arg type='*'/>
-<retval function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='types' declared_type='char*' type='*' const='true'/>
+<retval function_pointer='true' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </retval>
 </function>
 <function name='class_respondsToSelector'>
-<arg type='#'/>
-<arg type=':'/>
-<retval type='B'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='sel' declared_type='SEL' type=':'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='class_setIvarLayout'>
-<arg type='#'/>
-<arg type='*'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='layout' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='class_setVersion'>
-<arg type='#'/>
-<arg type='i'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='version' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='class_setWeakIvarLayout'>
-<arg type='#'/>
-<arg type='*'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='layout' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='ivar_getName'>
-<arg type='^{objc_ivar=}'/>
-<retval type='*'/>
+<arg name='v' declared_type='Ivar' type='^{objc_ivar=}'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='ivar_getOffset'>
-<arg type='^{objc_ivar=}'/>
-<retval type='i' type64='q'/>
+<arg name='v' declared_type='Ivar' type='^{objc_ivar=}'/>
+<retval declared_type='ptrdiff_t' type='i' type64='q'/>
 </function>
 <function name='ivar_getTypeEncoding'>
-<arg type='^{objc_ivar=}'/>
-<retval type='*'/>
+<arg name='v' declared_type='Ivar' type='^{objc_ivar=}'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='method_copyArgumentType'>
-<arg type='^{objc_method=}'/>
-<arg type='I'/>
-<retval type='*'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<arg name='index' declared_type='unsigned int' type='I'/>
+<retval declared_type='char*' type='*'/>
 </function>
 <function name='method_copyReturnType'>
-<arg type='^{objc_method=}'/>
-<retval type='*'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='char*' type='*'/>
 </function>
 <function name='method_exchangeImplementations'>
-<arg type='^{objc_method=}'/>
-<arg type='^{objc_method=}'/>
+<arg name='m1' declared_type='Method' type='^{objc_method=}'/>
+<arg name='m2' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='method_getArgumentType'>
-<arg type='^{objc_method=}'/>
-<arg type='I'/>
-<arg type='*'/>
-<arg type='L' type64='Q'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<arg name='index' declared_type='unsigned int' type='I'/>
+<arg name='dst' declared_type='char*' type='*'/>
+<arg name='dst_len' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='method_getDescription'>
-<arg type='^{objc_method=}'/>
-<retval type='^{objc_method_description=:*}'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='struct objc_method_description*' type='^{objc_method_description=:*}'/>
 </function>
 <function name='method_getImplementation'>
-<arg type='^{objc_method=}'/>
-<retval function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval function_pointer='true' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </retval>
 </function>
 <function name='method_getName'>
-<arg type='^{objc_method=}'/>
-<retval type=':'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='SEL' type=':'/>
 </function>
 <function name='method_getNumberOfArguments'>
-<arg type='^{objc_method=}'/>
-<retval type='I'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='unsigned int' type='I'/>
 </function>
 <function name='method_getReturnType'>
-<arg type='^{objc_method=}'/>
-<arg type='*'/>
-<arg type='L' type64='Q'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<arg name='dst' declared_type='char*' type='*'/>
+<arg name='dst_len' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='method_getTypeEncoding'>
-<arg type='^{objc_method=}'/>
-<retval type='*'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='method_invoke' variadic='true'>
-<arg type='@'/>
-<arg type='^{objc_method=}'/>
-<retval type='@'/>
+<arg name='receiver' declared_type='id' type='@'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='method_invoke_stret' variadic='true'>
-<arg type='@'/>
-<arg type='^{objc_method=}'/>
+<arg name='receiver' declared_type='id' type='@'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='method_setImplementation'>
-<arg type='^{objc_method=}'/>
-<arg function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='m' declared_type='Method' type='^{objc_method=}'/>
+<arg function_pointer='true' name='imp' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </arg>
-<retval function_pointer='true' type='^?'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<retval function_pointer='true' declared_type='IMP' type='^?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </retval>
 </function>
 <function name='objc_allocateClassPair'>
-<arg type='#'/>
-<arg type='*'/>
-<arg type='L' type64='Q'/>
-<retval type='#'/>
+<arg name='superclass' declared_type='Class' type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<arg name='extraBytes' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='Class' type='#'/>
 </function>
 <function name='objc_copyClassNamesForImage'>
-<arg type='*'/>
-<arg type='^I'/>
-<retval type='^*'/>
+<arg name='image' declared_type='char*' type='*' const='true'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='char**' type='^*' const='true'/>
 </function>
 <function name='objc_copyImageNames'>
-<arg type='^I'/>
-<retval type='^*'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='char**' type='^*' const='true'/>
 </function>
 <function name='objc_copyProtocolList'>
-<arg type='^I'/>
-<retval type='^@'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='Protocol**' type='^@'/>
 </function>
 <function name='objc_disposeClassPair'>
-<arg type='#'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='objc_duplicateClass'>
-<arg type='#'/>
-<arg type='*'/>
-<arg type='L' type64='Q'/>
-<retval type='#'/>
+<arg name='original' declared_type='Class' type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<arg name='extraBytes' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='Class' type='#'/>
 </function>
 <function name='objc_enumerationMutation'>
-<arg type='@'/>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='objc_getClass'>
-<arg type='*'/>
-<retval type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='objc_getClassList'>
-<arg type='^#'/>
-<arg type='i'/>
-<retval type='i'/>
+<arg name='buffer' declared_type='Class*' type='^#'/>
+<arg name='bufferCount' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
 </function>
 <function name='objc_getFutureClass'>
-<arg type='*'/>
-<retval type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='Class' type='#'/>
 </function>
 <function name='objc_getMetaClass'>
-<arg type='*'/>
-<retval type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='objc_getProtocol'>
-<arg type='*'/>
-<retval type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='Protocol*' type='@'/>
 </function>
 <function name='objc_getRequiredClass'>
-<arg type='*'/>
-<retval type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='objc_lookUpClass'>
-<arg type='*'/>
-<retval type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='objc_msgSend' variadic='true'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='self' declared_type='id' type='@'/>
+<arg name='op' declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='objc_msgSendSuper' variadic='true'>
-<arg type='^{objc_super=@#}'/>
-<arg type=':'/>
-<retval type='@'/>
+<arg name='super' declared_type='struct objc_super*' type='^{objc_super=@#}'/>
+<arg name='op' declared_type='SEL' type=':'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='objc_msgSendSuper_stret' variadic='true'>
-<arg type='^{objc_super=@#}'/>
-<arg type=':'/>
+<arg name='super' declared_type='struct objc_super*' type='^{objc_super=@#}'/>
+<arg name='op' declared_type='SEL' type=':'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='objc_msgSend_fpret' variadic='true'>
-<arg type='@'/>
-<arg type=':'/>
-<retval type='d'/>
+<arg name='self' declared_type='id' type='@'/>
+<arg name='op' declared_type='SEL' type=':'/>
+<retval declared_type='double' type='d' declared_type64='long double'/>
 </function>
 <function name='objc_msgSend_stret' variadic='true'>
-<arg type='@'/>
-<arg type=':'/>
+<arg name='self' declared_type='id' type='@'/>
+<arg name='op' declared_type='SEL' type=':'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='objc_registerClassPair'>
-<arg type='#'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='objc_setEnumerationMutationHandler'>
-<arg function_pointer='true' type='^?'>
-<arg type='@'/>
-<retval type='v'/>
+<arg function_pointer='true' name='handler' declared_type='void (*)(id)' type='^?'>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
 </arg>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='objc_setForwardHandler'>
-<arg type='^v'/>
-<arg type='^v'/>
+<arg name='fwd' declared_type='void*' type='^v'/>
+<arg name='fwd_stret' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='objc_setFutureClass'>
-<arg type='#'/>
-<arg type='*'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='object_copy'>
-<arg type='@'/>
-<arg type='L' type64='Q'/>
-<retval type='@'/>
+<arg name='obj' declared_type='id' type='@'/>
+<arg name='size' declared_type='size_t' type='L' type64='Q'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='object_dispose'>
-<arg type='@'/>
-<retval type='@'/>
+<arg name='obj' declared_type='id' type='@'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='object_getClass'>
-<arg type='@'/>
-<retval type='#'/>
+<arg name='obj' declared_type='id' type='@'/>
+<retval declared_type='Class' type='#'/>
 </function>
 <function name='object_getClassName'>
-<arg type='@'/>
-<retval type='*'/>
+<arg name='obj' declared_type='id' type='@'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='object_getIndexedIvars'>
-<arg type='@'/>
-<retval type='^v'/>
+<arg name='obj' declared_type='id' type='@'/>
+<retval declared_type='void*' type='^v'/>
 </function>
 <function name='object_getInstanceVariable'>
-<arg type='@'/>
-<arg type='*'/>
-<arg type='^^v'/>
-<retval type='^{objc_ivar=}'/>
+<arg name='obj' declared_type='id' type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<arg name='outValue' declared_type='void**' type='^^v'/>
+<retval declared_type='Ivar' type='^{objc_ivar=}'/>
 </function>
 <function name='object_getIvar'>
-<arg type='@'/>
-<arg type='^{objc_ivar=}'/>
-<retval type='@'/>
+<arg name='obj' declared_type='id' type='@'/>
+<arg name='ivar' declared_type='Ivar' type='^{objc_ivar=}'/>
+<retval declared_type='id' type='@'/>
 </function>
 <function name='object_setClass'>
-<arg type='@'/>
-<arg type='#'/>
-<retval type='#'/>
+<arg name='obj' declared_type='id' type='@'/>
+<arg name='cls' declared_type='Class' type='#'/>
+<retval declared_type='Class' type='#'/>
 </function>
 <function name='object_setInstanceVariable'>
-<arg type='@'/>
-<arg type='*'/>
-<arg type='^v'/>
-<retval type='^{objc_ivar=}'/>
+<arg name='obj' declared_type='id' type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<arg name='value' declared_type='void*' type='^v'/>
+<retval declared_type='Ivar' type='^{objc_ivar=}'/>
 </function>
 <function name='object_setIvar'>
-<arg type='@'/>
-<arg type='^{objc_ivar=}'/>
-<arg type='@'/>
+<arg name='obj' declared_type='id' type='@'/>
+<arg name='ivar' declared_type='Ivar' type='^{objc_ivar=}'/>
+<arg name='value' declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='property_getAttributes'>
-<arg type='^{objc_property=}'/>
-<retval type='*'/>
+<arg name='property' declared_type='objc_property_t' type='^{objc_property=}'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='property_getName'>
-<arg type='^{objc_property=}'/>
-<retval type='*'/>
+<arg name='property' declared_type='objc_property_t' type='^{objc_property=}'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='protocol_conformsToProtocol'>
-<arg type='@'/>
-<arg type='@'/>
-<retval type='B'/>
+<arg name='proto' declared_type='Protocol*' type='@'/>
+<arg name='other' declared_type='Protocol*' type='@'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='protocol_copyMethodDescriptionList'>
-<arg type='@'/>
-<arg type='B'/>
-<arg type='B'/>
-<arg type='^I'/>
-<retval type='^{objc_method_description=:*}'/>
+<arg name='p' declared_type='Protocol*' type='@'/>
+<arg name='isRequiredMethod' declared_type='BOOL' type='B'/>
+<arg name='isInstanceMethod' declared_type='BOOL' type='B'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='struct objc_method_description*' type='^{objc_method_description=:*}'/>
 </function>
 <function name='protocol_copyPropertyList'>
-<arg type='@'/>
-<arg type='^I'/>
-<retval type='^^{objc_property}'/>
+<arg name='proto' declared_type='Protocol*' type='@'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='objc_property_t*' type='^^{objc_property}'/>
 </function>
 <function name='protocol_copyProtocolList'>
-<arg type='@'/>
-<arg type='^I'/>
-<retval type='^@'/>
+<arg name='proto' declared_type='Protocol*' type='@'/>
+<arg name='outCount' declared_type='unsigned int*' type='^I'/>
+<retval declared_type='Protocol**' type='^@'/>
 </function>
 <function name='protocol_getMethodDescription'>
-<arg type='@'/>
-<arg type=':'/>
-<arg type='B'/>
-<arg type='B'/>
-<retval type='{objc_method_description=:*}'/>
+<arg name='p' declared_type='Protocol*' type='@'/>
+<arg name='aSel' declared_type='SEL' type=':'/>
+<arg name='isRequiredMethod' declared_type='BOOL' type='B'/>
+<arg name='isInstanceMethod' declared_type='BOOL' type='B'/>
+<retval declared_type='struct objc_method_description' type='{objc_method_description=:*}'/>
 </function>
 <function name='protocol_getName'>
-<arg type='@'/>
-<retval type='*'/>
+<arg name='p' declared_type='Protocol*' type='@'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='protocol_getProperty'>
-<arg type='@'/>
-<arg type='*'/>
-<arg type='B'/>
-<arg type='B'/>
-<retval type='^{objc_property=}'/>
+<arg name='proto' declared_type='Protocol*' type='@'/>
+<arg name='name' declared_type='char*' type='*' const='true'/>
+<arg name='isRequiredProperty' declared_type='BOOL' type='B'/>
+<arg name='isInstanceProperty' declared_type='BOOL' type='B'/>
+<retval declared_type='objc_property_t' type='^{objc_property=}'/>
 </function>
 <function name='protocol_isEqual'>
-<arg type='@'/>
-<arg type='@'/>
-<retval type='B'/>
+<arg name='proto' declared_type='Protocol*' type='@'/>
+<arg name='other' declared_type='Protocol*' type='@'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='sel_getName'>
-<arg type=':'/>
-<retval type='*'/>
+<arg name='sel' declared_type='SEL' type=':'/>
+<retval declared_type='char*' type='*' const='true'/>
 </function>
 <function name='sel_getUid'>
-<arg type='*'/>
-<retval type=':'/>
+<arg name='str' declared_type='char*' type='*' const='true'/>
+<retval declared_type='SEL' type=':'/>
 </function>
 <function name='sel_isEqual'>
-<arg type=':'/>
-<arg type=':'/>
-<retval type='B'/>
+<arg name='lhs' declared_type='SEL' type=':'/>
+<arg name='rhs' declared_type='SEL' type=':'/>
+<retval declared_type='BOOL' type='B'/>
 </function>
 <function name='sel_registerName'>
-<arg type='*'/>
-<retval type=':'/>
+<arg name='str' declared_type='char*' type='*' const='true'/>
+<retval declared_type='SEL' type=':'/>
 </function>
 </signatures>
