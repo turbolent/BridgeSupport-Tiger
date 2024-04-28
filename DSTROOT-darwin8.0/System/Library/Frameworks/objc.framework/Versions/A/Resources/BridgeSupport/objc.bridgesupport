@@ -1,26 +1,131 @@
 <?xml version='1.0'?>
-<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
 <signatures version='1.0'>
-  <struct name='Cache' type='{objc_cache=&quot;mask&quot;I&quot;occupied&quot;I&quot;buckets&quot;[1^{objc_method}]}'/>
-  <struct name='Category' type='{objc_category=&quot;category_name&quot;*&quot;class_name&quot;*&quot;instance_methods&quot;^{objc_method_list}&quot;class_methods&quot;^{objc_method_list}&quot;protocols&quot;^{objc_protocol_list}}'/>
-  <struct name='Class' type='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;l&quot;info&quot;l&quot;instance_size&quot;l&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}' type64='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;q&quot;info&quot;q&quot;instance_size&quot;q&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}'/>
-  <struct name='Ivar' type='{objc_ivar=&quot;ivar_name&quot;*&quot;ivar_type&quot;*&quot;ivar_offset&quot;i}'/>
-  <struct name='Method' type='{objc_method=&quot;method_name&quot;:&quot;method_types&quot;*&quot;method_imp&quot;^?}'/>
-  <struct name='Module' type='{objc_module=&quot;version&quot;L&quot;size&quot;L&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}' type64='{objc_module=&quot;version&quot;Q&quot;size&quot;Q&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}'/>
-  <struct name='Symtab' type='{objc_symtab=&quot;sel_ref_cnt&quot;L&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}' type64='{objc_symtab=&quot;sel_ref_cnt&quot;Q&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}'/>
-  <struct name='id' type='{objc_object=&quot;isa&quot;#}'/>
-  <struct name='objc_cache' type='{objc_cache=&quot;mask&quot;I&quot;occupied&quot;I&quot;buckets&quot;[1^{objc_method}]}'/>
-  <struct name='objc_category' type='{objc_category=&quot;category_name&quot;*&quot;class_name&quot;*&quot;instance_methods&quot;^{objc_method_list}&quot;class_methods&quot;^{objc_method_list}&quot;protocols&quot;^{objc_protocol_list}}'/>
-  <struct name='objc_class' type='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;l&quot;info&quot;l&quot;instance_size&quot;l&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}' type64='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;q&quot;info&quot;q&quot;instance_size&quot;q&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}'/>
-  <struct name='objc_ivar' type='{objc_ivar=&quot;ivar_name&quot;*&quot;ivar_type&quot;*&quot;ivar_offset&quot;i}'/>
-  <struct name='objc_ivar_list' type='{objc_ivar_list=&quot;ivar_count&quot;i&quot;ivar_list&quot;[1{objc_ivar=&quot;ivar_name&quot;*&quot;ivar_type&quot;*&quot;ivar_offset&quot;i}]}'/>
-  <struct name='objc_method' type='{objc_method=&quot;method_name&quot;:&quot;method_types&quot;*&quot;method_imp&quot;^?}'/>
-  <struct name='objc_method_list' type='{objc_method_list=&quot;obsolete&quot;^{objc_method_list}&quot;method_count&quot;i&quot;method_list&quot;[1{objc_method=&quot;method_name&quot;:&quot;method_types&quot;*&quot;method_imp&quot;^?}]}'/>
-  <struct name='objc_module' type='{objc_module=&quot;version&quot;L&quot;size&quot;L&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}' type64='{objc_module=&quot;version&quot;Q&quot;size&quot;Q&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}'/>
-  <struct name='objc_object' type='{objc_object=&quot;isa&quot;#}'/>
-  <struct name='objc_protocol_list' type='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;i&quot;list&quot;[1@&quot;Protocol&quot;]}'/>
-  <struct name='objc_super' type='{objc_super=&quot;receiver&quot;@&quot;class&quot;#}'/>
-  <struct name='objc_symtab' type='{objc_symtab=&quot;sel_ref_cnt&quot;L&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}' type64='{objc_symtab=&quot;sel_ref_cnt&quot;Q&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}'/>
+  <struct name='Cache' type='{objc_cache=&quot;mask&quot;I&quot;occupied&quot;I&quot;buckets&quot;[1^{objc_method}]}'>
+    <field name='mask' declared_type='unsigned int' type='I'/>
+    <field name='occupied' declared_type='unsigned int' type='I'/>
+    <field name='buckets' declared_type='Method*' type='[1^{objc_method}]'/>
+  </struct>
+  <struct name='Category' type='{objc_category=&quot;category_name&quot;*&quot;class_name&quot;*&quot;instance_methods&quot;^{objc_method_list}&quot;class_methods&quot;^{objc_method_list}&quot;protocols&quot;^{objc_protocol_list}}'>
+    <field name='category_name' declared_type='char*' type='*'/>
+    <field name='class_name' declared_type='char*' type='*'/>
+    <field name='instance_methods' declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <field name='class_methods' declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <field name='protocols' declared_type='struct objc_protocol_list*' type='^{objc_protocol_list=^{objc_protocol_list}i[1@]}'/>
+  </struct>
+  <struct name='Class' type='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;l&quot;info&quot;l&quot;instance_size&quot;l&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}' type64='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;q&quot;info&quot;q&quot;instance_size&quot;q&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}'>
+    <field name='isa' declared_type='struct objc_class*' type='#'/>
+    <field name='super_class' declared_type='struct objc_class*' type='#'/>
+    <field name='name' declared_type='char*' type='*' const='true'/>
+    <field name='version' declared_type='long' type='l' type64='q'/>
+    <field name='info' declared_type='long' type='l' type64='q'/>
+    <field name='instance_size' declared_type='long' type='l' type64='q'/>
+    <field name='ivars' declared_type='struct objc_ivar_list*' type='^{objc_ivar_list=i[1{objc_ivar=**i}]}'/>
+    <field name='methodLists' declared_type='struct objc_method_list**' type='^^{objc_method_list}'/>
+    <field name='cache' declared_type='struct objc_cache*' type='^{objc_cache=II[1^{objc_method}]}'/>
+    <field name='protocols' declared_type='struct objc_protocol_list*' type='^{objc_protocol_list=^{objc_protocol_list}i[1@]}'/>
+  </struct>
+  <struct name='Ivar' type='{objc_ivar=&quot;ivar_name&quot;*&quot;ivar_type&quot;*&quot;ivar_offset&quot;i}'>
+    <field name='ivar_name' declared_type='char*' type='*'/>
+    <field name='ivar_type' declared_type='char*' type='*'/>
+    <field name='ivar_offset' declared_type='int' type='i'/>
+  </struct>
+  <struct name='Method' type='{objc_method=&quot;method_name&quot;:&quot;method_types&quot;*&quot;method_imp&quot;^?}'>
+    <field name='method_name' declared_type='SEL' type=':'/>
+    <field name='method_types' declared_type='char*' type='*'/>
+    <field name='method_imp' function_pointer='true' declared_type='IMP' type='^?'>
+      <arg declared_type='id' type='@'/>
+      <arg declared_type='SEL' type=':'/>
+      <retval declared_type='id' type='@'/>
+    </field>
+  </struct>
+  <struct name='Module' type='{objc_module=&quot;version&quot;L&quot;size&quot;L&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}' type64='{objc_module=&quot;version&quot;Q&quot;size&quot;Q&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}'>
+    <field name='version' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='size' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='name' declared_type='char*' type='*' const='true'/>
+    <field name='symtab' declared_type='Symtab' type='^{objc_symtab=L^:SS[1^v]}' type64='^{objc_symtab=Q^:SS[1^v]}'/>
+  </struct>
+  <struct name='Symtab' type='{objc_symtab=&quot;sel_ref_cnt&quot;L&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}' type64='{objc_symtab=&quot;sel_ref_cnt&quot;Q&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}'>
+    <field name='sel_ref_cnt' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='refs' declared_type='SEL*' type='^:'/>
+    <field name='cls_def_cnt' declared_type='unsigned short' type='S'/>
+    <field name='cat_def_cnt' declared_type='unsigned short' type='S'/>
+    <field name='defs' declared_type='void**' type='[1^v]'/>
+  </struct>
+  <struct name='id' type='{objc_object=&quot;isa&quot;#}'>
+    <field name='isa' declared_type='Class' type='#'/>
+  </struct>
+  <struct name='objc_cache' type='{objc_cache=&quot;mask&quot;I&quot;occupied&quot;I&quot;buckets&quot;[1^{objc_method}]}'>
+    <field name='mask' declared_type='unsigned int' type='I'/>
+    <field name='occupied' declared_type='unsigned int' type='I'/>
+    <field name='buckets' declared_type='Method*' type='[1^{objc_method}]'/>
+  </struct>
+  <struct name='objc_category' type='{objc_category=&quot;category_name&quot;*&quot;class_name&quot;*&quot;instance_methods&quot;^{objc_method_list}&quot;class_methods&quot;^{objc_method_list}&quot;protocols&quot;^{objc_protocol_list}}'>
+    <field name='category_name' declared_type='char*' type='*'/>
+    <field name='class_name' declared_type='char*' type='*'/>
+    <field name='instance_methods' declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <field name='class_methods' declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <field name='protocols' declared_type='struct objc_protocol_list*' type='^{objc_protocol_list=^{objc_protocol_list}i[1@]}'/>
+  </struct>
+  <struct name='objc_class' type='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;l&quot;info&quot;l&quot;instance_size&quot;l&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}' type64='{objc_class=&quot;isa&quot;#&quot;super_class&quot;#&quot;name&quot;*&quot;version&quot;q&quot;info&quot;q&quot;instance_size&quot;q&quot;ivars&quot;^{objc_ivar_list}&quot;methodLists&quot;^^{objc_method_list}&quot;cache&quot;^{objc_cache}&quot;protocols&quot;^{objc_protocol_list}}'>
+    <field name='isa' declared_type='struct objc_class*' type='#'/>
+    <field name='super_class' declared_type='struct objc_class*' type='#'/>
+    <field name='name' declared_type='char*' type='*' const='true'/>
+    <field name='version' declared_type='long' type='l' type64='q'/>
+    <field name='info' declared_type='long' type='l' type64='q'/>
+    <field name='instance_size' declared_type='long' type='l' type64='q'/>
+    <field name='ivars' declared_type='struct objc_ivar_list*' type='^{objc_ivar_list=i[1{objc_ivar=**i}]}'/>
+    <field name='methodLists' declared_type='struct objc_method_list**' type='^^{objc_method_list}'/>
+    <field name='cache' declared_type='struct objc_cache*' type='^{objc_cache=II[1^{objc_method}]}'/>
+    <field name='protocols' declared_type='struct objc_protocol_list*' type='^{objc_protocol_list=^{objc_protocol_list}i[1@]}'/>
+  </struct>
+  <struct name='objc_ivar' type='{objc_ivar=&quot;ivar_name&quot;*&quot;ivar_type&quot;*&quot;ivar_offset&quot;i}'>
+    <field name='ivar_name' declared_type='char*' type='*'/>
+    <field name='ivar_type' declared_type='char*' type='*'/>
+    <field name='ivar_offset' declared_type='int' type='i'/>
+  </struct>
+  <struct name='objc_ivar_list' type='{objc_ivar_list=&quot;ivar_count&quot;i&quot;ivar_list&quot;[1{objc_ivar=&quot;ivar_name&quot;*&quot;ivar_type&quot;*&quot;ivar_offset&quot;i}]}'>
+    <field name='ivar_count' declared_type='int' type='i'/>
+    <field name='ivar_list' declared_type='struct objc_ivar*' type='[1{objc_ivar=&quot;ivar_name&quot;*&quot;ivar_type&quot;*&quot;ivar_offset&quot;i}]'/>
+  </struct>
+  <struct name='objc_method' type='{objc_method=&quot;method_name&quot;:&quot;method_types&quot;*&quot;method_imp&quot;^?}'>
+    <field name='method_name' declared_type='SEL' type=':'/>
+    <field name='method_types' declared_type='char*' type='*'/>
+    <field name='method_imp' function_pointer='true' declared_type='IMP' type='^?'>
+      <arg declared_type='id' type='@'/>
+      <arg declared_type='SEL' type=':'/>
+      <retval declared_type='id' type='@'/>
+    </field>
+  </struct>
+  <struct name='objc_method_list' type='{objc_method_list=&quot;obsolete&quot;^{objc_method_list}&quot;method_count&quot;i&quot;method_list&quot;[1{objc_method=&quot;method_name&quot;:&quot;method_types&quot;*&quot;method_imp&quot;^?}]}'>
+    <field name='obsolete' declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <field name='method_count' declared_type='int' type='i'/>
+    <field name='method_list' declared_type='struct objc_method*' type='[1{objc_method=&quot;method_name&quot;:&quot;method_types&quot;*&quot;method_imp&quot;^?}]'/>
+  </struct>
+  <struct name='objc_module' type='{objc_module=&quot;version&quot;L&quot;size&quot;L&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}' type64='{objc_module=&quot;version&quot;Q&quot;size&quot;Q&quot;name&quot;*&quot;symtab&quot;^{objc_symtab}}'>
+    <field name='version' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='size' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='name' declared_type='char*' type='*' const='true'/>
+    <field name='symtab' declared_type='Symtab' type='^{objc_symtab=L^:SS[1^v]}' type64='^{objc_symtab=Q^:SS[1^v]}'/>
+  </struct>
+  <struct name='objc_object' type='{objc_object=&quot;isa&quot;#}'>
+    <field name='isa' declared_type='Class' type='#'/>
+  </struct>
+  <struct name='objc_protocol_list' type='{objc_protocol_list=&quot;next&quot;^{objc_protocol_list}&quot;count&quot;i&quot;list&quot;[1@&quot;Protocol&quot;]}'>
+    <field name='next' declared_type='struct objc_protocol_list*' type='^{objc_protocol_list=^{objc_protocol_list}i[1@]}'/>
+    <field name='count' declared_type='int' type='i'/>
+    <field name='list' declared_type='Protocol**' type='[1@&quot;Protocol&quot;]'/>
+  </struct>
+  <struct name='objc_super' type='{objc_super=&quot;receiver&quot;@&quot;class&quot;#}'>
+    <field name='receiver' declared_type='id' type='@'/>
+    <field name='class' declared_type='Class' type='#'/>
+  </struct>
+  <struct name='objc_symtab' type='{objc_symtab=&quot;sel_ref_cnt&quot;L&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}' type64='{objc_symtab=&quot;sel_ref_cnt&quot;Q&quot;refs&quot;^:&quot;cls_def_cnt&quot;S&quot;cat_def_cnt&quot;S&quot;defs&quot;[1^v]}'>
+    <field name='sel_ref_cnt' declared_type='unsigned long' type='L' type64='Q'/>
+    <field name='refs' declared_type='SEL*' type='^:'/>
+    <field name='cls_def_cnt' declared_type='unsigned short' type='S'/>
+    <field name='cat_def_cnt' declared_type='unsigned short' type='S'/>
+    <field name='defs' declared_type='void**' type='[1^v]'/>
+  </struct>
   <opaque name='SEL' type='^{objc_selector=}'/>
   <enum name='ARITH_SHIFT' value='16'/>
   <enum name='CLS_CLASS' value='1'/>
@@ -45,176 +150,185 @@
   <enum name='YES' value='1'/>
   <enum name='marg_prearg_size' value='0'/>
   <function name='class_addMethods'>
-    <arg type='#'/>
-    <arg type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <arg declared_type='Class' type='#'/>
+    <arg declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='class_createInstance'>
-    <arg type='#'/>
-    <arg type='I'/>
-    <retval type='@'/>
+    <arg declared_type='Class' type='#'/>
+    <arg name='idxIvars' declared_type='unsigned int' type='I'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='class_createInstanceFromZone'>
-    <arg type='#'/>
-    <arg type='I'/>
-    <arg type='^v'/>
-    <retval type='@'/>
+    <arg declared_type='Class' type='#'/>
+    <arg name='idxIvars' declared_type='unsigned int' type='I'/>
+    <arg name='z' declared_type='void*' type='^v'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='class_getClassMethod'>
-    <arg type='#'/>
-    <arg type=':'/>
-    <retval type='^{objc_method=:*^?}'/>
+    <arg declared_type='Class' type='#'/>
+    <arg declared_type='SEL' type=':'/>
+    <retval declared_type='Method' type='^{objc_method=:*^?}'/>
   </function>
   <function name='class_getInstanceMethod'>
-    <arg type='#'/>
-    <arg type=':'/>
-    <retval type='^{objc_method=:*^?}'/>
+    <arg declared_type='Class' type='#'/>
+    <arg declared_type='SEL' type=':'/>
+    <retval declared_type='Method' type='^{objc_method=:*^?}'/>
   </function>
   <function name='class_getInstanceVariable'>
-    <arg type='#'/>
-    <arg type='*'/>
-    <retval type='^{objc_ivar=**i}'/>
+    <arg declared_type='Class' type='#'/>
+    <arg declared_type='char*' type='*' const='true'/>
+    <retval declared_type='Ivar' type='^{objc_ivar=**i}'/>
   </function>
   <function name='class_getVersion'>
-    <arg type='#'/>
-    <retval type='i'/>
+    <arg declared_type='Class' type='#'/>
+    <retval declared_type='int' type='i'/>
   </function>
   <function name='class_nextMethodList'>
-    <arg type='#'/>
-    <arg type='^^v'/>
-    <retval type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <arg declared_type='Class' type='#'/>
+    <arg declared_type='void**' type='^^v'/>
+    <retval declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
   </function>
   <function name='class_poseAs'>
-    <arg type='#'/>
-    <arg type='#'/>
-    <retval type='#'/>
+    <arg name='imposter' declared_type='Class' type='#'/>
+    <arg name='original' declared_type='Class' type='#'/>
+    <retval declared_type='Class' type='#'/>
   </function>
   <function name='class_removeMethods'>
-    <arg type='#'/>
-    <arg type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <arg declared_type='Class' type='#'/>
+    <arg declared_type='struct objc_method_list*' type='^{objc_method_list=^{objc_method_list}i[1{objc_method=:*^?}]}'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='class_setVersion'>
-    <arg type='#'/>
-    <arg type='i'/>
+    <arg declared_type='Class' type='#'/>
+    <arg declared_type='int' type='i'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='method_getArgumentInfo'>
-    <arg type='^{objc_method=:*^?}'/>
-    <arg type='i'/>
-    <arg type='^*'/>
-    <arg type='^i'/>
-    <retval type='I'/>
+    <arg name='m' declared_type='Method' type='^{objc_method=:*^?}'/>
+    <arg name='arg' declared_type='int' type='i'/>
+    <arg name='type' declared_type='char**' type='^*' const='true'/>
+    <arg name='offset' declared_type='int*' type='^i'/>
+    <retval declared_type='unsigned int' type='I'/>
   </function>
   <function name='method_getNumberOfArguments'>
-    <arg type='^{objc_method=:*^?}'/>
-    <retval type='I'/>
+    <arg declared_type='Method' type='^{objc_method=:*^?}'/>
+    <retval declared_type='unsigned int' type='I'/>
   </function>
   <function name='method_getSizeOfArguments'>
-    <arg type='^{objc_method=:*^?}'/>
-    <retval type='I'/>
+    <arg declared_type='Method' type='^{objc_method=:*^?}'/>
+    <retval declared_type='unsigned int' type='I'/>
   </function>
   <function name='objc_addClass'>
-    <arg type='#'/>
+    <arg name='myClass' declared_type='Class' type='#'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='objc_getClass'>
-    <arg type='*'/>
-    <retval type='@'/>
+    <arg name='name' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='objc_getClassList'>
-    <arg type='^#'/>
-    <arg type='i'/>
-    <retval type='i'/>
+    <arg name='buffer' declared_type='Class*' type='^#'/>
+    <arg name='bufferLen' declared_type='int' type='i'/>
+    <retval declared_type='int' type='i'/>
   </function>
   <function name='objc_getClasses'>
-    <retval type='^v'/>
+    <retval declared_type='void*' type='^v'/>
   </function>
   <function name='objc_getMetaClass'>
-    <arg type='*'/>
-    <retval type='@'/>
+    <arg name='name' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='objc_getRequiredClass'>
-    <arg type='*'/>
-    <retval type='@'/>
+    <arg name='name' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='objc_lookUpClass'>
-    <arg type='*'/>
-    <retval type='@'/>
+    <arg name='name' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='objc_msgSend' variadic='true'>
-    <arg type='@'/>
-    <arg type=':'/>
-    <retval type='@'/>
+    <arg name='self' declared_type='id' type='@'/>
+    <arg name='op' declared_type='SEL' type=':'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='objc_msgSendSuper' variadic='true'>
-    <arg type='^{objc_super=@#}'/>
-    <arg type=':'/>
-    <retval type='@'/>
+    <arg name='super' declared_type='struct objc_super*' type='^{objc_super=@#}'/>
+    <arg name='op' declared_type='SEL' type=':'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='objc_msgSendSuper_stret' variadic='true'>
-    <arg type='^v'/>
-    <arg type='^{objc_super=@#}'/>
-    <arg type=':'/>
+    <arg name='stretAddr' declared_type='void*' type='^v'/>
+    <arg name='super' declared_type='struct objc_super*' type='^{objc_super=@#}'/>
+    <arg name='op' declared_type='SEL' type=':'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='objc_msgSend_stret' variadic='true'>
-    <arg type='^v'/>
-    <arg type='@'/>
-    <arg type=':'/>
+    <arg name='stretAddr' declared_type='void*' type='^v'/>
+    <arg name='self' declared_type='id' type='@'/>
+    <arg name='op' declared_type='SEL' type=':'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='objc_msgSendv'>
-    <arg type='@'/>
-    <arg type=':'/>
-    <arg type='I'/>
-    <arg type='^v'/>
-    <retval type='@'/>
+    <arg name='self' declared_type='id' type='@'/>
+    <arg name='op' declared_type='SEL' type=':'/>
+    <arg name='arg_size' declared_type='unsigned int' type='I'/>
+    <arg name='arg_frame' declared_type='marg_list' type='^v'/>
+    <retval declared_type='id' type='@'/>
   </function>
   <function name='objc_msgSendv_stret'>
-    <arg type='^v'/>
-    <arg type='@'/>
-    <arg type=':'/>
-    <arg type='I'/>
-    <arg type='^v'/>
+    <arg name='stretAddr' declared_type='void*' type='^v'/>
+    <arg name='self' declared_type='id' type='@'/>
+    <arg name='op' declared_type='SEL' type=':'/>
+    <arg name='arg_size' declared_type='unsigned int' type='I'/>
+    <arg name='arg_frame' declared_type='marg_list' type='^v'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='objc_setClassHandler'>
-    <arg function_pointer='true' type='^?'>
-      <arg type='*'/>
-      <retval type='i'/>
+    <arg function_pointer='true' declared_type='int (*)(char *)' type='^?'>
+      <arg declared_type='char*' type='*' const='true'/>
+      <retval declared_type='int' type='i'/>
     </arg>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='objc_setMultithreaded'>
-    <arg type='B'/>
+    <arg name='flag' declared_type='BOOL' type='B'/>
+    <retval declared_type='void' type='v'/>
   </function>
   <function name='object_getClassName'>
-    <arg type='@'/>
-    <retval type='*'/>
+    <arg name='obj' declared_type='id' type='@'/>
+    <retval declared_type='char*' type='*' const='true'/>
   </function>
   <function name='object_getIndexedIvars'>
-    <arg type='@'/>
-    <retval type='^v'/>
+    <arg name='obj' declared_type='id' type='@'/>
+    <retval declared_type='void*' type='^v'/>
   </function>
   <function name='object_getInstanceVariable'>
-    <arg type='@'/>
-    <arg type='*'/>
-    <arg type='^^v'/>
-    <retval type='^{objc_ivar=**i}'/>
+    <arg declared_type='id' type='@'/>
+    <arg name='name' declared_type='char*' type='*' const='true'/>
+    <arg declared_type='void**' type='^^v'/>
+    <retval declared_type='Ivar' type='^{objc_ivar=**i}'/>
   </function>
   <function name='object_setInstanceVariable'>
-    <arg type='@'/>
-    <arg type='*'/>
-    <arg type='^v'/>
-    <retval type='^{objc_ivar=**i}'/>
+    <arg declared_type='id' type='@'/>
+    <arg name='name' declared_type='char*' type='*' const='true'/>
+    <arg declared_type='void*' type='^v'/>
+    <retval declared_type='Ivar' type='^{objc_ivar=**i}'/>
   </function>
   <function name='sel_getName'>
-    <arg type=':'/>
-    <retval type='*'/>
+    <arg name='sel' declared_type='SEL' type=':'/>
+    <retval declared_type='char*' type='*' const='true'/>
   </function>
   <function name='sel_getUid'>
-    <arg type='*'/>
-    <retval type=':'/>
+    <arg name='str' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='SEL' type=':'/>
   </function>
   <function name='sel_isMapped'>
-    <arg type=':'/>
-    <retval type='B'/>
+    <arg name='sel' declared_type='SEL' type=':'/>
+    <retval declared_type='BOOL' type='B'/>
   </function>
   <function name='sel_registerName'>
-    <arg type='*'/>
-    <retval type=':'/>
+    <arg name='str' declared_type='char*' type='*' const='true'/>
+    <retval declared_type='SEL' type=':'/>
   </function>
 </signatures>
